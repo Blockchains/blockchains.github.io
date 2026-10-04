@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04T18:10:35Z",
+ "generated_at": "2026-10-04T18:47:12Z",
  "schema": "https://raw.githubusercontent.com/Blockchains/.github/main/docs/blocks.schema.json",
  "guide": "https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md",
  "count": 31,
@@ -497,7 +497,7 @@
     {
      "name": "Foundry project",
      "type": "directory",
-     "description": "src/, test/, script/Deploy.s.sol, CI, NOTICE, plan.json, component-map.json"
+     "description": "src/, test/, script/Deploy.s.sol, CI, NOTICE, plan.json, component-map.json, plus AGENTS.md, llms.txt and a schema-valid blocks.json derived from the generated contracts"
     },
     {
      "name": "result JSON",
@@ -570,7 +570,7 @@
     "html_url": "https://github.com/Blockchains/blockchainlab-compose",
     "agents_md": "https://github.com/Blockchains/blockchainlab-compose/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-compose/main/llms.txt",
-    "pushed_at": "2026-10-04T18:06:52Z"
+    "pushed_at": "2026-10-04T18:42:51Z"
    }
   },
   {
@@ -773,7 +773,7 @@
     "html_url": "https://github.com/Blockchains/blockchainlab-index",
     "agents_md": "https://github.com/Blockchains/blockchainlab-index/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-index/main/llms.txt",
-    "pushed_at": "2026-10-04T18:06:29Z"
+    "pushed_at": "2026-10-04T18:27:48Z"
    }
   },
   {
@@ -980,7 +980,7 @@
     "cli"
    ],
    "stability": "beta",
-   "version": "0.2.0",
+   "version": "0.3.0",
    "license": "MIT",
    "entrypoints": [
     {
@@ -1038,21 +1038,35 @@
      "type": "docker",
      "name": "ghcr.io/blockchains/blockchainlab-mcp",
      "ref": "Dockerfile",
-     "usage": "docker run -i --rm ghcr.io/blockchains/blockchainlab-mcp:latest"
+     "usage": "docker run -i --rm ghcr.io/blockchains/blockchainlab-mcp:0.3.0"
     },
     {
      "type": "npm",
      "name": "blockchainlab-mcp",
      "ref": "src/sdk.js",
-     "install": "npm i github:Blockchains/blockchainlab-mcp",
+     "install": "npm i github:Blockchains/blockchainlab-mcp#v0.3.0",
      "exports": [
       "BlockchainLab",
       "onchain",
       "onchain2",
       "toolLinks",
       "DEFAULT_API",
-      "TOOLS_SITE"
-     ]
+      "TOOLS_SITE",
+      "SITE"
+     ],
+     "usage": "import { BlockchainLab } from 'blockchainlab-mcp'  // TypeScript types included (types/sdk.d.ts)"
+    },
+    {
+     "type": "npm",
+     "name": "blockchainlab-mcp/server",
+     "ref": "src/server.js",
+     "install": "npm i github:Blockchains/blockchainlab-mcp#v0.3.0",
+     "exports": [
+      "createServer",
+      "main",
+      "VERSION"
+     ],
+     "usage": "import { createServer } from 'blockchainlab-mcp/server'  // McpServer with all tools; connect any transport"
     }
    ],
    "inputs": [
@@ -1093,7 +1107,7 @@
     },
     {
      "repo": "Blockchains/blockchainlab-sdk",
-     "how": "typed alternative for app code (this package ships no .d.ts yet)"
+     "how": "TS + Python client for the same datasets (this package also ships TypeScript types since v0.3.0)"
     },
     {
      "repo": "Blockchains/blockchainlab-lens",
@@ -1122,7 +1136,7 @@
     "html_url": "https://github.com/Blockchains/blockchainlab-mcp",
     "agents_md": "https://github.com/Blockchains/blockchainlab-mcp/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-mcp/main/llms.txt",
-    "pushed_at": "2026-10-04T18:07:01Z"
+    "pushed_at": "2026-10-04T18:45:16Z"
    }
   },
   {
@@ -1228,7 +1242,7 @@
     "html_url": "https://github.com/Blockchains/blockchainlab-sdk",
     "agents_md": "https://github.com/Blockchains/blockchainlab-sdk/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-sdk/main/llms.txt",
-    "pushed_at": "2026-10-04T18:07:03Z"
+    "pushed_at": "2026-10-04T18:13:09Z"
    }
   },
   {
@@ -1621,7 +1635,7 @@
     "html_url": "https://github.com/Blockchains/blockchains.github.io",
     "agents_md": "https://github.com/Blockchains/blockchains.github.io/blob/main/AGENTS.md",
     "llms_txt": "https://blockchains.github.io/llms.txt",
-    "pushed_at": "2026-10-04T18:10:21Z"
+    "pushed_at": "2026-10-04T18:10:37Z"
    }
   },
   {
@@ -2412,7 +2426,7 @@
     {
      "name": "app repo",
      "type": "directory",
-     "description": "src/ (chat) or app/ (digest), tests, scripts/e2e, PARTS.md, forge.json, CI, Pages workflow"
+     "description": "src/ (chat) or app/ (digest), tests, scripts/e2e, PARTS.md, forge.json, AGENTS.md, llms.txt, schema-valid blocks.json, CI, Pages workflow"
     },
     {
      "name": "compose result",
@@ -2423,7 +2437,8 @@
    "deps": [
     "python>=3.10 (stdlib only)",
     "node>=20 for chat apps",
-    "gh for --create"
+    "gh for --create",
+    "jsonschema (tests only: validates generated blocks.json)"
    ],
    "compatible_with": [
     {
@@ -2483,7 +2498,7 @@
     "html_url": "https://github.com/Blockchains/grokhack-forge",
     "agents_md": "https://github.com/Blockchains/grokhack-forge/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/grokhack-forge/main/llms.txt",
-    "pushed_at": "2026-10-04T18:07:27Z"
+    "pushed_at": "2026-10-04T18:44:57Z"
    }
   },
   {
@@ -2585,7 +2600,7 @@
     "html_url": "https://github.com/Blockchains/grokhack-index",
     "agents_md": "https://github.com/Blockchains/grokhack-index/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/grokhack-index/main/llms.txt",
-    "pushed_at": "2026-10-04T18:07:29Z"
+    "pushed_at": "2026-10-04T18:21:17Z"
    }
   },
   {
@@ -2900,7 +2915,7 @@
     "html_url": "https://github.com/Blockchains/sites-monitor",
     "agents_md": "https://github.com/Blockchains/sites-monitor/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/sites-monitor/main/llms.txt",
-    "pushed_at": "2026-10-04T18:07:39Z"
+    "pushed_at": "2026-10-04T18:20:28Z"
    }
   },
   {
