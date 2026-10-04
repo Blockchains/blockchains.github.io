@@ -46,5 +46,27 @@ BASE=http://127.0.0.1:43117 python tests/e2e.py && python tests/validate.py
 
 Data sources: public JSON-RPC, mempool.space, DefiLlama, L2BEAT, Sourcify, Slither, ETHGlobal, Greenhouse job-board APIs, CryptoJobsList, MetaMask eth-phishing-detect, Uniswap token list, blockchainlab.com. Not financial advice.
 
+## Configuration
+
+The site is static and needs no keys to browse. The data jobs read these environment variables:
+
+| Variable | Used by | Purpose |
+|---|---|---|
+| `XAI_API_KEY` | `scripts/job_ai.py` (via `common.py`) | Grok calls for AI-generated pages; jobs that need it fail clearly when it is unset |
+| `XAI_MODEL` | `scripts/common.py` | Model override (default `grok-4.3`) |
+| `GITHUB_TOKEN` / `GH_TOKEN` | `scripts/job_health.py` | Authenticated GitHub API calls |
+| `SCAN_WORKERS` | `scripts/job_slither.py` | Parallel Slither scans (default 3) |
+| `HEALTH_LOCAL=1`, `HEALTH_MIN` | `scripts/job_health.py` | Check local files instead of the live site; minimum healthy ratio |
+| `FORCE=1` | `scripts/job_ai.py` | Regenerate even when the source text is unchanged |
+| `BASE` | `tests/e2e.py` | Site URL under test |
+
+## Licence
+
+MIT, see [LICENSE](LICENSE). Data stays with each named source.
+
+## Contributing
+
+Issues and pull requests are welcome. Please read the [contributing guide](https://github.com/Blockchains/.github/blob/main/CONTRIBUTING.md), [code of conduct](https://github.com/Blockchains/.github/blob/main/CODE_OF_CONDUCT.md) and [security policy](https://github.com/Blockchains/.github/blob/main/SECURITY.md) first.
+
 ---
 Built by Blockchain Lab — [blockchainlab.com](https://blockchainlab.com/?utm_source=github&utm_medium=readme&utm_campaign=blockchains-hub) · [grokhack.com](https://grokhack.com/?utm_source=github&utm_medium=readme&utm_campaign=blockchains-hub)
