@@ -15,4 +15,4 @@ jobs:
       - name: check every service against the live site
         run: python scripts/job_health.py
         env: { GH_TOKEN: "${{ github.token }}" }
-      - run: scripts/commit.sh "data: live health check"
+      - run: 'scripts/commit.sh "data: live health check"'

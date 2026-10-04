@@ -19,4 +19,4 @@ jobs:
       - name: AI weekly (Grok) — protocol briefs, contract explainers, audit checklists, whitepaper summaries
         run: python scripts/job_ai.py protocols contracts audits whitepapers
         env: { XAI_API_KEY: "${{ secrets.XAI_API_KEY }}" }
-      - run: scripts/commit.sh "data: weekly Slither scan + AI reports"
+      - run: 'scripts/commit.sh "data: weekly Slither scan + AI reports"'

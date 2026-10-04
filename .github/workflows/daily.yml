@@ -21,4 +21,4 @@ jobs:
       - name: health check
         run: python scripts/job_health.py
         env: { HEALTH_LOCAL: "1", GH_TOKEN: "${{ github.token }}" }
-      - run: scripts/commit.sh "data: daily refresh + AI briefs"
+      - run: 'scripts/commit.sh "data: daily refresh + AI briefs"'
