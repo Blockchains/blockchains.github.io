@@ -25,7 +25,7 @@ def loaded(page, path, sel="#out", min_text=40, timeout=60000):
 
 
 SIMPLE = ["/ai/", "/ai/brief/", "/ai/incidents/", "/ai/ideas/", "/ai/digest/", "/ai/protocols/", "/ai/contracts/", "/ai/audits/", "/ai/whitepapers/",
-          "/gas/", "/chains/", "/rpc/", "/depeg/", "/scan/", "/incidents/", "/events/", "/jobs/", "/grants/", "/glossary/", "/papers/", "/compare/", "/status/"]
+          "/gas/", "/chains/", "/rpc/", "/depeg/", "/scan/", "/incidents/", "/events/", "/jobs/", "/grants/", "/glossary/", "/papers/", "/compare/", "/status/", "/blocks/"]
 
 
 def hub(p):
@@ -52,7 +52,7 @@ def phishing(p):
     p.goto(BASE + "/phishing/", wait_until="domcontentloaded")
     p.fill("#u", "https://www.metamask.io"); p.click("#go")
     p.wait_for_function("() => document.querySelector('#res').innerText.length>3", timeout=60000)
-    bad = p.evaluate("() => fetch('https://raw.githubusercontent.com/MetaMask/eth-phishing-detect/main/src/config.json').then(r=>r.json()).then(c=>c.blacklist[c.blacklist.length-1])")
+    bad = p.evaluate("() => fetch('https://raw.githubusercontent.com/MetaMask/eth-phishing-detect/main/src/config.json').then(r=>r.json()).then(c=>c.blacklist.filter(d=>!d.includes('/')).pop())")
     p.fill("#u", "https://" + bad + "/claim"); p.click("#go"); p.wait_for_timeout(300)
     assert "Blocked" in p.inner_text("#res"), p.inner_text("#res")
     p.fill("#u", "metamsk.io"); p.click("#go"); p.wait_for_timeout(300)
@@ -66,8 +66,12 @@ def compare(p):
 
 
 def feeds(p):
-    for path, marker in [("/incidents/feed.xml", "<rss"), ("/events/events.ics", "BEGIN:VCALENDAR"), ("/sitemap.xml", "<urlset"), ("/robots.txt", "Sitemap:"), ("/services.json", '"services"')]:
+    for path, marker in [("/incidents/feed.xml", "<rss"), ("/events/events.ics", "BEGIN:VCALENDAR"), ("/sitemap.xml", "<urlset"), ("/robots.txt", "Sitemap:"), ("/services.json", '"services"'),
+                         ("/llms.txt", "# Blockchains"), ("/llms-full.txt", "=== Build with Blocks"), ("/blocks.json", '"blocks"')]:
         r = p.request.get(BASE + path); assert r.ok, path; assert marker in r.text(), path
+    d = p.request.get(BASE + "/blocks.json").json()
+    assert d["count"] == len(d["blocks"]) >= 20, "blocks.json count"
+    assert all(b.get("name") and b.get("entrypoints") and b.get("source", {}).get("agents_md") for b in d["blocks"]), "blocks.json entries"
 
 
 with sync_playwright() as pw:

@@ -1,0 +1,104 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Blockchains/.github/main/docs/blocks.schema.json",
+  "schema_version": "1.0",
+  "name": "blockchains.github.io",
+  "repo": "Blockchains/blockchains.github.io",
+  "summary": "Blockchain Lab Hub: static GitHub Pages site with 75 free services (AI briefs via Grok, gas/RPC/chain monitors, finders, feeds), machine-readable services.json, health data, and the org-wide llms.txt and blocks.json catalogue.",
+  "kind": [
+    "web-app",
+    "dataset"
+  ],
+  "stability": "stable",
+  "license": "MIT",
+  "homepage": "https://blockchains.github.io/",
+  "entrypoints": [
+    {
+      "type": "http",
+      "name": "services.json",
+      "ref": "https://blockchains.github.io/services.json",
+      "usage": "catalogue of every service with id, name, url, category"
+    },
+    {
+      "type": "http",
+      "name": "blocks.json",
+      "ref": "https://blockchains.github.io/blocks.json",
+      "usage": "aggregated blocks.json of every live Blockchains repo"
+    },
+    {
+      "type": "http",
+      "name": "llms.txt",
+      "ref": "https://blockchains.github.io/llms.txt",
+      "usage": "org-wide doc map for LLMs (+ llms-full.txt)"
+    },
+    {
+      "type": "http",
+      "name": "data/*.json",
+      "ref": "https://blockchains.github.io/data/",
+      "usage": "gas.json, liveness.json, rpc-latency.json, incidents.json, events.json, jobs.json, grants.json, depeg.json, status.json, ai/*.json"
+    },
+    {
+      "type": "http",
+      "name": "feeds",
+      "ref": "https://blockchains.github.io/incidents/feed.xml",
+      "usage": "incident RSS + /events/events.ics"
+    }
+  ],
+  "inputs": [
+    {
+      "name": "public APIs/RPCs",
+      "type": "network",
+      "description": "read by scheduled jobs"
+    },
+    {
+      "name": "XAI_API_KEY",
+      "type": "secret",
+      "description": "AI briefs"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "pages",
+      "type": "HTML"
+    },
+    {
+      "name": "data files",
+      "type": "JSON with generated_at"
+    },
+    {
+      "name": "blocks catalogue",
+      "type": "JSON"
+    }
+  ],
+  "deps": [
+    "python3.12",
+    "playwright (tests)"
+  ],
+  "compatible_with": [
+    {
+      "repo": "Blockchains/blockchainlab-api",
+      "how": "data source for many pages"
+    },
+    {
+      "repo": "Blockchains/blockchainlab-tools",
+      "how": "tools are linked from the hub"
+    },
+    {
+      "repo": "Blockchains/sites-monitor",
+      "how": "status of the custom domains"
+    },
+    {
+      "repo": "Blockchains/.github",
+      "how": "BLOCKS-SCHEMA and BUILD-WITH-BLOCKS docs"
+    }
+  ],
+  "tests": {
+    "command": "python scripts/gen_site.py && git diff --exit-code -- '*.html' sitemap.xml robots.txt && python tests/validate.py && (python tests/serve.py 43117 & sleep 2; BASE=http://127.0.0.1:43117 python tests/e2e.py)",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+  },
+  "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+  }
+}

@@ -3,7 +3,7 @@
 set -euo pipefail
 git config user.name "github-actions[bot]"
 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-git add -A data services.json incidents events sitemap.xml robots.txt || true
+git add -A data services.json incidents events sitemap.xml robots.txt blocks.json llms.txt llms-full.txt || true
 git add -A -- '*.html' || true
 if git diff --cached --quiet; then echo "no changes"; exit 0; fi
 git commit -q -m "$1"

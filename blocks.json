@@ -1,0 +1,2970 @@
+{
+ "generated_at": "2026-10-04T18:10:15Z",
+ "schema": "https://raw.githubusercontent.com/Blockchains/.github/main/docs/blocks.schema.json",
+ "guide": "https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md",
+ "count": 31,
+ "blocks": [
+  {
+   "schema_version": "1.0",
+   "name": ".github",
+   "repo": "Blockchains/.github",
+   "summary": "Org-wide defaults (issue/PR templates, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY) plus the building-block docs: BUILD-WITH-BLOCKS.md, BLOCKS-SCHEMA.md, blocks.schema.json and the workflow that validates every repo's blocks.json.",
+   "kind": [
+    "docs",
+    "automation"
+   ],
+   "stability": "stable",
+   "license": "NOASSERTION",
+   "entrypoints": [
+    {
+     "type": "file",
+     "name": "docs/blocks.schema.json",
+     "ref": "docs/blocks.schema.json",
+     "usage": "https://raw.githubusercontent.com/Blockchains/.github/main/docs/blocks.schema.json"
+    },
+    {
+     "type": "file",
+     "name": "docs/BUILD-WITH-BLOCKS.md",
+     "ref": "docs/BUILD-WITH-BLOCKS.md",
+     "usage": "how to assemble projects from Blockchains repos, with 3 verified recipes"
+    },
+    {
+     "type": "cli",
+     "name": "scripts/validate_blocks.py",
+     "ref": "scripts/validate_blocks.py",
+     "usage": "python3 scripts/validate_blocks.py [--local DIR ...]   # validates every repo's blocks.json"
+    },
+    {
+     "type": "github-action",
+     "name": "validate blocks",
+     "ref": ".github/workflows/validate-blocks.yml",
+     "usage": "push, daily, workflow_dispatch"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "blocks.json files",
+     "type": "JSON",
+     "description": "fetched from every non-archived Blockchains repo"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "validation report",
+     "type": "CI log"
+    }
+   ],
+   "deps": [
+    "python3",
+    "jsonschema"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchains.github.io",
+     "how": "hub aggregates every blocks.json into /blocks.json"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-sdk",
+     "how": "example block"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-mcp",
+     "how": "example block"
+    }
+   ],
+   "tests": {
+    "command": "pip install jsonschema && python3 scripts/validate_blocks.py",
+    "ci": ".github/workflows/validate-blocks.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/.github/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/.github",
+    "agents_md": "https://github.com/Blockchains/.github/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/.github/main/llms.txt",
+    "pushed_at": "2026-10-04T18:06:36Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "awesome-blockchainlab",
+   "repo": "Blockchains/awesome-blockchainlab",
+   "summary": "Curated list of 225 open-source blockchain projects (+11 extended) forked under Blockchains and kept in sync by fork-sync, with a machine-readable forge.json (fork, upstream, category, licence, stars, docs, starters, index links).",
+   "kind": [
+    "curated-list",
+    "dataset"
+   ],
+   "stability": "stable",
+   "license": "CC0-1.0",
+   "entrypoints": [
+    {
+     "type": "file",
+     "name": "forge.json",
+     "ref": "forge.json",
+     "usage": "https://raw.githubusercontent.com/Blockchains/awesome-blockchainlab/main/forge.json"
+    },
+    {
+     "type": "file",
+     "name": "README.md",
+     "ref": "README.md",
+     "usage": "human-readable list by category"
+    }
+   ],
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "projects[]",
+     "type": "JSON",
+     "description": "slug, name, fork, upstream, category, license, license_note, stars, tier, docs, starters, index {components, repo_index, commit, tags}"
+    }
+   ],
+   "deps": [
+    "any JSON reader"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/fork-sync",
+     "how": "keeps every listed fork in sync"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-index",
+     "how": "code index of the same forks (projects[].index links)"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-starters",
+     "how": "starters built on these forks"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-compose",
+     "how": "composes projects from them"
+    }
+   ],
+   "tests": {
+    "command": "python3 scripts/validate.py",
+    "ci": ".github/workflows/validate.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/awesome-blockchainlab/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/awesome-blockchainlab",
+    "agents_md": "https://github.com/Blockchains/awesome-blockchainlab/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/awesome-blockchainlab/main/llms.txt",
+    "pushed_at": "2026-10-04T18:06:41Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "awesome-grokhack",
+   "repo": "Blockchains/awesome-grokhack",
+   "summary": "Curated list of 99 open-source Grok/xAI integrations (official xAI repos, SDKs, gateways, agent frameworks, coding agents, chat UIs, observability, voice, apps) forked under Blockchains, with machine-readable grok-forge.json.",
+   "kind": [
+    "curated-list",
+    "dataset"
+   ],
+   "stability": "stable",
+   "license": "MIT",
+   "entrypoints": [
+    {
+     "type": "file",
+     "name": "grok-forge.json",
+     "ref": "grok-forge.json",
+     "usage": "https://raw.githubusercontent.com/Blockchains/awesome-grokhack/main/grok-forge.json"
+    },
+    {
+     "type": "file",
+     "name": "skipped.json",
+     "ref": "skipped.json",
+     "usage": "candidates rejected, with reasons"
+    }
+   ],
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "repos[]",
+     "type": "JSON",
+     "description": "fork, upstream, category, stars, license, pushed_at, description, language, grok_specific, verified_by"
+    }
+   ],
+   "deps": [
+    "any JSON reader"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/grokhack-index",
+     "how": "nightly index of these forks' Grok surface (reads grok-forge.json)"
+    },
+    {
+     "repo": "Blockchains/grokhack-forge",
+     "how": "composes apps from the index"
+    },
+    {
+     "repo": "Blockchains/grokhack-submissions",
+     "how": "entry template for The Grok Hack"
+    }
+   ],
+   "tests": {
+    "command": "python3 -c \"import json;d=json.load(open('grok-forge.json'));assert d['count']==len(d['repos'])\"",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/awesome-grokhack/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/awesome-grokhack",
+    "agents_md": "https://github.com/Blockchains/awesome-grokhack/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/awesome-grokhack/main/llms.txt",
+    "pushed_at": "2026-10-04T18:06:43Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchain-dev-roadmap",
+   "repo": "Blockchains/blockchain-dev-roadmap",
+   "summary": "Curated 2026 developer path from zero to shipping production smart contracts in 13 stages; every stage links concepts, primary docs, a runnable lab and a free tool.",
+   "kind": [
+    "docs",
+    "dataset"
+   ],
+   "stability": "stable",
+   "license": "MIT AND CC-BY-4.0",
+   "entrypoints": [
+    {
+     "type": "file",
+     "name": "README.md",
+     "ref": "README.md",
+     "usage": "https://raw.githubusercontent.com/Blockchains/blockchain-dev-roadmap/main/README.md"
+    }
+   ],
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "stages",
+     "type": "Markdown",
+     "description": "each item links to a lab, a tool or a Blockchain Lab explainer"
+    }
+   ],
+   "deps": [
+    "none"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-labs",
+     "how": "hands-on labs linked from each item"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-tools",
+     "how": "tools linked from each item"
+    },
+    {
+     "repo": "Blockchains/blockchain-interview-questions",
+     "how": "companion guide"
+    }
+   ],
+   "tests": {
+    "command": "lychee README.md   # link check, see .github/workflows/links.yml",
+    "ci": ".github/workflows/links.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/blockchain-dev-roadmap/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/blockchain-dev-roadmap",
+    "agents_md": "https://github.com/Blockchains/blockchain-dev-roadmap/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchain-dev-roadmap/main/llms.txt",
+    "pushed_at": "2026-10-04T18:06:45Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchain-interview-questions",
+   "repo": "Blockchains/blockchain-interview-questions",
+   "summary": "54 blockchain and smart-contract interview questions with concise answers, each linked to a runnable lab, a free tool or an explainer.",
+   "kind": [
+    "docs",
+    "dataset"
+   ],
+   "stability": "stable",
+   "license": "MIT AND CC-BY-4.0",
+   "entrypoints": [
+    {
+     "type": "file",
+     "name": "README.md",
+     "ref": "README.md",
+     "usage": "https://raw.githubusercontent.com/Blockchains/blockchain-interview-questions/main/README.md"
+    }
+   ],
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "questions",
+     "type": "Markdown",
+     "description": "each item links to a lab, a tool or a Blockchain Lab explainer"
+    }
+   ],
+   "deps": [
+    "none"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-labs",
+     "how": "hands-on labs linked from each item"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-tools",
+     "how": "tools linked from each item"
+    },
+    {
+     "repo": "Blockchains/blockchain-dev-roadmap",
+     "how": "companion guide"
+    }
+   ],
+   "tests": {
+    "command": "lychee README.md   # link check, see .github/workflows/links.yml",
+    "ci": ".github/workflows/links.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/blockchain-interview-questions/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/blockchain-interview-questions",
+    "agents_md": "https://github.com/Blockchains/blockchain-interview-questions/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchain-interview-questions/main/llms.txt",
+    "pushed_at": "2026-10-04T18:06:47Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchainlab-api",
+   "repo": "Blockchains/blockchainlab-api",
+   "summary": "Free, static, CORS-enabled JSON API of 20 blockchain datasets rebuilt nightly from public sources (chainid.network, DefiLlama, L2BEAT, OFAC via 0xB10C, ethereum/EIPs, bitcoin/bips, Blockchain Lab corpus). No key, no backend.",
+   "kind": [
+    "http-api",
+    "dataset"
+   ],
+   "stability": "stable",
+   "version": "v1 (schema 1.1.0)",
+   "license": "MIT",
+   "homepage": "https://blockchains.github.io/blockchainlab-api/",
+   "entrypoints": [
+    {
+     "type": "http",
+     "name": "GET /v1/{dataset}.json",
+     "ref": "https://blockchains.github.io/blockchainlab-api/v1/{dataset}.json",
+     "usage": "curl -s https://blockchains.github.io/blockchainlab-api/v1/chains.json"
+    },
+    {
+     "type": "http",
+     "name": "GET /v1/index.json",
+     "ref": "https://blockchains.github.io/blockchainlab-api/v1/index.json",
+     "usage": "catalogue: dataset, url, schema, count, generated_at, stale"
+    },
+    {
+     "type": "http",
+     "name": "GET /v1/schemas/{dataset}.schema.json",
+     "ref": "https://blockchains.github.io/blockchainlab-api/v1/schemas/",
+     "usage": "JSON Schema per dataset"
+    },
+    {
+     "type": "file",
+     "name": "openapi.yaml",
+     "ref": "openapi.yaml",
+     "usage": "https://blockchains.github.io/blockchainlab-api/openapi.yaml"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "dataset",
+     "type": "path segment",
+     "description": "bips, bridges, chains, chains-tvl, dex-volumes, eips, ercs, events, fees, glossary, grants, hackathons, l2-metrics, protocols, rpc-health, sanctioned-addresses, security-incidents, stablecoins, whitepapers, yields"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "envelope",
+     "type": "JSON",
+     "description": "{dataset, api_version, schema_version, schema_url, generated_at, source, source_url, count, data[]}"
+    }
+   ],
+   "deps": [
+    "any HTTP client",
+    "node>=20 + python3 to rebuild"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-sdk",
+     "how": "typed TS/Python client generated from these schemas"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-mcp",
+     "how": "43 MCP tools, many backed by these datasets"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-tools",
+     "how": "browser tools read chains and EIP/ERC/BIP data from here"
+    },
+    {
+     "repo": "Blockchains/blockchains.github.io",
+     "how": "hub pages and AI briefs are built on it"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-feeds",
+     "how": "source of the hackathons and events datasets"
+    }
+   ],
+   "tests": {
+    "command": "pip install jsonschema==4.23.0 pyyaml && python3 scripts/validate.py && python3 scripts/openapi.py && git diff --exit-code openapi.json",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/blockchainlab-api/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/blockchainlab-api",
+    "agents_md": "https://github.com/Blockchains/blockchainlab-api/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-api/main/llms.txt",
+    "pushed_at": "2026-10-04T18:06:50Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchainlab-compose",
+   "repo": "Blockchains/blockchainlab-compose",
+   "summary": "Idea-to-repo engine behind blockchainlab.com/forge: turns a plain-language token/NFT idea into a tested Foundry project (components from blockchainlab-index, pragma/licence checks, generated glue, tests, deploy script, CI) and optionally creates it under github.com/Blockchains.",
+   "kind": [
+    "cli",
+    "github-action"
+   ],
+   "stability": "beta",
+   "license": "MIT",
+   "entrypoints": [
+    {
+     "type": "cli",
+     "name": "python3 -m blcompose.compose",
+     "ref": "blcompose/compose.py",
+     "usage": "python3 -m blcompose.compose \"<idea>\" --name <repo> [--out DIR] [--index PATH] [--json result.json] [--create --wait]"
+    },
+    {
+     "type": "github-action",
+     "name": "Compose a project",
+     "ref": ".github/workflows/compose.yml",
+     "usage": "workflow_dispatch inputs: idea, name, request_id \u2192 results/<request_id>.json"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "idea",
+     "type": "string",
+     "description": "plain-language description"
+    },
+    {
+     "name": "--name",
+     "type": "string",
+     "description": "new repo name"
+    },
+    {
+     "name": "--index",
+     "type": "path",
+     "description": "local blockchainlab-index checkout (cloned if omitted)"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Foundry project",
+     "type": "directory",
+     "description": "src/, test/, script/Deploy.s.sol, CI, NOTICE, plan.json, component-map.json"
+    },
+    {
+     "name": "result JSON",
+     "type": "file",
+     "description": "links, capabilities, components, test results"
+    },
+    {
+     "name": "exit 3",
+     "type": "code",
+     "description": "idea needs an unsupported capability"
+    }
+   ],
+   "deps": [
+    "python>=3.10",
+    "foundry (forge)",
+    "git",
+    "gh (for --create)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-index",
+     "how": "component source (catalog, components, taxonomy)"
+    },
+    {
+     "repo": "Blockchains/forge-dao-governance-token",
+     "how": "reference output, re-composed in CI"
+    },
+    {
+     "repo": "Blockchains/forge-usd-priced-membership-nft",
+     "how": "reference output, re-composed in CI"
+    },
+    {
+     "repo": "Blockchains/grokhack-forge",
+     "how": "sister composer for Grok apps"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-sdk",
+     "how": "add a data layer to a generated dApp"
+    }
+   ],
+   "tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "env": [
+    {
+     "name": "XAI_API_KEY",
+     "required": false,
+     "purpose": "one Grok review call written to REVIEW.md (not an audit)"
+    },
+    {
+     "name": "MAINNET_RPC_URL",
+     "required": false,
+     "purpose": "enables generated live-chain fork tests"
+    },
+    {
+     "name": "FORGE_TOKEN",
+     "required": false,
+     "purpose": "repo secret; needed by the Action to create repos"
+    }
+   ],
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/blockchainlab-compose/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/blockchainlab-compose",
+    "agents_md": "https://github.com/Blockchains/blockchainlab-compose/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-compose/main/llms.txt",
+    "pushed_at": "2026-10-04T18:06:52Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchainlab-feeds",
+   "repo": "Blockchains/blockchainlab-feeds",
+   "summary": "Public JSON feeds for blockchainlab.com: hackathons/grants/bounties, events, clustered X intel and mentions (public post IDs, links, handles, short trimmed summaries, counts only), built daily.",
+   "kind": [
+    "dataset",
+    "automation"
+   ],
+   "stability": "beta",
+   "license": "NOASSERTION",
+   "entrypoints": [
+    {
+     "type": "http",
+     "name": "feeds/hackathons/latest.json",
+     "ref": "https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/hackathons/latest.json",
+     "usage": "items[]: title, url, dates, prize, location, organizer, themes, state, source, verified"
+    },
+    {
+     "type": "http",
+     "name": "feeds/events/latest.json",
+     "ref": "https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/events/latest.json"
+    },
+    {
+     "type": "http",
+     "name": "feeds/x-intel/latest.json",
+     "ref": "https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/x-intel/latest.json"
+    },
+    {
+     "type": "cli",
+     "name": "scripts/build_feeds.py",
+     "ref": "scripts/build_feeds.py",
+     "usage": "python3 scripts/build_feeds.py --date YYYY-MM-DD --raw-dir DIR --digest-dir DIR"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "raw X MCP responses",
+     "type": "JSON files",
+     "description": "saved by a routine agent"
+    },
+    {
+     "name": "Devpost / ETHGlobal",
+     "type": "public pages"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "latest.json per feed",
+     "type": "JSON",
+     "description": "generated_at, count, items[], errors; unknown counts are null"
+    }
+   ],
+   "deps": [
+    "python3 (stdlib)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-api",
+     "how": "republishes hackathons and events as API datasets"
+    },
+    {
+     "repo": "Blockchains/blockchains.github.io",
+     "how": "powers /events"
+    },
+    {
+     "repo": "Blockchains/hackathons",
+     "how": "human tracker of the same events"
+    }
+   ],
+   "tests": {
+    "command": "python3 scripts/build_feeds.py --date $(date +%F) --raw-dir /tmp/raw --digest-dir /tmp/digest",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/blockchainlab-feeds",
+    "agents_md": "https://github.com/Blockchains/blockchainlab-feeds/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/llms.txt",
+    "pushed_at": "2026-10-04T18:06:54Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchainlab-index",
+   "repo": "Blockchains/blockchainlab-index",
+   "summary": "Nightly machine-readable code index of the curated Blockchains forks: per-repo catalog, every contract/module/circuit as a component with functions, licence and pinned raw URL, capability taxonomy, int8 embeddings, static search shards and SQLite FTS5. Feeds the composers.",
+   "kind": [
+    "index",
+    "dataset",
+    "cli"
+   ],
+   "stability": "beta",
+   "license": "MIT",
+   "entrypoints": [
+    {
+     "type": "file",
+     "name": "catalog.json",
+     "ref": "catalog.json",
+     "usage": "https://raw.githubusercontent.com/Blockchains/blockchainlab-index/main/catalog.json"
+    },
+    {
+     "type": "file",
+     "name": "components/<slug>.json",
+     "ref": "components/",
+     "usage": "per-fork component list (path, kind, functions, events, SPDX, pragma, caps, raw URL)"
+    },
+    {
+     "type": "file",
+     "name": "index.sqlite",
+     "ref": "index.sqlite",
+     "usage": "FTS5: select slug,path,name from components where components match 'paymaster'"
+    },
+    {
+     "type": "cli",
+     "name": "indexer/compose.py",
+     "ref": "indexer/compose.py",
+     "usage": "BL_INDEX=. python3 indexer/compose.py plan \"<idea>\" --json plan.json && python3 indexer/compose.py fetch plan.json out/"
+    },
+    {
+     "type": "file",
+     "name": "taxonomy/capabilities.json",
+     "ref": "taxonomy/capabilities.json",
+     "usage": "capability ids, synonyms, standards, match rules, licence policy"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "sources.json",
+     "type": "file",
+     "description": "forks to index (from fork-sync waves)"
+    },
+    {
+     "name": "idea",
+     "type": "string",
+     "description": "for compose.py plan"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "catalog",
+     "type": "JSON",
+     "description": "repo records incl. category, licence, commit, packages, install commands, reuse note"
+    },
+    {
+     "name": "components",
+     "type": "JSON"
+    },
+    {
+     "name": "plan.json",
+     "type": "JSON",
+     "description": "capabilities \u2192 selected components + licence verdict"
+    }
+   ],
+   "deps": [
+    "python>=3.10",
+    "fastembed + numpy (embeddings only)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-compose",
+     "how": "consumes catalog/components/taxonomy to generate projects"
+    },
+    {
+     "repo": "Blockchains/fork-sync",
+     "how": "keeps the indexed forks current; index runs after the sync"
+    },
+    {
+     "repo": "Blockchains/awesome-blockchainlab",
+     "how": "human-readable list of the same forks"
+    },
+    {
+     "repo": "Blockchains/forge-example-gasless-membership",
+     "how": "composed from this index"
+    },
+    {
+     "repo": "Blockchains/forge-example-usd-savings-vault",
+     "how": "composed from this index"
+    }
+   ],
+   "tests": {
+    "command": "python3 indexer/validate.py .",
+    "ci": ".github/workflows/nightly-index.yml",
+    "network": false
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/blockchainlab-index/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/blockchainlab-index",
+    "agents_md": "https://github.com/Blockchains/blockchainlab-index/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-index/main/llms.txt",
+    "pushed_at": "2026-10-04T18:06:29Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchainlab-labs",
+   "repo": "Blockchains/blockchainlab-labs",
+   "summary": "54 runnable smart-contract labs: 45 Solidity labs with Foundry tests (storage to reentrancy, AMMs, flash loans, proxies, ERC-7201, fuzzing, invariants, mainnet forks), 4 Noir ZK labs, 4 Cairo/Starknet labs and a Hardhat lab. Each lab is a small, tested, importable contract.",
+   "kind": [
+    "contracts",
+    "docs"
+   ],
+   "stability": "stable",
+   "license": "MIT",
+   "entrypoints": [
+    {
+     "type": "solidity",
+     "name": "src/L<NN>_<Name>.sol",
+     "ref": "src/",
+     "install": "forge install Blockchains/blockchainlab-labs",
+     "usage": "import {ConstantProductAMM} from \"blockchainlab-labs/src/L21_ConstantProductAMM.sol\";"
+    },
+    {
+     "type": "file",
+     "name": "noir/",
+     "ref": "noir/Nargo.toml",
+     "usage": "cd noir && nargo test"
+    },
+    {
+     "type": "file",
+     "name": "cairo/",
+     "ref": "cairo/Scarb.toml",
+     "usage": "cd cairo && scarb test"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "lab contract",
+     "type": "Solidity source",
+     "description": "constructor args per lab"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "tested contract patterns",
+     "type": "Solidity/Noir/Cairo"
+    },
+    {
+     "name": "exercises",
+     "type": "Markdown table in README"
+    }
+   ],
+   "deps": [
+    "foundry",
+    "nargo (Noir labs)",
+    "scarb (Cairo labs)",
+    "node (Hardhat lab)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchain-dev-roadmap",
+     "how": "roadmap stages link to these labs"
+    },
+    {
+     "repo": "Blockchains/blockchain-interview-questions",
+     "how": "answers link to labs"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-tools",
+     "how": "labs reference the hash/storage tools"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-starters",
+     "how": "production-style starters for the same stacks"
+    },
+    {
+     "repo": "Blockchains/forge-usd-priced-membership-nft",
+     "how": "combine lab patterns with composed contracts"
+    }
+   ],
+   "tests": {
+    "command": "forge test -vv",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "env": [
+    {
+     "name": "MAINNET_RPC_URL",
+     "required": false,
+     "purpose": "mainnet fork lab (defaults to https://ethereum-rpc.publicnode.com)"
+    }
+   ],
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/blockchainlab-labs/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/blockchainlab-labs",
+    "agents_md": "https://github.com/Blockchains/blockchainlab-labs/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-labs/main/llms.txt",
+    "pushed_at": "2026-10-04T18:06:56Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchainlab-lens",
+   "repo": "Blockchains/blockchainlab-lens",
+   "summary": "One-click explainer for Etherscan-family and Blockscout explorers: a Manifest V3 extension and a bookmarklet that open the matching blockchainlab-tools page. Its URL detector (`extension/detect.js`) is a reusable UMD module.",
+   "kind": [
+    "browser-extension",
+    "library"
+   ],
+   "stability": "stable",
+   "license": "MIT",
+   "homepage": "https://blockchains.github.io/blockchainlab-lens/",
+   "entrypoints": [
+    {
+     "type": "browser-script",
+     "name": "BLLens (detect.js)",
+     "ref": "extension/detect.js",
+     "usage": "<script src=\"https://blockchains.github.io/blockchainlab-lens/extension/detect.js\"></script>",
+     "exports": [
+      "BLLens.detect(href)",
+      "BLLens.fromText(text, chain)",
+      "BLLens.HOSTS",
+      "BLLens.TOOLS"
+     ]
+    },
+    {
+     "type": "file",
+     "name": "extension/",
+     "ref": "extension/manifest.json",
+     "usage": "chrome://extensions \u2192 Load unpacked \u2192 extension/"
+    },
+    {
+     "type": "web",
+     "name": "bookmarklet",
+     "ref": "bookmarklet/bookmarklet.src.js",
+     "usage": "https://blockchains.github.io/blockchainlab-lens/"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "explorer URL or text",
+     "type": "string",
+     "description": "tx hash, address, ENS name or calldata; explorer page URLs on the supported Etherscan-family and Blockscout hosts"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "tools deep link",
+     "type": "URL",
+     "description": "blockchainlab-tools tx/address/abi page for the right chain"
+    },
+    {
+     "name": "detection",
+     "type": "{chain, kind, value, url}"
+    }
+   ],
+   "deps": [
+    "Chromium-based browser (extension) or any browser (bookmarklet/script)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-tools",
+     "how": "every explanation is a tools page"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-api",
+     "how": "use with API data in dashboards (Build with Blocks recipe 3)"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-mcp",
+     "how": "same deep links in MCP results"
+    }
+   ],
+   "tests": {
+    "command": "pip install playwright && python -m playwright install chromium && python test_extension.py",
+    "ci": ".github/workflows/test.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/blockchainlab-lens/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/blockchainlab-lens",
+    "agents_md": "https://github.com/Blockchains/blockchainlab-lens/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-lens/main/llms.txt",
+    "pushed_at": "2026-10-04T18:06:59Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchainlab-mcp",
+   "repo": "Blockchains/blockchainlab-mcp",
+   "summary": "MCP server (stdio) with 43 read-only blockchain tools for AI agents (Cursor, Claude, Grok, any MCP client) plus the same logic as a JS SDK: datasets from the Open Data API and live on-chain helpers (tx/calldata decoding, gas, ENS, Safe, EIP-712, approvals, MEV, Solana, PSBT). No keys; never signs or sends.",
+   "kind": [
+    "mcp-server",
+    "library",
+    "cli"
+   ],
+   "stability": "beta",
+   "version": "0.2.0",
+   "license": "MIT",
+   "entrypoints": [
+    {
+     "type": "mcp-stdio",
+     "name": "blockchainlab",
+     "ref": "bin/blockchainlab-mcp.js",
+     "install": "npx -y github:Blockchains/blockchainlab-mcp",
+     "exports": [
+      "search_whitepapers",
+      "get_chain",
+      "top_defi_protocols",
+      "chains_tvl",
+      "list_hackathons",
+      "list_events",
+      "list_grants",
+      "glossary",
+      "lookup_standard",
+      "gas_prices",
+      "decode_transaction",
+      "inspect_address",
+      "decode_calldata",
+      "abi_utils",
+      "convert_units",
+      "storage_slot",
+      "stablecoins",
+      "defi_yields",
+      "bridges_tvl",
+      "dex_volumes",
+      "protocol_fees",
+      "l2_metrics",
+      "security_incidents",
+      "sanctions_check",
+      "get_dataset",
+      "safe_info",
+      "safe_tx_hash",
+      "decode_safe_calldata",
+      "eip712_hash",
+      "verify_message",
+      "calldata_diff",
+      "contract_verification",
+      "gas_history",
+      "bridge_quotes",
+      "token_approvals",
+      "ens_bulk",
+      "decode_solana_tx",
+      "decode_psbt",
+      "address_labels",
+      "vanity_estimate",
+      "uniswap_price_impact",
+      "mev_sandwich_check",
+      "rpc_health"
+     ]
+    },
+    {
+     "type": "docker",
+     "name": "ghcr.io/blockchains/blockchainlab-mcp",
+     "ref": "Dockerfile",
+     "usage": "docker run -i --rm ghcr.io/blockchains/blockchainlab-mcp:latest"
+    },
+    {
+     "type": "npm",
+     "name": "blockchainlab-mcp",
+     "ref": "src/sdk.js",
+     "install": "npm i github:Blockchains/blockchainlab-mcp",
+     "exports": [
+      "BlockchainLab",
+      "onchain",
+      "onchain2",
+      "toolLinks",
+      "DEFAULT_API",
+      "TOOLS_SITE"
+     ]
+    }
+   ],
+   "inputs": [
+    {
+     "name": "tool call",
+     "type": "MCP tools/call",
+     "description": "JSON arguments per tool (see tools/list input schemas)"
+    },
+    {
+     "name": "BLOCKCHAINLAB_API",
+     "type": "env",
+     "description": "optional self-hosted API base"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "tool result",
+     "type": "MCP content (JSON text)",
+     "description": "data with generated_at/source fields and deep links to blockchainlab-tools pages"
+    }
+   ],
+   "deps": [
+    "node>=18",
+    "or docker"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-api",
+     "how": "data source for the dataset tools"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-tools",
+     "how": "shares the on-chain logic (`src/onchain*.js` mirror `assets/core*.js`); results link to tool pages"
+    },
+    {
+     "repo": "Blockchains/grokhack-forge",
+     "how": "give a composed Grok app's developer agent these tools, or call the SDK in app code"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-sdk",
+     "how": "typed alternative for app code (this package ships no .d.ts yet)"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-lens",
+     "how": "same explorer deep links"
+    }
+   ],
+   "tests": {
+    "command": "npm ci && npm test",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "env": [
+    {
+     "name": "BLOCKCHAINLAB_API",
+     "required": false,
+     "purpose": "point at a self-hosted copy of the Open Data API"
+    }
+   ],
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/blockchainlab-mcp/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/blockchainlab-mcp",
+    "agents_md": "https://github.com/Blockchains/blockchainlab-mcp/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-mcp/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:01Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchainlab-sdk",
+   "repo": "Blockchains/blockchainlab-sdk",
+   "summary": "Typed TypeScript and Python clients for the Blockchain Lab Open Data API: 20 nightly-rebuilt blockchain datasets (chains, RPC health, DeFi TVL, stablecoins, yields, L2 metrics, hacks, OFAC addresses, EIPs/ERCs/BIPs, grants, hackathons).",
+   "kind": [
+    "library"
+   ],
+   "stability": "stable",
+   "version": "1.1.0",
+   "license": "MIT",
+   "homepage": "https://blockchains.github.io/blockchainlab-api/",
+   "entrypoints": [
+    {
+     "type": "npm",
+     "name": "blockchainlab-sdk",
+     "ref": "ts/src/index.ts",
+     "install": "npm i github:Blockchains/blockchainlab-sdk",
+     "exports": [
+      "BlockchainLab",
+      "DATASETS",
+      "SCHEMA_VERSION",
+      "DEFAULT_BASE",
+      "DatasetName",
+      "DatasetMap",
+      "<Dataset>Row types"
+     ]
+    },
+    {
+     "type": "pypi",
+     "name": "blockchainlab_sdk",
+     "ref": "python/blockchainlab_sdk/__init__.py",
+     "install": "pip install \"git+https://github.com/Blockchains/blockchainlab-sdk#subdirectory=python\"",
+     "exports": [
+      "BlockchainLab"
+     ]
+    }
+   ],
+   "inputs": [
+    {
+     "name": "dataset name",
+     "type": "DatasetName",
+     "description": "one of the 20 API datasets"
+    },
+    {
+     "name": "filters",
+     "type": "args",
+     "description": "symbol, chainId, chain, since, minUsd, limit, address"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "typed rows",
+     "type": "<Dataset>Row[]",
+     "description": "from the API envelope's data array"
+    },
+    {
+     "name": "envelope",
+     "type": "Envelope<T>",
+     "description": "dataset, schema_version, generated_at, source, count, data"
+    }
+   ],
+   "deps": [
+    "node>=18 (or browsers/Deno/Bun)",
+    "python>=3.9 (stdlib only)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-api",
+     "how": "the data source; the SDK types are generated from its JSON Schemas (scripts/gen.py)"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-mcp",
+     "how": "same data exposed as MCP tools for AI agents; use the SDK in app code, the MCP server in agent clients"
+    },
+    {
+     "repo": "Blockchains/forge-usd-priced-membership-nft",
+     "how": "pick a healthy RPC (healthyRpcs) and screen wallets (isSanctioned) in a dApp front end around the contracts"
+    },
+    {
+     "repo": "Blockchains/grokhack-forge",
+     "how": "add SDK calls as Grok tools in a composed chat app (see Build with Blocks recipe 2)"
+    },
+    {
+     "repo": "Blockchains/blockchains.github.io",
+     "how": "the hub pages read the same API"
+    }
+   ],
+   "tests": {
+    "command": "npm test && (cd python && python -m unittest -v tests/test_live.py)",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/blockchainlab-sdk/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/blockchainlab-sdk",
+    "agents_md": "https://github.com/Blockchains/blockchainlab-sdk/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-sdk/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:03Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchainlab-starters",
+   "repo": "Blockchains/blockchainlab-starters",
+   "summary": "Template repo of 8 CI-tested starters built on Blockchains forks: foundry-oz-tokens, chainlink-price-feed, uniswap-v4-hook, erc4337-smart-account, hedera-token-sdk, wagmi-rainbowkit-dapp, circom-zk-proof and noir-zk-proof.",
+   "kind": [
+    "template"
+   ],
+   "stability": "stable",
+   "license": "MIT",
+   "entrypoints": [
+    {
+     "type": "git",
+     "name": "Use this template",
+     "ref": "https://github.com/new?template_name=blockchainlab-starters&template_owner=Blockchains",
+     "usage": "GitHub template / Codespaces / Gitpod"
+    },
+    {
+     "type": "file",
+     "name": "starters/<name>/",
+     "ref": "starters/",
+     "usage": "cd starters/<name> && follow its README"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "starter choice",
+     "type": "directory name"
+    },
+    {
+     "name": "optional env",
+     "type": "env",
+     "description": "MAINNET_RPC_URL, FEED, ENTRYPOINT, HEDERA_OPERATOR_ID/KEY/NETWORK"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "working project skeleton",
+     "type": "repo",
+     "description": "tests passing in CI"
+    }
+   ],
+   "deps": [
+    "foundry",
+    "node>=20",
+    "circom 2.2.3 + snarkjs",
+    "nargo"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-labs",
+     "how": "learn the pattern, then start from the matching starter"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-sdk",
+     "how": "add live data to wagmi-rainbowkit-dapp"
+    },
+    {
+     "repo": "Blockchains/awesome-blockchainlab",
+     "how": "the forks the starters pin"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-compose",
+     "how": "generated alternative for token/NFT ideas"
+    }
+   ],
+   "tests": {
+    "command": "cd starters/<name> && forge test   # or npm test / nargo test per starter",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/blockchainlab-starters/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/blockchainlab-starters",
+    "agents_md": "https://github.com/Blockchains/blockchainlab-starters/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-starters/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:06Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchainlab-tools",
+   "repo": "Blockchains/blockchainlab-tools",
+   "summary": "26 client-side blockchain developer tools (gas, units, ABI, tx decoder, ENS, storage slots, Merkle, Safe, EIP-712, approvals, MEV, Solana, PSBT...) as static pages with deep links, plus the shared ES-module logic (`assets/core.js`, `assets/core2.js`) usable from Node or the browser.",
+   "kind": [
+    "web-app",
+    "library"
+   ],
+   "stability": "stable",
+   "license": "MIT",
+   "homepage": "https://blockchains.github.io/blockchainlab-tools/",
+   "entrypoints": [
+    {
+     "type": "web",
+     "name": "tool deep links",
+     "ref": "https://blockchains.github.io/blockchainlab-tools/<tool>/",
+     "usage": "https://blockchains.github.io/blockchainlab-tools/tx/?chain=base&hash=0x\u2026"
+    },
+    {
+     "type": "file",
+     "name": "assets/core.js",
+     "ref": "assets/core.js",
+     "usage": "git clone + npm install, then import * as C from './assets/core.js'",
+     "exports": [
+      "convertUnits",
+      "selector",
+      "topic",
+      "encodeCall",
+      "decodeCalldata",
+      "decodeTx",
+      "evmFees",
+      "btcFees",
+      "solFees",
+      "resolveEns",
+      "reverseEns",
+      "addressInfo",
+      "erc20Meta",
+      "readSlot",
+      "mappingSlot",
+      "erc7201Slot",
+      "merkleStandard",
+      "merkleSimple",
+      "hashes",
+      "dataset",
+      "CHAINS"
+     ]
+    },
+    {
+     "type": "file",
+     "name": "assets/core2.js",
+     "ref": "assets/core2.js",
+     "exports": [
+      "multicall",
+      "safeTxHash",
+      "safeInfo",
+      "decodeSafeCalldata",
+      "typedDataHash",
+      "recoverTypedData",
+      "erc1271",
+      "calldataDiff",
+      "verification",
+      "gasHistory",
+      "bridgeQuotes",
+      "approvals",
+      "ensBulk",
+      "decodeSolTx",
+      "decodePSBT",
+      "addressLabels",
+      "priceImpact",
+      "sandwichCheck",
+      "stablecoins",
+      "rpcHealth",
+      "create2Address"
+     ]
+    }
+   ],
+   "inputs": [
+    {
+     "name": "query params",
+     "type": "URL",
+     "description": "chain, hash, address/q, data, v/u depending on the tool"
+    },
+    {
+     "name": "function args",
+     "type": "JS",
+     "description": "addresses, hashes, calldata, chain keys"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "rendered tool page",
+     "type": "HTML"
+    },
+    {
+     "name": "JS results",
+     "type": "objects",
+     "description": "decoded calls, fees in wei/USD, slots, hashes"
+    }
+   ],
+   "deps": [
+    "browser (ES modules + import map)",
+    "node>=18 with ethers 6.13.4 and @openzeppelin/merkle-tree for Node use"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-mcp",
+     "how": "the MCP server wraps the same logic as agent tools"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-lens",
+     "how": "the extension opens these pages for explorer tx/address URLs"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-api",
+     "how": "chains and EIP/ERC/BIP reference data"
+    },
+    {
+     "repo": "Blockchains/blockchain-dev-roadmap",
+     "how": "roadmap stages link to the tools"
+    },
+    {
+     "repo": "Blockchains/blockchains.github.io",
+     "how": "listed on the hub"
+    }
+   ],
+   "tests": {
+    "command": "npm install && npm test",
+    "ci": ".github/workflows/live-tests.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/blockchainlab-tools/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/blockchainlab-tools",
+    "agents_md": "https://github.com/Blockchains/blockchainlab-tools/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-tools/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:08Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "Blockchains",
+   "repo": "Blockchains/Blockchains",
+   "summary": "GitHub profile README for Ismail Malik / Blockchain Lab: live sites, the open-source toolkit and pointers to Build with Blocks.",
+   "kind": [
+    "docs"
+   ],
+   "stability": "stable",
+   "license": "NOASSERTION",
+   "entrypoints": [
+    {
+     "type": "file",
+     "name": "README.md",
+     "ref": "README.md",
+     "usage": "https://github.com/Blockchains"
+    }
+   ],
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "profile page",
+     "type": "Markdown"
+    }
+   ],
+   "deps": [
+    "none"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/.github",
+     "how": "org docs: BUILD-WITH-BLOCKS, BLOCKS-SCHEMA"
+    },
+    {
+     "repo": "Blockchains/blockchains.github.io",
+     "how": "hub, llms.txt and blocks catalogue"
+    }
+   ],
+   "tests": {
+    "command": "# none (Markdown only)",
+    "network": false
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/Blockchains/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/Blockchains",
+    "agents_md": "https://github.com/Blockchains/Blockchains/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/Blockchains/main/llms.txt",
+    "pushed_at": "2026-10-04T18:06:38Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "blockchains.github.io",
+   "repo": "Blockchains/blockchains.github.io",
+   "summary": "Blockchain Lab Hub: static GitHub Pages site with 75 free services (AI briefs via Grok, gas/RPC/chain monitors, finders, feeds), machine-readable services.json, health data, and the org-wide llms.txt and blocks.json catalogue.",
+   "kind": [
+    "web-app",
+    "dataset"
+   ],
+   "stability": "stable",
+   "license": "MIT",
+   "homepage": "https://blockchains.github.io/",
+   "entrypoints": [
+    {
+     "type": "http",
+     "name": "services.json",
+     "ref": "https://blockchains.github.io/services.json",
+     "usage": "catalogue of every service with id, name, url, category"
+    },
+    {
+     "type": "http",
+     "name": "blocks.json",
+     "ref": "https://blockchains.github.io/blocks.json",
+     "usage": "aggregated blocks.json of every live Blockchains repo"
+    },
+    {
+     "type": "http",
+     "name": "llms.txt",
+     "ref": "https://blockchains.github.io/llms.txt",
+     "usage": "org-wide doc map for LLMs (+ llms-full.txt)"
+    },
+    {
+     "type": "http",
+     "name": "data/*.json",
+     "ref": "https://blockchains.github.io/data/",
+     "usage": "gas.json, liveness.json, rpc-latency.json, incidents.json, events.json, jobs.json, grants.json, depeg.json, status.json, ai/*.json"
+    },
+    {
+     "type": "http",
+     "name": "feeds",
+     "ref": "https://blockchains.github.io/incidents/feed.xml",
+     "usage": "incident RSS + /events/events.ics"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "public APIs/RPCs",
+     "type": "network",
+     "description": "read by scheduled jobs"
+    },
+    {
+     "name": "XAI_API_KEY",
+     "type": "secret",
+     "description": "AI briefs"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "pages",
+     "type": "HTML"
+    },
+    {
+     "name": "data files",
+     "type": "JSON with generated_at"
+    },
+    {
+     "name": "blocks catalogue",
+     "type": "JSON"
+    }
+   ],
+   "deps": [
+    "python3.12",
+    "playwright (tests)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-api",
+     "how": "data source for many pages"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-tools",
+     "how": "tools are linked from the hub"
+    },
+    {
+     "repo": "Blockchains/sites-monitor",
+     "how": "status of the custom domains"
+    },
+    {
+     "repo": "Blockchains/.github",
+     "how": "BLOCKS-SCHEMA and BUILD-WITH-BLOCKS docs"
+    }
+   ],
+   "tests": {
+    "command": "python scripts/gen_site.py && git diff --exit-code -- '*.html' sitemap.xml robots.txt && python tests/validate.py && (python tests/serve.py 43117 & sleep 2; BASE=http://127.0.0.1:43117 python tests/e2e.py)",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://blockchains.github.io/blocks/hub.json",
+    "html_url": "https://github.com/Blockchains/blockchains.github.io",
+    "agents_md": "https://github.com/Blockchains/blockchains.github.io/blob/main/AGENTS.md",
+    "llms_txt": "https://blockchains.github.io/llms.txt",
+    "pushed_at": "2026-10-04T17:31:15Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "forge-dao-governance-token",
+   "repo": "Blockchains/forge-dao-governance-token",
+   "summary": "Composed DAO governance kit: capped ERC-20 with EIP-2612 permit, ERC20Votes delegation and role-based minting (DaoGovernanceToken) plus an OpenZeppelin Governor with settings, simple counting, 4% quorum and a TimelockController (DaoGovernanceGovernor).",
+   "kind": [
+    "contracts"
+   ],
+   "stability": "reference",
+   "license": "MIT",
+   "entrypoints": [
+    {
+     "type": "solidity",
+     "name": "DaoGovernanceToken",
+     "ref": "src/DaoGovernanceToken.sol",
+     "install": "forge install Blockchains/forge-dao-governance-token"
+    },
+    {
+     "type": "solidity",
+     "name": "DaoGovernanceGovernor",
+     "ref": "src/DaoGovernanceGovernor.sol",
+     "install": "forge install Blockchains/forge-dao-governance-token"
+    },
+    {
+     "type": "file",
+     "name": "script/Deploy.s.sol",
+     "ref": "script/Deploy.s.sol",
+     "usage": "forge script script/Deploy.s.sol --rpc-url $SEPOLIA_RPC_URL --account <keystore> --broadcast"
+    },
+    {
+     "type": "file",
+     "name": "component-map.json, plan.json",
+     "ref": "component-map.json",
+     "usage": "provenance: capability \u2192 component \u2192 pinned fork commit"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "constructor args",
+     "type": "Solidity",
+     "description": "DaoGovernanceToken(admin, initialSupply, cap); DaoGovernanceGovernor(IVotes token, TimelockController timelock, uint48 votingDelay, uint32 votingPeriod)"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "deployed contracts",
+     "type": "EVM"
+    },
+    {
+     "name": "events/errors",
+     "type": "ABI",
+     "description": "see src/"
+    }
+   ],
+   "deps": [
+    "foundry (solc 0.8.30)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-compose",
+     "how": "the composer that generated this repo"
+    },
+    {
+     "repo": "Blockchains/forge-usd-priced-membership-nft",
+     "how": "pair: members NFT + governance token"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-sdk",
+     "how": "front end data (chains, RPC health, sanctions screening)"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-labs",
+     "how": "L15 Timelock lab explains the pattern"
+    }
+   ],
+   "tests": {
+    "command": "forge test -vv",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "env": [
+    {
+     "name": "MAINNET_RPC_URL",
+     "required": false,
+     "purpose": "enables live-chain fork tests"
+    },
+    {
+     "name": "SEPOLIA_RPC_URL",
+     "required": false,
+     "purpose": "deploy target"
+    },
+    {
+     "name": "DEPLOYER_PRIVATE_KEY",
+     "required": false,
+     "purpose": "repo secret for the Deploy workflow only; never in files"
+    }
+   ],
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/forge-dao-governance-token/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/forge-dao-governance-token",
+    "agents_md": "https://github.com/Blockchains/forge-dao-governance-token/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/forge-dao-governance-token/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:11Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "forge-example-gasless-membership",
+   "repo": "Blockchains/forge-example-gasless-membership",
+   "summary": "Composed gasless membership club: ERC-721 pass with an approver allowlist (MembershipNFT) and an ERC-4337 paymaster that sponsors exactly the join() UserOperation (ClubPaymaster, extends eth-infinitism BasePaymaster v0.9.0), plus a viem front end.",
+   "kind": [
+    "contracts",
+    "web-app"
+   ],
+   "stability": "reference",
+   "license": "GPL-3.0-or-later",
+   "homepage": "https://blockchains.github.io/forge-example-gasless-membership/",
+   "entrypoints": [
+    {
+     "type": "solidity",
+     "name": "MembershipNFT",
+     "ref": "src/MembershipNFT.sol",
+     "install": "forge install Blockchains/forge-example-gasless-membership"
+    },
+    {
+     "type": "solidity",
+     "name": "ClubPaymaster",
+     "ref": "src/ClubPaymaster.sol",
+     "install": "forge install Blockchains/forge-example-gasless-membership"
+    },
+    {
+     "type": "file",
+     "name": "script/Deploy.s.sol",
+     "ref": "script/Deploy.s.sol",
+     "usage": "forge script script/Deploy.s.sol --rpc-url $SEPOLIA_RPC_URL --account <keystore> --broadcast"
+    },
+    {
+     "type": "file",
+     "name": "component-map.json, plan.json",
+     "ref": "component-map.json",
+     "usage": "provenance: capability \u2192 component \u2192 pinned fork commit"
+    },
+    {
+     "type": "web",
+     "name": "web/",
+     "ref": "web/",
+     "usage": "cd web && npm ci && npm run dev"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "constructor args",
+     "type": "Solidity",
+     "description": "MembershipNFT(admin, baseURI); ClubPaymaster(IEntryPoint ep, MembershipNFT club, uint256 maxCost, address owner)"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "deployed contracts",
+     "type": "EVM"
+    },
+    {
+     "name": "events/errors",
+     "type": "ABI",
+     "description": "see src/"
+    }
+   ],
+   "deps": [
+    "foundry (solc 0.8.30)",
+    "node>=20 (web/)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-index",
+     "how": "the composer that generated this repo"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-index",
+     "how": "components were retrieved from the index"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-starters",
+     "how": "erc4337-smart-account starter"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-sdk",
+     "how": "RPC health for the front end"
+    }
+   ],
+   "tests": {
+    "command": "forge test -vv",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "env": [
+    {
+     "name": "MAINNET_RPC_URL",
+     "required": false,
+     "purpose": "enables live-chain fork tests"
+    },
+    {
+     "name": "SEPOLIA_RPC_URL",
+     "required": false,
+     "purpose": "deploy target"
+    },
+    {
+     "name": "DEPLOYER_PRIVATE_KEY",
+     "required": false,
+     "purpose": "repo secret for the Deploy workflow only; never in files"
+    }
+   ],
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/forge-example-gasless-membership/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/forge-example-gasless-membership",
+    "agents_md": "https://github.com/Blockchains/forge-example-gasless-membership/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/forge-example-gasless-membership/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:13Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "forge-example-usd-savings-vault",
+   "repo": "Blockchains/forge-example-usd-savings-vault",
+   "summary": "Composed ERC-4626 savings vault that reports value in USD via a Chainlink feed, with a USD deposit cap, entry fee (max 5%) and RISK_MANAGER_ROLE controls (UsdSavingsVault), plus a viem front end on GitHub Pages.",
+   "kind": [
+    "contracts",
+    "web-app"
+   ],
+   "stability": "reference",
+   "license": "MIT",
+   "homepage": "https://blockchains.github.io/forge-example-usd-savings-vault/",
+   "entrypoints": [
+    {
+     "type": "solidity",
+     "name": "UsdSavingsVault",
+     "ref": "src/UsdSavingsVault.sol",
+     "install": "forge install Blockchains/forge-example-usd-savings-vault"
+    },
+    {
+     "type": "file",
+     "name": "script/Deploy.s.sol",
+     "ref": "script/Deploy.s.sol",
+     "usage": "forge script script/Deploy.s.sol --rpc-url $SEPOLIA_RPC_URL --account <keystore> --broadcast"
+    },
+    {
+     "type": "file",
+     "name": "component-map.json, plan.json",
+     "ref": "component-map.json",
+     "usage": "provenance: capability \u2192 component \u2192 pinned fork commit"
+    },
+    {
+     "type": "web",
+     "name": "web/",
+     "ref": "web/",
+     "usage": "cd web && npm ci && npm run dev"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "constructor args",
+     "type": "Solidity",
+     "description": "UsdSavingsVault(IERC20Metadata asset, AggregatorV3Interface feed, name, symbol, \u2026) (see src/UsdSavingsVault.sol)"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "deployed contracts",
+     "type": "EVM"
+    },
+    {
+     "name": "events/errors",
+     "type": "ABI",
+     "description": "see src/"
+    }
+   ],
+   "deps": [
+    "foundry (solc 0.8.30)",
+    "node>=20 (web/)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-index",
+     "how": "the composer that generated this repo"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-index",
+     "how": "components were retrieved from the index"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-sdk",
+     "how": "yields/stablecoins data next to the vault UI"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-labs",
+     "how": "L28 invariant-testing lab for vault properties"
+    }
+   ],
+   "tests": {
+    "command": "forge test -vv",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "env": [
+    {
+     "name": "MAINNET_RPC_URL",
+     "required": false,
+     "purpose": "enables live-chain fork tests"
+    },
+    {
+     "name": "SEPOLIA_RPC_URL",
+     "required": false,
+     "purpose": "deploy target"
+    },
+    {
+     "name": "DEPLOYER_PRIVATE_KEY",
+     "required": false,
+     "purpose": "repo secret for the Deploy workflow only; never in files"
+    }
+   ],
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/forge-example-usd-savings-vault/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/forge-example-usd-savings-vault",
+    "agents_md": "https://github.com/Blockchains/forge-example-usd-savings-vault/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/forge-example-usd-savings-vault/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:15Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "forge-usd-priced-membership-nft",
+   "repo": "Blockchains/forge-usd-priced-membership-nft",
+   "summary": "Composed membership NFT: ERC-721 with max supply, ERC-2981 royalties, pause switch, MINTER/PAUSER roles and a paid mint priced in USD through a Chainlink ETH/USD feed with staleness checks and refunds (UsdPricedMembership). Good base for token-gated apps.",
+   "kind": [
+    "contracts"
+   ],
+   "stability": "reference",
+   "license": "MIT",
+   "entrypoints": [
+    {
+     "type": "solidity",
+     "name": "UsdPricedMembership",
+     "ref": "src/UsdPricedMembership.sol",
+     "install": "forge install Blockchains/forge-usd-priced-membership-nft"
+    },
+    {
+     "type": "file",
+     "name": "script/Deploy.s.sol",
+     "ref": "script/Deploy.s.sol",
+     "usage": "forge script script/Deploy.s.sol --rpc-url $SEPOLIA_RPC_URL --account <keystore> --broadcast"
+    },
+    {
+     "type": "file",
+     "name": "component-map.json, plan.json",
+     "ref": "component-map.json",
+     "usage": "provenance: capability \u2192 component \u2192 pinned fork commit"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "constructor args",
+     "type": "Solidity",
+     "description": "UsdPricedMembership(admin, maxSupply, baseURI, feed, mintPriceUsd (1e18 = $1), maxPriceAge, royaltyReceiver, royaltyBps)"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "deployed contracts",
+     "type": "EVM"
+    },
+    {
+     "name": "events/errors",
+     "type": "ABI",
+     "description": "see src/"
+    }
+   ],
+   "deps": [
+    "foundry (solc 0.8.30)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-compose",
+     "how": "the composer that generated this repo"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-sdk",
+     "how": "token-gated dApp data layer (Build with Blocks recipe 1)"
+    },
+    {
+     "repo": "Blockchains/forge-dao-governance-token",
+     "how": "add governance"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-starters",
+     "how": "chainlink-price-feed starter explains the oracle pattern"
+    }
+   ],
+   "tests": {
+    "command": "forge test -vv",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "env": [
+    {
+     "name": "MAINNET_RPC_URL",
+     "required": false,
+     "purpose": "enables live-chain fork tests"
+    },
+    {
+     "name": "SEPOLIA_RPC_URL",
+     "required": false,
+     "purpose": "deploy target"
+    },
+    {
+     "name": "DEPLOYER_PRIVATE_KEY",
+     "required": false,
+     "purpose": "repo secret for the Deploy workflow only; never in files"
+    }
+   ],
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/forge-usd-priced-membership-nft/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/forge-usd-priced-membership-nft",
+    "agents_md": "https://github.com/Blockchains/forge-usd-priced-membership-nft/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/forge-usd-priced-membership-nft/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:18Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "fork-sync",
+   "repo": "Blockchains/fork-sync",
+   "summary": "Keeps the curated Blockchains forks in line with their upstreams: forks.json lists each fork, upstream, branch and mode (merge via the merge-upstream API, or tracking for forks whose GitHub parent differs from the real upstream); nightly workflow + box-side script.",
+   "kind": [
+    "automation",
+    "dataset",
+    "cli"
+   ],
+   "stability": "stable",
+   "license": "NOASSERTION",
+   "entrypoints": [
+    {
+     "type": "file",
+     "name": "forks.json",
+     "ref": "forks.json",
+     "usage": "slug, fork, upstream, upstream_branch, branch, mode, tracking_branch, category, license, wave"
+    },
+    {
+     "type": "cli",
+     "name": "scripts/sync.py",
+     "ref": "scripts/sync.py",
+     "usage": "python3 scripts/sync.py [--dry-run] [--only a,b] [--pace SECONDS]"
+    },
+    {
+     "type": "github-action",
+     "name": "Nightly fork sync",
+     "ref": ".github/workflows/sync.yml",
+     "usage": "02:17 UTC + workflow_dispatch (input: only)"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "forks.json",
+     "type": "JSON"
+    },
+    {
+     "name": "FORK_SYNC_TOKEN",
+     "type": "secret",
+     "description": "enables real syncs in Actions; otherwise read-only drift check"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "reports/last-sync.json",
+     "type": "JSON artifact",
+     "description": "per-fork result"
+    },
+    {
+     "name": "synced forks",
+     "type": "GitHub"
+    }
+   ],
+   "deps": [
+    "python3",
+    "gh"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-index",
+     "how": "indexes the synced forks nightly, after this runs"
+    },
+    {
+     "repo": "Blockchains/awesome-blockchainlab",
+     "how": "list of the same forks"
+    },
+    {
+     "repo": "Blockchains/grokhack-index",
+     "how": "syncs its own fork list best-effort"
+    }
+   ],
+   "tests": {
+    "command": "python3 scripts/sync.py --dry-run",
+    "ci": ".github/workflows/sync.yml",
+    "network": true
+   },
+   "env": [
+    {
+     "name": "FORK_SYNC_TOKEN",
+     "required": false,
+     "purpose": "repo secret; PAT with repo + workflow on Blockchains"
+    }
+   ],
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/fork-sync/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/fork-sync",
+    "agents_md": "https://github.com/Blockchains/fork-sync/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/fork-sync/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:20Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "grok-release-radar",
+   "repo": "Blockchains/grok-release-radar",
+   "summary": "Daily digest app composed by grokhack-forge: collects real GitHub release activity for tracked Grok-integration repos and summarises it with the official xai-sdk (gRPC) using structured output, published to GitHub Pages by Actions.",
+   "kind": [
+    "web-app",
+    "automation"
+   ],
+   "stability": "reference",
+   "license": "MIT",
+   "homepage": "https://blockchains.github.io/grok-release-radar/",
+   "entrypoints": [
+    {
+     "type": "web",
+     "name": "live app",
+     "ref": "https://blockchains.github.io/grok-release-radar/",
+     "usage": "https://blockchains.github.io/grok-release-radar/"
+    },
+    {
+     "type": "file",
+     "name": "forge.json / PARTS.md",
+     "ref": "forge.json",
+     "usage": "composition manifest: archetype, capabilities, SDK part + commit, default model"
+    },
+    {
+     "type": "file",
+     "name": "app/",
+     "ref": "app/main.py",
+     "exports": [
+      "collect",
+      "summarize",
+      "render",
+      "FORGE"
+     ]
+    }
+   ],
+   "inputs": [
+    {
+     "name": "XAI_API_KEY",
+     "type": "secret/env or pasted in the page"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Grok output",
+     "type": "web page"
+    }
+   ],
+   "deps": [
+    "python>=3.10"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/grokhack-forge",
+     "how": "the composer that generated it; re-compose for variants"
+    },
+    {
+     "repo": "Blockchains/grokhack-index",
+     "how": "where its SDK part and reference snippets come from"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-sdk",
+     "how": "add blockchain data as tools (chat) or inputs (digest)"
+    }
+   ],
+   "tests": {
+    "command": "pytest -q && python -m app.e2e",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "env": [
+    {
+     "name": "XAI_API_KEY",
+     "required": false,
+     "purpose": "live Grok calls; without it CI proves api.x.ai rejects the unauthenticated call"
+    }
+   ],
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/grok-release-radar/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/grok-release-radar",
+    "agents_md": "https://github.com/Blockchains/grok-release-radar/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/grok-release-radar/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:22Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "grok-tools-chat",
+   "repo": "Blockchains/grok-tools-chat",
+   "summary": "Browser chat app composed by grokhack-forge: Grok via Vercel AI SDK @ai-sdk/xai with streaming and local tools (calculator, time, live GitHub repo lookup) plus xAI web search; visitors bring their own key, sent only to api.x.ai.",
+   "kind": [
+    "web-app"
+   ],
+   "stability": "reference",
+   "license": "MIT",
+   "homepage": "https://blockchains.github.io/grok-tools-chat/",
+   "entrypoints": [
+    {
+     "type": "web",
+     "name": "live app",
+     "ref": "https://blockchains.github.io/grok-tools-chat/",
+     "usage": "https://blockchains.github.io/grok-tools-chat/"
+    },
+    {
+     "type": "file",
+     "name": "forge.json / PARTS.md",
+     "ref": "forge.json",
+     "usage": "composition manifest: archetype, capabilities, SDK part + commit, default model"
+    },
+    {
+     "type": "file",
+     "name": "src/grok.ts",
+     "ref": "src/grok.ts",
+     "exports": [
+      "chat",
+      "listModels",
+      "describeError",
+      "isCreditsError",
+      "CREDITS_NOTICE",
+      "XAI_BASE_URL"
+     ]
+    },
+    {
+     "type": "file",
+     "name": "src/tools.ts",
+     "ref": "src/tools.ts",
+     "exports": [
+      "localTools",
+      "calculate",
+      "nowIn",
+      "githubRepo"
+     ]
+    }
+   ],
+   "inputs": [
+    {
+     "name": "XAI_API_KEY",
+     "type": "secret/env or pasted in the page"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "Grok output",
+     "type": "web page"
+    }
+   ],
+   "deps": [
+    "node>=20"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/grokhack-forge",
+     "how": "the composer that generated it; re-compose for variants"
+    },
+    {
+     "repo": "Blockchains/grokhack-index",
+     "how": "where its SDK part and reference snippets come from"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-sdk",
+     "how": "add blockchain data as tools (chat) or inputs (digest)"
+    }
+   ],
+   "tests": {
+    "command": "npm test && npm run e2e",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "env": [
+    {
+     "name": "XAI_API_KEY",
+     "required": false,
+     "purpose": "live Grok calls; without it CI proves api.x.ai rejects the unauthenticated call"
+    }
+   ],
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/grok-tools-chat/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/grok-tools-chat",
+    "agents_md": "https://github.com/Blockchains/grok-tools-chat/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/grok-tools-chat/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:25Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "grokhack-forge",
+   "repo": "Blockchains/grokhack-forge",
+   "summary": "Composer for Grok apps: turns an app idea into a working repo (archetype `chat`: Vite + Vercel AI SDK @ai-sdk/xai with streaming and tools; archetype `digest`: Python xai-sdk with structured output on a schedule) using parts from grokhack-index, with CI that makes a real api.x.ai request and a GitHub Pages deploy.",
+   "kind": [
+    "cli",
+    "github-action",
+    "template"
+   ],
+   "stability": "beta",
+   "license": "MIT",
+   "entrypoints": [
+    {
+     "type": "cli",
+     "name": "forge/compose.py",
+     "ref": "forge/compose.py",
+     "usage": "python3 forge/compose.py --idea \"<idea>\" --name <app> [--out DIR] [--index DIR|URL] [--create --wait]"
+    },
+    {
+     "type": "github-action",
+     "name": "compose app",
+     "ref": ".github/workflows/compose.yml",
+     "usage": "workflow_dispatch inputs: idea, name, request_id \u2192 results/<request_id>.json"
+    },
+    {
+     "type": "file",
+     "name": "templates/chat, templates/digest",
+     "ref": "templates/",
+     "usage": "app templates the composer fills in"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "--idea",
+     "type": "string"
+    },
+    {
+     "name": "--name",
+     "type": "string"
+    },
+    {
+     "name": "--index",
+     "type": "dir or URL",
+     "description": "grokhack-index data (published index by default)"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "app repo",
+     "type": "directory",
+     "description": "src/ (chat) or app/ (digest), tests, scripts/e2e, PARTS.md, forge.json, CI, Pages workflow"
+    },
+    {
+     "name": "compose result",
+     "type": "JSON on stdout",
+     "description": "parts used, archetype, dir/URL"
+    }
+   ],
+   "deps": [
+    "python>=3.10 (stdlib only)",
+    "node>=20 for chat apps",
+    "gh for --create"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/grokhack-index",
+     "how": "parts source: SDK package versions at indexed fork commits, default model, reference snippets"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-mcp",
+     "how": "give the app's developer agent blockchain tools, or port tools into the app"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-sdk",
+     "how": "typed data calls as Grok tools inside a chat app (Build with Blocks recipe 2)"
+    },
+    {
+     "repo": "Blockchains/grok-tools-chat",
+     "how": "reference chat output"
+    },
+    {
+     "repo": "Blockchains/grok-release-radar",
+     "how": "reference digest output"
+    },
+    {
+     "repo": "Blockchains/awesome-grokhack",
+     "how": "the forks behind the index"
+    }
+   ],
+   "tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "env": [
+    {
+     "name": "XAI_API_KEY",
+     "required": false,
+     "purpose": "generated apps' live e2e; without it the e2e checks api.x.ai rejects the unauthenticated call"
+    },
+    {
+     "name": "XAI_MODEL",
+     "required": false,
+     "purpose": "override the default model in digest apps"
+    },
+    {
+     "name": "FORGE_TOKEN",
+     "required": false,
+     "purpose": "repo secret; lets the Action create repos"
+    }
+   ],
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/grokhack-forge/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/grokhack-forge",
+    "agents_md": "https://github.com/Blockchains/grokhack-forge/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/grokhack-forge/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:27Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "grokhack-index",
+   "repo": "Blockchains/grokhack-index",
+   "summary": "Nightly index of the Grok/xAI integration surface (endpoints, models, features, env vars, SDK exports, packages, code snippets with commit-pinned URLs) across the forks listed in awesome-grokhack, with a static search UI and an inverted index.",
+   "kind": [
+    "index",
+    "dataset",
+    "cli"
+   ],
+   "stability": "beta",
+   "license": "MIT",
+   "homepage": "https://blockchains.github.io/grokhack-index/",
+   "entrypoints": [
+    {
+     "type": "http",
+     "name": "data/parts.json",
+     "ref": "https://blockchains.github.io/grokhack-index/data/parts.json",
+     "usage": "composable parts: repo-surface, sdk-exports, code-snippet, package"
+    },
+    {
+     "type": "file",
+     "name": "data/repos/<owner>__<repo>.json",
+     "ref": "data/repos/",
+     "usage": "one shard per fork"
+    },
+    {
+     "type": "cli",
+     "name": "indexer/search.py",
+     "ref": "indexer/search.py",
+     "usage": "python3 indexer/search.py \"streaming tool calling typescript\" --data data"
+    },
+    {
+     "type": "web",
+     "name": "search UI",
+     "ref": "docs/index.html",
+     "usage": "https://blockchains.github.io/grokhack-index/"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "repos.json",
+     "type": "file",
+     "description": "from awesome-grokhack grok-forge.json"
+    },
+    {
+     "name": "query",
+     "type": "string",
+     "description": "for search.py"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "parts",
+     "type": "JSON"
+    },
+    {
+     "name": "stats",
+     "type": "JSON",
+     "description": "repos per endpoint/model/feature/env var"
+    },
+    {
+     "name": "search-index",
+     "type": "JSON",
+     "description": "token \u2192 part positions"
+    }
+   ],
+   "deps": [
+    "python>=3.10 (stdlib only)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/awesome-grokhack",
+     "how": "source repo list"
+    },
+    {
+     "repo": "Blockchains/grokhack-forge",
+     "how": "consumes parts to compose apps"
+    },
+    {
+     "repo": "Blockchains/grok-tools-chat",
+     "how": "parts recorded in its PARTS.md"
+    }
+   ],
+   "tests": {
+    "command": "python3 indexer/check.py data",
+    "ci": ".github/workflows/ci.yml",
+    "network": false
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/grokhack-index/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/grokhack-index",
+    "agents_md": "https://github.com/Blockchains/grokhack-index/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/grokhack-index/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:29Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "grokhack-submissions",
+   "repo": "Blockchains/grokhack-submissions",
+   "summary": "Template repository for The Grok Hack entries: submission.json validated against submission.schema.json, a Node 22 streaming-chat starter for the xAI API, judging notes, and CI that validates, builds/tests, runs a real api.x.ai e2e and scans for secrets.",
+   "kind": [
+    "template"
+   ],
+   "stability": "stable",
+   "license": "MIT",
+   "entrypoints": [
+    {
+     "type": "git",
+     "name": "Use this template",
+     "ref": "https://github.com/new?template_name=grokhack-submissions&template_owner=Blockchains",
+     "usage": "GitHub template"
+    },
+    {
+     "type": "file",
+     "name": "submission.schema.json",
+     "ref": "submission.schema.json",
+     "usage": "required: project, tagline, team, track, repo, grok, license, status"
+    },
+    {
+     "type": "file",
+     "name": "starter/",
+     "ref": "starter/index.mjs",
+     "usage": "cd starter && npm ci && npm test && npm run e2e"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "submission.json",
+     "type": "JSON",
+     "description": "validated by scripts/validate_submission.py"
+    },
+    {
+     "name": "XAI_API_KEY",
+     "type": "secret"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "validated entry repo",
+     "type": "repo"
+    }
+   ],
+   "deps": [
+    "python3",
+    "node 22"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/grokhack-forge",
+     "how": "compose the app first, then submit with this template"
+    },
+    {
+     "repo": "Blockchains/hackathon-entry-template",
+     "how": "generic (non-Grok) hackathon template"
+    },
+    {
+     "repo": "Blockchains/hackathons",
+     "how": "tracker issues"
+    }
+   ],
+   "tests": {
+    "command": "python3 scripts/validate_submission.py submission.json && cd starter && npm ci && npm test && npm run e2e",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "env": [
+    {
+     "name": "XAI_API_KEY",
+     "required": false,
+     "purpose": "starter e2e live answer"
+    }
+   ],
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/grokhack-submissions/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/grokhack-submissions",
+    "agents_md": "https://github.com/Blockchains/grokhack-submissions/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/grokhack-submissions/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:31Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "hackathon-entry-template",
+   "repo": "Blockchains/hackathon-entry-template",
+   "summary": "Generic hackathon entry template: README skeleton (problem, solution, architecture, what was built), docs/SUBMISSION.md checklist, .env.example, and CI that scans for secrets and auto-detects Node, Python or Foundry to build and test.",
+   "kind": [
+    "template"
+   ],
+   "stability": "stable",
+   "license": "MIT",
+   "entrypoints": [
+    {
+     "type": "git",
+     "name": "Use this template",
+     "ref": "https://github.com/new?template_name=hackathon-entry-template&template_owner=Blockchains",
+     "usage": "GitHub template"
+    },
+    {
+     "type": "file",
+     "name": ".github/workflows/ci.yml",
+     "ref": ".github/workflows/ci.yml",
+     "usage": "gitleaks + auto-detected build/test (package.json, requirements.txt/pyproject.toml, foundry.toml)"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "your code",
+     "type": "src/"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "entry repo with CI",
+     "type": "repo"
+    }
+   ],
+   "deps": [
+    "git"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/hackathons",
+     "how": "link the tracker issue in the README header"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-starters",
+     "how": "start the code from a starter"
+    },
+    {
+     "repo": "Blockchains/grokhack-submissions",
+     "how": "Grok Hack specific template"
+    }
+   ],
+   "tests": {
+    "command": "see .github/workflows/ci.yml: gitleaks, then npm test / pytest / forge build && forge test, auto-detected",
+    "ci": ".github/workflows/ci.yml",
+    "network": false
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/hackathon-entry-template/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/hackathon-entry-template",
+    "agents_md": "https://github.com/Blockchains/hackathon-entry-template/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/hackathon-entry-template/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:34Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "hackathons",
+   "repo": "Blockchains/hackathons",
+   "summary": "Blockchain Lab hackathon tracker: one GitHub issue per open blockchain/web3 hackathon (issue forms for hackathons and submissions) plus a README table of verified upcoming events.",
+   "kind": [
+    "docs",
+    "dataset"
+   ],
+   "stability": "stable",
+   "license": "NOASSERTION",
+   "entrypoints": [
+    {
+     "type": "http",
+     "name": "issues API",
+     "ref": "https://api.github.com/repos/Blockchains/hackathons/issues",
+     "usage": "gh issue list -R Blockchains/hackathons"
+    },
+    {
+     "type": "file",
+     "name": ".github/ISSUE_TEMPLATE/",
+     "ref": ".github/ISSUE_TEMPLATE/hackathon.yml"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "issue form",
+     "type": "GitHub issue"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "tracker issues",
+     "type": "GitHub issues"
+    },
+    {
+     "name": "README table",
+     "type": "Markdown"
+    }
+   ],
+   "deps": [
+    "gh"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/hackathon-entry-template",
+     "how": "link the tracker issue from your entry"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-feeds",
+     "how": "automated hackathon feed"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-api",
+     "how": "`hackathons` dataset"
+    }
+   ],
+   "tests": {
+    "command": "gh issue list -R Blockchains/hackathons --limit 5",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/hackathons/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/hackathons",
+    "agents_md": "https://github.com/Blockchains/hackathons/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/hackathons/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:36Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "sites-monitor",
+   "repo": "Blockchains/sites-monitor",
+   "summary": "Uptime, TLS, SEO, broken-link, Lighthouse and security-header monitoring for the custom-domain sites, with a public status page, JSON results on gh-pages and one auto-managed GitHub issue per failing domain + check.",
+   "kind": [
+    "automation",
+    "dataset",
+    "web-app"
+   ],
+   "stability": "stable",
+   "license": "NOASSERTION",
+   "homepage": "https://blockchains.github.io/sites-monitor/",
+   "entrypoints": [
+    {
+     "type": "http",
+     "name": "data/uptime/latest.json",
+     "ref": "https://blockchains.github.io/sites-monitor/data/uptime/latest.json",
+     "usage": "also seo/, links/, lighthouse/, security/ latest.json and traffic.json"
+    },
+    {
+     "type": "cli",
+     "name": "scripts/uptime.py",
+     "ref": "scripts/uptime.py",
+     "usage": "python3 scripts/uptime.py --out DIR"
+    },
+    {
+     "type": "file",
+     "name": "domains.json",
+     "ref": "domains.json"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "domains.json",
+     "type": "JSON",
+     "description": "domains, optional locked flag"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "findings + latest.json",
+     "type": "JSON"
+    },
+    {
+     "name": "monitor issues",
+     "type": "GitHub issues"
+    }
+   ],
+   "deps": [
+    "python3 (stdlib)",
+    "gh (issue manager)"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchains.github.io",
+     "how": "hub links the status page"
+    },
+    {
+     "repo": "Blockchains/.github",
+     "how": "STATUS.md audit"
+    }
+   ],
+   "tests": {
+    "command": "python3 scripts/uptime.py --out /tmp/sm && DRY_RUN=1 python3 scripts/issues.py /tmp/sm/findings-uptime.json",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/sites-monitor/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/sites-monitor",
+    "agents_md": "https://github.com/Blockchains/sites-monitor/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/sites-monitor/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:39Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "whitepapers",
+   "repo": "Blockchains/whitepapers",
+   "summary": "Index of the 79 historic whitepapers in the Blockchain Lab PDF library (Bitcoin, Ethereum, Ripple, Stellar, Corda\u2026) as README table, index.json and index.csv; links point at the original files on blockchainlab.com, refreshed weekly.",
+   "kind": [
+    "dataset",
+    "docs"
+   ],
+   "stability": "stable",
+   "license": "NOASSERTION",
+   "entrypoints": [
+    {
+     "type": "file",
+     "name": "index.json",
+     "ref": "index.json",
+     "usage": "https://raw.githubusercontent.com/Blockchains/whitepapers/main/index.json"
+    },
+    {
+     "type": "file",
+     "name": "index.csv",
+     "ref": "index.csv"
+    }
+   ],
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "papers[]",
+     "type": "JSON",
+     "description": "title, project, year, year_source, url, file, corpus_record, authors, http_status, is_pdf"
+    }
+   ],
+   "deps": [
+    "any JSON/CSV reader"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchainlab-api",
+     "how": "the `whitepapers` dataset covers the larger research corpus (600+)"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-mcp",
+     "how": "`search_whitepapers` tool"
+    }
+   ],
+   "tests": {
+    "command": "python3 scripts/build_index.py",
+    "ci": ".github/workflows/refresh-index.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/whitepapers/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/whitepapers",
+    "agents_md": "https://github.com/Blockchains/whitepapers/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/whitepapers/main/llms.txt",
+    "pushed_at": "2026-10-04T18:07:41Z"
+   }
+  }
+ ]
+}

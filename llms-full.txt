@@ -1,0 +1,2835 @@
+# Blockchains building blocks: full text
+
+Generated 2026-10-04T18:10:15Z from 31 repositories. Sections: Build with Blocks guide, blocks.json schema, then AGENTS.md of every repo.
+
+
+
+=== Build with Blocks (Blockchains/.github/docs/BUILD-WITH-BLOCKS.md) ===
+
+# Build with Blocks
+
+How an AI agent (or a human) assembles a working project from the repositories under [github.com/Blockchains](https://github.com/Blockchains). Every live repo is documented as a **block**: what it exports, how to install it, its inputs and outputs, and which other blocks it fits with.
+
+- Org doc map for LLMs: **https://blockchains.github.io/llms.txt** (full text: https://blockchains.github.io/llms-full.txt)
+- Catalogue of every block (machine-readable): **https://blockchains.github.io/blocks.json** · human view: https://blockchains.github.io/blocks/
+- Manifest format: [BLOCKS-SCHEMA.md](BLOCKS-SCHEMA.md) ([JSON Schema](blocks.schema.json))
+- In each repo: `README.md` → section **Use as a building block**, `AGENTS.md` (setup, commands, structure, rules), `llms.txt`, `blocks.json`
+
+## 1. The blocks at a glance
+
+| Layer | Block | Use it for | Get it |
+|---|---|---|---|
+| Data | [blockchainlab-api](https://github.com/Blockchains/blockchainlab-api) | 20 nightly JSON datasets (chains, RPC health, TVL, stablecoins, yields, L2s, hacks, OFAC, EIPs…) | `https://blockchains.github.io/blockchainlab-api/v1/<dataset>.json` |
+| Data | [blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk) | Typed TS/Python client for the API | `npm i github:Blockchains/blockchainlab-sdk` |
+| Data | [blockchainlab-feeds](https://github.com/Blockchains/blockchainlab-feeds), [whitepapers](https://github.com/Blockchains/whitepapers) | Hackathon/event/X-intel feeds; historic whitepaper index | raw JSON URLs |
+| Agents | [blockchainlab-mcp](https://github.com/Blockchains/blockchainlab-mcp) | 43 read-only MCP tools for any agent (datasets + live on-chain decoding) | `npx -y github:Blockchains/blockchainlab-mcp` |
+| Agents | [grokhack-forge](https://github.com/Blockchains/grokhack-forge) | Compose a Grok app (chat or digest) with CI and Pages | `python3 forge/compose.py --idea … --name …` |
+| Agents | [grokhack-index](https://github.com/Blockchains/grokhack-index) | Grok/xAI integration parts from 99 forks | `data/parts.json` |
+| Contracts | [forge-usd-priced-membership-nft](https://github.com/Blockchains/forge-usd-priced-membership-nft) | ERC-721 pass, USD price via Chainlink, royalties, roles | `forge install Blockchains/forge-usd-priced-membership-nft` |
+| Contracts | [forge-dao-governance-token](https://github.com/Blockchains/forge-dao-governance-token) | ERC20Votes + permit token, Governor + Timelock | `forge install …` |
+| Contracts | [forge-example-usd-savings-vault](https://github.com/Blockchains/forge-example-usd-savings-vault), [forge-example-gasless-membership](https://github.com/Blockchains/forge-example-gasless-membership) | ERC-4626 USD vault; ERC-4337 paymaster club (with viem front ends) | `forge install …` |
+| Contracts | [blockchainlab-labs](https://github.com/Blockchains/blockchainlab-labs) | 45 small tested Solidity patterns (AMM, flash loan, proxy, ERC-7201…), Noir, Cairo | `forge install Blockchains/blockchainlab-labs` |
+| Contracts | [blockchainlab-starters](https://github.com/Blockchains/blockchainlab-starters) | 8 CI-tested starters (OZ, Chainlink, Uniswap v4 hook, 4337, Hedera, wagmi, circom, Noir) | template repo |
+| Composers | [blockchainlab-compose](https://github.com/Blockchains/blockchainlab-compose) + [blockchainlab-index](https://github.com/Blockchains/blockchainlab-index) | Idea → tested Foundry repo from indexed fork components | `python3 -m blcompose.compose "…" --name …` |
+| UI / explain | [blockchainlab-tools](https://github.com/Blockchains/blockchainlab-tools), [blockchainlab-lens](https://github.com/Blockchains/blockchainlab-lens) | 26 browser tools with deep links; explorer explainer + `BLLens` detector | `https://blockchains.github.io/blockchainlab-tools/<tool>/?…` |
+| Hub | [blockchains.github.io](https://github.com/Blockchains/blockchains.github.io) | 75 services, `services.json`, health data, this catalogue | https://blockchains.github.io |
+| Templates | [hackathon-entry-template](https://github.com/Blockchains/hackathon-entry-template), [grokhack-submissions](https://github.com/Blockchains/grokhack-submissions) | Entry repos with CI and secret scanning | GitHub template |
+| Learning | [blockchain-dev-roadmap](https://github.com/Blockchains/blockchain-dev-roadmap), [blockchain-interview-questions](https://github.com/Blockchains/blockchain-interview-questions) | Curated paths linking labs and tools | README |
+| Fork corpus | [awesome-blockchainlab](https://github.com/Blockchains/awesome-blockchainlab), [awesome-grokhack](https://github.com/Blockchains/awesome-grokhack), [fork-sync](https://github.com/Blockchains/fork-sync) | Curated, synced forks of upstream projects (see section 4) | `forge.json`, `grok-forge.json`, `forks.json` |
+
+## 2. How to assemble a project (procedure for an AI agent)
+
+1. **Discover.** Fetch `https://blockchains.github.io/blocks.json`. Filter `blocks[]` by `kind` (`library`, `contracts`, `mcp-server`, `http-api`, …) and read each candidate's `summary`, `inputs`, `outputs` and `compatible_with`.
+2. **Check fit.** Prefer pairs that list each other in `compatible_with`. Check `license` (GPL blocks such as `forge-example-gasless-membership` make the combined work GPL) and `stability` (`reference` = copy and adapt, `stable` = depend on it).
+3. **Read the block's `AGENTS.md`** (raw URL in its `llms.txt`) for setup, test commands and do/don't rules.
+4. **Install from the `entrypoints`** exactly as written; pin a tag or commit (`github:Blockchains/<repo>#<sha>`, `forge install Blockchains/<repo>@<tag>`).
+5. **Prove it.** Run the block's `tests.command`, then your own test of the combination. Most tests use live networks: retry once before assuming a code bug.
+6. **Never** commit keys; run `gitleaks` before pushing. Show "needs key" notices instead of faking AI output.
+
+## 3. Recipes (each one was run end to end on 2026-10-04)
+
+### Recipe 1: token-gated dApp (forge-usd-priced-membership-nft + blockchainlab-sdk + blockchainlab-api)
+
+A members-only contract gated on the composed USD-priced membership NFT, plus the off-chain gate a front end uses: OFAC screening and a healthy RPC from the SDK.
+
+**Contracts** (Foundry, solc 0.8.30):
+
+```bash
+forge init gated && cd gated && rm -f src/Counter.sol test/Counter.t.sol script/Counter.s.sol
+forge install Blockchains/forge-usd-priced-membership-nft Blockchains/openzeppelin-contracts@v5.7.0
+cat > remappings.txt <<'R'
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
+@chainlink/contracts/src/=lib/forge-usd-priced-membership-nft/lib/chainlink-evm/contracts/src/
+forge-std/=lib/forge-std/src/
+membership/=lib/forge-usd-priced-membership-nft/src/
+R
+# foundry.toml [profile.default]: solc = "0.8.30", evm_version = "cancun"
+```
+
+`lib/` inside each forge-* repo holds only the OpenZeppelin files that project uses, so map `@openzeppelin/contracts/` to the full fork at the same release (v5.7.0, commit `cab1993`). That way several forge-* blocks can share one OpenZeppelin.
+
+`src/MembersOnly.sol`:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+
+/// Token gate: any function marked onlyMembers needs at least one pass from the membership NFT.
+contract MembersOnly {
+    IERC721 public immutable pass;
+    mapping(address => string) public notes;
+    error NotMember(address who);
+    constructor(IERC721 pass_) { pass = pass_; }
+    modifier onlyMembers() { if (pass.balanceOf(msg.sender) == 0) revert NotMember(msg.sender); _; }
+    function post(string calldata note) external onlyMembers { notes[msg.sender] = note; }
+}
+```
+
+`test/MembersOnly.t.sol`:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.24;
+import "forge-std/Test.sol";
+import {UsdPricedMembership} from "membership/UsdPricedMembership.sol";
+import {FixedPriceAggregator} from "lib/forge-usd-priced-membership-nft/test/utils/FixedPriceAggregator.sol";
+import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import {MembersOnly} from "../src/MembersOnly.sol";
+
+contract MembersOnlyTest is Test {
+    UsdPricedMembership nft; MembersOnly gate; address alice = address(0xA11CE);
+    function setUp() public {
+        FixedPriceAggregator feed = new FixedPriceAggregator(2500e8);           // $2,500 / ETH
+        nft = new UsdPricedMembership(address(this), 100, "ipfs://base/", address(feed), 25e18, 1 hours, address(this), 500); // $25 mint
+        gate = new MembersOnly(IERC721(address(nft)));
+        vm.deal(alice, 1 ether);
+    }
+    function test_gate() public {
+        vm.prank(alice); vm.expectRevert(abi.encodeWithSelector(MembersOnly.NotMember.selector, alice)); gate.post("hi");
+        uint256 price = nft.mintPriceWei();                                      // $25 at $2,500/ETH = 0.01 ETH
+        vm.prank(alice); nft.mint{value: price}();
+        vm.prank(alice); gate.post("gm");
+        assertEq(gate.notes(alice), "gm");
+    }
+}
+```
+
+`forge test` → `[PASS] test_gate()`. Deploy with the repo's `script/Deploy.s.sol` pattern (live Chainlink ETH/USD feed on Sepolia/mainnet), then deploy `MembersOnly(pass)`. The same setup also compiles `forge-dao-governance-token` if you install it next to it, so you can add a governor.
+
+**Off-chain gate** (Node ≥ 18 or browser; `npm i github:Blockchains/blockchainlab-sdk`):
+
+```js
+import { BlockchainLab } from "blockchainlab-sdk";
+const bl = new BlockchainLab();
+
+// Is `wallet` allowed in? Screen against OFAC, then check it holds a pass on the membership NFT.
+export async function canEnter(wallet, nft, chain = "ethereum") {
+  if (await bl.isSanctioned(wallet)) return { ok: false, reason: "sanctioned address" };
+  const [rpc] = await bl.healthyRpcs(chain);                       // fastest healthy public RPC from the nightly probe
+  const data = "0x70a08231" + wallet.slice(2).toLowerCase().padStart(64, "0");   // balanceOf(address)
+  const r = await fetch(rpc.url, { method: "POST", headers: { "content-type": "application/json" },
+    body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "eth_call", params: [{ to: nft, data }, "latest"] }) }).then(r => r.json());
+  const balance = BigInt(r.result);
+  return { ok: balance > 0n, balance, rpc: rpc.url };
+}
+// Live check against any ERC-721, e.g. canEnter("0x000000000000000000000000000000000000dEaD", "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D")
+// returned { ok: true, balance: 3n, rpc: "https://eth.drpc.org" } on 2026-10-04.
+```
+
+Extend: show the mint price in USD (`mintPriceWei()`), link each tx to `https://blockchains.github.io/blockchainlab-tools/tx/?chain=<chain>&hash=<hash>`, or start the UI from `blockchainlab-starters/starters/wagmi-rainbowkit-dapp`.
+
+### Recipe 2: Grok agent with blockchain tools (grokhack-forge + blockchainlab-mcp + blockchainlab-sdk)
+
+**a. Compose the app** (Python 3.10+, Node 20):
+
+```bash
+git clone https://github.com/Blockchains/grokhack-forge && cd grokhack-forge
+python3 forge/compose.py --idea "A chat assistant that answers DeFi questions with tools" --name defi-grok-chat --out /tmp/defi-grok-chat
+cd /tmp/defi-grok-chat && npm ci && npm i github:Blockchains/blockchainlab-sdk
+```
+
+**b. Give Grok blockchain tools.** The `chat` archetype streams through `@ai-sdk/xai` and calls the tools in `src/tools.ts` → `localTools`. Add:
+
+```ts
+import { BlockchainLab } from 'blockchainlab-sdk'
+const bl = new BlockchainLab()
+
+// inside `export const localTools = { … }`
+  defi_protocols: tool({
+    description: 'Top DeFi protocols by TVL (DefiLlama snapshot via the Blockchain Lab Open Data API). Filter by category and chain.',
+    inputSchema: z.object({ category: z.string().optional().describe('e.g. Lending, Dexs'), chain: z.string().optional().describe('e.g. Arbitrum'), limit: z.number().int().min(1).max(20).default(5) }),
+    execute: async ({ category, chain, limit }) => ({ results: (await bl.rows('protocols')).filter(p => (!category || p.category === category) && (!chain || (p.chains ?? []).includes(chain))).slice(0, limit) }),
+  }),
+  stablecoin: tool({
+    description: 'Stablecoin price vs peg and circulating supply by symbol.',
+    inputSchema: z.object({ symbol: z.string().describe('e.g. USDC') }),
+    execute: async ({ symbol }) => ({ results: [await bl.stablecoin(symbol)].filter(Boolean) }),
+  }),
+```
+
+`npm run build` (tsc + vite) passes, and a node test calling both tools against the live API passes (`npm test`). The visitor's xAI key goes only to api.x.ai. Push with `--create --wait` (or the compose workflow) to get a repo with CI and Pages.
+
+The SDK is used in app code because it is typed. `blockchainlab-mcp`'s JS SDK works too, but it ships no `.d.ts` yet, so `tsc` needs a `declare module 'blockchainlab-mcp'` shim.
+
+**c. Give the developer agent the same powers via MCP.** When you or an AI coding agent (Grok, Cursor, Claude Code) works on the app, add the MCP server so it can query chains, decode transactions and check standards while coding:
+
+```json
+{ "mcpServers": { "blockchainlab": { "command": "npx", "args": ["-y", "github:Blockchains/blockchainlab-mcp"] } } }
+```
+
+`tools/list` returns 43 tools (e.g. `top_defi_protocols`, `decode_transaction`, `lookup_standard`, `sanctions_check`). For a server-side Grok agent, spawn the same server over stdio from your backend and pass its tools to the model. It never signs or sends transactions.
+
+### Recipe 3: risk dashboard (blockchainlab-api + blockchainlab-lens + blockchainlab-tools)
+
+A single static page: stablecoins off peg and large recent hacks from the API, plus a box that turns any tx hash, address or ENS name into an explanation link, using the same detector the Lens extension uses.
+
+```html
+<!doctype html>
+<meta charset="utf-8">
+<title>Risk dashboard (Blockchain Lab blocks)</title>
+<script src="https://blockchains.github.io/blockchainlab-lens/extension/detect.js"></script>
+<h1>Stablecoin pegs and recent hacks</h1>
+<p><input id="q" placeholder="paste a tx hash, address or ENS name" size="70"> <a id="explain" target="_blank">explain ↗</a></p>
+<h2>Stablecoins off peg (&gt; 0.5%)</h2><table id="peg"></table>
+<h2>Hacks over $10m since 2026-01-01</h2><table id="hacks"></table>
+<script type="module">
+const API = "https://blockchains.github.io/blockchainlab-api/v1";
+const get = (d) => fetch(`${API}/${d}.json`).then(r => r.json());
+const [stables, hacks] = await Promise.all([get("stablecoins"), get("security-incidents")]);
+document.querySelector("#peg").innerHTML = stables.data
+  .filter(s => s.price != null && s.peg_type === "peggedUSD" && Math.abs(s.price - 1) > 0.005 && s.circulating > 1e7)
+  .map(s => `<tr><td>${s.symbol}</td><td>${s.price.toFixed(4)}</td><td>$${(s.circulating / 1e6).toFixed(0)}m</td></tr>`).join("");
+document.querySelector("#hacks").innerHTML = hacks.data
+  .filter(h => (h.date ?? "") >= "2026-01-01" && (h.amount_usd ?? 0) >= 1e7)
+  .map(h => `<tr><td>${h.date}</td><td>${h.name}</td><td>${h.technique ?? ""}</td><td>$${(h.amount_usd / 1e6).toFixed(1)}m</td></tr>`).join("");
+const q = document.querySelector("#q"), a = document.querySelector("#explain");
+q.oninput = () => { a.href = BLLens.fromText(q.value) || ""; };   // same deep links the Lens extension opens
+</script>
+```
+
+Serve it with any static server (`python3 -m http.server`). Headless Chromium on 2026-10-04: 20 peg rows, 24 hack rows, no JS errors; `vitalik.eth` → `https://blockchains.github.io/blockchainlab-tools/address/?q=vitalik.eth&chain=ethereum&utm_source=blockchainlab-lens`. Data is CORS-enabled and needs no key. For production, switch the `fetch` calls to the typed SDK, add more datasets (`l2-metrics`, `yields`, `rpc-health`), and install [Lens](https://github.com/Blockchains/blockchainlab-lens) so explorer pages get the same explanations.
+
+## 4. Reusing the fork corpus
+
+388 live forks of upstream open-source projects sit under Blockchains (archived forks are listed in `ARCHIVED-*.md` reports and can be unarchived). They are **unmodified mirrors**, kept current by [fork-sync](https://github.com/Blockchains/fork-sync) (curated blockchain set) and the grokhack-index nightly (Grok set). They have no `blocks.json` of their own. Use the indexes instead:
+
+| Need | Where | How |
+|---|---|---|
+| Find a contract/module by capability or symbol | [blockchainlab-index](https://github.com/Blockchains/blockchainlab-index) | `index.sqlite` FTS5, `components/<slug>.json`, or `indexer/compose.py plan "<idea>"` |
+| How to reuse a fork of a given category | `catalog.json` → `repos[].reuse` and [`taxonomy/reuse.json`](https://github.com/Blockchains/blockchainlab-index/blob/main/taxonomy/reuse.json) | pinned install line per fork + per-category notes |
+| Curated list with licences and starters | [awesome-blockchainlab `forge.json`](https://github.com/Blockchains/awesome-blockchainlab/blob/main/forge.json) | category, licence notes, docs, starters, index links |
+| Grok/xAI integration code | [grokhack-index `data/parts.json`](https://blockchains.github.io/grokhack-index/data/parts.json) | SDK exports, packages, snippets with commit-pinned URLs |
+| Generate a project automatically | [blockchainlab-compose](https://github.com/Blockchains/blockchainlab-compose) (Solidity), [grokhack-forge](https://github.com/Blockchains/grokhack-forge) (Grok apps) | idea → repo with CI |
+
+Rules for fork code: pin the indexed `commit`; keep SPDX headers and add a NOTICE; never copy source-available files (e.g. BUSL-1.1); GPL/LGPL components make the combined work copyleft; prefer the upstream package registry when the fork is only a mirror.
+
+## 5. Keeping this true
+
+- Each repo's `blocks.json` is validated daily by [validate-blocks](../.github/workflows/validate-blocks.yml); the hub catalogue is rebuilt weekly by `scripts/blocks.py` in blockchains.github.io.
+- When you add or change an export, update that repo's README section, `AGENTS.md`, `llms.txt` and `blocks.json` in the same commit.
+
+
+
+=== blocks.json schema (Blockchains/.github/docs/BLOCKS-SCHEMA.md) ===
+
+# blocks.json: the Blockchains building-block manifest
+
+Every live, non-fork repository under [github.com/Blockchains](https://github.com/Blockchains) ships a `blocks.json` at its root that tells AI agents and humans **what the repo exports and how to plug it into something else**. One schema is used everywhere:
+
+- JSON Schema (draft 2020-12): [`docs/blocks.schema.json`](blocks.schema.json), raw URL `https://raw.githubusercontent.com/Blockchains/.github/main/docs/blocks.schema.json`
+- Validator: [`scripts/validate_blocks.py`](../scripts/validate_blocks.py), run by [`validate-blocks`](../.github/workflows/validate-blocks.yml) on every push here and daily across all repos
+- Aggregated catalogue of every manifest: **https://blockchains.github.io/blocks.json** (human view: https://blockchains.github.io/blocks/)
+- How to combine blocks: [BUILD-WITH-BLOCKS.md](BUILD-WITH-BLOCKS.md)
+
+Each repo also has `AGENTS.md` (instructions for AI coding agents) and `llms.txt` ([llmstxt.org](https://llmstxt.org/) format). `blocks.json` is the machine-readable part of the same information.
+
+**Exception:** in `Blockchains/blockchains.github.io` the root `/blocks.json` is the org catalogue and `/llms.txt` is the org doc map, so that repo's own manifest is `blocks/hub.json`.
+
+## Fields
+
+| Field | Required | Type | Meaning |
+|---|---|---|---|
+| `$schema` | no | URI | Schema URL (always the raw URL above) |
+| `schema_version` | yes | `"1.0"` | Manifest format version |
+| `name` | yes | string | Repository name; must match the repo |
+| `repo` | yes | `Blockchains/<name>` | Full repository id; must match the repo |
+| `summary` | yes | string (10–400) | What the block is, in one or two sentences |
+| `kind` | yes | array of enum | `library`, `contracts`, `http-api`, `dataset`, `mcp-server`, `cli`, `github-action`, `web-app`, `browser-extension`, `template`, `index`, `curated-list`, `docs`, `automation` |
+| `stability` | yes | enum | `stable` (interfaces kept compatible), `beta` (may change, used in production), `experimental`, `reference` (generated/example code: copy and adapt) |
+| `version` | no | string | Current version or API version |
+| `license` | yes | SPDX expression | `NOASSERTION` when the repo has no licence file |
+| `homepage` | no | URI | Live site or docs |
+| `entrypoints` | yes | array | How to consume the block (see below) |
+| `inputs` / `outputs` | yes | array of ports | `{name, type, description?}` |
+| `deps` | yes | array of strings | Toolchains/runtimes, e.g. `node>=18`, `foundry (solc 0.8.30)` |
+| `compatible_with` | yes | array | `{repo: "Blockchains/<other>", how}`: tested or documented combinations |
+| `tests` | yes | object | `{command, ci?, network?}`: how to prove it works; `network: true` means live networks (no mocks) |
+| `env` | no | array | `{name, required, purpose?}`: environment variables / secrets (names only, never values) |
+| `docs` | yes | object | `{readme, agents, llms, extra?}`: paths of the docs in the repo |
+| `tags` | no | array of strings | Free-form search tags |
+
+### Entrypoints
+
+| `type` | `ref` is | Typical `install` / `usage` |
+|---|---|---|
+| `npm` | source path of the package entry | `npm i github:Blockchains/<repo>` |
+| `pypi` | source path of the package | `pip install "git+https://github.com/Blockchains/<repo>#subdirectory=python"` |
+| `git` | template or clone URL | "Use this template" |
+| `http` | URL (may contain `{placeholders}`) | `curl …` |
+| `mcp-stdio` | server entry file | `npx -y github:Blockchains/<repo>` |
+| `docker` | Dockerfile | `docker run -i --rm ghcr.io/blockchains/<repo>` |
+| `cli` | script path | full command line |
+| `solidity` | contract source path | `forge install Blockchains/<repo>` |
+| `file` | path in the repo | how to use the file |
+| `github-action` | workflow path | inputs / triggers |
+| `web` | URL | deep-link pattern |
+| `browser-script` | script path | `<script src=…>` |
+
+`exports` (optional) lists the public names: functions, classes, contracts or MCP tools.
+
+## Example (abridged, from blockchainlab-sdk)
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/Blockchains/.github/main/docs/blocks.schema.json",
+  "schema_version": "1.0",
+  "name": "blockchainlab-sdk",
+  "repo": "Blockchains/blockchainlab-sdk",
+  "summary": "Typed TypeScript and Python clients for the Blockchain Lab Open Data API …",
+  "kind": ["library"],
+  "stability": "stable",
+  "version": "1.1.0",
+  "license": "MIT",
+  "entrypoints": [
+    { "type": "npm", "name": "blockchainlab-sdk", "ref": "ts/src/index.ts", "install": "npm i github:Blockchains/blockchainlab-sdk", "exports": ["BlockchainLab", "DATASETS"] }
+  ],
+  "inputs": [{ "name": "dataset name", "type": "DatasetName" }],
+  "outputs": [{ "name": "typed rows", "type": "<Dataset>Row[]" }],
+  "deps": ["node>=18 (or browsers/Deno/Bun)", "python>=3.9 (stdlib only)"],
+  "compatible_with": [{ "repo": "Blockchains/blockchainlab-api", "how": "the data source" }],
+  "tests": { "command": "npm test", "ci": ".github/workflows/ci.yml", "network": true },
+  "docs": { "readme": "README.md", "agents": "AGENTS.md", "llms": "llms.txt" }
+}
+```
+
+## Rules
+
+1. Everything in a manifest must be true of the code at the default branch. Commands must run; exports must exist.
+2. Never put secret values in a manifest; `env` lists names only.
+3. New optional fields can be added within `1.x`; making a field required or changing its meaning is `2.0` with a new schema file.
+4. Validate before pushing: `pip install jsonschema && python3 scripts/validate_blocks.py --local ../<repo>`.
+
+
+
+=== Blockchains/.github / AGENTS.md ===
+
+Summary: Org-wide defaults (issue/PR templates, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY) plus the building-block docs: BUILD-WITH-BLOCKS.md, BLOCKS-SCHEMA.md, blocks.schema.json and the workflow that validates every repo's blocks.json.
+Manifest: https://raw.githubusercontent.com/Blockchains/.github/main/blocks.json
+
+# AGENTS.md: .github
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Org-wide defaults (issue/PR templates, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY) plus the building-block docs: BUILD-WITH-BLOCKS.md, BLOCKS-SCHEMA.md, blocks.schema.json and the workflow that validates every repo's blocks.json.
+
+- Kind: docs, automation · stability: `stable` · licence: NOASSERTION
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+pip install jsonschema
+```
+
+## Build and test
+
+```bash
+python3 scripts/validate_blocks.py
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `docs/BUILD-WITH-BLOCKS.md` | assembly guide + recipes |
+| `docs/BLOCKS-SCHEMA.md` | schema documentation |
+| `docs/blocks.schema.json` | JSON Schema |
+| `docs/STATUS.md` | repo audit |
+| `scripts/validate_blocks.py` | validator |
+| `.github/workflows/validate-blocks.yml` | CI |
+| `ISSUE_TEMPLATE/, *.md` | community health defaults |
+
+## Conventions
+
+- Community files here apply to every repo that does not define its own.
+
+## Extension points
+
+- New schema field: add it to blocks.schema.json + BLOCKS-SCHEMA.md as optional first.
+
+## Do
+
+- Validate locally before pushing a blocks.json.
+
+## Don't
+
+- Make optional schema fields required without updating every repo.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **docs/blocks.schema.json** (file): `https://raw.githubusercontent.com/Blockchains/.github/main/docs/blocks.schema.json`
+- **docs/BUILD-WITH-BLOCKS.md** (file): `how to assemble projects from Blockchains repos, with 3 verified recipes`
+- **scripts/validate_blocks.py** (cli): `python3 scripts/validate_blocks.py [--local DIR ...]   # validates every repo's blocks.json`
+- **validate blocks** (github-action): `push, daily, workflow_dispatch`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchains.github.io](https://github.com/Blockchains/blockchains.github.io): hub aggregates every blocks.json into /blocks.json
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): example block
+- [Blockchains/blockchainlab-mcp](https://github.com/Blockchains/blockchainlab-mcp): example block
+
+
+
+=== Blockchains/awesome-blockchainlab / AGENTS.md ===
+
+Summary: Curated list of 225 open-source blockchain projects (+11 extended) forked under Blockchains and kept in sync by fork-sync, with a machine-readable forge.json (fork, upstream, category, licence, stars, docs, starters, index links).
+Manifest: https://raw.githubusercontent.com/Blockchains/awesome-blockchainlab/main/blocks.json
+
+# AGENTS.md: awesome-blockchainlab
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Curated list of 225 open-source blockchain projects (+11 extended) forked under Blockchains and kept in sync by fork-sync, with a machine-readable forge.json (fork, upstream, category, licence, stars, docs, starters, index links).
+
+- Kind: curated-list, dataset · stability: `stable` · licence: CC0-1.0
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+python3 --version
+```
+
+## Build and test
+
+```bash
+python3 scripts/validate.py   # schema + every fork/upstream reachable
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `README.md` | the list |
+| `forge.json` | machine-readable list |
+| `scripts/validate.py` | validator used by CI |
+
+## Conventions
+
+- README and forge.json must list the same forks.
+- Selection: OSI licence, ≥1,000 stars (few documented exceptions), active in the last 90 days, not archived.
+
+## Extension points
+
+- Add a fork: fork it under Blockchains, add it to fork-sync forks.json and blockchainlab-index sources, then to forge.json + README.
+
+## Do
+
+- Run the validator before pushing.
+
+## Don't
+
+- Add a fork that fails the list's criteria (licence, stars, activity, not archived) without updating the criteria text.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **forge.json** (file): `https://raw.githubusercontent.com/Blockchains/awesome-blockchainlab/main/forge.json`
+- **README.md** (file): `human-readable list by category`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/fork-sync](https://github.com/Blockchains/fork-sync): keeps every listed fork in sync
+- [Blockchains/blockchainlab-index](https://github.com/Blockchains/blockchainlab-index): code index of the same forks (projects[].index links)
+- [Blockchains/blockchainlab-starters](https://github.com/Blockchains/blockchainlab-starters): starters built on these forks
+- [Blockchains/blockchainlab-compose](https://github.com/Blockchains/blockchainlab-compose): composes projects from them
+
+
+
+=== Blockchains/awesome-grokhack / AGENTS.md ===
+
+Summary: Curated list of 99 open-source Grok/xAI integrations (official xAI repos, SDKs, gateways, agent frameworks, coding agents, chat UIs, observability, voice, apps) forked under Blockchains, with machine-readable grok-forge.json.
+Manifest: https://raw.githubusercontent.com/Blockchains/awesome-grokhack/main/blocks.json
+
+# AGENTS.md: awesome-grokhack
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Curated list of 99 open-source Grok/xAI integrations (official xAI repos, SDKs, gateways, agent frameworks, coding agents, chat UIs, observability, voice, apps) forked under Blockchains, with machine-readable grok-forge.json.
+
+- Kind: curated-list, dataset · stability: `stable` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+python3 --version
+```
+
+## Build and test
+
+```bash
+# CI: validates grok-forge.json fields, README links and that every fork + upstream exists (gh api)
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `README.md` | the list + criteria + Archived note |
+| `grok-forge.json` | machine-readable list (consumed nightly by grokhack-index) |
+| `skipped.json` | rejected candidates |
+
+## Conventions
+
+- Every repo in grok-forge.json must be linked from README.md (CI checks).
+- Criteria live in grok-forge.json `criteria` and the README.
+
+## Extension points
+
+- Add a repo: fork it, add it to grok-forge.json (all required fields) and the README table; grokhack-index picks it up nightly.
+
+## Do
+
+- Keep `count` in sync.
+
+## Don't
+
+- Add a fork that fails the list's criteria (licence, stars, activity, not archived) without updating the criteria text.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **grok-forge.json** (file): `https://raw.githubusercontent.com/Blockchains/awesome-grokhack/main/grok-forge.json`
+- **skipped.json** (file): `candidates rejected, with reasons`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/grokhack-index](https://github.com/Blockchains/grokhack-index): nightly index of these forks' Grok surface (reads grok-forge.json)
+- [Blockchains/grokhack-forge](https://github.com/Blockchains/grokhack-forge): composes apps from the index
+- [Blockchains/grokhack-submissions](https://github.com/Blockchains/grokhack-submissions): entry template for The Grok Hack
+
+
+
+=== Blockchains/blockchain-dev-roadmap / AGENTS.md ===
+
+Summary: Curated 2026 developer path from zero to shipping production smart contracts in 13 stages; every stage links concepts, primary docs, a runnable lab and a free tool.
+Manifest: https://raw.githubusercontent.com/Blockchains/blockchain-dev-roadmap/main/blocks.json
+
+# AGENTS.md: blockchain-dev-roadmap
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Curated 2026 developer path from zero to shipping production smart contracts in 13 stages; every stage links concepts, primary docs, a runnable lab and a free tool.
+
+- Kind: docs, dataset · stability: `stable` · licence: MIT AND CC-BY-4.0
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+# nothing to install
+```
+
+## Build and test
+
+```bash
+# CI link-checks README.md (.github/workflows/links.yml)
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `README.md` | the content |
+| `.github/workflows/links.yml` | link checker |
+| `LICENSE` | MIT (code) / CC BY 4.0 (text) |
+
+## Conventions
+
+- Every item links to a primary doc plus a runnable lab or tool.
+- UTM-tagged links to blockchainlab.com are intentional.
+
+## Extension points
+
+- Add an item in the right section with the same link pattern.
+
+## Do
+
+- Verify every link.
+
+## Don't
+
+- Remove or rename anchors other repos link to.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **README.md** (file): `https://raw.githubusercontent.com/Blockchains/blockchain-dev-roadmap/main/README.md`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-labs](https://github.com/Blockchains/blockchainlab-labs): hands-on labs linked from each item
+- [Blockchains/blockchainlab-tools](https://github.com/Blockchains/blockchainlab-tools): tools linked from each item
+- [Blockchains/blockchain-interview-questions](https://github.com/Blockchains/blockchain-interview-questions): companion guide
+
+
+
+=== Blockchains/blockchain-interview-questions / AGENTS.md ===
+
+Summary: 54 blockchain and smart-contract interview questions with concise answers, each linked to a runnable lab, a free tool or an explainer.
+Manifest: https://raw.githubusercontent.com/Blockchains/blockchain-interview-questions/main/blocks.json
+
+# AGENTS.md: blockchain-interview-questions
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+54 blockchain and smart-contract interview questions with concise answers, each linked to a runnable lab, a free tool or an explainer.
+
+- Kind: docs, dataset · stability: `stable` · licence: MIT AND CC-BY-4.0
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+# nothing to install
+```
+
+## Build and test
+
+```bash
+# CI link-checks README.md (.github/workflows/links.yml)
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `README.md` | the content |
+| `.github/workflows/links.yml` | link checker |
+| `LICENSE` | MIT (code) / CC BY 4.0 (text) |
+
+## Conventions
+
+- Every item links to a primary doc plus a runnable lab or tool.
+- UTM-tagged links to blockchainlab.com are intentional.
+
+## Extension points
+
+- Add an item in the right section with the same link pattern.
+
+## Do
+
+- Verify every link.
+
+## Don't
+
+- Remove or rename anchors other repos link to.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **README.md** (file): `https://raw.githubusercontent.com/Blockchains/blockchain-interview-questions/main/README.md`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-labs](https://github.com/Blockchains/blockchainlab-labs): hands-on labs linked from each item
+- [Blockchains/blockchainlab-tools](https://github.com/Blockchains/blockchainlab-tools): tools linked from each item
+- [Blockchains/blockchain-dev-roadmap](https://github.com/Blockchains/blockchain-dev-roadmap): companion guide
+
+
+
+=== Blockchains/blockchainlab-api / AGENTS.md ===
+
+Summary: Free, static, CORS-enabled JSON API of 20 blockchain datasets rebuilt nightly from public sources (chainid.network, DefiLlama, L2BEAT, OFAC via 0xB10C, ethereum/EIPs, bitcoin/bips, Blockchain Lab corpus). No key, no backend.
+Manifest: https://raw.githubusercontent.com/Blockchains/blockchainlab-api/main/blocks.json
+
+# AGENTS.md: blockchainlab-api
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Free, static, CORS-enabled JSON API of 20 blockchain datasets rebuilt nightly from public sources (chainid.network, DefiLlama, L2BEAT, OFAC via 0xB10C, ethereum/EIPs, bitcoin/bips, Blockchain Lab corpus). No key, no backend.
+
+- Kind: http-api, dataset · stability: `stable` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+node --version   # Node 20, zero npm dependencies
+pip install jsonschema==4.23.0 pyyaml
+```
+
+## Build and test
+
+```bash
+node scripts/build.mjs          # fetch all sources, write v1/*.json (network)
+python3 scripts/validate.py     # every dataset validates against its schema
+python3 scripts/openapi.py && git diff --exit-code openapi.json
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `scripts/build.mjs` | nightly builder: fetch, normalise, write `v1/<dataset>.json` |
+| `scripts/schemas.py` | JSON Schemas per dataset |
+| `scripts/validate.py` | schema validation |
+| `scripts/openapi.py` | generates openapi.json/yaml |
+| `v1/` | published datasets + `index.json` + `schemas/` |
+| `data/grants.json` | curated grants input |
+| `index.html, swagger.html` | docs pages |
+
+## Conventions
+
+- Same envelope for every dataset; never change field meaning within a schema major.
+- Sources must be public and attributed (`source`, `source_url`).
+- Unknown values are `null`, never invented.
+
+## Extension points
+
+- New dataset: add a builder in `scripts/build.mjs`, a schema in `scripts/schemas.py`, regenerate OpenAPI, then run `python3 scripts/gen.py` in blockchainlab-sdk.
+- Self-host: copy `v1/` anywhere static and point SDK `baseUrl` / MCP `BLOCKCHAINLAB_API` at it.
+
+## Do
+
+- Read `v1/index.json` first to discover datasets and freshness.
+- Respect each source's terms; keep attribution.
+
+## Don't
+
+- Hand-edit files in `v1/`; they are regenerated nightly.
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **GET /v1/{dataset}.json** (http): `curl -s https://blockchains.github.io/blockchainlab-api/v1/chains.json`
+- **GET /v1/index.json** (http): `catalogue: dataset, url, schema, count, generated_at, stale`
+- **GET /v1/schemas/{dataset}.schema.json** (http): `JSON Schema per dataset`
+- **openapi.yaml** (file): `https://blockchains.github.io/blockchainlab-api/openapi.yaml`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): typed TS/Python client generated from these schemas
+- [Blockchains/blockchainlab-mcp](https://github.com/Blockchains/blockchainlab-mcp): 43 MCP tools, many backed by these datasets
+- [Blockchains/blockchainlab-tools](https://github.com/Blockchains/blockchainlab-tools): browser tools read chains and EIP/ERC/BIP data from here
+- [Blockchains/blockchains.github.io](https://github.com/Blockchains/blockchains.github.io): hub pages and AI briefs are built on it
+- [Blockchains/blockchainlab-feeds](https://github.com/Blockchains/blockchainlab-feeds): source of the hackathons and events datasets
+
+
+
+=== Blockchains/blockchainlab-compose / AGENTS.md ===
+
+Summary: Idea-to-repo engine behind blockchainlab.com/forge: turns a plain-language token/NFT idea into a tested Foundry project (components from blockchainlab-index, pragma/licence checks, generated glue, tests, deploy script, CI) and optionally creates it under github.com/Blockchains.
+Manifest: https://raw.githubusercontent.com/Blockchains/blockchainlab-compose/main/blocks.json
+
+# AGENTS.md: blockchainlab-compose
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Idea-to-repo engine behind blockchainlab.com/forge: turns a plain-language token/NFT idea into a tested Foundry project (components from blockchainlab-index, pragma/licence checks, generated glue, tests, deploy script, CI) and optionally creates it under github.com/Blockchains.
+
+- Kind: cli, github-action · stability: `beta` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+pip --version   # stdlib only
+foundryup        # forge on PATH
+```
+
+## Build and test
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 -m blcompose.compose "An NFT membership collection with ERC-2981 royalties, role-based minting, a pause switch, and a paid mint priced in USD using a Chainlink ETH/USD price feed" --name ci-nft --out /tmp/ci-nft --json nft.json
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `XAI_API_KEY` | no | one Grok review call written to REVIEW.md (not an audit) |
+| `MAINNET_RPC_URL` | no | enables generated live-chain fork tests |
+| `FORGE_TOKEN` | no | repo secret; needed by the Action to create repos |
+
+## Structure
+
+| Path | What |
+|---|---|
+| `blcompose/compose.py` | pipeline + CLI (`main`) |
+| `blcompose/recipes.py` | capability → glue/test generators |
+| `tests/test_engine.py` | unit tests |
+| `.github/workflows/compose.yml` | dispatchable Action used by blockchainlab.com |
+| `.github/workflows/ci.yml` | re-composes both reference ideas + refusal check |
+
+## Conventions
+
+- Copied components stay unmodified with SPDX headers; NOTICE lists every file.
+- GPL components are refused for now; source-available licences are never copied.
+- Outputs are deterministic for the same index + idea.
+
+## Extension points
+
+- New capability: add a recipe in `blcompose/recipes.py`, the taxonomy id in blockchainlab-index `taxonomy/capabilities.json`, and a CI idea that exercises it.
+
+## Do
+
+- Run without `--create` while developing; inspect `/tmp/<name>`.
+
+## Don't
+
+- Create repos from tests.
+- Hand-edit composed reference repos (they must stay reproducible).
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **python3 -m blcompose.compose** (cli): `python3 -m blcompose.compose "<idea>" --name <repo> [--out DIR] [--index PATH] [--json result.json] [--create --wait]`
+- **Compose a project** (github-action): `workflow_dispatch inputs: idea, name, request_id → results/<request_id>.json`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-index](https://github.com/Blockchains/blockchainlab-index): component source (catalog, components, taxonomy)
+- [Blockchains/forge-dao-governance-token](https://github.com/Blockchains/forge-dao-governance-token): reference output, re-composed in CI
+- [Blockchains/forge-usd-priced-membership-nft](https://github.com/Blockchains/forge-usd-priced-membership-nft): reference output, re-composed in CI
+- [Blockchains/grokhack-forge](https://github.com/Blockchains/grokhack-forge): sister composer for Grok apps
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): add a data layer to a generated dApp
+
+
+
+=== Blockchains/blockchainlab-feeds / AGENTS.md ===
+
+Summary: Public JSON feeds for blockchainlab.com: hackathons/grants/bounties, events, clustered X intel and mentions (public post IDs, links, handles, short trimmed summaries, counts only), built daily.
+Manifest: https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/blocks.json
+
+# AGENTS.md: blockchainlab-feeds
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Public JSON feeds for blockchainlab.com: hackathons/grants/bounties, events, clustered X intel and mentions (public post IDs, links, handles, short trimmed summaries, counts only), built daily.
+
+- Kind: dataset, automation · stability: `beta` · licence: NOASSERTION
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+python3 --version
+```
+
+## Build and test
+
+```bash
+python3 scripts/fetch_plan.py --date $(date +%F)
+python3 scripts/build_feeds.py --date $(date +%F) --raw-dir /tmp/raw --digest-dir /tmp/digest   # local build, no push
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `feeds/<feed>/latest.json` | current feed (+ dated copies) |
+| `scripts/fetch_plan.py` | list of X MCP calls to make |
+| `scripts/build_feeds.py` | builds all feeds |
+| `scripts/run_daily.sh` | build → gitleaks → commit → push |
+| `watchlist.json` | accounts/topics |
+
+## Conventions
+
+- Public data only; summaries are trimmed from the post text, nothing invented.
+- No licence file yet.
+
+## Extension points
+
+- New feed: add a builder in `scripts/build_feeds.py` writing `feeds/<name>/latest.json`.
+
+## Do
+
+- Keep `x_status` honest (`unavailable` when X could not be read).
+
+## Don't
+
+- Store private data or full post text.
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **feeds/hackathons/latest.json** (http): `items[]: title, url, dates, prize, location, organizer, themes, state, source, verified`
+- **feeds/events/latest.json** (http): `https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/events/latest.json`
+- **feeds/x-intel/latest.json** (http): `https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/feeds/x-intel/latest.json`
+- **scripts/build_feeds.py** (cli): `python3 scripts/build_feeds.py --date YYYY-MM-DD --raw-dir DIR --digest-dir DIR`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-api](https://github.com/Blockchains/blockchainlab-api): republishes hackathons and events as API datasets
+- [Blockchains/blockchains.github.io](https://github.com/Blockchains/blockchains.github.io): powers /events
+- [Blockchains/hackathons](https://github.com/Blockchains/hackathons): human tracker of the same events
+
+
+
+=== Blockchains/blockchainlab-index / AGENTS.md ===
+
+Summary: Nightly machine-readable code index of the curated Blockchains forks: per-repo catalog, every contract/module/circuit as a component with functions, licence and pinned raw URL, capability taxonomy, int8 embeddings, static search shards and SQLite FTS5. Feeds the composers.
+Manifest: https://raw.githubusercontent.com/Blockchains/blockchainlab-index/main/blocks.json
+
+# AGENTS.md: blockchainlab-index
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Nightly machine-readable code index of the curated Blockchains forks: per-repo catalog, every contract/module/circuit as a component with functions, licence and pinned raw URL, capability taxonomy, int8 embeddings, static search shards and SQLite FTS5. Feeds the composers.
+
+- Kind: index, dataset, cli · stability: `beta` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+pip install -r requirements.txt
+```
+
+## Build and test
+
+```bash
+python3 indexer/validate.py .   # catalog/component/vector consistency, file sizes
+python3 indexer/build_index.py work/ingest-out . sources.json   # full rebuild (after ingest)
+```
+
+## Structure
+
+| Path | What |
+|---|---|
+| `catalog.json` | one record per fork |
+| `components/` | components per fork |
+| `vectors/` | bge-small int8 embeddings |
+| `search/` | static search shards |
+| `index.sqlite` | FTS5 |
+| `taxonomy/capabilities.json` | capability taxonomy |
+| `taxonomy/reuse.json` | how to reuse each fork category |
+| `sources.json` | fork list |
+| `indexer/` | ingest, build, validate, refresh, compose, finalize; reuse.py builds the per-repo `reuse` field |
+| `examples/` | worked idea → plan examples |
+
+## Conventions
+
+- Everything is extracted from source files, never from READMEs alone.
+- Licences recorded per repo and file; compose.py refuses source-available files and flags GPL/LGPL.
+- Generated files are written by the nightly workflow; edit the indexer, not the output.
+
+## Extension points
+
+- New capability: add it to `taxonomy/capabilities.json` (synonyms, match rules, preferred components).
+- New fork: add it to fork-sync `forks.json`; `refresh_sources.py` picks it up.
+
+## Do
+
+- Pin the `commit` from the catalog when copying a component.
+
+## Don't
+
+- Hand-edit catalog.json, components/ or index.sqlite.
+- Copy files whose `license_class` is not permissive without carrying the licence.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **catalog.json** (file): `https://raw.githubusercontent.com/Blockchains/blockchainlab-index/main/catalog.json`
+- **components/<slug>.json** (file): `per-fork component list (path, kind, functions, events, SPDX, pragma, caps, raw URL)`
+- **index.sqlite** (file): `FTS5: select slug,path,name from components where components match 'paymaster'`
+- **indexer/compose.py** (cli): `BL_INDEX=. python3 indexer/compose.py plan "<idea>" --json plan.json && python3 indexer/compose.py fetch plan.json out/`
+- **taxonomy/capabilities.json** (file): `capability ids, synonyms, standards, match rules, licence policy`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-compose](https://github.com/Blockchains/blockchainlab-compose): consumes catalog/components/taxonomy to generate projects
+- [Blockchains/fork-sync](https://github.com/Blockchains/fork-sync): keeps the indexed forks current; index runs after the sync
+- [Blockchains/awesome-blockchainlab](https://github.com/Blockchains/awesome-blockchainlab): human-readable list of the same forks
+- [Blockchains/forge-example-gasless-membership](https://github.com/Blockchains/forge-example-gasless-membership): composed from this index
+- [Blockchains/forge-example-usd-savings-vault](https://github.com/Blockchains/forge-example-usd-savings-vault): composed from this index
+
+
+
+=== Blockchains/blockchainlab-labs / AGENTS.md ===
+
+Summary: 54 runnable smart-contract labs: 45 Solidity labs with Foundry tests (storage to reentrancy, AMMs, flash loans, proxies, ERC-7201, fuzzing, invariants, mainnet forks), 4 Noir ZK labs, 4 Cairo/Starknet labs and a Hardhat lab. Each lab is a small, tested, importable contract.
+Manifest: https://raw.githubusercontent.com/Blockchains/blockchainlab-labs/main/blocks.json
+
+# AGENTS.md: blockchainlab-labs
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+54 runnable smart-contract labs: 45 Solidity labs with Foundry tests (storage to reentrancy, AMMs, flash loans, proxies, ERC-7201, fuzzing, invariants, mainnet forks), 4 Noir ZK labs, 4 Cairo/Starknet labs and a Hardhat lab. Each lab is a small, tested, importable contract.
+
+- Kind: contracts, docs · stability: `stable` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+git clone --recursive https://github.com/Blockchains/blockchainlab-labs && cd blockchainlab-labs
+foundryup
+```
+
+## Build and test
+
+```bash
+forge fmt --check && forge build --sizes && forge test -vv
+forge test --match-path test/L09*   # one lab
+cd noir && nargo test
+cd cairo && scarb test
+cd hardhat && npm ci && npx hardhat test
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `MAINNET_RPC_URL` | no | mainnet fork lab (defaults to https://ethereum-rpc.publicnode.com) |
+
+## Structure
+
+| Path | What |
+|---|---|
+| `src/L<NN>_*.sol` | Solidity labs |
+| `test/L<NN>_*.t.sol` | Foundry tests per lab |
+| `noir/n<N>_*/` | Noir circuits |
+| `cairo/c<N>_*/` | Cairo/Starknet labs |
+| `hardhat/` | bonus Hardhat lab |
+| `lib/` | forge-std, openzeppelin-contracts submodules |
+
+## Conventions
+
+- One concept per lab, with its test next to it under the same number.
+- `forge fmt` formatting is enforced in CI.
+- Each README row has a lab, what you learn, an exercise and a Blockchain Lab link.
+
+## Extension points
+
+- New lab: `src/L<next>_<Name>.sol` + `test/L<next>_<Name>.t.sol` + a README row; keep it self-contained.
+
+## Do
+
+- Keep labs small and dependency-light (OpenZeppelin only).
+
+## Don't
+
+- Present lab contracts as production-ready.
+- Break the numbering of existing labs (other repos link to them).
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **src/L<NN>_<Name>.sol** (solidity): `forge install Blockchains/blockchainlab-labs`
+- **noir/** (file): `cd noir && nargo test`
+- **cairo/** (file): `cd cairo && scarb test`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchain-dev-roadmap](https://github.com/Blockchains/blockchain-dev-roadmap): roadmap stages link to these labs
+- [Blockchains/blockchain-interview-questions](https://github.com/Blockchains/blockchain-interview-questions): answers link to labs
+- [Blockchains/blockchainlab-tools](https://github.com/Blockchains/blockchainlab-tools): labs reference the hash/storage tools
+- [Blockchains/blockchainlab-starters](https://github.com/Blockchains/blockchainlab-starters): production-style starters for the same stacks
+- [Blockchains/forge-usd-priced-membership-nft](https://github.com/Blockchains/forge-usd-priced-membership-nft): combine lab patterns with composed contracts
+
+
+
+=== Blockchains/blockchainlab-lens / AGENTS.md ===
+
+Summary: One-click explainer for Etherscan-family and Blockscout explorers: a Manifest V3 extension and a bookmarklet that open the matching blockchainlab-tools page. Its URL detector (`extension/detect.js`) is a reusable UMD module.
+Manifest: https://raw.githubusercontent.com/Blockchains/blockchainlab-lens/main/blocks.json
+
+# AGENTS.md: blockchainlab-lens
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+One-click explainer for Etherscan-family and Blockscout explorers: a Manifest V3 extension and a bookmarklet that open the matching blockchainlab-tools page. Its URL detector (`extension/detect.js`) is a reusable UMD module.
+
+- Kind: browser-extension, library · stability: `stable` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+pip install playwright && python -m playwright install chromium
+```
+
+## Build and test
+
+```bash
+python test_extension.py   # loads the real unpacked extension in Chromium
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `extension/detect.js` | URL/text → tools deep link (UMD: browser global + CommonJS) |
+| `extension/content.js, background.js, popup.*` | MV3 extension |
+| `bookmarklet/` | bookmarklet source and encoded form |
+| `index.html` | install page |
+| `test_extension.py` | Playwright test |
+
+## Conventions
+
+- Permissions stay minimal (`contextMenus` + explorer content scripts).
+- No analytics or data collection.
+
+## Extension points
+
+- New explorer: add the host → chain mapping in `extension/detect.js` and the manifest match list, then a test case.
+
+## Do
+
+- Keep `detect.js` dependency-free so it can be loaded with a plain script tag.
+
+## Don't
+
+- Request broad host permissions.
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **BLLens (detect.js)** (browser-script): `<script src="https://blockchains.github.io/blockchainlab-lens/extension/detect.js"></script>`
+- **extension/** (file): `chrome://extensions → Load unpacked → extension/`
+- **bookmarklet** (web): `https://blockchains.github.io/blockchainlab-lens/`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-tools](https://github.com/Blockchains/blockchainlab-tools): every explanation is a tools page
+- [Blockchains/blockchainlab-api](https://github.com/Blockchains/blockchainlab-api): use with API data in dashboards (Build with Blocks recipe 3)
+- [Blockchains/blockchainlab-mcp](https://github.com/Blockchains/blockchainlab-mcp): same deep links in MCP results
+
+
+
+=== Blockchains/blockchainlab-mcp / AGENTS.md ===
+
+Summary: MCP server (stdio) with 43 read-only blockchain tools for AI agents (Cursor, Claude, Grok, any MCP client) plus the same logic as a JS SDK: datasets from the Open Data API and live on-chain helpers (tx/calldata decoding, gas, ENS, Safe, EIP-712, approvals, MEV, Solana, PSBT). No keys; never signs or sends.
+Manifest: https://raw.githubusercontent.com/Blockchains/blockchainlab-mcp/main/blocks.json
+
+# AGENTS.md: blockchainlab-mcp
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+MCP server (stdio) with 43 read-only blockchain tools for AI agents (Cursor, Claude, Grok, any MCP client) plus the same logic as a JS SDK: datasets from the Open Data API and live on-chain helpers (tx/calldata decoding, gas, ENS, Safe, EIP-712, approvals, MEV, Solana, PSBT). No keys; never signs or sends.
+
+- Kind: mcp-server, library, cli · stability: `beta` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+npm ci
+node bin/blockchainlab-mcp.js   # speaks MCP over stdio
+```
+
+## Build and test
+
+```bash
+npm test   # SDK against the live API + spawns the real server over stdio and calls the tools
+npm pack --dry-run
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `BLOCKCHAINLAB_API` | no | point at a self-hosted copy of the Open Data API |
+
+## Structure
+
+| Path | What |
+|---|---|
+| `bin/blockchainlab-mcp.js` | CLI entry (stdio server) |
+| `src/server.js` | MCP tool definitions (zod schemas) and handlers |
+| `src/sdk.js` | `BlockchainLab` dataset client + `toolLinks` |
+| `src/onchain.js, src/onchain2.js` | live on-chain helpers (ethers v6, @scure/btc-signer) |
+| `test/` | live SDK + MCP stdio tests |
+| `Dockerfile, server.json` | container image and MCP Registry metadata |
+
+## Conventions
+
+- Read-only: no tool may sign or broadcast transactions.
+- Every tool returns source and timestamp fields; no fabricated values.
+- Keep `src/onchain*.js` in sync with blockchainlab-tools `assets/core*.js` when fixing shared logic.
+
+## Extension points
+
+- New tool: register it in `src/server.js` with a zod input schema, put logic in `src/sdk.js` or `src/onchain*.js`, add a live test in `test/mcp.test.mjs`.
+- Custom data: set `BLOCKCHAINLAB_API`.
+
+## Do
+
+- Update the tool table in README.md and the Docker smoke-test threshold when adding tools.
+
+## Don't
+
+- Add write/sign capabilities.
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **blockchainlab** (mcp-stdio): `npx -y github:Blockchains/blockchainlab-mcp`
+- **ghcr.io/blockchains/blockchainlab-mcp** (docker): `docker run -i --rm ghcr.io/blockchains/blockchainlab-mcp:latest`
+- **blockchainlab-mcp** (npm): `npm i github:Blockchains/blockchainlab-mcp`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-api](https://github.com/Blockchains/blockchainlab-api): data source for the dataset tools
+- [Blockchains/blockchainlab-tools](https://github.com/Blockchains/blockchainlab-tools): shares the on-chain logic (`src/onchain*.js` mirror `assets/core*.js`); results link to tool pages
+- [Blockchains/grokhack-forge](https://github.com/Blockchains/grokhack-forge): give a composed Grok app's developer agent these tools, or call the SDK in app code
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): typed alternative for app code (this package ships no .d.ts yet)
+- [Blockchains/blockchainlab-lens](https://github.com/Blockchains/blockchainlab-lens): same explorer deep links
+
+
+
+=== Blockchains/blockchainlab-sdk / AGENTS.md ===
+
+Summary: Typed TypeScript and Python clients for the Blockchain Lab Open Data API: 20 nightly-rebuilt blockchain datasets (chains, RPC health, DeFi TVL, stablecoins, yields, L2 metrics, hacks, OFAC addresses, EIPs/ERCs/BIPs, grants, hackathons).
+Manifest: https://raw.githubusercontent.com/Blockchains/blockchainlab-sdk/main/blocks.json
+
+# AGENTS.md: blockchainlab-sdk
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Typed TypeScript and Python clients for the Blockchain Lab Open Data API: 20 nightly-rebuilt blockchain datasets (chains, RPC health, DeFi TVL, stablecoins, yields, L2 metrics, hacks, OFAC addresses, EIPs/ERCs/BIPs, grants, hackathons).
+
+- Kind: library · stability: `stable` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+npm ci                      # TypeScript client (builds ts/dist via prepare)
+pip install ./python          # Python client, stdlib only
+```
+
+## Build and test
+
+```bash
+npm test                                  # tsc + live test against every dataset
+cd python && python -m unittest -v tests/test_live.py
+python3 scripts/gen.py && git diff --exit-code   # types must match the live JSON Schemas
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `ts/src/index.ts` | `BlockchainLab` client (fetch, cache, timeouts) and convenience helpers |
+| `ts/src/types.ts` | generated row/envelope types, do not hand-edit |
+| `ts/src/datasets.ts` | generated dataset map + `SCHEMA_VERSION` |
+| `ts/test/live.test.mjs` | live tests |
+| `python/blockchainlab_sdk/` | Python client (`__init__.py`), generated `types.py`, `datasets.py` |
+| `scripts/gen.py` | regenerates TS + Python types from the API's JSON Schemas |
+| `.github/workflows/ci.yml` | Node 18/20/22 + Python 3.9/3.11/3.13 matrix, types-in-sync, install-from-GitHub check |
+
+## Conventions
+
+- Generated files (`ts/src/types.ts`, `ts/src/datasets.ts`, `python/blockchainlab_sdk/types.py`, `datasets.py`) come from `scripts/gen.py`; change the generator, not the output.
+- Keep TS and Python helpers in parity (camelCase in TS, snake_case in Python).
+- Zero runtime dependencies: TS uses global `fetch`, Python uses `urllib`.
+
+## Extension points
+
+- New helper: add a method to `BlockchainLab` in `ts/src/index.ts` and the matching snake_case one in `python/blockchainlab_sdk/__init__.py`, plus a live test.
+- New dataset: add it to blockchainlab-api first, then run `python3 scripts/gen.py`.
+- Self-hosted data: pass `baseUrl` / `base_url` pointing at a copy of the API.
+
+## Do
+
+- Pin a tag or commit when depending on it from another repo.
+- Use `bl.dataset(name)` for anything without a helper; it is fully typed by name.
+
+## Don't
+
+- Hand-edit generated type files.
+- Add runtime dependencies.
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **blockchainlab-sdk** (npm): `npm i github:Blockchains/blockchainlab-sdk`
+- **blockchainlab_sdk** (pypi): `pip install "git+https://github.com/Blockchains/blockchainlab-sdk#subdirectory=python"`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-api](https://github.com/Blockchains/blockchainlab-api): the data source; the SDK types are generated from its JSON Schemas (scripts/gen.py)
+- [Blockchains/blockchainlab-mcp](https://github.com/Blockchains/blockchainlab-mcp): same data exposed as MCP tools for AI agents; use the SDK in app code, the MCP server in agent clients
+- [Blockchains/forge-usd-priced-membership-nft](https://github.com/Blockchains/forge-usd-priced-membership-nft): pick a healthy RPC (healthyRpcs) and screen wallets (isSanctioned) in a dApp front end around the contracts
+- [Blockchains/grokhack-forge](https://github.com/Blockchains/grokhack-forge): add SDK calls as Grok tools in a composed chat app (see Build with Blocks recipe 2)
+- [Blockchains/blockchains.github.io](https://github.com/Blockchains/blockchains.github.io): the hub pages read the same API
+
+
+
+=== Blockchains/blockchainlab-starters / AGENTS.md ===
+
+Summary: Template repo of 8 CI-tested starters built on Blockchains forks: foundry-oz-tokens, chainlink-price-feed, uniswap-v4-hook, erc4337-smart-account, hedera-token-sdk, wagmi-rainbowkit-dapp, circom-zk-proof and noir-zk-proof.
+Manifest: https://raw.githubusercontent.com/Blockchains/blockchainlab-starters/main/blocks.json
+
+# AGENTS.md: blockchainlab-starters
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Template repo of 8 CI-tested starters built on Blockchains forks: foundry-oz-tokens, chainlink-price-feed, uniswap-v4-hook, erc4337-smart-account, hedera-token-sdk, wagmi-rainbowkit-dapp, circom-zk-proof and noir-zk-proof.
+
+- Kind: template · stability: `stable` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+git submodule update --init --recursive
+bash .devcontainer/setup.sh   # optional: installs all toolchains
+```
+
+## Build and test
+
+```bash
+cd starters/<name> && forge build && forge test   # Foundry starters
+cd starters/<name> && npm ci && npm test   # Node starters
+cd starters/noir-zk-proof && nargo test
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `starters/<name>/` | one self-contained starter each, with its own README |
+| `.devcontainer/, .gitpod.yml` | toolchain setup |
+| `.github/workflows/ci.yml` | matrix build/test per starter + gitleaks |
+
+## Conventions
+
+- Starters stay independent: no shared code between them.
+- MIT unless a file header says otherwise (erc4337-smart-account is GPL-3.0, hedera-token-sdk Apache-2.0).
+
+## Extension points
+
+- New starter: `starters/<name>/` with README + tests, add it to the CI matrix and the README table.
+
+## Do
+
+- Keep each starter runnable with one command.
+
+## Don't
+
+- Couple starters to each other.
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **Use this template** (git): `GitHub template / Codespaces / Gitpod`
+- **starters/<name>/** (file): `cd starters/<name> && follow its README`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-labs](https://github.com/Blockchains/blockchainlab-labs): learn the pattern, then start from the matching starter
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): add live data to wagmi-rainbowkit-dapp
+- [Blockchains/awesome-blockchainlab](https://github.com/Blockchains/awesome-blockchainlab): the forks the starters pin
+- [Blockchains/blockchainlab-compose](https://github.com/Blockchains/blockchainlab-compose): generated alternative for token/NFT ideas
+
+
+
+=== Blockchains/blockchainlab-tools / AGENTS.md ===
+
+Summary: 26 client-side blockchain developer tools (gas, units, ABI, tx decoder, ENS, storage slots, Merkle, Safe, EIP-712, approvals, MEV, Solana, PSBT...) as static pages with deep links, plus the shared ES-module logic (`assets/core.js`, `assets/core2.js`) usable from Node or the browser.
+Manifest: https://raw.githubusercontent.com/Blockchains/blockchainlab-tools/main/blocks.json
+
+# AGENTS.md: blockchainlab-tools
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+26 client-side blockchain developer tools (gas, units, ABI, tx decoder, ENS, storage slots, Merkle, Safe, EIP-712, approvals, MEV, Solana, PSBT...) as static pages with deep links, plus the shared ES-module logic (`assets/core.js`, `assets/core2.js`) usable from Node or the browser.
+
+- Kind: web-app, library · stability: `stable` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+npm install            # ethers, merkle-tree, @scure/* for the Node tests
+python3 -m http.server   # serve the static pages locally
+```
+
+## Build and test
+
+```bash
+npm test                                   # live tests (units, ABI, ENS, fees on 7 chains, Safe, EIP-712, …)
+python3 gen_pages.py && git diff --exit-code -- '*.html' sitemap.xml
+pip install playwright && python3 test/e2e.py   # headless e2e of every page
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `assets/core.js` | pack 1 shared logic |
+| `assets/core2.js` | pack 2 logic (Safe, EIP-712, approvals, MEV, Solana, PSBT…) |
+| `assets/ui.js, assets/app.css` | shared UI |
+| `gen_pages.py, gen_pages2.py` | generate every `<tool>/index.html` |
+| `<tool>/index.html` | generated pages, do not hand-edit |
+| `test/` | live Node tests + Playwright e2e |
+
+## Conventions
+
+- Pages are generated: edit `gen_pages*.py` and `assets/*`, then regenerate.
+- No backend, no keys, no tracking: public RPCs/APIs only, with timeouts (`tfetch`).
+- Keep deep-link parameters backwards compatible.
+
+## Extension points
+
+- New tool: logic in `assets/core2.js` (exported, tested in `test/core2.test.mjs`), page in `gen_pages2.py`, then mirror it as an MCP tool in blockchainlab-mcp.
+
+## Do
+
+- Run `python3 gen_pages.py` and commit the regenerated HTML in the same change.
+
+## Don't
+
+- Hand-edit generated HTML.
+- Add server-side components or analytics.
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **tool deep links** (web): `https://blockchains.github.io/blockchainlab-tools/tx/?chain=base&hash=0x…`
+- **assets/core.js** (file): `git clone + npm install, then import * as C from './assets/core.js'`
+- **assets/core2.js** (file): `assets/core2.js`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-mcp](https://github.com/Blockchains/blockchainlab-mcp): the MCP server wraps the same logic as agent tools
+- [Blockchains/blockchainlab-lens](https://github.com/Blockchains/blockchainlab-lens): the extension opens these pages for explorer tx/address URLs
+- [Blockchains/blockchainlab-api](https://github.com/Blockchains/blockchainlab-api): chains and EIP/ERC/BIP reference data
+- [Blockchains/blockchain-dev-roadmap](https://github.com/Blockchains/blockchain-dev-roadmap): roadmap stages link to the tools
+- [Blockchains/blockchains.github.io](https://github.com/Blockchains/blockchains.github.io): listed on the hub
+
+
+
+=== Blockchains/Blockchains / AGENTS.md ===
+
+Summary: GitHub profile README for Ismail Malik / Blockchain Lab: live sites, the open-source toolkit and pointers to Build with Blocks.
+Manifest: https://raw.githubusercontent.com/Blockchains/Blockchains/main/blocks.json
+
+# AGENTS.md: Blockchains
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+GitHub profile README for Ismail Malik / Blockchain Lab: live sites, the open-source toolkit and pointers to Build with Blocks.
+
+- Kind: docs · stability: `stable` · licence: NOASSERTION
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+# nothing to install
+```
+
+## Build and test
+
+```bash
+# Markdown only
+```
+
+## Structure
+
+| Path | What |
+|---|---|
+| `README.md` | profile |
+| `assets/` | site favicons |
+
+## Conventions
+
+- Keep the live-sites table accurate.
+
+## Extension points
+
+- n/a
+
+## Do
+
+- Link new building blocks from the open-source table.
+
+## Don't
+
+- List archived repos.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **README.md** (file): `https://github.com/Blockchains`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/.github](https://github.com/Blockchains/.github): org docs: BUILD-WITH-BLOCKS, BLOCKS-SCHEMA
+- [Blockchains/blockchains.github.io](https://github.com/Blockchains/blockchains.github.io): hub, llms.txt and blocks catalogue
+
+
+
+=== Blockchains/blockchains.github.io / AGENTS.md ===
+
+Summary: Blockchain Lab Hub: static GitHub Pages site with 75 free services (AI briefs via Grok, gas/RPC/chain monitors, finders, feeds), machine-readable services.json, health data, and the org-wide llms.txt and blocks.json catalogue.
+Manifest: https://blockchains.github.io/blocks/hub.json
+
+# AGENTS.md: blockchains.github.io
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Blockchain Lab Hub: static GitHub Pages site with 75 free services (AI briefs via Grok, gas/RPC/chain monitors, finders, feeds), machine-readable services.json, health data, and the org-wide llms.txt and blocks.json catalogue.
+
+- Kind: web-app, dataset · stability: `stable` · licence: MIT
+- Machine-readable manifest: [`blocks/hub.json`](blocks/hub.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+pip install -q playwright && python -m playwright install chromium
+```
+
+## Build and test
+
+```bash
+python scripts/gen_site.py && git diff --exit-code -- '*.html' sitemap.xml robots.txt
+python tests/validate.py
+python tests/serve.py 43117 & sleep 2; BASE=http://127.0.0.1:43117 python tests/e2e.py
+GH_TOKEN=$(gh auth token) python scripts/blocks.py   # rebuild blocks.json, llms.txt, llms-full.txt from every repo's blocks.json + AGENTS.md (token optional)
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `scripts/gen_site.py` | generates every page + sitemap/robots |
+| `scripts/job_*.py` | scheduled data jobs (daily, gas, rpc, health, ai…) |
+| `scripts/blocks.py` | aggregates blocks.json, llms.txt and llms-full.txt; /blocks/ page is in gen_site.py |
+| `services.json` | service catalogue |
+| `data/` | published data |
+| `llms.txt, llms-full.txt, blocks.json` | org-wide AI entry points, generated by scripts/blocks.py (not this repo's own manifest) |
+| `blocks/hub.json` | this repo's own block manifest |
+| `blocks/index.html` | human-readable blocks catalogue (generated by gen_site.py, renders /blocks.json) |
+| `tests/` | validate.py, e2e.py, serve.py |
+
+## Conventions
+
+- Pages are generated by `scripts/gen_site.py`; commit regenerated HTML.
+- No servers, no trackers; everything is static + scheduled Actions.
+
+## Extension points
+
+- New service: page in `gen_site.py`, entry in `services.json`, a check in `tests/e2e.py` (the hub test expects the card count to match).
+- New repo block: add `blocks.json` to that repo, then run `python scripts/blocks.py`.
+
+## Do
+
+- Run the e2e locally after changing pages.
+
+## Don't
+
+- Hand-edit generated pages.
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **services.json** (http): `catalogue of every service with id, name, url, category`
+- **blocks.json** (http): `aggregated blocks.json of every live Blockchains repo`
+- **llms.txt** (http): `org-wide doc map for LLMs (+ llms-full.txt)`
+- **data/*.json** (http): `gas.json, liveness.json, rpc-latency.json, incidents.json, events.json, jobs.json, grants.json, depeg.json, status.json, ai/*.json`
+- **feeds** (http): `incident RSS + /events/events.ics`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-api](https://github.com/Blockchains/blockchainlab-api): data source for many pages
+- [Blockchains/blockchainlab-tools](https://github.com/Blockchains/blockchainlab-tools): tools are linked from the hub
+- [Blockchains/sites-monitor](https://github.com/Blockchains/sites-monitor): status of the custom domains
+- [Blockchains/.github](https://github.com/Blockchains/.github): BLOCKS-SCHEMA and BUILD-WITH-BLOCKS docs
+
+
+
+=== Blockchains/forge-dao-governance-token / AGENTS.md ===
+
+Summary: Composed DAO governance kit: capped ERC-20 with EIP-2612 permit, ERC20Votes delegation and role-based minting (DaoGovernanceToken) plus an OpenZeppelin Governor with settings, simple counting, 4% quorum and a TimelockController (DaoGovernanceGovernor).
+Manifest: https://raw.githubusercontent.com/Blockchains/forge-dao-governance-token/main/blocks.json
+
+# AGENTS.md: forge-dao-governance-token
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Composed DAO governance kit: capped ERC-20 with EIP-2612 permit, ERC20Votes delegation and role-based minting (DaoGovernanceToken) plus an OpenZeppelin Governor with settings, simple counting, 4% quorum and a TimelockController (DaoGovernanceGovernor).
+
+- Kind: contracts · stability: `reference` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+git clone --recursive https://github.com/Blockchains/forge-dao-governance-token && cd forge-dao-governance-token
+foundryup
+```
+
+## Build and test
+
+```bash
+forge build --sizes
+forge test -vv   # set MAINNET_RPC_URL / SEPOLIA_RPC_URL to include fork tests
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `MAINNET_RPC_URL` | no | enables live-chain fork tests |
+| `SEPOLIA_RPC_URL` | no | deploy target |
+| `DEPLOYER_PRIVATE_KEY` | no | repo secret for the Deploy workflow only; never in files |
+
+## Structure
+
+| Path | What |
+|---|---|
+| `src/DaoGovernanceToken.sol` | glue contract |
+| `src/DaoGovernanceGovernor.sol` | glue contract |
+| `test/` | Foundry tests (unit + fork) |
+| `script/Deploy.s.sol` | deployment |
+| `lib/` | copied, unmodified components + forge-std |
+| `component-map.json, plan.json, NOTICE` | provenance and attribution |
+
+## Conventions
+
+- Files under `lib/` are copied unmodified from Blockchains forks with SPDX headers; do not edit them.
+- Glue lives in `src/`; tests cover every role and revert path.
+- solc 0.8.30, evm_version cancun (foundry.toml).
+
+## Extension points
+
+- Import the contracts from another Foundry project: `forge install Blockchains/<this repo>` plus the full fork the components were copied from (e.g. `Blockchains/openzeppelin-contracts@v5.7.0`, `Blockchains/account-abstraction@v0.9.0`) and remap to it; `lib/` here holds only the files this project needs, so a remap to it can miss files another contract imports.
+- Re-compose a variant with the composer instead of hand-editing when the change is a new capability.
+
+## Do
+
+- Keep NOTICE and component-map.json accurate if you add copied files.
+
+## Don't
+
+- Modify copied files under `lib/`.
+- Put keys in scripts; use `--account <keystore>` or CI secrets.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **DaoGovernanceToken** (solidity): `forge install Blockchains/forge-dao-governance-token`
+- **DaoGovernanceGovernor** (solidity): `forge install Blockchains/forge-dao-governance-token`
+- **script/Deploy.s.sol** (file): `forge script script/Deploy.s.sol --rpc-url $SEPOLIA_RPC_URL --account <keystore> --broadcast`
+- **component-map.json, plan.json** (file): `provenance: capability → component → pinned fork commit`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-compose](https://github.com/Blockchains/blockchainlab-compose): the composer that generated this repo
+- [Blockchains/forge-usd-priced-membership-nft](https://github.com/Blockchains/forge-usd-priced-membership-nft): pair: members NFT + governance token
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): front end data (chains, RPC health, sanctions screening)
+- [Blockchains/blockchainlab-labs](https://github.com/Blockchains/blockchainlab-labs): L15 Timelock lab explains the pattern
+
+
+
+=== Blockchains/forge-example-gasless-membership / AGENTS.md ===
+
+Summary: Composed gasless membership club: ERC-721 pass with an approver allowlist (MembershipNFT) and an ERC-4337 paymaster that sponsors exactly the join() UserOperation (ClubPaymaster, extends eth-infinitism BasePaymaster v0.9.0), plus a viem front end.
+Manifest: https://raw.githubusercontent.com/Blockchains/forge-example-gasless-membership/main/blocks.json
+
+# AGENTS.md: forge-example-gasless-membership
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Composed gasless membership club: ERC-721 pass with an approver allowlist (MembershipNFT) and an ERC-4337 paymaster that sponsors exactly the join() UserOperation (ClubPaymaster, extends eth-infinitism BasePaymaster v0.9.0), plus a viem front end.
+
+- Kind: contracts, web-app · stability: `reference` · licence: GPL-3.0-or-later
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+git clone --recursive https://github.com/Blockchains/forge-example-gasless-membership && cd forge-example-gasless-membership
+foundryup
+cd web && npm ci
+```
+
+## Build and test
+
+```bash
+forge build --sizes
+forge test -vv   # set MAINNET_RPC_URL / SEPOLIA_RPC_URL to include fork tests
+cd web && npm ci && npm test && npm run build
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `MAINNET_RPC_URL` | no | enables live-chain fork tests |
+| `SEPOLIA_RPC_URL` | no | deploy target |
+| `DEPLOYER_PRIVATE_KEY` | no | repo secret for the Deploy workflow only; never in files |
+
+## Structure
+
+| Path | What |
+|---|---|
+| `src/MembershipNFT.sol` | glue contract |
+| `src/ClubPaymaster.sol` | glue contract |
+| `test/` | Foundry tests (unit + fork) |
+| `script/Deploy.s.sol` | deployment |
+| `lib/` | copied, unmodified components + forge-std |
+| `component-map.json, plan.json, NOTICE` | provenance and attribution |
+| `web/` | Vite + viem front end (GitHub Pages) |
+
+## Conventions
+
+- Files under `lib/` are copied unmodified from Blockchains forks with SPDX headers; do not edit them.
+- Glue lives in `src/`; tests cover every role and revert path.
+- solc 0.8.30, evm_version cancun (foundry.toml).
+
+## Extension points
+
+- Import the contracts from another Foundry project: `forge install Blockchains/<this repo>` plus the full fork the components were copied from (e.g. `Blockchains/openzeppelin-contracts@v5.7.0`, `Blockchains/account-abstraction@v0.9.0`) and remap to it; `lib/` here holds only the files this project needs, so a remap to it can miss files another contract imports.
+- Re-compose a variant with the composer instead of hand-editing when the change is a new capability.
+
+## Do
+
+- Keep NOTICE and component-map.json accurate if you add copied files.
+
+## Don't
+
+- Modify copied files under `lib/`.
+- Put keys in scripts; use `--account <keystore>` or CI secrets.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **MembershipNFT** (solidity): `forge install Blockchains/forge-example-gasless-membership`
+- **ClubPaymaster** (solidity): `forge install Blockchains/forge-example-gasless-membership`
+- **script/Deploy.s.sol** (file): `forge script script/Deploy.s.sol --rpc-url $SEPOLIA_RPC_URL --account <keystore> --broadcast`
+- **component-map.json, plan.json** (file): `provenance: capability → component → pinned fork commit`
+- **web/** (web): `cd web && npm ci && npm run dev`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-index](https://github.com/Blockchains/blockchainlab-index): the composer that generated this repo
+- [Blockchains/blockchainlab-index](https://github.com/Blockchains/blockchainlab-index): components were retrieved from the index
+- [Blockchains/blockchainlab-starters](https://github.com/Blockchains/blockchainlab-starters): erc4337-smart-account starter
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): RPC health for the front end
+
+
+
+=== Blockchains/forge-example-usd-savings-vault / AGENTS.md ===
+
+Summary: Composed ERC-4626 savings vault that reports value in USD via a Chainlink feed, with a USD deposit cap, entry fee (max 5%) and RISK_MANAGER_ROLE controls (UsdSavingsVault), plus a viem front end on GitHub Pages.
+Manifest: https://raw.githubusercontent.com/Blockchains/forge-example-usd-savings-vault/main/blocks.json
+
+# AGENTS.md: forge-example-usd-savings-vault
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Composed ERC-4626 savings vault that reports value in USD via a Chainlink feed, with a USD deposit cap, entry fee (max 5%) and RISK_MANAGER_ROLE controls (UsdSavingsVault), plus a viem front end on GitHub Pages.
+
+- Kind: contracts, web-app · stability: `reference` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+git clone --recursive https://github.com/Blockchains/forge-example-usd-savings-vault && cd forge-example-usd-savings-vault
+foundryup
+cd web && npm ci
+```
+
+## Build and test
+
+```bash
+forge build --sizes
+forge test -vv   # set MAINNET_RPC_URL / SEPOLIA_RPC_URL to include fork tests
+cd web && npm ci && npm test && npm run build
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `MAINNET_RPC_URL` | no | enables live-chain fork tests |
+| `SEPOLIA_RPC_URL` | no | deploy target |
+| `DEPLOYER_PRIVATE_KEY` | no | repo secret for the Deploy workflow only; never in files |
+
+## Structure
+
+| Path | What |
+|---|---|
+| `src/UsdSavingsVault.sol` | glue contract |
+| `test/` | Foundry tests (unit + fork) |
+| `script/Deploy.s.sol` | deployment |
+| `lib/` | copied, unmodified components + forge-std |
+| `component-map.json, plan.json, NOTICE` | provenance and attribution |
+| `web/` | Vite + viem front end (GitHub Pages) |
+
+## Conventions
+
+- Files under `lib/` are copied unmodified from Blockchains forks with SPDX headers; do not edit them.
+- Glue lives in `src/`; tests cover every role and revert path.
+- solc 0.8.30, evm_version cancun (foundry.toml).
+
+## Extension points
+
+- Import the contracts from another Foundry project: `forge install Blockchains/<this repo>` plus the full fork the components were copied from (e.g. `Blockchains/openzeppelin-contracts@v5.7.0`, `Blockchains/account-abstraction@v0.9.0`) and remap to it; `lib/` here holds only the files this project needs, so a remap to it can miss files another contract imports.
+- Re-compose a variant with the composer instead of hand-editing when the change is a new capability.
+
+## Do
+
+- Keep NOTICE and component-map.json accurate if you add copied files.
+
+## Don't
+
+- Modify copied files under `lib/`.
+- Put keys in scripts; use `--account <keystore>` or CI secrets.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **UsdSavingsVault** (solidity): `forge install Blockchains/forge-example-usd-savings-vault`
+- **script/Deploy.s.sol** (file): `forge script script/Deploy.s.sol --rpc-url $SEPOLIA_RPC_URL --account <keystore> --broadcast`
+- **component-map.json, plan.json** (file): `provenance: capability → component → pinned fork commit`
+- **web/** (web): `cd web && npm ci && npm run dev`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-index](https://github.com/Blockchains/blockchainlab-index): the composer that generated this repo
+- [Blockchains/blockchainlab-index](https://github.com/Blockchains/blockchainlab-index): components were retrieved from the index
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): yields/stablecoins data next to the vault UI
+- [Blockchains/blockchainlab-labs](https://github.com/Blockchains/blockchainlab-labs): L28 invariant-testing lab for vault properties
+
+
+
+=== Blockchains/forge-usd-priced-membership-nft / AGENTS.md ===
+
+Summary: Composed membership NFT: ERC-721 with max supply, ERC-2981 royalties, pause switch, MINTER/PAUSER roles and a paid mint priced in USD through a Chainlink ETH/USD feed with staleness checks and refunds (UsdPricedMembership). Good base for token-gated apps.
+Manifest: https://raw.githubusercontent.com/Blockchains/forge-usd-priced-membership-nft/main/blocks.json
+
+# AGENTS.md: forge-usd-priced-membership-nft
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Composed membership NFT: ERC-721 with max supply, ERC-2981 royalties, pause switch, MINTER/PAUSER roles and a paid mint priced in USD through a Chainlink ETH/USD feed with staleness checks and refunds (UsdPricedMembership). Good base for token-gated apps.
+
+- Kind: contracts · stability: `reference` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+git clone --recursive https://github.com/Blockchains/forge-usd-priced-membership-nft && cd forge-usd-priced-membership-nft
+foundryup
+```
+
+## Build and test
+
+```bash
+forge build --sizes
+forge test -vv   # set MAINNET_RPC_URL / SEPOLIA_RPC_URL to include fork tests
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `MAINNET_RPC_URL` | no | enables live-chain fork tests |
+| `SEPOLIA_RPC_URL` | no | deploy target |
+| `DEPLOYER_PRIVATE_KEY` | no | repo secret for the Deploy workflow only; never in files |
+
+## Structure
+
+| Path | What |
+|---|---|
+| `src/UsdPricedMembership.sol` | glue contract |
+| `test/` | Foundry tests (unit + fork) |
+| `script/Deploy.s.sol` | deployment |
+| `lib/` | copied, unmodified components + forge-std |
+| `component-map.json, plan.json, NOTICE` | provenance and attribution |
+
+## Conventions
+
+- Files under `lib/` are copied unmodified from Blockchains forks with SPDX headers; do not edit them.
+- Glue lives in `src/`; tests cover every role and revert path.
+- solc 0.8.30, evm_version cancun (foundry.toml).
+
+## Extension points
+
+- Import the contracts from another Foundry project: `forge install Blockchains/<this repo>` plus the full fork the components were copied from (e.g. `Blockchains/openzeppelin-contracts@v5.7.0`, `Blockchains/account-abstraction@v0.9.0`) and remap to it; `lib/` here holds only the files this project needs, so a remap to it can miss files another contract imports.
+- Re-compose a variant with the composer instead of hand-editing when the change is a new capability.
+
+## Do
+
+- Keep NOTICE and component-map.json accurate if you add copied files.
+
+## Don't
+
+- Modify copied files under `lib/`.
+- Put keys in scripts; use `--account <keystore>` or CI secrets.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **UsdPricedMembership** (solidity): `forge install Blockchains/forge-usd-priced-membership-nft`
+- **script/Deploy.s.sol** (file): `forge script script/Deploy.s.sol --rpc-url $SEPOLIA_RPC_URL --account <keystore> --broadcast`
+- **component-map.json, plan.json** (file): `provenance: capability → component → pinned fork commit`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-compose](https://github.com/Blockchains/blockchainlab-compose): the composer that generated this repo
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): token-gated dApp data layer (Build with Blocks recipe 1)
+- [Blockchains/forge-dao-governance-token](https://github.com/Blockchains/forge-dao-governance-token): add governance
+- [Blockchains/blockchainlab-starters](https://github.com/Blockchains/blockchainlab-starters): chainlink-price-feed starter explains the oracle pattern
+
+
+
+=== Blockchains/fork-sync / AGENTS.md ===
+
+Summary: Keeps the curated Blockchains forks in line with their upstreams: forks.json lists each fork, upstream, branch and mode (merge via the merge-upstream API, or tracking for forks whose GitHub parent differs from the real upstream); nightly workflow + box-side script.
+Manifest: https://raw.githubusercontent.com/Blockchains/fork-sync/main/blocks.json
+
+# AGENTS.md: fork-sync
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Keeps the curated Blockchains forks in line with their upstreams: forks.json lists each fork, upstream, branch and mode (merge via the merge-upstream API, or tracking for forks whose GitHub parent differs from the real upstream); nightly workflow + box-side script.
+
+- Kind: automation, dataset, cli · stability: `stable` · licence: NOASSERTION
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+gh auth status
+```
+
+## Build and test
+
+```bash
+python3 scripts/sync.py --dry-run
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `FORK_SYNC_TOKEN` | no | repo secret; PAT with repo + workflow on Blockchains |
+
+## Structure
+
+| Path | What |
+|---|---|
+| `forks.json` | fork list |
+| `scripts/sync.py` | sync logic (merge-upstream / tracking force-move) |
+| `.github/workflows/sync.yml` | nightly workflow |
+
+## Conventions
+
+- `mode: tracking` only for forks whose GitHub parent is not the real upstream (e.g. go-ethereum, chainlink, buidler→hardhat).
+- No licence file yet: default copyright applies.
+
+## Extension points
+
+- Add a fork: append an entry with slug/fork/upstream/branches/mode/category/license.
+
+## Do
+
+- Run with `--dry-run` first.
+
+## Don't
+
+- List archived repos.
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **forks.json** (file): `slug, fork, upstream, upstream_branch, branch, mode, tracking_branch, category, license, wave`
+- **scripts/sync.py** (cli): `python3 scripts/sync.py [--dry-run] [--only a,b] [--pace SECONDS]`
+- **Nightly fork sync** (github-action): `02:17 UTC + workflow_dispatch (input: only)`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-index](https://github.com/Blockchains/blockchainlab-index): indexes the synced forks nightly, after this runs
+- [Blockchains/awesome-blockchainlab](https://github.com/Blockchains/awesome-blockchainlab): list of the same forks
+- [Blockchains/grokhack-index](https://github.com/Blockchains/grokhack-index): syncs its own fork list best-effort
+
+
+
+=== Blockchains/grok-release-radar / AGENTS.md ===
+
+Summary: Daily digest app composed by grokhack-forge: collects real GitHub release activity for tracked Grok-integration repos and summarises it with the official xai-sdk (gRPC) using structured output, published to GitHub Pages by Actions.
+Manifest: https://raw.githubusercontent.com/Blockchains/grok-release-radar/main/blocks.json
+
+# AGENTS.md: grok-release-radar
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Daily digest app composed by grokhack-forge: collects real GitHub release activity for tracked Grok-integration repos and summarises it with the official xai-sdk (gRPC) using structured output, published to GitHub Pages by Actions.
+
+- Kind: web-app, automation · stability: `reference` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+pip install -r requirements.txt
+```
+
+## Build and test
+
+```bash
+pip install -r requirements.txt && pytest -q && python -m app.e2e && python -m app.main
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `XAI_API_KEY` | no | live Grok calls; without it CI proves api.x.ai rejects the unauthenticated call |
+
+## Structure
+
+| Path | What |
+|---|---|
+| `app/collect.py` | `collect(cfg)`: releases in the window else latest push, via the GitHub API |
+| `app/summarize.py` | `summarize(collected, cfg)`: xai-sdk chat.parse + pydantic |
+| `app/render.py` | `render()` static site |
+| `app/main.py` | entry point |
+| `app/forge_config.py` | `FORGE` config: repos / repo_list_url / max_repos / model |
+| `tests/test_app.py` | tests |
+| `app/e2e.py` | real api.x.ai e2e |
+
+## Conventions
+
+- Generated by grokhack-forge: keep `forge.json` and `PARTS.md` in sync with what the code uses.
+- 403 from api.x.ai → show the 'xAI credits needed' notice; never fake output.
+
+## Extension points
+
+- Track other repos: set `repos` or `repo_list_url` in `app/forge_config.py` (any JSON list of owner/name or objects with `upstream`).
+- Change the summary shape: edit the pydantic model in `app/summarize.py`.
+
+## Do
+
+- Use `.env` (git-ignored) locally and repository secrets in Actions.
+
+## Don't
+
+- Ship code that fakes a Grok answer when the key is missing or credits are exhausted; show the 'needs key' / 'xAI credits needed' notice instead.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **live app** (web): `https://blockchains.github.io/grok-release-radar/`
+- **forge.json / PARTS.md** (file): `composition manifest: archetype, capabilities, SDK part + commit, default model`
+- **app/** (file): `app/main.py`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/grokhack-forge](https://github.com/Blockchains/grokhack-forge): the composer that generated it; re-compose for variants
+- [Blockchains/grokhack-index](https://github.com/Blockchains/grokhack-index): where its SDK part and reference snippets come from
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): add blockchain data as tools (chat) or inputs (digest)
+
+
+
+=== Blockchains/grok-tools-chat / AGENTS.md ===
+
+Summary: Browser chat app composed by grokhack-forge: Grok via Vercel AI SDK @ai-sdk/xai with streaming and local tools (calculator, time, live GitHub repo lookup) plus xAI web search; visitors bring their own key, sent only to api.x.ai.
+Manifest: https://raw.githubusercontent.com/Blockchains/grok-tools-chat/main/blocks.json
+
+# AGENTS.md: grok-tools-chat
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Browser chat app composed by grokhack-forge: Grok via Vercel AI SDK @ai-sdk/xai with streaming and local tools (calculator, time, live GitHub repo lookup) plus xAI web search; visitors bring their own key, sent only to api.x.ai.
+
+- Kind: web-app · stability: `reference` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+npm ci
+```
+
+## Build and test
+
+```bash
+npm ci && npm run build && npm test && npm run e2e
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `XAI_API_KEY` | no | live Grok calls; without it CI proves api.x.ai rejects the unauthenticated call |
+
+## Structure
+
+| Path | What |
+|---|---|
+| `src/grok.ts` | `chat()` async generator over streamText, `listModels`, error/credits handling |
+| `src/tools.ts` | `localTools` (AI SDK `tool()` + zod), the extension point |
+| `src/main.ts` | UI |
+| `src/forge.config.ts` | archetype/model/feature flags |
+| `tests/tools.test.ts` | tool tests |
+| `scripts/e2e.ts` | real api.x.ai e2e |
+
+## Conventions
+
+- Generated by grokhack-forge: keep `forge.json` and `PARTS.md` in sync with what the code uses.
+- 403 from api.x.ai → show the 'xAI credits needed' notice; never fake output.
+
+## Extension points
+
+- New tool: add an entry to `localTools` in `src/tools.ts` (`tool({ description, inputSchema: z.object(...), execute })`) and a test in `tests/`.
+
+## Do
+
+- Use `.env` (git-ignored) locally and repository secrets in Actions.
+
+## Don't
+
+- Ship code that fakes a Grok answer when the key is missing or credits are exhausted; show the 'needs key' / 'xAI credits needed' notice instead.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **live app** (web): `https://blockchains.github.io/grok-tools-chat/`
+- **forge.json / PARTS.md** (file): `composition manifest: archetype, capabilities, SDK part + commit, default model`
+- **src/grok.ts** (file): `src/grok.ts`
+- **src/tools.ts** (file): `src/tools.ts`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/grokhack-forge](https://github.com/Blockchains/grokhack-forge): the composer that generated it; re-compose for variants
+- [Blockchains/grokhack-index](https://github.com/Blockchains/grokhack-index): where its SDK part and reference snippets come from
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): add blockchain data as tools (chat) or inputs (digest)
+
+
+
+=== Blockchains/grokhack-forge / AGENTS.md ===
+
+Summary: Composer for Grok apps: turns an app idea into a working repo (archetype `chat`: Vite + Vercel AI SDK @ai-sdk/xai with streaming and tools; archetype `digest`: Python xai-sdk with structured output on a schedule) using parts from grokhack-index, with CI that makes a real api.x.ai request and a GitHub Pages deploy.
+Manifest: https://raw.githubusercontent.com/Blockchains/grokhack-forge/main/blocks.json
+
+# AGENTS.md: grokhack-forge
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Composer for Grok apps: turns an app idea into a working repo (archetype `chat`: Vite + Vercel AI SDK @ai-sdk/xai with streaming and tools; archetype `digest`: Python xai-sdk with structured output on a schedule) using parts from grokhack-index, with CI that makes a real api.x.ai request and a GitHub Pages deploy.
+
+- Kind: cli, github-action, template · stability: `beta` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+python3 --version   # stdlib only
+```
+
+## Build and test
+
+```bash
+python3 -m unittest discover -s tests -v   # runs against the real published index
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `XAI_API_KEY` | no | generated apps' live e2e; without it the e2e checks api.x.ai rejects the unauthenticated call |
+| `XAI_MODEL` | no | override the default model in digest apps |
+| `FORGE_TOKEN` | no | repo secret; lets the Action create repos |
+
+## Structure
+
+| Path | What |
+|---|---|
+| `forge/compose.py` | composer + CLI |
+| `templates/chat/` | Vite + TypeScript chat app (src/grok.ts streaming, src/tools.ts local tools) |
+| `templates/digest/` | Python digest app (app/collect, summarize, render) |
+| `tests/test_compose.py` | tests |
+| `results/` | Action outputs |
+
+## Conventions
+
+- Templates use `__APP_NAME__`-style placeholders filled by compose.py.
+- Keys only via env/secrets; the browser app sends the visitor's key only to api.x.ai.
+- Every generated repo must pass a real api.x.ai e2e (live answer or proven 401/403).
+
+## Extension points
+
+- New tool in chat apps: add a `tool({...})` to `localTools` in `templates/chat/src/tools.ts` with a zod schema and a test.
+- New archetype: `templates/<name>/` + capability rules in compose.py + a CI compose job.
+
+## Do
+
+- Compose without `--create` while iterating.
+
+## Don't
+
+- Ship code that fakes a Grok answer when the key is missing or credits are exhausted; show the 'needs key' / 'xAI credits needed' notice instead.
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **forge/compose.py** (cli): `python3 forge/compose.py --idea "<idea>" --name <app> [--out DIR] [--index DIR|URL] [--create --wait]`
+- **compose app** (github-action): `workflow_dispatch inputs: idea, name, request_id → results/<request_id>.json`
+- **templates/chat, templates/digest** (file): `app templates the composer fills in`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/grokhack-index](https://github.com/Blockchains/grokhack-index): parts source: SDK package versions at indexed fork commits, default model, reference snippets
+- [Blockchains/blockchainlab-mcp](https://github.com/Blockchains/blockchainlab-mcp): give the app's developer agent blockchain tools, or port tools into the app
+- [Blockchains/blockchainlab-sdk](https://github.com/Blockchains/blockchainlab-sdk): typed data calls as Grok tools inside a chat app (Build with Blocks recipe 2)
+- [Blockchains/grok-tools-chat](https://github.com/Blockchains/grok-tools-chat): reference chat output
+- [Blockchains/grok-release-radar](https://github.com/Blockchains/grok-release-radar): reference digest output
+- [Blockchains/awesome-grokhack](https://github.com/Blockchains/awesome-grokhack): the forks behind the index
+
+
+
+=== Blockchains/grokhack-index / AGENTS.md ===
+
+Summary: Nightly index of the Grok/xAI integration surface (endpoints, models, features, env vars, SDK exports, packages, code snippets with commit-pinned URLs) across the forks listed in awesome-grokhack, with a static search UI and an inverted index.
+Manifest: https://raw.githubusercontent.com/Blockchains/grokhack-index/main/blocks.json
+
+# AGENTS.md: grokhack-index
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Nightly index of the Grok/xAI integration surface (endpoints, models, features, env vars, SDK exports, packages, code snippets with commit-pinned URLs) across the forks listed in awesome-grokhack, with a static search UI and an inverted index.
+
+- Kind: index, dataset, cli · stability: `beta` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+python3 --version   # stdlib only
+```
+
+## Build and test
+
+```bash
+python3 indexer/check.py data
+python3 indexer/grokindex.py --repos /tmp/two.json --out /tmp/out --jobs 2 && python3 indexer/check.py /tmp/out   # small end-to-end run
+```
+
+## Structure
+
+| Path | What |
+|---|---|
+| `indexer/grokindex.py` | shallow-clone + scan + write shards/parts/stats |
+| `indexer/search.py` | CLI search |
+| `indexer/check.py` | consistency checks |
+| `indexer/site_data.py` | copies data for docs/ |
+| `data/` | published index |
+| `docs/` | static search page |
+| `repos.json` | last run's repo list |
+
+## Conventions
+
+- A file counts only if it contains an anchor (api.x.ai, XAI_API_KEY, xai-sdk, @ai-sdk/xai, grok-<version> …).
+- Snippets keep their project's licence, shown per part.
+- Clones are deleted right after scanning.
+
+## Extension points
+
+- New feature detector: add a pattern in `indexer/grokindex.py` and a check in `indexer/check.py`.
+
+## Do
+
+- Let the nightly job regenerate `data/`.
+
+## Don't
+
+- Hand-edit `data/` or `docs/data/`.
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **data/parts.json** (http): `composable parts: repo-surface, sdk-exports, code-snippet, package`
+- **data/repos/<owner>__<repo>.json** (file): `one shard per fork`
+- **indexer/search.py** (cli): `python3 indexer/search.py "streaming tool calling typescript" --data data`
+- **search UI** (web): `https://blockchains.github.io/grokhack-index/`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/awesome-grokhack](https://github.com/Blockchains/awesome-grokhack): source repo list
+- [Blockchains/grokhack-forge](https://github.com/Blockchains/grokhack-forge): consumes parts to compose apps
+- [Blockchains/grok-tools-chat](https://github.com/Blockchains/grok-tools-chat): parts recorded in its PARTS.md
+
+
+
+=== Blockchains/grokhack-submissions / AGENTS.md ===
+
+Summary: Template repository for The Grok Hack entries: submission.json validated against submission.schema.json, a Node 22 streaming-chat starter for the xAI API, judging notes, and CI that validates, builds/tests, runs a real api.x.ai e2e and scans for secrets.
+Manifest: https://raw.githubusercontent.com/Blockchains/grokhack-submissions/main/blocks.json
+
+# AGENTS.md: grokhack-submissions
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Template repository for The Grok Hack entries: submission.json validated against submission.schema.json, a Node 22 streaming-chat starter for the xAI API, judging notes, and CI that validates, builds/tests, runs a real api.x.ai e2e and scans for secrets.
+
+- Kind: template · stability: `stable` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+cd starter && npm ci
+```
+
+## Build and test
+
+```bash
+python3 scripts/validate_submission.py submission.json
+cd starter && npm test && npm run e2e
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Environment
+
+| Variable | Required | Purpose |
+|---|---|---|
+| `XAI_API_KEY` | no | starter e2e live answer |
+
+## Structure
+
+| Path | What |
+|---|---|
+| `submission.json, submission.schema.json` | entry metadata + schema |
+| `scripts/validate_submission.py` | validator |
+| `starter/` | Node streaming chat starter (grok.mjs, index.mjs, tests, e2e) |
+| `docs/JUDGING.md` | judging criteria |
+| `.github/ISSUE_TEMPLATE/` | issue forms |
+
+## Conventions
+
+- Entrants replace README.md; keep the section list.
+- Any OSI licence, declared in submission.json and LICENSE.
+
+## Extension points
+
+- Replace `starter/` with your app; CI auto-detects Node/Python at the repo root.
+
+## Do
+
+- Fill every required submission.json field.
+
+## Don't
+
+- Ship code that fakes a Grok answer when the key is missing or credits are exhausted; show the 'needs key' / 'xAI credits needed' notice instead.
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **Use this template** (git): `GitHub template`
+- **submission.schema.json** (file): `required: project, tagline, team, track, repo, grok, license, status`
+- **starter/** (file): `cd starter && npm ci && npm test && npm run e2e`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/grokhack-forge](https://github.com/Blockchains/grokhack-forge): compose the app first, then submit with this template
+- [Blockchains/hackathon-entry-template](https://github.com/Blockchains/hackathon-entry-template): generic (non-Grok) hackathon template
+- [Blockchains/hackathons](https://github.com/Blockchains/hackathons): tracker issues
+
+
+
+=== Blockchains/hackathon-entry-template / AGENTS.md ===
+
+Summary: Generic hackathon entry template: README skeleton (problem, solution, architecture, what was built), docs/SUBMISSION.md checklist, .env.example, and CI that scans for secrets and auto-detects Node, Python or Foundry to build and test.
+Manifest: https://raw.githubusercontent.com/Blockchains/hackathon-entry-template/main/blocks.json
+
+# AGENTS.md: hackathon-entry-template
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Generic hackathon entry template: README skeleton (problem, solution, architecture, what was built), docs/SUBMISSION.md checklist, .env.example, and CI that scans for secrets and auto-detects Node, Python or Foundry to build and test.
+
+- Kind: template · stability: `stable` · licence: MIT
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+cp .env.example .env
+```
+
+## Build and test
+
+```bash
+# CI auto-detects: npm test / pytest / forge build && forge test
+```
+
+## Structure
+
+| Path | What |
+|---|---|
+| `README.md` | write-up skeleton with <placeholders> |
+| `docs/SUBMISSION.md` | submission checklist |
+| `src/` | your code |
+| `.github/workflows/ci.yml` | secret scan + auto build/test |
+
+## Conventions
+
+- Replace every `<placeholder>`; CI warns if `<Project name>` remains.
+
+## Extension points
+
+- Add your stack's manifest at the repo root so CI picks it up.
+
+## Do
+
+- List what was built during the hackathon vs pre-existing.
+
+## Don't
+
+- Invent data, mock network responses in shipped code, or hard-code values that should come from the live source; every repo here is 'no mocks, real data'.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **Use this template** (git): `GitHub template`
+- **.github/workflows/ci.yml** (file): `gitleaks + auto-detected build/test (package.json, requirements.txt/pyproject.toml, foundry.toml)`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/hackathons](https://github.com/Blockchains/hackathons): link the tracker issue in the README header
+- [Blockchains/blockchainlab-starters](https://github.com/Blockchains/blockchainlab-starters): start the code from a starter
+- [Blockchains/grokhack-submissions](https://github.com/Blockchains/grokhack-submissions): Grok Hack specific template
+
+
+
+=== Blockchains/hackathons / AGENTS.md ===
+
+Summary: Blockchain Lab hackathon tracker: one GitHub issue per open blockchain/web3 hackathon (issue forms for hackathons and submissions) plus a README table of verified upcoming events.
+Manifest: https://raw.githubusercontent.com/Blockchains/hackathons/main/blocks.json
+
+# AGENTS.md: hackathons
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Blockchain Lab hackathon tracker: one GitHub issue per open blockchain/web3 hackathon (issue forms for hackathons and submissions) plus a README table of verified upcoming events.
+
+- Kind: docs, dataset · stability: `stable` · licence: NOASSERTION
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+gh auth status
+```
+
+## Build and test
+
+```bash
+# no build; docs + issue forms only
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `README.md` | event table |
+| `.github/ISSUE_TEMPLATE/` | hackathon + submission forms |
+
+## Conventions
+
+- Only events verified on the organiser's own page.
+
+## Extension points
+
+- New field: edit the issue form YAML.
+
+## Do
+
+- Cite the organiser URL.
+
+## Don't
+
+- List unverified events.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **issues API** (http): `gh issue list -R Blockchains/hackathons`
+- **.github/ISSUE_TEMPLATE/** (file): `.github/ISSUE_TEMPLATE/hackathon.yml`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/hackathon-entry-template](https://github.com/Blockchains/hackathon-entry-template): link the tracker issue from your entry
+- [Blockchains/blockchainlab-feeds](https://github.com/Blockchains/blockchainlab-feeds): automated hackathon feed
+- [Blockchains/blockchainlab-api](https://github.com/Blockchains/blockchainlab-api): `hackathons` dataset
+
+
+
+=== Blockchains/sites-monitor / AGENTS.md ===
+
+Summary: Uptime, TLS, SEO, broken-link, Lighthouse and security-header monitoring for the custom-domain sites, with a public status page, JSON results on gh-pages and one auto-managed GitHub issue per failing domain + check.
+Manifest: https://raw.githubusercontent.com/Blockchains/sites-monitor/main/blocks.json
+
+# AGENTS.md: sites-monitor
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Uptime, TLS, SEO, broken-link, Lighthouse and security-header monitoring for the custom-domain sites, with a public status page, JSON results on gh-pages and one auto-managed GitHub issue per failing domain + check.
+
+- Kind: automation, dataset, web-app · stability: `stable` · licence: NOASSERTION
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+python3 --version
+```
+
+## Build and test
+
+```bash
+python3 scripts/uptime.py --out /tmp/sm
+python3 scripts/security.py --out /tmp/sm
+python3 scripts/seo.py --out /tmp/sm
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `domains.json` | monitored domains |
+| `scripts/` | checks, issue manager, publish.sh |
+| `site/` | status page |
+| `.github/workflows/` | uptime, daily, weekly-security |
+
+## Conventions
+
+- Locked domains only raise uptime/TLS/security issues.
+- Traffic data is aggregate only.
+
+## Extension points
+
+- New check: `scripts/<check>.py --out DIR` writing findings-<check>.json, wired into a workflow and `issues.py`.
+
+## Do
+
+- Use DRY_RUN=1 when testing the issue manager.
+
+## Don't
+
+- Open issues from local runs.
+- Edit the private site mirrors from here.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **data/uptime/latest.json** (http): `also seo/, links/, lighthouse/, security/ latest.json and traffic.json`
+- **scripts/uptime.py** (cli): `python3 scripts/uptime.py --out DIR`
+- **domains.json** (file): `domains.json`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchains.github.io](https://github.com/Blockchains/blockchains.github.io): hub links the status page
+- [Blockchains/.github](https://github.com/Blockchains/.github): STATUS.md audit
+
+
+
+=== Blockchains/whitepapers / AGENTS.md ===
+
+Summary: Index of the 79 historic whitepapers in the Blockchain Lab PDF library (Bitcoin, Ethereum, Ripple, Stellar, Corda…) as README table, index.json and index.csv; links point at the original files on blockchainlab.com, refreshed weekly.
+Manifest: https://raw.githubusercontent.com/Blockchains/whitepapers/main/blocks.json
+
+# AGENTS.md: whitepapers
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Index of the 79 historic whitepapers in the Blockchain Lab PDF library (Bitcoin, Ethereum, Ripple, Stellar, Corda…) as README table, index.json and index.csv; links point at the original files on blockchainlab.com, refreshed weekly.
+
+- Kind: dataset, docs · stability: `stable` · licence: NOASSERTION
+- Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Setup
+
+```bash
+python3 --version
+```
+
+## Build and test
+
+```bash
+python3 scripts/build_index.py   # rebuild from blockchainlab.com sitemaps + /pdf page
+```
+
+Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
+
+## Structure
+
+| Path | What |
+|---|---|
+| `index.json, index.csv` | the index |
+| `README.md` | table |
+| `scripts/build_index.py` | generator |
+
+## Conventions
+
+- Year from the corpus record, else filename (marked †), else blank.
+
+## Extension points
+
+- Improve metadata extraction in `scripts/build_index.py`.
+
+## Do
+
+- Link to originals.
+
+## Don't
+
+- Commit PDF files.
+- Commit secrets, keys or `.env` files. Run `gitleaks` before pushing; CI and the org policy reject leaks.
+
+## Using it from another project
+
+- **index.json** (file): `https://raw.githubusercontent.com/Blockchains/whitepapers/main/index.json`
+- **index.csv** (file): `index.csv`
+
+See the README section [Use as a building block](README.md#use-as-a-building-block) for a copy-paste example.
+
+## Related blocks
+
+- [Blockchains/blockchainlab-api](https://github.com/Blockchains/blockchainlab-api): the `whitepapers` dataset covers the larger research corpus (600+)
+- [Blockchains/blockchainlab-mcp](https://github.com/Blockchains/blockchainlab-mcp): `search_whitepapers` tool
+

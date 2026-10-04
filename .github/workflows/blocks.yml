@@ -1,0 +1,21 @@
+name: building-blocks catalogue
+# Rebuilds /blocks.json, /llms.txt and /llms-full.txt from every live repo's blocks.json + AGENTS.md (scripts/blocks.py).
+on:
+  schedule: [{ cron: "23 4 * * 1" }]
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [blocks/hub.json, AGENTS.md, scripts/blocks.py]
+permissions: { contents: write }
+concurrency: { group: hub-data, cancel-in-progress: false }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python scripts/blocks.py
+        env: { GH_TOKEN: "${{ github.token }}" }
+      - run: 'scripts/commit.sh "data: rebuild building-blocks catalogue (blocks.json, llms.txt)"'
