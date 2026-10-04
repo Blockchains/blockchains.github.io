@@ -1,0 +1,22 @@
+name: weekly security scan + AI reports
+on:
+  schedule: [{ cron: "0 3 * * 1" }]
+  workflow_dispatch:
+permissions: { contents: write }
+concurrency: { group: hub-data, cancel-in-progress: false }
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - run: pip install -q slither-analyzer==0.11.6 solc-select
+      - name: Slither quick-scan of popular contracts
+        run: python scripts/job_slither.py
+      - name: AI weekly (Grok) — protocol briefs, contract explainers, audit checklists, whitepaper summaries
+        run: python scripts/job_ai.py protocols contracts audits whitepapers
+        env: { XAI_API_KEY: "${{ secrets.XAI_API_KEY }}" }
+      - run: scripts/commit.sh "data: weekly Slither scan + AI reports"

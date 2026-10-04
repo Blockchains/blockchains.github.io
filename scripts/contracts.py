@@ -1,0 +1,20 @@
+"""Popular, Sourcify-verified Ethereum mainnet contracts used by the security quick-scan and AI explainer/audit jobs."""
+TOP_CONTRACTS = [
+    ("WETH9", "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "Wrapped Ether"),
+    ("Tether USDT", "0xdAC17F958D2ee523a2206206994597C13D831ec7", "Stablecoin"),
+    ("USDC FiatTokenV2_2 (implementation)", "0x43506849D7C04F9138D1A2050bbF3A0c054402dd", "Stablecoin"),
+    ("DAI", "0x6B175474E89094C44Da98b954EedeAC495271d0F", "Stablecoin"),
+    ("Uniswap V2 Factory", "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f", "DEX"),
+    ("Uniswap V2 Router02", "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D", "DEX"),
+    ("Uniswap V3 SwapRouter", "0xE592427A0AEce92De3Edee1F18E0157C05861564", "DEX"),
+    ("Permit2", "0x000000000022D473030F116dDEE9F6B43aC78BA3", "Approvals"),
+    ("UNI token", "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984", "Governance token"),
+    ("LINK token", "0x514910771AF9Ca656af840dff83E8264EcF986CA", "Token"),
+    ("Safe v1.3.0 singleton", "0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552", "Smart account"),
+    ("Multicall3", "0xcA11bde05977b3631167028862bE2a173976CA11", "Utility"),
+    ("ENS Registry", "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e", "Naming"),
+    ("Seaport 1.5", "0x00000000000000ADc04C56Bf30aC9d3c0aAF14dC", "NFT marketplace"),
+    ("Lido stETH (implementation)", "0x17144556fd3424EDC8Fc8A4C940B2D04936d17eb", "Liquid staking"),
+    ("Aave V3 Pool (implementation)", "0x5FAab9E1adbddaD0a08734BE8a52185Fd6558E14", "Lending"),
+    ("CryptoPunks Market", "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB", "NFT"),
+]

@@ -1,0 +1,25 @@
+"""EVM chains and public RPC endpoints used by the monitors (all keyless, public)."""
+CHAINS = [
+    # name, chain_id, symbol, explorer, [rpcs]
+    ("Ethereum", 1, "ETH", "https://etherscan.io", ["https://ethereum-rpc.publicnode.com", "https://eth.drpc.org", "https://1rpc.io/eth", "https://rpc.mevblocker.io", "https://eth.merkle.io"]),
+    ("Base", 8453, "ETH", "https://basescan.org", ["https://base-rpc.publicnode.com", "https://mainnet.base.org", "https://base.drpc.org", "https://1rpc.io/base"]),
+    ("Arbitrum One", 42161, "ETH", "https://arbiscan.io", ["https://arbitrum-one-rpc.publicnode.com", "https://arb1.arbitrum.io/rpc", "https://arbitrum.drpc.org", "https://1rpc.io/arb"]),
+    ("OP Mainnet", 10, "ETH", "https://optimistic.etherscan.io", ["https://optimism-rpc.publicnode.com", "https://mainnet.optimism.io", "https://optimism.drpc.org", "https://1rpc.io/op"]),
+    ("Polygon PoS", 137, "POL", "https://polygonscan.com", ["https://polygon-bor-rpc.publicnode.com", "https://polygon.drpc.org", "https://1rpc.io/matic"]),
+    ("BNB Smart Chain", 56, "BNB", "https://bscscan.com", ["https://bsc-rpc.publicnode.com", "https://bsc-dataseed.bnbchain.org", "https://bsc.drpc.org", "https://1rpc.io/bnb"]),
+    ("Avalanche C-Chain", 43114, "AVAX", "https://snowtrace.io", ["https://avalanche-c-chain-rpc.publicnode.com", "https://api.avax.network/ext/bc/C/rpc", "https://1rpc.io/avax/c"]),
+    ("Gnosis", 100, "xDAI", "https://gnosisscan.io", ["https://gnosis-rpc.publicnode.com", "https://rpc.gnosischain.com", "https://gnosis.drpc.org"]),
+    ("Linea", 59144, "ETH", "https://lineascan.build", ["https://linea-rpc.publicnode.com", "https://rpc.linea.build", "https://linea.drpc.org"]),
+    ("Scroll", 534352, "ETH", "https://scrollscan.com", ["https://scroll-rpc.publicnode.com", "https://rpc.scroll.io", "https://scroll.drpc.org"]),
+    ("zkSync Era", 324, "ETH", "https://explorer.zksync.io", ["https://mainnet.era.zksync.io", "https://zksync.drpc.org"]),
+    ("Mantle", 5000, "MNT", "https://mantlescan.xyz", ["https://mantle-rpc.publicnode.com", "https://rpc.mantle.xyz", "https://mantle.drpc.org"]),
+    ("Blast", 81457, "ETH", "https://blastscan.io", ["https://blast-rpc.publicnode.com", "https://rpc.blast.io", "https://blast.drpc.org"]),
+    ("Celo", 42220, "CELO", "https://celoscan.io", ["https://celo-rpc.publicnode.com", "https://forno.celo.org"]),
+    ("Fantom/Sonic", 146, "S", "https://sonicscan.org", ["https://sonic-rpc.publicnode.com", "https://rpc.soniclabs.com", "https://sonic.drpc.org"]),
+    ("Unichain", 130, "ETH", "https://uniscan.xyz", ["https://unichain-rpc.publicnode.com", "https://mainnet.unichain.org", "https://unichain.drpc.org"]),
+    ("Taiko", 167000, "ETH", "https://taikoscan.io", ["https://taiko-rpc.publicnode.com", "https://rpc.mainnet.taiko.xyz", "https://taiko.drpc.org"]),
+    ("opBNB", 204, "BNB", "https://opbnb.bscscan.com", ["https://opbnb-rpc.publicnode.com", "https://opbnb-mainnet-rpc.bnbchain.org", "https://opbnb.drpc.org"]),
+    ("Ink", 57073, "ETH", "https://explorer.inkonchain.com", ["https://rpc-gel.inkonchain.com", "https://ink.drpc.org"]),
+    ("Cronos", 25, "CRO", "https://cronoscan.com", ["https://cronos-evm-rpc.publicnode.com", "https://evm.cronos.org", "https://cronos.drpc.org"]),
+    ("Berachain", 80094, "BERA", "https://berascan.com", ["https://berachain-rpc.publicnode.com", "https://rpc.berachain.com", "https://berachain.drpc.org"]),
+]

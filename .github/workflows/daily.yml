@@ -1,0 +1,24 @@
+name: daily data + AI
+on:
+  schedule: [{ cron: "30 4 * * *" }]
+  workflow_dispatch:
+permissions: { contents: write }
+concurrency: { group: hub-data, cancel-in-progress: false }
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: data jobs (incidents, events+ICS, jobs, grants, glossary, protocols, depeg, tokens)
+        run: python scripts/job_daily.py
+      - name: AI jobs (Grok) — brief, incidents, ideas, digest
+        run: python scripts/job_ai.py brief incidents ideas digest
+        env: { XAI_API_KEY: "${{ secrets.XAI_API_KEY }}" }
+      - run: python scripts/catalog.py && python scripts/gen_site.py
+      - name: health check
+        run: python scripts/job_health.py
+        env: { HEALTH_LOCAL: "1", GH_TOKEN: "${{ github.token }}" }
+      - run: scripts/commit.sh "data: daily refresh + AI briefs"

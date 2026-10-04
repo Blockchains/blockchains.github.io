@@ -1,0 +1,158 @@
+[
+ {
+  "slug": "gas",
+  "name": "Gas",
+  "title": "Multi-chain gas & fee estimator (Ethereum, Base, Arbitrum, OP, Polygon, BNB, Avalanche, Bitcoin, Solana)",
+  "description": "Live gas prices and transaction cost in USD across EVM chains, Bitcoin sat/vB and Solana priority fees, read directly from public RPCs."
+ },
+ {
+  "slug": "units",
+  "name": "Units",
+  "title": "Wei / Gwei / Ether, Sats / BTC, Lamports / SOL unit converter",
+  "description": "Exact big-number conversion between wei, gwei, ether, satoshis, BTC, lamports and SOL \u2014 no floating point errors."
+ },
+ {
+  "slug": "abi",
+  "name": "ABI",
+  "title": "ABI encoder / decoder & function selector lookup",
+  "description": "Encode Solidity function calls, decode calldata, compute 4-byte selectors and event topics, and look up unknown selectors in the openchain / 4byte signature databases."
+ },
+ {
+  "slug": "address",
+  "name": "Address/ENS",
+  "title": "Ethereum address checksum validator, ENS resolver & contract inspector",
+  "description": "Validate EIP-55 checksums, resolve ENS names (forward and reverse), and inspect any address on Ethereum, Base, Arbitrum, OP, Polygon, BNB or Avalanche: balance, nonce, contract code, proxy implementation, EIP-7702 delegation and ERC-20 metadata."
+ },
+ {
+  "slug": "tx",
+  "name": "Tx decoder",
+  "title": "Transaction decoder for Ethereum, Base, Arbitrum, Polygon, OP",
+  "description": "Paste a transaction hash to decode the function call, arguments, event logs, status and fees on Ethereum, Base, Arbitrum, Polygon, OP Mainnet, BNB Chain and Avalanche via public RPC."
+ },
+ {
+  "slug": "hash",
+  "name": "Hash/Merkle",
+  "title": "Keccak-256, SHA-256 hasher & OpenZeppelin Merkle tree builder",
+  "description": "Hash text or hex with keccak256, sha256 and ripemd160, and build OpenZeppelin-compatible Merkle trees (StandardMerkleTree / SimpleMerkleTree) with root and proofs for airdrops and allowlists."
+ },
+ {
+  "slug": "storage",
+  "name": "Storage slots",
+  "title": "Solidity storage slot calculator (mappings, arrays, ERC-7201, EIP-1967)",
+  "description": "Compute Solidity storage slots for mappings, nested mappings, dynamic arrays, ERC-7201 namespaces and EIP-1967 proxy slots \u2014 then read the live value from any EVM chain."
+ },
+ {
+  "slug": "reference",
+  "name": "EIP/ERC/BIP",
+  "title": "EIP / ERC / BIP quick reference \u2014 searchable index",
+  "description": "Search every Ethereum EIP and ERC and every Bitcoin BIP by number, title or status. Rebuilt nightly from ethereum/EIPs, ethereum/ERCs and bitcoin/bips."
+ },
+ {
+  "slug": "chains",
+  "name": "Chainlist",
+  "title": "Chainlist \u2014 EVM chain IDs, RPC endpoints & explorers, add to wallet",
+  "description": "Search 2,700+ EVM networks by name or chain ID, test public RPC latency live from your browser, and add a network to MetaMask/any EIP-3085 wallet."
+ },
+ {
+  "slug": "tokens",
+  "name": "Tokens",
+  "title": "Token list lookup \u2014 find ERC-20 addresses by symbol across chains",
+  "description": "Search the Uniswap default token list by symbol, name or address across Ethereum, Base, Arbitrum, OP, Polygon, BNB and Avalanche, and verify any token's on-chain name, symbol, decimals and supply."
+ },
+ {
+  "slug": "safe",
+  "name": "Safe multisig",
+  "title": "Safe (Gnosis Safe) multisig tx builder & decoder \u2014 safeTxHash, MultiSend",
+  "description": "Build a Safe transaction and compute its EIP-712 safeTxHash locally, cross-check against the Safe contract on-chain, read owners/threshold/nonce, and decode execTransaction or MultiSend batches."
+ },
+ {
+  "slug": "eip712",
+  "name": "EIP-712",
+  "title": "EIP-712 typed data signer & verifier, EIP-191, ERC-1271",
+  "description": "Hash EIP-712 typed data (digest, domain separator, struct hash), sign with a throwaway key or your wallet, recover the signer, verify personal_sign messages and check ERC-1271 smart-account signatures on-chain."
+ },
+ {
+  "slug": "calldiff",
+  "name": "Calldata diff",
+  "title": "Calldata diff \u2014 compare two transactions' calldata field by field",
+  "description": "Decode two calldata blobs (or two tx hashes) with openchain/4byte signatures and highlight every argument and 32-byte word that differs."
+ },
+ {
+  "slug": "verify",
+  "name": "Verification",
+  "title": "Contract verification lookup \u2014 Sourcify & Blockscout",
+  "description": "Check whether a smart contract's source code is verified on Sourcify (full/partial match) and Blockscout, with compiler version, licence, proxy type and implementation addresses."
+ },
+ {
+  "slug": "gas-history",
+  "name": "Gas history",
+  "title": "Gas price history charts \u2014 last 1,024 blocks on 7 EVM chains",
+  "description": "Chart base fee, median priority tip and block fullness over the last 1,024 blocks for Ethereum, Base, Arbitrum, OP, Polygon, BNB Chain and Avalanche, with min/median/p75/max stats."
+ },
+ {
+  "slug": "bridge",
+  "name": "Bridge fees",
+  "title": "Bridge fee comparison \u2014 Across vs LI.FI vs Relay live quotes",
+  "description": "Compare live quotes for bridging USDC or ETH between Ethereum, Base, Arbitrum, OP and Polygon: amount received, fees and estimated time from Across, LI.FI and Relay."
+ },
+ {
+  "slug": "approvals",
+  "name": "Approvals",
+  "title": "Token approval checker & revoke links",
+  "description": "Check which popular spenders (Permit2, Uniswap, 1inch, 0x, CoW, Balancer, OpenSea, Aave\u2026) can move an address's ERC-20 tokens, flag unlimited approvals, and get one-click revoke links and approve(spender, 0) calldata."
+ },
+ {
+  "slug": "ens-bulk",
+  "name": "ENS bulk",
+  "title": "ENS bulk resolver \u2014 resolve many names & reverse-lookup addresses",
+  "description": "Resolve a list of ENS names to addresses (with avatar, url, Twitter, GitHub records) and reverse-resolve addresses to primary names, verifying forward/reverse match. Export as CSV."
+ },
+ {
+  "slug": "solana-tx",
+  "name": "Solana tx",
+  "title": "Solana transaction decoder \u2014 instructions, balance & token changes",
+  "description": "Decode any Solana transaction signature: status, fee, compute units, parsed instructions and inner instructions with program names (Jupiter, Raydium, Orca, Meteora, SPL Token\u2026), SOL and token balance changes, and logs."
+ },
+ {
+  "slug": "psbt",
+  "name": "Bitcoin PSBT",
+  "title": "Bitcoin PSBT & raw transaction decoder",
+  "description": "Decode a Bitcoin PSBT (BIP-174, base64 or hex) or raw transaction: inputs, outputs, addresses, script types, fee and fee rate, signatures present, BIP-32 derivation paths. Runs offline in your browser."
+ },
+ {
+  "slug": "labels",
+  "name": "Address labels",
+  "title": "Address labels \u2014 who is this address? Blockscout tags, ENS, OFAC check",
+  "description": "Look up public labels for an EVM address: Blockscout contract name and public tags, token info, ENS primary name, Uniswap token-list match, well-known spender names, and an OFAC SDN sanctions check."
+ },
+ {
+  "slug": "vanity",
+  "name": "Vanity/CREATE2",
+  "title": "Vanity address difficulty & time estimator + CREATE2 calculator",
+  "description": "Estimate how many attempts and how long it takes to find an Ethereum vanity address prefix (case-insensitive or EIP-55 checksum), benchmarked live on your device, and compute CREATE2 deployment addresses."
+ },
+ {
+  "slug": "price-impact",
+  "name": "Price impact",
+  "title": "Uniswap v3 price impact calculator \u2014 live on-chain quotes",
+  "description": "Quote a Uniswap v3 swap on-chain with QuoterV2 and see amount out, mid price, execution price, price impact, price after the trade, ticks crossed and gas estimate \u2014 Ethereum, Base, Arbitrum, OP, Polygon."
+ },
+ {
+  "slug": "mev",
+  "name": "MEV sandwich",
+  "title": "MEV sandwich checker \u2014 was my swap sandwiched?",
+  "description": "Paste an Ethereum/Base/Arbitrum/OP/Polygon transaction hash to check whether it was sandwiched: finds a front-run swap on the same pool in the same direction and a back-run reversing it from the same EOA or bot contract."
+ },
+ {
+  "slug": "stablecoins",
+  "name": "Stablecoins",
+  "title": "Stablecoin peg & supply monitor \u2014 USDT, USDC, DAI, USDe\u2026",
+  "description": "Live stablecoin table: price vs peg, circulating supply, 7-day supply change, peg mechanism and chain count for 400+ stablecoins from DefiLlama."
+ },
+ {
+  "slug": "rpc-health",
+  "name": "RPC health",
+  "title": "Public RPC health checker \u2014 latency & block lag for free endpoints",
+  "description": "Test free public RPC endpoints for Ethereum, Base, Arbitrum, OP, Polygon, BNB Chain and Avalanche from your browser: reachability, latency, chain ID and how many blocks behind the best endpoint each is. Plus the nightly server-side probe."
+ }
+]

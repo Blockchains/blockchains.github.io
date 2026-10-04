@@ -1,0 +1,4570 @@
+{
+ "service": "incidents",
+ "description": "Chain incident feed (hacks & exploits)",
+ "generated_at": "2026-10-04T15:11:42Z",
+ "source": "DefiLlama hacks database",
+ "source_url": "https://defillama.com/hacks",
+ "built_by": "Blockchain Lab — https://blockchainlab.com",
+ "count": 300,
+ "total_all_time_usd": 21065227139.92813,
+ "ytd_usd": 2242313290.928132,
+ "incidents": [
+  {
+   "date": "2026-10-01",
+   "name": "FlashLoopAdapter",
+   "amount_usd": 305000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-10-01",
+   "name": "NEAR Intents",
+   "amount_usd": 3800000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Bridge Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-30",
+   "name": "SKYDAO",
+   "amount_usd": 183482.88,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Swap Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-27",
+   "name": "Fake GIWA Bridge",
+   "amount_usd": 2080000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Social Engineering",
+   "technique": "Impersonation Scam",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-24",
+   "name": "Duelbits",
+   "amount_usd": 7000000,
+   "chains": [
+    "Ethereum",
+    "BSC",
+    "Bitcoin",
+    "Tron"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Hot Wallet Key Compromised",
+   "target_type": "Gambling Platform",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-09-24",
+   "name": "Bitget",
+   "amount_usd": 387000000,
+   "chains": [
+    "Ethereum",
+    "XRP",
+    "Tron",
+    "Zcash"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Hot Wallet Key Compromised",
+   "target_type": "CEX",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-09-24",
+   "name": "Limit Break Payment Processor",
+   "amount_usd": 1800000,
+   "chains": [
+    "Ethereum",
+    "ApeChain",
+    "Polygon",
+    "Base"
+   ],
+   "classification": "Access Control",
+   "technique": "Token Approval Abuse",
+   "target_type": "NFTfi",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-24",
+   "name": "Payy Network",
+   "amount_usd": 1828589.378132,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Bridge Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-23",
+   "name": "Meter",
+   "amount_usd": null,
+   "chains": [
+    "Meter",
+    "BSC",
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Go"
+  },
+  {
+   "date": "2026-09-22",
+   "name": "Drop",
+   "amount_usd": 4400000,
+   "chains": [
+    "Neutron"
+   ],
+   "classification": "Governance",
+   "technique": "Malicious Proposal",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-09-22",
+   "name": "Astroport",
+   "amount_usd": 4900000,
+   "chains": [
+    "Neutron"
+   ],
+   "classification": "Governance",
+   "technique": "Malicious Proposal",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-09-21",
+   "name": "The Internet Token",
+   "amount_usd": 16380,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Access Control",
+   "technique": "Arbitrary External Call",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-21",
+   "name": "DoinGud",
+   "amount_usd": 35486,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Swap Logic Flaw",
+   "target_type": "NFTfi",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-19",
+   "name": "Fetch.ai",
+   "amount_usd": 1530000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-19",
+   "name": "NuNet",
+   "amount_usd": 462730,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-19",
+   "name": "MultiversX",
+   "amount_usd": 0,
+   "chains": [
+    "MultiversX"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Go"
+  },
+  {
+   "date": "2026-09-17",
+   "name": "Nostra Money Market",
+   "amount_usd": 3500000,
+   "chains": [
+    "Starknet"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Cairo"
+  },
+  {
+   "date": "2026-09-16",
+   "name": "Flamincome",
+   "amount_usd": 595000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-16",
+   "name": "Startale",
+   "amount_usd": 2876,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-16",
+   "name": "Nimiq",
+   "amount_usd": 50400,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Input Validation",
+   "technique": "Signature Verification Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-15",
+   "name": "Bonfire",
+   "amount_usd": 47400,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-12",
+   "name": "Chainflip AMM",
+   "amount_usd": 736442.17,
+   "chains": [
+    "Tron"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Bridge Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-09-11",
+   "name": "ether.fi Liquid",
+   "amount_usd": 43260,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Arbitrary External Call",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-10",
+   "name": "Dominion",
+   "amount_usd": null,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-09-10",
+   "name": "Symbiosis",
+   "amount_usd": 336000,
+   "chains": [
+    "BSC",
+    "Ethereum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Unbacked Cross-Chain Mint",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-09",
+   "name": "Nomic",
+   "amount_usd": 3150000,
+   "chains": [
+    "Nomic"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Unbacked Cross-Chain Mint",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-09-09",
+   "name": "Zentra Finance",
+   "amount_usd": 140030,
+   "chains": [
+    "Citrea"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Rounding Error",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-09",
+   "name": "BeatXswap",
+   "amount_usd": 77512,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-08",
+   "name": "WealthManagementV2",
+   "amount_usd": 26414,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-07",
+   "name": "Cozy V2",
+   "amount_usd": 163326,
+   "chains": [
+    "Optimism"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-06",
+   "name": "Liquid Network",
+   "amount_usd": 320000000,
+   "chains": [
+    "Liquid"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Unbacked Cross-Chain Mint",
+   "target_type": "Chain",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "C++"
+  },
+  {
+   "date": "2026-09-05",
+   "name": "Secured Finance Lending",
+   "amount_usd": 104000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-05",
+   "name": "Dream Health Chain",
+   "amount_usd": 71800,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Reward Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-05",
+   "name": "Reddio RedSonic",
+   "amount_usd": 22800,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-04",
+   "name": "Notional V2",
+   "amount_usd": 1727782,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-31",
+   "name": "Aquifer",
+   "amount_usd": 2469729,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Access Control",
+   "technique": "Arbitrary External Call",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-08-31",
+   "name": "Ankr",
+   "amount_usd": 410000,
+   "chains": [
+    "Flow"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Unbacked Mint",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-31",
+   "name": "Radix",
+   "amount_usd": 1249946,
+   "chains": [
+    "Radix"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-08-31",
+   "name": "Float Protocol",
+   "amount_usd": 28000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-30",
+   "name": "Weft V2",
+   "amount_usd": 47200,
+   "chains": [
+    "Radix"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Scrypto"
+  },
+  {
+   "date": "2026-08-30",
+   "name": "Balancer V1",
+   "amount_usd": 234000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Rounding Error",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-30",
+   "name": "Tectonic",
+   "amount_usd": 124470000,
+   "chains": [
+    "Cronos"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Donation Attack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-29",
+   "name": "Full Sail",
+   "amount_usd": null,
+   "chains": [
+    "Sui"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Oracle Misconfiguration",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Move"
+  },
+  {
+   "date": "2026-08-29",
+   "name": "Permapod",
+   "amount_usd": null,
+   "chains": [
+    "ZIGChain"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-08-28",
+   "name": "Ajna V2",
+   "amount_usd": 775400,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Liquidation Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-28",
+   "name": "Virtue",
+   "amount_usd": 894500,
+   "chains": [
+    "Iota"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Oracle Misconfiguration",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Move"
+  },
+  {
+   "date": "2026-08-28",
+   "name": "Avici",
+   "amount_usd": 500859,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "Crypto Card",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-08-28",
+   "name": "Fogo Foundation",
+   "amount_usd": 3000000,
+   "chains": [
+    "Fogo"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "Foundation",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-08-27",
+   "name": "Moonwell Lending",
+   "amount_usd": 8700000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-27",
+   "name": "CCC",
+   "amount_usd": 117000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Swap Logic Flaw",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-25",
+   "name": "CometDEX",
+   "amount_usd": 717000,
+   "chains": [
+    "Stellar"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-08-25",
+   "name": "FH Token",
+   "amount_usd": 20000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Swap Logic Flaw",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-25",
+   "name": "Enjin",
+   "amount_usd": 162000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Ownership Takeover",
+   "target_type": "NFTfi",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-24",
+   "name": "PacaSwap DEX",
+   "amount_usd": 90750,
+   "chains": [
+    "Constellation"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": 90750,
+   "source": "",
+   "language": "Scala"
+  },
+  {
+   "date": "2026-08-24",
+   "name": "Nesa",
+   "amount_usd": 50000000,
+   "chains": [
+    "Nesa"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Go"
+  },
+  {
+   "date": "2026-08-23",
+   "name": "TermFinance Vaults",
+   "amount_usd": 8500000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Governance",
+   "technique": "Malicious Proposal",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-23",
+   "name": "warp.green",
+   "amount_usd": 93000,
+   "chains": [
+    "Chia",
+    "Ethereum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Bridge Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Chialisp"
+  },
+  {
+   "date": "2026-08-23",
+   "name": "Arrakis V1",
+   "amount_usd": 7100,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-23",
+   "name": "Surf Lending",
+   "amount_usd": 0,
+   "chains": [
+    "Cardano"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Aiken"
+  },
+  {
+   "date": "2026-08-22",
+   "name": "TAC",
+   "amount_usd": 7500000,
+   "chains": [
+    "TAC"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Go"
+  },
+  {
+   "date": "2026-08-22",
+   "name": "The Sandbox",
+   "amount_usd": 675000,
+   "chains": [
+    "Base",
+    "BSC",
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-22",
+   "name": "KiiChain",
+   "amount_usd": 9700000,
+   "chains": [
+    "KiiChain"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Go"
+  },
+  {
+   "date": "2026-08-21",
+   "name": "MANTRA Chain",
+   "amount_usd": 0,
+   "chains": [
+    "MANTRA"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Go"
+  },
+  {
+   "date": "2026-08-19",
+   "name": "BounceBit",
+   "amount_usd": 3000000,
+   "chains": [
+    "BounceBit"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Go"
+  },
+  {
+   "date": "2026-08-19",
+   "name": "Allbridge",
+   "amount_usd": 191000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Bridge Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-18",
+   "name": "Maya Protocol",
+   "amount_usd": 1700000,
+   "chains": [
+    "Mayachain"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Go"
+  },
+  {
+   "date": "2026-08-15",
+   "name": "Fox Market",
+   "amount_usd": 120000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-14",
+   "name": "Bodega Market",
+   "amount_usd": 3600,
+   "chains": [
+    "Cardano"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Aiken"
+  },
+  {
+   "date": "2026-08-11",
+   "name": "Harmony Bridge",
+   "amount_usd": 3200000,
+   "chains": [
+    "Harmony"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Bridge Logic Flaw",
+   "target_type": "Chain",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-09",
+   "name": "Coinsbuy",
+   "amount_usd": 7900000,
+   "chains": [
+    "Ethereum",
+    "Tron"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-09",
+   "name": "Coreum Bridge",
+   "amount_usd": 200000,
+   "chains": [
+    "XRPL",
+    "Coreum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Bridge Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-08-09",
+   "name": "USM",
+   "amount_usd": 136000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-08",
+   "name": "Atomic Green",
+   "amount_usd": 29984,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Input Validation",
+   "technique": "Signature Replay",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-08",
+   "name": "Oraichain",
+   "amount_usd": 1000000,
+   "chains": [
+    "Oraichain"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Unbacked Cross-Chain Mint",
+   "target_type": "Chain",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-07",
+   "name": "Ravencoin",
+   "amount_usd": null,
+   "chains": [
+    "Ravencoin"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "C++"
+  },
+  {
+   "date": "2026-08-06",
+   "name": "Panther Protocol",
+   "amount_usd": 7578,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Governance",
+   "technique": "Malicious Proposal",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-06",
+   "name": "Hyperliquid Malaysia",
+   "amount_usd": null,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-08-06",
+   "name": "RRWallet",
+   "amount_usd": 2000000,
+   "chains": [
+    "Bitcoin"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Weak Key Generation",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "C++"
+  },
+  {
+   "date": "2026-08-05",
+   "name": "KITE Foundation",
+   "amount_usd": 13340000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-05",
+   "name": "Unistreets",
+   "amount_usd": 17750,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Arbitrary External Call",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-03",
+   "name": "RISEx",
+   "amount_usd": 673012,
+   "chains": [
+    "RISE"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-02",
+   "name": "MOKE",
+   "amount_usd": 907000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "Liquidity Pool",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-08-02",
+   "name": "LOOPSDAO",
+   "amount_usd": 693500,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "Liquidity Pool",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-31",
+   "name": "COLDCARD",
+   "amount_usd": 116000000,
+   "chains": [
+    "Bitcoin"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Weak Key Generation",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "C++"
+  },
+  {
+   "date": "2026-07-30",
+   "name": "Swan Treasury",
+   "amount_usd": 625000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-30",
+   "name": "Set Protocol",
+   "amount_usd": 9600,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Reentrancy",
+   "technique": "Reentrancy",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-28",
+   "name": "Crypto DAO",
+   "amount_usd": 8200000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-28",
+   "name": "LULA",
+   "amount_usd": 578000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-26",
+   "name": "Garden",
+   "amount_usd": 450000,
+   "chains": [
+    "Ethereum",
+    "Base",
+    "Arbitrum",
+    "BSC"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Database Breach",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-26",
+   "name": "WEMIX.FI Lend",
+   "amount_usd": 737000,
+   "chains": [
+    "WEMIX3.0"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-26",
+   "name": "ChainConnect",
+   "amount_usd": 650000,
+   "chains": [
+    "Ethereum",
+    "BSC",
+    "Avalanche",
+    "Polygon"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-25",
+   "name": "Bankr",
+   "amount_usd": 479885,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Social Engineering",
+   "technique": "Social Account Takeover",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-07-25",
+   "name": "Projekt",
+   "amount_usd": 560000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-24",
+   "name": "Triple-A",
+   "amount_usd": 9700000,
+   "chains": [
+    "Ethereum",
+    "Tron",
+    "Arbitrum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Hot Wallet Key Compromised",
+   "target_type": "Payments",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-23",
+   "name": "Solido Cash",
+   "amount_usd": 900000,
+   "chains": [
+    "Supra"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Oracle Misconfiguration",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Move"
+  },
+  {
+   "date": "2026-07-23",
+   "name": "Lien",
+   "amount_usd": 542000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-22",
+   "name": "Verus-Ethereum Bridge",
+   "amount_usd": 7530000,
+   "chains": [
+    "Verus"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Forged Proof",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-22",
+   "name": "AFX Bridge",
+   "amount_usd": 24150000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Validator Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-22",
+   "name": "Zilliqa",
+   "amount_usd": 1640000,
+   "chains": [
+    "Zilliqa"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Weak Key Generation",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-07-21",
+   "name": "FlashTrade",
+   "amount_usd": 98000,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-07-21",
+   "name": "42DAO",
+   "amount_usd": 912000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-21",
+   "name": "Wanchain",
+   "amount_usd": 10000000,
+   "chains": [
+    "Cardano"
+   ],
+   "classification": "Input Validation",
+   "technique": "Signature Verification Flaw",
+   "target_type": "Chain",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Haskell"
+  },
+  {
+   "date": "2026-07-19",
+   "name": "Allbridge Core",
+   "amount_usd": 1650000,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-07-17",
+   "name": "FlyCow",
+   "amount_usd": 65300,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-17",
+   "name": "Across",
+   "amount_usd": 4500000,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Spoofed Event Log",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-07-16",
+   "name": "DefiTuna Lending",
+   "amount_usd": 580000,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Swap Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-07-16",
+   "name": "CrowdRingCircle",
+   "amount_usd": 209100,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-15",
+   "name": "TeleSwap",
+   "amount_usd": 735000,
+   "chains": [
+    "Bitcoin"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Hot Wallet Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-07-15",
+   "name": "Ostium",
+   "amount_usd": 23750000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-15",
+   "name": "Cascade Liquidity Strategy",
+   "amount_usd": 1340000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-14",
+   "name": "Drips Network",
+   "amount_usd": 24883,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-14",
+   "name": "BarnBridge",
+   "amount_usd": 776000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Governance",
+   "technique": "Malicious Proposal",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-13",
+   "name": "Lumi Finance",
+   "amount_usd": 270000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Input Validation",
+   "technique": "Signature Verification Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-13",
+   "name": "Chi Protocol",
+   "amount_usd": 8500,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Redeem Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-12",
+   "name": "PHX",
+   "amount_usd": 89500,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-11",
+   "name": "Bonzo Lend",
+   "amount_usd": 9050000,
+   "chains": [
+    "Hedera"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-11",
+   "name": "BlueMove DEX",
+   "amount_usd": 529000,
+   "chains": [
+    "Sui"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Move"
+  },
+  {
+   "date": "2026-07-08",
+   "name": "BFB",
+   "amount_usd": 197800,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-06",
+   "name": "BonkDAO",
+   "amount_usd": 20000000,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Governance",
+   "technique": "Malicious Proposal",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-07-05",
+   "name": "Lazy Summer Protocol",
+   "amount_usd": 6040000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Donation Attack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-07-02",
+   "name": "Hinkal",
+   "amount_usd": 820000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Deposit Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-30",
+   "name": "Edel",
+   "amount_usd": 403000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-28",
+   "name": "AIDC",
+   "amount_usd": 121000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-25",
+   "name": "Ocean Protocol",
+   "amount_usd": 127861,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Deposit Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-25",
+   "name": "Lixir Finance",
+   "amount_usd": 12300,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Input Validation",
+   "technique": "Signature Verification Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-25",
+   "name": "Polymarket International",
+   "amount_usd": 3000000,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Frontend Compromise",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-24",
+   "name": "DLMC",
+   "amount_usd": 222600,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-23",
+   "name": "Royal.io",
+   "amount_usd": 263000,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "NFTfi",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-23",
+   "name": "SecondFi",
+   "amount_usd": 2400000,
+   "chains": [
+    "Cardano"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Weak Key Generation",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Haskell"
+  },
+  {
+   "date": "2026-06-21",
+   "name": "Taiko Bridge",
+   "amount_usd": 1700000,
+   "chains": [
+    "Taiko"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Forged Proof",
+   "target_type": "Chain",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-21",
+   "name": "Quicksilver Zone",
+   "amount_usd": 3500,
+   "chains": [
+    "Quicksilver"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Unbacked Mint",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Go"
+  },
+  {
+   "date": "2026-06-20",
+   "name": "LABUBU/OLPC",
+   "amount_usd": 1100000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Decimal Miscalculation",
+   "target_type": "Liquidity Pool",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-20",
+   "name": "JaredFromSubway MEV Bot",
+   "amount_usd": 7500000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Market Manipulation",
+   "technique": "MEV Bot Drained",
+   "target_type": "Other",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-19",
+   "name": "Secret Network",
+   "amount_usd": 4670000,
+   "chains": [
+    "Secret"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Unbacked Cross-Chain Mint",
+   "target_type": "Chain",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-06-19",
+   "name": "mySwap CL",
+   "amount_usd": 305000,
+   "chains": [
+    "Starknet"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Cairo"
+  },
+  {
+   "date": "2026-06-19",
+   "name": "JB",
+   "amount_usd": 50000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-19",
+   "name": "Namada Shielded Pools",
+   "amount_usd": 600000,
+   "chains": [
+    "Namada"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Unbacked Cross-Chain Mint",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-06-17",
+   "name": "DIP",
+   "amount_usd": 111000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Swap Logic Flaw",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-17",
+   "name": "Little Boy Plus",
+   "amount_usd": 367000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-17",
+   "name": "Aztec Bridge",
+   "amount_usd": 2000000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Bridge Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-16",
+   "name": "RetoSwap",
+   "amount_usd": 2700000,
+   "chains": [
+    "Monero"
+   ],
+   "classification": "Governance",
+   "technique": "Malicious Proposal",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Java"
+  },
+  {
+   "date": "2026-06-15",
+   "name": "Thetanuts Finance",
+   "amount_usd": 105471.5,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Rounding Error",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-14",
+   "name": "Aztec Connect",
+   "amount_usd": 2100000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Forged Proof",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-10",
+   "name": "Raydium AMM",
+   "amount_usd": 1340000,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Infinite Mint",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-06-10",
+   "name": "Axelar Secret IBC Bridge",
+   "amount_usd": 4670000,
+   "chains": [
+    "Ethereum",
+    "Secret"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Unbacked Cross-Chain Mint",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-06-09",
+   "name": "NovaBox",
+   "amount_usd": 107000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-09",
+   "name": "Asterix",
+   "amount_usd": 40000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Token Approval Abuse",
+   "target_type": "NFTfi",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-09",
+   "name": "Token of Power",
+   "amount_usd": 1580000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Governance",
+   "technique": "Malicious Proposal",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-08",
+   "name": "Humanity",
+   "amount_usd": 32000000,
+   "chains": [
+    "Ethereum",
+    "BSC"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-08",
+   "name": "Flooring Protocol",
+   "amount_usd": 500000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Infinite Mint",
+   "target_type": "NFTfi",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-07",
+   "name": "Ambient",
+   "amount_usd": 110600,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Deposit Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-07",
+   "name": "Syscoin Bridge",
+   "amount_usd": 10000000,
+   "chains": [
+    "Syscoin"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Forged Proof",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-06-03",
+   "name": "GPU.NET",
+   "amount_usd": 10600,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-03",
+   "name": "ATM",
+   "amount_usd": 243000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Swap Logic Flaw",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-01",
+   "name": "Gnosis Pay",
+   "amount_usd": 1500000,
+   "chains": [
+    "Gnosis Chain"
+   ],
+   "classification": "Input Validation",
+   "technique": "Signature Verification Flaw",
+   "target_type": "Other",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-01",
+   "name": "TesseraDAO",
+   "amount_usd": 2400000,
+   "chains": [
+    "BNB"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-06-01",
+   "name": "TSR",
+   "amount_usd": 2500000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Infinite Mint",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-31",
+   "name": "Fluid Lending",
+   "amount_usd": 215000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Key Leaked via Infrastructure",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-31",
+   "name": "AROS",
+   "amount_usd": 295000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-30",
+   "name": "Gravity Bridge",
+   "amount_usd": 5400000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Validator Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-30",
+   "name": "Alephium Bridge",
+   "amount_usd": 815000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Forged Proof",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-30",
+   "name": "AFI Protocol",
+   "amount_usd": 480000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-28",
+   "name": "ONTR",
+   "amount_usd": 98200,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Ownership Takeover",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-28",
+   "name": "DxSale",
+   "amount_usd": 7300000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Rugpull",
+   "technique": "Liquidity Rug",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-27",
+   "name": "SUPERFORTUNE AI",
+   "amount_usd": 15180000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-05-27",
+   "name": "Stake DAO Yield",
+   "amount_usd": 91000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Deployer Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-26",
+   "name": "SKP",
+   "amount_usd": 212000,
+   "chains": [
+    "BNB"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-25",
+   "name": "New Market Trading",
+   "amount_usd": 3980000,
+   "chains": [
+    "Ethereum",
+    "Base",
+    "Arbitrum"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "Other",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-25",
+   "name": "WUSD.fi/Glove",
+   "amount_usd": 200000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Reward Logic Flaw",
+   "target_type": "Liquidity Pool",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-25",
+   "name": "Bitmor",
+   "amount_usd": 6000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Access Control",
+   "technique": "Token Approval Abuse",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-24",
+   "name": "Fractal Protocol",
+   "amount_usd": 13700,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Reentrancy",
+   "technique": "Reentrancy",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-23",
+   "name": "Mure",
+   "amount_usd": 11700,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Input Validation",
+   "technique": "Signature Verification Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-23",
+   "name": "StablR",
+   "amount_usd": 2800000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-22",
+   "name": "Polymarket",
+   "amount_usd": 700000,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-20",
+   "name": "MAP Protocol",
+   "amount_usd": 110000,
+   "chains": [
+    "Ethereum",
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Infinite Mint",
+   "target_type": "Chain",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-20",
+   "name": "RetoSwap",
+   "amount_usd": 2700000,
+   "chains": [
+    "Monero"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "C++"
+  },
+  {
+   "date": "2026-05-19",
+   "name": "HermesVault",
+   "amount_usd": 30000,
+   "chains": [
+    "Algorand"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": 26000,
+   "source": "",
+   "language": "JavaScript"
+  },
+  {
+   "date": "2026-05-19",
+   "name": "Bankr",
+   "amount_usd": 170000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Session Key Compromised",
+   "target_type": "AI Agent",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-19",
+   "name": "ElevateFi",
+   "amount_usd": 16000,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-18",
+   "name": "Echo Bridge",
+   "amount_usd": 821000,
+   "chains": [
+    "Monad"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-17",
+   "name": "MetaSea",
+   "amount_usd": 110000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-17",
+   "name": "SEA Token",
+   "amount_usd": 153000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-17",
+   "name": "Verus-Ethereum Bridge",
+   "amount_usd": 11500000,
+   "chains": [
+    "Verus"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Forged Proof",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-16",
+   "name": "Adshares",
+   "amount_usd": 628000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Forged Proof",
+   "target_type": "Other",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-15",
+   "name": "THORChain DEX",
+   "amount_usd": 10700000,
+   "chains": [
+    "Bitcoin",
+    "Ethereum",
+    "Base",
+    "BSC"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Bridge Logic Flaw",
+   "target_type": "Chain",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-05-13",
+   "name": "ShapeShift FOX Colony",
+   "amount_usd": 132700,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Access Control",
+   "technique": "Arbitrary External Call",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-13",
+   "name": "Transit Finance",
+   "amount_usd": 1880000,
+   "chains": [
+    "Tron"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-12",
+   "name": "Aurellion",
+   "amount_usd": 456442,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Access Control",
+   "technique": "Uninitialized Proxy",
+   "target_type": "RWA",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-12",
+   "name": "IEXCBP",
+   "amount_usd": 97000,
+   "chains": [
+    "BNB Chain"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-12",
+   "name": "BoostHook",
+   "amount_usd": 187000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-12",
+   "name": "SQ Protocol",
+   "amount_usd": 346137,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-11",
+   "name": "TAC Protocol",
+   "amount_usd": 2854486,
+   "chains": [
+    "TON",
+    "TAC"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Proof Verifier Bug",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-11",
+   "name": "Huma",
+   "amount_usd": 101400,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-11",
+   "name": "INK Finance",
+   "amount_usd": 140000,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Access Control",
+   "technique": "Caller Impersonation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-10",
+   "name": "Renegade",
+   "amount_usd": 209000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Access Control",
+   "technique": "Uninitialized Proxy",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": 209000,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-07",
+   "name": "TrustedVolumes",
+   "amount_usd": 6700000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Caller Impersonation",
+   "target_type": "Other",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-05",
+   "name": "Ekubo",
+   "amount_usd": 1400000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Token Approval Abuse",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-05-04",
+   "name": "SmartCredit",
+   "amount_usd": 72000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-04",
+   "name": "SquidRouterModule",
+   "amount_usd": 3200000,
+   "chains": [
+    "Ethereum",
+    "Base"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-01",
+   "name": "Sharwa.Finance",
+   "amount_usd": 32850,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-05-01",
+   "name": "Bisq",
+   "amount_usd": 550000,
+   "chains": [
+    "Bitcoin"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "C++"
+  },
+  {
+   "date": "2026-04-30",
+   "name": "Wasabi Perps",
+   "amount_usd": 5500000,
+   "chains": [
+    "Ethereum",
+    "Base",
+    "Berachain",
+    "Blast"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Deployer Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-29",
+   "name": "Aftermath Perps",
+   "amount_usd": 1140000,
+   "chains": [
+    "Sui"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Move"
+  },
+  {
+   "date": "2026-04-29",
+   "name": "Syndicate",
+   "amount_usd": 380000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Bridge Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": 380000,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-29",
+   "name": "Sweat Foundation",
+   "amount_usd": 3500000,
+   "chains": [
+    "Near"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-04-28",
+   "name": "Quant",
+   "amount_usd": 138000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Arbitrary External Call",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-28",
+   "name": "YieldCore-3rd-deal",
+   "amount_usd": 398764,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-28",
+   "name": "JUDAO",
+   "amount_usd": 228000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-27",
+   "name": "ZetaChain",
+   "amount_usd": 333868,
+   "chains": [
+    "Ethereum",
+    "Base",
+    "Polygon",
+    "Arbitrum",
+    "Avalanche",
+    "BSC"
+   ],
+   "classification": "Access Control",
+   "technique": "Token Approval Abuse",
+   "target_type": "Chain",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-27",
+   "name": "Singularity Finance",
+   "amount_usd": 413000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Oracle Misconfiguration",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-26",
+   "name": "Scallop Lend",
+   "amount_usd": 142000,
+   "chains": [
+    "Sui"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Reward Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Move"
+  },
+  {
+   "date": "2026-04-26",
+   "name": "Litecoin",
+   "amount_usd": null,
+   "chains": [
+    "Litecoin"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "C++"
+  },
+  {
+   "date": "2026-04-25",
+   "name": "Purrlend",
+   "amount_usd": 1500000,
+   "chains": [
+    "MegaETH",
+    "Hyperliquid L1"
+   ],
+   "classification": "Access Control",
+   "technique": "Caller Impersonation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-23",
+   "name": "Giddy",
+   "amount_usd": 1300000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Input Validation",
+   "technique": "Incomplete Signature Coverage",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-22",
+   "name": "Kipseli",
+   "amount_usd": 72350,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-21",
+   "name": "Volo Vault",
+   "amount_usd": 3500000,
+   "chains": [
+    "Sui"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Move"
+  },
+  {
+   "date": "2026-04-20",
+   "name": "Thetanuts Finance",
+   "amount_usd": 50000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "First Depositor Attack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-20",
+   "name": "Transit Finance",
+   "amount_usd": 257800,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-20",
+   "name": "Juicebox V3",
+   "amount_usd": 52000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-19",
+   "name": "Custom sAVAX Rebalancer",
+   "amount_usd": 64000,
+   "chains": [
+    "Avalanche"
+   ],
+   "classification": "Access Control",
+   "technique": "Arbitrary External Call",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-18",
+   "name": "Kelp",
+   "amount_usd": 293000000,
+   "chains": [
+    "Ethereum",
+    "Arbitrum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Cross-Chain Message Spoofing",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-16",
+   "name": "Rhea Lend",
+   "amount_usd": 18400000,
+   "chains": [
+    "Near"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-16",
+   "name": "Grinex",
+   "amount_usd": 13740000,
+   "chains": [
+    "Tron",
+    "Ethereum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Hot Wallet Key Compromised",
+   "target_type": "CEX",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-04-14",
+   "name": "Zerion Wallet",
+   "amount_usd": 100000,
+   "chains": [],
+   "classification": "Social Engineering",
+   "technique": "Phishing",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-04-14",
+   "name": "CoW Swap",
+   "amount_usd": 1200000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "DNS Hijack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-04-13",
+   "name": "MONA",
+   "amount_usd": 60950,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "Token",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-13",
+   "name": "Dango",
+   "amount_usd": 1900000,
+   "chains": [
+    "Dango"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": 410000,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-12",
+   "name": "SubQuery Network",
+   "amount_usd": 134000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-12",
+   "name": "Hyperbridge",
+   "amount_usd": 2500000,
+   "chains": [
+    "Ethereum",
+    "Base",
+    "BSC",
+    "Arbitrum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Forged Proof",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-09",
+   "name": "Aethir",
+   "amount_usd": 400000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-07",
+   "name": "SquidMulticall",
+   "amount_usd": 517000,
+   "chains": [
+    "Arbitrum",
+    "BNB Chain",
+    "Avalanche",
+    "Optimism",
+    "Base"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-05",
+   "name": "Denaria vAMM",
+   "amount_usd": 165618,
+   "chains": [
+    "Linea"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-04",
+   "name": "BSC TMM/USDT",
+   "amount_usd": 1665000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-03",
+   "name": "Silo V2",
+   "amount_usd": 359000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Oracle Misconfiguration",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-04-01",
+   "name": "Drift Trade",
+   "amount_usd": 295000000,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Access Control",
+   "technique": "Proxy Upgrade Hijack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-03-31",
+   "name": "WhaleBit",
+   "amount_usd": 10500,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-31",
+   "name": "LML/USDT staking protocol",
+   "amount_usd": 950000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-28",
+   "name": "VTSwapHook",
+   "amount_usd": null,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Swap Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-28",
+   "name": "GoonFi",
+   "amount_usd": 254000,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Swap Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-03-26",
+   "name": "TUR Staking",
+   "amount_usd": 133000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-23",
+   "name": "BCE",
+   "amount_usd": 679000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-22",
+   "name": "Cyrus Finance",
+   "amount_usd": 5000000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-21",
+   "name": "Resolv USR",
+   "amount_usd": 24500000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Key Leaked via Infrastructure",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-18",
+   "name": "Neutrl",
+   "amount_usd": null,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "DNS Hijack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-17",
+   "name": "dTRINITY dLEND",
+   "amount_usd": 257000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "First Depositor Attack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-16",
+   "name": "CheckoutPool",
+   "amount_usd": 85700,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-15",
+   "name": "Venus Core Pool",
+   "amount_usd": 3700000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Donation Attack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-14",
+   "name": "Goose Finance",
+   "amount_usd": 8435,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-12",
+   "name": "Stake DAO Yield",
+   "amount_usd": 176000,
+   "chains": [
+    "Arbitrum",
+    "Base"
+   ],
+   "classification": "Access Control",
+   "technique": "Caller Impersonation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-12",
+   "name": "AM",
+   "amount_usd": 131572,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-12",
+   "name": "Aave V3",
+   "amount_usd": 862000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Oracle Misconfiguration",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": 862000,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-11",
+   "name": "DBXen",
+   "amount_usd": 150000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-11",
+   "name": "BONK Fun",
+   "amount_usd": 30000,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "DNS Hijack",
+   "target_type": "ICO",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-03-10",
+   "name": "Movie Token",
+   "amount_usd": 242000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-09",
+   "name": "Gondi V3",
+   "amount_usd": 230000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Token Approval Abuse",
+   "target_type": "NFTfi",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-07",
+   "name": "Molt EVM",
+   "amount_usd": 127000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "Other",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-06",
+   "name": "SolvBTC",
+   "amount_usd": 2700000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Infinite Mint",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-02",
+   "name": "Curve LlamaLend",
+   "amount_usd": 240000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Donation Attack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-03-02",
+   "name": "FOOM Cash",
+   "amount_usd": 2260000,
+   "chains": [
+    "Ethereum",
+    "Base"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Forged Proof",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-02-28",
+   "name": "Wise Lending V2",
+   "amount_usd": 66000,
+   "chains": [
+    "Arbitrum",
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-02-26",
+   "name": "Ploutos Money",
+   "amount_usd": 390000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Oracle Misconfiguration",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-02-23",
+   "name": "DGLD",
+   "amount_usd": 250000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Infinite Mint",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-02-22",
+   "name": "Blend Pools V2",
+   "amount_usd": 10970000,
+   "chains": [
+    "Stellar"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-02-22",
+   "name": "LAXO",
+   "amount_usd": 190000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-02-21",
+   "name": "Veil Cash",
+   "amount_usd": 5000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Proof Verifier Bug",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-02-21",
+   "name": "IoTeX",
+   "amount_usd": 4400000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Validator Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-02-19",
+   "name": "Velar Perps",
+   "amount_usd": 401000,
+   "chains": [
+    "Mezo"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Predictable Oracle Update",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-02-15",
+   "name": "Moonwell Lending",
+   "amount_usd": 1780000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Oracle Misconfiguration",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-02-01",
+   "name": "CrossCurve",
+   "amount_usd": 3000000,
+   "chains": [],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Cross-Chain Message Spoofing",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-01-31",
+   "name": "Step Finance",
+   "amount_usd": 40000000,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-01-29",
+   "name": "Revert Lend",
+   "amount_usd": 50000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Staking Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-27",
+   "name": "PGNLZ",
+   "amount_usd": 100000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-25",
+   "name": "Aperture LM",
+   "amount_usd": 3670000,
+   "chains": [
+    "Ethereum",
+    "Base",
+    "BSC"
+   ],
+   "classification": "Access Control",
+   "technique": "Token Approval Abuse",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-25",
+   "name": "Matcha",
+   "amount_usd": 13430000,
+   "chains": [
+    "Base",
+    "Ethereum"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Frontend Compromise",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-21",
+   "name": "Saga",
+   "amount_usd": 7000000,
+   "chains": [
+    "Saga"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Infinite Mint",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-20",
+   "name": "SynapLogic",
+   "amount_usd": 144000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-19",
+   "name": "Makina",
+   "amount_usd": 4200000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-17",
+   "name": "Meteora DAMM V2",
+   "amount_usd": 1500000,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Social Engineering",
+   "technique": "Impersonation Scam",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2026-01-13",
+   "name": "YO Protocol",
+   "amount_usd": 3600000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Missing Slippage Check",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-10",
+   "name": "FutureSwap",
+   "amount_usd": 395000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-08",
+   "name": "Truebit",
+   "amount_usd": 26400000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-07",
+   "name": "Polycule",
+   "amount_usd": 230000,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Key Leaked via Infrastructure",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-06",
+   "name": "Fusion by IPOR",
+   "amount_usd": 336000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Access Control",
+   "technique": "Arbitrary External Call",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-05",
+   "name": "USDGambit and TLP",
+   "amount_usd": 1500000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Deployer Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-05",
+   "name": "TMX TRIBE",
+   "amount_usd": 1400000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-01-01",
+   "name": "PRXVT",
+   "amount_usd": 97000,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Staking Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2025-12-30",
+   "name": "Unleash Protocol",
+   "amount_usd": 3900000,
+   "chains": [
+    "Story"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2025-12-28",
+   "name": "MSCST",
+   "amount_usd": 129900,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2025-12-27",
+   "name": "Flow",
+   "amount_usd": 3900000,
+   "chains": [
+    "Flow"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Infinite Mint",
+   "target_type": "Layer 1",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2025-12-26",
+   "name": "FilDA",
+   "amount_usd": 166800,
+   "chains": [
+    "Elastos"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2025-12-25",
+   "name": "Trust Wallet Wallet",
+   "amount_usd": 8500000,
+   "chains": [
+    "Ethereum",
+    "Bitcoin",
+    "Solana"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Supply Chain Attack",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2025-12-18",
+   "name": "Rari Capital",
+   "amount_usd": 2000000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Uninitialized Proxy",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2025-12-16",
+   "name": "Yearn Finance",
+   "amount_usd": 300000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Donation Attack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2025-12-16",
+   "name": "FutureSwap",
+   "amount_usd": 270000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Governance",
+   "technique": "Flashloan Governance Attack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2025-12-14",
+   "name": "Mars Perps",
+   "amount_usd": 960000,
+   "chains": [
+    "Neutron"
+   ],
+   "classification": "Market Manipulation",
+   "technique": "Funding Rate Arbitrage",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
+  },
+  {
+   "date": "2025-12-12",
+   "name": "ZEROBASE",
+   "amount_usd": 250000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Access Control",
+   "technique": "Token Approval Abuse",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2025-12-12",
+   "name": "Ribbon",
+   "amount_usd": 2700000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2025-12-11",
+   "name": "0G Labs",
+   "amount_usd": 516000,
+   "chains": [
+    "0G"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2025-12-04",
+   "name": "US Permissionless Dollar",
+   "amount_usd": 1000000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Proxy Upgrade Hijack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2025-12-02",
+   "name": "Goldfinch",
+   "amount_usd": 330000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Token Approval Abuse",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  }
+ ]
+}

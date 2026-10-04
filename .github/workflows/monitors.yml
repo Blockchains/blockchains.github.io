@@ -1,0 +1,21 @@
+name: monitors (hourly)
+on:
+  schedule: [{ cron: "17 * * * *" }]
+  workflow_dispatch:
+permissions: { contents: write }
+concurrency: { group: hub-data, cancel-in-progress: false }
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python scripts/job_gas.py
+      - run: python scripts/job_liveness.py
+      - run: python scripts/job_rpc.py
+      - name: health check
+        run: python scripts/job_health.py
+        env: { HEALTH_LOCAL: "1", GH_TOKEN: "${{ github.token }}" }
+      - run: scripts/commit.sh "data: hourly monitors"

@@ -1,0 +1,27 @@
+name: ci
+on:
+  push: { branches: [main] }
+  pull_request:
+  workflow_dispatch:
+  schedule: [{ cron: "50 6 * * *" }]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: generated pages are up to date
+        run: python scripts/gen_site.py && git diff --exit-code -- '*.html' sitemap.xml robots.txt
+      - name: data files validate
+        run: python tests/validate.py
+      - run: pip install -q playwright && python -m playwright install --with-deps chromium
+      - name: e2e (local copy, sibling project sites proxied from live)
+        run: |
+          python tests/serve.py 43117 &
+          sleep 2
+          BASE=http://127.0.0.1:43117 python tests/e2e.py
+      - name: e2e (live site)
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: BASE=https://blockchains.github.io python tests/e2e.py

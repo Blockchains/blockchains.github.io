@@ -1,0 +1,242 @@
+{
+ "service": "liveness",
+ "description": "Chain liveness monitor (head block age)",
+ "generated_at": "2026-10-04T15:11:24Z",
+ "source": "Public JSON-RPC eth_getBlockByNumber / Solana getBlockTime / mempool.space",
+ "source_url": "https://ethereum.org/en/developers/docs/apis/json-rpc/",
+ "built_by": "Blockchain Lab — https://blockchainlab.com",
+ "count": 23,
+ "ok": 23,
+ "chains": [
+  {
+   "chain": "Ethereum",
+   "chain_id": 1,
+   "height": 26119803,
+   "head_age_s": 10.0,
+   "status": "ok",
+   "threshold_s": 120,
+   "rpc": "https://ethereum-rpc.publicnode.com",
+   "explorer": "https://etherscan.io"
+  },
+  {
+   "chain": "Base",
+   "chain_id": 8453,
+   "height": 52168666,
+   "head_age_s": 2.0,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://base-rpc.publicnode.com",
+   "explorer": "https://basescan.org"
+  },
+  {
+   "chain": "Arbitrum One",
+   "chain_id": 42161,
+   "height": 511647841,
+   "head_age_s": 1.1,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://arbitrum-one-rpc.publicnode.com",
+   "explorer": "https://arbiscan.io"
+  },
+  {
+   "chain": "OP Mainnet",
+   "chain_id": 10,
+   "height": 157763952,
+   "head_age_s": 0.3,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://mainnet.optimism.io",
+   "explorer": "https://optimistic.etherscan.io"
+  },
+  {
+   "chain": "Polygon PoS",
+   "chain_id": 137,
+   "height": 94947687,
+   "head_age_s": -0.8,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://polygon-bor-rpc.publicnode.com",
+   "explorer": "https://polygonscan.com"
+  },
+  {
+   "chain": "BNB Smart Chain",
+   "chain_id": 56,
+   "height": 125698027,
+   "head_age_s": 2.6,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://bsc-rpc.publicnode.com",
+   "explorer": "https://bscscan.com"
+  },
+  {
+   "chain": "Avalanche C-Chain",
+   "chain_id": 43114,
+   "height": 96744421,
+   "head_age_s": 2.0,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://avalanche-c-chain-rpc.publicnode.com",
+   "explorer": "https://snowtrace.io"
+  },
+  {
+   "chain": "Gnosis",
+   "chain_id": 100,
+   "height": 48585971,
+   "head_age_s": 6.3,
+   "status": "ok",
+   "threshold_s": 120,
+   "rpc": "https://gnosis-rpc.publicnode.com",
+   "explorer": "https://gnosisscan.io"
+  },
+  {
+   "chain": "Linea",
+   "chain_id": 59144,
+   "height": 32229328,
+   "head_age_s": 12.0,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://linea-rpc.publicnode.com",
+   "explorer": "https://lineascan.build"
+  },
+  {
+   "chain": "Scroll",
+   "chain_id": 534352,
+   "height": 35272852,
+   "head_age_s": 25.1,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://scroll-rpc.publicnode.com",
+   "explorer": "https://scrollscan.com"
+  },
+  {
+   "chain": "zkSync Era",
+   "chain_id": 324,
+   "height": 72331000,
+   "head_age_s": 5.2,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://mainnet.era.zksync.io",
+   "explorer": "https://explorer.zksync.io"
+  },
+  {
+   "chain": "Mantle",
+   "chain_id": 5000,
+   "height": 101498184,
+   "head_age_s": 1.8,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://mantle-rpc.publicnode.com",
+   "explorer": "https://mantlescan.xyz"
+  },
+  {
+   "chain": "Blast",
+   "chain_id": 81457,
+   "height": 41158432,
+   "head_age_s": 2.2,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://blast-rpc.publicnode.com",
+   "explorer": "https://blastscan.io"
+  },
+  {
+   "chain": "Celo",
+   "chain_id": 42220,
+   "height": 79225922,
+   "head_age_s": 1.1,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://celo-rpc.publicnode.com",
+   "explorer": "https://celoscan.io"
+  },
+  {
+   "chain": "Fantom/Sonic",
+   "chain_id": 146,
+   "height": 80342644,
+   "head_age_s": 2.4,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://sonic.drpc.org",
+   "explorer": "https://sonicscan.org"
+  },
+  {
+   "chain": "Unichain",
+   "chain_id": 130,
+   "height": 60378321,
+   "head_age_s": 1.1,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://unichain-rpc.publicnode.com",
+   "explorer": "https://uniscan.xyz"
+  },
+  {
+   "chain": "Taiko",
+   "chain_id": 167000,
+   "height": 12241842,
+   "head_age_s": 2.3,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://taiko-rpc.publicnode.com",
+   "explorer": "https://taikoscan.io"
+  },
+  {
+   "chain": "opBNB",
+   "chain_id": 204,
+   "height": 192039002,
+   "head_age_s": 0.9,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://opbnb.drpc.org",
+   "explorer": "https://opbnb.bscscan.com"
+  },
+  {
+   "chain": "Ink",
+   "chain_id": 57073,
+   "height": 57628269,
+   "head_age_s": 1.7,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://rpc-gel.inkonchain.com",
+   "explorer": "https://explorer.inkonchain.com"
+  },
+  {
+   "chain": "Cronos",
+   "chain_id": 25,
+   "height": 97887397,
+   "head_age_s": 1.3,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://cronos-evm-rpc.publicnode.com",
+   "explorer": "https://cronoscan.com"
+  },
+  {
+   "chain": "Berachain",
+   "chain_id": 80094,
+   "height": 27055981,
+   "head_age_s": 3.3,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://berachain-rpc.publicnode.com",
+   "explorer": "https://berascan.com"
+  },
+  {
+   "chain": "Bitcoin",
+   "chain_id": null,
+   "height": 969863,
+   "head_age_s": 316.9,
+   "status": "ok",
+   "threshold_s": 3600,
+   "rpc": "https://mempool.space/api",
+   "explorer": "https://mempool.space"
+  },
+  {
+   "chain": "Solana",
+   "chain_id": null,
+   "height": 453293088,
+   "head_age_s": 10.0,
+   "status": "ok",
+   "threshold_s": 60,
+   "rpc": "https://solana-rpc.publicnode.com",
+   "explorer": "https://explorer.solana.com"
+  }
+ ]
+}

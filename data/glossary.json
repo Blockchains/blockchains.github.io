@@ -1,0 +1,236 @@
+{
+ "service": "glossary",
+ "description": "Glossary search",
+ "generated_at": "2026-10-04T15:12:28Z",
+ "source": "Blockchain Lab glossary",
+ "source_url": "https://blockchainlab.com/learn/glossary",
+ "built_by": "Blockchain Lab — https://blockchainlab.com",
+ "count": 45,
+ "terms": [
+  {
+   "term": "Blockchain",
+   "definition": "A chain of blocks of transactions, each block committing to the one before it.",
+   "url": "https://blockchainlab.com/learn/concepts/blockchain"
+  },
+  {
+   "term": "Distributed ledger",
+   "definition": "A shared record more than one party keeps. A blockchain is one design for that record.",
+   "url": "https://blockchainlab.com/learn/concepts/distributed-ledger"
+  },
+  {
+   "term": "Hash",
+   "definition": "A short fingerprint of a longer input. The same input always gives the same fingerprint. A small change gives a different one.",
+   "url": "https://blockchainlab.com/learn/concepts/hash"
+  },
+  {
+   "term": "Merkle tree",
+   "definition": "A tree of hashes, so a small proof can show that one item sat inside a large set.",
+   "url": "https://blockchainlab.com/learn/concepts/merkle-tree"
+  },
+  {
+   "term": "Public key",
+   "definition": "A key you can publish. Other people use it to check a signature or to derive an address.",
+   "url": "https://blockchainlab.com/learn/concepts/public-key"
+  },
+  {
+   "term": "Private key",
+   "definition": "The secret that authorises a signature. Whoever can use it can act as that key.",
+   "url": "https://blockchainlab.com/learn/concepts/private-key"
+  },
+  {
+   "term": "Wallet",
+   "definition": "Software or hardware that holds keys and builds transactions. The assets stay on the ledger.",
+   "url": "https://blockchainlab.com/learn/concepts/wallet"
+  },
+  {
+   "term": "Custody",
+   "definition": "Who can move the asset, and under what rule.",
+   "url": "https://blockchainlab.com/learn/concepts/custody"
+  },
+  {
+   "term": "MPC",
+   "definition": "Multi-party computation: a signature made by several parties without any one of them holding the whole key.",
+   "url": "https://blockchainlab.com/learn/concepts/mpc"
+  },
+  {
+   "term": "Multi-signature",
+   "definition": "A rule that more than one key must sign before a spend.",
+   "url": "https://blockchainlab.com/learn/concepts/multisig"
+  },
+  {
+   "term": "HSM",
+   "definition": "A hardware security module: a device that holds key material and performs signing inside a boundary.",
+   "url": "https://blockchainlab.com/learn/concepts/hsm"
+  },
+  {
+   "term": "Consensus",
+   "definition": "How a network chooses one history when more than one is possible.",
+   "url": "https://blockchainlab.com/learn/concepts/consensus"
+  },
+  {
+   "term": "Proof of work",
+   "definition": "The right to propose a block is bought with computation that anyone can check.",
+   "url": "https://blockchainlab.com/learn/concepts/proof-of-work"
+  },
+  {
+   "term": "Proof of stake",
+   "definition": "The right to propose or vote is tied to an asset that can be penalised.",
+   "url": "https://blockchainlab.com/learn/concepts/proof-of-stake"
+  },
+  {
+   "term": "Finality",
+   "definition": "The point after which a block is not expected to be replaced.",
+   "url": "https://blockchainlab.com/learn/concepts/finality"
+  },
+  {
+   "term": "Smart contract",
+   "definition": "A program the ledger will run, with the result written into the shared state.",
+   "url": "https://blockchainlab.com/learn/concepts/smart-contract"
+  },
+  {
+   "term": "Virtual machine",
+   "definition": "The rules for how contract code executes and how it is metered.",
+   "url": "https://blockchainlab.com/learn/concepts/virtual-machine"
+  },
+  {
+   "term": "Oracle",
+   "definition": "A bridge from a fact outside the chain to a value inside it.",
+   "url": "https://blockchainlab.com/learn/concepts/oracle"
+  },
+  {
+   "term": "Bridge",
+   "definition": "A mechanism that lets an asset or a message be represented on another system.",
+   "url": "https://blockchainlab.com/learn/concepts/bridge"
+  },
+  {
+   "term": "Rollup",
+   "definition": "Execution happens off the base chain. A proof or a challenge window connects the result back.",
+   "url": "https://blockchainlab.com/learn/concepts/rollup"
+  },
+  {
+   "term": "Data availability",
+   "definition": "Whether the contents of a block were actually published, not just the header.",
+   "url": "https://blockchainlab.com/learn/concepts/data-availability"
+  },
+  {
+   "term": "Zero-knowledge proof",
+   "definition": "A proof that a statement is true without revealing why, beyond what the statement itself says.",
+   "url": "https://blockchainlab.com/learn/concepts/zero-knowledge"
+  },
+  {
+   "term": "Stablecoin",
+   "definition": "A token that aims to track a reference unit, usually a currency.",
+   "url": "https://blockchainlab.com/learn/concepts/stablecoin"
+  },
+  {
+   "term": "Tokenised deposit",
+   "definition": "A bank deposit represented as a token, still a claim on that bank.",
+   "url": "https://blockchainlab.com/learn/concepts/tokenised-deposit"
+  },
+  {
+   "term": "CBDC",
+   "definition": "A central-bank liability in digital form, if and when that central bank issues one.",
+   "url": "https://blockchainlab.com/learn/concepts/cbdc"
+  },
+  {
+   "term": "Real-world asset",
+   "definition": "A token that claims to track an asset or a cashflow that exists off the ledger.",
+   "url": "https://blockchainlab.com/learn/concepts/rwa"
+  },
+  {
+   "term": "Tokenisation",
+   "definition": "Representing a defined claim as a transferable record.",
+   "url": "https://blockchainlab.com/learn/concepts/tokenisation"
+  },
+  {
+   "term": "Validator",
+   "definition": "A node allowed to propose or vote on blocks under the protocol's rule.",
+   "url": "https://blockchainlab.com/learn/concepts/validator"
+  },
+  {
+   "term": "Liquid staking",
+   "definition": "A receipt token for stake that has been delegated, so the receipt can move while the stake stays locked.",
+   "url": "https://blockchainlab.com/learn/concepts/liquid-staking"
+  },
+  {
+   "term": "Restaking",
+   "definition": "Using the same stake, or a receipt for it, as security for an additional service.",
+   "url": "https://blockchainlab.com/learn/concepts/restaking"
+  },
+  {
+   "term": "Slashing",
+   "definition": "A penalty that destroys or confiscates stake when a validator breaks a stated rule.",
+   "url": "https://blockchainlab.com/learn/concepts/slashing"
+  },
+  {
+   "term": "DePIN",
+   "definition": "A network that pays operators for a physical service: coverage, storage, energy, sensors.",
+   "url": "https://blockchainlab.com/learn/concepts/depin"
+  },
+  {
+   "term": "Verifiable credential",
+   "definition": "A signed statement about a subject, which the subject can present later without the issuer being online.",
+   "url": "https://blockchainlab.com/learn/concepts/verifiable-credential"
+  },
+  {
+   "term": "KYB",
+   "definition": "Know your business: evidence of who owns and controls a company, collected before you rely on it.",
+   "url": "https://blockchainlab.com/learn/concepts/kyb"
+  },
+  {
+   "term": "Decentralised identifier",
+   "definition": "An identifier a subject can prove control of, without a single registry being the only issuer.",
+   "url": "https://blockchainlab.com/learn/concepts/did"
+  },
+  {
+   "term": "Agent wallet",
+   "definition": "A key or an account that software may use, inside a budget and a policy set by a person or a firm.",
+   "url": "https://blockchainlab.com/learn/concepts/agent-wallet"
+  },
+  {
+   "term": "Settlement",
+   "definition": "The moment an obligation is discharged, not the moment a message is sent.",
+   "url": "https://blockchainlab.com/learn/concepts/settlement"
+  },
+  {
+   "term": "Automated market maker",
+   "definition": "A pool that quotes a price from a formula and its balances, instead of from an order book.",
+   "url": "https://blockchainlab.com/learn/concepts/amm"
+  },
+  {
+   "term": "Collateral",
+   "definition": "Assets pledged so that a debt can be repaid if the borrower does not pay.",
+   "url": "https://blockchainlab.com/learn/concepts/collateral"
+  },
+  {
+   "term": "Peg",
+   "definition": "A promise or a mechanism that aims to keep a price near a reference.",
+   "url": "https://blockchainlab.com/learn/concepts/peg"
+  },
+  {
+   "term": "Light client",
+   "definition": "Software that checks a chain by headers and proofs, without replaying every transaction.",
+   "url": "https://blockchainlab.com/learn/concepts/light-client"
+  },
+  {
+   "term": "MEV",
+   "definition": "Value that can be extracted by choosing the order of transactions, or by inserting around them.",
+   "url": "https://blockchainlab.com/learn/concepts/mev"
+  },
+  {
+   "term": "Account abstraction",
+   "definition": "Letting an account's validation rule be code, rather than a single signature.",
+   "url": "https://blockchainlab.com/learn/concepts/account-abstraction"
+  },
+  {
+   "term": "Gas",
+   "definition": "A meter for computation and storage, paid so that a program cannot run forever for free.",
+   "url": "https://blockchainlab.com/learn/concepts/gas"
+  },
+  {
+   "term": "Atomic swap",
+   "definition": "An exchange of two assets where either both transfers complete or neither does.",
+   "url": "https://blockchainlab.com/learn/concepts/atomic-swap"
+  }
+ ]
+}

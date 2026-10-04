@@ -1,0 +1,26 @@
+name: security-scan (on demand)
+on:
+  workflow_dispatch:
+    inputs:
+      address: { description: "Contract address (must be verified on Sourcify)", required: true }
+      chain_id: { description: "Chain ID", required: true, default: "1" }
+      name: { description: "Display name", required: false }
+permissions: { contents: write }
+concurrency: { group: hub-data, cancel-in-progress: false }
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q slither-analyzer==0.11.6 solc-select
+      - name: validate input
+        run: |
+          [[ "$ADDR" =~ ^0x[0-9a-fA-F]{40}$ ]] || { echo "bad address"; exit 1; }
+          [[ "$CHAIN" =~ ^[0-9]+$ ]] || { echo "bad chain"; exit 1; }
+        env: { ADDR: "${{ inputs.address }}", CHAIN: "${{ inputs.chain_id }}" }
+      - run: python scripts/job_slither.py "$CHAIN" "$ADDR" "$NAME"
+        env: { ADDR: "${{ inputs.address }}", CHAIN: "${{ inputs.chain_id }}", NAME: "${{ inputs.name }}" }
+      - run: scripts/commit.sh "data: on-demand scan ${{ inputs.address }}"

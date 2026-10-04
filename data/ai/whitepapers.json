@@ -1,0 +1,444 @@
+{
+ "service": "ai/whitepapers",
+ "description": "AI whitepaper summaries",
+ "generated_at": "2026-10-04T15:25:06Z",
+ "source": "Grok (xAI) over public data: original whitepaper PDFs/pages",
+ "source_url": "https://blockchains.github.io/ai/",
+ "built_by": "Blockchain Lab — https://blockchainlab.com",
+ "count": 12,
+ "papers": [
+  {
+   "title": "Bitcoin: A Peer-to-Peer Electronic Cash System",
+   "year": 2008,
+   "url": "https://bitcoin.org/bitcoin.pdf",
+   "blockchainlab": "https://blockchainlab.com/whitepaper/bitcoin-nakamoto",
+   "chars": 25581,
+   "text_sha256_16": "e962e98ed25e1fbf",
+   "summary": {
+    "tldr": "Bitcoin proposes a peer-to-peer electronic cash system that solves double-spending via a distributed timestamp server using proof-of-work chains, where the longest chain represents majority CPU power.",
+    "problem": "Commerce relies on trusted financial institutions as third parties, leading to high mediation costs, reversible transactions, fraud risks, and inability to make small non-reversible payments; no mechanism exists for direct electronic payments without trust, and central mints create single points of failure for double-spending prevention.",
+    "mechanism": "Transactions form chains of digital signatures; a peer-to-peer network broadcasts them and nodes collect them into blocks. Each node performs proof-of-work by incrementing a nonce until the block hash meets a difficulty target of leading zero bits, then broadcasts the block; nodes accept valid blocks and extend the longest chain. The proof-of-work difficulty adjusts via moving average to target ~10-minute blocks; incentives come from block rewards (new coins) plus transaction fees, transitioning to fees only after a fixed supply. Merkle trees allow pruning spent transactions while keeping headers; simplified verification uses only headers plus Merkle branches for lightweight clients.",
+    "key_ideas": [
+     "Electronic coins as chains of digital signatures transferring ownership",
+     "Distributed timestamp server via hash-based proof-of-work forming an immutable chain",
+     "Longest chain rule as both sequence proof and majority CPU representation (one-CPU-one-vote)",
+     "Incentives via coinbase rewards and fees to encourage honest participation",
+     "Merkle trees enabling block pruning and disk-space reclamation while preserving verifiability",
+     "Privacy via one-time key pairs and public transaction broadcast without identity linkage"
+    ],
+    "assumptions_and_tradeoffs": [
+     "Honest nodes collectively control more CPU power than any attacker coalition",
+     "Proof-of-work makes altering history computationally impractical once sufficiently buried",
+     "Best-effort broadcast and voluntary node participation suffice for network operation",
+     "Storage grows linearly (~4.2 MB/year for headers) but is manageable under Moore's Law",
+     "Attacker success probability drops exponentially with confirmation depth z under p > q"
+    ],
+    "what_changed_since": "The Bitcoin network launched in January 2009 and has operated continuously using the described proof-of-work longest-chain consensus; total supply is capped at 21 million coins with block rewards halving periodically.",
+    "read_next": [
+     "b-money by Wei Dai (1998)",
+     "Hashcash by Adam Back (2002)",
+     "Secure timestamping papers by Haber, Stornetta et al. (1991-1997)"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-04T15:24:44Z"
+  },
+  {
+   "title": "Ethereum Whitepaper",
+   "year": 2014,
+   "url": "https://ethereum.org/en/whitepaper/",
+   "blockchainlab": "https://blockchainlab.com/research/corpus/papers/ethereum",
+   "chars": 86180,
+   "text_sha256_16": "1dd90c35242bcb52",
+   "summary": {
+    "tldr": "Ethereum is a Turing-complete blockchain platform for building decentralized applications and smart contracts via a built-in programming language and account-based state model.",
+    "problem": "Bitcoin scripting lacks Turing-completeness, state, value-awareness and blockchain-awareness, forcing developers to build separate blockchains or limited meta-protocols for advanced uses like DAOs, custom tokens and complex contracts.",
+    "mechanism": "Ethereum maintains a global state of accounts (externally-owned and contract) updated by transactions and messages executed in the EVM; each transaction specifies gas limits and prices to meter computation and prevent DoS while miners validate blocks via proof-of-work and update a Patricia-Merkle state trie. Contracts can send messages, create other contracts and persist storage; state transitions are deterministic and revert on out-of-gas. Blocks contain both transaction lists and the resulting state root for efficient verification.",
+    "key_ideas": [
+     "Turing-complete EVM for arbitrary smart contracts",
+     "Unified account model with code, storage and balances",
+     "Gas metering for resource pricing and security",
+     "State stored in every block via efficient Patricia-Merkle trees enabling light clients",
+     "Single blockchain shared by all applications for interoperability",
+     "Messages allow contracts to interact like external actors"
+    ],
+    "assumptions_and_tradeoffs": [
+     "Proof-of-work provides decentralized consensus at the cost of energy",
+     "Gas fees proportionally charge for computation/storage/bandwidth but add complexity",
+     "Storing full state per block trades space for simpler verification",
+     "Turing-completeness accepted despite halting-problem risks mitigated by gas",
+     "SPV-like light clients remain secure only with honest majority"
+    ],
+    "what_changed_since": "Ethereum moved from proof-of-work to proof-of-stake (The Merge, 2022); Layer-2 rollups now handle most transactions; DeFi, NFTs and DAOs became primary use cases; ERC-20/ERC-721 standards standardized tokens.",
+    "read_next": [
+     "Ethereum.org current docs",
+     "The Merge technical report",
+     "ERC-20/ERC-721 standards"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-04T15:24:44Z"
+  },
+  {
+   "title": "Uniswap v2 Core",
+   "year": 2020,
+   "url": "https://app.uniswap.org/whitepaper.pdf",
+   "blockchainlab": "https://blockchainlab.com/whitepaper/uniswap-v2",
+   "chars": 33163,
+   "text_sha256_16": "bb31394c1941b897",
+   "summary": {
+    "tldr": "Uniswap v2 Core upgrades the constant-product AMM with ERC20/ERC20 pairs, a cumulative TWAP oracle, flash swaps, an optional protocol fee, and a minimized attack-surface core architecture.",
+    "problem": "Uniswap v1 required ETH as a mandatory bridge currency (increasing fees, slippage, and impermanent loss), offered an easily manipulable spot-price oracle, lacked atomic flash functionality, and exposed a larger attack surface in its core liquidity contract.",
+    "mechanism": "Any two ERC-20 tokens can be paired via a factory-deployed contract that maintains x·y = k reserves and charges a 0.30 % fee. At the first interaction of each block the contract records the current marginal price (reserve ratio) into a cumulative accumulator weighted by elapsed seconds, enabling external contracts to compute TWAPs by reading the accumulator at two timestamps. Flash swaps transfer requested tokens to a caller-specified callback before re-checking balances and enforcing the invariant; the same path also supports pure flash loans. An optional 0.05 % protocol fee (taken from LP fees) can be activated by a privileged factory address and is minted as new LP tokens only on liquidity changes. Core logic is deliberately minimal: incoming amounts are measured from balance deltas rather than transferFrom arguments, cached reserves protect the oracle, and sync/skim functions recover from anomalous token behavior.",
+    "key_ideas": [
+     "Arbitrary ERC-20/ERC-20 pairs remove ETH as a forced bridge",
+     "Block-start cumulative price accumulator yields manipulation-resistant TWAPs",
+     "Flash swaps allow assets to be received and used before payment within one atomic transaction",
+     "Optional 0.05 % protocol fee switchable via factory without per-trade gas cost",
+     "Re-architected core that caches reserves, uses balance deltas, and isolates liquidity storage from routing logic",
+     "CREATE2 deterministic addresses, meta-transaction support for LP tokens, and initial-share burn to deter donation attacks"
+    ],
+    "assumptions_and_tradeoffs": [
+     "Block timestamps are miner-controlled and may deviate from wall time",
+     "32-bit timestamp overflow requires oracle users to checkpoint at least once per ~136 years",
+     "UQ112.112 fixed-point prices and uint112 reserves limit maximum supported balances",
+     "Burning the first 1e-15 LP shares imposes a small cost to raise the economic barrier to share-value inflation attacks",
+     "Native ETH is unsupported; all pairs require WETH, trading off gas for reduced contract complexity and liquidity fragmentation"
+    ],
+    "what_changed_since": "Uniswap v3 (2021) introduced concentrated liquidity positions and multiple fee tiers while retaining the v2 factory and router pattern for legacy pairs.",
+    "read_next": [
+     "Uniswap v3 Core whitepaper",
+     "Uniswap v2 whitepaper (periphery/router contracts)",
+     "Angeris et al. 'An analysis of Uniswap markets' (2019)"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-04T15:24:44Z"
+  },
+  {
+   "title": "Uniswap v3 Core",
+   "year": 2021,
+   "url": "https://app.uniswap.org/whitepaper-v3.pdf",
+   "blockchainlab": "https://blockchainlab.com/whitepaper/uniswap-v3",
+   "chars": 65033,
+   "text_sha256_16": "3adcaea0d65cc149",
+   "summary": {
+    "tldr": "Uniswap v3 introduces concentrated liquidity to AMMs, allowing LPs to bound capital to custom price ranges for higher efficiency while preserving aggregation via ticks and virtual reserves.",
+    "problem": "Prior constant-product AMMs (v1/v2) spread liquidity uniformly over (0, ∞), wasting capital when prices stay near a narrow band; alternative CFMMs risk fragmentation by forcing all LPs onto one curve.",
+    "mechanism": "Price space is divided into discrete ticks (1 bp spacing); LPs mint positions between any two ticks, supplying only the real reserves needed inside that interval while the pool tracks virtual reserves L and √ P. When price exits a range the position deactivates and stops earning fees; crossing an initialized tick instantly adds or removes the corresponding liquidity slice. Fees are accrued separately per position rather than auto-compounded, and an on-chain oracle stores recent TWAP and liquidity accumulators.",
+    "key_ideas": [
+     "Concentrated liquidity bounded by arbitrary ticks",
+     "Multiple fee-tier pools per token pair chosen at creation",
+     "Non-fungible positions with separately held fees",
+     "Time-weighted geometric-mean price oracle with built-in checkpoints",
+     "Seconds-weighted liquidity accumulator for external rewards",
+     "Governance-controlled protocol fee share and new fee tiers"
+    ],
+    "assumptions_and_tradeoffs": [
+     "Rational LPs will actively manage ranges or accept inactive capital",
+     "Tick spacing trades precision against gas cost of crossings",
+     "Non-upgradeable core; parameters only via UNI governance",
+     "Range orders require explicit withdrawal to avoid reversal",
+     "Geometric TWAP chosen over arithmetic for reciprocal consistency"
+    ],
+    "what_changed_since": "Uniswap v3 contracts remain non-upgradeable; later periphery contracts added concentrated-liquidity wrappers and limit-order tooling, but core tick and oracle logic is unchanged.",
+    "read_next": [
+     "Uniswap v3 whitepaper sections 6 (implementation)",
+     "Uniswap v2 whitepaper for baseline constant-product design",
+     "Curve whitepaper for alternative CFMM capital-efficiency approaches"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-04T15:24:42Z"
+  },
+  {
+   "title": "Solana: A new architecture for a high performance blockchain",
+   "year": 2017,
+   "url": "https://solana.com/solana-whitepaper.pdf",
+   "blockchainlab": "https://blockchainlab.com/whitepaper/solana",
+   "chars": 53902,
+   "text_sha256_16": "71965570adeb24d2",
+   "summary": {
+    "tldr": "Solana proposes Proof of History (PoH), a verifiable delay function that encodes time and event order into a ledger, enabling a high-throughput blockchain with sub-second finality when combined with Proof of Stake.",
+    "problem": "Blockchains lack a trusted source of time, forcing nodes to rely on local clocks and resulting in high messaging overhead, weak ordering guarantees, and slow finality in BFT replicated state machines.",
+    "mechanism": "A designated Leader generates a sequential PoH hash chain on a single core while inserting and timestamping user transactions; it executes them against RAM state and publishes state signatures to Verifiers. Verifiers independently replay transactions, confirm state hashes via votes, and participate in PoS-based leader election with bonding and slashing. PoH enables parallel verification across GPU cores, horizontal scaling via synchronized generators, and a streaming Proof of Replication that ties storage proofs to the time ledger; the system recovers from partitions by dynamically unstaking unavailable validators until a supermajority is restored.",
+    "key_ideas": [
+     "PoH creates a cryptographically verifiable sequence proving passage of time and event ordering without requiring synchronized clocks.",
+     "Events are timestamped by mixing their hashes into the PoH chain, allowing any node to reconstruct order and approximate real-time deltas.",
+     "Parallel verification splits the hash chain across many cores, reducing verification time proportionally to available hardware parallelism.",
+     "A bonded PoS layer with dynamic unstaking, slashing for equivocation or invalid votes, and leader/secondary election provides consensus and partition recovery.",
+     "Streaming PoRep uses PoH-derived keys and periodic challenges for fast, GPU-friendly replication proofs that defend against forgery in both time and space.",
+     "Leader publishes batched transactions plus state signatures; Verifiers vote within strict timeouts, enabling high throughput (up to 710k TPS on 1 Gbps links) under the analyzed hardware assumptions."
+    ],
+    "assumptions_and_tradeoffs": [
+     "Validators have comparable high-end hardware (multi-core CPUs/GPUs and gigabit networking); availability is traded for consistency during partitions.",
+     "Network partitions are eventually healed; recovery time scales with the fraction of missing validators via dynamic unstaking.",
+     "Clients include recent PoH hashes in their messages to limit reordering attacks; long-range attacks are mitigated by the cost of recreating historical PoH sequences.",
+     "PoRep replication target is bounded by available GPU cores; key rotation and periodic re-encryption are required to prevent cheap reuse of proofs.",
+     "Horizontal scaling of multiple PoH generators reduces timing precision due to network latency between generators."
+    ],
+    "what_changed_since": "Solana mainnet launched in 2020; the original PoS design evolved into Tower BFT, and the network has demonstrated sustained high throughput in production while experiencing occasional outages.",
+    "read_next": [
+     "Tower BFT whitepaper and Solana protocol updates",
+     "Current Solana validator and Gulf Stream / Turbine architecture documentation",
+     "Proof of History security analysis and measured TPS benchmarks post-mainnet"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-04T15:24:52Z"
+  },
+  {
+   "title": "Chainlink 2.0",
+   "year": 2021,
+   "url": "https://research.chain.link/whitepaper-v2.pdf",
+   "blockchainlab": "https://blockchainlab.com/whitepaper/chainlink",
+   "chars": 385230,
+   "text_sha256_16": "2ada32e49847914b",
+   "summary": {
+    "tldr": "Chainlink 2.0 introduces Decentralized Oracle Networks (DONs) as committee-based off-chain systems that extend oracles to provide hybrid smart contracts with networking, computation, storage, confidentiality, fair sequencing, and cryptoeconomic security.",
+    "problem": "Smart contracts are limited by on-chain constraints (slow, expensive, insular) and need secure bidirectional access to off-chain data, computation, and resources while preserving decentralization, confidentiality, and resistance to front-running or node misbehavior.",
+    "mechanism": "DONs are formed by committees of Chainlink nodes running a consensus protocol to host executables (continuous decentralized programs) and adapters (bidirectional links to external resources or other chains); executables perform deterministic off-chain operations, store state locally, and generate reports sent to main-chain contracts via adapters. Off-Chain Reporting (OCR) and technologies like DECO/Town Crier enable efficient, privacy-preserving data flows. Fair Sequencing Services (FSS) order transactions through the DON before on-chain submission, while staking with super-linear impact and the Implicit-Incentive Framework (IIF) align node incentives via deposits, slashing, and future fees.",
+    "key_ideas": [
+     "Hybrid smart contracts combining on-chain (SC) and off-chain DON executables (exec) for expanded functionality",
+     "DON abstraction layer hiding complexity via unified interfaces and a planned decentralized metalayer",
+     "Scaling via fast committee consensus, parallel DONs, and Transaction-Execution Framework (TEF) for layer-2 integration",
+     "Confidentiality through privacy-preserving adapters, MPC/TEEs, and support for confidential L2 systems",
+     "Order-fairness via FSS to prevent front-running by decentralizing transaction sequencing",
+     "Trust minimization and cryptoeconomic security via data authentication, minority reports, guard rails, PKI, and super-linear staking/IIF"
+    ],
+    "assumptions_and_tradeoffs": [
+     "DONs assume honest majority or quorum in committees for consensus and FSS correctness",
+     "Main chain treated as more trustworthy anchor than DON for some applications",
+     "Tradeoff between performance (low latency via off-chain processing) and added trust assumptions on DON nodes",
+     "Staking requires sufficient economic security to deter prospective bribery and other attacks"
+    ],
+    "what_changed_since": "OCR and basic data feeds were already deployed by 2021; subsequent phased rollouts of DON-related features (confidentiality tools, FSS pilots) have occurred but full advanced DONs remain under development.",
+    "read_next": [
+     "Section 3 (DON Interface and Capabilities)",
+     "Section 5 (Fair Sequencing Services)",
+     "Section 7 (Trust Minimization)",
+     "Section 9 (Economics and Cryptoeconomics)",
+     "Future focused technical papers on DON features"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-04T15:24:54Z"
+  },
+  {
+   "title": "The Bitcoin Lightning Network",
+   "year": 2016,
+   "url": "https://lightning.network/lightning-network-paper.pdf",
+   "blockchainlab": "https://blockchainlab.com/whitepaper/lightning",
+   "chars": 113362,
+   "text_sha256_16": "935d21a056629047",
+   "summary": {
+    "tldr": "The Bitcoin Lightning Network proposes a network of bidirectional micropayment channels for scalable off-chain instant payments, using revocable commitment transactions and timelocks to enforce correct balances on the Bitcoin blockchain only when needed.",
+    "problem": "The Bitcoin blockchain cannot scale to global transaction volumes (e.g., Visa's 47k tps) without massive block sizes that cause extreme centralization, high fees, and loss of decentralization and security, as every node must validate all transactions.",
+    "mechanism": "Parties open channels via a Funding Transaction to a 2-of-2 multisig address; they exchange Commitment Transactions reflecting current balances without broadcasting them. Old states are revoked using Revocable Sequence Maturity Contracts (RSMC) where broadcasting an old state allows the counterparty to claim all funds via a Breach Remedy penalty after a timelock delay. Channels form a routed network using hashlocks and staggered timelocks for multi-hop payments; uncooperative closes are enforced on-chain with blame ascription via unique half-signed commitments.",
+    "key_ideas": [
+     "Off-chain net settlement defers blockchain broadcasts while preserving trustlessness via cryptographic enforcement",
+     "Revocable commitments with penalties (all funds to counterparty) replace explicit revocation of old states",
+     "Ascribing blame via unique per-party Commitment Transactions enables penalty enforcement",
+     "SIGHASH_NOINPUT soft-fork allows spending from unsigned Funding Transactions to prevent hostage scenarios",
+     "Network of channels with hashlocked/timelocked routing enables payments across untrusted intermediaries",
+     "Timestop flags and relative sequence maturity mitigate DoS floods during channel disputes"
+    ],
+    "assumptions_and_tradeoffs": [
+     "Requires malleability fix (SIGHASH_NOINPUT) for safe channel construction",
+     "Participants must monitor the blockchain to enforce penalties on old states",
+     "Channels assume at least one honest party to close cooperatively or apply penalties",
+     "Tradeoff of capital lockup in channels versus on-chain fees and scalability",
+     "Relies on timelocks and sequence maturity for consensus ordering instead of full blockchain timestamps"
+    ],
+    "what_changed_since": "Lightning Network launched on Bitcoin mainnet in 2018 after SegWit activation resolved transaction malleability, enabling production implementations.",
+    "read_next": [
+     "Bitcoin whitepaper",
+     "Subsequent Lightning specs and BOLTs",
+     "Works on payment channel networks and routing"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-04T15:24:53Z"
+  },
+  {
+   "title": "The Maker Protocol (Multi-Collateral Dai)",
+   "year": 2020,
+   "url": "https://makerdao.com/whitepaper/White%20Paper%20-The%20Maker%20Protocol_%20MakerDAO%E2%80%99s%20Multi-Collateral%20Dai%20%28MCD%29%20System-FINAL-%20021720.pdf",
+   "blockchainlab": "https://blockchainlab.com/whitepaper/maker-dai",
+   "chars": 46924,
+   "text_sha256_16": "1e7fabcea8d77f0a",
+   "summary": {
+    "tldr": "The Maker Protocol enables generation of Dai, a decentralized USD-soft-pegged stablecoin, by locking approved collateral in Ethereum Vaults governed by MKR token holders.",
+    "problem": "Centralized financial systems suffer from distrust and lack of transparency while volatile cryptocurrencies like Bitcoin fail as a medium of exchange due to price instability, creating demand for a decentralized, stable, collateral-backed currency.",
+    "mechanism": "Users deposit MKR-approved Ethereum assets into non-custodial Maker Vaults to mint Dai up to a collateralization threshold set by risk parameters; price oracles feed collateral values and Keepers arbitrage to maintain the $1 target while automated auctions liquidate undercollateralized Vaults, with excess Dai absorbed by the Maker Buffer or triggering Debt/Surplus auctions that mint or burn MKR. The Dai Savings Rate and Stability Fee are adjusted via MKR governance votes to steer market price toward the target. Emergency Shutdown can be triggered by MKR holders to freeze the system and allow proportional collateral claims at the Target Price.",
+    "key_ideas": [
+     "Multi-collateral Dai backed by surplus over-collateralization in audited Vault smart contracts",
+     "Scientific governance via MKR token voting on risk parameters, oracles, and fees",
+     "Decentralized oracles with OSM delay plus Emergency Oracles for price feeds and shutdown",
+     "Automated liquidation via Collateral, Debt, and Surplus auctions run by incentivized Keepers",
+     "Dai Savings Rate as a native yield mechanism and governance lever for price stability",
+     "Emergency Shutdown as last-resort protection and upgrade path"
+    ],
+    "assumptions_and_tradeoffs": [
+     "MKR holders act responsibly and maintain sufficient diversification via Debt Ceilings",
+     "Oracles remain uncompromised and Keepers provide adequate liquidity during stress",
+     "Formal verification and audits sufficiently mitigate smart-contract risk despite experimental nature",
+     "Complexity of Vault management and liquidation risk is accepted for permissionless access",
+     "Governance Security Module delay trades speed for protection against malicious proposals"
+    ],
+    "what_changed_since": "Single-Collateral Dai (Sai) was upgraded to Multi-Collateral Dai in November 2019; the system has since expanded collateral types and integrated with numerous DeFi protocols while remaining the largest decentralized stablecoin by adoption metrics.",
+    "read_next": [
+     "Introduction to the Maker Protocol (Maker Documentation Portal)",
+     "MakerDAO white paper (2017)",
+     "Dai Foundation Trust Deed",
+     "Multi-Collateral Dai Security Github repository"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-04T15:24:53Z"
+  },
+  {
+   "title": "Aave V3 Technical Paper",
+   "year": 2022,
+   "url": "https://github.com/aave/aave-v3-core/raw/master/techpaper/Aave_V3_Technical_Paper.pdf",
+   "blockchainlab": "https://blockchainlab.com/whitepaper/aave",
+   "chars": 42725,
+   "text_sha256_16": "1a8c6eaefc9d6fd6",
+   "summary": {
+    "tldr": "Aave V3 upgrades the protocol with E-Mode, Isolation Mode, Portals, granular risk controls, and admin roles to improve capital efficiency, safety, decentralization, and cross-chain UX over V2.",
+    "problem": "V2 suffered from idle liquidity, conservative borrowing power due to aggregated pools, liquidity segregation in isolated designs, limited on-chain risk defenses, governance bottlenecks for asset listing, and no seamless cross-chain liquidity movement.",
+    "mechanism": "E-Mode lets users select asset categories (e.g., stables) for overridden higher LTV/liquidation thresholds when collateral and debt are correlated; Isolation Mode flags assets with debt ceilings so only approved stables can be borrowed against them alone; Portals burn aTokens on source chain and mint on destination via bridges with unbacked mint accounting and fees; risk admins and oracles enable dynamic parameter changes and L2 sequencer protection; granular LTV vs. liquidation threshold split prevents impacting existing positions.",
+    "key_ideas": [
+     "E-Mode for correlated-asset capital efficiency up to 97% LTV",
+     "Isolation Mode with debt ceilings for safe permissionless listings",
+     "Portals enabling seamless aToken movement across chains",
+     "Supply/borrow caps, granular borrowing power, and Price Oracle Sentinel for risk mitigation",
+     "Asset Listing Admins and Risk Admins for decentralized yet flexible governance",
+     "Gas optimizations, permit support, and modular code reducing costs 20-25%"
+    ],
+    "assumptions_and_tradeoffs": [
+     "Governance must correctly categorize assets and vet bridges/admins to avoid insolvency or dilution from unbacked mints",
+     "E-Mode custom oracles reduce asynchronicity risk but add failure modes if derivatives depeg",
+     "Isolation debt ceilings limit exposure but require stablecoin borrowable assets to share denomination",
+     "Granular LTV allows zero-borrow power without liquidating existing users but still permits soft protection via liquidation threshold delta"
+    ],
+    "what_changed_since": "",
+    "read_next": [
+     "Aave V2 whitepaper",
+     "Aave risk framework docs",
+     "Aave governance forum on stable rate oracle"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-04T15:24:59Z"
+  },
+  {
+   "title": "Casper the Friendly Finality Gadget",
+   "year": 2017,
+   "url": "https://arxiv.org/pdf/1710.09437",
+   "blockchainlab": "https://blockchainlab.com/whitepaper/casper-ffg",
+   "chars": 35744,
+   "text_sha256_16": "5beff2e45b740b88",
+   "summary": {
+    "tldr": "Casper the Friendly Finality Gadget is a BFT-style proof-of-stake overlay that finalizes checkpoints on an existing PoW chain via validator votes, supermajority links, and slashing conditions to guarantee accountable safety and plausible liveness.",
+    "problem": "Existing chain-based PoS systems suffer from nothing-at-stake attacks and lack provable finality; pure BFT algorithms do not easily support dynamic validator sets or overlay existing PoW chains while defending against long-range revisions and >1/3 crashes.",
+    "mechanism": "Validators with deposits vote on checkpoint pairs (source, target) forming supermajority links that justify and finalize blocks; two slashing conditions (same target height or nested spans) penalize equivocation by destroying the entire deposit. A correct-by-construction fork-choice rule follows the justified checkpoint of greatest height. Dynamic validator sets use forward/rear sets across dynasties with a withdrawal delay; an inactivity leak drains deposits of non-voting validators to restore supermajority liveness after catastrophic crashes.",
+    "key_ideas": [
+     "Accountable safety: conflicting finalized checkpoints require ≥1/3 deposit to be slashed",
+     "Plausible liveness: ≥2/3 honest validators can always justify and finalize a new checkpoint",
+     "Two Casper commandments as slashing conditions for equivocation",
+     "Modular overlay design atop any proposal mechanism (initially PoW)",
+     "Dynamic validator sets via dynasty-based forward/rear sets and withdrawal delay",
+     "Inactivity leak plus 'never revert finalized blocks' rule to handle long-range attacks and crashes"
+    ],
+    "assumptions_and_tradeoffs": [
+     "<1/3 validator weight violates slashing conditions for safety",
+     "Weak synchronicity assumption: clients periodically obtain up-to-date chain view and respect withdrawal delay ω",
+     "Liveness depends on the underlying proposal mechanism; finality can be prevented by a compromised proposer",
+     "Clients must follow the Casper fork-choice rule instead of longest-chain"
+    ],
+    "what_changed_since": "Ethereum later adopted a variant of Casper FFG (combined with LMD-GHOST) as the finality gadget in the beacon chain during its transition to proof-of-stake.",
+    "read_next": [
+     "Gasper: the combination of Casper FFG and LMD-GHOST",
+     "Tendermint: earlier BFT-based PoS consensus",
+     "Ethereum 2.0 Phase 0 beacon chain specification"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-04T15:25:02Z"
+  },
+  {
+   "title": "EIP-1559: Fee market change",
+   "year": 2019,
+   "url": "https://eips.ethereum.org/EIPS/eip-1559",
+   "blockchainlab": "https://blockchainlab.com/whitepaper/eip-1559",
+   "chars": 21465,
+   "text_sha256_16": "86ca346ced93cbfa",
+   "summary": {
+    "tldr": "A transaction pricing mechanism that includes fixed-per-block network fee that is burned and dynamically expands/contracts block sizes to deal with transient congestion.",
+    "problem": "Ethereum's first-price auction fee market causes volatile fees mismatched to actual network cost, needless multi-block delays, overpayment due to auction inefficiencies, and long-term instability for reward-only miners.",
+    "mechanism": "A base fee per gas is computed each block from the parent block's gas usage versus target (gas_limit / ELASTICITY_MULTIPLIER=2); it rises when above target and falls when below, with changes capped by BASE_FEE_MAX_CHANGE_DENOMINATOR=8. The base fee is always burned. New 0x02 transactions specify max_priority_fee_per_gas (tip to miner) and max_fee_per_gas (total cap); the effective price paid is base_fee + min(priority, max_fee-base_fee), with legacy transactions still supported but converted to the same accounting. Blocks may temporarily reach 2x the gas target to absorb bursts while the base fee auto-adjusts.",
+    "key_ideas": [
+     "Base fee burned to cement ETH value and eliminate miner incentive to manipulate fees",
+     "Dynamic block size (elasticity multiplier) absorbs short-term demand spikes without manual gas-limit votes",
+     "Predictable base-fee changes allow wallets to auto-set fees reliably",
+     "Miners receive only the priority fee; base fee is protocol-burned",
+     "First-price auction replaced by posted-price plus optional tip, reducing fee-estimation complexity",
+     "Requires EIP-2718 typed transactions and EIP-2930 access lists"
+    ],
+    "assumptions_and_tradeoffs": [
+     "Average block size remains similar; only short-term bursts reach 2x gas target",
+     "Transaction ordering shifts from pure fee competition to client-internal rules (timestamp recommended)",
+     "Empty-block mining attack possible but unstable unless >50% hash power is controlled",
+     "ETH supply no longer strictly fixed; net inflation/deflation depends on demand",
+     "Clients must handle larger transient blocks without OOM or validation failure"
+    ],
+    "what_changed_since": "Implemented in the London hard fork (August 2021) with the parameters INITIAL_BASE_FEE, BASE_FEE_MAX_CHANGE_DENOMINATOR=8 and ELASTICITY_MULTIPLIER=2.",
+    "read_next": [
+     "EIP-2718",
+     "EIP-2930",
+     "EIP-4844 (proto-danksharding fee market extensions)"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-04T15:25:05Z"
+  },
+  {
+   "title": "EIP-4844: Shard Blob Transactions",
+   "year": 2022,
+   "url": "https://eips.ethereum.org/EIPS/eip-4844",
+   "blockchainlab": "https://blockchainlab.com/whitepaper/eip-4844",
+   "chars": 23340,
+   "text_sha256_16": "8e9f21d404a1fb0b",
+   "summary": {
+    "tldr": "EIP-4844 introduces a new 'blob-carrying transaction' type that provides cheap, temporary data availability for rollups by adding ~0.375 MB target (0.75 MB max) of blob data per block, stored on the beacon chain but inaccessible to the EVM, in a format fully compatible with future full sharding.",
+    "problem": "Rollups are the primary near-term scaling solution but still face high L1 fees; full data sharding that would add ~16 MB of dedicated data space is not yet ready, creating urgent need for a stop-gap that avoids forcing multiple rollup upgrades.",
+    "mechanism": "A new EIP-2718 transaction type (0x03) carries versioned KZG hashes of blobs; blobs are propagated as consensus-layer sidecars, referenced by versioned hashes in the execution layer, and priced via a separate EIP-1559-style blob gas market using excess_blob_gas and a fake_exponential base-fee update. A new BLOBHASH opcode and point-evaluation precompile allow contracts to verify specific evaluations of the committed polynomials. Execution-layer validity checks enforce blob count, version, and fee payment; consensus layer ensures availability for MIN_EPOCHS_FOR_BLOB_SIDECARS_REQUESTS epochs before blobs may be pruned.",
+    "key_ideas": [
+     "Forward-compatible blob transaction format identical to the one planned for full sharding",
+     "Separate blob gas market with target 3 / max 6 blobs per block and exponential base-fee adjustment",
+     "KZG commitments referenced via versioned hashes plus point-evaluation precompile for data verification",
+     "Blobs are beacon-chain sidecars, not EVM-accessible calldata, enabling later DAS replacement",
+     "Single upgrade path for rollups: move from calldata to blobs once, without further EVM changes",
+     "Reduced scope (no 2D sampling, no PBS, no proof-of-custody) to deliver scaling relief quickly"
+    ],
+    "assumptions_and_tradeoffs": [
+     "Network bandwidth can absorb a sustained ~0.75 MB worst-case increase per block",
+     "Blobs need only ~18 days of availability rather than permanent storage",
+     "Implementing ~25-50% of sharding work now is preferable to multiple rollup data-format migrations",
+     "Mempool DoS risk from large txs is mitigated by announcement-only gossip and size-aware replacement rules"
+    ],
+    "what_changed_since": "EIP-4844 was activated in the Dencun hard fork (March 2024), enabling proto-danksharding with live blob transactions and the blob fee market.",
+    "read_next": [
+     "EIP-7594 (PeerDAS)",
+     "full danksharding consensus-specs",
+     "EIP-1559",
+     "EIP-2718"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-04T15:25:06Z"
+  }
+ ],
+ "disclaimer": "AI-generated by Grok from the public data shown. It can be wrong; verify before acting. Not financial, legal or security advice."
+}

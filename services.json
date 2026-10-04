@@ -1,0 +1,1224 @@
+{
+ "generated_at": "2026-10-04T15:25:20Z",
+ "count": 75,
+ "categories": [
+  "AI",
+  "Data API",
+  "Developers",
+  "Feeds",
+  "Finders",
+  "Monitors",
+  "Tools"
+ ],
+ "services": [
+  {
+   "id": "ai-brief",
+   "name": "AI daily market brief",
+   "category": "AI",
+   "description": "Daily structure brief of chains, DEXs, fees, stablecoins, L2s and security — written by Grok from live data.",
+   "url": "https://blockchains.github.io/ai/brief/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/ai/brief.json",
+    "max_age_h": 30
+   },
+   "tags": [
+    "ai",
+    "grok",
+    "daily"
+   ]
+  },
+  {
+   "id": "ai-incidents",
+   "name": "AI incident explainer",
+   "category": "AI",
+   "description": "Recent hacks explained in plain English with a lesson for builders and the matching hands-on lab.",
+   "url": "https://blockchains.github.io/ai/incidents/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/ai/incidents.json",
+    "max_age_h": 30
+   },
+   "tags": [
+    "ai",
+    "grok",
+    "daily",
+    "security"
+   ]
+  },
+  {
+   "id": "ai-ideas",
+   "name": "AI hackathon idea generator",
+   "category": "AI",
+   "description": "12 buildable hackathon ideas matched to upcoming events, grant programmes and category trends.",
+   "url": "https://blockchains.github.io/ai/ideas/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/ai/ideas.json",
+    "max_age_h": 30
+   },
+   "tags": [
+    "ai",
+    "grok",
+    "daily"
+   ]
+  },
+  {
+   "id": "ai-digest",
+   "name": "AI chain-health & L2 digest",
+   "category": "AI",
+   "description": "Chain liveness, gas, RPC reliability and L2 metrics summarised.",
+   "url": "https://blockchains.github.io/ai/digest/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/ai/digest.json",
+    "max_age_h": 30
+   },
+   "tags": [
+    "ai",
+    "grok",
+    "daily"
+   ]
+  },
+  {
+   "id": "ai-protocols",
+   "name": "AI protocol briefs",
+   "category": "AI",
+   "description": "What the top 15 DeFi protocols do, how they earn, and their key risks.",
+   "url": "https://blockchains.github.io/ai/protocols/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/ai/protocols.json",
+    "max_age_h": 192
+   },
+   "tags": [
+    "ai",
+    "grok",
+    "weekly",
+    "defi"
+   ]
+  },
+  {
+   "id": "ai-contracts",
+   "name": "AI contract explainer",
+   "category": "AI",
+   "description": "Plain-English explainers of 17 of the most-used mainnet contracts from their verified source.",
+   "url": "https://blockchains.github.io/ai/contracts/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/ai/contracts.json",
+    "max_age_h": 192
+   },
+   "tags": [
+    "ai",
+    "grok",
+    "weekly",
+    "security"
+   ]
+  },
+  {
+   "id": "ai-audits",
+   "name": "AI audit-checklist reports",
+   "category": "AI",
+   "description": "Checklist reviews of popular contracts combining Slither output with a Grok security review.",
+   "url": "https://blockchains.github.io/ai/audits/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/ai/audits.json",
+    "max_age_h": 192
+   },
+   "tags": [
+    "ai",
+    "grok",
+    "weekly",
+    "security"
+   ]
+  },
+  {
+   "id": "ai-whitepapers",
+   "name": "AI whitepaper summaries",
+   "category": "AI",
+   "description": "Structured summaries of 12 foundational papers (Bitcoin, Ethereum, Uniswap, EIP-1559, EIP-4844…).",
+   "url": "https://blockchains.github.io/ai/whitepapers/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/ai/whitepapers.json",
+    "max_age_h": 192
+   },
+   "tags": [
+    "ai",
+    "grok",
+    "weekly",
+    "research"
+   ]
+  },
+  {
+   "id": "mon-gas",
+   "name": "Gas tracker & alerts",
+   "category": "Monitors",
+   "description": "Base/priority fees on 21 chains, Ethereum blob fee and Bitcoin sat/vB, with browser alerts when gas drops below your threshold.",
+   "url": "https://blockchains.github.io/gas/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/gas.json",
+    "max_age_h": 3
+   },
+   "tags": [
+    "monitor"
+   ]
+  },
+  {
+   "id": "mon-chains",
+   "name": "Chain liveness monitor",
+   "category": "Monitors",
+   "description": "Head-block age for 21 EVM chains, Bitcoin and Solana — spots halted or stalled chains.",
+   "url": "https://blockchains.github.io/chains/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/liveness.json",
+    "max_age_h": 3
+   },
+   "tags": [
+    "monitor"
+   ]
+  },
+  {
+   "id": "mon-rpc",
+   "name": "RPC latency leaderboard",
+   "category": "Monitors",
+   "description": "64 public RPC endpoints ranked by median latency, success rate and block lag; test from your own browser too.",
+   "url": "https://blockchains.github.io/rpc/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/rpc-latency.json",
+    "max_age_h": 3
+   },
+   "tags": [
+    "monitor"
+   ]
+  },
+  {
+   "id": "mon-depeg",
+   "name": "Stablecoin depeg monitor",
+   "category": "Monitors",
+   "description": "Every USD stablecoin over $50M, price deviation from $1 and alert status.",
+   "url": "https://blockchains.github.io/depeg/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/depeg.json",
+    "max_age_h": 30
+   },
+   "tags": [
+    "monitor"
+   ]
+  },
+  {
+   "id": "mon-scan",
+   "name": "Contract security quick-scan",
+   "category": "Monitors",
+   "description": "Slither static analysis of popular verified contracts, refreshed weekly; on-demand scans via workflow dispatch.",
+   "url": "https://blockchains.github.io/scan/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/slither.json",
+    "max_age_h": 192
+   },
+   "tags": [
+    "monitor"
+   ]
+  },
+  {
+   "id": "mon-incidents",
+   "name": "Chain incident feed",
+   "category": "Monitors",
+   "description": "Latest 300 hacks and exploits with technique, chains and amounts.",
+   "url": "https://blockchains.github.io/incidents/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/incidents.json",
+    "max_age_h": 30
+   },
+   "tags": [
+    "monitor"
+   ]
+  },
+  {
+   "id": "mon-sites",
+   "name": "Website status monitor",
+   "category": "Monitors",
+   "description": "Uptime, TLS, security headers and SEO checks for the Blockchain Lab sites.",
+   "url": "https://blockchains.github.io/sites-monitor/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/sites-monitor/"
+   },
+   "tags": [
+    "monitor"
+   ]
+  },
+  {
+   "id": "feed-incidents",
+   "name": "Incident RSS feed",
+   "category": "Feeds",
+   "description": "Subscribe to new hacks/exploits in any RSS reader.",
+   "url": "https://blockchains.github.io/incidents/feed.xml",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/incidents/feed.xml",
+    "contains": "<rss"
+   },
+   "tags": [
+    "feed",
+    "rss"
+   ]
+  },
+  {
+   "id": "feed-events",
+   "name": "Events calendar (ICS)",
+   "category": "Feeds",
+   "description": "Subscribe in Google/Apple/Outlook calendar: upcoming ETHGlobal hackathons and summits.",
+   "url": "https://blockchains.github.io/events/events.ics",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/events/events.ics",
+    "contains": "BEGIN:VCALENDAR"
+   },
+   "tags": [
+    "feed",
+    "ics"
+   ]
+  },
+  {
+   "id": "find-portfolio",
+   "name": "Wallet portfolio viewer",
+   "category": "Finders",
+   "description": "Read-only balances for any address or ENS across 10 EVM chains via public RPCs + Multicall3. Nothing leaves your browser.",
+   "url": "https://blockchains.github.io/portfolio/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/portfolio/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "finder"
+   ]
+  },
+  {
+   "id": "find-compare",
+   "name": "Protocol comparison",
+   "category": "Finders",
+   "description": "Compare up to 4 DeFi protocols side by side: TVL, 7-day change, fees, chains, audits.",
+   "url": "https://blockchains.github.io/compare/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/protocols.json",
+    "max_age_h": 30
+   },
+   "tags": [
+    "finder"
+   ]
+  },
+  {
+   "id": "find-events",
+   "name": "Events & hackathons calendar",
+   "category": "Finders",
+   "description": "Upcoming hackathons and summits with one-click calendar subscription.",
+   "url": "https://blockchains.github.io/events/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/events.json",
+    "max_age_h": 30
+   },
+   "tags": [
+    "finder"
+   ]
+  },
+  {
+   "id": "find-jobs",
+   "name": "Crypto job board",
+   "category": "Finders",
+   "description": "500+ open roles aggregated daily from public job boards (Greenhouse APIs, CryptoJobsList).",
+   "url": "https://blockchains.github.io/jobs/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/jobs.json",
+    "max_age_h": 30
+   },
+   "tags": [
+    "finder"
+   ]
+  },
+  {
+   "id": "find-grants",
+   "name": "Grants finder",
+   "category": "Finders",
+   "description": "33 ecosystem grant programmes with official links checked daily.",
+   "url": "https://blockchains.github.io/grants/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/grants.json",
+    "max_age_h": 30
+   },
+   "tags": [
+    "finder"
+   ]
+  },
+  {
+   "id": "find-glossary",
+   "name": "Glossary search",
+   "category": "Finders",
+   "description": "Instant search over the Blockchain Lab glossary.",
+   "url": "https://blockchains.github.io/glossary/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/data/glossary.json",
+    "max_age_h": 30
+   },
+   "tags": [
+    "finder"
+   ]
+  },
+  {
+   "id": "find-papers",
+   "name": "Whitepaper library search",
+   "category": "Finders",
+   "description": "Search 600+ blockchain papers in the Blockchain Lab research corpus.",
+   "url": "https://blockchains.github.io/papers/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/papers/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "finder"
+   ]
+  },
+  {
+   "id": "find-phishing",
+   "name": "Phishing domain checker",
+   "category": "Finders",
+   "description": "Check a URL against MetaMask's open phishing blocklist before you connect a wallet (fuzzy look-alike match too).",
+   "url": "https://blockchains.github.io/phishing/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/phishing/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "finder"
+   ]
+  },
+  {
+   "id": "tool-gas",
+   "name": "Multi-chain gas & fee estimator (Ethereum, Base, Arbitrum, OP, Polygon, BNB, Avalanche, Bitcoin, Solana)",
+   "category": "Tools",
+   "description": "Live gas prices and transaction cost in USD across EVM chains, Bitcoin sat/vB and Solana priority fees, read directly from public RPCs.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/gas/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/gas/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-units",
+   "name": "Wei / Gwei / Ether, Sats / BTC, Lamports / SOL unit converter",
+   "category": "Tools",
+   "description": "Exact big-number conversion between wei, gwei, ether, satoshis, BTC, lamports and SOL — no floating point errors.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/units/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/units/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-abi",
+   "name": "ABI encoder / decoder & function selector lookup",
+   "category": "Tools",
+   "description": "Encode Solidity function calls, decode calldata, compute 4-byte selectors and event topics, and look up unknown selectors in the openchain / 4byte signature databases.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/abi/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/abi/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-address",
+   "name": "Ethereum address checksum validator, ENS resolver & contract inspector",
+   "category": "Tools",
+   "description": "Validate EIP-55 checksums, resolve ENS names (forward and reverse), and inspect any address on Ethereum, Base, Arbitrum, OP, Polygon, BNB or Avalanche: balance, nonce, contract code, proxy implementation, EIP-7702 delegation and ERC-20 metadata.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/address/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/address/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-tx",
+   "name": "Transaction decoder for Ethereum, Base, Arbitrum, Polygon, OP",
+   "category": "Tools",
+   "description": "Paste a transaction hash to decode the function call, arguments, event logs, status and fees on Ethereum, Base, Arbitrum, Polygon, OP Mainnet, BNB Chain and Avalanche via public RPC.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/tx/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/tx/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-hash",
+   "name": "Keccak-256, SHA-256 hasher & OpenZeppelin Merkle tree builder",
+   "category": "Tools",
+   "description": "Hash text or hex with keccak256, sha256 and ripemd160, and build OpenZeppelin-compatible Merkle trees (StandardMerkleTree / SimpleMerkleTree) with root and proofs for airdrops and allowlists.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/hash/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/hash/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-storage",
+   "name": "Solidity storage slot calculator (mappings, arrays, ERC-7201, EIP-1967)",
+   "category": "Tools",
+   "description": "Compute Solidity storage slots for mappings, nested mappings, dynamic arrays, ERC-7201 namespaces and EIP-1967 proxy slots — then read the live value from any EVM chain.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/storage/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/storage/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-reference",
+   "name": "EIP / ERC / BIP quick reference — searchable index",
+   "category": "Tools",
+   "description": "Search every Ethereum EIP and ERC and every Bitcoin BIP by number, title or status. Rebuilt nightly from ethereum/EIPs, ethereum/ERCs and bitcoin/bips.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/reference/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/reference/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-chains",
+   "name": "Chainlist — EVM chain IDs, RPC endpoints & explorers, add to wallet",
+   "category": "Tools",
+   "description": "Search 2,700+ EVM networks by name or chain ID, test public RPC latency live from your browser, and add a network to MetaMask/any EIP-3085 wallet.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/chains/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/chains/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-tokens",
+   "name": "Token list lookup — find ERC-20 addresses by symbol across chains",
+   "category": "Tools",
+   "description": "Search the Uniswap default token list by symbol, name or address across Ethereum, Base, Arbitrum, OP, Polygon, BNB and Avalanche, and verify any token's on-chain name, symbol, decimals and supply.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/tokens/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/tokens/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-safe",
+   "name": "Safe (Gnosis Safe) multisig tx builder & decoder — safeTxHash, MultiSend",
+   "category": "Tools",
+   "description": "Build a Safe transaction and compute its EIP-712 safeTxHash locally, cross-check against the Safe contract on-chain, read owners/threshold/nonce, and decode execTransaction or MultiSend batches.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/safe/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/safe/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-eip712",
+   "name": "EIP-712 typed data signer & verifier, EIP-191, ERC-1271",
+   "category": "Tools",
+   "description": "Hash EIP-712 typed data (digest, domain separator, struct hash), sign with a throwaway key or your wallet, recover the signer, verify personal_sign messages and check ERC-1271 smart-account signatures on-chain.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/eip712/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/eip712/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-calldiff",
+   "name": "Calldata diff — compare two transactions' calldata field by field",
+   "category": "Tools",
+   "description": "Decode two calldata blobs (or two tx hashes) with openchain/4byte signatures and highlight every argument and 32-byte word that differs.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/calldiff/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/calldiff/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-verify",
+   "name": "Contract verification lookup — Sourcify & Blockscout",
+   "category": "Tools",
+   "description": "Check whether a smart contract's source code is verified on Sourcify (full/partial match) and Blockscout, with compiler version, licence, proxy type and implementation addresses.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/verify/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/verify/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-gas-history",
+   "name": "Gas price history charts — last 1,024 blocks on 7 EVM chains",
+   "category": "Tools",
+   "description": "Chart base fee, median priority tip and block fullness over the last 1,024 blocks for Ethereum, Base, Arbitrum, OP, Polygon, BNB Chain and Avalanche, with min/median/p75/max stats.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/gas-history/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/gas-history/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-bridge",
+   "name": "Bridge fee comparison — Across vs LI.FI vs Relay live quotes",
+   "category": "Tools",
+   "description": "Compare live quotes for bridging USDC or ETH between Ethereum, Base, Arbitrum, OP and Polygon: amount received, fees and estimated time from Across, LI.FI and Relay.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/bridge/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/bridge/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-approvals",
+   "name": "Token approval checker & revoke links",
+   "category": "Tools",
+   "description": "Check which popular spenders (Permit2, Uniswap, 1inch, 0x, CoW, Balancer, OpenSea, Aave…) can move an address's ERC-20 tokens, flag unlimited approvals, and get one-click revoke links and approve(spender, 0) calldata.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/approvals/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/approvals/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-ens-bulk",
+   "name": "ENS bulk resolver — resolve many names & reverse-lookup addresses",
+   "category": "Tools",
+   "description": "Resolve a list of ENS names to addresses (with avatar, url, Twitter, GitHub records) and reverse-resolve addresses to primary names, verifying forward/reverse match. Export as CSV.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/ens-bulk/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/ens-bulk/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-solana-tx",
+   "name": "Solana transaction decoder — instructions, balance & token changes",
+   "category": "Tools",
+   "description": "Decode any Solana transaction signature: status, fee, compute units, parsed instructions and inner instructions with program names (Jupiter, Raydium, Orca, Meteora, SPL Token…), SOL and token balance changes, and logs.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/solana-tx/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/solana-tx/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-psbt",
+   "name": "Bitcoin PSBT & raw transaction decoder",
+   "category": "Tools",
+   "description": "Decode a Bitcoin PSBT (BIP-174, base64 or hex) or raw transaction: inputs, outputs, addresses, script types, fee and fee rate, signatures present, BIP-32 derivation paths. Runs offline in your browser.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/psbt/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/psbt/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-labels",
+   "name": "Address labels — who is this address? Blockscout tags, ENS, OFAC check",
+   "category": "Tools",
+   "description": "Look up public labels for an EVM address: Blockscout contract name and public tags, token info, ENS primary name, Uniswap token-list match, well-known spender names, and an OFAC SDN sanctions check.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/labels/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/labels/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-vanity",
+   "name": "Vanity address difficulty & time estimator + CREATE2 calculator",
+   "category": "Tools",
+   "description": "Estimate how many attempts and how long it takes to find an Ethereum vanity address prefix (case-insensitive or EIP-55 checksum), benchmarked live on your device, and compute CREATE2 deployment addresses.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/vanity/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/vanity/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-price-impact",
+   "name": "Uniswap v3 price impact calculator — live on-chain quotes",
+   "category": "Tools",
+   "description": "Quote a Uniswap v3 swap on-chain with QuoterV2 and see amount out, mid price, execution price, price impact, price after the trade, ticks crossed and gas estimate — Ethereum, Base, Arbitrum, OP, Polygon.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/price-impact/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/price-impact/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-mev",
+   "name": "MEV sandwich checker — was my swap sandwiched?",
+   "category": "Tools",
+   "description": "Paste an Ethereum/Base/Arbitrum/OP/Polygon transaction hash to check whether it was sandwiched: finds a front-run swap on the same pool in the same direction and a back-run reversing it from the same EOA or bot contract.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/mev/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/mev/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-stablecoins",
+   "name": "Stablecoin peg & supply monitor — USDT, USDC, DAI, USDe…",
+   "category": "Tools",
+   "description": "Live stablecoin table: price vs peg, circulating supply, 7-day supply change, peg mechanism and chain count for 400+ stablecoins from DefiLlama.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/stablecoins/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/stablecoins/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "tool-rpc-health",
+   "name": "Public RPC health checker — latency & block lag for free endpoints",
+   "category": "Tools",
+   "description": "Test free public RPC endpoints for Ethereum, Base, Arbitrum, OP, Polygon, BNB Chain and Avalanche from your browser: reachability, latency, chain ID and how many blocks behind the best endpoint each is. Plus the nightly server-side probe.",
+   "url": "https://blockchains.github.io/blockchainlab-tools/rpc-health/",
+   "check": {
+    "type": "page",
+    "url": "https://blockchains.github.io/blockchainlab-tools/rpc-health/",
+    "contains": "<h1"
+   },
+   "tags": [
+    "tool",
+    "browser"
+   ]
+  },
+  {
+   "id": "data-bips",
+   "name": "API: bips",
+   "category": "Data API",
+   "description": "Bitcoin Improvement Proposals index parsed from bitcoin/bips.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/bips.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/bips.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/bips.schema.json"
+  },
+  {
+   "id": "data-bridges",
+   "name": "API: bridges",
+   "category": "Data API",
+   "description": "Cross-chain and canonical bridges ranked by TVL (DefiLlama bridge categories).",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/bridges.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/bridges.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/bridges.schema.json"
+  },
+  {
+   "id": "data-chains",
+   "name": "API: chains",
+   "category": "Data API",
+   "description": "EVM chain registry: chain IDs, native currency, public RPC endpoints and explorers.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/chains.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/chains.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/chains.schema.json"
+  },
+  {
+   "id": "data-chains-tvl",
+   "name": "API: chains-tvl",
+   "category": "Data API",
+   "description": "DeFi TVL by chain (USD). Snapshot from DefiLlama.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/chains-tvl.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/chains-tvl.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/chains-tvl.schema.json"
+  },
+  {
+   "id": "data-dex-volumes",
+   "name": "API: dex-volumes",
+   "category": "Data API",
+   "description": "DEX trading volume by protocol (top 300 by 24h). Snapshot from DefiLlama.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/dex-volumes.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/dex-volumes.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/dex-volumes.schema.json"
+  },
+  {
+   "id": "data-eips",
+   "name": "API: eips",
+   "category": "Data API",
+   "description": "EIPS index (number, title, status, type, category) parsed from ethereum/EIPs.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/eips.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/eips.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/eips.schema.json"
+  },
+  {
+   "id": "data-ercs",
+   "name": "API: ercs",
+   "category": "Data API",
+   "description": "ERCS index (number, title, status, type, category) parsed from ethereum/ERCs.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/ercs.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/ercs.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/ercs.schema.json"
+  },
+  {
+   "id": "data-events",
+   "name": "API: events",
+   "category": "Data API",
+   "description": "Upcoming blockchain events from the Blockchain Lab feeds.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/events.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/events.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/events.schema.json"
+  },
+  {
+   "id": "data-fees",
+   "name": "API: fees",
+   "category": "Data API",
+   "description": "Protocol fees by protocol (top 300 by 24h). Snapshot from DefiLlama.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/fees.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/fees.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/fees.schema.json"
+  },
+  {
+   "id": "data-glossary",
+   "name": "API: glossary",
+   "category": "Data API",
+   "description": "Plain-language blockchain glossary from blockchainlab.com (concepts, protocol profiles, failure classes, stack layers).",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/glossary.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/glossary.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/glossary.schema.json"
+  },
+  {
+   "id": "data-grants",
+   "name": "API: grants",
+   "category": "Data API",
+   "description": "Directory of blockchain ecosystem grant / funding programmes with official links. Curated by Blockchain Lab; link status re-checked nightly. No amounts are listed — read each programme's own page.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/grants.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/grants.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/grants.schema.json"
+  },
+  {
+   "id": "data-hackathons",
+   "name": "API: hackathons",
+   "category": "Data API",
+   "description": "Open and upcoming blockchain hackathons (Devpost, ETHGlobal).",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/hackathons.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/hackathons.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/hackathons.schema.json"
+  },
+  {
+   "id": "data-l2-metrics",
+   "name": "API: l2-metrics",
+   "category": "Data API",
+   "description": "Ethereum L2/L3 scaling projects: stage, category, stack, risk summary and Total Value Secured breakdown. From L2BEAT.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/l2-metrics.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/l2-metrics.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/l2-metrics.schema.json"
+  },
+  {
+   "id": "data-protocols",
+   "name": "API: protocols",
+   "category": "Data API",
+   "description": "Top 500 DeFi protocols by TVL (USD), excluding CEXs. Snapshot from DefiLlama; not investment advice.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/protocols.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/protocols.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/protocols.schema.json"
+  },
+  {
+   "id": "data-rpc-health",
+   "name": "API: rpc-health",
+   "category": "Data API",
+   "description": "Health of popular free public RPC endpoints (EVM chains, Solana, Bitcoin): reachability, latency, block lag vs best endpoint, chain-ID check. Probed from a GitHub Actions runner (US) at build time.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/rpc-health.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/rpc-health.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/rpc-health.schema.json"
+  },
+  {
+   "id": "data-sanctioned-addresses",
+   "name": "API: sanctioned-addresses",
+   "category": "Data API",
+   "description": "Digital currency addresses on the US Treasury OFAC SDN list, per asset. Extracted daily from the official SDN XML by github.com/0xB10C. Compliance screening aid only — verify against the official list.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/sanctioned-addresses.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/sanctioned-addresses.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/sanctioned-addresses.schema.json"
+  },
+  {
+   "id": "data-security-incidents",
+   "name": "API: security-incidents",
+   "category": "Data API",
+   "description": "Public record of crypto hacks and exploits: date, protocol, technique, classification, amount lost/returned. From DefiLlama's hacks database.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/security-incidents.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/security-incidents.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/security-incidents.schema.json"
+  },
+  {
+   "id": "data-stablecoins",
+   "name": "API: stablecoins",
+   "category": "Data API",
+   "description": "Stablecoins by circulating supply with price, peg mechanism and 1d/7d/30d supply change. Snapshot from DefiLlama.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/stablecoins.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/stablecoins.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/stablecoins.schema.json"
+  },
+  {
+   "id": "data-whitepapers",
+   "name": "API: whitepapers",
+   "category": "Data API",
+   "description": "Blockchain Lab research corpus — whitepaper metadata (no paper text). Original sources linked.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/whitepapers.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/whitepapers.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/whitepapers.schema.json"
+  },
+  {
+   "id": "data-yields",
+   "name": "API: yields",
+   "category": "Data API",
+   "description": "Top 500 DeFi yield pools by TVL (>= $10m) with APY, base/reward split, IL risk. Snapshot from DefiLlama; APYs change constantly and are not advice.",
+   "url": "https://blockchains.github.io/blockchainlab-api/v1/yields.json",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/blockchainlab-api/v1/yields.json",
+    "max_age_h": 50
+   },
+   "tags": [
+    "api",
+    "json"
+   ],
+   "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/yields.schema.json"
+  },
+  {
+   "id": "dev-sdk",
+   "name": "Blockchain Lab SDK (TS + Python)",
+   "category": "Developers",
+   "description": "Typed clients for every API dataset. npm i github:Blockchains/blockchainlab-sdk",
+   "url": "https://github.com/Blockchains/blockchainlab-sdk",
+   "check": {
+    "type": "ci",
+    "repo": "Blockchains/blockchainlab-sdk"
+   },
+   "tags": [
+    "developer"
+   ]
+  },
+  {
+   "id": "dev-mcp",
+   "name": "MCP server (43 tools)",
+   "category": "Developers",
+   "description": "Give Claude, Cursor or VS Code agents 43 blockchain tools. Docker image on GHCR.",
+   "url": "https://github.com/Blockchains/blockchainlab-mcp",
+   "check": {
+    "type": "ci",
+    "repo": "Blockchains/blockchainlab-mcp"
+   },
+   "tags": [
+    "developer"
+   ]
+  },
+  {
+   "id": "dev-labs",
+   "name": "54 hands-on labs",
+   "category": "Developers",
+   "description": "Solidity/Foundry, Noir ZK and Cairo labs with tests — security, DeFi, MEV, governance.",
+   "url": "https://github.com/Blockchains/blockchainlab-labs",
+   "check": {
+    "type": "ci",
+    "repo": "Blockchains/blockchainlab-labs"
+   },
+   "tags": [
+    "developer"
+   ]
+  },
+  {
+   "id": "dev-apidocs",
+   "name": "API docs & OpenAPI",
+   "category": "Developers",
+   "description": "OpenAPI 3 spec, JSON Schemas and usage examples for the data API.",
+   "url": "https://blockchains.github.io/blockchainlab-api/",
+   "check": {
+    "type": "ci",
+    "repo": "Blockchains/blockchainlab-api"
+   },
+   "tags": [
+    "developer"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,280 @@
+{
+ "service": "ai/ideas",
+ "description": "AI hackathon idea generator",
+ "generated_at": "2026-10-04T15:22:19Z",
+ "source": "Grok (xAI) over public data: ETHGlobal events, DefiLlama, grants list",
+ "source_url": "https://blockchains.github.io/ai/",
+ "built_by": "Blockchain Lab — https://blockchainlab.com",
+ "ideas": [
+  {
+   "title": "SafeGuard Approval Visualizer",
+   "pitch": "A browser extension that decodes and visualizes ERC-20 approvals using Blockchain Lab tools to prevent phishing drains. Users scan transactions in real-time with MEV and calldata diff checks.",
+   "track": "Security",
+   "difficulty": "beginner",
+   "stack": [
+    "Solidity",
+    "EIP-712",
+    "Browser Extension",
+    "Blockchain Lab API"
+   ],
+   "build_steps": [
+    "Integrate MEV checker and approvals API",
+    "Build UI for approval simulation",
+    "Add calldata diff visualization",
+    "Test with sample phishing txs",
+    "Deploy as Chrome extension"
+   ],
+   "fits_event": "ETHGlobal Mumbai",
+   "fits_grant": "Ethereum Foundation Ecosystem Support Program (Ethereum)",
+   "why_now": "Approval exploits remain top attack vector as DeFi TVL grows in Lending and Bridges."
+  },
+  {
+   "title": "RWA Yield Aggregator",
+   "pitch": "Onchain tool that routes stablecoin deposits into tokenized real-world assets across chains using canonical bridges. Pulls live TVL data from Blockchain Lab datasets for optimal allocation.",
+   "track": "RWA",
+   "difficulty": "intermediate",
+   "stack": [
+    "Solidity",
+    "Chainlink",
+    "The Graph",
+    "Blockchain Lab API"
+   ],
+   "build_steps": [
+    "Fetch RWA TVL via API",
+    "Implement bridge routing logic",
+    "Build yield comparison dashboard",
+    "Add Safe transaction batching",
+    "Deploy on testnets"
+   ],
+   "fits_event": "Pragma Mumbai",
+   "fits_grant": "Arbitrum Foundation Grants (Arbitrum)",
+   "why_now": "RWA category shows 5.5% TVL growth signaling rising institutional interest."
+  },
+  {
+   "title": "ZK Private Voting Module",
+   "pitch": "Noir-based ZK circuit for private DAO voting integrated with Snapshot. Uses Blockchain Lab SDK for proof generation and verification on Ethereum.",
+   "track": "Privacy",
+   "difficulty": "advanced",
+   "stack": [
+    "Noir",
+    "zkSync",
+    "Solidity",
+    "Blockchain Lab SDK"
+   ],
+   "build_steps": [
+    "Design voting circuit in Noir",
+    "Build frontend with SDK",
+    "Implement onchain verifier",
+    "Test with 54 labs examples",
+    "Integrate Snapshot hook"
+   ],
+   "fits_event": "ETHGlobal Mumbai",
+   "fits_grant": "zkSync Grants (ZKsync)",
+   "why_now": "Privacy TVL up 2.65% amid increasing regulatory scrutiny on onchain governance."
+  },
+  {
+   "title": "Bridge Liquidity Monitor",
+   "pitch": "Real-time dashboard tracking canonical bridge inflows using Blockchain Lab datasets to flag liquidity imbalances. Alerts via Telegram for DeFi users.",
+   "track": "Infra",
+   "difficulty": "beginner",
+   "stack": [
+    "TypeScript",
+    "Blockchain Lab API",
+    "React",
+    "Telegram Bot"
+   ],
+   "build_steps": [
+    "Query bridge TVL endpoints",
+    "Build alert logic",
+    "Create live dashboard",
+    "Add historical charts",
+    "Host on Vercel"
+   ],
+   "fits_event": "Cowork with ETHGlobal in Bengaluru",
+   "fits_grant": "Optimism Grants (Optimism / Superchain)",
+   "why_now": "Bridges show strong 8.17% TVL increase highlighting cross-chain activity surge."
+  },
+  {
+   "title": "Liquid Staking Optimizer",
+   "pitch": "Tool that compares Lido vs Rocket Pool yields and auto-suggests restaking routes via EigenLayer. Leverages Blockchain Lab 54 labs for quick prototyping.",
+   "track": "DeFi",
+   "difficulty": "intermediate",
+   "stack": [
+    "Solidity",
+    "Python SDK",
+    "Blockchain Lab API",
+    "Next.js"
+   ],
+   "build_steps": [
+    "Pull staking TVL data",
+    "Simulate yield strategies",
+    "Build recommendation engine",
+    "Add restaking simulation",
+    "Integrate wallet connect"
+   ],
+   "fits_event": "ETHGlobal Mumbai",
+   "fits_grant": "Ethereum Protocol Guild (Ethereum)",
+   "why_now": "Liquid Staking leads TVL at $61B despite slight weekly dip indicating sustained demand."
+  },
+  {
+   "title": "Basis Trading Simulator",
+   "pitch": "Educational dApp simulating basis trades between spot and perpetuals with real-time funding rate feeds. Uses Blockchain Lab calldata tools for tx analysis.",
+   "track": "Derivatives",
+   "difficulty": "intermediate",
+   "stack": [
+    "Solidity",
+    "Chainlink",
+    "Blockchain Lab Tools",
+    "React"
+   ],
+   "build_steps": [
+    "Integrate funding rate oracle",
+    "Build simulation UI",
+    "Add tx decoder for positions",
+    "Implement risk calculator",
+    "Deploy on Base testnet"
+   ],
+   "fits_event": "Ethereum Stablecoin Summit",
+   "fits_grant": "Base Builder Grants (Base)",
+   "why_now": "Basis Trading TVL surged 7.69% showing arbitrage opportunities in volatile markets."
+  },
+  {
+   "title": "Onchain Capital Allocator",
+   "pitch": "Smart contract that dynamically allocates stablecoins to top lending protocols based on live APY from Blockchain Lab datasets.",
+   "track": "DeFi",
+   "difficulty": "advanced",
+   "stack": [
+    "Solidity",
+    "Aave",
+    "Blockchain Lab API",
+    "Safe"
+   ],
+   "build_steps": [
+    "Fetch lending TVL and rates",
+    "Implement allocation logic",
+    "Add Safe batch execution",
+    "Build governance dashboard",
+    "Test with 4 strategies"
+   ],
+   "fits_event": "ETHGlobal Mumbai",
+   "fits_grant": "Aave Grants DAO (Aave)",
+   "why_now": "Onchain Capital Allocator TVL growing 0.57% as yield optimization demand rises."
+  },
+  {
+   "title": "CDP Health Monitor",
+   "pitch": "Dashboard tracking collateral ratios across MakerDAO-style CDPs with liquidation alerts using Blockchain Lab MEV tools.",
+   "track": "Lending",
+   "difficulty": "beginner",
+   "stack": [
+    "Solidity",
+    "Blockchain Lab Tools",
+    "Vue.js",
+    "Webhooks"
+   ],
+   "build_steps": [
+    "Parse CDP positions",
+    "Build health factor calculator",
+    "Add liquidation alerts",
+    "Visualize via charts",
+    "Deploy static site"
+   ],
+   "fits_event": "Cowork with ETHGlobal in Kerala",
+   "fits_grant": "Gitcoin Grants (Multi-chain (public goods))",
+   "why_now": "CDP TVL stable at $7.9B underscoring need for better risk management tools."
+  },
+  {
+   "title": "Restaked BTC Vault",
+   "pitch": "Simple vault contract enabling BTC restaking yields tracked against live TVL trends from Blockchain Lab API.",
+   "track": "Restaking",
+   "difficulty": "intermediate",
+   "stack": [
+    "Solidity",
+    "Threshold",
+    "Blockchain Lab API",
+    "Hardhat"
+   ],
+   "build_steps": [
+    "Deploy vault contract",
+    "Integrate BTC bridge",
+    "Build yield tracker",
+    "Add TVL comparison",
+    "Test with labs examples"
+   ],
+   "fits_event": "Pragma Mumbai",
+   "fits_grant": "Scroll Grants (Scroll)",
+   "why_now": "Restaked BTC category at $1B TVL despite dip presents new yield primitives."
+  },
+  {
+   "title": "Privacy Mixer Lite",
+   "pitch": "Lightweight Tornado Cash fork using zkSNARKs for private transfers with Blockchain Lab Noir integration for quick ZK setup.",
+   "track": "Privacy",
+   "difficulty": "advanced",
+   "stack": [
+    "Noir",
+    "zkSync",
+    "Solidity",
+    "Blockchain Lab SDK"
+   ],
+   "build_steps": [
+    "Port mixer circuit to Noir",
+    "Build deposit/withdraw UI",
+    "Add relayer",
+    "Test proofs",
+    "Deploy on testnet"
+   ],
+   "fits_event": "ETHGlobal Mumbai",
+   "fits_grant": "Starknet Seed Grants (Starknet)",
+   "why_now": "Privacy TVL growing 2.65% as users seek onchain anonymity solutions."
+  },
+  {
+   "title": "Yield Aggregator Bot",
+   "pitch": "Telegram bot that auto-compounds yields from top protocols using Blockchain Lab datasets and Safe for secure executions.",
+   "track": "Yield",
+   "difficulty": "beginner",
+   "stack": [
+    "Python SDK",
+    "Blockchain Lab API",
+    "Safe",
+    "Telegram"
+   ],
+   "build_steps": [
+    "Query yield data",
+    "Implement compound logic",
+    "Add Safe tx signing",
+    "Build bot commands",
+    "Host on serverless"
+   ],
+   "fits_event": "Cowork with ETHGlobal in Jaipur",
+   "fits_grant": "Uniswap Foundation Grants (Uniswap)",
+   "why_now": "Yield category up 2.46% TVL reflecting demand for automated farming."
+  },
+  {
+   "title": "Dexs Arbitrage Scanner",
+   "pitch": "Real-time scanner for DEX price discrepancies across chains using Blockchain Lab tools and alerting via webhooks.",
+   "track": "Dexs",
+   "difficulty": "intermediate",
+   "stack": [
+    "TypeScript",
+    "Blockchain Lab API",
+    "The Graph",
+    "Webhooks"
+   ],
+   "build_steps": [
+    "Aggregate DEX prices",
+    "Detect arb opportunities",
+    "Build alert system",
+    "Add historical backtest",
+    "Create minimal UI"
+   ],
+   "fits_event": "ETHGlobal Mumbai",
+   "fits_grant": "Polygon Community Grants (Polygon)",
+   "why_now": "Dexs TVL at $13B with -0.77% change indicating need for better efficiency tools."
+  }
+ ],
+ "model": "grok-4.3",
+ "inputs": {
+  "events": 7,
+  "categories": 20
+ },
+ "disclaimer": "AI-generated by Grok from the public data shown. It can be wrong; verify before acting. Not financial, legal or security advice."
+}

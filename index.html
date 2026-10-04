@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blockchain Lab Hub — 75 free blockchain tools, data APIs, AI briefs and monitors</title><meta name="description" content="One search for every free Blockchain Lab service: 26 browser tools, 20 JSON datasets, AI market briefs and contract explainers, gas, RPC and chain monitors, security scans, jobs, grants and events."><link rel="canonical" href="https://blockchains.github.io/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Blockchain Lab Hub"><meta property="og:title" content="Blockchain Lab Hub — 75 free blockchain tools, data APIs, AI briefs and monitors">
+<meta property="og:description" content="One search for every free Blockchain Lab service: 26 browser tools, 20 JSON datasets, AI market briefs and contract explainers, gas, RPC and chain monitors, security scans, jobs, grants and events."><meta property="og:url" content="https://blockchains.github.io/"><meta property="og:image" content="https://blockchains.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://blockchains.github.io/assets/og.png"><meta name="theme-color" content="#07090f">
+<meta name="hub-base" content="/"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/site.css">
+<link rel="alternate" type="application/rss+xml" title="Chain incident feed" href="/incidents/feed.xml"></head><body>
+<header class="top"><div class="wrap"><a class="brand" href="/"><span class="logo"></span>Blockchain Lab Hub</a><nav class="links"><a href="/" class=on>Hub</a><a href="/ai/brief/">AI brief</a><a href="/gas/">Gas</a><a href="/chains/">Chains</a><a href="/rpc/">RPCs</a><a href="/scan/">Security</a><a href="/incidents/">Incidents</a><a href="/portfolio/">Portfolio</a><a href="/compare/">Compare</a><a href="/events/">Events</a><a href="/jobs/">Jobs</a><a href="/blockchainlab-tools/">Tools</a><a href="/blockchainlab-api/">API</a></nav></div></header>
+<main><div class="wrap"><section class="hero"><h1>Every free <span class="g">blockchain</span> tool, dataset, AI brief and monitor — <span class="g">one search</span>.</h1>
+<p class="lead">Open-source services from <a href="https://blockchainlab.com/?utm_source=github&utm_medium=hub&utm_campaign=blockchains-hub">Blockchain Lab</a>. Everything runs in your browser or on public GitHub Actions; every service is health-checked and shows a live status badge.</p>
+<div class="search"><span>🔎</span><input id="q" type="search" placeholder="Search 75 services — try “gas”, “ENS”, “audit”, “stablecoin”, “jobs”…" autocomplete="off" aria-label="Search services"><kbd>/</kbd></div>
+<div class="stats" id="stats"></div><div class="chips" id="chips"></div></section>
+<section id="brief"></section><div id="out" class="grid"></div>
+<h2 class="sec">More from Blockchain Lab</h2><p class="sub">Related projects (owned and maintained separately).</p>
+<div class="grid">
+<a class="card" href="https://blockchainlab.com/?utm_source=github&utm_medium=hub&utm_campaign=blockchains-hub"><span class="cat">Site</span><h3>blockchainlab.com</h3><p>Research, the protocol atlas, failure atlas and development lab.</p></a>
+<a class="card" href="https://blockchainlab.com/whitepaper?utm_source=github&utm_medium=hub&utm_campaign=blockchains-hub"><span class="cat">Research</span><h3>Whitepaper library</h3><p>590 foundational papers with readings: mechanism, assumptions, trade-offs.</p></a>
+<a class="card" href="https://grokhack.com/?utm_source=github&utm_medium=hub&utm_campaign=blockchains-hub"><span class="cat">Hackathons</span><h3>GrokHack</h3><p>Hackathons and builder programmes.</p></a>
+<a class="card" href="https://github.com/Blockchains/hackathons"><span class="cat">Hackathons</span><h3>Hackathons repo</h3><p>Open hackathon resources and entry template.</p></a>
+<a class="card" href="https://github.com/Blockchains?tab=repositories&type=fork"><span class="cat">Open source</span><h3>Forks index</h3><p>300+ forks of the key blockchain repositories, kept in sync.</p></a>
+<a class="card" href="https://github.com/Blockchains"><span class="cat">Open source</span><h3>All repositories</h3><p>Everything on GitHub under Blockchains.</p></a></div></div></main>
+<footer><div class="wrap"><span>Built by <a href="https://blockchainlab.com/?utm_source=github&utm_medium=hub&utm_campaign=blockchains-hub">Blockchain Lab</a> · <a href="https://grokhack.com/?utm_source=github&utm_medium=hub&utm_campaign=blockchains-hub">GrokHack</a> · open source on <a href="https://github.com/Blockchains">GitHub</a></span>
+<span><a href="/services.json">services.json</a> · <a href="/data/status.json">status.json</a> · <a href="https://github.com/Blockchains/blockchains.github.io">source</a> · Not financial advice.</span></div></footer>
+<script type="module">import {$,$$,esc,data,usd,num,pct,ago,stamp,fail,spark,sortable,aiNote} from "/assets/site.js";
+const [cat, st] = await Promise.all([fetch("/services.json").then(r=>r.json()), data("status.json").catch(()=>({services:{}}))]);
+const S = cat.services, status = st.services||{}; let active = "All";
+const order = ["AI","Monitors","Finders","Feeds","Tools","Data API","Developers"];
+$("#stats").innerHTML = [[S.length,"services"],[st.up??"…","up now"],[S.filter(s=>s.category=="AI").length,"AI services"],[S.filter(s=>s.category=="Tools").length,"browser tools"],[S.filter(s=>s.category=="Data API").length,"JSON datasets"]].map(([b,s])=>`<div class="stat"><b>${b}</b><span>${s}</span></div>`).join("") + (st.generated_at?`<div class="stat"><b style="font-size:15px;padding-top:5px">${ago(st.generated_at)}</b><span>last health check</span></div>`:"");
+$("#chips").innerHTML = ["All",...order].map(c=>`<button class="chip${c==active?" on":""}" data-c="${c}">${c}${c=="All"?"":" · "+S.filter(s=>s.category==c).length}</button>`).join("");
+const badge = (id)=>{const s=status[id]; const k=s?.status||"unknown"; return `<span class="badge ${k}" title="${esc(s?.detail||s?.checked_at||"")}">${k}</span>`};
+function render(){
+  const q = $("#q").value.trim().toLowerCase(), terms=q.split(/\s+/).filter(Boolean);
+  const hits = S.filter(s=>(active=="All"||s.category==active) && terms.every(t=>(s.name+" "+s.description+" "+s.tags.join(" ")+" "+s.category).toLowerCase().includes(t)));
+  hits.sort((a,b)=>order.indexOf(a.category)-order.indexOf(b.category));
+  $("#out").innerHTML = hits.map(s=>`<a class="card" href="${esc(s.url)}"><span class="cat">${esc(s.category)}</span><h3>${esc(s.name)}</h3><p>${esc(s.description)}</p><div class="meta"><span>${s.tags.slice(0,2).map(esc).join(" · ")}</span>${badge(s.id)}</div></a>`).join("") || `<div class="empty">No services match “${esc(q)}”.</div>`;
+  const u=new URL(location); q?u.searchParams.set("q",q):u.searchParams.delete("q"); history.replaceState(null,"",u);
+}
+$("#chips").addEventListener("click",e=>{const c=e.target.closest(".chip"); if(!c)return; active=c.dataset.c; $$(".chip").forEach(x=>x.classList.toggle("on",x==c)); render();});
+$("#q").addEventListener("input",render); $("#q").value=new URLSearchParams(location.search).get("q")||"";
+addEventListener("keydown",e=>{if(e.key=="/"&&document.activeElement!=$("#q")){e.preventDefault();$("#q").focus();}});
+render();
+data("ai/brief.json").then(b=>{$("#brief").innerHTML=`<a class="panel" style="display:block;color:inherit;text-decoration:none" href="/ai/brief/"><span class="cat">🤖 Today's AI brief · ${esc(b.date)}</span><h3 style="margin:6px 0">${esc(b.headline)}</h3><p class="mut" style="margin:0">${esc(b.summary)}</p></a>`}).catch(()=>{});
+</script></body></html>

@@ -1,0 +1,18 @@
+name: health (live)
+on:
+  schedule: [{ cron: "41 */6 * * *" }]
+  workflow_dispatch:
+permissions: { contents: write }
+concurrency: { group: hub-data, cancel-in-progress: false }
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: check every service against the live site
+        run: python scripts/job_health.py
+        env: { GH_TOKEN: "${{ github.token }}" }
+      - run: scripts/commit.sh "data: live health check"

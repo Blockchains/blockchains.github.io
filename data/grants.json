@@ -1,0 +1,279 @@
+{
+ "service": "grants",
+ "description": "Web3 grants finder",
+ "generated_at": "2026-10-04T15:12:54Z",
+ "source": "Curated by Blockchain Lab; every link checked daily",
+ "source_url": "https://blockchains.github.io/grants/",
+ "built_by": "Blockchain Lab — https://blockchainlab.com",
+ "count": 33,
+ "links_ok": 33,
+ "grants": [
+  {
+   "name": "Ethereum Foundation Ecosystem Support Program",
+   "ecosystem": "Ethereum",
+   "funder": "Ethereum Foundation",
+   "url": "https://esp.ethereum.foundation/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Web3 Foundation Grants Program",
+   "ecosystem": "Polkadot / Kusama",
+   "funder": "Web3 Foundation",
+   "url": "https://github.com/w3f/Grants-Program",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:50Z"
+  },
+  {
+   "name": "Polkadot Treasury (OpenGov)",
+   "ecosystem": "Polkadot",
+   "funder": "Polkadot on-chain treasury",
+   "url": "https://wiki.polkadot.network/learn/learn-polkadot-opengov-treasury/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Solana Foundation Grants & Funding",
+   "ecosystem": "Solana",
+   "funder": "Solana Foundation",
+   "url": "https://solana.org/grants-funding",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Arbitrum Foundation Grants",
+   "ecosystem": "Arbitrum",
+   "funder": "Arbitrum Foundation",
+   "url": "https://arbitrum.foundation/grants",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Optimism Grants",
+   "ecosystem": "Optimism / Superchain",
+   "funder": "Optimism Foundation",
+   "url": "https://community.optimism.io/grant/grant-overview",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Base Builder Grants",
+   "ecosystem": "Base",
+   "funder": "Base (Coinbase)",
+   "url": "https://docs.base.org/get-started/get-funded",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Starknet Seed Grants",
+   "ecosystem": "Starknet",
+   "funder": "Starknet Foundation",
+   "url": "https://www.starknet.io/grants/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Filecoin Open Grants",
+   "ecosystem": "Filecoin",
+   "funder": "Filecoin Foundation",
+   "url": "https://github.com/filecoin-project/devgrants",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Filecoin Foundation Grants",
+   "ecosystem": "Filecoin",
+   "funder": "Filecoin Foundation",
+   "url": "https://fil.org/grants",
+   "link_ok": true,
+   "link_note": "bot-protected (HTTP 403/429), reachable in a browser",
+   "checked_at": "2026-10-04T15:12:54Z"
+  },
+  {
+   "name": "Project Catalyst",
+   "ecosystem": "Cardano",
+   "funder": "Cardano community",
+   "url": "https://projectcatalyst.io/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Aptos Foundation Grants",
+   "ecosystem": "Aptos",
+   "funder": "Aptos Foundation",
+   "url": "https://aptosfoundation.org/grants",
+   "link_ok": true,
+   "link_note": "bot-protected (HTTP 403/429), reachable in a browser",
+   "checked_at": "2026-10-04T15:12:54Z"
+  },
+  {
+   "name": "Sui Foundation Grants",
+   "ecosystem": "Sui",
+   "funder": "Sui Foundation",
+   "url": "https://sui.io/grants-hub",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "NEAR Foundation Grants",
+   "ecosystem": "NEAR",
+   "funder": "NEAR Foundation",
+   "url": "https://www.near.org/ecosystem/get-funding",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Interchain Foundation Funding",
+   "ecosystem": "Cosmos",
+   "funder": "Interchain Foundation",
+   "url": "https://interchain.io/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Uniswap Foundation Grants",
+   "ecosystem": "Uniswap",
+   "funder": "Uniswap Foundation",
+   "url": "https://www.uniswapfoundation.org/build",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Aave Grants DAO",
+   "ecosystem": "Aave",
+   "funder": "Aave Grants DAO",
+   "url": "https://aavegrants.org/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:50Z"
+  },
+  {
+   "name": "Gitcoin Grants",
+   "ecosystem": "Multi-chain (public goods)",
+   "funder": "Gitcoin",
+   "url": "https://gitcoin.co/program",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Zcash Community Grants",
+   "ecosystem": "Zcash",
+   "funder": "Zcash Community Grants",
+   "url": "https://zcashcommunitygrants.org/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "OpenSats",
+   "ecosystem": "Bitcoin / Nostr",
+   "funder": "OpenSats",
+   "url": "https://opensats.org/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "HRF Bitcoin Development Fund",
+   "ecosystem": "Bitcoin",
+   "funder": "Human Rights Foundation",
+   "url": "https://hrf.org/program/financial-freedom/bitcoin-development-fund/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Spiral",
+   "ecosystem": "Bitcoin",
+   "funder": "Block (Spiral)",
+   "url": "https://spiral.xyz/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Brink Bitcoin Developer Grants",
+   "ecosystem": "Bitcoin",
+   "funder": "Brink",
+   "url": "https://brink.dev/programs",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Celo Public Goods / Prezenti",
+   "ecosystem": "Celo",
+   "funder": "Celo community",
+   "url": "https://celo.org/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Tezos Foundation Grants",
+   "ecosystem": "Tezos",
+   "funder": "Tezos Foundation",
+   "url": "https://tezos.foundation/grants/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Polygon Community Grants",
+   "ecosystem": "Polygon",
+   "funder": "Polygon",
+   "url": "https://polygon.technology/grants",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "zkSync Grants",
+   "ecosystem": "ZKsync",
+   "funder": "ZKsync",
+   "url": "https://zksync.io/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:50Z"
+  },
+  {
+   "name": "Scroll Grants",
+   "ecosystem": "Scroll",
+   "funder": "Scroll",
+   "url": "https://scroll.io/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Avalanche Foundation (Retro9000 / infraBUIDL)",
+   "ecosystem": "Avalanche",
+   "funder": "Avalanche Foundation",
+   "url": "https://www.avax.network/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Ethereum Protocol Guild",
+   "ecosystem": "Ethereum",
+   "funder": "Protocol Guild",
+   "url": "https://www.protocolguild.org/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:49Z"
+  },
+  {
+   "name": "Mina Foundation Grants",
+   "ecosystem": "Mina",
+   "funder": "Mina Foundation",
+   "url": "https://minaprotocol.com/grants",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:50Z"
+  },
+  {
+   "name": "Stellar Community Fund",
+   "ecosystem": "Stellar",
+   "funder": "Stellar Development Foundation",
+   "url": "https://communityfund.stellar.org/",
+   "link_ok": true,
+   "checked_at": "2026-10-04T15:12:50Z"
+  },
+  {
+   "name": "Hedera Grants (HBAR Foundation)",
+   "ecosystem": "Hedera",
+   "funder": "HBAR Foundation",
+   "url": "https://www.hbarfoundation.org/",
+   "link_ok": true,
+   "link_note": "bot-protected (HTTP 403/429), reachable in a browser",
+   "checked_at": "2026-10-04T15:12:49Z"
+  }
+ ]
+}
