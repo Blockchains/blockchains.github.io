@@ -23,4 +23,5 @@ jobs:
         env: { ADDR: "${{ inputs.address }}", CHAIN: "${{ inputs.chain_id }}" }
       - run: python scripts/job_slither.py "$CHAIN" "$ADDR" "$NAME"
         env: { ADDR: "${{ inputs.address }}", CHAIN: "${{ inputs.chain_id }}", NAME: "${{ inputs.name }}" }
-      - run: 'scripts/commit.sh "data: on-demand scan ${{ inputs.address }}"'
+      - run: 'scripts/commit.sh "data: on-demand scan $ADDR"'
+        env: { ADDR: "${{ inputs.address }}" }
