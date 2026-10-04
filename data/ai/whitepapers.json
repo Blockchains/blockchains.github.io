@@ -1,7 +1,7 @@
 {
  "service": "ai/whitepapers",
  "description": "AI whitepaper summaries",
- "generated_at": "2026-10-04T15:25:06Z",
+ "generated_at": "2026-10-04T15:32:58Z",
  "source": "Grok (xAI) over public data: original whitepaper PDFs/pages",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
@@ -121,35 +121,34 @@
    "url": "https://app.uniswap.org/whitepaper-v3.pdf",
    "blockchainlab": "https://blockchainlab.com/whitepaper/uniswap-v3",
    "chars": 65033,
-   "text_sha256_16": "3adcaea0d65cc149",
+   "text_sha256_16": "b29c0f6d3c989b08",
    "summary": {
-    "tldr": "Uniswap v3 introduces concentrated liquidity to AMMs, allowing LPs to bound capital to custom price ranges for higher efficiency while preserving aggregation via ticks and virtual reserves.",
-    "problem": "Prior constant-product AMMs (v1/v2) spread liquidity uniformly over (0, ∞), wasting capital when prices stay near a narrow band; alternative CFMMs risk fragmentation by forcing all LPs onto one curve.",
-    "mechanism": "Price space is divided into discrete ticks (1 bp spacing); LPs mint positions between any two ticks, supplying only the real reserves needed inside that interval while the pool tracks virtual reserves L and √ P. When price exits a range the position deactivates and stops earning fees; crossing an initialized tick instantly adds or removes the corresponding liquidity slice. Fees are accrued separately per position rather than auto-compounded, and an on-chain oracle stores recent TWAP and liquidity accumulators.",
+    "tldr": "Uniswap v3 introduces concentrated liquidity in a constant-product AMM, allowing LPs to allocate capital to custom price ranges for higher efficiency while adding flexible fees and improved oracles.",
+    "problem": "Prior constant-product AMMs spread liquidity uniformly across the full price range (0, ∞), resulting in low capital efficiency especially when prices remain in narrower bands.",
+    "mechanism": "Liquidity is bounded to discrete tick ranges using virtual reserves (L and √P) so positions behave like constant-product pools only inside their range and become inactive outside it; fees accrue separately per position rather than compounding into the pool; multiple fee-tier pools per pair are supported with governance-controlled protocol fees; an on-chain observation array stores price and liquidity accumulators for efficient TWAP and liquidity oracles without external checkpoints.",
     "key_ideas": [
-     "Concentrated liquidity bounded by arbitrary ticks",
-     "Multiple fee-tier pools per token pair chosen at creation",
-     "Non-fungible positions with separately held fees",
-     "Time-weighted geometric-mean price oracle with built-in checkpoints",
-     "Seconds-weighted liquidity accumulator for external rewards",
-     "Governance-controlled protocol fee share and new fee tiers"
+     "Concentrated liquidity via arbitrary bounded positions that approximate any desired liquidity distribution",
+     "Virtual reserves allow capital efficiency gains while preserving constant-product math inside each range",
+     "Tick bitmap and per-tick/per-position accounting enable gas-efficient crossing and fee distribution",
+     "Flexible per-pool fee tiers (0.05%, 0.30%, 1%) chosen at creation with UNI governance extensibility",
+     "Geometric-mean TWAP oracle plus liquidity accumulator stored on-chain for recent periods",
+     "Non-fungible positions with separately held fees, removing native ERC-20 LP tokens"
     ],
     "assumptions_and_tradeoffs": [
-     "Rational LPs will actively manage ranges or accept inactive capital",
-     "Tick spacing trades precision against gas cost of crossings",
-     "Non-upgradeable core; parameters only via UNI governance",
-     "Range orders require explicit withdrawal to avoid reversal",
-     "Geometric TWAP chosen over arithmetic for reciprocal consistency"
+     "LPs must actively manage ranges and withdraw crossed range orders; positions are non-fungible",
+     "Tick spacing trades off precision versus gas cost on swaps",
+     "Protocol fee fraction is limited to a discrete set of values chosen by governance",
+     "Price oracle uses geometric mean; arithmetic TWAPs require off-chain computation"
     ],
-    "what_changed_since": "Uniswap v3 contracts remain non-upgradeable; later periphery contracts added concentrated-liquidity wrappers and limit-order tooling, but core tick and oracle logic is unchanged.",
+    "what_changed_since": "Uniswap v3 core contracts were deployed on Ethereum mainnet in May 2021 and later on other EVM chains; the factory owner remains controlled by UNI governance with no ability to pause pools.",
     "read_next": [
-     "Uniswap v3 whitepaper sections 6 (implementation)",
-     "Uniswap v2 whitepaper for baseline constant-product design",
-     "Curve whitepaper for alternative CFMM capital-efficiency approaches"
+     "Uniswap v3 whitepaper sections on periphery contracts and SDK",
+     "Uniswap v4 whitepaper (hooks and singleton architecture)",
+     "Technical audits and formal verification reports for v3 core"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-04T15:24:42Z"
+   "generated_at": "2026-10-04T15:32:58Z"
   },
   {
    "title": "Solana: A new architecture for a high performance blockchain",
@@ -265,37 +264,38 @@
    "year": 2020,
    "url": "https://makerdao.com/whitepaper/White%20Paper%20-The%20Maker%20Protocol_%20MakerDAO%E2%80%99s%20Multi-Collateral%20Dai%20%28MCD%29%20System-FINAL-%20021720.pdf",
    "blockchainlab": "https://blockchainlab.com/whitepaper/maker-dai",
-   "chars": 46924,
-   "text_sha256_16": "1e7fabcea8d77f0a",
+   "chars": 46921,
+   "text_sha256_16": "cd3e784a59e8007e",
    "summary": {
-    "tldr": "The Maker Protocol enables generation of Dai, a decentralized USD-soft-pegged stablecoin, by locking approved collateral in Ethereum Vaults governed by MKR token holders.",
-    "problem": "Centralized financial systems suffer from distrust and lack of transparency while volatile cryptocurrencies like Bitcoin fail as a medium of exchange due to price instability, creating demand for a decentralized, stable, collateral-backed currency.",
-    "mechanism": "Users deposit MKR-approved Ethereum assets into non-custodial Maker Vaults to mint Dai up to a collateralization threshold set by risk parameters; price oracles feed collateral values and Keepers arbitrage to maintain the $1 target while automated auctions liquidate undercollateralized Vaults, with excess Dai absorbed by the Maker Buffer or triggering Debt/Surplus auctions that mint or burn MKR. The Dai Savings Rate and Stability Fee are adjusted via MKR governance votes to steer market price toward the target. Emergency Shutdown can be triggered by MKR holders to freeze the system and allow proportional collateral claims at the Target Price.",
+    "tldr": "The Maker Protocol enables generation of Dai, a decentralized USD-soft-pegged stablecoin, by locking approved Ethereum collateral in non-custodial Maker Vaults governed by MKR token holders.",
+    "problem": "Cryptocurrencies like Bitcoin suffer from high volatility unsuitable for use as money or medium of exchange, while centralized stablecoins forfeit blockchain's permissionless, unbiased properties.",
+    "mechanism": "Users deposit MKR-approved collateral into Vaults to mint Dai up to the liquidation ratio; MKR holders vote on risk parameters, stability fees, DSR, oracles, and collateral types via Executive Voting and Polling. Price oracles feed data through a delayed OSM; undercollateralized Vaults trigger automated Collateral, Debt, or Surplus Auctions run by Keepers. Dai holders can lock into the DSR contract to earn yield; Emergency Shutdown allows governance-triggered global settlement at the 1 USD target price.",
     "key_ideas": [
-     "Multi-collateral Dai backed by surplus over-collateralization in audited Vault smart contracts",
-     "Scientific governance via MKR token voting on risk parameters, oracles, and fees",
-     "Decentralized oracles with OSM delay plus Emergency Oracles for price feeds and shutdown",
-     "Automated liquidation via Collateral, Debt, and Surplus auctions run by incentivized Keepers",
-     "Dai Savings Rate as a native yield mechanism and governance lever for price stability",
+     "Multi-collateral Dai via Vaults replacing single-collateral SCD",
+     "Scientific governance with MKR voting weight proportional to stake",
+     "Stability via stability fee, liquidation ratios/penalties, and DSR adjustments",
+     "Decentralized oracles with OSM delay and emergency oracles",
+     "Keeper-driven auctions for liquidation and recapitalization",
      "Emergency Shutdown as last-resort protection and upgrade path"
     ],
     "assumptions_and_tradeoffs": [
-     "MKR holders act responsibly and maintain sufficient diversification via Debt Ceilings",
-     "Oracles remain uncompromised and Keepers provide adequate liquidity during stress",
-     "Formal verification and audits sufficiently mitigate smart-contract risk despite experimental nature",
-     "Complexity of Vault management and liquidation risk is accepted for permissionless access",
-     "Governance Security Module delay trades speed for protection against malicious proposals"
+     "MKR holders act responsibly to avoid excessive risk or malicious proposals",
+     "Formal verification plus audits sufficiently secure smart contracts against attacks",
+     "Keepers provide reliable liquidity and price discovery",
+     "Users tolerate system complexity in exchange for decentralization",
+     "Collateral diversification and debt ceilings mitigate concentration risk"
     ],
-    "what_changed_since": "Single-Collateral Dai (Sai) was upgraded to Multi-Collateral Dai in November 2019; the system has since expanded collateral types and integrated with numerous DeFi protocols while remaining the largest decentralized stablecoin by adoption metrics.",
+    "what_changed_since": "Text describes the 2019 transition from Single-Collateral Dai (Sai) to Multi-Collateral Dai; no further post-2020 changes are stated.",
     "read_next": [
-     "Introduction to the Maker Protocol (Maker Documentation Portal)",
-     "MakerDAO white paper (2017)",
-     "Dai Foundation Trust Deed",
-     "Multi-Collateral Dai Security Github repository"
+     "Maker Documentation Portal: Introduction to the Maker Protocol",
+     "Oasis Borrow and Oasis Save interfaces",
+     "MakerDAO website and daistats.com",
+     "Multi-Collateral Dai Security Github repository",
+     "Dai Foundation Trust Deed"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-04T15:24:53Z"
+   "generated_at": "2026-10-04T15:32:58Z"
   },
   {
    "title": "Aave V3 Technical Paper",

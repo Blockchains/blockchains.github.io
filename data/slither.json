@@ -1,7 +1,7 @@
 {
  "service": "slither",
  "description": "Contract security quick-scan (Slither)",
- "generated_at": "2026-10-04T15:20:49Z",
+ "generated_at": "2026-10-04T15:30:17Z",
  "source": "Slither static analysis on Sourcify-verified source",
  "source_url": "https://github.com/crytic/slither",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
@@ -69,7 +69,7 @@
     }
    ],
    "truncated": false,
-   "scanned_at": "2026-10-04T15:13:47Z",
+   "scanned_at": "2026-10-04T15:29:07Z",
    "sourcify": "https://repo.sourcify.dev/1/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
    "explorer": "https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2#code"
   },
@@ -454,7 +454,7 @@
     }
    ],
    "truncated": false,
-   "scanned_at": "2026-10-04T15:13:47Z",
+   "scanned_at": "2026-10-04T15:29:07Z",
    "sourcify": "https://repo.sourcify.dev/1/0xdAC17F958D2ee523a2206206994597C13D831ec7",
    "explorer": "https://etherscan.io/address/0xdAC17F958D2ee523a2206206994597C13D831ec7#code"
   },
@@ -783,7 +783,7 @@
     }
    ],
    "truncated": false,
-   "scanned_at": "2026-10-04T15:13:49Z",
+   "scanned_at": "2026-10-04T15:29:10Z",
    "sourcify": "https://repo.sourcify.dev/1/0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
    "explorer": "https://etherscan.io/address/0x43506849D7C04F9138D1A2050bbF3A0c054402dd#code"
   },
@@ -832,7 +832,7 @@
     }
    ],
    "truncated": false,
-   "scanned_at": "2026-10-04T15:13:47Z",
+   "scanned_at": "2026-10-04T15:29:09Z",
    "sourcify": "https://repo.sourcify.dev/1/0x6B175474E89094C44Da98b954EedeAC495271d0F",
    "explorer": "https://etherscan.io/address/0x6B175474E89094C44Da98b954EedeAC495271d0F#code"
   },
@@ -1133,7 +1133,7 @@
     }
    ],
    "truncated": false,
-   "scanned_at": "2026-10-04T15:13:49Z",
+   "scanned_at": "2026-10-04T15:29:09Z",
    "sourcify": "https://repo.sourcify.dev/1/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
    "explorer": "https://etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f#code"
   },
@@ -1427,7 +1427,7 @@
     }
    ],
    "truncated": false,
-   "scanned_at": "2026-10-04T15:13:49Z",
+   "scanned_at": "2026-10-04T15:29:11Z",
    "sourcify": "https://repo.sourcify.dev/1/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
    "explorer": "https://etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D#code"
   },
@@ -1868,7 +1868,7 @@
     }
    ],
    "truncated": true,
-   "scanned_at": "2026-10-04T15:14:02Z",
+   "scanned_at": "2026-10-04T15:29:23Z",
    "sourcify": "https://repo.sourcify.dev/1/0xE592427A0AEce92De3Edee1F18E0157C05861564",
    "explorer": "https://etherscan.io/address/0xE592427A0AEce92De3Edee1F18E0157C05861564#code"
   },
@@ -1933,15 +1933,15 @@
      "check": "uninitialized-local",
      "impact": "Medium",
      "confidence": "Medium",
-     "description": "SignatureVerification.verify(bytes,bytes32,address).r (src/libraries/SignatureVerification.sol#22) is a local variable never initialized",
-     "location": "src/libraries/SignatureVerification.sol#L22"
+     "description": "SignatureVerification.verify(bytes,bytes32,address).r (src/pkgs/permit2/src/libraries/SignatureVerification.sol#22) is a local variable never initialized",
+     "location": "src/pkgs/permit2/src/libraries/SignatureVerification.sol#L22"
     },
     {
      "check": "uninitialized-local",
      "impact": "Medium",
      "confidence": "Medium",
-     "description": "SignatureVerification.verify(bytes,bytes32,address).v (src/pkgs/permit2/src/libraries/SignatureVerification.sol#24) is a local variable never initialized",
-     "location": "src/pkgs/permit2/src/libraries/SignatureVerification.sol#L24"
+     "description": "SignatureVerification.verify(bytes,bytes32,address).v (src/libraries/SignatureVerification.sol#24) is a local variable never initialized",
+     "location": "src/libraries/SignatureVerification.sol#L24"
     },
     {
      "check": "uninitialized-local",
@@ -2143,15 +2143,15 @@
      "check": "dead-code",
      "impact": "Informational",
      "confidence": "Medium",
-     "description": "ERC20._burn(address,uint256) (src/pkgs/permit2/lib/solmate/src/tokens/ERC20.sol#195-205) is never used and should be removed",
-     "location": "src/pkgs/permit2/lib/solmate/src/tokens/ERC20.sol#L195"
+     "description": "ERC20._burn(address,uint256) (lib/solmate/src/tokens/ERC20.sol#195-205) is never used and should be removed",
+     "location": "lib/solmate/src/tokens/ERC20.sol#L195"
     },
     {
      "check": "dead-code",
      "impact": "Informational",
      "confidence": "Medium",
-     "description": "ERC20._mint(address,uint256) (src/pkgs/permit2/lib/solmate/src/tokens/ERC20.sol#183-193) is never used and should be removed",
-     "location": "src/pkgs/permit2/lib/solmate/src/tokens/ERC20.sol#L183"
+     "description": "ERC20._mint(address,uint256) (lib/solmate/src/tokens/ERC20.sol#183-193) is never used and should be removed",
+     "location": "lib/solmate/src/tokens/ERC20.sol#L183"
     },
     {
      "check": "missing-inheritance",
@@ -2309,7 +2309,7 @@
     }
    ],
    "truncated": false,
-   "scanned_at": "2026-10-04T15:14:01Z",
+   "scanned_at": "2026-10-04T15:29:19Z",
    "sourcify": "https://repo.sourcify.dev/1/0x000000000022D473030F116dDEE9F6B43aC78BA3",
    "explorer": "https://etherscan.io/address/0x000000000022D473030F116dDEE9F6B43aC78BA3#code"
   },
@@ -2407,7 +2407,7 @@
     }
    ],
    "truncated": false,
-   "scanned_at": "2026-10-04T15:13:50Z",
+   "scanned_at": "2026-10-04T15:29:13Z",
    "sourcify": "https://repo.sourcify.dev/1/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
    "explorer": "https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984#code"
   },
@@ -2687,7 +2687,7 @@
     }
    ],
    "truncated": false,
-   "scanned_at": "2026-10-04T15:13:52Z",
+   "scanned_at": "2026-10-04T15:29:14Z",
    "sourcify": "https://repo.sourcify.dev/1/0x514910771AF9Ca656af840dff83E8264EcF986CA",
    "explorer": "https://etherscan.io/address/0x514910771AF9Ca656af840dff83E8264EcF986CA#code"
   },
@@ -3128,7 +3128,7 @@
     }
    ],
    "truncated": true,
-   "scanned_at": "2026-10-04T15:13:55Z",
+   "scanned_at": "2026-10-04T15:29:17Z",
    "sourcify": "https://repo.sourcify.dev/1/0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552",
    "explorer": "https://etherscan.io/address/0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552#code"
   },
@@ -3303,7 +3303,7 @@
     }
    ],
    "truncated": false,
-   "scanned_at": "2026-10-04T15:13:56Z",
+   "scanned_at": "2026-10-04T15:29:19Z",
    "sourcify": "https://repo.sourcify.dev/1/0xcA11bde05977b3631167028862bE2a173976CA11",
    "explorer": "https://etherscan.io/address/0xcA11bde05977b3631167028862bE2a173976CA11#code"
   },
@@ -3541,7 +3541,7 @@
     }
    ],
    "truncated": false,
-   "scanned_at": "2026-10-04T15:13:57Z",
+   "scanned_at": "2026-10-04T15:29:20Z",
    "sourcify": "https://repo.sourcify.dev/1/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
    "explorer": "https://etherscan.io/address/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e#code"
   },
@@ -3578,22 +3578,22 @@
      "check": "msg-value-in-nonpayable",
      "impact": "High",
      "confidence": "High",
-     "description": "BasicOrderFulfiller._validateAndFulfillBasicOrder(BasicOrderParameters) (contracts/lib/BasicOrderFulfiller.sol#159-368) uses msg.value but is not reachable from any payable function",
-     "location": "contracts/lib/BasicOrderFulfiller.sol#L159"
+     "description": "BasicOrderFulfiller._validateAndFulfillBasicOrder(BasicOrderParameters) (src/lib/BasicOrderFulfiller.sol#159-368) uses msg.value but is not reachable from any payable function",
+     "location": "src/lib/BasicOrderFulfiller.sol#L159"
     },
     {
      "check": "msg-value-in-nonpayable",
      "impact": "High",
      "confidence": "High",
-     "description": "ReentrancyGuard._assertAcceptingNativeTokens() (contracts/lib/ReentrancyGuard.sol#82-87) uses msg.value but is not reachable from any payable function",
-     "location": "contracts/lib/ReentrancyGuard.sol#L82"
+     "description": "ReentrancyGuard._assertAcceptingNativeTokens() (src/lib/ReentrancyGuard.sol#82-87) uses msg.value but is not reachable from any payable function",
+     "location": "src/lib/ReentrancyGuard.sol#L82"
     },
     {
      "check": "msg-value-in-nonpayable",
      "impact": "High",
      "confidence": "High",
-     "description": "BasicOrderFulfiller._transferNativeTokensAndFinalize() (contracts/lib/BasicOrderFulfiller.sol#1191-1268) uses msg.value but is not reachable from any payable function",
-     "location": "contracts/lib/BasicOrderFulfiller.sol#L1191"
+     "description": "BasicOrderFulfiller._transferNativeTokensAndFinalize() (src/lib/BasicOrderFulfiller.sol#1191-1268) uses msg.value but is not reachable from any payable function",
+     "location": "src/lib/BasicOrderFulfiller.sol#L1191"
     },
     {
      "check": "uninitialized-local",
@@ -3704,8 +3704,8 @@
      "check": "timestamp",
      "impact": "Low",
      "confidence": "Medium",
-     "description": "OrderFulfiller._applyFractionsAndTransferEach(OrderParameters,uint256,uint256,bytes32,address) (src/lib/OrderFulfiller.sol#167-385) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- amount_scope_1 > nativeTokenBalance (src/lib/OrderFulfiller.sol#358)",
-     "location": "src/lib/OrderFulfiller.sol#L167"
+     "description": "OrderFulfiller._applyFractionsAndTransferEach(OrderParameters,uint256,uint256,bytes32,address) (contracts/lib/OrderFulfiller.sol#167-385) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- amount_scope_1 > nativeTokenBalance (contracts/lib/OrderFulfiller.sol#358)",
+     "location": "contracts/lib/OrderFulfiller.sol#L167"
     },
     {
      "check": "assembly",
@@ -3982,7 +3982,7 @@
     }
    ],
    "truncated": true,
-   "scanned_at": "2026-10-04T15:15:19Z",
+   "scanned_at": "2026-10-04T15:30:16Z",
    "sourcify": "https://repo.sourcify.dev/1/0x00000000000000ADc04C56Bf30aC9d3c0aAF14dC",
    "explorer": "https://etherscan.io/address/0x00000000000000ADc04C56Bf30aC9d3c0aAF14dC#code"
   },
@@ -4257,8 +4257,15 @@
      "check": "reentrancy-events",
      "impact": "Low",
      "confidence": "Medium",
-     "description": "Reentrancy in Lido.deposit(uint256,uint256,bytes) (contracts/0.4.24/Lido.sol#694-723):\n\tExternal calls:\n\t- require(bool,string)(msg.sender == locator.depositSecurityModule(),APP_AUTH_DSM_FAILED) (contracts/0.4.24/Lido.sol#697)\n\t- require(bool,string)(canDeposit(),CAN_NOT_DEPOSIT) (contracts/0.4.24/Lido.sol#698)\n\t\t- IWithdrawalQueue(getLidoLocator().withdrawalQueue()) (contracts/0.4.24/Lido.sol#1377)\n\t\t- ! _withdrawalQueue().isBunkerModeActive() && ! isStopped() (contracts/0.4.24/Lido.sol#675)\n\t- stakingRouter = _stakingRouter() (contracts/0.4.24/Lido.sol#700)\n\t\t- IStakingRouter(getLidoLocator(",
+     "description": "Reentrancy in Lido.deposit(uint256,uint256,bytes) (contracts/0.4.24/Lido.sol#694-723):\n\tExternal calls:\n\t- require(bool,string)(msg.sender == locator.depositSecurityModule(),APP_AUTH_DSM_FAILED) (contracts/0.4.24/Lido.sol#697)\n\t- require(bool,string)(canDeposit(),CAN_NOT_DEPOSIT) (contracts/0.4.24/Lido.sol#698)\n\t\t- ! _withdrawalQueue().isBunkerModeActive() && ! isStopped() (contracts/0.4.24/Lido.sol#675)\n\t\t- IWithdrawalQueue(getLidoLocator().withdrawalQueue()) (contracts/0.4.24/Lido.sol#1377)\n\t- stakingRouter = _stakingRouter() (contracts/0.4.24/Lido.sol#700)\n\t\t- IStakingRouter(getLidoLocator(",
      "location": "contracts/0.4.24/Lido.sol#L694"
+    },
+    {
+     "check": "reentrancy-events",
+     "impact": "Low",
+     "confidence": "Medium",
+     "description": "Reentrancy in EVMScriptRunner.runScript(bytes,bytes,address[]) (@aragon/os/contracts/evmscript/EVMScriptRunner.sol#34-100):\n\tExternal calls:\n\t- executor = getEVMScriptExecutor(_script) (@aragon/os/contracts/evmscript/EVMScriptRunner.sol#40)\n\t\t- registryAddr = kernel().getApp(KERNEL_APP_ADDR_NAMESPACE,EVMSCRIPT_REGISTRY_APP_ID) (@aragon/os/contracts/evmscript/EVMScriptRunner.sol#30)\n\t\t- IEVMScriptExecutor(getEVMScriptRegistry().getScriptExecutor(_script)) (@aragon/os/contracts/evmscript/EVMScriptRunner.sol#26)\n\tEvent emitted after the call(s):\n\t- ScriptResult(address(executor),_script,_input,ou",
+     "location": "@aragon/os/contracts/evmscript/EVMScriptRunner.sol#L34"
     },
     {
      "check": "reentrancy-events",
@@ -4294,13 +4301,6 @@
      "confidence": "Medium",
      "description": "Reentrancy in Lido._handleOracleReport(Lido.OracleReportedData) (contracts/0.4.24/Lido.sol#1180-1299):\n\tExternal calls:\n\t- contracts = _loadOracleReportContracts() (contracts/0.4.24/Lido.sol#1181)\n\t\t- (ret.accountingOracle,ret.elRewardsVault,ret.oracleReportSanityChecker,ret.burner,ret.withdrawalQueue,ret.withdrawalVault,ret.postTokenRebaseReceiver) = getLidoLocator().oracleReportComponentsForLido() (contracts/0.4.24/Lido.sol#1361-1369)\n\t- _checkAccountingOracleReport(contracts,_reportedData,reportContext) (contracts/0.4.24/Lido.sol#1202)\n\t\t- IOracleReportSanityChecker(_contracts.oracleReportS",
      "location": "contracts/0.4.24/Lido.sol#L1180"
-    },
-    {
-     "check": "reentrancy-events",
-     "impact": "Low",
-     "confidence": "Medium",
-     "description": "Reentrancy in EVMScriptRunner.runScript(bytes,bytes,address[]) (@aragon/os/contracts/evmscript/EVMScriptRunner.sol#34-100):\n\tExternal calls:\n\t- executor = getEVMScriptExecutor(_script) (@aragon/os/contracts/evmscript/EVMScriptRunner.sol#40)\n\t\t- IEVMScriptExecutor(getEVMScriptRegistry().getScriptExecutor(_script)) (@aragon/os/contracts/evmscript/EVMScriptRunner.sol#26)\n\t\t- registryAddr = kernel().getApp(KERNEL_APP_ADDR_NAMESPACE,EVMSCRIPT_REGISTRY_APP_ID) (@aragon/os/contracts/evmscript/EVMScriptRunner.sol#30)\n\tEvent emitted after the call(s):\n\t- ScriptResult(address(executor),_script,_input,ou",
-     "location": "@aragon/os/contracts/evmscript/EVMScriptRunner.sol#L34"
     },
     {
      "check": "shadowing-local",
@@ -4423,7 +4423,7 @@
     }
    ],
    "truncated": true,
-   "scanned_at": "2026-10-04T15:14:04Z",
+   "scanned_at": "2026-10-04T15:29:24Z",
    "sourcify": "https://repo.sourcify.dev/1/0x17144556fd3424EDC8Fc8A4C940B2D04936d17eb",
    "explorer": "https://etherscan.io/address/0x17144556fd3424EDC8Fc8A4C940B2D04936d17eb#code"
   },
@@ -4628,22 +4628,22 @@
      "check": "uninitialized-local",
      "impact": "Medium",
      "confidence": "Medium",
-     "description": "ValidationLogic.validateLiquidationCall(DataTypes.UserConfigurationMap,DataTypes.ReserveData,DataTypes.ValidateLiquidationCallParams).vars (lib/aave-v3-factory/src/core/contracts/protocol/libraries/logic/ValidationLogic.sol#501) is a local variable never initialized",
-     "location": "lib/aave-v3-factory/src/core/contracts/protocol/libraries/logic/ValidationLogic.sol#L501"
+     "description": "ValidationLogic.validateLiquidationCall(DataTypes.UserConfigurationMap,DataTypes.ReserveData,DataTypes.ValidateLiquidationCallParams).vars (src/core/contracts/protocol/libraries/logic/ValidationLogic.sol#501) is a local variable never initialized",
+     "location": "src/core/contracts/protocol/libraries/logic/ValidationLogic.sol#L501"
     },
     {
      "check": "uninitialized-local",
      "impact": "Medium",
      "confidence": "Medium",
-     "description": "LiquidationLogic._calculateAvailableCollateralToLiquidate(DataTypes.ReserveData,DataTypes.ReserveCache,address,address,uint256,uint256,uint256,IPriceOracleGetter).vars (lib/aave-v3-factory/src/core/contracts/protocol/libraries/logic/LiquidationLogic.sol#476) is a local variable never initialized",
-     "location": "lib/aave-v3-factory/src/core/contracts/protocol/libraries/logic/LiquidationLogic.sol#L476"
+     "description": "LiquidationLogic._calculateAvailableCollateralToLiquidate(DataTypes.ReserveData,DataTypes.ReserveCache,address,address,uint256,uint256,uint256,IPriceOracleGetter).vars (src/core/contracts/protocol/libraries/logic/LiquidationLogic.sol#476) is a local variable never initialized",
+     "location": "src/core/contracts/protocol/libraries/logic/LiquidationLogic.sol#L476"
     },
     {
      "check": "uninitialized-local",
      "impact": "Medium",
      "confidence": "Medium",
-     "description": "FlashLoanLogic.executeFlashLoan(mapping(address => DataTypes.ReserveData),mapping(uint256 => address),mapping(uint8 => DataTypes.EModeCategory),DataTypes.UserConfigurationMap,DataTypes.FlashloanParams).vars (lib/aave-v3-factory/src/core/contracts/protocol/libraries/logic/FlashLoanLogic.sol#84) is a local variable never initialized",
-     "location": "lib/aave-v3-factory/src/core/contracts/protocol/libraries/logic/FlashLoanLogic.sol#L84"
+     "description": "FlashLoanLogic.executeFlashLoan(mapping(address => DataTypes.ReserveData),mapping(uint256 => address),mapping(uint8 => DataTypes.EModeCategory),DataTypes.UserConfigurationMap,DataTypes.FlashloanParams).vars (src/core/contracts/protocol/libraries/logic/FlashLoanLogic.sol#84) is a local variable never initialized",
+     "location": "src/core/contracts/protocol/libraries/logic/FlashLoanLogic.sol#L84"
     },
     {
      "check": "uninitialized-local",
@@ -4677,8 +4677,8 @@
      "check": "uninitialized-local",
      "impact": "Medium",
      "confidence": "Medium",
-     "description": "ReserveLogic.cache(DataTypes.ReserveData).reserveCache (lib/aave-v3-factory/src/core/contracts/protocol/libraries/logic/ReserveLogic.sol#328) is a local variable never initialized",
-     "location": "lib/aave-v3-factory/src/core/contracts/protocol/libraries/logic/ReserveLogic.sol#L328"
+     "description": "ReserveLogic.cache(DataTypes.ReserveData).reserveCache (src/core/contracts/protocol/libraries/logic/ReserveLogic.sol#328) is a local variable never initialized",
+     "location": "src/core/contracts/protocol/libraries/logic/ReserveLogic.sol#L328"
     },
     {
      "check": "unused-return",
@@ -4864,7 +4864,7 @@
     }
    ],
    "truncated": true,
-   "scanned_at": "2026-10-04T15:14:18Z",
+   "scanned_at": "2026-10-04T15:29:35Z",
    "sourcify": "https://repo.sourcify.dev/1/0x5FAab9E1adbddaD0a08734BE8a52185Fd6558E14",
    "explorer": "https://etherscan.io/address/0x5FAab9E1adbddaD0a08734BE8a52185Fd6558E14#code"
   },
@@ -4892,7 +4892,7 @@
     }
    ],
    "truncated": false,
-   "scanned_at": "2026-10-04T15:14:06Z",
+   "scanned_at": "2026-10-04T15:29:25Z",
    "sourcify": "https://repo.sourcify.dev/1/0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB",
    "explorer": "https://etherscan.io/address/0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB#code"
   }
