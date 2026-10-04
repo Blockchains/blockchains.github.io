@@ -1,12 +1,12 @@
 {
  "service": "slither",
  "description": "Contract security quick-scan (Slither)",
- "generated_at": "2026-10-04T15:30:17Z",
+ "generated_at": "2026-10-04T15:44:06Z",
  "source": "Slither static analysis on Sourcify-verified source",
  "source_url": "https://github.com/crytic/slither",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
- "count": 17,
- "ok": 17,
+ "count": 18,
+ "ok": 18,
  "slither_version": "0.11.6",
  "note": "Static-analysis hits are leads, not confirmed vulnerabilities. Many are informational or false positives on battle-tested code.",
  "contracts": [
@@ -4895,6 +4895,265 @@
    "scanned_at": "2026-10-04T15:29:25Z",
    "sourcify": "https://repo.sourcify.dev/1/0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB",
    "explorer": "https://etherscan.io/address/0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB#code"
+  },
+  {
+   "name": "Chainlink ETH/USD price feed",
+   "address": "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
+   "chain_id": 1,
+   "category": "On-demand",
+   "ok": true,
+   "counts": {
+    "High": 0,
+    "Medium": 0,
+    "Low": 16,
+    "Informational": 18,
+    "Optimization": 0
+   },
+   "detector_hits": 34,
+   "findings": [
+    {
+     "check": "missing-zero-check",
+     "impact": "Low",
+     "confidence": "Medium",
+     "description": "Owned.transferOwnership(address)._to (EACAggregatorProxy.sol#30) lacks a zero-check on :\n\t\t- pendingOwner = _to (EACAggregatorProxy.sol#34)",
+     "location": "EACAggregatorProxy.sol#L30"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.addPhaseIds(uint80,int256,uint256,uint256,uint80,uint16).phaseId (EACAggregatorProxy.sol#525) shadows:\n\t- AggregatorProxy.phaseId() (EACAggregatorProxy.sol#410-416) (function)",
+     "location": "EACAggregatorProxy.sol#L525"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.getRoundData(uint80).answer_scope_1 (EACAggregatorProxy.sol#284) shadows:\n\t- AggregatorProxy.getRoundData(uint80).answer (EACAggregatorProxy.sol#274) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).answer (EACAggregatorProxy.sol#274) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).answer (EACAggregatorProxy.sol#274) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).answer (EACAggregatorProxy.sol#274) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).answer (EACAggregatorProxy.sol#274) (return variable)",
+     "location": "EACAggregatorProxy.sol#L284"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.getAnswer(uint256).aggregator (EACAggregatorProxy.sol#190) shadows:\n\t- AggregatorProxy.aggregator() (EACAggregatorProxy.sol#399-405) (function)",
+     "location": "EACAggregatorProxy.sol#L190"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.getTimestamp(uint256).aggregator (EACAggregatorProxy.sol#215) shadows:\n\t- AggregatorProxy.aggregator() (EACAggregatorProxy.sol#399-405) (function)",
+     "location": "EACAggregatorProxy.sol#L215"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.getRoundData(uint80).updatedAt_scope_3 (EACAggregatorProxy.sol#286) shadows:\n\t- AggregatorProxy.getRoundData(uint80).updatedAt (EACAggregatorProxy.sol#276) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).updatedAt (EACAggregatorProxy.sol#276) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).updatedAt (EACAggregatorProxy.sol#276) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).updatedAt (EACAggregatorProxy.sol#276) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).updatedAt (EACAggregatorProxy.sol#276) (return variable)",
+     "location": "EACAggregatorProxy.sol#L286"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.latestRoundData().startedAt_scope_2 (EACAggregatorProxy.sol#333) shadows:\n\t- AggregatorProxy.latestRoundData().startedAt (EACAggregatorProxy.sol#323) (return variable)\n\t- AggregatorProxy.latestRoundData().startedAt (EACAggregatorProxy.sol#323) (return variable)\n\t- AggregatorProxy.latestRoundData().startedAt (EACAggregatorProxy.sol#323) (return variable)\n\t- AggregatorProxy.latestRoundData().startedAt (EACAggregatorProxy.sol#323) (return variable)\n\t- AggregatorProxy.latestRoundData().startedAt (EACAggregatorProxy.sol#323) (return variable)",
+     "location": "EACAggregatorProxy.sol#L333"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.latestRoundData().roundId_scope_0 (EACAggregatorProxy.sol#331) shadows:\n\t- AggregatorProxy.latestRoundData().roundId (EACAggregatorProxy.sol#321) (return variable)\n\t- AggregatorProxy.latestRoundData().roundId (EACAggregatorProxy.sol#321) (return variable)\n\t- AggregatorProxy.latestRoundData().roundId (EACAggregatorProxy.sol#321) (return variable)\n\t- AggregatorProxy.latestRoundData().roundId (EACAggregatorProxy.sol#321) (return variable)\n\t- AggregatorProxy.latestRoundData().roundId (EACAggregatorProxy.sol#321) (return variable)",
+     "location": "EACAggregatorProxy.sol#L331"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.getRoundData(uint80).phaseId (EACAggregatorProxy.sol#280) shadows:\n\t- AggregatorProxy.phaseId() (EACAggregatorProxy.sol#410-416) (function)",
+     "location": "EACAggregatorProxy.sol#L280"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.getRoundData(uint80).roundId_scope_0 (EACAggregatorProxy.sol#283) shadows:\n\t- AggregatorProxy.getRoundData(uint80).roundId (EACAggregatorProxy.sol#273) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).roundId (EACAggregatorProxy.sol#273) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).roundId (EACAggregatorProxy.sol#273) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).roundId (EACAggregatorProxy.sol#273) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).roundId (EACAggregatorProxy.sol#273) (return variable)",
+     "location": "EACAggregatorProxy.sol#L283"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.getAnswer(uint256).phaseId (EACAggregatorProxy.sol#189) shadows:\n\t- AggregatorProxy.phaseId() (EACAggregatorProxy.sol#410-416) (function)",
+     "location": "EACAggregatorProxy.sol#L189"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.latestRoundData().answer_scope_1 (EACAggregatorProxy.sol#332) shadows:\n\t- AggregatorProxy.latestRoundData().answer (EACAggregatorProxy.sol#322) (return variable)\n\t- AggregatorProxy.latestRoundData().answer (EACAggregatorProxy.sol#322) (return variable)\n\t- AggregatorProxy.latestRoundData().answer (EACAggregatorProxy.sol#322) (return variable)\n\t- AggregatorProxy.latestRoundData().answer (EACAggregatorProxy.sol#322) (return variable)\n\t- AggregatorProxy.latestRoundData().answer (EACAggregatorProxy.sol#322) (return variable)",
+     "location": "EACAggregatorProxy.sol#L332"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.getTimestamp(uint256).phaseId (EACAggregatorProxy.sol#214) shadows:\n\t- AggregatorProxy.phaseId() (EACAggregatorProxy.sol#410-416) (function)",
+     "location": "EACAggregatorProxy.sol#L214"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.getRoundData(uint80).startedAt_scope_2 (EACAggregatorProxy.sol#285) shadows:\n\t- AggregatorProxy.getRoundData(uint80).startedAt (EACAggregatorProxy.sol#275) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).startedAt (EACAggregatorProxy.sol#275) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).startedAt (EACAggregatorProxy.sol#275) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).startedAt (EACAggregatorProxy.sol#275) (return variable)\n\t- AggregatorProxy.getRoundData(uint80).startedAt (EACAggregatorProxy.sol#275) (return variable)",
+     "location": "EACAggregatorProxy.sol#L285"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.parseIds(uint256).phaseId (EACAggregatorProxy.sol#513) shadows:\n\t- AggregatorProxy.phaseId() (EACAggregatorProxy.sol#410-416) (function)",
+     "location": "EACAggregatorProxy.sol#L513"
+    },
+    {
+     "check": "shadowing-local",
+     "impact": "Low",
+     "confidence": "High",
+     "description": "AggregatorProxy.latestRoundData().updatedAt_scope_3 (EACAggregatorProxy.sol#334) shadows:\n\t- AggregatorProxy.latestRoundData().updatedAt (EACAggregatorProxy.sol#324) (return variable)\n\t- AggregatorProxy.latestRoundData().updatedAt (EACAggregatorProxy.sol#324) (return variable)\n\t- AggregatorProxy.latestRoundData().updatedAt (EACAggregatorProxy.sol#324) (return variable)\n\t- AggregatorProxy.latestRoundData().updatedAt (EACAggregatorProxy.sol#324) (return variable)\n\t- AggregatorProxy.latestRoundData().updatedAt (EACAggregatorProxy.sol#324) (return variable)",
+     "location": "EACAggregatorProxy.sol#L334"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter AggregatorProxy.getRoundData(uint80)._roundId (EACAggregatorProxy.sol#267) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L267"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter AggregatorProxy.proposedGetRoundData(uint80)._roundId (EACAggregatorProxy.sol#353) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L353"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter AggregatorProxy.addPhase(uint16,uint64)._phase (EACAggregatorProxy.sol#496) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L496"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter AggregatorProxy.setAggregator(address)._aggregator (EACAggregatorProxy.sol#487) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L487"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter AggregatorProxy.parseIds(uint256)._roundId (EACAggregatorProxy.sol#507) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L507"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter AggregatorProxy.getAnswer(uint256)._roundId (EACAggregatorProxy.sol#180) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L180"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter EACAggregatorProxy.proposedGetRoundData(uint80)._roundId (EACAggregatorProxy.sol#776) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L776"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter EACAggregatorProxy.getAnswer(uint256)._roundId (EACAggregatorProxy.sol#638) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L638"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter AggregatorProxy.getTimestamp(uint256)._roundId (EACAggregatorProxy.sol#205) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L205"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter EACAggregatorProxy.setController(address)._accessController (EACAggregatorProxy.sol#582) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L582"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter Owned.transferOwnership(address)._to (EACAggregatorProxy.sol#30) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L30"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter AggregatorProxy.addPhase(uint16,uint64)._originalId (EACAggregatorProxy.sol#497) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L497"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter EACAggregatorProxy.getRoundData(uint80)._roundId (EACAggregatorProxy.sol#710) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L710"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter EACAggregatorProxy.getTimestamp(uint256)._roundId (EACAggregatorProxy.sol#658) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L658"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter AggregatorProxy.proposeAggregator(address)._aggregator (EACAggregatorProxy.sol#459) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L459"
+    },
+    {
+     "check": "naming-convention",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Parameter AggregatorProxy.confirmAggregator(address)._aggregator (EACAggregatorProxy.sol#473) is not in mixedCase",
+     "location": "EACAggregatorProxy.sol#L473"
+    },
+    {
+     "check": "solc-version",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "solc-0.6.6 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.",
+     "location": null
+    },
+    {
+     "check": "solc-version",
+     "impact": "Informational",
+     "confidence": "High",
+     "description": "Version constraint 0.6.6 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)\n\t- MissingSideEffectsOnSelectorAccess\n\t- AbiReencodingHeadOverflowWithStaticArrayCleanup\n\t- DirtyBytesArrayToStorage\n\t- NestedCalldataArrayAbiReencodingSizeValidation\n\t- SignedImmutables\n\t- ABIDecodeTwoDimensionalArrayMemory\n\t- KeccakCaching\n\t- EmptyByteArrayCopy\n\t- DynamicArrayCleanup\n\t- MissingEscapingInFormatting\n\t- ArraySliceDynamicallyEncodedBaseType\n\t- ImplicitConstructorCallvalueCheck.\nIt is used by:\n\t- 0.6.6 (EACAggregatorProxy.sol#1)",
+     "location": "EACAggregatorProxy.sol#L1"
+    }
+   ],
+   "truncated": false,
+   "scanned_at": "2026-10-04T15:44:05Z",
+   "sourcify": "https://repo.sourcify.dev/1/0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419",
+   "explorer": "https://etherscan.io/address/0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419#code"
   }
  ]
 }
