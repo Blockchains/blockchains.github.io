@@ -15,9 +15,12 @@ def scan(args):
         try:
             p = subprocess.run(["slither", f"sourcify-{chain}:{addr}", "--json", str(out), "--exclude-dependencies"],
                                cwd=d, capture_output=True, text=True, timeout=420)
+            if not out.exists():
+                tail = [l for l in (p.stderr or "").strip().splitlines() if l.strip()][-1:] or ["no output"]
+                raise RuntimeError(f"Slither/crytic-compile could not build this contract: {tail[0][:240]}")
             r = json.loads(out.read_text())
         except Exception as e:  # noqa: BLE001
-            return {"name": name, "address": addr, "chain_id": chain, "category": category, "ok": False, "error": str(e)[:300]}
+            return {"name": name, "address": addr, "chain_id": chain, "category": category, "ok": False, "error": str(e)[:300], "scanned_at": now_iso()}
         if not r.get("success"):
             return {"name": name, "address": addr, "chain_id": chain, "category": category, "ok": False, "error": (r.get("error") or p.stderr)[-300:]}
         dets = r.get("results", {}).get("detectors", [])
@@ -59,6 +62,10 @@ def main():
     print(f"slither: {ok}/{len(res)} scanned")
     for r in res:
         print(" ", r["name"], r.get("counts") or r.get("error", "")[:120])
+    if len(sys.argv) >= 3:
+        if not ok:  # on-demand: record the failure on the page, flag it in the run, don't fail the workflow
+            print(f"::warning::scan failed for {sys.argv[2]}: {res[0].get('error')}")
+        return
     assert ok >= max(1, len(res) * 0.7)
 
 
