@@ -1,55 +1,55 @@
 {
- "headline": "Crypto Market Structure Brief - 4 October 2026",
- "summary": "Ethereum leads TVL at 53.76 billion USD, followed by Solana at 6.72 billion USD and Base at 6.39 billion USD. Uniswap V4 recorded the highest DEX volume at 1.43 billion USD in 24 hours, while Tether generated the top fees at 17.24 million USD. USDT and USDC dominate stablecoin circulation at 184.03 billion USD and 74.20 billion USD respectively, with multiple peg deviations noted. Base and Arbitrum One hold the largest L2 TVS at 16.23 billion USD and 11.47 billion USD.",
+ "headline": "Ethereum leads TVL at $53.8bn; USDT at $184bn on 4 Oct 2026",
+ "summary": "Ethereum holds the top position in chains TVL at $53.76bn, followed by Solana and Base. Uniswap V4 recorded the highest DEX volume at $1.43bn in 24h while Tether led fees. USDT and USDC dominate stablecoins with several peg deviations noted. Multiple security incidents occurred in the prior 14 days including large key compromises.",
  "sections": [
   {
    "title": "Chains & TVL",
    "bullets": [
-    "Ethereum ranks first with 53.76 billion USD TVL.",
-    "Solana holds second position at 6.72 billion USD TVL.",
-    "Base follows at 6.39 billion USD TVL, ahead of BSC at 5.83 billion USD."
+    "Ethereum ranks first at $53.76bn TVL",
+    "Solana second at $6.72bn, Base third at $6.39bn",
+    "BSC fourth at $5.83bn, Tron fifth at $5.69bn"
    ]
   },
   {
    "title": "DEX & fees",
    "bullets": [
-    "Uniswap V4 leads 24-hour DEX volume at 1.43 billion USD.",
-    "Uniswap V3 records 588.07 million USD in 24-hour volume.",
-    "Tether tops fees with 17.24 million USD over 24 hours, followed by Circle USDC at 6.99 million USD."
+    "Uniswap V4 leads DEX volume at $1.43bn 24h",
+    "Uniswap V3 second at $588m; PumpSwap fourth at $402m",
+    "Tether tops fees at $17.2m 24h, Circle USDC second at $7.0m"
    ]
   },
   {
    "title": "Stablecoins",
    "bullets": [
-    "USDT circulates at 184.03 billion USD and USDC at 74.20 billion USD.",
-    "USDS shows 2.15 percent daily growth to 6.85 billion USD.",
-    "USYC trades at 1.139 USD with 13.9 percent deviation; USDY at 1.147 USD with 14.7 percent deviation."
+    "USDT circulating $184.0bn across many chains",
+    "USDC at $74.2bn; USDS third at $6.85bn",
+    "USYC at $1.139 and USDY at $1.147 show depeg alerts"
    ]
   },
   {
    "title": "L2s",
    "bullets": [
-    "Base leads L2 TVS at 16.23 billion USD with 1.87 percent 7-day decline.",
-    "Arbitrum One holds 11.47 billion USD TVS, down 2.26 percent over seven days.",
-    "Hyperliquid records 7.13 billion USD TVS as a layer-3."
+    "Base leads L2 TVS at $16.23bn, Arbitrum at $11.47bn",
+    "Hyperliquid L3 at $7.13bn; Polygon PoS at $4.07bn",
+    "Robinhood Chain TVS $2.70bn with Stage 0 status"
    ]
   },
   {
    "title": "Security",
    "bullets": [
-    "Bitget reports 387 million USD loss from hot wallet compromise on 24 September.",
-    "NEAR Intents records 3.8 million USD bridge-related loss on 1 October.",
-    "FlashLoopAdapter and multiple other incidents noted in the prior 14 days."
+    "Bitget incident $387m on 24 Sep via hot wallet compromise",
+    "Duelbits $7m and multiple bridge logic flaws reported",
+    "FlashLoopAdapter and NEAR Intents incidents on 1 Oct"
    ]
   }
  ],
  "watchlist": [
-  "USYC and USDY peg deviations above 13 percent",
-  "Bitget 387 million USD incident from 24 September",
-  "Base and Arbitrum One TVS movements",
-  "Uniswap V4 volume and fee trends"
+  "USYC and USDY peg deviations above 13%",
+  "Bitget and Duelbits key compromise incidents",
+  "Base and Arbitrum L2 TVS changes",
+  "Uniswap V4 volume and fee leadership"
  ],
  "date": "2026-10-04",
  "model": "grok-4.3",
- "tokens": 13421
+ "tokens": 13332
 }
