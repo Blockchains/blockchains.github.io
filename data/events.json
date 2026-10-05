@@ -1,7 +1,7 @@
 {
  "service": "events",
  "description": "Web3 events & hackathons calendar",
- "generated_at": "2026-10-04T15:34:30Z",
+ "generated_at": "2026-10-05T11:43:20Z",
  "source": "ETHGlobal public events page",
  "source_url": "https://ethglobal.com/events",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
@@ -48,16 +48,6 @@
    "uid": "ethglobal-734"
   },
   {
-   "name": "Pragma Mumbai",
-   "type": "summit",
-   "medium": "physical",
-   "start": "2026-11-04T00:00:00.000Z",
-   "end": "2026-11-04T00:00:00.000Z",
-   "url": "https://ethglobal.com/events/pragma-mumbai",
-   "organiser": "ETHGlobal",
-   "uid": "ethglobal-530"
-  },
-  {
    "name": "ETHGlobal Mumbai",
    "type": "hackathon",
    "medium": "physical",
@@ -66,6 +56,16 @@
    "url": "https://ethglobal.com/events/mumbai",
    "organiser": "ETHGlobal",
    "uid": "ethglobal-527"
+  },
+  {
+   "name": "Pragma Mumbai",
+   "type": "summit",
+   "medium": "physical",
+   "start": "2026-11-06T00:00:00.000Z",
+   "end": "2026-11-06T00:00:00.000Z",
+   "url": "https://ethglobal.com/events/pragma-mumbai",
+   "organiser": "ETHGlobal",
+   "uid": "ethglobal-530"
   },
   {
    "name": "ETHConf 2027",
