@@ -1,6 +1,6 @@
 # Blockchains building blocks: full text
 
-Generated 2026-10-04T18:47:12Z from 31 repositories. Sections: Build with Blocks guide, blocks.json schema, then AGENTS.md of every repo.
+Generated 2026-10-05T11:41:36Z from 32 repositories. Sections: Build with Blocks guide, blocks.json schema, then AGENTS.md of every repo.
 
 
 
@@ -1381,7 +1381,7 @@ See the README section [Use as a building block](README.md#use-as-a-building-blo
 
 === Blockchains/blockchainlab-starters / AGENTS.md ===
 
-Summary: Template repo of 8 CI-tested starters built on Blockchains forks: foundry-oz-tokens, chainlink-price-feed, uniswap-v4-hook, erc4337-smart-account, hedera-token-sdk, wagmi-rainbowkit-dapp, circom-zk-proof and noir-zk-proof.
+Summary: Template repo of 14 CI-tested starters built on Blockchains forks: foundry-oz-tokens (ERC-20/721/1155), chainlink-price-feed, uniswap-v4-hook, erc4337-smart-account (+ paymaster), hedera-token-sdk, wagmi-rainbowkit-dapp, circom-zk-proof, noir-zk-proof, subgraph-indexer, ipfs-upload, ccip-crosschain, ai-agent-onchain, farcaster-miniapp and solana-anchor-vault.
 Manifest: https://raw.githubusercontent.com/Blockchains/blockchainlab-starters/main/blocks.json
 
 # AGENTS.md: blockchainlab-starters
@@ -1390,7 +1390,7 @@ Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and
 
 ## What this is
 
-Template repo of 8 CI-tested starters built on Blockchains forks: foundry-oz-tokens, chainlink-price-feed, uniswap-v4-hook, erc4337-smart-account, hedera-token-sdk, wagmi-rainbowkit-dapp, circom-zk-proof and noir-zk-proof.
+Template repo of 14 CI-tested starters built on Blockchains forks: foundry-oz-tokens (ERC-20/721/1155), chainlink-price-feed, uniswap-v4-hook, erc4337-smart-account (+ paymaster), hedera-token-sdk, wagmi-rainbowkit-dapp, circom-zk-proof, noir-zk-proof, subgraph-indexer, ipfs-upload, ccip-crosschain, ai-agent-onchain, farcaster-miniapp and solana-anchor-vault.
 
 - Kind: template · stability: `stable` · licence: MIT
 - Machine-readable manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
@@ -1409,6 +1409,9 @@ bash .devcontainer/setup.sh   # optional: installs all toolchains
 cd starters/<name> && forge build && forge test   # Foundry starters
 cd starters/<name> && npm ci && npm test   # Node starters
 cd starters/noir-zk-proof && nargo test
+cd starters/ccip-crosschain && npm ci && forge test        # npm deps + Foundry
+cd starters/subgraph-indexer && npm ci && npm test        # needs libpq5 for Matchstick
+cd starters/solana-anchor-vault && npm ci && anchor keys sync && anchor test   # Agave 2.3.13 + Anchor 0.32.1
 ```
 
 Tests hit **live** public networks/APIs (the org rule is no mocks). A failure can be an upstream outage: re-run before changing code.
@@ -1690,6 +1693,44 @@ See the README section [Use as a building block](README.md#use-as-a-building-blo
 - [Blockchains/blockchainlab-tools](https://github.com/Blockchains/blockchainlab-tools): tools are linked from the hub
 - [Blockchains/sites-monitor](https://github.com/Blockchains/sites-monitor): status of the custom domains
 - [Blockchains/.github](https://github.com/Blockchains/.github): BLOCKS-SCHEMA and BUILD-WITH-BLOCKS docs
+
+
+
+=== Blockchains/buidl / AGENTS.md ===
+
+Summary: Brief-to-product pipeline on GitHub Actions: a hackathon or grant brief becomes a repo with a Foundry contract + tests, a live GitHub Pages dApp, CI and a submission pack (description per judging criterion, track mapping, demo script, Marp deck, milestones/budget, compliance), built from Blockchain Lab blocks and verified (CI green, Pages 200).
+Manifest: https://raw.githubusercontent.com/Blockchains/buidl/main/blocks.json
+
+# AGENTS.md: buidl
+
+Hackathon / grant brief → working product repo, on GitHub Actions. Humans: see [README.md](README.md).
+
+## Setup / test
+```bash
+python3 -m unittest discover -s tests -v                       # offline unit tests
+python3 -m buidl run --requirements examples/ethonline2026/requirements.json --plan examples/ethonline2026/plan.json \
+  --mode none --no-grok --out /tmp/p --result /tmp/r.json      # template e2e without Grok (needs forge + node 20)
+python3 -m buidl run --brief-url <url> --mode none             # full run with Grok (XAI_API_KEY)
+```
+
+## Structure
+| Path | What |
+|---|---|
+| `buidl/brief.py` | fetch URL → text, Grok parse → requirements.json |
+| `buidl/catalog.py` | load hub blocks.json, blockchainlab-index catalog, grokhack-index, starters; score/shortlist |
+| `buidl/plan.py` | Grok plan + normalisation (slug, testnet, contract name, bill-of-blocks validation) |
+| `buidl/generate.py` | product repo: template, vendored libs, Grok contract with forge verification loop + fallback, submission pack, docs |
+| `buidl/publish.py` | create repo (FORGE_TOKEN / gh) or sandbox branch; wait for CI + Pages; HTTP 200 checks |
+| `buidl/templates/product/` | the product template (contracts, web, scripts/ci.sh, workflows) |
+| `scripts/` | workflow helpers: issue-form inputs, run recording, hub page |
+| `runs/` | one JSON per pipeline run (written by the workflow) |
+| `examples/` | real parsed briefs + plans used by CI |
+
+## Rules
+- Stdlib-only Python; no new runtime deps without a reason.
+- Never print or commit secrets; gitleaks runs before every publish and in CI.
+- Generated products must pass `scripts/ci.sh`; a run is success only after CI green + Pages 200.
+- Keep the template's constructor contract (no-arg) in sync with `web/src/main.js` deploy flow.
 
 
 

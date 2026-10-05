@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-04T18:47:12Z",
+ "generated_at": "2026-10-05T11:41:36Z",
  "schema": "https://raw.githubusercontent.com/Blockchains/.github/main/docs/blocks.schema.json",
  "guide": "https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md",
- "count": 31,
+ "count": 32,
  "blocks": [
   {
    "schema_version": "1.0",
@@ -448,7 +448,7 @@
     "html_url": "https://github.com/Blockchains/blockchainlab-api",
     "agents_md": "https://github.com/Blockchains/blockchainlab-api/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-api/main/llms.txt",
-    "pushed_at": "2026-10-04T18:06:50Z"
+    "pushed_at": "2026-10-05T10:32:05Z"
    }
   },
   {
@@ -773,7 +773,7 @@
     "html_url": "https://github.com/Blockchains/blockchainlab-index",
     "agents_md": "https://github.com/Blockchains/blockchainlab-index/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-index/main/llms.txt",
-    "pushed_at": "2026-10-04T18:27:48Z"
+    "pushed_at": "2026-10-05T11:07:11Z"
    }
   },
   {
@@ -1249,7 +1249,7 @@
    "schema_version": "1.0",
    "name": "blockchainlab-starters",
    "repo": "Blockchains/blockchainlab-starters",
-   "summary": "Template repo of 8 CI-tested starters built on Blockchains forks: foundry-oz-tokens, chainlink-price-feed, uniswap-v4-hook, erc4337-smart-account, hedera-token-sdk, wagmi-rainbowkit-dapp, circom-zk-proof and noir-zk-proof.",
+   "summary": "Template repo of 14 CI-tested starters built on Blockchains forks: foundry-oz-tokens (ERC-20/721/1155), chainlink-price-feed, uniswap-v4-hook, erc4337-smart-account (+ paymaster), hedera-token-sdk, wagmi-rainbowkit-dapp, circom-zk-proof, noir-zk-proof, subgraph-indexer, ipfs-upload, ccip-crosschain, ai-agent-onchain, farcaster-miniapp and solana-anchor-vault.",
    "kind": [
     "template"
    ],
@@ -1267,6 +1267,12 @@
      "name": "starters/<name>/",
      "ref": "starters/",
      "usage": "cd starters/<name> && follow its README"
+    },
+    {
+     "type": "file",
+     "name": "starters/<name>/blocks.json",
+     "ref": "starters/",
+     "usage": "per-starter manifest (subgraph-indexer, ipfs-upload, ccip-crosschain, ai-agent-onchain, farcaster-miniapp, solana-anchor-vault)"
     }
    ],
    "inputs": [
@@ -1291,7 +1297,10 @@
     "foundry",
     "node>=20",
     "circom 2.2.3 + snarkjs",
-    "nargo"
+    "nargo",
+    "The Graph graph-cli + matchstick (libpq5)",
+    "Agave 2.3.13 + Anchor 0.32.1",
+    "@chainlink/local"
    ],
    "compatible_with": [
     {
@@ -1309,6 +1318,10 @@
     {
      "repo": "Blockchains/blockchainlab-compose",
      "how": "generated alternative for token/NFT ideas"
+    },
+    {
+     "repo": "Blockchains/buidl",
+     "how": "brief-to-product pipeline that plans from these starters"
     }
    ],
    "tests": {
@@ -1326,7 +1339,7 @@
     "html_url": "https://github.com/Blockchains/blockchainlab-starters",
     "agents_md": "https://github.com/Blockchains/blockchainlab-starters/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-starters/main/llms.txt",
-    "pushed_at": "2026-10-04T18:07:06Z"
+    "pushed_at": "2026-10-04T19:13:43Z"
    }
   },
   {
@@ -1635,7 +1648,126 @@
     "html_url": "https://github.com/Blockchains/blockchains.github.io",
     "agents_md": "https://github.com/Blockchains/blockchains.github.io/blob/main/AGENTS.md",
     "llms_txt": "https://blockchains.github.io/llms.txt",
-    "pushed_at": "2026-10-04T18:10:37Z"
+    "pushed_at": "2026-10-05T09:48:35Z"
+   }
+  },
+  {
+   "schema_version": "1.0",
+   "name": "buidl",
+   "repo": "Blockchains/buidl",
+   "summary": "Brief-to-product pipeline on GitHub Actions: a hackathon or grant brief becomes a repo with a Foundry contract + tests, a live GitHub Pages dApp, CI and a submission pack (description per judging criterion, track mapping, demo script, Marp deck, milestones/budget, compliance), built from Blockchain Lab blocks and verified (CI green, Pages 200).",
+   "kind": [
+    "github-action",
+    "cli",
+    "generator"
+   ],
+   "stability": "beta",
+   "license": "MIT",
+   "entrypoints": [
+    {
+     "type": "github-action",
+     "name": "Brief to product",
+     "ref": ".github/workflows/buidl.yml",
+     "usage": "workflow_dispatch inputs: brief_url, brief_text, name, mode; or open a 'Brief' issue"
+    },
+    {
+     "type": "cli",
+     "name": "python3 -m buidl run",
+     "ref": "buidl/cli.py",
+     "usage": "python3 -m buidl run --brief-url <url> [--brief-file f] [--name slug] [--mode auto|create|branch|none]"
+    },
+    {
+     "type": "cli",
+     "name": "python3 -m buidl promote",
+     "ref": "buidl/cli.py",
+     "usage": "python3 -m buidl promote <slug>  # sandbox branch -> Blockchains/<slug>"
+    }
+   ],
+   "inputs": [
+    {
+     "name": "brief_url / brief_text",
+     "type": "string",
+     "description": "ETHGlobal, Devpost, DoraHacks, Gitcoin, grant pages, or pasted text"
+    },
+    {
+     "name": "XAI_API_KEY",
+     "type": "secret",
+     "description": "Grok (grok-4.7) for parsing, planning, contract and docs"
+    },
+    {
+     "name": "FORGE_TOKEN",
+     "type": "secret",
+     "description": "optional fine-grained PAT to create repos; without it products go to sandbox branches + Pages here"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "product repo",
+     "type": "repo",
+     "description": "contracts/, web/, docs/submission/, COMPLIANCE.md, brief/, CI + Pages, README/AGENTS.md/llms.txt/blocks.json"
+    },
+    {
+     "name": "runs/<slug>-<run>.json",
+     "type": "file",
+     "description": "requirements summary, plan, contract attempts, CI/Pages URLs, Grok tokens and USD"
+    }
+   ],
+   "deps": [
+    "python>=3.10",
+    "foundry",
+    "node>=20",
+    "gh"
+   ],
+   "compatible_with": [
+    {
+     "repo": "Blockchains/blockchains.github.io",
+     "how": "blocks.json hub used as the planning catalogue"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-index",
+     "how": "236-fork catalogue with reuse fields used by the planner"
+    },
+    {
+     "repo": "Blockchains/grokhack-index",
+     "how": "Grok/xAI integrations catalogue used by the planner"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-starters",
+     "how": "starters offered to the planner"
+    },
+    {
+     "repo": "Blockchains/openzeppelin-contracts",
+     "how": "vendored into every product (v5.7.0)"
+    },
+    {
+     "repo": "Blockchains/forge-std",
+     "how": "vendored into every product (v1.17.0)"
+    },
+    {
+     "repo": "Blockchains/blockchainlab-compose",
+     "how": "sibling generator for token/NFT ideas (same publish pattern)"
+    },
+    {
+     "repo": "Blockchains/hackathons",
+     "how": "source of open hackathon briefs to feed in"
+    }
+   ],
+   "tests": {
+    "command": "python3 -m unittest discover -s tests && python3 -m buidl run --requirements examples/ethonline2026/requirements.json --plan examples/ethonline2026/plan.json --mode none --no-grok",
+    "ci": ".github/workflows/ci.yml",
+    "network": true
+   },
+   "docs": {
+    "readme": "README.md",
+    "agents": "AGENTS.md",
+    "llms": "llms.txt"
+   },
+   "source": {
+    "manifest": "https://raw.githubusercontent.com/Blockchains/buidl/main/blocks.json",
+    "html_url": "https://github.com/Blockchains/buidl",
+    "agents_md": "https://github.com/Blockchains/buidl/blob/main/AGENTS.md",
+    "llms_txt": "https://raw.githubusercontent.com/Blockchains/buidl/main/llms.txt",
+    "pushed_at": "2026-10-04T19:40:46Z"
    }
   },
   {
@@ -1864,7 +1996,7 @@
     "html_url": "https://github.com/Blockchains/forge-example-gasless-membership",
     "agents_md": "https://github.com/Blockchains/forge-example-gasless-membership/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/forge-example-gasless-membership/main/llms.txt",
-    "pushed_at": "2026-10-04T18:07:13Z"
+    "pushed_at": "2026-10-04T21:53:32Z"
    }
   },
   {
@@ -1977,7 +2109,7 @@
     "html_url": "https://github.com/Blockchains/forge-example-usd-savings-vault",
     "agents_md": "https://github.com/Blockchains/forge-example-usd-savings-vault/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/forge-example-usd-savings-vault/main/llms.txt",
-    "pushed_at": "2026-10-04T18:07:15Z"
+    "pushed_at": "2026-10-04T23:53:37Z"
    }
   },
   {
@@ -2269,7 +2401,7 @@
     "html_url": "https://github.com/Blockchains/grok-release-radar",
     "agents_md": "https://github.com/Blockchains/grok-release-radar/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/grok-release-radar/main/llms.txt",
-    "pushed_at": "2026-10-04T18:07:22Z"
+    "pushed_at": "2026-10-04T18:53:16Z"
    }
   },
   {
@@ -2600,7 +2732,7 @@
     "html_url": "https://github.com/Blockchains/grokhack-index",
     "agents_md": "https://github.com/Blockchains/grokhack-index/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/grokhack-index/main/llms.txt",
-    "pushed_at": "2026-10-04T18:21:17Z"
+    "pushed_at": "2026-10-05T09:40:07Z"
    }
   },
   {
@@ -2915,7 +3047,7 @@
     "html_url": "https://github.com/Blockchains/sites-monitor",
     "agents_md": "https://github.com/Blockchains/sites-monitor/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/sites-monitor/main/llms.txt",
-    "pushed_at": "2026-10-04T18:20:28Z"
+    "pushed_at": "2026-10-05T05:46:23Z"
    }
   },
   {
