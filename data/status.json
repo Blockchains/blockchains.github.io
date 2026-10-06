@@ -1,407 +1,407 @@
 {
- "generated_at": "2026-10-05T18:24:21Z",
+ "generated_at": "2026-10-06T00:17:59Z",
  "count": 75,
- "up": 75,
- "stale": 0,
+ "up": 72,
+ "stale": 3,
  "down": 0,
  "services": {
   "ai-brief": {
    "id": "ai-brief",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 6.7,
+   "checked_at": "2026-10-06T00:17:57Z",
+   "age_h": 12.6,
    "status": "up"
   },
   "ai-incidents": {
    "id": "ai-incidents",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 6.7,
+   "checked_at": "2026-10-06T00:17:57Z",
+   "age_h": 12.6,
    "status": "up"
   },
   "ai-ideas": {
    "id": "ai-ideas",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 6.7,
+   "checked_at": "2026-10-06T00:17:57Z",
+   "age_h": 12.6,
    "status": "up"
   },
   "ai-digest": {
    "id": "ai-digest",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 6.7,
+   "checked_at": "2026-10-06T00:17:57Z",
+   "age_h": 12.6,
    "status": "up"
   },
   "ai-protocols": {
    "id": "ai-protocols",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 8.6,
+   "checked_at": "2026-10-06T00:17:57Z",
+   "age_h": 14.5,
    "status": "up"
   },
   "ai-contracts": {
    "id": "ai-contracts",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 8.6,
+   "checked_at": "2026-10-06T00:17:57Z",
+   "age_h": 14.5,
    "status": "up"
   },
   "ai-audits": {
    "id": "ai-audits",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 8.6,
+   "checked_at": "2026-10-06T00:17:57Z",
+   "age_h": 14.5,
    "status": "up"
   },
   "ai-whitepapers": {
    "id": "ai-whitepapers",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 8.6,
+   "checked_at": "2026-10-06T00:17:57Z",
+   "age_h": 14.5,
    "status": "up"
   },
   "mon-gas": {
    "id": "mon-gas",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 0.0,
-   "status": "up"
+   "checked_at": "2026-10-06T00:17:57Z",
+   "age_h": 5.9,
+   "status": "stale"
   },
   "mon-chains": {
    "id": "mon-chains",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 0.0,
-   "status": "up"
+   "checked_at": "2026-10-06T00:17:57Z",
+   "age_h": 5.9,
+   "status": "stale"
   },
   "mon-rpc": {
    "id": "mon-rpc",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 0.0,
-   "status": "up"
+   "checked_at": "2026-10-06T00:17:57Z",
+   "age_h": 5.9,
+   "status": "stale"
   },
   "mon-depeg": {
    "id": "mon-depeg",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 6.7,
+   "checked_at": "2026-10-06T00:17:57Z",
+   "age_h": 12.6,
    "status": "up"
   },
   "mon-scan": {
    "id": "mon-scan",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 8.6,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 14.5,
    "status": "up"
   },
   "mon-incidents": {
    "id": "mon-incidents",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 6.7,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 12.6,
    "status": "up"
   },
   "mon-sites": {
    "id": "mon-sites",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "feed-incidents": {
    "id": "feed-incidents",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "feed-events": {
    "id": "feed-events",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "find-portfolio": {
    "id": "find-portfolio",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "find-compare": {
    "id": "find-compare",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 6.7,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 12.6,
    "status": "up"
   },
   "find-events": {
    "id": "find-events",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 6.7,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 12.6,
    "status": "up"
   },
   "find-jobs": {
    "id": "find-jobs",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 6.7,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 12.6,
    "status": "up"
   },
   "find-grants": {
    "id": "find-grants",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 6.7,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 12.6,
    "status": "up"
   },
   "find-glossary": {
    "id": "find-glossary",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 6.7,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 12.6,
    "status": "up"
   },
   "find-papers": {
    "id": "find-papers",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "find-phishing": {
    "id": "find-phishing",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-gas": {
    "id": "tool-gas",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-units": {
    "id": "tool-units",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-abi": {
    "id": "tool-abi",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-address": {
    "id": "tool-address",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-tx": {
    "id": "tool-tx",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-hash": {
    "id": "tool-hash",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-storage": {
    "id": "tool-storage",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-reference": {
    "id": "tool-reference",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-chains": {
    "id": "tool-chains",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-tokens": {
    "id": "tool-tokens",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-safe": {
    "id": "tool-safe",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-eip712": {
    "id": "tool-eip712",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-calldiff": {
    "id": "tool-calldiff",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-verify": {
    "id": "tool-verify",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-gas-history": {
    "id": "tool-gas-history",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-bridge": {
    "id": "tool-bridge",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-approvals": {
    "id": "tool-approvals",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-ens-bulk": {
    "id": "tool-ens-bulk",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-solana-tx": {
    "id": "tool-solana-tx",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-psbt": {
    "id": "tool-psbt",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-labels": {
    "id": "tool-labels",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-vanity": {
    "id": "tool-vanity",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-price-impact": {
    "id": "tool-price-impact",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-mev": {
    "id": "tool-mev",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-stablecoins": {
    "id": "tool-stablecoins",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "tool-rpc-health": {
    "id": "tool-rpc-health",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "status": "up"
   },
   "data-bips": {
    "id": "data-bips",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-bridges": {
    "id": "data-bridges",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-chains": {
    "id": "data-chains",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-chains-tvl": {
    "id": "data-chains-tvl",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-dex-volumes": {
    "id": "data-dex-volumes",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-eips": {
    "id": "data-eips",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-ercs": {
    "id": "data-ercs",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-events": {
    "id": "data-events",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-fees": {
    "id": "data-fees",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-glossary": {
    "id": "data-glossary",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-grants": {
    "id": "data-grants",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-hackathons": {
    "id": "data-hackathons",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-l2-metrics": {
    "id": "data-l2-metrics",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-protocols": {
    "id": "data-protocols",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-rpc-health": {
    "id": "data-rpc-health",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-sanctioned-addresses": {
    "id": "data-sanctioned-addresses",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-security-incidents": {
    "id": "data-security-incidents",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-stablecoins": {
    "id": "data-stablecoins",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-whitepapers": {
    "id": "data-whitepapers",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "data-yields": {
    "id": "data-yields",
-   "checked_at": "2026-10-05T18:24:19Z",
-   "age_h": 7.9,
+   "checked_at": "2026-10-06T00:17:58Z",
+   "age_h": 13.8,
    "status": "up"
   },
   "dev-sdk": {
    "id": "dev-sdk",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "workflows": {
     "ci": "success"
    },
@@ -409,7 +409,7 @@
   },
   "dev-mcp": {
    "id": "dev-mcp",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "workflows": {
     "ci": "success",
     "docker": "success"
@@ -418,7 +418,7 @@
   },
   "dev-labs": {
    "id": "dev-labs",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "workflows": {
     "ci": "success"
    },
@@ -426,7 +426,7 @@
   },
   "dev-apidocs": {
    "id": "dev-apidocs",
-   "checked_at": "2026-10-05T18:24:19Z",
+   "checked_at": "2026-10-06T00:17:58Z",
    "workflows": {
     "nightly-data": "success",
     "ci": "success"
