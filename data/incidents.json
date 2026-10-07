@@ -1,14 +1,44 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-06T11:24:53Z",
+ "generated_at": "2026-10-07T11:13:06Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21065227139.92813,
- "ytd_usd": 2242313290.928132,
+ "total_all_time_usd": 21065787012.598133,
+ "ytd_usd": 2242873163.598132,
  "incidents": [
+  {
+   "date": "2026-10-06",
+   "name": "Set Protocol",
+   "amount_usd": 21872.67,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Rounding Error",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-10-06",
+   "name": "MakerDAO ETH-A Liquidation Keeper Bot",
+   "amount_usd": 538000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
   {
    "date": "2026-10-01",
    "name": "FlashLoopAdapter",
@@ -4530,36 +4560,6 @@
    ],
    "classification": "Protocol Logic",
    "technique": "Withdrawal Logic Flaw",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2025-12-04",
-   "name": "US Permissionless Dollar",
-   "amount_usd": 1000000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Access Control",
-   "technique": "Proxy Upgrade Hijack",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2025-12-02",
-   "name": "Goldfinch",
-   "amount_usd": 330000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Access Control",
-   "technique": "Token Approval Abuse",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
