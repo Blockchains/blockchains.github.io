@@ -1,7 +1,7 @@
 {
  "service": "ai/incidents",
  "description": "AI incident explainer",
- "generated_at": "2026-10-07T11:13:41Z",
+ "generated_at": "2026-10-08T11:31:36Z",
  "source": "Grok (xAI) over public data: DefiLlama hacks",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
@@ -9,8 +9,8 @@
   {
    "name": "Set Protocol",
    "date": "2026-10-06",
-   "plain_english": "The incident was classified as Token & Share Accounting with technique Rounding Error and amount 21872.67 USD. It targeted a DeFi Protocol.",
-   "lesson_for_builders": "Validate arithmetic precision in token and share calculations to avoid loss from rounding.",
+   "plain_english": "This incident was classified as Token & Share Accounting using Rounding Error technique. The amount lost was 21872.67 USD.",
+   "lesson_for_builders": "Validate all arithmetic operations in share accounting to prevent loss from rounding.",
    "related_lab": null,
    "amount_usd": 21872.67,
    "source": "",
@@ -21,7 +21,7 @@
   {
    "name": "MakerDAO ETH-A Liquidation Keeper Bot",
    "date": "2026-10-06",
-   "plain_english": "The incident was classified as Access Control with technique Improper Access Control and amount 538000 USD. It targeted a DeFi Protocol.",
+   "plain_english": "This incident was classified as Access Control using Improper Access Control technique. The amount lost was 538000 USD.",
    "lesson_for_builders": "Enforce strict access control checks on all privileged functions.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": 538000,
@@ -31,9 +31,21 @@
    ]
   },
   {
+   "name": "GoldPesa",
+   "date": "2026-10-02",
+   "plain_english": "This incident was classified as Token & Share Accounting using Incorrect Share Accounting technique. The amount lost was 114900 USD.",
+   "lesson_for_builders": "Audit share calculation logic to ensure correct token distribution.",
+   "related_lab": null,
+   "amount_usd": 114900,
+   "source": "",
+   "chains": [
+    "Base"
+   ]
+  },
+  {
    "name": "FlashLoopAdapter",
    "date": "2026-10-01",
-   "plain_english": "The incident was classified as Access Control with technique Improper Access Control and amount 305000 USD. It targeted a DeFi Protocol.",
+   "plain_english": "This incident was classified as Access Control using Improper Access Control technique. The amount lost was 305000 USD.",
    "lesson_for_builders": "Enforce strict access control checks on all privileged functions.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": 305000,
@@ -44,9 +56,9 @@
   },
   {
    "name": "NEAR Intents",
-   "date": "2026-10-01",
-   "plain_english": "The incident was classified as Bridge & Cross-Chain with technique Bridge Logic Flaw and amount 3800000 USD. It targeted a DeFi Protocol.",
-   "lesson_for_builders": "Audit cross-chain message validation and replay protection logic.",
+   "date": "2026-10-02",
+   "plain_english": "This incident was classified as Bridge & Cross-Chain using Bridge Logic Flaw technique. The amount lost was 3800000 USD.",
+   "lesson_for_builders": "Verify all cross-chain message validations and replay protections.",
    "related_lab": "L43 CrossChainReplay",
    "amount_usd": 3800000,
    "source": "",
@@ -57,8 +69,8 @@
   {
    "name": "SKYDAO",
    "date": "2026-09-30",
-   "plain_english": "The incident was classified as Protocol Logic with technique Swap Logic Flaw and amount 183482.88 USD. It targeted a DeFi Protocol.",
-   "lesson_for_builders": "Test all swap and state transition paths against expected invariants.",
+   "plain_english": "This incident was classified as Protocol Logic using Swap Logic Flaw technique. The amount lost was 183482.88 USD.",
+   "lesson_for_builders": "Test all protocol state transitions for logical consistency.",
    "related_lab": null,
    "amount_usd": 183482.88,
    "source": "",
@@ -69,8 +81,8 @@
   {
    "name": "Fake GIWA Bridge",
    "date": "2026-09-27",
-   "plain_english": "The incident was classified as Social Engineering with technique Impersonation Scam and amount 2080000 USD. It targeted a DeFi Protocol.",
-   "lesson_for_builders": "Educate users on verifying contract addresses and bridge endpoints.",
+   "plain_english": "This incident was classified as Social Engineering using Impersonation Scam technique. The amount lost was 2080000 USD.",
+   "lesson_for_builders": "Educate users on verifying contract authenticity before interactions.",
    "related_lab": null,
    "amount_usd": 2080000,
    "source": "",
@@ -81,9 +93,9 @@
   {
    "name": "Duelbits",
    "date": "2026-09-24",
-   "plain_english": "The incident was classified as Key Compromise with technique Hot Wallet Key Compromised and amount 7000000 USD. It targeted a Gambling Platform.",
-   "lesson_for_builders": "Protect hot wallet keys with multi-signature and hardware controls.",
-   "related_lab": "L14 MultiSig",
+   "plain_english": "This incident was classified as Key Compromise using Hot Wallet Key Compromised technique. The amount lost was 7000000 USD.",
+   "lesson_for_builders": "Use multi-signature and cold storage for key management.",
+   "related_lab": null,
    "amount_usd": 7000000,
    "source": "",
    "chains": [
@@ -96,9 +108,9 @@
   {
    "name": "Bitget",
    "date": "2026-09-24",
-   "plain_english": "The incident was classified as Key Compromise with technique Hot Wallet Key Compromised and amount 387000000 USD. It targeted a CEX.",
-   "lesson_for_builders": "Protect hot wallet keys with multi-signature and hardware controls.",
-   "related_lab": "L14 MultiSig",
+   "plain_english": "This incident was classified as Key Compromise using Hot Wallet Key Compromised technique. The amount lost was 387000000 USD.",
+   "lesson_for_builders": "Use multi-signature and cold storage for key management.",
+   "related_lab": null,
    "amount_usd": 387000000,
    "source": "",
    "chains": [
@@ -111,7 +123,7 @@
   {
    "name": "Limit Break Payment Processor",
    "date": "2026-09-24",
-   "plain_english": "The incident was classified as Access Control with technique Token Approval Abuse and amount 1800000 USD. It targeted a NFTfi.",
+   "plain_english": "This incident was classified as Access Control using Token Approval Abuse technique. The amount lost was 1800000 USD.",
    "lesson_for_builders": "Enforce strict access control checks on all privileged functions.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": 1800000,
@@ -126,39 +138,13 @@
   {
    "name": "Payy Network",
    "date": "2026-09-24",
-   "plain_english": "The incident was classified as Bridge & Cross-Chain with technique Bridge Logic Flaw and amount 1828589.378132 USD. It targeted a DeFi Protocol.",
-   "lesson_for_builders": "Audit cross-chain message validation and replay protection logic.",
+   "plain_english": "This incident was classified as Bridge & Cross-Chain using Bridge Logic Flaw technique. The amount lost was 1828589.378132 USD.",
+   "lesson_for_builders": "Verify all cross-chain message validations and replay protections.",
    "related_lab": "L43 CrossChainReplay",
    "amount_usd": 1828589.378132,
    "source": "",
    "chains": [
     "Ethereum"
-   ]
-  },
-  {
-   "name": "Meter",
-   "date": "2026-09-23",
-   "plain_english": "The incident was classified as Protocol Logic with technique Unknown and amount null USD. It targeted a Chain.",
-   "lesson_for_builders": "Define and monitor protocol invariants across all supported chains.",
-   "related_lab": null,
-   "amount_usd": null,
-   "source": "",
-   "chains": [
-    "Meter",
-    "BSC",
-    "Ethereum"
-   ]
-  },
-  {
-   "name": "Drop",
-   "date": "2026-09-22",
-   "plain_english": "The incident was classified as Governance with technique Malicious Proposal and amount 4400000 USD. It targeted a DeFi Protocol.",
-   "lesson_for_builders": "Require multi-signature or timelock approval for governance actions.",
-   "related_lab": "L03 Ownable/access control",
-   "amount_usd": 4400000,
-   "source": "",
-   "chains": [
-    "Neutron"
    ]
   }
  ],

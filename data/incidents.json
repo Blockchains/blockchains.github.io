@@ -1,14 +1,29 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-07T11:13:06Z",
+ "generated_at": "2026-10-08T11:30:59Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21065787012.598133,
- "ytd_usd": 2242873163.598132,
+ "total_all_time_usd": 21065919912.598133,
+ "ytd_usd": 2243006063.598132,
  "incidents": [
+  {
+   "date": "2026-10-07",
+   "name": "Locus Finance",
+   "amount_usd": 18000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": null,
+   "technique": null,
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
   {
    "date": "2026-10-06",
    "name": "Set Protocol",
@@ -33,6 +48,21 @@
    ],
    "classification": "Access Control",
    "technique": "Improper Access Control",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-10-02",
+   "name": "GoldPesa",
+   "amount_usd": 114900,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
@@ -4235,7 +4265,7 @@
    "language": "Solidity"
   },
   {
-   "date": "2026-01-19",
+   "date": "2026-01-20",
    "name": "Makina",
    "amount_usd": 4200000,
    "chains": [
@@ -4245,7 +4275,7 @@
    "technique": "Spot Price Manipulation",
    "target_type": "DeFi Protocol",
    "bridge": false,
-   "returned_usd": null,
+   "returned_usd": 3410000,
    "source": "",
    "language": "Solidity"
   },
@@ -4530,36 +4560,6 @@
    ],
    "classification": "Access Control",
    "technique": "Token Approval Abuse",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2025-12-12",
-   "name": "Ribbon",
-   "amount_usd": 2700000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Access Control",
-   "technique": "Improper Access Control",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2025-12-11",
-   "name": "0G Labs",
-   "amount_usd": 516000,
-   "chains": [
-    "0G"
-   ],
-   "classification": "Protocol Logic",
-   "technique": "Withdrawal Logic Flaw",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
