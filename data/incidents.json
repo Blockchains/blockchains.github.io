@@ -1,13 +1,13 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-09T11:26:23Z",
+ "generated_at": "2026-10-10T10:43:55Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21065919912.598133,
- "ytd_usd": 2243006063.598132,
+ "total_all_time_usd": 21066399507.598133,
+ "ytd_usd": 2243485658.598132,
  "incidents": [
   {
    "date": "2026-10-07",
@@ -123,6 +123,23 @@
    ],
    "classification": "Social Engineering",
    "technique": "Impersonation Scam",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-25",
+   "name": "Demex Perp",
+   "amount_usd": 191929,
+   "chains": [
+    "Demex",
+    "Ethereum",
+    "BSC"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Cross-Chain Message Spoofing",
    "target_type": "DeFi Protocol",
    "bridge": true,
    "returned_usd": null,
@@ -545,6 +562,21 @@
    "returned_usd": null,
    "source": "",
    "language": "C++"
+  },
+  {
+   "date": "2026-09-05",
+   "name": "Rocket Perp",
+   "amount_usd": 287666,
+   "chains": [
+    "Rocket"
+   ],
+   "classification": "Market Manipulation",
+   "technique": "Risk Parameter Abuse",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": 287665.98,
+   "source": "",
+   "language": "Solidity"
   },
   {
    "date": "2026-09-05",
@@ -4530,36 +4562,6 @@
    ],
    "classification": "Governance",
    "technique": "Flashloan Governance Attack",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2025-12-14",
-   "name": "Mars Perps",
-   "amount_usd": 960000,
-   "chains": [
-    "Neutron"
-   ],
-   "classification": "Market Manipulation",
-   "technique": "Funding Rate Arbitrage",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Rust"
-  },
-  {
-   "date": "2025-12-12",
-   "name": "ZEROBASE",
-   "amount_usd": 250000,
-   "chains": [
-    "BSC"
-   ],
-   "classification": "Access Control",
-   "technique": "Token Approval Abuse",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
