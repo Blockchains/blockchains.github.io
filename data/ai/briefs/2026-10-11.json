@@ -1,0 +1,64 @@
+{
+ "headline": "Crypto Market Structure Brief: 11 October 2026",
+ "summary": "Ethereum leads TVL at $51.4bn followed by Base and Solana. Uniswap V4 recorded the highest 24h DEX volume while Tether led fees. USDT and USDC dominate stablecoin supply with several peg deviations flagged. Base and Arbitrum remain the largest L2s by TVS amid recent incidents on multiple chains.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum: $51.44bn TVL (rank 1)",
+    "Base: $6.21bn TVL (rank 2)",
+    "Solana: $6.19bn TVL (rank 3)",
+    "Tron: $5.61bn TVL (rank 4)",
+    "BSC: $5.58bn TVL (rank 5)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V4: $685.7m 24h volume (rank 1)",
+    "Kalshi: $458.8m 24h volume (rank 2)",
+    "Uniswap V3: $406.3m 24h volume (rank 3)",
+    "Tether: $17.5m 24h fees (rank 1)",
+    "Circle USDC: $7.0m 24h fees (rank 2)"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT: $184.1bn circulating",
+    "USDC: $73.1bn circulating",
+    "USDS: $7.0bn circulating",
+    "USDe: $4.8bn circulating",
+    "Multiple depegs reported including USYC at 13.97% deviation"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base: $15.75bn TVS (Stage 1, OP Stack)",
+    "Arbitrum One: $11.09bn TVS (Stage 1)",
+    "Hyperliquid: $6.95bn TVS (L3)",
+    "Polygon PoS: $3.96bn TVS",
+    "Robinhood Chain: $2.48bn TVS (Stage 0)"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "8 incidents reported in last 14 days totalling over $7.7m",
+    "NEAR Intents: $3.8m loss (bridge logic flaw, BSC)",
+    "Fake GIWA Bridge: $2.08m loss (impersonation scam, Ethereum)",
+    "MakerDAO ETH-A Liquidation Keeper Bot: $538k loss (access control, Ethereum)"
+   ]
+  }
+ ],
+ "watchlist": [
+  "Stablecoin peg deviations (USYC, USDY, reUSD)",
+  "L2 TVS changes (Base, Arbitrum, Robinhood Chain)",
+  "Recent DeFi incidents on Ethereum, Arbitrum and BSC",
+  "DEX volume shifts (Uniswap V4, PumpSwap)"
+ ],
+ "date": "2026-10-11",
+ "model": "grok-4.3",
+ "tokens": 13009
+}
