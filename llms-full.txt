@@ -1,6 +1,6 @@
 # Blockchains building blocks: full text
 
-Generated 2026-10-05T11:41:36Z from 32 repositories. Sections: Build with Blocks guide, blocks.json schema, then AGENTS.md of every repo.
+Generated 2026-10-12T01:46:14Z from 35 repositories. Sections: Build with Blocks guide, blocks.json schema, then AGENTS.md of every repo.
 
 
 
@@ -2737,6 +2737,130 @@ See the README section [Use as a building block](README.md#use-as-a-building-blo
 - [Blockchains/hackathon-entry-template](https://github.com/Blockchains/hackathon-entry-template): link the tracker issue from your entry
 - [Blockchains/blockchainlab-feeds](https://github.com/Blockchains/blockchainlab-feeds): automated hackathon feed
 - [Blockchains/blockchainlab-api](https://github.com/Blockchains/blockchainlab-api): `hackathons` dataset
+
+
+
+=== Blockchains/memecoin-markets / AGENTS.md ===
+
+Summary: Memecoin safety + desk toolkit for memecoin.markets: token safety scanner (Solana mint/freeze/Token-2022, EVM honeypot/tax/owner), new-pair radar, UK CGT + FIFO PnL with rotki export, launch checklist, portfolio. Zero-dep SDK, MCP, static JSON API, Pages app.
+Manifest: https://raw.githubusercontent.com/Blockchains/memecoin-markets/main/blocks.json
+
+# AGENTS.md: memecoin-markets
+
+Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and others) working **in** this repo or **using it as a building block**. Humans: see [README.md](README.md).
+
+## What this is
+
+Memecoin safety + desk toolkit behind memecoin.markets / memecoin.grok.me: token safety scanner (Solana mint/freeze authority, Token-2022 permanent delegate/fees/hooks; EVM honeypot simulation, taxes, owner powers), new-pair radar, UK CGT (same-day / 30-day / Section 104) + FIFO PnL with rotki export, launch checklist, portfolio valuation. Zero-dependency ES module SDK (browser + Node 20), read-only MCP server, static JSON API and a GitHub Pages app.
+
+- Kind: library, mcp-server, http-api, dataset, web-app · stability: `beta` · licence: MIT
+- Manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
+- How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Rules
+
+- Real data only. No mocks in live/e2e tests; unit tests use payloads recorded from the real APIs (`test/fixtures/`).
+- Read-only. Nothing here signs, sends or trades. No sniping/bundling/MEV code, no private keys, no API keys.
+- Every check carries `source`. A verdict is evidence, never advice — keep "not a buy" wording.
+- `src/` must stay dependency-free and browser-safe (it is served as-is at `/lib/`). Escape every upstream string before putting it in HTML.
+- Policy numbers live in `POLICY` (`src/scan.js`) and must match the live desk (`policy-v1.1`).
+
+## Setup / build / test
+
+```bash
+npm ci
+npm run test:unit         # offline: decoder vs @solana-program/token, CGT hand-computed cases, normalisers, grammY bot
+npm run test:live         # live upstreams + MCP stdio (8 tools) + rotki contract test against Blockchains/rotki
+npm run build:site        # _site/ with /lib (SDK), /v1 snapshots (real data)
+CHROME_PATH=/usr/bin/google-chrome npm run test:e2e   # browser e2e incl. offline (service worker)
+E2E_URL=https://blockchains.github.io/memecoin-markets/ npm run test:e2e   # against live Pages
+```
+
+## Structure
+
+| Path | What |
+|---|---|
+| `src/sources/*` | one file per upstream (dexscreener, geckoterminal, rugcheck, goplus, honeypot, jupiter, solana-rpc) |
+| `src/scan.js` | `scanToken` + `POLICY` |
+| `src/radar.js` | `radar` new-pair feed |
+| `src/pnl.js` | `ukCgt`, `fifoPnl`, `parseTradesCsv`, `toRotkiCsv` |
+| `src/checklist.js` | launch checklist |
+| `src/portfolio.js` | Jupiter prices, GBP via onetouchswitch-bridge, wallet import |
+| `bin/memecoin-mcp.js` | MCP stdio server |
+| `web/` | Pages app (copied to `_site/`, SDK to `_site/lib/`) |
+| `scripts/build-site.mjs` | builds `_site` + `/v1` JSON snapshots |
+| `examples/telegram-bot/` | grammY bot using the SDK |
+| `docs/INTEGRATION.md` | how memecoin.grok.me loads these assets |
+| `docs/REPOS.md` | which GitHub repos were integrated, wrapped or rejected and why |
+
+
+
+=== Blockchains/onetouchswitch / AGENTS.md ===
+
+Summary: Static-only UK broadband comparison for onetouchswitch.com, running on GitHub Pages with client-side JS: OS Code-Point Open postcode chunks, manual address, versioned catalogue of UK broadband offers researched from provider pages (source URL, date, reviewer, needs_review per offer), deterministic dinero.js engine in the browser, TanStack form/table (shortlist, edit costs, comparison period), notices, approved-link-only handoff, guides with search, localStorage saved comparisons, in-browser PDF bill reading, offline service worker. No runtime server or third-party API.
+Manifest: https://raw.githubusercontent.com/Blockchains/onetouchswitch/main/blocks.json
+
+# AGENTS.md: onetouchswitch (static comparison app)
+
+Static-only UK broadband comparison for onetouchswitch.com. Manifest: [`blocks.json`](blocks.json).
+
+## Setup / test
+```bash
+npm ci && npm run stage          # staging is the ONLY online step (build time)
+npm run build && npm run check:deps
+npm test && npx playwright test  # must pass offline: unshare -rn sh -c 'ip link set lo up && npm test && npx playwright test'
+```
+
+## Hard rules
+- **Zero runtime dependencies beyond static files on the same origin.** No server, database, Redis/BullMQ, Docling, Payload, Postgres, Docker, paid API, CDN, web font or third-party API at runtime. `npm run check:deps` and the Playwright origin guard enforce this.
+- Never edit `catalogue/published` by hand, and never put real-looking offers in code. Real offers come from a dated research file in `catalogue/research/`, where every figure is read from the provider's own page (`source_url`, `retrieved_at`). Figures that aren't on the page stay `null` and are listed in `review_flags` (`needs_review`). Comparison sites can help you find a URL but never supply a price. Publish with `node scripts/import-research.mjs <file> --reviewer "<name>"` (or `npm run review`). Test offers live only in `tests/fixtures` and are labelled TEST FIXTURE.
+- Never claim availability or orderability. Never automate orders. Keep `OFFER_COPY` exactly as it is. Link text is "Check availability with {Provider}".
+- Bills are read in the browser only. Never upload them anywhere. OCR is deferred; manual entry is the equivalent.
+- Saved comparisons store the outward code only, never the address or full postcode.
+- `config/handoff.json` and `config/permitted-sources.json` change only with Ismail's written approval.
+- Money is integer pence via `core/money.mjs` (dinero.js). No floats in the cost engine.
+- The stablecoin/FX bridge is the backend that settles with PROVIDERS and partners, never with customers. Never fetch from it or mention payments in the consumer journey. The only allowed reference is the operator footer link.
+- Run gitleaks before every push.
+
+
+
+=== Blockchains/onetouchswitch-bridge / AGENTS.md ===
+
+Summary: Provider/partner settlement backend for onetouchswitch.com (OTS back office; never in the consumer journey), built from Blockchain Lab blocks: Chainlink GBP/USD, stablecoin payout rails, live USDC payout cost in GBP, OFAC payout-address screening, healthy RPC, payout receipt checks, OTS sitemap search. Typed JS client, MCP server and a CORS static JSON API on Pages.
+Manifest: https://raw.githubusercontent.com/Blockchains/onetouchswitch-bridge/main/blocks.json
+
+# AGENTS.md: onetouchswitch-bridge
+
+Read-only provider/partner SETTLEMENT backend for onetouchswitch.com, built on the Blockchains stack. It is for providers and commercial partners, never customers. The consumer comparison app must never load, fetch or mention it; the one exception is an optional operator footer link. Manifest: [`blocks.json`](blocks.json).
+
+## Setup / test
+```bash
+npm ci
+npm test                       # tsc on types + live node:test (network required, no mocks)
+node scripts/build-site.mjs    # writes ./site (Pages artifact)
+node bin/ots-mcp.js            # MCP over stdio
+```
+A test failure can be an upstream outage (RPC, DefiLlama, Pages), so re-run before changing code.
+
+## Rules
+- Scope: provider/partner settlement only. Never add customer-facing payments, crypto copy for consumers, or anything the consumer app would need to fetch.
+- Onboarding a partner, or adding to the consumer app's `config/handoff.json`, needs Ismail's written approval.
+- Never add mocked or hard-coded market data. Every number must come from a live source and carry its timestamp.
+- Never add keys, signing or sending. Keep `bin/ots-mcp.js` tools read-only.
+- Keep `types/bridge.d.ts` in sync with `src/bridge.js` (`npm run typecheck` compiles `test/types-consumer.ts`).
+- When adding an MCP tool, add it to `CALLS` in `test/mcp.test.mjs`. The test asserts the exact tool list.
+- Chainlink feed addresses must be verified on-chain (`description()`), which `gbpUsd()` does.
+- Run gitleaks before pushing.
+
+## Structure
+| Path | What |
+|---|---|
+| `src/bridge.js` | `OTSBridge` client |
+| `types/bridge.d.ts` | public types |
+| `bin/ots-mcp.js` | MCP server (8 `ots_*` tools) |
+| `scripts/build-site.mjs`, `web/` | static API + demo for Pages |
+| `docs/INTEGRATION.md` | how touch.grok.me calls it |
+| `docs/FIT.md` | audit: which blocks fit OTS |
 
 
 
