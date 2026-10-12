@@ -1,13 +1,13 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-11T10:56:51Z",
+ "generated_at": "2026-10-12T12:16:37Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21066399507.598133,
- "ytd_usd": 2243485658.598132,
+ "total_all_time_usd": 21066675507.598133,
+ "ytd_usd": 2243761658.598132,
  "incidents": [
   {
    "date": "2026-10-07",
@@ -1760,6 +1760,21 @@
    "returned_usd": null,
    "source": "",
    "language": "Solidity"
+  },
+  {
+   "date": "2026-07-15",
+   "name": "Sonic ICP",
+   "amount_usd": 276000,
+   "chains": [
+    "ICP"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
   },
   {
    "date": "2026-07-15",
@@ -4547,21 +4562,6 @@
    ],
    "classification": "Token & Share Accounting",
    "technique": "Donation Attack",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2025-12-16",
-   "name": "FutureSwap",
-   "amount_usd": 270000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Governance",
-   "technique": "Flashloan Governance Attack",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
