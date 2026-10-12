@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T01:46:14Z",
+ "generated_at": "2026-10-12T12:15:12Z",
  "schema": "https://raw.githubusercontent.com/Blockchains/.github/main/docs/blocks.schema.json",
  "guide": "https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md",
  "count": 35,
@@ -448,7 +448,7 @@
     "html_url": "https://github.com/Blockchains/blockchainlab-api",
     "agents_md": "https://github.com/Blockchains/blockchainlab-api/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-api/main/llms.txt",
-    "pushed_at": "2026-10-11T10:04:45Z"
+    "pushed_at": "2026-10-12T10:55:30Z"
    }
   },
   {
@@ -657,7 +657,7 @@
     "html_url": "https://github.com/Blockchains/blockchainlab-feeds",
     "agents_md": "https://github.com/Blockchains/blockchainlab-feeds/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-feeds/main/llms.txt",
-    "pushed_at": "2026-10-04T18:06:54Z"
+    "pushed_at": "2026-10-12T06:52:02Z"
    }
   },
   {
@@ -773,7 +773,7 @@
     "html_url": "https://github.com/Blockchains/blockchainlab-index",
     "agents_md": "https://github.com/Blockchains/blockchainlab-index/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/blockchainlab-index/main/llms.txt",
-    "pushed_at": "2026-10-11T10:35:39Z"
+    "pushed_at": "2026-10-12T11:37:09Z"
    }
   },
   {
@@ -1648,7 +1648,7 @@
     "html_url": "https://github.com/Blockchains/blockchains.github.io",
     "agents_md": "https://github.com/Blockchains/blockchains.github.io/blob/main/AGENTS.md",
     "llms_txt": "https://blockchains.github.io/llms.txt",
-    "pushed_at": "2026-10-11T22:53:23Z"
+    "pushed_at": "2026-10-12T10:42:46Z"
    }
   },
   {
@@ -2732,7 +2732,7 @@
     "html_url": "https://github.com/Blockchains/grokhack-index",
     "agents_md": "https://github.com/Blockchains/grokhack-index/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/grokhack-index/main/llms.txt",
-    "pushed_at": "2026-10-11T09:26:08Z"
+    "pushed_at": "2026-10-12T09:52:31Z"
    }
   },
   {
@@ -2974,7 +2974,7 @@
    "schema_version": "1.0",
    "name": "memecoin-markets",
    "repo": "Blockchains/memecoin-markets",
-   "summary": "Memecoin safety + desk toolkit for memecoin.markets: token safety scanner (Solana mint/freeze/Token-2022, EVM honeypot/tax/owner), new-pair radar, UK CGT + FIFO PnL with rotki export, launch checklist, portfolio. Zero-dep SDK, MCP, static JSON API, Pages app.",
+   "summary": "CoinMarketCap-style memecoin rankings + per-token SEO pages (holders, LP, charts, rug/honeypot scan) for memecoin.markets, plus safety scanner, new-pair radar, UK CGT/FIFO PnL, launch checklist, portfolio. Zero-dep SDK, MCP, static JSON API, Pages app. Free public data, no keys.",
    "kind": [
     "library",
     "mcp-server",
@@ -2983,7 +2983,7 @@
     "web-app"
    ],
    "stability": "beta",
-   "version": "0.1.0",
+   "version": "0.2.0",
    "license": "MIT",
    "homepage": "https://blockchains.github.io/memecoin-markets/",
    "entrypoints": [
@@ -3027,6 +3027,16 @@
       "memecoin_rotki_csv",
       "memecoin_portfolio"
      ]
+    },
+    {
+     "type": "http",
+     "name": "markets",
+     "ref": "https://blockchains.github.io/memecoin-markets/v1/markets.json"
+    },
+    {
+     "type": "http",
+     "name": "token",
+     "ref": "https://blockchains.github.io/memecoin-markets/v1/token/{chain}/{address}.json"
     },
     {
      "type": "http",
@@ -3116,6 +3126,22 @@
     {
      "repo": "Blockchains/solana-intel",
      "how": "same policy-v1.1 bars as the paper-mode desk"
+    },
+    {
+     "repo": "Blockchains/web3-defi-honeypot-and-slippage-checker",
+     "how": "fork; its honeyCheck contracts power the on-chain buy/sell simulation (src/sources/honeysim.js)"
+    },
+    {
+     "repo": "Blockchains/phishing",
+     "how": "fork; deny-list checks every token website/social link"
+    },
+    {
+     "repo": "Blockchains/assets",
+     "how": "fork; EVM token socials/website fallback"
+    },
+    {
+     "repo": "Blockchains/token-list",
+     "how": "fork; Solana legacy registry logos/socials"
     }
    ],
    "tests": {
@@ -3137,7 +3163,7 @@
     "html_url": "https://github.com/Blockchains/memecoin-markets",
     "agents_md": "https://github.com/Blockchains/memecoin-markets/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/memecoin-markets/main/llms.txt",
-    "pushed_at": "2026-10-12T01:45:26Z"
+    "pushed_at": "2026-10-12T09:50:59Z"
    }
   },
   {
@@ -3533,7 +3559,7 @@
     "html_url": "https://github.com/Blockchains/sites-monitor",
     "agents_md": "https://github.com/Blockchains/sites-monitor/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/sites-monitor/main/llms.txt",
-    "pushed_at": "2026-10-12T01:32:23Z"
+    "pushed_at": "2026-10-12T07:56:36Z"
    }
   },
   {

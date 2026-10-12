@@ -1,6 +1,6 @@
 # Blockchains building blocks: full text
 
-Generated 2026-10-12T01:46:14Z from 35 repositories. Sections: Build with Blocks guide, blocks.json schema, then AGENTS.md of every repo.
+Generated 2026-10-12T12:15:12Z from 35 repositories. Sections: Build with Blocks guide, blocks.json schema, then AGENTS.md of every repo.
 
 
 
@@ -2742,7 +2742,7 @@ See the README section [Use as a building block](README.md#use-as-a-building-blo
 
 === Blockchains/memecoin-markets / AGENTS.md ===
 
-Summary: Memecoin safety + desk toolkit for memecoin.markets: token safety scanner (Solana mint/freeze/Token-2022, EVM honeypot/tax/owner), new-pair radar, UK CGT + FIFO PnL with rotki export, launch checklist, portfolio. Zero-dep SDK, MCP, static JSON API, Pages app.
+Summary: CoinMarketCap-style memecoin rankings + per-token SEO pages (holders, LP, charts, rug/honeypot scan) for memecoin.markets, plus safety scanner, new-pair radar, UK CGT/FIFO PnL, launch checklist, portfolio. Zero-dep SDK, MCP, static JSON API, Pages app. Free public data, no keys.
 Manifest: https://raw.githubusercontent.com/Blockchains/memecoin-markets/main/blocks.json
 
 # AGENTS.md: memecoin-markets
@@ -2756,6 +2756,12 @@ Memecoin safety + desk toolkit behind memecoin.markets / memecoin.grok.me: token
 - Kind: library, mcp-server, http-api, dataset, web-app · stability: `beta` · licence: MIT
 - Manifest: [`blocks.json`](blocks.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
 - How it fits with the other Blockchains repos: [Build with Blocks](https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md)
+
+## Rankings product (v0.2)
+
+- `scripts/build-site.mjs` → `scripts/lib/collect.mjs` (data, rolling caches in `v1/state.json`), `pages.mjs` / `token-page.mjs` / `guides.mjs` / `render.mjs` (static HTML, relative links), `web/site.js` (progressive enhancement: watchlist, sort, live prices, search, compare, chart, live scan), `web/sw.js` (offline).
+- Budgets via env: `CG_PAGES`, `CG_CATS_PER_BUILD`, `GT_BUDGET`, `POOLS_BUDGET`, `ASSETS_BUDGET`, `SCAN_BUDGET`, `MAX_SCANS`; `OFFLINE=1 PREV_STATE_FILE=state.json` renders from a saved state without network.
+- No paid APIs or keys, ever. Birdeye/GMGN/CMC are excluded (see docs/REPOS.md).
 
 ## Rules
 
