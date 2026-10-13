@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-12T12:17:33Z",
- "count": 75,
+ "generated_at": "2026-10-13T01:05:09Z",
+ "count": 79,
  "categories": [
   "AI",
   "Data API",
@@ -1163,6 +1163,74 @@
     "json"
    ],
    "schema": "https://blockchains.github.io/blockchainlab-api/v1/schemas/yields.schema.json"
+  },
+  {
+   "id": "memecoin-rankings",
+   "name": "Memecoin rankings & safety scans",
+   "category": "Finders",
+   "description": "CoinMarketCap-style memecoin rankings with DEX liquidity, holders and a rug/honeypot scan on every token page.",
+   "url": "https://blockchains.github.io/memecoin-markets/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/memecoin-markets/v1/markets.json",
+    "max_age_h": 6
+   },
+   "tags": [
+    "memecoin",
+    "solana",
+    "evm"
+   ]
+  },
+  {
+   "id": "memecoin-pumpfun",
+   "name": "pump.fun bonding-curve tracker",
+   "category": "Finders",
+   "description": "Bonding-curve progress decoded on-chain with the official pump.fun IDL (Blockchains/pump-public-docs), graduated PumpSwap coins.",
+   "url": "https://blockchains.github.io/memecoin-markets/pumpfun/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/memecoin-markets/v1/pumpfun.json",
+    "max_age_h": 6
+   },
+   "tags": [
+    "memecoin",
+    "solana",
+    "evm"
+   ]
+  },
+  {
+   "id": "memecoin-sell-depth",
+   "name": "Memecoin sell depth",
+   "category": "Finders",
+   "description": "% lost selling $1K / $10K of each Solana memecoin into USDC (Jupiter quotes) plus Raydium LP burn (Blockchains/raydium-sdk-V2).",
+   "url": "https://blockchains.github.io/memecoin-markets/sell-depth/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/memecoin-markets/v1/sell-depth.json",
+    "max_age_h": 6
+   },
+   "tags": [
+    "memecoin",
+    "solana",
+    "evm"
+   ]
+  },
+  {
+   "id": "memecoin-token-lists",
+   "name": "Token-list & scam-list checker",
+   "category": "Finders",
+   "description": "EVM memecoins vs tokenlistooor + Uniswap default lists, and ScamSniffer / MetaMask blocklists (Blockchains forks).",
+   "url": "https://blockchains.github.io/memecoin-markets/token-lists/",
+   "check": {
+    "type": "data",
+    "url": "https://blockchains.github.io/memecoin-markets/v1/token-lists.json",
+    "max_age_h": 6
+   },
+   "tags": [
+    "memecoin",
+    "solana",
+    "evm"
+   ]
   },
   {
    "id": "dev-sdk",

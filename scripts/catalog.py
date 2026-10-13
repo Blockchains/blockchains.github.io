@@ -68,6 +68,15 @@ def build():
         add(f"data-{d['dataset']}", f"API: {d['dataset']}", "Data API", d["description"], d["url"],
             {"type": "data", "url": d["url"], "max_age_h": 50}, ["api", "json"], {"schema": d.get("schema")})
 
+    # --- memecoins (memecoin.markets on Pages; data from 13 Blockchains forks) ---
+    MM = "https://blockchains.github.io/memecoin-markets"
+    mm = [("rankings", "Memecoin rankings & safety scans", "CoinMarketCap-style memecoin rankings with DEX liquidity, holders and a rug/honeypot scan on every token page.", "/", "v1/markets.json"),
+          ("pumpfun", "pump.fun bonding-curve tracker", "Bonding-curve progress decoded on-chain with the official pump.fun IDL (Blockchains/pump-public-docs), graduated PumpSwap coins.", "/pumpfun/", "v1/pumpfun.json"),
+          ("sell-depth", "Memecoin sell depth", "% lost selling $1K / $10K of each Solana memecoin into USDC (Jupiter quotes) plus Raydium LP burn (Blockchains/raydium-sdk-V2).", "/sell-depth/", "v1/sell-depth.json"),
+          ("token-lists", "Token-list & scam-list checker", "EVM memecoins vs tokenlistooor + Uniswap default lists, and ScamSniffer / MetaMask blocklists (Blockchains forks).", "/token-lists/", "v1/token-lists.json")]
+    for k, n, d, path, data in mm:
+        add(f"memecoin-{k}", n, "Finders", d, f"{MM}{path}", {"type": "data", "url": f"{MM}/{data}", "max_age_h": 6}, ["memecoin", "solana", "evm"])
+
     # --- developer ---
     dev = [("sdk", "Blockchain Lab SDK (TS + Python)", "Typed clients for every API dataset. npm i github:Blockchains/blockchainlab-sdk", f"{GH}/blockchainlab-sdk", "blockchainlab-sdk"),
            ("mcp", "MCP server (43 tools)", "Give Claude, Cursor or VS Code agents 43 blockchain tools. Docker image on GHCR.", f"{GH}/blockchainlab-mcp", "blockchainlab-mcp"),
