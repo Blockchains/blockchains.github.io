@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T12:15:12Z",
+ "generated_at": "2026-10-13T01:21:41Z",
  "schema": "https://raw.githubusercontent.com/Blockchains/.github/main/docs/blocks.schema.json",
  "guide": "https://github.com/Blockchains/.github/blob/main/docs/BUILD-WITH-BLOCKS.md",
  "count": 35,
@@ -1648,7 +1648,7 @@
     "html_url": "https://github.com/Blockchains/blockchains.github.io",
     "agents_md": "https://github.com/Blockchains/blockchains.github.io/blob/main/AGENTS.md",
     "llms_txt": "https://blockchains.github.io/llms.txt",
-    "pushed_at": "2026-10-12T10:42:46Z"
+    "pushed_at": "2026-10-13T01:20:53Z"
    }
   },
   {
@@ -2974,7 +2974,7 @@
    "schema_version": "1.0",
    "name": "memecoin-markets",
    "repo": "Blockchains/memecoin-markets",
-   "summary": "CoinMarketCap-style memecoin rankings + per-token SEO pages (holders, LP, charts, rug/honeypot scan) for memecoin.markets, plus safety scanner, new-pair radar, UK CGT/FIFO PnL, launch checklist, portfolio. Zero-dep SDK, MCP, static JSON API, Pages app. Free public data, no keys.",
+   "summary": "CoinMarketCap-style memecoin rankings + SEO token pages (holders, LP, charts, rug/honeypot scan), pump.fun bonding curves, Raydium LP burn, Jupiter sell depth, token-list and scam-list checks for memecoin.markets; scanner, radar, UK CGT PnL. Zero-dep SDK, MCP, static JSON API, Pages app. Free public data, no keys.",
    "kind": [
     "library",
     "mcp-server",
@@ -2983,7 +2983,7 @@
     "web-app"
    ],
    "stability": "beta",
-   "version": "0.2.0",
+   "version": "0.3.0",
    "license": "MIT",
    "homepage": "https://blockchains.github.io/memecoin-markets/",
    "entrypoints": [
@@ -3003,7 +3003,10 @@
       "evaluateChecklist",
       "valuePortfolio",
       "walletHoldings",
-      "POLICY"
+      "POLICY",
+      "pumpfun",
+      "raydium",
+      "lists"
      ]
     },
     {
@@ -3025,7 +3028,11 @@
       "memecoin_uk_cgt",
       "memecoin_fifo_pnl",
       "memecoin_rotki_csv",
-      "memecoin_portfolio"
+      "memecoin_portfolio",
+      "memecoin_pumpfun_curve",
+      "memecoin_raydium_pools",
+      "memecoin_sell_impact",
+      "memecoin_token_lists"
      ]
     },
     {
@@ -3052,6 +3059,36 @@
      "type": "http",
      "name": "policy",
      "ref": "https://blockchains.github.io/memecoin-markets/v1/policy.json"
+    },
+    {
+     "type": "http",
+     "name": "pumpfun",
+     "ref": "https://blockchains.github.io/memecoin-markets/v1/pumpfun.json"
+    },
+    {
+     "type": "http",
+     "name": "sell-depth",
+     "ref": "https://blockchains.github.io/memecoin-markets/v1/sell-depth.json"
+    },
+    {
+     "type": "http",
+     "name": "token-lists",
+     "ref": "https://blockchains.github.io/memecoin-markets/v1/token-lists.json"
+    },
+    {
+     "type": "web",
+     "name": "pumpfun page",
+     "ref": "https://blockchains.github.io/memecoin-markets/pumpfun/"
+    },
+    {
+     "type": "web",
+     "name": "sell-depth page",
+     "ref": "https://blockchains.github.io/memecoin-markets/sell-depth/"
+    },
+    {
+     "type": "web",
+     "name": "token-lists page",
+     "ref": "https://blockchains.github.io/memecoin-markets/token-lists/"
     },
     {
      "type": "web",
@@ -3097,10 +3134,48 @@
      "name": "cgt",
      "type": "object",
      "description": "UK disposals (same-day, 30-day, s104) and tax-year totals"
+    },
+    {
+     "name": "pumpfun",
+     "type": "object",
+     "description": "bonding-curve progress, SOL raised, graduated flag per mint (on-chain, pump.fun IDL)"
+    },
+    {
+     "name": "sellImpact",
+     "type": "object",
+     "description": "% lost selling $1K/$10K into USDC (Jupiter quotes)"
+    },
+    {
+     "name": "raydium",
+     "type": "object",
+     "description": "Raydium pools, TVL, LP burn %"
+    },
+    {
+     "name": "tokenLists",
+     "type": "array",
+     "description": "token lists that include an EVM token"
+    },
+    {
+     "name": "scamCheck",
+     "type": "object",
+     "description": "ScamSniffer/MetaMask address + domain hits"
     }
    ],
    "deps": [
-    "node>=20 (or any modern browser)"
+    "node>=20 (or any modern browser)",
+    "github:Blockchains/pump-public-docs",
+    "github:Blockchains/raydium-sdk-V2",
+    "github:Blockchains/jupiter-quote-api-node",
+    "github:Blockchains/tokenLists",
+    "github:Blockchains/default-token-list",
+    "github:Blockchains/scam-database",
+    "github:Blockchains/eth-phishing-detect",
+    "github:Blockchains/web3icons",
+    "github:Blockchains/web3-defi-honeypot-and-slippage-checker",
+    "github:Blockchains/phishing",
+    "github:Blockchains/assets",
+    "github:Blockchains/token-list",
+    "github:Blockchains/rotki"
    ],
    "compatible_with": [
     {
@@ -3163,7 +3238,7 @@
     "html_url": "https://github.com/Blockchains/memecoin-markets",
     "agents_md": "https://github.com/Blockchains/memecoin-markets/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/memecoin-markets/main/llms.txt",
-    "pushed_at": "2026-10-12T09:50:59Z"
+    "pushed_at": "2026-10-13T01:12:25Z"
    }
   },
   {
@@ -3310,7 +3385,7 @@
     "html_url": "https://github.com/Blockchains/onetouchswitch",
     "agents_md": "https://github.com/Blockchains/onetouchswitch/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/onetouchswitch/main/llms.txt",
-    "pushed_at": "2026-10-11T21:03:58Z"
+    "pushed_at": "2026-10-12T13:54:31Z"
    }
   },
   {
@@ -3559,7 +3634,7 @@
     "html_url": "https://github.com/Blockchains/sites-monitor",
     "agents_md": "https://github.com/Blockchains/sites-monitor/blob/main/AGENTS.md",
     "llms_txt": "https://raw.githubusercontent.com/Blockchains/sites-monitor/main/llms.txt",
-    "pushed_at": "2026-10-12T07:56:36Z"
+    "pushed_at": "2026-10-12T23:39:04Z"
    }
   },
   {
