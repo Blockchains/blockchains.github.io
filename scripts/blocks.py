@@ -102,7 +102,7 @@ def main():
         f"- [blocks.json]({SITE}/blocks.json): machine-readable catalogue of every block ({len(blocks)} repos)",
         f"- [Blocks schema](https://github.com/{OWNER}/.github/blob/main/docs/BLOCKS-SCHEMA.md): blocks.json format ([JSON Schema]({SCHEMA}))",
         f"- [Full text]({SITE}/llms-full.txt): guide + schema + every repo's AGENTS.md in one file",
-        f"- [services.json]({SITE}/services.json): the hub's 75 hosted services",
+        f"- [services.json]({SITE}/services.json): the hub's 79 hosted services",
         "",
     ]
     for title, kinds in layers:

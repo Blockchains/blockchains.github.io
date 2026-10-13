@@ -4,7 +4,7 @@
 [![ci](https://github.com/Blockchains/blockchains.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/Blockchains/blockchains.github.io/actions/workflows/ci.yml)
 [![monitors](https://github.com/Blockchains/blockchains.github.io/actions/workflows/monitors.yml/badge.svg)](https://github.com/Blockchains/blockchains.github.io/actions/workflows/monitors.yml)
 
-**One search for 75 free blockchain services**: browser tools, JSON data APIs, AI briefs (Grok), monitors, feeds and developer kits. Every service is health-checked and shows a live status badge. → **https://blockchains.github.io**
+**One search for 79 free blockchain services**: browser tools, JSON data APIs, AI briefs (Grok), monitors, feeds and developer kits. Every service is health-checked and shows a live status badge. → **https://blockchains.github.io**
 
 ![Blockchain Lab Hub](assets/og.png)
 

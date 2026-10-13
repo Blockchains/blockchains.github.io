@@ -42,11 +42,11 @@ def P(*a, **k):
 IMP = 'import {$,$$,esc,data,usd,num,pct,ago,stamp,fail,spark,sortable,aiNote} from "/assets/site.js";'
 
 # ---------------------------------------------------------------- HUB
-P("/", "Blockchain Lab Hub — 75 free blockchain tools, data APIs, AI briefs and monitors",
+P("/", "Blockchain Lab Hub — 79 free blockchain tools, data APIs, AI briefs and monitors",
   "One search for every free Blockchain Lab service: 26 browser tools, 20 JSON datasets, AI market briefs and contract explainers, gas, RPC and chain monitors, security scans, jobs, grants and events.",
   """<section class="hero"><h1>Every free <span class="g">blockchain</span> tool, dataset, AI brief and monitor — <span class="g">one search</span>.</h1>
 <p class="lead">Open-source services from <a href="https://blockchainlab.com/?utm_source=github&utm_medium=hub&utm_campaign=blockchains-hub">Blockchain Lab</a>. Everything runs in your browser or on public GitHub Actions; every service is health-checked and shows a live status badge.</p>
-<div class="search"><span>🔎</span><input id="q" type="search" placeholder="Search 75 services — try “gas”, “ENS”, “audit”, “stablecoin”, “jobs”…" autocomplete="off" aria-label="Search services"><kbd>/</kbd></div>
+<div class="search"><span>🔎</span><input id="q" type="search" placeholder="Search 79 services — try “gas”, “ENS”, “audit”, “stablecoin”, “jobs”…" autocomplete="off" aria-label="Search services"><kbd>/</kbd></div>
 <div class="stats" id="stats"></div><div class="chips" id="chips"></div></section>
 <section id="brief"></section><div id="out" class="grid"></div>
 <h2 class="sec">More from Blockchain Lab</h2><p class="sub">Related projects (owned and maintained separately).</p>

@@ -1,5 +1,5 @@
 """End-to-end browser tests for every hub page (Playwright, Chromium). BASE env = site root (default local server)."""
-import os, sys, json, re
+import os, sys, json, re, pathlib
 from playwright.sync_api import sync_playwright
 
 BASE = os.environ.get("BASE", "http://127.0.0.1:8765").rstrip("/")
@@ -30,7 +30,7 @@ SIMPLE = ["/ai/", "/ai/brief/", "/ai/incidents/", "/ai/ideas/", "/ai/digest/", "
 
 def hub(p):
     txt = loaded(p, "/", "#out", 500)
-    n = p.locator("#out .card").count(); assert n == 75, f"{n} cards"
+    n = p.locator("#out .card").count(); want = json.loads((pathlib.Path(__file__).resolve().parent.parent / "services.json").read_text())["count"]; assert n == want, f"{n} cards, services.json has {want}"
     p.fill("#q", "gas"); p.wait_for_timeout(200)
     k = p.locator("#out .card").count(); assert 1 <= k < 20, f"search gas -> {k}"
     p.fill("#q", ""); p.click(".chip[data-c='AI']"); p.wait_for_timeout(200)

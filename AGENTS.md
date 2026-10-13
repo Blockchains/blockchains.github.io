@@ -4,7 +4,7 @@ Instructions for AI coding agents (Grok, Cursor, Claude Code, Codex, Copilot and
 
 ## What this is
 
-Blockchain Lab Hub: static GitHub Pages site with 75 free services (AI briefs via Grok, gas/RPC/chain monitors, finders, feeds), machine-readable services.json, health data, and the org-wide llms.txt and blocks.json catalogue.
+Blockchain Lab Hub: static GitHub Pages site with 79 free services (AI briefs via Grok, gas/RPC/chain monitors, finders, feeds), machine-readable services.json, health data, and the org-wide llms.txt and blocks.json catalogue.
 
 - Kind: web-app, dataset · stability: `stable` · licence: MIT
 - Machine-readable manifest: [`blocks/hub.json`](blocks/hub.json) (schema: [BLOCKS-SCHEMA](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md))
