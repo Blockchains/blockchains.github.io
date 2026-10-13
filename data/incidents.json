@@ -1,14 +1,29 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-12T12:16:37Z",
+ "generated_at": "2026-10-13T12:00:37Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21066675507.598133,
- "ytd_usd": 2243761658.598132,
+ "total_all_time_usd": 21067955507.598133,
+ "ytd_usd": 2245041658.598132,
  "incidents": [
+  {
+   "date": "2026-10-10",
+   "name": "Papertrade",
+   "amount_usd": 1280000,
+   "chains": [
+    "Hyperliquid L1"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
   {
    "date": "2026-10-07",
    "name": "Locus Finance",
@@ -4547,21 +4562,6 @@
    ],
    "classification": "Access Control",
    "technique": "Uninitialized Proxy",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2025-12-16",
-   "name": "Yearn Finance",
-   "amount_usd": 300000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Donation Attack",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

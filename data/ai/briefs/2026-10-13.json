@@ -1,0 +1,66 @@
+{
+ "headline": "Crypto Market Structure Brief - 13 October 2026",
+ "summary": "Ethereum leads chains by TVL at $51.44bn, followed by Base at $6.25bn and Solana at $6.10bn. Uniswap V3 recorded the highest 24h DEX volume at $1.36bn while Tether led fees at $17.47m. USDT remains the largest stablecoin at $184.02bn circulating; several peg deviations were flagged including USYC at 13.97% above peg. Base and Arbitrum One hold the top L2 TVS at $15.80bn and $10.94bn respectively.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum: $51.44bn TVL (rank 1)",
+    "Base: $6.25bn TVL (rank 2)",
+    "Solana: $6.10bn TVL (rank 3)",
+    "Tron: $5.58bn TVL (rank 4)",
+    "BSC: $5.41bn TVL (rank 5)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V3: $1.36bn 24h volume, +141.43% 1d change",
+    "Uniswap V4: $1.14bn 24h volume",
+    "Tether: $17.47m 24h fees (rank 1)",
+    "Circle USDC: $6.97m 24h fees (rank 2)",
+    "PumpSwap: $3.61m 24h fees"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT: $184.02bn circulating, -0.03% 1d change",
+    "USDC: $72.81bn circulating, -0.36% 1d change",
+    "USDS: $7.15bn circulating, +3.46% 1d change",
+    "USDe: $4.77bn circulating",
+    "DAI: $4.76bn circulating"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base: $15.80bn TVS, -3.69% 7d change",
+    "Arbitrum One: $10.94bn TVS, -4.80% 7d change",
+    "Hyperliquid: $6.88bn TVS",
+    "Polygon PoS: $3.88bn TVS",
+    "Robinhood Chain: $2.44bn TVS"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Papertrade: $1.28m loss (10 Oct, Oracle Manipulation)",
+    "NEAR Intents: $3.80m loss (2 Oct, Bridge Logic Flaw)",
+    "MakerDAO ETH-A: $0.54m loss (6 Oct, Access Control)",
+    "Ethereum base fee: 0.068 gwei",
+    "Base base fee: 0.005 gwei"
+   ]
+  }
+ ],
+ "watchlist": [
+  "USYC depeg at +13.97%",
+  "USDY depeg at +14.96%",
+  "pmUSD depeg at -35.56%",
+  "Papertrade incident 10 Oct",
+  "NEAR Intents bridge incident 2 Oct"
+ ],
+ "date": "2026-10-13",
+ "model": "grok-4.3",
+ "tokens": 13358
+}
