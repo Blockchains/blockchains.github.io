@@ -9,7 +9,7 @@ Start with the guide (layer map, how to assemble a project, three verified recip
 - [blocks.json](https://blockchains.github.io/blocks.json): machine-readable catalogue of every block (35 repos)
 - [Blocks schema](https://github.com/Blockchains/.github/blob/main/docs/BLOCKS-SCHEMA.md): blocks.json format ([JSON Schema](https://raw.githubusercontent.com/Blockchains/.github/main/docs/blocks.schema.json))
 - [Full text](https://blockchains.github.io/llms-full.txt): guide + schema + every repo's AGENTS.md in one file
-- [services.json](https://blockchains.github.io/services.json): the hub's 75 hosted services
+- [services.json](https://blockchains.github.io/services.json): the hub's 79 hosted services
 
 ## Data, APIs and SDKs
 - [blockchainlab-api](https://raw.githubusercontent.com/Blockchains/blockchainlab-api/main/llms.txt): Free, static, CORS-enabled JSON API of 20 blockchain datasets rebuilt nightly from public sources (chainid.network, DefiLlama, L2BEAT, OFAC via 0xB10C, ethereum/EIPs, bitcoin/bips, Blockchain Lab corpus). No key, no backend.
