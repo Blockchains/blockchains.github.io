@@ -1,0 +1,59 @@
+{
+ "headline": "Crypto TVL, DEX volumes and stablecoin data: 14 Oct 2026",
+ "summary": "Ethereum leads chains by TVL at $51.1bn, followed by Base at $6.2bn and Solana at $6.1bn. Uniswap V4 and V3 recorded the highest 24h DEX volumes above $1.2bn each. USDT and USDC dominate stablecoin supply at $183.9bn and $73.1bn respectively, with several peg deviations noted. Base and Arbitrum One hold the largest L2 TVS figures.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum: $51.145bn TVL (rank 1)",
+    "Base: $6.226bn TVL (rank 2)",
+    "Solana: $6.056bn TVL (rank 3)",
+    "Tron: $5.596bn TVL (rank 4)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V4: $1.271bn 24h volume, +18.94% 1d",
+    "Uniswap V3: $1.267bn 24h volume, +15.34% 1d",
+    "Tether: $17.5m 24h fees (top issuer)",
+    "Circle USDC: $7.0m 24h fees"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulating: $183.933bn across 100+ chains",
+    "USDC circulating: $73.083bn",
+    "USDS circulating: $7.115bn, +2.235% 1d",
+    "USYC at $1.140 (14.017% deviation)"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base: $15.647bn TVS, Stage 1, OP Stack",
+    "Arbitrum One: $10.836bn TVS, Stage 1",
+    "Hyperliquid: $6.889bn TVS (L3)",
+    "Polygon PoS: $3.851bn TVS"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Papertrade: $1.28m loss, Oracle Manipulation (10 Oct)",
+    "NEAR Intents: $3.8m loss, Bridge Logic Flaw (2 Oct)",
+    "MakerDAO ETH-A: $538k loss, Access Control (6 Oct)"
+   ]
+  }
+ ],
+ "watchlist": [
+  "USYC and USDY peg deviations above 14%",
+  "Base and Arbitrum TVS changes",
+  "Uniswap V4 24h volume trend",
+  "Recent incidents on Hyperliquid L1 and BSC"
+ ],
+ "date": "2026-10-14",
+ "model": "grok-4.3",
+ "tokens": 13023
+}
