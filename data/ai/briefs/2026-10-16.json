@@ -1,0 +1,64 @@
+{
+ "headline": "Crypto Market Structure Brief - 16 October 2026",
+ "summary": "Ethereum leads chains by TVL at $50.3 billion, followed by Base at $6.17 billion and Solana at $6.00 billion. Uniswap V3 recorded the highest 24-hour DEX volume at $1.20 billion while Tether led fees at $17.7 million. USDT remains the largest stablecoin at $183 billion circulating with minor daily outflows. Base leads L2 TVS at $15.65 billion amid several stablecoin peg deviations and recent protocol incidents.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum: $50.30 billion TVL (rank 1)",
+    "Base: $6.17 billion TVL (rank 2)",
+    "Solana: $6.00 billion TVL (rank 3)",
+    "Tron: $5.57 billion TVL (rank 4)",
+    "BSC: $5.34 billion TVL (rank 5)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V3: $1.20 billion 24h volume, -17.53% daily change",
+    "Uniswap V4: $1.19 billion 24h volume, -11.37% daily change",
+    "PancakeSwap AMM V3: $710 million 24h volume, +38.34% daily change",
+    "Tether: $17.66 million 24h fees (rank 1)",
+    "Circle USDC: $7.03 million 24h fees (rank 2)"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT: $183.46 billion circulating, -0.213% 1d change",
+    "USDC: $72.70 billion circulating, -0.091% 1d change",
+    "USDS: $7.07 billion circulating, +2.908% 1d change",
+    "DAI: $4.73 billion circulating, -0.075% 1d change",
+    "Six stablecoins on watch or depeg status including AP USDA and pmUSD"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base: $15.65 billion TVS, +0.893% 7d change, Stage 1",
+    "Arbitrum One: $10.60 billion TVS, -3.936% 7d change, Stage 1",
+    "Hyperliquid: $6.82 billion TVS, -0.985% 7d change",
+    "Polygon PoS: $3.85 billion TVS, -3.034% 7d change",
+    "Robinhood Chain: $2.45 billion TVS, -2.684% 7d change, Stage 0"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Six incidents in last 14 days totalling approximately $2.1 million",
+    "Papertrade: $1.28 million loss on Hyperliquid L1 via oracle manipulation (10 Oct)",
+    "MakerDAO ETH-A Liquidation Keeper Bot: $538,000 loss on Ethereum (6 Oct)",
+    "Multiple token and share accounting issues reported on Ethereum, Base and BSC"
+   ]
+  }
+ ],
+ "watchlist": [
+  "Stablecoin peg deviations: AP USDA (-3.015%), pmUSD (-32.425%)",
+  "Recent incidents on Hyperliquid L1 and Ethereum protocols",
+  "Gas prices: Ethereum base fee 0.066 gwei, Base 0.005 gwei",
+  "L2 TVS changes: Base +0.893%, Arbitrum -3.936% over 7 days"
+ ],
+ "date": "2026-10-16",
+ "model": "grok-4.3",
+ "tokens": 12843
+}
