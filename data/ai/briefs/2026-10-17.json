@@ -1,0 +1,62 @@
+{
+ "headline": "Crypto Market Structure Brief - 17 October 2026",
+ "summary": "Ethereum holds the top TVL position at $49.87 billion, followed by Base and Solana. Uniswap V4 leads 24-hour DEX volume at $1.06 billion while Tether generates the highest fees. USDT circulates at $183.35 billion and Base leads L2 TVS at $15.48 billion. Multiple stablecoin peg deviations and recent protocol incidents were recorded in the past 14 days.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum: $49.87 billion TVL (rank 1)",
+    "Base: $6.15 billion TVL (rank 2)",
+    "Solana: $5.96 billion TVL (rank 3)",
+    "Tron: $5.59 billion TVL (rank 4)",
+    "BSC: $5.47 billion TVL (rank 5)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V4: $1.06 billion 24h volume",
+    "Uniswap V3: $557 million 24h volume",
+    "PumpSwap: $545 million 24h volume",
+    "Tether: $17.63 million 24h fees (rank 1)",
+    "Circle USDC: $7.03 million 24h fees (rank 2)"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT: $183.35 billion circulating",
+    "USDC: $72.70 billion circulating",
+    "USDS: $7.05 billion circulating",
+    "Seven stablecoins on watch or depeg status including pmUSD at -30.86% deviation"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base: $15.48 billion TVS (Stage 1, OP Stack)",
+    "Arbitrum One: $10.48 billion TVS (Stage 1)",
+    "Hyperliquid: $6.73 billion TVS (L3)",
+    "Polygon PoS: $3.82 billion TVS"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Pirate Chain: unbacked mint incident on 16 Oct",
+    "UNCX Network V2: $86k incorrect share accounting on 14 Oct",
+    "Papertrade: $1.28m oracle manipulation on 10 Oct",
+    "Ethereum base fee: 0.065 gwei; Base base fee: 0.005 gwei"
+   ]
+  }
+ ],
+ "watchlist": [
+  "pmUSD depeg at 0.6914 (-30.86%)",
+  "Falcon USD, apxUSD and Frax peg deviations",
+  "Pirate Chain and UNCX Network incidents",
+  "Hyperliquid L1 and Robinhood Chain TVS movements"
+ ],
+ "date": "2026-10-17",
+ "model": "grok-4.3",
+ "tokens": 13068
+}

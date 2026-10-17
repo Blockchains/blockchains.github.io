@@ -1,14 +1,29 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-16T09:10:24Z",
+ "generated_at": "2026-10-17T08:42:37Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21068041507.598133,
- "ytd_usd": 2245127658.598132,
+ "total_all_time_usd": 21068074946.06813,
+ "ytd_usd": 2245161097.068132,
  "incidents": [
+  {
+   "date": "2026-10-16",
+   "name": "Pirate Chain",
+   "amount_usd": null,
+   "chains": [
+    "Pirate Chain"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Unbacked Mint",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
   {
    "date": "2026-10-14",
    "name": "UNCX Network V2",
@@ -36,6 +51,36 @@
    ],
    "classification": "Oracle Manipulation",
    "technique": "Spot Price Manipulation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-10-08",
+   "name": "BitBay",
+   "amount_usd": 14838.47,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-10-08",
+   "name": "Ethervista",
+   "amount_usd": 18600,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
@@ -4523,53 +4568,6 @@
    "returned_usd": null,
    "source": "",
    "language": "Solidity"
-  },
-  {
-   "date": "2025-12-27",
-   "name": "Flow",
-   "amount_usd": 3900000,
-   "chains": [
-    "Flow"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Infinite Mint",
-   "target_type": "Layer 1",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2025-12-26",
-   "name": "FilDA",
-   "amount_usd": 166800,
-   "chains": [
-    "Elastos"
-   ],
-   "classification": "Oracle Manipulation",
-   "technique": "Spot Price Manipulation",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2025-12-25",
-   "name": "Trust Wallet Wallet",
-   "amount_usd": 8500000,
-   "chains": [
-    "Ethereum",
-    "Bitcoin",
-    "Solana"
-   ],
-   "classification": "Frontend & Infrastructure",
-   "technique": "Supply Chain Attack",
-   "target_type": "Wallet",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": null
   }
  ]
 }
