@@ -1,7 +1,7 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-18T08:58:16Z",
+ "generated_at": "2026-10-19T10:07:20Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
@@ -3846,6 +3846,21 @@
    "language": "Solidity"
   },
   {
+   "date": "2026-03-24",
+   "name": "UdonFi Lending",
+   "amount_usd": null,
+   "chains": [
+    "Chromia"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
    "date": "2026-03-23",
    "name": "BCE",
    "amount_usd": 679000,
@@ -4548,21 +4563,6 @@
    ],
    "classification": "Key Compromise",
    "technique": "Private Key Compromised",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2025-12-28",
-   "name": "MSCST",
-   "amount_usd": 129900,
-   "chains": [
-    "BSC"
-   ],
-   "classification": "Access Control",
-   "technique": "Improper Access Control",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
