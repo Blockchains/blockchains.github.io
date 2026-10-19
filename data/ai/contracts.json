@@ -1,7 +1,7 @@
 {
  "service": "ai/contracts",
  "description": "AI contract explainer (popular mainnet contracts)",
- "generated_at": "2026-10-12T09:58:43Z",
+ "generated_at": "2026-10-19T08:15:30Z",
  "source": "Grok (xAI) over public data: Sourcify verified source",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
@@ -14,19 +14,19 @@
    "contract": "WETH9.sol:WETH9",
    "compiler": "0.4.19+commit.c4cbbb05",
    "explainer": {
-    "summary": "WETH9 is a minimal ERC20 wrapper for Ether with fixed name/symbol/decimals and no owner or admin. Ether sent via fallback or deposit() increases the sender's balanceOf and emits Deposit; withdraw() burns wrapped balance and sends ETH back. totalSupply() reports the contract's ETH balance while approve/transfer/transferFrom implement standard token mechanics with special-case infinite allowance handling.",
+    "summary": "WETH9 is an ERC20-compatible wrapper for Ether on Ethereum, allowing ETH to be deposited and represented as WETH tokens that can be transferred or approved like standard tokens. The contract accepts ETH via fallback or deposit, credits balances, and allows withdrawal of equivalent ETH. It uses Solidity 0.4.18 with no owner, admin controls, or upgrade mechanisms present in the source.",
     "key_functions": [
      {
       "name": "deposit",
-      "what": "Increments balanceOf[msg.sender] by msg.value and emits Deposit."
+      "what": "Accepts payable ETH and increases msg.sender's balanceOf by msg.value while emitting Deposit."
      },
      {
       "name": "withdraw",
-      "what": "Requires sufficient balanceOf[msg.sender], subtracts wad, performs msg.sender.transfer(wad) and emits Withdrawal."
+      "what": "Requires sufficient balanceOf[msg.sender], subtracts wad, transfers ETH via msg.sender.transfer, and emits Withdrawal."
      },
      {
       "name": "totalSupply",
-      "what": "Returns this.balance (contract's ETH holdings)."
+      "what": "Returns the contract's ETH balance (this.balance) as the total WETH supply."
      },
      {
       "name": "approve",
@@ -38,25 +38,31 @@
      },
      {
       "name": "transferFrom",
-      "what": "Checks src balance, optionally deducts from allowance (skipped if allowance[src][msg.sender] == uint(-1)), moves tokens and emits Transfer."
+      "what": "Checks balanceOf[src] >= wad, deducts from allowance if src != msg.sender and allowance != uint(-1), updates balances, emits Transfer."
+     },
+     {
+      "name": "fallback",
+      "what": "Payable function that unconditionally calls deposit()."
      }
     ],
     "admin_powers": [],
-    "upgradeability": "Not upgradeable; the contract contains no proxy, owner, or selfdestruct logic and its code is immutable after deployment.",
+    "upgradeability": "Not upgradeable; the contract has no proxy, owner, or selfdestruct logic and is immutable as deployed.",
     "user_risks": [
-     "Direct ETH transfers to the contract without calling deposit still increase totalSupply but do not credit any user balance.",
-     "Allowance value of uint(-1) grants permanent infinite approval that cannot be reduced by transferFrom."
+     "Allowance value of uint(-1) is treated as infinite and never decremented on transfers.",
+     "withdraw performs an external ETH transfer after state update but relies on 0.4.x transfer semantics.",
+     "No built-in reentrancy guard; callers must ensure safe usage patterns around ETH transfers."
     ],
     "integration_tips": [
-     "Call deposit() or send ETH to wrap; call withdraw(wad) to unwrap.",
-     "Check allowance[src][msg.sender] != uint(-1) before assuming a finite allowance can be reduced.",
-     "Use balanceOf and totalSupply exactly as defined; they are the only views provided."
+     "Call deposit() or send ETH directly to wrap; use withdraw(uint) to unwrap.",
+     "Check allowance[src][msg.sender] != uint(-1) before assuming standard deduction in custom logic.",
+     "totalSupply reflects actual contract ETH balance, not a stored variable.",
+     "Use transferFrom for allowance-based moves; approve sets exact values with no increase/decrease helpers."
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
    "etherscan": "https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2#code",
-   "generated_at": "2026-10-12T09:58:03Z"
+   "generated_at": "2026-10-19T08:14:47Z"
   },
   {
    "name": "Tether USDT",
@@ -65,70 +71,76 @@
    "contract": "TetherToken.sol:TetherToken",
    "compiler": "0.4.18+commit.9cf6e910",
    "explainer": {
-    "summary": "TetherToken.sol implements an ERC20 token with owner-controlled pause, blacklist, fee, mint/burn, and deprecation mechanisms. Transfers and approvals are blocked for blacklisted addresses or when paused, and can forward to an upgraded contract if deprecated. The owner address receives any transaction fees and holds all initial supply plus minting rights.",
+    "summary": "TetherToken is an ERC20 token extending Pausable, StandardToken and BlackList, with initial supply assigned to owner and optional fee logic in transfers. It supports a deprecation flag that forwards calls to an upgraded contract address set by owner. All statements derive directly from the provided TetherToken.sol source.",
     "key_functions": [
      {
       "name": "transfer",
-      "what": "Moves tokens applying optional fee sent to owner; reverts if sender blacklisted or paused; forwards to upgraded contract if deprecated."
+      "what": "Transfers tokens applying optional fee to owner if basisPointsRate > 0, reverts if paused or sender blacklisted, forwards to upgraded contract if deprecated."
      },
      {
       "name": "transferFrom",
-      "what": "Moves tokens from allowance applying optional fee; reverts if from blacklisted or paused; forwards if deprecated."
+      "what": "Transfers from allowance applying optional fee, reverts if paused or from blacklisted, forwards if deprecated."
+     },
+     {
+      "name": "approve",
+      "what": "Sets allowance after checking for zero race condition, forwards if deprecated."
+     },
+     {
+      "name": "balanceOf",
+      "what": "Returns balance, forwards to upgraded contract if deprecated."
+     },
+     {
+      "name": "totalSupply",
+      "what": "Returns _totalSupply, forwards to upgraded contract if deprecated."
      },
      {
       "name": "addBlackList",
-      "what": "Owner-only function that marks an address as blacklisted, blocking its transfers."
+      "what": "Owner-only function that sets isBlackListed[_evilUser] = true."
      },
      {
       "name": "destroyBlackFunds",
-      "what": "Owner-only function that zeros a blacklisted address balance and reduces totalSupply."
-     },
-     {
-      "name": "pause",
-      "what": "Owner-only function that sets paused=true, blocking all transfers and transferFrom."
+      "what": "Owner-only function that zeros balance of blacklisted address and subtracts from _totalSupply."
      },
      {
       "name": "issue",
-      "what": "Owner-only function that increases totalSupply and owner balance."
+      "what": "Owner-only function that increases _totalSupply and owner balance."
      },
      {
       "name": "redeem",
-      "what": "Owner-only function that decreases totalSupply and owner balance."
+      "what": "Owner-only function that decreases _totalSupply and owner balance."
      },
      {
       "name": "deprecate",
-      "what": "Owner-only function that sets deprecated=true and records the upgradedAddress for future calls."
-     },
-     {
-      "name": "setParams",
-      "what": "Owner-only function that sets basisPointsRate (<20) and maximumFee (<50) for transfer fees."
+      "what": "Owner-only function that sets deprecated=true and upgradedAddress."
      }
     ],
     "admin_powers": [
-     "pause and unpause all transfers",
-     "add or remove addresses from blacklist and destroy their funds",
-     "mint (issue) or burn (redeem) tokens to/from owner balance",
-     "set transfer fee parameters (basisPointsRate and maximumFee)",
-     "transfer contract ownership",
-     "deprecate contract and redirect calls to a new upgraded address"
+     "pause and unpause transfers via onlyOwner whenNotPaused/whenPaused",
+     "addBlackList, removeBlackList and destroyBlackFunds on any address",
+     "issue and redeem tokens affecting _totalSupply and owner balance",
+     "setParams for basisPointsRate (<20) and maximumFee (<50)",
+     "transferOwnership and deprecate to new upgradedAddress",
+     "call transfer/transferFrom/approve on behalf of blacklisted users is blocked but owner can still manage lists"
     ],
-    "upgradeability": "Boolean deprecated flag plus upgradedAddress; when true, transfer/transferFrom/approve/balanceOf/allowance/totalSupply forward to UpgradedStandardToken at that address via transferByLegacy etc.",
+    "upgradeability": "Boolean deprecated flag plus upgradedAddress; when true, transfer/transferFrom/balanceOf/approve/allowance/totalSupply delegate to UpgradedStandardToken at upgradedAddress via transferByLegacy etc.",
     "user_risks": [
-     "owner can blacklist any address and permanently destroy its tokens",
-     "owner can pause all transfers indefinitely",
-     "owner can mint arbitrary new tokens or set non-zero transfer fees",
-     "contract can be deprecated, redirecting all calls to an external upgraded contract"
+     "owner can pause all transfers",
+     "owner can blacklist any address and destroy its funds reducing totalSupply",
+     "owner can issue arbitrary new tokens to self",
+     "possible transfer fees up to maximumFee if setParams called",
+     "contract can be deprecated rendering current instance a proxy"
     ],
     "integration_tips": [
-     "Always check paused state and isBlackListed before relying on balances or transfers",
-     "Allowance approvals must be set to zero before changing non-zero values to avoid the documented race condition",
-     "Monitor Deprecate event to switch to the new contract address when deprecated becomes true"
+     "always call totalSupply/balanceOf through the current TetherToken address as it may delegate",
+     "check deprecated flag before assuming direct storage values",
+     "transfers may deduct fee sent to owner; use onlyPayloadSize-safe calls",
+     "allowance approvals must first set to zero if changing non-zero value"
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0xdAC17F958D2ee523a2206206994597C13D831ec7",
    "etherscan": "https://etherscan.io/address/0xdAC17F958D2ee523a2206206994597C13D831ec7#code",
-   "generated_at": "2026-10-12T09:58:04Z"
+   "generated_at": "2026-10-19T08:14:55Z"
   },
   {
    "name": "USDC FiatTokenV2_2 (implementation)",
@@ -137,66 +149,66 @@
    "contract": "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v2/FiatTokenV2_2.sol:FiatTokenV2_2",
    "compiler": "0.6.12+commit.27d51765",
    "explainer": {
-    "summary": "FiatTokenV2_2 extends FiatTokenV2_1 and adds initializeV2_2 for symbol update plus migration of accounts from _deprecatedBlacklisted to the new balanceAndBlacklistStates structure (setting high bit for blacklist). It overrides _chainId, _domainSeparator (EIP712 version \"2\"), _setBlacklistState, _setBalance, _isBlacklisted and _balanceOf to pack blacklist flag with balance in the same storage slot, and exposes signature-based permit/transferWithAuthorization/receiveWithAuthorization/cancelAuthorization plus standard ERC20 overrides that all require whenNotPaused.",
+    "summary": "FiatTokenV2_2 extends FiatTokenV2_1 and adds initializeV2_2 to migrate deprecated blacklists, update the symbol, and set _initializedVersion to 3. It overrides blacklist and balance storage using the high bit of balanceAndBlacklistStates for the blacklist flag while keeping balances in the lower 255 bits. Signed permit and authorization functions delegate to internal _ methods, and _domainSeparator uses EIP712 version \"2\" with the current chainId.",
     "key_functions": [
      {
       "name": "initializeV2_2",
-      "what": "Requires _initializedVersion==2, sets symbol, migrates listed accounts from _deprecatedBlacklisted, blacklists self, sets _initializedVersion=3."
+      "what": "Requires _initializedVersion == 2, sets symbol, migrates accounts from _deprecatedBlacklisted to _blacklist, blacklists the contract itself, and sets _initializedVersion = 3."
      },
      {
       "name": "permit",
-      "what": "whenNotPaused wrapper calling _permit with bytes signature (or v,r,s overload)."
+      "what": "External whenNotPaused wrapper that calls _permit with a bytes signature."
      },
      {
       "name": "transferWithAuthorization",
-      "what": "whenNotPaused notBlacklisted wrapper calling _transferWithAuthorization."
+      "what": "External whenNotPaused notBlacklisted wrapper that calls _transferWithAuthorization."
      },
      {
       "name": "receiveWithAuthorization",
-      "what": "whenNotPaused notBlacklisted wrapper calling _receiveWithAuthorization with payee==msg.sender check."
+      "what": "External whenNotPaused notBlacklisted wrapper that calls _receiveWithAuthorization and checks payee matches caller."
      },
      {
       "name": "cancelAuthorization",
-      "what": "whenNotPaused wrapper calling _cancelAuthorization."
+      "what": "External whenNotPaused wrapper that calls _cancelAuthorization."
      },
      {
       "name": "_setBlacklistState",
-      "what": "ORs (1<<255) or resets to _balanceOf on balanceAndBlacklistStates."
+      "what": "Sets high bit of balanceAndBlacklistStates via OR or resets to _balanceOf depending on _shouldBlacklist."
      },
      {
       "name": "_setBalance",
-      "what": "Reverts if > (2^255-1) or blacklisted, else stores in lower 255 bits."
+      "what": "Requires balance <= (2^255-1) and not blacklisted, then stores value in balanceAndBlacklistStates."
      },
      {
       "name": "_isBlacklisted",
-      "what": "Returns true if high bit of balanceAndBlacklistStates[_account] is set."
+      "what": "Returns true if high bit of balanceAndBlacklistStates is 1."
      },
      {
       "name": "_balanceOf",
-      "what": "Returns lower 255 bits of balanceAndBlacklistStates[_account]."
+      "what": "Returns lower 255 bits of balanceAndBlacklistStates via AND mask."
      },
      {
       "name": "approve",
-      "what": "whenNotPaused wrapper calling _approve."
+      "what": "External whenNotPaused override that calls _approve."
      }
     ],
     "admin_powers": [],
-    "upgradeability": "Implementation contract; initializeV2_2 may be called only once when _initializedVersion==2 and advances it to 3 after blacklist migration and symbol change.",
+    "upgradeability": "initializeV2_2 must be called exactly once when _initializedVersion == 2; it permanently sets version to 3 and performs one-time blacklist migration.",
     "user_risks": [
-     "Blacklisted accounts cannot transfer or have balances updated (high bit set).",
-     "All state-changing calls except cancelAuthorization require contract not paused.",
-     "Balances cannot exceed (2^255-1)."
+     "Accounts can be blacklisted, freezing their balances and preventing transfers or approvals.",
+     "Balances cannot exceed (2^255 - 1) or the transaction reverts.",
+     "Signed authorizations and permits can be front-run or replayed if nonces and deadlines are mishandled."
     ],
     "integration_tips": [
-     "Use EIP-712 domain separator with name, \"2\", chainId for signature verification.",
-     "Call initializeV2_2 with previously blacklisted accounts when upgrading from V2_1.",
-     "Pack EOA signatures as r,s,v bytes for permit and authorization methods."
+     "Call initializeV2_2 with the exact list of accounts that were blacklisted under the deprecated mapping.",
+     "Use the bytes-signature permit and authorization overloads for EOA wallets (r,s,v packed).",
+     "Query balances and blacklist status via the overridden _balanceOf and _isBlacklisted logic rather than direct storage reads."
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
    "etherscan": "https://etherscan.io/address/0x43506849D7C04F9138D1A2050bbF3A0c054402dd#code",
-   "generated_at": "2026-10-12T09:58:03Z"
+   "generated_at": "2026-10-19T08:14:57Z"
   },
   {
    "name": "DAI",
@@ -205,70 +217,67 @@
    "contract": "/nix/store/w5qm70gq7qwa3087hknnddpy3acn8fnp-dss/dapp/dss/src/dai.sol:Dai",
    "compiler": "0.5.12+commit.7709ece9",
    "explainer": {
-    "summary": "Dai is an ERC20 token with authorization-controlled minting, burn/transfer logic that respects infinite allowances, and EIP-712 permit support. It inherits LibNote to emit LogNote events on rely/deny. The contract has no upgrade or proxy mechanisms and initializes wards[msg.sender] in the constructor.",
+    "summary": "Dai is an ERC20 token with auth-controlled minting and EIP-2612-style permit support via DOMAIN_SEPARATOR and PERMIT_TYPEHASH. It inherits LibNote for note logging on auth and token functions, uses wards mapping for access control, and implements transferFrom/burn with infinite allowance optimization.",
     "key_functions": [
      {
       "name": "rely",
-      "what": "Grants ward status to an address when called by an existing ward (emits note)."
+      "what": "Grants ward status to an address, callable only by auth."
      },
      {
       "name": "deny",
-      "what": "Revokes ward status from an address when called by an existing ward (emits note)."
+      "what": "Revokes ward status from an address, callable only by auth."
      },
      {
       "name": "mint",
-      "what": "Increases balance and totalSupply for a user; callable only by wards."
+      "what": "Increases balance and totalSupply for a user, callable only by auth."
      },
      {
       "name": "burn",
-      "what": "Decreases balance and totalSupply after allowance check (unless infinite or self)."
+      "what": "Decreases balance and totalSupply after allowance check if not self."
      },
      {
       "name": "transferFrom",
-      "what": "Moves tokens with allowance check that skips decrement on infinite allowance."
+      "what": "Moves tokens with balance and allowance checks, skipping allowance update on infinite allowance."
      },
      {
       "name": "approve",
-      "what": "Sets allowance and emits Approval."
+      "what": "Sets allowance and emits Approval event."
      },
      {
       "name": "permit",
-      "what": "Sets infinite or zero allowance via EIP-712 signature after nonce/expiry checks."
+      "what": "Sets allowance via EIP-712 signature after nonce, expiry, and ecrecover validation."
      },
      {
       "name": "push",
-      "what": "Alias for transferFrom(msg.sender, usr, wad)."
+      "what": "Alias for transferFrom from msg.sender."
      },
      {
       "name": "pull",
-      "what": "Alias for transferFrom(usr, msg.sender, wad)."
+      "what": "Alias for transferFrom to msg.sender."
      },
      {
       "name": "move",
-      "what": "Alias for transferFrom(src, dst, wad)."
+      "what": "Alias for transferFrom between arbitrary addresses."
      }
     ],
     "admin_powers": [
-     "rely(address)",
-     "deny(address)",
-     "mint(address,uint256)"
+     "Add/remove authorized addresses that can call mint via rely/deny"
     ],
-    "upgradeability": "No upgradeability; the contract contains no delegatecall, proxy, or implementation storage patterns.",
+    "upgradeability": "No upgradeability; contract is immutable with no delegatecall or proxy logic present in source.",
     "user_risks": [
-     "Allowance can be set to uint(-1) and is never decremented on transfers.",
-     "burn and transferFrom perform allowance checks only when src != msg.sender and allowance != uint(-1).",
-     "permit requires exact nonce match and reverts on replay or expiry."
+     "Any ward can mint arbitrary amounts increasing totalSupply",
+     "permit requires correct DOMAIN_SEPARATOR computed at deployment with chainId"
     ],
     "integration_tips": [
-     "Call permit before transferFrom when using gasless approvals.",
-     "Check for uint(-1) allowance to avoid unnecessary storage writes.",
-     "Use wards to determine mint authority rather than assuming msg.sender."
+     "Check for allowance == uint(-1) to avoid unnecessary storage writes on transfers",
+     "Use permit with allowed=true to set infinite allowance via signature",
+     "nonces must be tracked off-chain and incremented exactly once per successful permit"
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0x6B175474E89094C44Da98b954EedeAC495271d0F",
    "etherscan": "https://etherscan.io/address/0x6B175474E89094C44Da98b954EedeAC495271d0F#code",
-   "generated_at": "2026-10-12T09:58:03Z"
+   "generated_at": "2026-10-19T08:14:58Z"
   },
   {
    "name": "Uniswap V2 Factory",
@@ -277,51 +286,61 @@
    "contract": "UniswapV2Factory.sol:UniswapV2Factory",
    "compiler": "0.5.16+commit.9c3226ce",
    "explainer": {
-    "summary": "UniswapV2Factory (constructor takes _feeToSetter) stores feeTo/feeToSetter and maintains getPair/allPairs mappings; createPair deploys a UniswapV2Pair via create2 with salt keccak256(token0,token1), calls initialize, and emits PairCreated. Only feeToSetter may call setFeeTo or setFeeToSetter; all other state changes occur inside the deployed Pair contracts.",
+    "summary": "UniswapV2Factory (constructor takes _feeToSetter) deploys UniswapV2Pair instances via CREATE2 in createPair after validating distinct non-zero tokens and checking getPair[token0][token1] == address(0). It exposes getPair, allPairs, allPairsLength, feeTo and feeToSetter; only feeToSetter may call setFeeTo or setFeeToSetter. The factory stores no upgrade logic and the Pair contracts it creates contain the full mint/burn/swap logic shown in the source.",
     "key_functions": [
      {
-      "name": "constructor",
-      "what": "sets feeToSetter to the supplied address"
-     },
-     {
       "name": "createPair",
-      "what": "validates distinct non-zero tokens, deploys UniswapV2Pair via create2, initializes it, records the pair in both directions and allPairs, emits PairCreated"
+      "what": "validates tokens, deploys UniswapV2Pair with CREATE2 using salt from token0/token1, calls initialize, records in getPair and allPairs, emits PairCreated"
      },
      {
       "name": "setFeeTo",
-      "what": "sets feeTo only if caller == feeToSetter"
+      "what": "sets feeTo only if msg.sender == feeToSetter"
      },
      {
       "name": "setFeeToSetter",
-      "what": "transfers feeToSetter only if caller == feeToSetter"
-     },
-     {
-      "name": "allPairsLength",
-      "what": "returns length of allPairs array"
+      "what": "sets feeToSetter only if msg.sender == feeToSetter"
      },
      {
       "name": "getPair",
-      "what": "returns the stored pair address for the given token0/token1 ordering"
+      "what": "public mapping returning the pair address for token0/token1"
+     },
+     {
+      "name": "allPairs",
+      "what": "public array of all created pair addresses"
+     },
+     {
+      "name": "allPairsLength",
+      "what": "returns allPairs.length"
+     },
+     {
+      "name": "feeTo",
+      "what": "public address receiving protocol fees when enabled"
+     },
+     {
+      "name": "feeToSetter",
+      "what": "public address authorized to change feeTo and itself"
      }
     ],
     "admin_powers": [
-     "feeToSetter may call setFeeTo and setFeeToSetter at any time"
+     "feeToSetter may call setFeeTo to change the fee recipient",
+     "feeToSetter may call setFeeToSetter to transfer admin rights"
     ],
-    "upgradeability": "none (no proxy, delegatecall or upgrade logic present)",
+    "upgradeability": "None; constructor sets immutable feeToSetter and no proxy or delegatecall patterns exist in the source.",
     "user_risks": [
-     "feeToSetter is a single privileged address that can redirect protocol fees",
-     "createPair reverts if pair already exists or tokens are identical/zero"
+     "feeToSetter is a single trusted address that can redirect protocol fees",
+     "createPair will revert if tokens are identical, zero, or a pair already exists",
+     "Pair contracts enforce reentrancy lock and K invariant but rely on correct token balances"
     ],
     "integration_tips": [
-     "call getPair before createPair to avoid revert",
-     "use the canonical factory address to obtain the authoritative pair mapping",
-     "interact with pairs only through the factory-recorded addresses"
+     "Call createPair only from contracts that have performed token sorting and existence checks",
+     "Read getPair[token0][token1] before createPair to avoid the PAIR_EXISTS revert",
+     "Use allPairsLength and allPairs to enumerate pairs; feeTo must be monitored separately via events"
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
    "etherscan": "https://etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f#code",
-   "generated_at": "2026-10-12T09:58:14Z"
+   "generated_at": "2026-10-19T08:14:58Z"
   },
   {
    "name": "Uniswap V2 Router02",
@@ -330,58 +349,62 @@
    "contract": "UniswapV2Router02.sol:UniswapV2Router02",
    "compiler": "0.6.6+commit.6c089d02",
    "explainer": {
-    "summary": "UniswapV2Router02 implements IUniswapV2Router02 and routes liquidity and swap operations to Uniswap V2 pairs via the factory. It stores immutable factory and WETH addresses set once in the constructor and uses the ensure modifier to enforce deadlines. All core logic delegates to UniswapV2Library for calculations and TransferHelper for token movements.",
+    "summary": "This contract is UniswapV2Router02 (implements IUniswapV2Router02) with immutable factory and WETH addresses set in the constructor. It provides liquidity addition/removal and token/ETH swaps (including fee-on-transfer variants) via internal calls to UniswapV2Library and IUniswapV2Pair, all guarded by the ensure(deadline) modifier. No owner or admin state exists in the provided source.",
     "key_functions": [
      {
       "name": "addLiquidity",
-      "what": "Adds liquidity to a token pair after optionally creating the pair and transfers tokens to the pair before calling mint."
+      "what": "calls _addLiquidity then transfers tokens to pair and mints liquidity"
      },
      {
       "name": "addLiquidityETH",
-      "what": "Adds liquidity using ETH by wrapping to WETH then calling _addLiquidity and mint."
+      "what": "adds ETH liquidity by depositing to WETH and minting pair liquidity"
      },
      {
       "name": "removeLiquidity",
-      "what": "Transfers LP tokens to the pair then burns them and enforces minimum output amounts."
+      "what": "transfers LP to pair then burns and returns sorted token amounts"
      },
      {
       "name": "swapExactTokensForTokens",
-      "what": "Transfers input tokens to the first pair then calls _swap to route exact input for minimum output."
+      "what": "computes amounts via getAmountsOut, transfers input, then calls _swap"
      },
      {
       "name": "swapExactETHForTokens",
-      "what": "Wraps msg.value to WETH then performs a swap along the path starting with WETH."
+      "what": "deposits msg.value to WETH then performs swap if path starts with WETH"
      },
      {
       "name": "_swap",
-      "what": "Iterates the path executing pair.swap for each hop using precomputed amounts."
+      "what": "iterates path, computes token0-based out amounts, and calls pair.swap"
      },
      {
-      "name": "_addLiquidity",
-      "what": "Computes optimal amounts using reserves or desired values and creates the pair if missing."
+      "name": "_swapSupportingFeeOnTransferTokens",
+      "what": "computes actual input from pair balance delta then swaps"
      },
      {
-      "name": "removeLiquidityETHSupportingFeeOnTransferTokens",
-      "what": "Removes liquidity then transfers the token balance after fee-on-transfer handling."
+      "name": "quote",
+      "what": "delegates to UniswapV2Library.quote"
+     },
+     {
+      "name": "getAmountsOut",
+      "what": "delegates to UniswapV2Library.getAmountsOut"
      }
     ],
     "admin_powers": [],
-    "upgradeability": "Not upgradeable; factory and WETH are immutable and set only in the constructor.",
+    "upgradeability": "Not upgradeable; factory and WETH are immutable and set only in constructor.",
     "user_risks": [
-     "Transactions revert if deadline < block.timestamp via the ensure modifier.",
-     "Swaps and liquidity operations can fail with INSUFFICIENT_OUTPUT_AMOUNT or INSUFFICIENT_INPUT_AMOUNT if slippage exceeds limits.",
-     "Fee-on-transfer tokens require the SupportingFeeOnTransferTokens variants or balances may be incorrect."
+     "deadline must be >= block.timestamp or transaction reverts",
+     "amountOutMin / amountAMin checks can fail on slippage",
+     "fee-on-transfer tokens require the Supporting variants"
     ],
     "integration_tips": [
-     "Always pass a future deadline and set amountOutMin/amountAMin to protect against slippage.",
-     "Use the view functions getAmountsOut and getAmountsIn to pre-compute expected values before calling state-changing swaps.",
-     "When integrating ETH flows ensure msg.value matches the first path element when WETH is involved."
+     "always pass a future deadline and sufficient min amounts",
+     "use getAmountsOut / getAmountsIn for pre-flight quotes",
+     "for ETH use the WETH-wrapped variants"
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
    "etherscan": "https://etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D#code",
-   "generated_at": "2026-10-12T09:58:09Z"
+   "generated_at": "2026-10-19T08:15:02Z"
   },
   {
    "name": "Uniswap V3 SwapRouter",
@@ -390,58 +413,54 @@
    "contract": "contracts/SwapRouter.sol:SwapRouter",
    "compiler": "0.7.6+commit.7338295f",
    "explainer": {
-    "summary": "SwapRouter is a stateless contract for executing exact-input and exact-output swaps against Uniswap V3 pools, supporting single-hop and multi-hop paths via the Path library. It inherits ISwapRouter, PeripheryImmutableState, PeripheryValidation, PeripheryPaymentsWithFee, Multicall and SelfPermit, with constructor taking factory and WETH9. All swaps go through pool.swap with callback validation and deadline checks; no owner or state-changing admin logic exists in the source.",
+    "summary": "The SwapRouter contract provides stateless execution of exact-input and exact-output swaps against Uniswap V3 pools via single-hop and multi-hop paths encoded in bytes. It inherits PeripheryImmutableState (set once in the constructor with factory and WETH9), PeripheryValidation (deadline checks), PeripheryPaymentsWithFee, Multicall, and SelfPermit. All swap logic routes through uniswapV3SwapCallback and internal helpers that call pool.swap and pay tokens.",
     "key_functions": [
      {
       "name": "exactInputSingle",
-      "what": "executes single-hop exact-input swap with amountOutMinimum and deadline check"
+      "what": "Performs a single-hop exact-input swap with amountOutMinimum and deadline check."
      },
      {
       "name": "exactInput",
-      "what": "executes multi-hop exact-input swap by iterating path segments and updating payer to address(this) after first hop"
+      "what": "Performs a multi-hop exact-input swap by iterating the path and using intermediate custody at the router."
      },
      {
       "name": "exactOutputSingle",
-      "what": "executes single-hop exact-output swap, resets amountInCached after use"
+      "what": "Performs a single-hop exact-output swap with amountInMaximum and resets amountInCached."
      },
      {
       "name": "exactOutput",
-      "what": "executes multi-hop exact-output swap using amountInCached from callback"
-     },
-     {
-      "name": "uniswapV3SwapCallback",
-      "what": "validates callback via CallbackValidation, pays tokenIn or continues exactOutputInternal for multi-pool paths"
+      "what": "Performs a multi-hop exact-output swap and reads the final amountIn from amountInCached."
      },
      {
       "name": "multicall",
-      "what": "delegatecalls multiple encoded functions in one transaction, reverts with decoded string on failure"
+      "what": "Executes multiple encoded calls via delegatecall and reverts with decoded error strings on failure."
      },
      {
       "name": "selfPermit",
-      "what": "calls IERC20Permit.permit on token for the router"
+      "what": "Calls permit on an ERC20Permit token to approve the router."
      },
      {
-      "name": "unwrapWETH9",
-      "what": "withdraws WETH9 balance above minimum and transfers ETH to recipient"
+      "name": "uniswapV3SwapCallback",
+      "what": "Validates the callback, decodes the path, and pays the required tokenIn to the pool."
      }
     ],
     "admin_powers": [],
-    "upgradeability": "not upgradeable; deployed as immutable contract with no proxy or owner-controlled logic",
+    "upgradeability": "Not upgradeable; state is immutable after constructor sets factory and WETH9.",
     "user_risks": [
-     "must supply sufficient deadline or transaction reverts with Transaction too old",
-     "amountOutMinimum / amountInMaximum must be respected or swap reverts",
-     "intermediate hops custody tokens at router address until final recipient"
+     "Transaction reverts if block.timestamp exceeds deadline",
+     "Swaps revert if amountOut < amountOutMinimum or amountIn > amountInMaximum",
+     "amountInCached is transient and must be reset after exactOutputSingle"
     ],
     "integration_tips": [
-     "batch approvals and swaps with multicall + selfPermit* functions",
-     "set recipient to address(0) to receive intermediate outputs at router for multi-hop",
-     "use Path.encode and skipToken helpers when constructing multi-pool calldata"
+     "Batch approvals and swaps in a single multicall using selfPermit* functions",
+     "Set recipient to address(0) to custody intermediate tokens at the router",
+     "Use Path library helpers to build and traverse multi-pool paths"
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0xE592427A0AEce92De3Edee1F18E0157C05861564",
    "etherscan": "https://etherscan.io/address/0xE592427A0AEce92De3Edee1F18E0157C05861564#code",
-   "generated_at": "2026-10-12T09:58:11Z"
+   "generated_at": "2026-10-19T08:15:04Z"
   },
   {
    "name": "Permit2",
@@ -450,31 +469,31 @@
    "contract": "src/Permit2.sol:Permit2",
    "compiler": "0.8.17+commit.8df45f5f",
    "explainer": {
-    "summary": "Permit2 (src/Permit2.sol) inherits SignatureTransfer and AllowanceTransfer to provide a unified entrypoint for both signature-based token transfers (via permitTransferFrom and permitWitnessTransferFrom) and allowance-based transfers (via approve, permit, and transferFrom). It relies on EIP712 for domain separation with chainid caching and uses nonce bitmaps plus PackedAllowance for replay protection. Users must first approve the Permit2 contract on target ERC20 tokens before any transfer functions can succeed.",
+    "summary": "Permit2 inherits from SignatureTransfer and AllowanceTransfer to support both signature-based token transfers and stored allowance transfers in one contract. It uses EIP712 with cached domain separator and chainId for replay protection across forks. All transfer functions require prior token approval to Permit2 as stated in the contract comment.",
     "key_functions": [
      {
       "name": "approve",
-      "what": "Sets amount and expiration in allowance mapping for a token-spender pair."
+      "what": "Sets amount and expiration in allowance mapping for a token and spender."
      },
      {
       "name": "permit",
-      "what": "Verifies EIP-712 signature and calls _updateApproval for single or batch PermitDetails."
+      "what": "Verifies signature and updates approval from PermitSingle or PermitBatch."
      },
      {
       "name": "transferFrom",
-      "what": "Pulls tokens using stored PackedAllowance, checking expiration and decrementing amount."
+      "what": "Transfers using stored allowance, checking expiration and amount."
      },
      {
       "name": "lockdown",
-      "what": "Zeroes amount for multiple token-spender pairs for msg.sender."
+      "what": "Sets allowance amount to zero for listed token-spender pairs."
      },
      {
       "name": "invalidateNonces",
-      "what": "Advances nonce in PackedAllowance after validating delta <= type(uint16).max."
+      "what": "Updates nonce in PackedAllowance after validating newNonce > oldNonce."
      },
      {
       "name": "permitTransferFrom",
-      "what": "Verifies signature, consumes unordered nonce, and executes safeTransferFrom for single or batch TokenPermissions."
+      "what": "Verifies signature, uses unordered nonce, and transfers permitted token amount."
      },
      {
       "name": "permitWitnessTransferFrom",
@@ -482,27 +501,32 @@
      },
      {
       "name": "invalidateUnorderedNonces",
-      "what": "ORs mask into nonceBitmap for msg.sender at given wordPos."
+      "what": "Sets bits in nonceBitmap to invalidate nonces."
+     },
+     {
+      "name": "DOMAIN_SEPARATOR",
+      "what": "Returns cached or rebuilt EIP712 domain separator based on current chainId."
      }
     ],
     "admin_powers": [],
-    "upgradeability": "Not upgradeable; constructor caches DOMAIN_SEPARATOR using immutable _CACHED_CHAIN_ID and _CACHED_DOMAIN_SEPARATOR.",
+    "upgradeability": "Not upgradeable; the contract has no proxy or owner-controlled upgrade logic and deploys as immutable bytecode.",
     "user_risks": [
-     "Must approve Permit2 on every token before calling transfer functions.",
-     "SignatureExpired or AllowanceExpired reverts if deadlines or expirations are in the past.",
-     "InvalidNonce or InvalidAmount reverts on replay or exceeding permitted amounts.",
-     "lockdown and invalidateNonces permanently reduce or block future allowances/nonces."
+     "SignatureExpired if block.timestamp exceeds sigDeadline or deadline in permit structs.",
+     "InvalidNonce if signed nonce does not match stored nonce or if nonce bit already set.",
+     "AllowanceExpired or InsufficientAllowance during _transfer if expiration passed or amount exceeded.",
+     "Users must call token approve on Permit2 before any transferFrom or permitTransferFrom succeeds."
     ],
     "integration_tips": [
-     "Call DOMAIN_SEPARATOR() to obtain the current EIP-712 domain for off-chain signing.",
-     "Use permit before transferFrom when gasless approvals are desired.",
-     "Batch variants reduce calldata for multiple tokens in one signature."
+     "Call ERC20 approve on the token for Permit2 address before using allowance or signature transfers.",
+     "Use DOMAIN_SEPARATOR for off-chain signature generation to ensure correct EIP712 hashing.",
+     "Batch functions accept arrays but enforce length match between permitted and transferDetails.",
+     "nonceBitmap and allowance mappings are public for on-chain or off-chain nonce tracking."
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0x000000000022D473030F116dDEE9F6B43aC78BA3",
    "etherscan": "https://etherscan.io/address/0x000000000022D473030F116dDEE9F6B43aC78BA3#code",
-   "generated_at": "2026-10-12T09:58:17Z"
+   "generated_at": "2026-10-19T08:15:08Z"
   },
   {
    "name": "UNI token",
@@ -511,62 +535,62 @@
    "contract": "Uni.sol:Uni",
    "compiler": "0.5.16+commit.9c3226ce",
    "explainer": {
-    "summary": "The Uni contract is a fixed-supply ERC20 token with 1B initial supply, controlled minting by a designated minter (capped at 2% per year after an initial delay), and built-in delegation for on-chain voting via checkpoints. It implements EIP-2612 permit and EIP-712 delegation signatures, using uint96 balances and SafeMath for all arithmetic. No proxy or upgrade logic is present in the source.",
+    "summary": "The Uni contract implements the UNI governance token as an ERC-20 with 18 decimals and 1B total supply. It adds delegation-based voting checkpoints, EIP-2612 permits, and a single minter address that may mint at most 2% of supply once per year after mintingAllowedAfter. All arithmetic uses SafeMath; balances and allowances are stored as uint96.",
     "key_functions": [
      {
       "name": "mint",
-      "what": "Allows the current minter to create up to mintCap percent of totalSupply after mintingAllowedAfter, then updates the next allowed timestamp."
+      "what": "Callable only by minter after mintingAllowedAfter; mints up to mintCap percent of totalSupply and advances the next mint timestamp by one year."
      },
      {
       "name": "setMinter",
-      "what": "Transfers the minter role to a new address; callable only by the existing minter."
+      "what": "Allows the current minter to transfer minting rights to a new address."
      },
      {
       "name": "delegate",
-      "what": "Sets the caller's delegatee for voting power and moves existing balance votes."
+      "what": "Transfers the caller's voting power to the given delegatee and records the change via checkpoints."
      },
      {
       "name": "delegateBySig",
-      "what": "Delegates via EIP-712 signature, validating nonce, expiry and chainId."
+      "what": "Delegates votes using an EIP-712 signature, consuming a nonce and checking expiry."
      },
      {
       "name": "getPriorVotes",
-      "what": "Returns the vote balance for an account at a specific past block using binary search over checkpoints."
+      "what": "Returns the vote balance of an account at a specific past block number using binary search over checkpoints."
      },
      {
       "name": "permit",
-      "what": "Sets allowance via EIP-712 signature with deadline, updating nonces and emitting Approval."
+      "what": "Sets allowance via EIP-712 signature with deadline and nonce, avoiding a separate approve transaction."
      },
      {
       "name": "transferFrom",
-      "what": "Moves tokens while deducting allowance unless the allowance is max uint96."
+      "what": "Moves tokens while decreasing the spender's allowance unless it is set to uint96(-1)."
      },
      {
-      "name": "approve",
-      "what": "Sets allowance, supporting uint(-1) as infinite approval."
+      "name": "balanceOf",
+      "what": "Returns the uint96 balance stored for an account."
      }
     ],
     "admin_powers": [
      "setMinter (only current minter)",
      "mint (only current minter, subject to time and cap)"
     ],
-    "upgradeability": "none (no proxy, delegatecall, or upgrade functions in source)",
+    "upgradeability": "None; the contract has no proxy, owner, or upgrade mechanism and is deployed as a plain contract at the verified address.",
     "user_risks": [
-     "minting can increase totalSupply up to 2% per year after the initial delay",
-     "approve comment notes classic ERC20 race condition when changing allowances",
-     "balances and allowances are uint96; amounts exceeding 2^96-1 revert"
+     "The designated minter can mint up to 2% of totalSupply once per year.",
+     "Approvals are overwritten by approve and are subject to the known ERC-20 race condition described in the code comment.",
+     "Vote delegation and checkpoints rely on correct block numbers; getPriorVotes reverts for unfinalized blocks."
     ],
     "integration_tips": [
-     "Use getPriorVotes for governance snapshots rather than current balance",
-     "Call permit for gasless approvals before transferFrom",
-     "Track DelegateVotesChanged events for off-chain vote indexing",
-     "Check minimumTimeBetweenMints and mintCap before expecting new supply"
+     "Use balanceOf/transfer/approve for standard ERC-20 interactions; all amounts must fit in 96 bits.",
+     "Track voting power via getCurrentVotes or getPriorVotes rather than raw balances when integrating with governance.",
+     "Call delegate or delegateBySig immediately after receiving tokens if the recipient should vote with them.",
+     "Permit signatures must match the exact DOMAIN_TYPEHASH and PERMIT_TYPEHASH defined in the contract."
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
    "etherscan": "https://etherscan.io/address/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984#code",
-   "generated_at": "2026-10-12T09:58:19Z"
+   "generated_at": "2026-10-19T08:15:07Z"
   },
   {
    "name": "LINK token",
@@ -575,57 +599,58 @@
    "contract": "LinkToken.sol:LinkToken",
    "compiler": "0.4.16+commit.d7661dd9",
    "explainer": {
-    "summary": "LinkToken is a fixed-supply ERC20 token (totalSupply=10**27) that mints the entire supply to the deployer in the constructor and extends ERC20 with ERC677 transferAndCall functionality. All transfers, approvals, and transferFrom calls are guarded by a validRecipient modifier that blocks the zero address and the token contract itself. The implementation uses SafeMath and includes increaseApproval/decreaseApproval helpers but contains no owner, mint, or burn logic after deployment.",
+    "summary": "LinkToken is a fixed-supply ERC20 token (totalSupply=10**27) that also implements ERC677 via ERC677Token. All tokens are assigned to the deployer in the constructor; the contract contains no mint, burn, ownership or admin functions. Transfers, approvals and transferAndCall are guarded by the validRecipient modifier that rejects the zero address and the token contract itself.",
     "key_functions": [
      {
       "name": "transfer",
-      "what": "Moves tokens from msg.sender to _to after validRecipient check, using SafeMath."
+      "what": "Moves tokens from msg.sender to _to after subtracting from sender and adding to recipient; emits Transfer."
      },
      {
       "name": "transferFrom",
-      "what": "Moves tokens from _from to _to using allowance, after validRecipient check."
+      "what": "Moves tokens from _from to _to using allowance, updates balances and allowance, emits Transfer."
      },
      {
       "name": "approve",
-      "what": "Sets allowance for _spender after validRecipient check."
-     },
-     {
-      "name": "transferAndCall",
-      "what": "Performs ERC20 transfer then calls onTokenTransfer on _to if it is a contract, after validRecipient check."
+      "what": "Sets allowed[msg.sender][_spender] = _value and emits Approval."
      },
      {
       "name": "increaseApproval",
-      "what": "Adds to the current allowance for _spender."
+      "what": "Adds _addedValue to the current allowance and emits Approval with the new value."
      },
      {
       "name": "decreaseApproval",
-      "what": "Subtracts from the current allowance for _spender, flooring at zero."
+      "what": "Subtracts _subtractedValue from allowance (or sets to 0 if larger) and emits Approval."
+     },
+     {
+      "name": "transferAndCall",
+      "what": "Calls super.transfer then Transfer with data; if _to is a contract, invokes onTokenTransfer on it."
      },
      {
       "name": "balanceOf",
-      "what": "Returns the token balance of the given address."
+      "what": "Returns the recorded balance for the given address from the balances mapping."
      },
      {
       "name": "allowance",
-      "what": "Returns the remaining allowance from owner to spender."
+      "what": "Returns the remaining allowance from owner to spender stored in the allowed mapping."
      }
     ],
     "admin_powers": [],
-    "upgradeability": "Not upgradeable; the contract is deployed as a single immutable implementation with no proxy or delegatecall mechanisms.",
+    "upgradeability": "None. The contract is a plain, non-upgradeable deployment with no proxy, owner or delegatecall mechanisms.",
     "user_risks": [
-     "approve still permits the classic race-condition vector if a spender's allowance is non-zero when a new approve is issued.",
-     "transferAndCall will silently succeed even if the recipient contract's onTokenTransfer reverts, because the call is not checked for return value."
+     "approve race-condition still possible if callers do not use increaseApproval/decreaseApproval.",
+     "transferAndCall silently succeeds even if the recipient contract's onTokenTransfer reverts (no try/catch).",
+     "All tokens are minted to the single deployer address; no further supply control exists."
     ],
     "integration_tips": [
-     "Call transferAndCall when sending tokens to a contract that implements ERC677Receiver to trigger onTokenTransfer.",
-     "Use increaseApproval/decreaseApproval instead of approve when the current allowance may be non-zero.",
-     "Never rely on the token contract itself as a recipient; validRecipient explicitly reverts such attempts."
+     "Call increaseApproval/decreaseApproval instead of approve when the allowance may already be non-zero.",
+     "When receiving LINK via transferAndCall, implement ERC677Receiver.onTokenTransfer to handle the data payload.",
+     "Use validRecipient semantics: the token will revert on transfers to address(0) or to itself."
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0x514910771AF9Ca656af840dff83E8264EcF986CA",
    "etherscan": "https://etherscan.io/address/0x514910771AF9Ca656af840dff83E8264EcF986CA#code",
-   "generated_at": "2026-10-12T09:58:17Z"
+   "generated_at": "2026-10-19T08:15:10Z"
   },
   {
    "name": "Safe v1.3.0 singleton",
@@ -634,27 +659,27 @@
    "contract": "contracts/GnosisSafe.sol:GnosisSafe",
    "compiler": "0.7.6+commit.7338295f",
    "explainer": {
-    "summary": "GnosisSafe v1.3.0 is a multisig wallet singleton (contracts/GnosisSafe.sol) deployed at 0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552 that proxies delegate to; its constructor sets threshold=1 with zero owners to make it unusable directly. Initialization occurs only via setup(_owners,_threshold,to,data,fallbackHandler,paymentToken,payment,paymentReceiver) which calls setupOwners, internalSetFallbackHandler, setupModules and optional handlePayment. All subsequent execution flows through execTransaction which encodes EIP-712 data, increments nonce, verifies signatures via checkNSignatures, optionally runs Guard checks, executes via Executor.execute and handles gas refunds.",
+    "summary": "GnosisSafe v1.3.0 is a multisig wallet singleton (contracts/GnosisSafe.sol) that can only be used via proxies because its constructor sets threshold=1 and prevents further setup. It inherits EtherPaymentFallback, Singleton, ModuleManager, OwnerManager, FallbackManager, GuardManager and others; initialization occurs once via setup() which calls setupOwners, internalSetFallbackHandler and setupModules. All subsequent execution flows through execTransaction which encodes a SafeTx, increments nonce, checks signatures via checkNSignatures, optionally runs a guard, then calls Executor.execute.",
     "key_functions": [
      {
       "name": "setup",
-      "what": "Initializes owners, threshold, fallback handler, modules and optional payment; emits SafeSetup."
+      "what": "Initializes owners, threshold, fallbackHandler, modules and optional payment; reverts if already initialized because setupOwners checks threshold."
      },
      {
       "name": "execTransaction",
-      "what": "Encodes transaction data, checks signatures, runs guard pre/post checks, executes call/delegatecall and emits success/failure with payment."
+      "what": "Encodes transaction data, increments nonce, verifies signatures with checkSignatures, runs guard checks, executes via Executor.execute and handles gas payment."
      },
      {
       "name": "checkNSignatures",
-      "what": "Validates required number of ECDSA, approved-hash or EIP-1271 contract signatures against owners mapping."
+      "what": "Validates exactly requiredSignatures ECDSA, approved-hash (v=1) or contract (v=0) signatures against owners mapping and EIP-1271."
      },
      {
       "name": "encodeTransactionData",
-      "what": "Builds the EIP-712 SafeTx hash bytes used for signing and domainSeparator."
+      "what": "Builds the EIP-712 SafeTx hash using SAFE_TX_TYPEHASH, domainSeparator and all transaction fields including nonce."
      },
      {
       "name": "approveHash",
-      "what": "Marks a tx hash as pre-approved by a registered owner for later signature use."
+      "what": "Marks a hash in approvedHashes[msg.sender] so it can be used with v=1 signatures."
      },
      {
       "name": "setGuard",
@@ -662,37 +687,36 @@
      },
      {
       "name": "setFallbackHandler",
-      "what": "Authorized-only setter that stores handler in FALLBACK_HANDLER_STORAGE_SLOT."
+      "what": "Authorized-only setter that stores handler in FALLBACK_HANDLER_STORAGE_SLOT; fallback delegate-calls it."
      },
      {
       "name": "handlePayment",
-      "what": "Calculates and transfers ETH or ERC20 gas refund to tx.origin or refundReceiver."
+      "what": "Transfers gasUsed+baseGas * gasPrice in ETH or ERC20 to refundReceiver or tx.origin."
      }
     ],
     "admin_powers": [
-     "setGuard (only via Safe transaction)",
-     "setFallbackHandler (only via Safe transaction)",
-     "setupOwners / addOwnerWithThreshold / removeOwner / changeThreshold (via ModuleManager/OwnerManager)",
-     "setupModules (via ModuleManager)"
+     "setupOwners and setupModules (only callable once via setup)",
+     "setGuard and setFallbackHandler via authorized modifier (self-call only)",
+     "addOwnerWithThreshold, removeOwner, swapOwner, changeThreshold from OwnerManager (not shown but imported)"
     ],
-    "upgradeability": "Singleton contract intended solely as master copy for GnosisSafeProxy; no on-chain upgrade function exists in this file—new singleton requires new proxy deployment.",
+    "upgradeability": "Singleton contract deployed at 0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552; proxies delegatecall to it; no on-chain upgrade logic present in the provided source.",
     "user_risks": [
-     "Threshold of 0 or owners[] containing zero address reverts with GS001/GS026",
-     "DelegateCall operation can arbitrarily modify storage or selfdestruct the Safe",
-     "Guard or fallbackHandler can be set to malicious contracts that inspect or block transactions",
-     "Gas refunds are always paid even on ExecutionFailure"
+     "Threshold=0 or owner=0 checks in checkNSignatures can brick the Safe",
+     "DelegateCall operation allows arbitrary code execution if owners approve it",
+     "Guard or fallbackHandler can be set to malicious contracts via Safe transaction",
+     "Payment can be forced even on failed transactions when gasPrice>0"
     ],
     "integration_tips": [
-     "Always call setup exactly once through the proxy; direct calls to the singleton are disabled",
-     "Use getTransactionHash or encodeTransactionData off-chain to collect owner signatures",
-     "When estimating gas, requiredTxGas reverts with the gas value encoded in the revert string",
-     "Check that signatures length >= threshold*65 before calling execTransaction"
+     "Always call setup exactly once through the proxy constructor initializer",
+     "Use getTransactionHash to obtain the EIP-712 hash that owners must sign",
+     "Provide at least safeTxGas+2500+500 gas when calling execTransaction",
+     "Check that guard returns without revert in both checkTransaction and checkAfterExecution"
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552",
    "etherscan": "https://etherscan.io/address/0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552#code",
-   "generated_at": "2026-10-12T09:58:29Z"
+   "generated_at": "2026-10-19T08:15:18Z"
   },
   {
    "name": "Multicall3",
@@ -701,62 +725,62 @@
    "contract": "Multicall3.sol:Multicall3",
    "compiler": "0.8.12+commit.f00d7308",
    "explainer": {
-    "summary": "Multicall3 aggregates results from multiple function calls in one transaction and is backwards-compatible with Multicall and Multicall2. It defines Call, Call3, Call3Value, and Result structs and implements aggregate, tryAggregate, aggregate3, aggregate3Value plus several block/chain view helpers. All aggregate methods are payable and the contract contains no state variables, owner, or proxy logic.",
+    "summary": "Multicall3 aggregates multiple external calls in one transaction via structs Call, Call3, and Call3Value, returning block data and per-call Result structs; variants like aggregate require success while tryAggregate and aggregate3 support per-call allowFailure. It includes view helpers for block.number, blockhash, coinbase, difficulty, gaslimit, timestamp, basefee, chainid, and address balances. The contract has no owner, admin, or state-mutating functions beyond the call aggregation logic itself.",
     "key_functions": [
      {
       "name": "aggregate",
-      "what": "Executes an array of Call structs, requires every call to succeed, and returns blockNumber plus returnData array."
+      "what": "Executes Call[] requiring every call to succeed, returns blockNumber and returnData[]"
      },
      {
       "name": "tryAggregate",
-      "what": "Executes Call structs; if requireSuccess is true all must succeed, otherwise returns Result array with per-call success flags."
+      "what": "Executes Call[] with optional requireSuccess flag, returns Result[]"
      },
      {
       "name": "tryBlockAndAggregate",
-      "what": "Calls tryAggregate and additionally returns current blockNumber and blockHash."
+      "what": "Calls tryAggregate and also returns blockNumber and blockHash"
      },
      {
       "name": "blockAndAggregate",
-      "what": "Wrapper that calls tryBlockAndAggregate with requireSuccess=true."
+      "what": "Calls tryBlockAndAggregate with requireSuccess=true"
      },
      {
       "name": "aggregate3",
-      "what": "Executes Call3 structs allowing per-call allowFailure flag; reverts with 'Multicall3: call failed' when a required call fails."
+      "what": "Executes Call3[] allowing per-call allowFailure, reverts on failure when not allowed"
      },
      {
       "name": "aggregate3Value",
-      "what": "Executes Call3Value structs, forwards per-call value, accumulates and checks total msg.value, reverts on value mismatch or disallowed failure."
-     },
-     {
-      "name": "getEthBalance",
-      "what": "Returns the ETH balance of the supplied address using addr.balance."
+      "what": "Executes Call3Value[] sending per-call value, checks msg.value equals sum of values"
      },
      {
       "name": "getBlockHash",
-      "what": "Returns blockhash(blockNumber) for the given block number."
+      "what": "Returns blockhash(blockNumber)"
+     },
+     {
+      "name": "getEthBalance",
+      "what": "Returns addr.balance"
      },
      {
       "name": "getChainId",
-      "what": "Returns block.chainid."
+      "what": "Returns block.chainid"
      }
     ],
     "admin_powers": [],
-    "upgradeability": "Not upgradeable; the contract has no owner, proxy, or delegatecall upgrade mechanisms.",
+    "upgradeability": "Not upgradeable; the contract contains no proxy, owner, or upgrade logic and all functions are implemented directly in the deployed bytecode.",
     "user_risks": [
-     "External calls use raw call so target contracts can execute arbitrary code and re-enter the caller.",
-     "aggregate and blockAndAggregate revert the entire transaction if any sub-call fails.",
-     "aggregate3Value reverts if msg.value does not exactly equal the sum of Call3Value.value fields."
+     "aggregate and blockAndAggregate revert the entire transaction if any call fails",
+     "aggregate3Value reverts if msg.value does not equal the sum of call values",
+     "External calls execute with the multicall contract as msg.sender"
     ],
     "integration_tips": [
-     "Prefer aggregate3 when partial failures are acceptable via the allowFailure flag.",
-     "Use aggregate3Value when any sub-call must receive ETH.",
-     "All aggregate functions are payable even when no value is needed, saving 24 gas per call as noted in the NatSpec."
+     "Prefer aggregate3 or aggregate3Value for new integrations to support selective failure handling",
+     "Marking aggregate methods payable saves gas per the contract comment",
+     "Use the view helpers instead of direct opcodes for consistent cross-chain behavior"
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0xcA11bde05977b3631167028862bE2a173976CA11",
    "etherscan": "https://etherscan.io/address/0xcA11bde05977b3631167028862bE2a173976CA11#code",
-   "generated_at": "2026-10-12T09:58:25Z"
+   "generated_at": "2026-10-19T08:15:15Z"
   },
   {
    "name": "ENS Registry",
@@ -765,59 +789,58 @@
    "contract": "ENSRegistryWithFallback.sol:ENSRegistryWithFallback",
    "compiler": "0.5.16+commit.9c3226ce",
    "explainer": {
-    "summary": "ENSRegistryWithFallback inherits from ENSRegistry and adds fallback logic to an immutable old ENS contract for any node where recordExists returns false. Overrides of owner, resolver and ttl delegate to old when the node is absent from the local records mapping; _setOwner is overridden to store address(this) instead of address(0). The root node owner is set to the deployer in the ENSRegistry constructor.",
+    "summary": "ENSRegistryWithFallback extends ENSRegistry and adds fallback reads to a prior ENS instance stored in the immutable 'old' field. Records are stored only in the new mapping; resolver/owner/ttl fall back to old when !recordExists(node). _setOwner maps a zero owner to address(this) before writing.",
     "key_functions": [
      {
       "name": "constructor",
-      "what": "Takes ENS _old, calls ENSRegistry constructor and stores _old in the public old variable."
+      "what": "Calls ENSRegistry() then stores the supplied ENS _old contract."
      },
      {
       "name": "resolver",
-      "what": "Returns old.resolver(node) when !recordExists(node), otherwise super.resolver(node)."
+      "what": "Returns super.resolver(node) if recordExists(node), else old.resolver(node)."
      },
      {
       "name": "owner",
-      "what": "Returns old.owner(node) when !recordExists(node), otherwise super.owner(node); super.owner returns address(0) for the contract itself."
+      "what": "Returns super.owner(node) if recordExists(node), else old.owner(node); zero address is returned as 0x0."
      },
      {
       "name": "ttl",
-      "what": "Returns old.ttl(node) when !recordExists(node), otherwise super.ttl(node)."
+      "what": "Returns super.ttl(node) if recordExists(node), else old.ttl(node)."
      },
      {
       "name": "setOwner",
-      "what": "Authorised modifier check then calls _setOwner and emits Transfer."
+      "what": "Authorised modifier check then _setOwner which stores address(this) for a zero owner."
      },
      {
       "name": "setSubnodeOwner",
-      "what": "Authorised check, computes subnode, calls _setOwner, emits NewOwner and returns subnode."
+      "what": "Authorised check, computes subnode hash, calls _setOwner and emits NewOwner."
+     },
+     {
+      "name": "setApprovalForAll",
+      "what": "Sets operators[msg.sender][operator] and emits ApprovalForAll."
      },
      {
       "name": "recordExists",
-      "what": "Returns true if records[node].owner != address(0)."
-     },
-     {
-      "name": "_setOwner",
-      "what": "Internal: stores owner or address(this) if the supplied owner is address(0)."
+      "what": "True when records[node].owner != address(0x0)."
      }
     ],
     "admin_powers": [
-     "Deployer is set as owner of the root node 0x0",
-     "Any node owner (or approved operator) may call setOwner, setSubnodeOwner, setResolver, setTTL and setRecord on nodes they control"
+     "Initial msg.sender becomes owner of the root node 0x0 in ENSRegistry constructor"
     ],
-    "upgradeability": "No proxy or upgrade mechanism; only a one-way fallback to the immutable old ENS contract for unmigrated records.",
+    "upgradeability": "No proxy or upgrade mechanism; migration occurs via read-only fallback to the immutable 'old' ENS contract.",
     "user_risks": [
-     "Unmigrated records depend on the old contract remaining available and correct",
-     "Zero-address owner is rewritten to the registry itself, preventing explicit zero owners"
+     "Zero owner address is rewritten to address(this) inside _setOwner",
+     "Reads silently return values from the old registry until a record is created in the new one"
     ],
     "integration_tips": [
-     "Check recordExists(node) before assuming a record is fully migrated",
-     "Use the same ENS interface for calls; the fallback is transparent for getters"
+     "Call recordExists before trusting owner/resolver/ttl results",
+     "Use setRecord or setSubnodeRecord to populate new storage and stop fallback"
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
    "etherscan": "https://etherscan.io/address/0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e#code",
-   "generated_at": "2026-10-12T09:58:33Z"
+   "generated_at": "2026-10-19T08:15:18Z"
   },
   {
    "name": "Seaport 1.5",
@@ -826,61 +849,58 @@
    "contract": "contracts/Seaport.sol:Seaport",
    "compiler": "0.8.17+commit.8df45f5f",
    "explainer": {
-    "summary": "Seaport contract at the given address inherits from Consideration and implements version 1.5 marketplace logic for native/ERC20/721/1155 orders. Constructor accepts conduitController address and passes it to parent; _name and _nameString are overridden to return Seaport via assembly and string respectively. No other functions are defined in Seaport.sol itself.",
+    "summary": "Seaport 1.5 (contracts/Seaport.sol) inherits from Consideration and implements a marketplace for native/ERC20/ERC721/ERC1155 orders via offer/consideration items. The provided source shows only the constructor (passing conduitController) plus internal overrides _name and _nameString; all transfer logic resides in the inherited Executor contract.",
     "key_functions": [
      {
       "name": "constructor",
-      "what": "Accepts conduitController address and calls Consideration constructor"
+      "what": "Takes conduitController address and passes it to Consideration base constructor."
      },
      {
       "name": "_name",
-      "what": "Internal pure function returning contract name via assembly mstore/return"
+      "what": "Internal pure override returning contract name via assembly (\"Seaport\")."
      },
      {
       "name": "_nameString",
-      "what": "Internal pure function returning 'Seaport' string"
+      "what": "Internal pure override returning the string \"Seaport\" for name hash derivation."
      },
      {
       "name": "_transfer",
-      "what": "Internal function routing NATIVE/ERC20/ERC721/ERC1155 transfers based on itemType"
+      "what": "Internal function dispatching to native/ERC20/ERC721/ERC1155 transfer paths based on ItemType."
      },
      {
       "name": "_transferNativeTokens",
-      "what": "Internal function performing native token call with revert on failure"
+      "what": "Internal function performing native token call, reverting with NativeTokenTransferGenericFailure on failure."
      },
      {
       "name": "_transferERC20",
-      "what": "Internal function handling ERC20 transfer or conduit accumulator insert"
+      "what": "Internal function routing ERC20 transfers directly or via conduit accumulator."
      },
      {
       "name": "_transferERC721",
-      "what": "Internal function enforcing amount==1 then direct or conduit ERC721 transfer"
+      "what": "Internal function enforcing amount==1 for ERC721 and routing via direct call or conduit."
      },
      {
       "name": "_transferERC1155",
-      "what": "Internal function performing direct or conduit ERC1155 transfer"
-     },
-     {
-      "name": "_trigger",
-      "what": "Internal function calling conduit with accumulated transfers then disarming accumulator"
+      "what": "Internal function routing ERC1155 transfers directly or via conduit accumulator."
      }
     ],
     "admin_powers": [],
-    "upgradeability": "No upgradeability; constructor sets immutable state with no proxy or delegate patterns present in source.",
+    "upgradeability": "Not upgradeable; deployed as a concrete contract with immutable constructor arguments and no proxy or owner-controlled upgrade paths in the provided source.",
     "user_risks": [
-     "Reentrancy possible if external calls (e.g. conduit) re-enter protected functions",
-     "Native transfer failures revert with NativeTokenTransferGenericFailure"
+     "Native token transfers can revert with generic failure if recipient rejects ETH.",
+     "Conduit calls may revert with InvalidCallToConduit or InvalidConduit if the derived conduit does not return the expected selector.",
+     "Reentrancy protection via NoReentrantCalls error is declared but implementation details are outside the provided source."
     ],
     "integration_tips": [
-     "Pass conduitController to constructor for batched transfers",
-     "Use conduitKey=0 for direct approvals on Seaport",
-     "Accumulator must be managed to batch conduit calls"
+     "Supply conduitController address at deployment to enable batched conduit transfers.",
+     "Use conduitKey=0 for direct approvals on the Seaport contract itself.",
+     "Accumulators must be properly armed/disarmed when batching conduit transfers to avoid mismatched conduitKey reverts."
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0x00000000000000ADc04C56Bf30aC9d3c0aAF14dC",
    "etherscan": "https://etherscan.io/address/0x00000000000000ADc04C56Bf30aC9d3c0aAF14dC#code",
-   "generated_at": "2026-10-12T09:58:28Z"
+   "generated_at": "2026-10-19T08:15:18Z"
   },
   {
    "name": "Lido stETH (implementation)",
@@ -889,68 +909,71 @@
    "contract": "contracts/0.4.24/Lido.sol:Lido",
    "compiler": "0.4.24+commit.e67f0147",
    "explainer": {
-    "summary": "Lido.sol implements the core liquid staking pool for stETH, accepting ETH via submit/fallback, tracking buffered/CL balances via storage slots, and processing oracle reports to rebase shares while handling withdrawals/EL rewards. It inherits Versioned + StETHPermit + AragonApp, uses locator for external contracts, enforces staking limits/pauses via roles, and supports v2 upgrade via finalizeUpgrade_v2. All logic is derived strictly from the provided source including handleOracleReport, deposit, and role-gated admin functions.",
+    "summary": "Lido is the liquid staking implementation contract (v2) inheriting Versioned, StETHPermit and AragonApp; it accepts ETH via submit/fallback, mints stETH shares, buffers deposits, and processes oracle reports via handleOracleReport to update CL/EL balances and finalize withdrawals. All logic uses fixed storage slots (e.g. BUFFERED_ETHER_POSITION, STAKING_STATE_POSITION) and delegates to locator-resolved contracts (StakingRouter, WithdrawalQueue, Burner). Staking starts paused; ACL roles and rate limits control operations.",
     "key_functions": [
      {
       "name": "initialize",
-      "what": "Bootstraps initial holder, sets locator and EIP712, approves burner, marks initialized (payable, onlyInit)."
+      "what": "Bootstraps initial holder, sets locator and EIP712, approves infinite allowance to burner; payable onlyInit."
      },
      {
       "name": "submit",
-      "what": "Accepts ETH, mints shares via _submit(_referral); fallback also calls it when msg.data.length==0."
+      "what": "Accepts ETH, calls _submit(_referral) returning minted shares; also triggered by payable fallback when msg.data.length==0."
      },
      {
       "name": "handleOracleReport",
-      "what": "Processes CL/EL data, checks sanity, finalizes withdrawals, distributes fees, emits TokenRebased/ETHDistributed; returns post amounts."
+      "what": "Processes oracle data (_reportTimestamp, _clBalance, _elRewardsVaultBalance etc.), calls _handleOracleReport and returns post-rebase amounts array."
      },
      {
       "name": "pauseStaking",
-      "what": "Auths STAKING_PAUSE_ROLE then _pauseStaking; blocks new submits while preserving limit."
+      "what": "Requires STAKING_PAUSE_ROLE, calls _pauseStaking and emits StakingPaused."
      },
      {
       "name": "setStakingLimit",
-      "what": "Auths STAKING_CONTROL_ROLE, sets maxStakeLimit + increasePerBlock via StakeLimitUtils; emits StakingLimitSet."
+      "what": "Requires STAKING_CONTROL_ROLE, stores new maxStakeLimit and increasePerBlock via STAKING_STATE_POSITION, emits StakingLimitSet."
      },
      {
       "name": "deposit",
-      "what": "Called by DSM; checks canDeposit, computes depositableEther after withdrawal reserve, calls stakingRouter.deposit."
+      "what": "Callable only by depositSecurityModule; checks canDeposit, computes depositsCount via StakingRouter and calls deposit (truncated in source)."
+     },
+     {
+      "name": "getBufferedEther",
+      "what": "Returns _getBufferedEther() value from BUFFERED_ETHER_POSITION."
+     },
+     {
+      "name": "getLidoLocator",
+      "what": "Returns ILidoLocator from LIDO_LOCATOR_POSITION storage slot."
      },
      {
       "name": "finalizeUpgrade_v2",
-      "what": "Checks version==0 and initialized, validates locator/EIP712/initial holder, calls _initialize_v2."
-     },
-     {
-      "name": "unsafeChangeDepositedValidators",
-      "what": "Auths UNSAFE_CHANGE_DEPOSITED_VALIDATORS_ROLE, writes DEPOSITED_VALIDATORS_POSITION, emits event."
-     },
-     {
-      "name": "getBeaconStat",
-      "what": "Reads DEPOSITED_VALIDATORS_POSITION, CL_VALIDATORS_POSITION, CL_BALANCE_POSITION."
+      "what": "Checks version==0 and INITIAL_TOKEN_HOLDER shares, then calls _initialize_v2 (one-time)."
      }
     ],
     "admin_powers": [
-     "PAUSE_ROLE stops pool and pauses staking",
-     "RESUME_ROLE resumes pool and staking",
-     "STAKING_PAUSE_ROLE calls _pauseStaking",
-     "STAKING_CONTROL_ROLE sets/removes staking limit and resumes staking",
-     "UNSAFE_CHANGE_DEPOSITED_VALIDATORS_ROLE overwrites deposited validator count"
+     "PAUSE_ROLE can call stop() which stops and pauses staking",
+     "RESUME_ROLE can call resume() which resumes and resumes staking",
+     "STAKING_PAUSE_ROLE can pause/resume staking via pauseStaking/resumeStaking",
+     "STAKING_CONTROL_ROLE can set/remove staking limits",
+     "UNSAFE_CHANGE_DEPOSITED_VALIDATORS_ROLE can call unsafeChangeDepositedValidators"
     ],
-    "upgradeability": "Versioned with _setContractVersion(2) in _initialize_v2; finalizeUpgrade_v2 callable once from v0 after hasInitialized check; no proxy code in this file.",
+    "upgradeability": "Uses Versioned with _setContractVersion(2), _checkContractVersion(0); finalizeUpgrade_v2 and _initialize_v2 allow one-time v2 migration from v1 while preserving storage layout.",
     "user_risks": [
-     "Staking can be paused or rate-limited by admin roles",
-     "Oracle report can change total pooled ether and shares without per-holder Transfer events",
-     "Buffered ether and CL balance updates depend on external locator contracts and oracle data"
+     "Staking can be paused or rate-limited at any time by role holders",
+     "Oracle report can change total pooled ether and shares without emitting Transfer events",
+     "Bunker mode or withdrawal queue reserves can reduce getDepositableEther to zero",
+     "Contract can be stopped, blocking deposits and routine operations"
     ],
     "integration_tips": [
-     "Call getLidoLocator() for withdrawalQueue, burner, elRewardsVault, stakingRouter addresses",
-     "Use getCurrentStakeLimit or getStakeLimitFullInfo before submit to check availability",
-     "Monitor TokenRebased and ETHDistributed events for rebases instead of relying on Transfer"
+     "Call submit or send ETH to fallback to obtain stETH shares",
+     "Use getCurrentStakeLimit and isStakingPaused before submitting",
+     "Query getLidoLocator to obtain WithdrawalQueue, Burner and other addresses",
+     "Check canDeposit before expecting deposit() to succeed",
+     "Monitor TokenRebased and ETHDistributed events for balance updates"
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0x17144556fd3424EDC8Fc8A4C940B2D04936d17eb",
    "etherscan": "https://etherscan.io/address/0x17144556fd3424EDC8Fc8A4C940B2D04936d17eb#code",
-   "generated_at": "2026-10-12T09:58:38Z"
+   "generated_at": "2026-10-19T08:15:28Z"
   },
   {
    "name": "Aave V3 Pool (implementation)",
@@ -959,66 +982,66 @@
    "contract": "lib/aave-v3-factory/src/core/contracts/protocol/pool/Pool.sol:Pool",
    "compiler": "0.8.19+commit.7dd6d404",
    "explainer": {
-    "summary": "The Pool contract (revision 0x3) is the core entrypoint for Aave V3 markets, exposing supply/withdraw/borrow/repay/liquidation/flashloan operations that delegate to libraries (SupplyLogic, BorrowLogic, etc.) while storing state in PoolStorage. It is deployed behind a proxy owned by PoolAddressesProvider, with initialization restricted to that provider and most configuration changes gated behind onlyPoolConfigurator/onlyPoolAdmin modifiers. All user actions update per-reserve and per-user mappings (_reserves, _usersConfig, _usersEModeCategory) and rely on external oracles and ACL checks.",
+    "summary": "The Pool contract (revision 0x3) is the core entrypoint for Aave V3 markets, deployed behind a proxy owned by PoolAddressesProvider and initialized once via VersionedInitializable. It delegates all user actions (supply/withdraw/borrow/repay/flashLoan/liquidation) to the corresponding *Logic libraries while enforcing ACL checks via onlyPoolConfigurator, onlyPoolAdmin and onlyBridge modifiers. All state lives in PoolStorage; configuration changes and reserve initialization are restricted to the PoolConfigurator.",
     "key_functions": [
      {
       "name": "supply",
-      "what": "Calls SupplyLogic.executeSupply with asset/amount/onBehalfOf/referralCode."
+      "what": "calls SupplyLogic.executeSupply with ExecuteSupplyParams"
      },
      {
       "name": "withdraw",
-      "what": "Calls SupplyLogic.executeWithdraw returning the actual withdrawn amount after oracle and eMode checks."
+      "what": "calls SupplyLogic.executeWithdraw using userEModeCategory and price oracle"
      },
      {
       "name": "borrow",
-      "what": "Calls BorrowLogic.executeBorrow with interestRateMode, oracle, priceOracleSentinel and max stable borrow size."
+      "what": "calls BorrowLogic.executeBorrow with interestRateMode, oracle and priceOracleSentinel"
      },
      {
       "name": "repay",
-      "what": "Calls BorrowLogic.executeRepay; overloads exist for permit and aToken repayment."
-     },
-     {
-      "name": "liquidationCall",
-      "what": "Calls LiquidationLogic.executeLiquidationCall with debtToCover, receiveAToken flag and oracle data."
+      "what": "calls BorrowLogic.executeRepay; repayWithATokens variant sets useATokens=true"
      },
      {
       "name": "flashLoan",
-      "what": "Builds FlashloanParams and calls FlashLoanLogic.executeFlashLoan using premium and ACL flashBorrower flags."
+      "what": "builds FlashloanParams and calls FlashLoanLogic.executeFlashLoan"
+     },
+     {
+      "name": "liquidationCall",
+      "what": "calls LiquidationLogic.executeLiquidationCall with reservesCount, oracle and userEModeCategory"
      },
      {
       "name": "initReserve",
-      "what": "OnlyPoolConfigurator; calls PoolLogic.executeInitReserve and increments _reservesCount."
+      "what": "onlyPoolConfigurator; calls PoolLogic.executeInitReserve and increments _reservesCount"
      },
      {
       "name": "setConfiguration",
-      "what": "OnlyPoolConfigurator; writes ReserveConfigurationMap to _reserves[asset].configuration."
+      "what": "onlyPoolConfigurator; writes ReserveConfigurationMap to _reserves[asset]"
      },
      {
       "name": "setUserEMode",
-      "what": "Calls EModeLogic.executeSetUserEMode updating _usersEModeCategory[msg.sender]."
+      "what": "calls EModeLogic.executeSetUserEMode with categoryId and oracle"
      }
     ],
     "admin_powers": [
-     "onlyPoolConfigurator can init/drop reserves, set interest rate strategy, configuration, bridge fee, flashloan premiums, eMode categories and reset isolation debt",
+     "onlyPoolConfigurator can init/drop reserves, set interest-rate strategy, configuration, bridge/FlashLoan premiums, EMode categories and reset isolation debt",
      "onlyPoolAdmin can call rescueTokens",
      "onlyBridge can call mintUnbacked and backUnbacked"
     ],
-    "upgradeability": "Inherits VersionedInitializable with POOL_REVISION=0x3; initialize() is protected by initializer modifier and must be called by the PoolAddressesProvider proxy; constructor only stores immutable ADDRESSES_PROVIDER.",
+    "upgradeability": "VersionedInitializable with POOL_REVISION=0x3; initialize() may be called only once by the proxy; constructor stores immutable ADDRESSES_PROVIDER",
     "user_risks": [
-     "Health factor can drop below 1 leading to liquidation when oracle prices move or interest accrues",
-     "Stable-rate borrows may be rebalanced by anyone via rebalanceStableBorrowRate",
-     "Flashloan premiums and bridge fees are taken from the protocol configuration"
+     "liquidation when health factor drops below threshold",
+     "stable-rate rebalancing or interest-rate mode swap can increase debt",
+     "flash-loan premiums and protocol fees reduce received amounts"
     ],
     "integration_tips": [
-     "All state-changing calls must be made to the proxy address returned by PoolAddressesProvider.getPool()",
-     "Use getUserAccountData and getReserveData to pre-check collateral, debt and health factor before borrow/liquidation",
-     "Permit variants (supplyWithPermit, repayWithPermit) require the underlying asset to implement IERC20WithPermit"
+     "use supplyWithPermit/repayWithPermit to avoid separate approve tx",
+     "call getUserAccountData or getReserveData before borrow/withdraw to check LTV/healthFactor",
+     "respect MAX_NUMBER_RESERVES when iterating getReservesList"
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0x5FAab9E1adbddaD0a08734BE8a52185Fd6558E14",
    "etherscan": "https://etherscan.io/address/0x5FAab9E1adbddaD0a08734BE8a52185Fd6558E14#code",
-   "generated_at": "2026-10-12T09:58:35Z"
+   "generated_at": "2026-10-19T08:15:27Z"
   },
   {
    "name": "CryptoPunks Market",
@@ -1027,55 +1050,47 @@
    "contract": "CryptoPunksMarket.sol:CryptoPunksMarket",
    "compiler": "0.4.11+commit.68ef5810",
    "explainer": {
-    "summary": "CryptoPunksMarket.sol implements a marketplace for 10000 fixed-supply punks where the contract owner first assigns ownership via setInitialOwner/setInitialOwners/allInitialOwnersAssigned before users can claim remaining punks with getPunk. Ownership is tracked in punkIndexToAddress and balanceOf; punks can be transferred, offered for sale (public or to a specific address), bought, or bid on with pendingWithdrawals used for all ETH movements after the initial assignment phase. All state-changing functions after assignment require allPunksAssigned==true and enforce sender ownership checks.",
+    "summary": "This contract implements the CryptoPunks NFT marketplace with 10000 punks initially assigned by the owner via setInitialOwner and setInitialOwners before allInitialOwnersAssigned locks further assignment. After that, ownership is tracked in punkIndexToAddress and balanceOf, with on-chain offers in punksOfferedForSale and bids in punkBids, using pendingWithdrawals for payments. All state-changing functions after assignment require allPunksAssigned to be true and enforce sender ownership checks.",
     "key_functions": [
      {
       "name": "CryptoPunksMarket",
-      "what": "Constructor sets owner, totalSupply=10000, punksRemainingToAssign=10000, name, symbol and decimals."
+      "what": "Constructor sets owner, totalSupply=10000, punksRemainingToAssign, name, symbol and decimals."
      },
      {
       "name": "setInitialOwner",
-      "what": "Owner-only function that assigns a punkIndex to an address before allPunksAssigned is true."
-     },
-     {
-      "name": "setInitialOwners",
-      "what": "Owner-only batch wrapper that calls setInitialOwner for arrays of addresses and indices."
+      "what": "Owner-only function that assigns a punkIndex to an address before allPunksAssigned."
      },
      {
       "name": "allInitialOwnersAssigned",
-      "what": "Owner-only function that sets allPunksAssigned=true, enabling getPunk and trading."
+      "what": "Owner-only function that sets allPunksAssigned=true to enable user minting and trading."
      },
      {
       "name": "getPunk",
-      "what": "Allows any user to claim an unassigned punkIndex once allPunksAssigned is true and punks remain."
+      "what": "Claims an unassigned punkIndex after allPunksAssigned, decrementing punksRemainingToAssign."
      },
      {
       "name": "transferPunk",
-      "what": "Transfers punk ownership, cancels any active offer, refunds a bid if the recipient had placed one."
+      "what": "Transfers punk ownership, cancels any active offer, and refunds a bid if the recipient is the bidder."
      },
      {
       "name": "offerPunkForSale",
-      "what": "Lists a punk for sale at minValue with no buyer restriction."
-     },
-     {
-      "name": "offerPunkForSaleToAddress",
-      "what": "Lists a punk for sale at minValue restricted to a single buyer address."
+      "what": "Lists a punk for sale at minSalePriceInWei to anyone."
      },
      {
       "name": "buyPunk",
-      "what": "Purchases an offered punk if msg.value meets minValue and seller still owns it, then credits seller via pendingWithdrawals."
+      "what": "Purchases an offered punk if msg.value meets minValue and seller still owns it, crediting seller via pendingWithdrawals."
      },
      {
       "name": "enterBidForPunk",
-      "what": "Places or replaces a bid; refunds the previous highest bid via pendingWithdrawals if outbid."
+      "what": "Submits a bid higher than any existing bid, refunding the prior bidder via pendingWithdrawals."
      },
      {
       "name": "acceptBidForPunk",
-      "what": "Seller accepts the current bid if it meets minPrice, transfers ownership and credits proceeds via pendingWithdrawals."
+      "what": "Seller accepts the current bid if it meets minPrice, transferring ownership and crediting via pendingWithdrawals."
      },
      {
       "name": "withdraw",
-      "what": "Sends the caller's entire pendingWithdrawals balance after zeroing the mapping entry."
+      "what": "Sends the caller's pendingWithdrawals amount after zeroing the balance to prevent re-entrancy."
      }
     ],
     "admin_powers": [
@@ -1083,24 +1098,24 @@
      "setInitialOwners",
      "allInitialOwnersAssigned"
     ],
-    "upgradeability": "No proxy, delegatecall or upgrade mechanism present in the contract.",
+    "upgradeability": "Not upgradeable; the contract has no proxy, delegatecall, or upgrade logic and was deployed as a single immutable contract.",
     "user_risks": [
-     "All functions after assignment throw if allPunksAssigned is false",
-     "withdraw zeros pendingWithdrawals before transfer to prevent re-entrancy",
-     "buyPunk and acceptBidForPunk rely on seller still owning the punk at execution time",
-     "pendingWithdrawals can accumulate indefinitely if withdraw is never called"
+     "Funds are only received via explicit withdraw calls after sales or outbid refunds",
+     "Bids are public and can be accepted or outbid at any time",
+     "All functions after initial assignment require allPunksAssigned=true or they throw",
+     "Old Solidity 0.4.8 with throw instead of revert and no reentrancy guard beyond the withdraw pattern"
     ],
     "integration_tips": [
-     "Read punkIndexToAddress and balanceOf to verify ownership before calling trading functions",
-     "Use pendingWithdrawals to check claimable ETH before calling withdraw",
-     "Call punkNoLongerForSale before transferPunk if an offer exists",
-     "Bids are stored per punkIndex; only the highest bid is kept"
+     "Monitor Assign, Transfer, PunkBought, PunkOffered and PunkBidEntered events for state changes",
+     "Always check punkIndexToAddress and punksOfferedForSale before transfers or purchases",
+     "Call withdraw after any buyPunk, acceptBidForPunk or outbid to retrieve ETH",
+     "Verify allPunksAssigned before attempting getPunk or trading functions"
     ]
    },
    "model": "grok-4.3",
    "sourcify": "https://repo.sourcify.dev/1/0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB",
    "etherscan": "https://etherscan.io/address/0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB#code",
-   "generated_at": "2026-10-12T09:58:43Z"
+   "generated_at": "2026-10-19T08:15:30Z"
   }
  ],
  "disclaimer": "AI-generated by Grok from the public data shown. It can be wrong; verify before acting. Not financial, legal or security advice."

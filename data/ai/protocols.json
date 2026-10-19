@@ -1,7 +1,7 @@
 {
  "service": "ai/protocols",
  "description": "AI protocol briefs (top 15 by TVL)",
- "generated_at": "2026-10-12T09:57:51Z",
+ "generated_at": "2026-10-19T08:14:42Z",
  "source": "Grok (xAI) over public data: DefiLlama /protocols",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
@@ -11,7 +11,7 @@
    "name": "Lido",
    "slug": "lido",
    "category": "Liquid Staking",
-   "tvl": 24778794600,
+   "tvl": 23521930810,
    "chains": [
     "Ethereum",
     "Solana",
@@ -28,27 +28,27 @@
     "who_uses_it": "",
     "notable_facts": [
      "Chains: Ethereum, Solana, Terra, Moonriver, Moonbeam",
-     "TVL: 24778794600.49393",
-     "Audits: 2",
-     "Audit links: https://github.com/lidofinance/audits",
-     "Methodology: Staked tokens are counted as TVL based on the chain that they are staked on and where the liquidity tokens are issued, stMATIC is counted as Ethereum TVL since MATIC is staked in Ethereum and the liquidity token is also issued on Ethereum."
+     "TVL: 23521930809.56063",
+     "Market cap: 329050024.5061317",
+     "2 audits",
+     "Methodology: Staked tokens counted as TVL based on chain staked on and where liquidity tokens issued; stMATIC counted as Ethereum TVL"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:21Z"
+   "generated_at": "2026-10-19T08:14:04Z"
   },
   {
    "name": "Aave V3",
    "slug": "aave-v3",
    "category": "Lending",
-   "tvl": 17638379455,
+   "tvl": 17065686421,
    "chains": [
     "Ethereum",
     "Base",
     "Arbitrum",
     "Plasma",
-    "Avalanche",
     "Monad",
+    "Avalanche",
     "Binance",
     "Polygon"
    ],
@@ -60,46 +60,50 @@
     "key_risks": [],
     "who_uses_it": "",
     "notable_facts": [
-     "Operates on Ethereum, Base, Arbitrum, Plasma, Avalanche, Monad, Binance, Polygon, X Layer, xDai, Optimism, Mantle, Linea, MegaETH, Sonic, Celo, Scroll, zkSync Era, Metis, Soneium, Fantom",
-     "TVL 17638379455.189842",
-     "2 audits",
-     "Methodology counts tokens locked as collateral, excluding borrowed coins"
+     "Category: Lending",
+     "Chains: Ethereum, Base, Arbitrum, Plasma, Monad, Avalanche, Binance, Polygon, X Layer, xDai, Optimism, Mantle, Linea, MegaETH, Sonic, Celo, Scroll, zkSync Era, Metis, Soneium, Fantom",
+     "TVL: 17065686421.457108",
+     "change_1d: 0.9339043995655487",
+     "change_7d: -3.3966445921511337",
+     "Audits: 2",
+     "Methodology: Counts the tokens locked in the contracts to be used as collateral to borrow or to earn yield. Borrowed coins are not counted towards the TVL, so only the coins actually locked in the contracts are counted. There's multiple reasons behind this but one of the main ones is to avoid inflating the TVL through cycled lending.",
+     "Listed at: 1648776877"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:19Z"
+   "generated_at": "2026-10-19T08:13:57Z"
   },
   {
    "name": "SSV Network",
    "slug": "ssv-network",
    "category": "Staking Pool",
-   "tvl": 13351275798,
+   "tvl": 12707120865,
    "chains": [
     "Ethereum"
    ],
    "url": "https://ssv.network/",
    "llama": "https://defillama.com/protocol/ssv-network",
    "brief": {
-    "what_it_does": "SSV Network enables decentralised Ethereum validation by distributing validator operations across multiple nodes, providing infrastructure for secure and decentralised staking.",
+    "what_it_does": "SSV Network enables decentralized Ethereum validation by distributing validator operations across multiple nodes, providing infrastructure for secure and decentralized staking.",
     "how_it_makes_money": "",
     "key_risks": [],
     "who_uses_it": "",
     "notable_facts": [
      "Category: Staking Pool",
      "Chains: Ethereum",
-     "TVL: 13351275797.597178",
-     "Market cap: 43440132.53045578",
+     "TVL: 12707120865.106762",
+     "Market cap: 37315248.11734053",
      "Audits: 2"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:21Z"
+   "generated_at": "2026-10-19T08:14:04Z"
   },
   {
    "name": "LayerZero V2",
    "slug": "layerzero-v2",
    "category": "Bridge",
-   "tvl": 11586007558,
+   "tvl": 12499442842,
    "chains": [
     "Ethereum",
     "Polygon",
@@ -119,20 +123,22 @@
     "who_uses_it": "Applications",
     "notable_facts": [
      "Category: Bridge",
-     "TVL: 11586007557.64988",
+     "TVL 12499442842.494589",
+     "1d change 10.47953331443476",
+     "7d change 8.038726291046743",
+     "Chains: Ethereum, Polygon, ApeChain, Base, Arbitrum, Binance, Solana, Tron, Flare, Plasma, Stable, Citrea, Hyperliquid L1, Abstract, Gensyn, Somnia, Peaq, Hemi, Kava, Fraxtal, Avalanche, 0G, TAC, Sei, Fantom, Metis, Chiliz, Goat, Optimism, zkSync Era, Telos, Robinhood Chain, RSK, Celo, Mantle, Katana, Blast, Cronos, Soneium, Unichain, Berachain, Linea, Ink, Scroll, Vana, Astar, Sonic, Flow, Conflux, Redbelly, Manta, Mode, CORE, Story, xDai, XDC, LightLink, Plume Mainnet, Monad, XPLA, Tempo, X Layer, Morph, Swellchain, Taiko, BOB, Canto, World Chain, Hedera, Op_Bnb, Moonriver, Lisk, MegaETH, Harmony, Degen, Moonbeam, Polygon zkEVM, Zora, Sophon, Ethereal, Etherlink, Codex, KiteAI, TomoChain, Rayls, Apex Fusion, zkVerify, Irys, Bittensor EVM, Nibiru, Klaytn",
      "Methodology: Counts assets escrowed in LayerZero OFT Adapter / ProxyOFT lockboxes on each chain, discovered from the LayerZero metadata API. Pure mint-and-burn OFTs hold no collateral and are not counted. Destination-chain escrows that hold a LayerZero-minted wrapper are excluded, since the collateral backing them is already counted at its canonical lockbox, escrows holding natively-issued assets are counted even where the metadata annotates them as pegged to another chain.",
-     "Chains: Ethereum, Polygon, ApeChain, Base, Arbitrum, Binance, Solana, Tron, Flare, Plasma, Stable, Citrea, Abstract, Hyperliquid L1, Gensyn, Somnia, Peaq, Hemi, Fraxtal, Kava, Avalanche, 0G, Sei, Optimism, TAC, Fantom, Goat, Chiliz, Metis, zkSync Era, Robinhood Chain, Telos, RSK, Katana, Mantle, Celo, Berachain, Cronos, Unichain, Blast, Soneium, Linea, Vana, Ink, Astar, Scroll, Flow, Sonic, Conflux, Manta, Redbelly, Mode, CORE, Story, xDai, XDC, LightLink, Monad, XPLA, Plume Mainnet, Tempo, Swellchain, Canto, Moonriver, Harmony, Degen, Moonbeam, Polygon zkEVM, Morph, Lisk, World Chain, Bittensor EVM, MegaETH, BOB, Taiko, Hedera, Sophon, KiteAI, Zora, Ethereal, Nibiru, TomoChain, Codex, X Layer, zkVerify, Irys, Rayls, Apex Fusion, Klaytn, Etherlink, Op_Bnb",
      "URL: https://layerzero.network/"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:18Z"
+   "generated_at": "2026-10-19T08:14:08Z"
   },
   {
    "name": "Morpho Blue",
    "slug": "morpho-blue",
    "category": "Lending",
-   "tvl": 11371143101,
+   "tvl": 11099564363,
    "chains": [
     "Ethereum",
     "Base",
@@ -146,27 +152,27 @@
    "url": "https://app.morpho.org",
    "llama": "https://defillama.com/protocol/morpho-blue",
    "brief": {
-    "what_it_does": "Morpho Blue is a trustless and efficient lending primitive with permissionless market creation.",
-    "how_it_makes_money": "No revenue information provided.",
-    "key_risks": [
-     "No risk information provided."
-    ],
-    "who_uses_it": "No user information provided.",
+    "what_it_does": "Morpho Blue is a trustless and efficient lending primitive with permissionless market creation",
+    "how_it_makes_money": "",
+    "key_risks": [],
+    "who_uses_it": "",
     "notable_facts": [
-     "TVL 11371143101.255684",
-     "2 audits",
-     "Deployed on Ethereum, Base and 38 other chains",
-     "URL https://app.morpho.org"
+     "Audits: 2",
+     "TVL: 11099564363.278242",
+     "change_1d: 0.6150567261089037",
+     "change_7d: -2.475693211227565",
+     "ListedAt: 1705261273",
+     "Chains: Ethereum, Base, Robinhood Chain, Arc, Monad, Hyperliquid L1, Pharos, Tempo, Arbitrum, Morph, Flare, World Chain, Katana, Stable, Citrea, Optimism, Etherlink, Sei, Polygon, Plume Mainnet, Unichain, MegaETH, Celo, XDC, TAC, Klaytn, Abstract, Soneium, Scroll, Lisk, Hemi, Avalanche, Fraxtal, Sonic, RISE, Binance, 0G, Ink, Mode, Corn, Zircuit, Bitlayer, xDai, Botanix, Linea"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:31Z"
+   "generated_at": "2026-10-19T08:14:13Z"
   },
   {
    "name": "WBTC",
    "slug": "wbtc",
    "category": "Bridge",
-   "tvl": 9736923415,
+   "tvl": 9638651712,
    "chains": [
     "Bitcoin"
    ],
@@ -174,26 +180,27 @@
    "llama": "https://defillama.com/protocol/wbtc",
    "brief": {
     "what_it_does": "Wrapped Bitcoin (WBTC) is the first ERC20 token backed 1:1 with Bitcoin. Completely transparent. 100% verifiable. Community led.",
-    "how_it_makes_money": "Not specified in the data",
+    "how_it_makes_money": "",
     "key_risks": [],
-    "who_uses_it": "Not specified in the data",
+    "who_uses_it": "",
     "notable_facts": [
      "Category: Bridge",
      "Chains: Bitcoin",
+     "TVL: 9638651712.325115",
      "Audits: 2",
-     "Audit link: https://wbtc.network/dashboard/audit",
+     "Audit links: https://wbtc.network/dashboard/audit",
      "TVL for WBTC consists of the BTC deposits in custody that were used to mint WBTC",
      "URL: https://wbtc.network/"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:29Z"
+   "generated_at": "2026-10-19T08:14:10Z"
   },
   {
    "name": "Binance staked ETH",
    "slug": "binance-staked-eth",
    "category": "Liquid Staking",
-   "tvl": 9546910746,
+   "tvl": 9070667750,
    "chains": [
     "Ethereum",
     "Binance"
@@ -208,20 +215,19 @@
     "notable_facts": [
      "Category: Liquid Staking",
      "Chains: Ethereum, Binance",
-     "TVL: 9546910746.381699",
      "Audits: 2",
      "Audit link: https://github.com/peckshield/publications/blob/master/audit_reports/PeckShield-Audit-Report-wBETH-v1.0.pdf",
      "URL: https://www.binance.com/en/wbeth"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:28Z"
+   "generated_at": "2026-10-19T08:14:15Z"
   },
   {
    "name": "Coinbase Bridge",
    "slug": "coinbase-bridge",
    "category": "Bridge",
-   "tvl": 8149404523,
+   "tvl": 8058065576,
    "chains": [
     "Bitcoin",
     "Ripple",
@@ -235,24 +241,23 @@
     "what_it_does": "Wrapped tokens backed 1:1 by assets held by Coinbase.",
     "how_it_makes_money": "",
     "key_risks": [
-     "No audits"
+     "Audits: 0"
     ],
     "who_uses_it": "",
     "notable_facts": [
-     "TVL 8149404523.251533 on chains Bitcoin, Ripple, Cardano, Doge, Litecoin",
-     "change_1d 0.6760381112758296",
-     "change_7d -4.09452630914717",
-     "TVL calculated from Coinbase proof-of-reserves for cbBTC/cbXRP/cbDOGE/cbADA/cbLTC"
+     "TVL 8058065576.347221",
+     "Chains: Bitcoin, Ripple, Cardano, Doge, Litecoin",
+     "Audits: 0"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:32Z"
+   "generated_at": "2026-10-19T08:14:18Z"
   },
   {
    "name": "Hyperliquid Bridge",
    "slug": "hyperliquid-bridge",
    "category": "Bridge",
-   "tvl": 6990632900,
+   "tvl": 6782693548,
    "chains": [
     "Hyperliquid L1",
     "Arbitrum"
@@ -260,29 +265,24 @@
    "url": "https://app.hyperliquid.xyz",
    "llama": "https://defillama.com/protocol/hyperliquid-bridge",
    "brief": {
-    "what_it_does": "Bridges USDC from Arbitrum to Hyperliquid L1, where native USDC is minted via CCTP. Hyperliquid is a Layer 1 blockchain for perpetual futures and spot trading.",
-    "how_it_makes_money": "Not specified in the provided data.",
-    "key_risks": [
-     "Not specified in the provided data."
-    ],
-    "who_uses_it": "Not specified in the provided data.",
+    "what_it_does": "Hyperliquid is a Layer 1 blockchain best known for perpetual futures and spot trading. Native USDC is minted on Hyperliquid via CCTP, and USDC is bridged from Arbitrum.",
+    "how_it_makes_money": "",
+    "key_risks": [],
+    "who_uses_it": "",
     "notable_facts": [
-     "Category: Bridge",
-     "Chains: Hyperliquid L1 and Arbitrum",
-     "TVL: 6990632899.624042",
-     "Two audits listed at https://hyperliquid.gitbook.io/hyperliquid-docs/audits",
-     "URL: https://app.hyperliquid.xyz",
-     "Listed at: 1713225288"
+     "chains: Hyperliquid L1, Arbitrum",
+     "tvl: 6782693547.706765",
+     "audits: 2"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:43Z"
+   "generated_at": "2026-10-19T08:14:16Z"
   },
   {
    "name": "EigenCloud",
    "slug": "eigencloud",
    "category": "Restaking",
-   "tvl": 6666834428,
+   "tvl": 6261435939,
    "chains": [
     "Ethereum"
    ],
@@ -294,51 +294,47 @@
     "key_risks": [],
     "who_uses_it": "",
     "notable_facts": [
-     "category: Restaking",
-     "chains: Ethereum",
-     "tvl: 6666834428.471256",
-     "mcap: 265652988.7175725",
-     "audits: 2",
-     "audit_links: https://docs.eigencloud.xyz/eigenlayer/security/audits",
-     "url: https://www.eigencloud.xyz",
-     "listedAt: 1686776222"
+     "Category: Restaking",
+     "Chains: Ethereum",
+     "TVL: 6261435938.589382",
+     "Market cap: 230529326.7799453",
+     "Audits: 2"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:44Z"
+   "generated_at": "2026-10-19T08:14:22Z"
   },
   {
    "name": "Sky Lending",
    "slug": "sky-lending",
    "category": "CDP",
-   "tvl": 5940748011,
+   "tvl": 5693392741,
    "chains": [
     "Ethereum"
    ],
    "url": "https://app.sky.money/",
    "llama": "https://defillama.com/protocol/sky-lending",
    "brief": {
-    "what_it_does": "The USDS stablecoin powers the open Sky ecosystem. It is the upgraded version of DAI. Counts all the tokens being used as collateral of CDPs on Ethereum, including PSM USDC balance.",
+    "what_it_does": "CDP protocol on Ethereum powering USDS stablecoin, the upgraded version of DAI",
     "how_it_makes_money": "",
     "key_risks": [],
     "who_uses_it": "",
     "notable_facts": [
-     "TVL 5940748010.986563",
-     "change_1d -0.8209801079354833",
-     "change_7d 0.6905234257453117",
-     "audits 2",
+     "TVL 5693392741.461813",
      "chains Ethereum",
+     "audits 2",
+     "audit_links https://security.makerdao.com/",
      "url https://app.sky.money/"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:43Z"
+   "generated_at": "2026-10-19T08:14:24Z"
   },
   {
    "name": "Binance Bitcoin",
    "slug": "binance-bitcoin",
    "category": "Bridge",
-   "tvl": 5686726382,
+   "tvl": 5641960944,
    "chains": [
     "Bitcoin"
    ],
@@ -352,22 +348,20 @@
     "notable_facts": [
      "Category: Bridge",
      "Chains: Bitcoin",
-     "TVL: 5686726381.719825",
-     "Change 1d: 0.5312122249286944",
-     "Change 7d: -3.4392891858604884",
-     "Audits: 0",
      "Methodology: BTC on btc chain",
+     "TVL: 5641960943.758872",
+     "Audits: 0",
      "Listed at: 1724313608"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:43Z"
+   "generated_at": "2026-10-19T08:14:30Z"
   },
   {
    "name": "SparkLend",
    "slug": "sparklend",
    "category": "Lending",
-   "tvl": 5295768011,
+   "tvl": 5083113923,
    "chains": [
     "Ethereum",
     "xDai"
@@ -375,30 +369,56 @@
    "url": "https://spark.finance/",
    "llama": "https://defillama.com/protocol/sparklend",
    "brief": {
-    "what_it_does": "SparkLend is a stablecoin lending market. Unlike other lending protocols where rates fluctuate based on utilization or loan size, SparkLend offers governance-defined rates that do not vary based on those factors. This is made possible by Spark’s Liquidity Layer (SLL), which supplies consistent stablecoin liquidity to the protocol",
-    "how_it_makes_money": "Not specified in the data",
+    "what_it_does": "SparkLend is a stablecoin lending market. Unlike other lending protocols where rates fluctuate based on utilisation or loan size, SparkLend offers governance-defined rates that do not vary based on those factors. This is made possible by Spark’s Liquidity Layer (SLL), which supplies consistent stablecoin liquidity to the protocol",
+    "how_it_makes_money": "",
     "key_risks": [],
-    "who_uses_it": "Not specified in the data",
+    "who_uses_it": "",
     "notable_facts": [
-     "Operates on Ethereum and xDai",
-     "2 audits",
-     "Methodology counts tokens locked in contracts as collateral, excluding borrowed coins"
+     "Chains: Ethereum, xDai",
+     "TVL: 5083113923.187251",
+     "Audits: 2",
+     "Methodology counts tokens locked in contracts as collateral excluding borrowed coins to avoid TVL inflation via cycled lending"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:51Z"
+   "generated_at": "2026-10-19T08:14:25Z"
+  },
+  {
+   "name": "Ethena USDe",
+   "slug": "ethena-usde",
+   "category": "Basis Trading",
+   "tvl": 4681720150,
+   "chains": [
+    "Ethereum"
+   ],
+   "url": "https://www.app.ethena.fi/join/3y20d",
+   "llama": "https://defillama.com/protocol/ethena-usde",
+   "brief": {
+    "what_it_does": "Ethena is a synthetic dollar protocol built on Ethereum",
+    "how_it_makes_money": "",
+    "key_risks": [],
+    "who_uses_it": "",
+    "notable_facts": [
+     "category: Basis Trading",
+     "chains: Ethereum",
+     "audits: 2",
+     "listedAt: 1708016301"
+    ]
+   },
+   "model": "grok-4.3",
+   "generated_at": "2026-10-19T08:14:42Z"
   },
   {
    "name": "ether.fi Stake",
    "slug": "ether.fi-stake",
    "category": "Liquid Staking",
-   "tvl": 4876032092,
+   "tvl": 4632541281,
    "chains": [
     "Ethereum",
     "Base",
+    "Arbitrum",
     "Berachain",
     "Optimism",
-    "Arbitrum",
     "Scroll"
    ],
    "url": "https://www.ether.fi",
@@ -410,39 +430,12 @@
     "who_uses_it": "",
     "notable_facts": [
      "Category: Liquid Staking",
-     "Chains: Ethereum, Base, Berachain, Optimism, Arbitrum, Scroll",
-     "Audits: 0",
-     "Listed at 1677778460"
+     "Chains: Ethereum, Base, Arbitrum, Berachain, Optimism, Scroll",
+     "Audits: 0"
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:50Z"
-  },
-  {
-   "name": "Ethena USDe",
-   "slug": "ethena-usde",
-   "category": "Basis Trading",
-   "tvl": 4751955626,
-   "chains": [
-    "Ethereum"
-   ],
-   "url": "https://www.app.ethena.fi/join/3y20d",
-   "llama": "https://defillama.com/protocol/ethena-usde",
-   "brief": {
-    "what_it_does": "Ethena is a synthetic dollar protocol built on Ethereum.",
-    "how_it_makes_money": "",
-    "key_risks": [],
-    "who_uses_it": "",
-    "notable_facts": [
-     "Category: Basis Trading",
-     "Chains: Ethereum",
-     "TVL: 4751955626.165482",
-     "Audits: 2",
-     "Listed at: 1708016301"
-    ]
-   },
-   "model": "grok-4.3",
-   "generated_at": "2026-10-12T09:57:50Z"
+   "generated_at": "2026-10-19T08:14:41Z"
   }
  ],
  "disclaimer": "AI-generated by Grok from the public data shown. It can be wrong; verify before acting. Not financial, legal or security advice."
