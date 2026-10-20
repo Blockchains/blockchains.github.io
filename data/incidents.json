@@ -1,14 +1,59 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-19T10:07:20Z",
+ "generated_at": "2026-10-20T09:32:59Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21068074946.06813,
- "ytd_usd": 2245161097.068132,
+ "total_all_time_usd": 21166735756.12813,
+ "ytd_usd": 2340488907.128132,
  "incidents": [
+  {
+   "date": "2026-10-19",
+   "name": "AlpsCon AI Trade Hub",
+   "amount_usd": 152809.36,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-10-18",
+   "name": "Coffer",
+   "amount_usd": 0.7,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Rounding Error",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-10-17",
+   "name": "Qubic",
+   "amount_usd": 1300000,
+   "chains": [
+    "Qubic"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Weak Key Generation",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "JavaScript"
+  },
   {
    "date": "2026-10-16",
    "name": "Pirate Chain",
@@ -43,6 +88,28 @@
    "language": "Solidity"
   },
   {
+   "date": "2026-10-13",
+   "name": "Gamdom",
+   "amount_usd": 4208000,
+   "chains": [
+    "Ethereum",
+    "BSC",
+    "Polygon",
+    "Arbitrum",
+    "Optimism",
+    "Solana",
+    "TRON",
+    "Bitcoin"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Key Leaked via Infrastructure",
+   "target_type": "Gambling Platform",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
    "date": "2026-10-10",
    "name": "Papertrade",
    "amount_usd": 1280000,
@@ -56,6 +123,19 @@
    "returned_usd": null,
    "source": "",
    "language": "Solidity"
+  },
+  {
+   "date": "2026-10-09",
+   "name": "Ledger (Supply Chain)",
+   "amount_usd": 93000000,
+   "chains": [],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Supply Chain Attack",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
   },
   {
    "date": "2026-10-08",
@@ -4488,81 +4568,6 @@
    ],
    "classification": "Frontend & Infrastructure",
    "technique": "Key Leaked via Infrastructure",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-06",
-   "name": "Fusion by IPOR",
-   "amount_usd": 336000,
-   "chains": [
-    "Arbitrum"
-   ],
-   "classification": "Access Control",
-   "technique": "Arbitrary External Call",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-05",
-   "name": "USDGambit and TLP",
-   "amount_usd": 1500000,
-   "chains": [
-    "Arbitrum"
-   ],
-   "classification": "Key Compromise",
-   "technique": "Deployer Key Compromised",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-05",
-   "name": "TMX TRIBE",
-   "amount_usd": 1400000,
-   "chains": [
-    "Arbitrum"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Arithmetic Error",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-01",
-   "name": "PRXVT",
-   "amount_usd": 97000,
-   "chains": [
-    "Base"
-   ],
-   "classification": "Protocol Logic",
-   "technique": "Staking Logic Flaw",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2025-12-30",
-   "name": "Unleash Protocol",
-   "amount_usd": 3900000,
-   "chains": [
-    "Story"
-   ],
-   "classification": "Key Compromise",
-   "technique": "Private Key Compromised",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

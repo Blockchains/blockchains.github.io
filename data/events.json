@@ -1,11 +1,11 @@
 {
  "service": "events",
  "description": "Web3 events & hackathons calendar",
- "generated_at": "2026-10-19T10:07:22Z",
+ "generated_at": "2026-10-20T09:33:01Z",
  "source": "ETHGlobal public events page",
  "source_url": "https://ethglobal.com/events",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
- "count": 5,
+ "count": 6,
  "events": [
   {
    "name": "Ethereum Stablecoin Summit @ Money20/20 Las Vegas",
@@ -16,6 +16,16 @@
    "url": "https://ethglobal.com/events/ethsummit-las-vegas",
    "organiser": "ETHGlobal",
    "uid": "ethglobal-734"
+  },
+  {
+   "name": "Cowork with ETHGlobal in Vadodara with PU DAO \\u0026 NEAR Protocol",
+   "type": "cafe",
+   "medium": "physical",
+   "start": "2026-10-21T00:00:00.000Z",
+   "end": "2026-10-21T00:00:00.000Z",
+   "url": "https://ethglobal.com/events/cowork-with-ethglobal-in-vadodara-with-pu-dao-uppu9",
+   "organiser": "ETHGlobal",
+   "uid": "ethglobal-752"
   },
   {
    "name": "ETHGlobal Happy Hour New Delhi",

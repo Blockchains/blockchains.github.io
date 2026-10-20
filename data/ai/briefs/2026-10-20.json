@@ -1,0 +1,55 @@
+{
+ "headline": "Crypto Structure Brief: Ethereum Tops TVL; Stablecoin Pegs Alert on 20 Oct 2026",
+ "summary": "Ethereum holds the largest TVL at $49.5bn followed by Base and BSC. Uniswap protocols lead DEX volumes while Tether generates the highest fees. USDT and USDC dominate stablecoin circulation with several peg deviations under watch. Base and Arbitrum lead L2 TVS amid multiple recent incidents.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum leads with $49.51bn TVL; Base at $6.17bn, BSC at $5.93bn, Solana at $5.90bn",
+    "Tron $5.52bn, Bitcoin $4.38bn, Arbitrum $1.41bn complete the top seven",
+    "Robinhood Chain, Hyperliquid L1 and Monad each exceed $1bn TVL"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V4 records $975m 24h volume; Uniswap V3 follows at $925m",
+    "Kalshi, Aerodrome Slipstream and PancakeSwap V3 each exceed $400m daily volume",
+    "Tether leads fees at $17.5m; Circle USDC at $7.0m; PumpSwap third at $3.1m"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulating supply $183.0bn; USDC at $72.3bn; USDS at $6.9bn",
+    "USD1, USDG and PYUSD each exceed $2.8bn circulation",
+    "AP USDA shows 4.72% depeg; pmUSD at 39.81% deviation; five other assets on watch"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base TVS $15.31bn; Arbitrum One $10.33bn; Hyperliquid $6.75bn",
+    "Polygon PoS $3.78bn; Robinhood Chain $2.37bn; OP Mainnet $1.97bn",
+    "Mantle, Lighter and Starknet each hold over $500m TVS"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Ledger supply-chain attack $93m on 9 Oct; Gamdom $4.2m on 13 Oct",
+    "Papertrade oracle manipulation $1.28m; Qubic key compromise $1.3m",
+    "Eight additional incidents reported in the last 14 days across multiple chains"
+   ]
+  }
+ ],
+ "watchlist": [
+  "AP USDA 4.72% depeg",
+  "pmUSD 39.81% deviation",
+  "Ledger supply-chain incident $93m",
+  "Base and Arbitrum TVS weekly changes"
+ ],
+ "date": "2026-10-20",
+ "model": "grok-4.3",
+ "tokens": 13358
+}
