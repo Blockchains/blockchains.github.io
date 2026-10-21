@@ -1,0 +1,55 @@
+{
+ "headline": "Crypto Market Structure Brief - 21 October 2026",
+ "summary": "Ethereum leads chains by TVL at $50.3 billion, followed by Base at $6.25 billion and Solana at $5.98 billion. Uniswap V3 recorded the highest 24-hour DEX volume at $1.06 billion while Tether generated the top fees at $17.6 million. USDT remains the largest stablecoin at $182.7 billion circulating supply with several peg deviations noted. Base leads L2 TVS at $15.57 billion amid multiple security incidents in the prior fortnight.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum ranks first with $50.28 billion TVL.",
+    "Base holds second position at $6.25 billion TVL.",
+    "Solana follows at $5.98 billion TVL with BSC at $5.84 billion."
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V3 leads 24-hour DEX volume at $1.06 billion.",
+    "Uniswap V4 records $1.04 billion in the same period.",
+    "Tether tops fees at $17.58 million with Circle USDC at $6.98 million."
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulates at $182.73 billion with USDC at $72.16 billion.",
+    "USDS stands at $6.82 billion and DAI at $4.75 billion.",
+    "Seven stablecoins show peg deviations including AP USDA at -5.015%."
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base leads with $15.57 billion TVS and Stage 1 status.",
+    "Arbitrum One follows at $10.45 billion TVS.",
+    "Hyperliquid reports $6.74 billion TVS as a layer 3."
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Twelve incidents reported in the last 14 days including a $93 million Ledger supply chain attack.",
+    "Peg alerts active for seven stablecoins with pmUSD at -44.608% deviation.",
+    "Recent events include Qubic key compromise and multiple token accounting issues."
+   ]
+  }
+ ],
+ "watchlist": [
+  "Stablecoin peg deviations for USDf, apxUSD, FRAX and AP USDA",
+  "Ledger supply chain incident of 8 October 2026",
+  "Base and Arbitrum TVS movements",
+  "Uniswap V3 and V4 volume trends"
+ ],
+ "date": "2026-10-21",
+ "model": "grok-4.3",
+ "tokens": 13334
+}

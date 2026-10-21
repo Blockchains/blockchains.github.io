@@ -1,13 +1,13 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-20T09:32:59Z",
+ "generated_at": "2026-10-21T09:28:56Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21166735756.12813,
- "ytd_usd": 2340488907.128132,
+ "total_all_time_usd": 21167788756.12813,
+ "ytd_usd": 2341311907.128132,
  "incidents": [
   {
    "date": "2026-10-19",
@@ -64,6 +64,21 @@
    "classification": "Token & Share Accounting",
    "technique": "Unbacked Mint",
    "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-10-16",
+   "name": "Affluent",
+   "amount_usd": 1053000,
+   "chains": [
+    "TON"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Unbacked Mint",
+   "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
    "source": "",
@@ -4553,21 +4568,6 @@
    ],
    "classification": "Token & Share Accounting",
    "technique": "Arithmetic Error",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-07",
-   "name": "Polycule",
-   "amount_usd": 230000,
-   "chains": [
-    "Polygon"
-   ],
-   "classification": "Frontend & Infrastructure",
-   "technique": "Key Leaked via Infrastructure",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

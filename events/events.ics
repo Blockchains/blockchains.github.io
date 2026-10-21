@@ -6,20 +6,22 @@ METHOD:PUBLISH
 X-WR-CALNAME:Blockchain Lab — Web3 events & hackathons
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:ethglobal-734@blockchains.github.io
-DTSTAMP:20261020T093301Z
-DTSTART:20261019T170900Z
-DTEND:20261020T010900Z
-SUMMARY:Ethereum Stablecoin Summit @ Money20/20 Las Vegas (summit)
-URL:https://ethglobal.com/events/ethsummit-las-vegas
-DESCRIPTION:ETHGlobal summit — physical. https://ethglobal.com/events/et
- hsummit-las-vegas
+UID:ethglobal-749@blockchains.github.io
+DTSTAMP:20261021T092858Z
+DTSTART:20261022T000000Z
+DTEND:20261022T080000Z
+SUMMARY:ETHGlobal Happy Hour New Delhi with ENS\, Arkiv\, GrowthFi\, 0xSpa
+ ce (meetup)
+URL:https://ethglobal.com/events/ethglobal-happy-hour-new-delhi-with-growt
+ hfi-studio-zry0g
+DESCRIPTION:ETHGlobal meetup — physical. https://ethglobal.com/events/et
+ hglobal-happy-hour-new-delhi-with-growthfi-studio-zry0g
 END:VEVENT
 BEGIN:VEVENT
 UID:ethglobal-752@blockchains.github.io
-DTSTAMP:20261020T093301Z
-DTSTART:20261021T000000Z
-DTEND:20261021T080000Z
+DTSTAMP:20261021T092858Z
+DTSTART:20261022T000000Z
+DTEND:20261022T080000Z
 SUMMARY:Cowork with ETHGlobal in Vadodara with PU DAO \\u0026 NEAR Protoco
  l (cafe)
 URL:https://ethglobal.com/events/cowork-with-ethglobal-in-vadodara-with-pu
@@ -28,19 +30,8 @@ DESCRIPTION:ETHGlobal cafe — physical. https://ethglobal.com/events/cowo
  rk-with-ethglobal-in-vadodara-with-pu-dao-uppu9
 END:VEVENT
 BEGIN:VEVENT
-UID:ethglobal-749@blockchains.github.io
-DTSTAMP:20261020T093301Z
-DTSTART:20261022T000000Z
-DTEND:20261022T080000Z
-SUMMARY:ETHGlobal Happy Hour New Delhi (meetup)
-URL:https://ethglobal.com/events/ethglobal-happy-hour-new-delhi-with-growt
- hfi-studio-zry0g
-DESCRIPTION:ETHGlobal meetup — physical. https://ethglobal.com/events/et
- hglobal-happy-hour-new-delhi-with-growthfi-studio-zry0g
-END:VEVENT
-BEGIN:VEVENT
 UID:ethglobal-527@blockchains.github.io
-DTSTAMP:20261020T093301Z
+DTSTAMP:20261021T092858Z
 DTSTART:20261105T000000Z
 DTEND:20261107T000000Z
 SUMMARY:ETHGlobal Mumbai (hackathon)
@@ -50,7 +41,7 @@ DESCRIPTION:ETHGlobal hackathon — physical. https://ethglobal.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:ethglobal-530@blockchains.github.io
-DTSTAMP:20261020T093301Z
+DTSTAMP:20261021T092858Z
 DTSTART:20261106T000000Z
 DTEND:20261106T080000Z
 SUMMARY:Pragma Mumbai (summit)
@@ -60,7 +51,7 @@ DESCRIPTION:ETHGlobal summit — physical. https://ethglobal.com/events/pr
 END:VEVENT
 BEGIN:VEVENT
 UID:ethglobal-712@blockchains.github.io
-DTSTAMP:20261020T093301Z
+DTSTAMP:20261021T092858Z
 DTSTART:20270614T215600Z
 DTEND:20270616T215600Z
 SUMMARY:ETHConf 2027 (summit)
