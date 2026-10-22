@@ -1,14 +1,32 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-21T09:28:56Z",
+ "generated_at": "2026-10-22T09:32:04Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
  "total_all_time_usd": 21167788756.12813,
- "ytd_usd": 2341311907.128132,
+ "ytd_usd": 2314911907.128132,
  "incidents": [
+  {
+   "date": "2026-10-21",
+   "name": "Swell",
+   "amount_usd": null,
+   "chains": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Hyperliquid L1"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Hot Wallet Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
   {
    "date": "2026-10-19",
    "name": "AlpsCon AI Trade Hub",
@@ -4553,21 +4571,6 @@
    ],
    "classification": "Protocol Logic",
    "technique": "Withdrawal Logic Flaw",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-08",
-   "name": "Truebit",
-   "amount_usd": 26400000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Arithmetic Error",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

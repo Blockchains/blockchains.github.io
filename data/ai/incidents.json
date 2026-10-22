@@ -1,16 +1,31 @@
 {
  "service": "ai/incidents",
  "description": "AI incident explainer",
- "generated_at": "2026-10-21T09:29:30Z",
+ "generated_at": "2026-10-22T09:32:40Z",
  "source": "Grok (xAI) over public data: DefiLlama hacks",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "items": [
   {
+   "name": "Swell",
+   "date": "2026-10-21",
+   "plain_english": "The incident was classified as Key Compromise using Hot Wallet Key Compromised technique. No amount was reported.",
+   "lesson_for_builders": "Secure hot wallet keys with access controls to prevent compromise.",
+   "related_lab": "L03 Ownable/access control",
+   "amount_usd": null,
+   "source": "",
+   "chains": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Hyperliquid L1"
+   ]
+  },
+  {
    "name": "AlpsCon AI Trade Hub",
    "date": "2026-10-19",
-   "plain_english": "The classification was Token & Share Accounting. The technique was Incorrect Share Accounting with amount 152809.36.",
-   "lesson_for_builders": "Audit share accounting calculations in DeFi protocols.",
+   "plain_english": "The incident was classified as Token & Share Accounting using Incorrect Share Accounting technique for 152809.36 USD. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Validate share accounting logic to avoid incorrect calculations.",
    "related_lab": null,
    "amount_usd": 152809.36,
    "source": "",
@@ -21,8 +36,8 @@
   {
    "name": "Coffer",
    "date": "2026-10-18",
-   "plain_english": "The classification was Token & Share Accounting. The technique was Rounding Error with amount 0.7.",
-   "lesson_for_builders": "Test rounding behavior in token accounting.",
+   "plain_english": "The incident was classified as Token & Share Accounting using Rounding Error technique for 0.7 USD. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Test for rounding errors in token accounting.",
    "related_lab": null,
    "amount_usd": 0.7,
    "source": "",
@@ -33,9 +48,9 @@
   {
    "name": "Qubic",
    "date": "2026-10-17",
-   "plain_english": "The classification was Key Compromise. The technique was Weak Key Generation with amount 1300000.",
-   "lesson_for_builders": "Strengthen key generation processes for wallets.",
-   "related_lab": "L03 Ownable/access control",
+   "plain_english": "The incident was classified as Key Compromise using Weak Key Generation technique for 1300000 USD. The target was a Wallet.",
+   "lesson_for_builders": "Strengthen key generation processes.",
+   "related_lab": "L14 MultiSig",
    "amount_usd": 1300000,
    "source": "",
    "chains": [
@@ -45,8 +60,8 @@
   {
    "name": "Pirate Chain",
    "date": "2026-10-16",
-   "plain_english": "The classification was Token & Share Accounting. The technique was Unbacked Mint with amount null.",
-   "lesson_for_builders": "Prevent unbacked mint operations on chains.",
+   "plain_english": "The incident was classified as Token & Share Accounting using Unbacked Mint technique. No amount was reported.",
+   "lesson_for_builders": "Prevent unbacked minting in token logic.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -57,8 +72,8 @@
   {
    "name": "Affluent",
    "date": "2026-10-16",
-   "plain_english": "The classification was Token & Share Accounting. The technique was Unbacked Mint with amount 1053000.",
-   "lesson_for_builders": "Validate mint backing in DeFi protocols.",
+   "plain_english": "The incident was classified as Token & Share Accounting using Unbacked Mint technique for 1053000 USD. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Ensure minting requires backing assets.",
    "related_lab": null,
    "amount_usd": 1053000,
    "source": "",
@@ -69,8 +84,8 @@
   {
    "name": "UNCX Network V2",
    "date": "2026-10-14",
-   "plain_english": "The classification was Token & Share Accounting. The technique was Incorrect Share Accounting with amount 86000.",
-   "lesson_for_builders": "Review share accounting in multi-chain DeFi.",
+   "plain_english": "The incident was classified as Token & Share Accounting using Incorrect Share Accounting technique for 86000 USD. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Audit share accounting for accuracy.",
    "related_lab": null,
    "amount_usd": 86000,
    "source": "",
@@ -84,8 +99,8 @@
   {
    "name": "Gamdom",
    "date": "2026-10-13",
-   "plain_english": "The classification was Frontend & Infrastructure. The technique was Key Leaked via Infrastructure with amount 4208000.",
-   "lesson_for_builders": "Secure infrastructure keys against leaks.",
+   "plain_english": "The incident was classified as Frontend & Infrastructure using Key Leaked via Infrastructure technique for 4208000 USD. The target was a Gambling Platform.",
+   "lesson_for_builders": "Harden infrastructure against key leaks.",
    "related_lab": null,
    "amount_usd": 4208000,
    "source": "",
@@ -103,8 +118,8 @@
   {
    "name": "Papertrade",
    "date": "2026-10-10",
-   "plain_english": "The classification was Oracle Manipulation. The technique was Spot Price Manipulation with amount 1280000.",
-   "lesson_for_builders": "Harden spot price oracles against manipulation.",
+   "plain_english": "The incident was classified as Oracle Manipulation using Spot Price Manipulation technique for 1280000 USD. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Protect against spot price manipulation in oracles.",
    "related_lab": "L42 SpotOracleLending",
    "amount_usd": 1280000,
    "source": "",
@@ -115,8 +130,8 @@
   {
    "name": "Ledger (Supply Chain)",
    "date": "2026-10-09",
-   "plain_english": "The classification was Frontend & Infrastructure. The technique was Supply Chain Attack with amount 93000000.",
-   "lesson_for_builders": "Protect supply chains for wallet software.",
+   "plain_english": "The incident was classified as Frontend & Infrastructure using Supply Chain Attack technique for 93000000 USD. The target was a Wallet.",
+   "lesson_for_builders": "Secure supply chain for wallet software.",
    "related_lab": null,
    "amount_usd": 93000000,
    "source": "",
@@ -125,9 +140,9 @@
   {
    "name": "BitBay",
    "date": "2026-10-08",
-   "plain_english": "The classification was Protocol Logic. The technique was Withdrawal Logic Flaw with amount 14838.47.",
-   "lesson_for_builders": "Verify withdrawal logic in protocols.",
-   "related_lab": "L03 Ownable/access control",
+   "plain_english": "The incident was classified as Protocol Logic using Withdrawal Logic Flaw technique for 14838.47 USD. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Verify withdrawal logic invariants.",
+   "related_lab": "L28 InvariantVault",
    "amount_usd": 14838.47,
    "source": "",
    "chains": [
@@ -137,25 +152,13 @@
   {
    "name": "Ethervista",
    "date": "2026-10-08",
-   "plain_english": "The classification was Token & Share Accounting. The technique was Arithmetic Error with amount 18600.",
-   "lesson_for_builders": "Check arithmetic operations in token logic.",
+   "plain_english": "The incident was classified as Token & Share Accounting using Arithmetic Error technique for 18600 USD. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Check arithmetic operations in accounting.",
    "related_lab": null,
    "amount_usd": 18600,
    "source": "",
    "chains": [
     "Ethereum"
-   ]
-  },
-  {
-   "name": "Locus Finance",
-   "date": "2026-10-07",
-   "plain_english": "The classification was null. The technique was null with amount 18000.",
-   "lesson_for_builders": "Review all protocol logic for edge cases.",
-   "related_lab": null,
-   "amount_usd": 18000,
-   "source": "",
-   "chains": [
-    "Arbitrum"
    ]
   }
  ],
