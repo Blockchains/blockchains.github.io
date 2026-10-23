@@ -1,14 +1,31 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-22T09:32:04Z",
+ "generated_at": "2026-10-23T09:27:49Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21167788756.12813,
- "ytd_usd": 2314911907.128132,
+ "total_all_time_usd": 21167879256.12813,
+ "ytd_usd": 2314607407.128132,
  "incidents": [
+  {
+   "date": "2026-10-22",
+   "name": "WAX Multi-Chain Bridge",
+   "amount_usd": 90500,
+   "chains": [
+    "Solana",
+    "Ethereum",
+    "WAX"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
   {
    "date": "2026-10-21",
    "name": "Swell",
@@ -4556,21 +4573,6 @@
    ],
    "classification": "Protocol Logic",
    "technique": "Missing Slippage Check",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-10",
-   "name": "FutureSwap",
-   "amount_usd": 395000,
-   "chains": [
-    "Arbitrum"
-   ],
-   "classification": "Protocol Logic",
-   "technique": "Withdrawal Logic Flaw",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

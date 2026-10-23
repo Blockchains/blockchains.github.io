@@ -1,0 +1,54 @@
+{
+ "headline": "Crypto Market Structure Brief - 23 October 2026",
+ "summary": "Ethereum leads TVL at $49.7 billion, followed by Base at $6.1 billion and Solana at $5.9 billion. Uniswap V3 recorded the highest 24-hour DEX volume at $965 million, while Tether generated the top fees at $17.4 million. USDT remains the largest stablecoin with $182.5 billion circulating. Multiple stablecoin peg deviations and recent security incidents require monitoring.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum holds top position with $49.7 billion TVL.",
+    "Base ranks second at $6.1 billion TVL.",
+    "Solana third at $5.9 billion TVL, BSC fourth at $5.8 billion."
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V3 leads 24-hour DEX volume at $965 million.",
+    "Uniswap V4 follows at $889 million 24-hour volume.",
+    "Tether tops fees with $17.4 million in 24 hours; Circle USDC at $7.0 million."
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulating supply $182.5 billion; USDC at $72.1 billion.",
+    "USDS at $6.9 billion; DAI at $4.7 billion.",
+    "Eight stablecoins flagged for peg deviations, including AP USDA at -2.65%."
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base TVS $15.3 billion; Arbitrum One $10.2 billion.",
+    "Hyperliquid TVS $6.7 billion; Polygon PoS $3.8 billion.",
+    "Robinhood Chain TVS $2.4 billion; OP Mainnet $1.9 billion."
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "WAX Multi-Chain Bridge incident on 22 October: $90,500 lost.",
+    "Swell key compromise on 21 October across multiple chains.",
+    "Ledger supply chain attack on 10 October: $93 million impact."
+   ]
+  }
+ ],
+ "watchlist": [
+  "Stablecoin peg deviations: AP USDA, pmUSD, Falcon USD",
+  "Recent incidents: WAX bridge, Swell, AlpsCon AI",
+  "L2 risk profiles: Base, Arbitrum, Hyperliquid exit windows"
+ ],
+ "date": "2026-10-23",
+ "model": "grok-4.3",
+ "tokens": 13087
+}
