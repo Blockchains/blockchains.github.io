@@ -1,0 +1,56 @@
+{
+ "headline": "Crypto Market Structure Brief - 24 October 2026",
+ "summary": "Ethereum holds the largest chain TVL at $49.2 billion, followed by Base at $6.1 billion and Solana at $5.8 billion. Uniswap V4 recorded the highest 24-hour DEX volume at $870 million while Tether generated the most fees at $17.3 million. USDT leads stablecoin circulation at $182 billion with several minor peg deviations noted. Base leads L2 TVS at $15.1 billion amid recent incidents including a $2.6 million loss on Initia.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum ranks first with $49.25 billion TVL",
+    "Base holds second position at $6.08 billion TVL",
+    "Solana third at $5.80 billion TVL, BSC fourth at $5.77 billion"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V4 leads 24h DEX volume at $870 million",
+    "Uniswap V3 follows at $857 million; PancakeSwap AMM V3 at $689 million",
+    "Tether tops fees at $17.3 million, Circle USDC at $6.9 million"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulating supply $182.4 billion, USDC $71.8 billion",
+    "USDS at $6.85 billion, DAI at $4.74 billion",
+    "Multiple peg alerts active including AP USDA at -3.13% deviation"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base leads with $15.09 billion TVS, Arbitrum at $10.06 billion",
+    "Hyperliquid L3 at $6.73 billion TVS",
+    "OP Mainnet TVS down 10.3% over seven days"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Initia incident on 23 October: $2.6 million token accounting loss",
+    "CoinDCX hot wallet compromise: $16 million on 22 October",
+    "Swell and multiple other incidents reported in prior fortnight"
+   ]
+  }
+ ],
+ "watchlist": [
+  "USDT and USDC circulation changes",
+  "Base and Arbitrum TVS movements",
+  "Uniswap V4 and PancakeSwap volumes",
+  "Active stablecoin peg deviations",
+  "Recent incident resolutions"
+ ],
+ "date": "2026-10-24",
+ "model": "grok-4.3",
+ "tokens": 13284
+}

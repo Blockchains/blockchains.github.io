@@ -1,14 +1,29 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-23T09:27:49Z",
+ "generated_at": "2026-10-24T08:59:32Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21167879256.12813,
- "ytd_usd": 2314607407.128132,
+ "total_all_time_usd": 21186729256.12813,
+ "ytd_usd": 2324157407.128132,
  "incidents": [
+  {
+   "date": "2026-10-23",
+   "name": "Initia",
+   "amount_usd": 2600000,
+   "chains": [
+    "Initia"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Infinite Mint",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
   {
    "date": "2026-10-22",
    "name": "WAX Multi-Chain Bridge",
@@ -43,6 +58,21 @@
    "returned_usd": null,
    "source": "",
    "language": "Solidity"
+  },
+  {
+   "date": "2026-10-21",
+   "name": "CoinDCX",
+   "amount_usd": 16000000,
+   "chains": [
+    "TRON"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Hot Wallet Key Compromised",
+   "target_type": "CEX",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
   },
   {
    "date": "2026-10-19",
@@ -677,6 +707,21 @@
    "technique": "Unbacked Cross-Chain Mint",
    "target_type": "DeFi Protocol",
    "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-09-09",
+   "name": "Balancer V1",
+   "amount_usd": 250000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Swap Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
    "returned_usd": null,
    "source": "",
    "language": "Solidity"
@@ -4528,51 +4573,6 @@
    ],
    "classification": "Protocol Logic",
    "technique": "Unknown",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-20",
-   "name": "Makina",
-   "amount_usd": 4200000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Oracle Manipulation",
-   "technique": "Spot Price Manipulation",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": 3410000,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-17",
-   "name": "Meteora DAMM V2",
-   "amount_usd": 1500000,
-   "chains": [
-    "Solana"
-   ],
-   "classification": "Social Engineering",
-   "technique": "Impersonation Scam",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Rust"
-  },
-  {
-   "date": "2026-01-13",
-   "name": "YO Protocol",
-   "amount_usd": 3600000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Protocol Logic",
-   "technique": "Missing Slippage Check",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
