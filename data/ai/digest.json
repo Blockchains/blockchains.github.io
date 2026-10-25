@@ -1,33 +1,31 @@
 {
  "service": "ai/digest",
  "description": "AI chain-health & L2 digest",
- "generated_at": "2026-10-24T09:00:34Z",
+ "generated_at": "2026-10-25T09:17:53Z",
  "source": "Grok (xAI) over public data: hub monitors, L2BEAT, DefiLlama",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
- "headline": "Chain Health Digest: All Networks Operational",
- "summary": "Liveness checks show all 22 chains with status OK. Gas prices reported OK across networks. L2 TVS led by Base at 15089333248 USD.",
+ "headline": "All 23 monitored chains report status ok with head ages within thresholds",
+ "summary": "Liveness confirmed across Ethereum, Base, Arbitrum One, OP Mainnet, Polygon PoS, BNB Smart Chain, Avalanche C-Chain, Gnosis, Linea, Scroll, zkSync Era, Mantle, Blast, Celo, Fantom/Sonic, Unichain, Taiko, opBNB, Ink, Cronos, Berachain, Bitcoin and Solana. L2 TVS led by Base ($14.9B, Stage 1), Arbitrum One ($10.1B, Stage 1) and Hyperliquid ($6.6B). Top bridges by TVL: LayerZero V2 ($16.9B), WBTC ($9.4B).",
  "chains": [
-  "- Ethereum: height 26260510, head age 4.2s, status ok",
-  "- Base: height 53015773, head age 0.5s, status ok",
-  "- Arbitrum One: height 517753102, head age 1.6s, status ok",
-  "- OP Mainnet: height 158611058, head age 0.8s, status ok",
-  "- Polygon PoS: height 96077015, head age -0.4s, status ok",
-  "- Bitcoin: height 972886, head age 139.9s, status ok",
-  "- Solana: height 460737177, head age 1.0s, status ok"
+  "- Ethereum: height 26267774, head_age 11.9s, status ok",
+  "- Base: height 53059445, head_age 1.8s, status ok",
+  "- Arbitrum One: height 518061752, head_age 1.8s, status ok",
+  "- OP Mainnet: height 158654730, head_age 1.9s, status ok",
+  "- Polygon PoS: height 96135245, head_age -0.1s, status ok",
+  "- All other listed chains status ok within thresholds"
  ],
  "l2s": [
-  "Base: Stage 1, TVS 15089333248 USD, Optimistic Rollup",
-  "Arbitrum One: Stage 1, TVS 10063388672 USD, Optimistic Rollup",
-  "Hyperliquid: Not applicable, TVS 6726072320 USD, layer3",
-  "Polygon PoS: Not applicable, TVS 3794975232 USD",
-  "OP Mainnet: Stage 1, TVS 1799425152 USD, Optimistic Rollup"
+  "- Base: Stage 1, Optimistic Rollup, TVS $14.9B",
+  "- Arbitrum One: Stage 1, Optimistic Rollup, TVS $10.1B",
+  "- Hyperliquid: Not applicable, layer3, TVS $6.6B",
+  "- Polygon PoS: Not applicable, TVS $3.8B",
+  "- OP Mainnet: Stage 1, Optimistic Rollup, TVS $1.8B"
  ],
  "infrastructure": [
-  "LayerZero V2: TVL 16093449562 USD",
-  "WBTC: TVL 9414376218 USD",
-  "Coinbase Bridge: TVL 7980903401 USD",
-  "Top RPC success rate 1.0 across listed providers"
+  "- Top RPC success rate 1.0 across listed endpoints",
+  "- rpc_history median_ms range 34.8-309.7, healthy count 57-64",
+  "- LayerZero V2 TVL $16.9B across 80+ chains"
  ],
  "builder_tips": [],
  "model": "grok-4.3",
