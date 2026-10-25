@@ -1,7 +1,7 @@
 {
  "service": "gas",
  "description": "Multi-chain gas and fee tracker",
- "generated_at": "2026-10-25T11:20:09Z",
+ "generated_at": "2026-10-25T16:11:18Z",
  "source": "Public JSON-RPC (eth_gasPrice, eth_feeHistory, eth_blobBaseFee) + mempool.space",
  "source_url": "https://mempool.space/docs/api/rest",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
@@ -13,37 +13,37 @@
    "chain_id": 1,
    "symbol": "ETH",
    "rpc": "https://ethereum-rpc.publicnode.com",
-   "gas_price_gwei": 0.044525,
+   "gas_price_gwei": 0.059966,
    "ok": true,
-   "base_fee_gwei": 0.042154,
+   "base_fee_gwei": 0.066593,
    "base_fee_trend_gwei": [
-    0.044505,
-    0.044703,
-    0.043055,
-    0.040943,
-    0.039516,
-    0.036855,
-    0.033133,
-    0.036164,
-    0.040678,
-    0.041024,
-    0.040734,
-    0.041889,
-    0.042428,
-    0.038409,
-    0.038799,
-    0.043483,
-    0.042066,
-    0.041162,
-    0.043263,
-    0.044523,
-    0.042154
+    0.0787,
+    0.077509,
+    0.076932,
+    0.07638,
+    0.072304,
+    0.072879,
+    0.07103,
+    0.068423,
+    0.067597,
+    0.066541,
+    0.060301,
+    0.063625,
+    0.063782,
+    0.066513,
+    0.06411,
+    0.063665,
+    0.063465,
+    0.064528,
+    0.062171,
+    0.059964,
+    0.066593
    ],
    "priority_slow_gwei": 2e-06,
-   "priority_standard_gwei": 0.010106,
-   "priority_fast_gwei": 1.0,
-   "gas_used_ratio_avg": 0.4967,
-   "blob_base_fee_gwei": 0.002528017
+   "priority_standard_gwei": 0.010744,
+   "priority_fast_gwei": 1.326781,
+   "gas_used_ratio_avg": 0.4702,
+   "blob_base_fee_gwei": 0.003743467
   },
   {
    "chain": "Base",
@@ -67,7 +67,7 @@
     0.005,
     0.005,
     0.005,
-    0.005,
+    0.005004,
     0.005,
     0.005,
     0.005,
@@ -76,46 +76,46 @@
     0.005,
     0.005
    ],
-   "priority_slow_gwei": 0.0001,
-   "priority_standard_gwei": 0.001018,
-   "priority_fast_gwei": 0.01,
-   "gas_used_ratio_avg": 0.0855
+   "priority_slow_gwei": 0.00011,
+   "priority_standard_gwei": 0.001,
+   "priority_fast_gwei": 0.008,
+   "gas_used_ratio_avg": 0.0963
   },
   {
    "chain": "Arbitrum One",
    "chain_id": 42161,
    "symbol": "ETH",
    "rpc": "https://arbitrum-one-rpc.publicnode.com",
-   "gas_price_gwei": 0.0201,
+   "gas_price_gwei": 0.020062,
    "ok": true,
-   "base_fee_gwei": 0.0201,
+   "base_fee_gwei": 0.020062,
    "base_fee_trend_gwei": [
     0.02,
+    0.020016,
+    0.020026,
     0.020036,
-    0.020062,
     0.02,
-    0.02002,
-    0.02004,
-    0.020054,
+    0.020034,
+    0.020052,
+    0.020082,
     0.02,
-    0.020028,
-    0.020032,
+    0.020006,
+    0.020104,
     0.02,
     0.020014,
-    0.020026,
-    0.020056,
+    0.020016,
     0.02,
-    0.020048,
-    0.020052,
+    0.020006,
     0.02,
-    0.020096,
-    0.0201,
-    0.0201
+    0.020002,
+    0.02005,
+    0.020062,
+    0.020062
    ],
    "priority_slow_gwei": 0.0,
    "priority_standard_gwei": 0.0,
    "priority_fast_gwei": 0.0,
-   "gas_used_ratio_avg": 0.1909
+   "gas_used_ratio_avg": 0.2253
   },
   {
    "chain": "OP Mainnet",
@@ -149,45 +149,45 @@
     0.0
    ],
    "priority_slow_gwei": 0.0,
-   "priority_standard_gwei": 0.0001,
+   "priority_standard_gwei": 0.00107,
    "priority_fast_gwei": 0.005,
-   "gas_used_ratio_avg": 0.2956
+   "gas_used_ratio_avg": 0.1943
   },
   {
    "chain": "Polygon PoS",
    "chain_id": 137,
    "symbol": "POL",
    "rpc": "https://polygon-bor-rpc.publicnode.com",
-   "gas_price_gwei": 247.610586,
+   "gas_price_gwei": 281.697759,
    "ok": true,
-   "base_fee_gwei": 220.5085,
+   "base_fee_gwei": 246.200404,
    "base_fee_trend_gwei": [
-    211.094837,
-    208.46017,
-    211.040275,
-    209.38549,
-    209.117973,
-    208.55419,
-    208.85989,
-    208.400129,
-    208.149913,
-    205.517477,
-    209.30388,
-    209.343545,
-    207.017795,
-    208.918346,
-    209.705455,
-    212.571525,
-    211.671508,
-    213.457693,
-    220.182578,
-    218.096462,
-    220.5085
+    249.771939,
+    250.079569,
+    247.832856,
+    250.666956,
+    248.621718,
+    246.150143,
+    248.189275,
+    251.460039,
+    248.695942,
+    250.883245,
+    248.722245,
+    253.754715,
+    251.930378,
+    249.11836,
+    246.658121,
+    248.645175,
+    251.425728,
+    248.603028,
+    251.347759,
+    248.525692,
+    246.200404
    ],
-   "priority_slow_gwei": 58.27995,
-   "priority_standard_gwei": 78.0,
-   "priority_fast_gwei": 117.0,
-   "gas_used_ratio_avg": 0.1812
+   "priority_slow_gwei": 225.444,
+   "priority_standard_gwei": 268.544,
+   "priority_fast_gwei": 272.052,
+   "gas_used_ratio_avg": 0.2525
   },
   {
    "chain": "BNB Smart Chain",
@@ -221,21 +221,29 @@
     0.0
    ],
    "priority_slow_gwei": 0.05,
-   "priority_standard_gwei": 0.051374,
+   "priority_standard_gwei": 0.05,
    "priority_fast_gwei": 0.1,
-   "gas_used_ratio_avg": 0.2844
+   "gas_used_ratio_avg": 0.2499
   },
   {
    "chain": "Avalanche C-Chain",
    "chain_id": 43114,
    "symbol": "AVAX",
    "rpc": "https://avalanche-c-chain-rpc.publicnode.com",
-   "gas_price_gwei": 2.503716,
+   "gas_price_gwei": 2.5,
    "ok": true,
-   "base_fee_gwei": 2.521987,
+   "base_fee_gwei": 2.501278,
    "base_fee_trend_gwei": [
     2.5,
     2.5,
+    2.508636,
+    2.5,
+    2.5,
+    2.5,
+    2.5,
+    2.5,
+    2.5,
+    2.50598,
     2.5,
     2.5,
     2.5,
@@ -245,21 +253,13 @@
     2.5,
     2.5,
     2.5,
-    2.527591,
-    2.517343,
-    2.501622,
     2.5,
-    2.501437,
-    2.5,
-    2.505185,
-    2.503716,
-    2.5,
-    2.521987
+    2.501278
    ],
-   "priority_slow_gwei": 0.499189,
-   "priority_standard_gwei": 1.332792,
-   "priority_fast_gwei": 1.332792,
-   "gas_used_ratio_avg": 0.0218
+   "priority_slow_gwei": 0.457812,
+   "priority_standard_gwei": 0.5,
+   "priority_fast_gwei": 0.5,
+   "gas_used_ratio_avg": 0.0081
   },
   {
    "chain": "Gnosis",
@@ -295,14 +295,14 @@
    "priority_slow_gwei": 0.0,
    "priority_standard_gwei": 0.0,
    "priority_fast_gwei": 1.5,
-   "gas_used_ratio_avg": 0.2737
+   "gas_used_ratio_avg": 0.4309
   },
   {
    "chain": "Linea",
    "chain_id": 59144,
    "symbol": "ETH",
    "rpc": "https://linea-rpc.publicnode.com",
-   "gas_price_gwei": 0.238559,
+   "gas_price_gwei": 0.057252,
    "ok": true,
    "base_fee_gwei": 0.0,
    "base_fee_trend_gwei": [
@@ -328,9 +328,9 @@
     0.0,
     0.0
    ],
-   "priority_slow_gwei": 0.317284,
-   "priority_standard_gwei": 0.317284,
-   "priority_fast_gwei": 0.344827,
+   "priority_slow_gwei": 0.057252,
+   "priority_standard_gwei": 0.057252,
+   "priority_fast_gwei": 0.057285,
    "gas_used_ratio_avg": 0.0001
   },
   {
@@ -367,7 +367,7 @@
    "priority_slow_gwei": 0.0,
    "priority_standard_gwei": 0.0,
    "priority_fast_gwei": 0.0,
-   "gas_used_ratio_avg": 0.0067
+   "gas_used_ratio_avg": 0.001
   },
   {
    "chain": "zkSync Era",
@@ -439,7 +439,7 @@
    "priority_slow_gwei": 0.0,
    "priority_standard_gwei": 0.0,
    "priority_fast_gwei": 0.0,
-   "gas_used_ratio_avg": 0.0009
+   "gas_used_ratio_avg": 0.0016
   },
   {
    "chain": "Blast",
@@ -473,9 +473,9 @@
     0.0
    ],
    "priority_slow_gwei": 0.0,
-   "priority_standard_gwei": 1e-05,
-   "priority_fast_gwei": 1e-05,
-   "gas_used_ratio_avg": 0.0666
+   "priority_standard_gwei": 1e-06,
+   "priority_fast_gwei": 0.001,
+   "gas_used_ratio_avg": 0.0056
   },
   {
    "chain": "Celo",
@@ -511,7 +511,7 @@
    "priority_slow_gwei": 0.0011,
    "priority_standard_gwei": 0.0011,
    "priority_fast_gwei": 2.5,
-   "gas_used_ratio_avg": 0.0915
+   "gas_used_ratio_avg": 0.094
   },
   {
    "chain": "Fantom/Sonic",
@@ -546,7 +546,7 @@
    ],
    "priority_slow_gwei": 0.0,
    "priority_standard_gwei": 0.0,
-   "priority_fast_gwei": 3.3,
+   "priority_fast_gwei": 0.0,
    "gas_used_ratio_avg": 0.99
   },
   {
@@ -583,7 +583,7 @@
    "priority_slow_gwei": 0.0,
    "priority_standard_gwei": 0.0,
    "priority_fast_gwei": 0.0,
-   "gas_used_ratio_avg": 0.0113
+   "gas_used_ratio_avg": 0.0104
   },
   {
    "chain": "Taiko",
@@ -596,21 +596,21 @@
    "base_fee_trend_gwei": [
     0.01,
     0.01,
-    0.008756,
-    0.01,
-    0.008756,
     0.01,
     0.01,
-    0.01,
-    0.008756,
-    0.01,
-    0.01,
+    0.008759,
     0.01,
     0.01,
     0.01,
     0.01,
     0.008756,
     0.01,
+    0.01,
+    0.01,
+    0.01,
+    0.01,
+    0.01,
+    0.008756,
     0.01,
     0.01,
     0.01,
@@ -619,7 +619,7 @@
    "priority_slow_gwei": 0.0,
    "priority_standard_gwei": 0.0,
    "priority_fast_gwei": 0.0,
-   "gas_used_ratio_avg": 0.0024
+   "gas_used_ratio_avg": 0.0027
   },
   {
    "chain": "opBNB",
@@ -653,7 +653,7 @@
     0.0
    ],
    "priority_slow_gwei": 0.0,
-   "priority_standard_gwei": 1e-05,
+   "priority_standard_gwei": 0.0,
    "priority_fast_gwei": 0.001,
    "gas_used_ratio_avg": 0.0029
   },
@@ -689,9 +689,9 @@
     0.0
    ],
    "priority_slow_gwei": 0.0,
-   "priority_standard_gwei": 4.9e-05,
+   "priority_standard_gwei": 3e-06,
    "priority_fast_gwei": 0.0001,
-   "gas_used_ratio_avg": 0.0287
+   "gas_used_ratio_avg": 0.0874
   },
   {
    "chain": "Cronos",
@@ -727,14 +727,14 @@
    "priority_slow_gwei": 0.0,
    "priority_standard_gwei": 0.0,
    "priority_fast_gwei": 0.0,
-   "gas_used_ratio_avg": 0.0012
+   "gas_used_ratio_avg": 0.0005
   },
   {
    "chain": "Berachain",
    "chain_id": 80094,
    "symbol": "BERA",
    "rpc": "https://berachain-rpc.publicnode.com",
-   "gas_price_gwei": 13.835168,
+   "gas_price_gwei": 32.981613,
    "ok": true,
    "base_fee_gwei": 1.0,
    "base_fee_trend_gwei": [
@@ -763,11 +763,11 @@
    "priority_slow_gwei": 0.0,
    "priority_standard_gwei": 0.0,
    "priority_fast_gwei": 0.0,
-   "gas_used_ratio_avg": 0.0028
+   "gas_used_ratio_avg": 0.0027
   }
  ],
  "bitcoin_sat_vb": {
-  "fastestFee": 1,
+  "fastestFee": 2,
   "halfHourFee": 1,
   "hourFee": 1,
   "economyFee": 1,
