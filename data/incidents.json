@@ -1,14 +1,44 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-25T09:16:16Z",
+ "generated_at": "2026-10-26T10:21:57Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21186729256.12813,
- "ytd_usd": 2324157407.128132,
+ "total_all_time_usd": 21191501156.12813,
+ "ytd_usd": 2321785307.128132,
  "incidents": [
+  {
+   "date": "2026-10-25",
+   "name": "Yapeswap",
+   "amount_usd": 21900,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Governance",
+   "technique": "Malicious Proposal",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-10-24",
+   "name": "X100",
+   "amount_usd": 4750000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Governance",
+   "technique": "Flashloan Governance Attack",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
   {
    "date": "2026-10-23",
    "name": "Initia",
@@ -4543,36 +4573,6 @@
    ],
    "classification": "Frontend & Infrastructure",
    "technique": "Frontend Compromise",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-21",
-   "name": "Saga",
-   "amount_usd": 7000000,
-   "chains": [
-    "Saga"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Infinite Mint",
-   "target_type": "Chain",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-20",
-   "name": "SynapLogic",
-   "amount_usd": 144000,
-   "chains": [
-    "Base"
-   ],
-   "classification": "Protocol Logic",
-   "technique": "Unknown",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

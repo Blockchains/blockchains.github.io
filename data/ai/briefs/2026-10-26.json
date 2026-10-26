@@ -1,0 +1,55 @@
+{
+ "headline": "Crypto Market Structure Brief - 26 October 2026",
+ "summary": "Ethereum leads chains by TVL at $48.5bn followed by Base and BSC. Uniswap V4 recorded the highest 24h DEX volume while Tether generated the top fees. USDT remains the largest stablecoin by circulating supply with minor daily outflows. Base leads L2 TVS at $14.9bn amid several recent security incidents.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum ranks first with $48.54bn TVL",
+    "Base holds second position at $6.00bn TVL",
+    "BSC third at $5.78bn TVL; Solana fourth at $5.72bn"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V4 leads 24h DEX volume at $818m",
+    "Uniswap V3 second at $769m; Kalshi third at $535m",
+    "Tether tops 24h fees at $17.3m; Circle USDC second at $6.8m"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulating supply $182.3bn with -0.07% 1d change",
+    "USDC at $71.6bn supply; USDS third at $6.81bn",
+    "Seven stablecoins on watch or depeg alert including apxUSD and pmUSD"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base leads with $14.85bn TVS; Arbitrum One second at $10.02bn",
+    "Hyperliquid L3 third at $6.61bn TVS",
+    "OP Mainnet TVS fell 11.0% over 7 days"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "14 incidents recorded in last 14 days",
+    "CoinDCX lost $16m on TRON via hot wallet compromise on 21 Oct",
+    "X100 suffered $4.75m flashloan governance attack on Ethereum"
+   ]
+  }
+ ],
+ "watchlist": [
+  "apxUSD at 0.989 (-1.13% deviation)",
+  "pmUSD at 0.633 (-36.66% deviation)",
+  "Yapeswap governance incident 25 Oct",
+  "Initia infinite mint event 23 Oct"
+ ],
+ "date": "2026-10-26",
+ "model": "grok-4.3",
+ "tokens": 13166
+}

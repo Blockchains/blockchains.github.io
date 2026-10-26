@@ -1,16 +1,40 @@
 {
  "service": "ai/incidents",
  "description": "AI incident explainer",
- "generated_at": "2026-10-25T09:17:03Z",
+ "generated_at": "2026-10-26T10:22:45Z",
  "source": "Grok (xAI) over public data: DefiLlama hacks",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "items": [
   {
+   "name": "Yapeswap",
+   "date": "2026-10-25",
+   "plain_english": "The Yapeswap incident on Ethereum involved 21900 USD lost under Governance classification with Malicious Proposal technique. It targeted a DeFi Protocol and was not a bridge.",
+   "lesson_for_builders": "Implement strict access control checks on governance proposals to prevent unauthorized changes.",
+   "related_lab": "L03 Ownable/access control",
+   "amount_usd": 21900,
+   "source": "",
+   "chains": [
+    "Ethereum"
+   ]
+  },
+  {
+   "name": "X100",
+   "date": "2026-10-24",
+   "plain_english": "The X100 incident on Ethereum involved 4750000 USD lost under Governance classification with Flashloan Governance Attack technique. It targeted a DeFi Protocol and was not a bridge.",
+   "lesson_for_builders": "Protect governance functions against flashloan manipulation by adding time delays and validation.",
+   "related_lab": "L19 FlashLoan",
+   "amount_usd": 4750000,
+   "source": "",
+   "chains": [
+    "Ethereum"
+   ]
+  },
+  {
    "name": "Initia",
    "date": "2026-10-23",
-   "plain_english": "The incident was classified as Token & Share Accounting using the Infinite Mint technique. The amount involved was 2600000 USD.",
-   "lesson_for_builders": "Validate all mint operations against strict share accounting invariants.",
+   "plain_english": "The Initia incident on Initia involved 2600000 USD lost under Token & Share Accounting classification with Infinite Mint technique. It targeted a Chain and was not a bridge.",
+   "lesson_for_builders": "Enforce strict minting invariants to prevent unlimited token creation.",
    "related_lab": "L28 InvariantVault",
    "amount_usd": 2600000,
    "source": "",
@@ -21,8 +45,8 @@
   {
    "name": "WAX Multi-Chain Bridge",
    "date": "2026-10-22",
-   "plain_english": "The incident was classified as Input Validation using the Missing Input Validation technique. The amount involved was 90500 USD.",
-   "lesson_for_builders": "Enforce complete input validation on all cross-chain messages.",
+   "plain_english": "The WAX Multi-Chain Bridge incident on Solana, Ethereum, WAX involved 90500 USD lost under Input Validation classification with Missing Input Validation technique. It targeted a DeFi Protocol and was a bridge.",
+   "lesson_for_builders": "Validate all cross-chain inputs to block replay and invalid message attacks.",
    "related_lab": "L43 CrossChainReplay",
    "amount_usd": 90500,
    "source": "",
@@ -35,8 +59,8 @@
   {
    "name": "Swell",
    "date": "2026-10-21",
-   "plain_english": "The incident was classified as Key Compromise using the Hot Wallet Key Compromised technique. No amount was reported.",
-   "lesson_for_builders": "Protect hot wallet keys with multi-signature controls.",
+   "plain_english": "The Swell incident on Ethereum, Arbitrum, Base, Hyperliquid L1 involved null USD lost under Key Compromise classification with Hot Wallet Key Compromised technique. It targeted a DeFi Protocol and was not a bridge.",
+   "lesson_for_builders": "Use multisig or timelock controls on hot wallets to reduce single-key risks.",
    "related_lab": "L14 MultiSig",
    "amount_usd": null,
    "source": "",
@@ -50,8 +74,8 @@
   {
    "name": "CoinDCX",
    "date": "2026-10-21",
-   "plain_english": "The incident was classified as Key Compromise using the Hot Wallet Key Compromised technique. The amount involved was 16000000 USD.",
-   "lesson_for_builders": "Protect hot wallet keys with multi-signature controls.",
+   "plain_english": "The CoinDCX incident on TRON involved 16000000 USD lost under Key Compromise classification with Hot Wallet Key Compromised technique. It targeted a CEX and was not a bridge.",
+   "lesson_for_builders": "Apply multisignature requirements for all large hot-wallet movements.",
    "related_lab": "L14 MultiSig",
    "amount_usd": 16000000,
    "source": "",
@@ -62,8 +86,8 @@
   {
    "name": "AlpsCon AI Trade Hub",
    "date": "2026-10-19",
-   "plain_english": "The incident was classified as Token & Share Accounting using the Incorrect Share Accounting technique. The amount involved was 152809.36 USD.",
-   "lesson_for_builders": "Validate all share accounting calculations against invariants.",
+   "plain_english": "The AlpsCon AI Trade Hub incident on BSC involved 152809.36 USD lost under Token & Share Accounting classification with Incorrect Share Accounting technique. It targeted a DeFi Protocol and was not a bridge.",
+   "lesson_for_builders": "Validate share accounting logic against total supply invariants after every operation.",
    "related_lab": "L28 InvariantVault",
    "amount_usd": 152809.36,
    "source": "",
@@ -73,9 +97,9 @@
   },
   {
    "name": "Coffer",
-   "date": "2026-10-17",
-   "plain_english": "The incident was classified as Token & Share Accounting using the Rounding Error technique. The amount involved was 0.7 USD.",
-   "lesson_for_builders": "Validate all share accounting calculations against invariants.",
+   "date": "2026-10-18",
+   "plain_english": "The Coffer incident on Solana involved 0.7 USD lost under Token & Share Accounting classification with Rounding Error technique. It targeted a DeFi Protocol and was not a bridge.",
+   "lesson_for_builders": "Use precise arithmetic and rounding checks to maintain vault share accuracy.",
    "related_lab": "L28 InvariantVault",
    "amount_usd": 0.7,
    "source": "",
@@ -86,9 +110,9 @@
   {
    "name": "Qubic",
    "date": "2026-10-17",
-   "plain_english": "The incident was classified as Key Compromise using the Weak Key Generation technique. The amount involved was 1300000 USD.",
-   "lesson_for_builders": "Use strong key generation practices for all wallets.",
-   "related_lab": null,
+   "plain_english": "The Qubic incident on Qubic involved 1300000 USD lost under Key Compromise classification with Weak Key Generation technique. It targeted a Wallet and was not a bridge.",
+   "lesson_for_builders": "Enforce strong key generation and multisig policies for wallet security.",
+   "related_lab": "L14 MultiSig",
    "amount_usd": 1300000,
    "source": "",
    "chains": [
@@ -98,8 +122,8 @@
   {
    "name": "Pirate Chain",
    "date": "2026-10-16",
-   "plain_english": "The incident was classified as Token & Share Accounting using the Unbacked Mint technique. No amount was reported.",
-   "lesson_for_builders": "Validate all mint operations against strict share accounting invariants.",
+   "plain_english": "The Pirate Chain incident on Pirate Chain involved null USD lost under Token & Share Accounting classification with Unbacked Mint technique. It targeted a Chain and was not a bridge.",
+   "lesson_for_builders": "Add minting invariants that require backing proofs before new tokens are issued.",
    "related_lab": "L28 InvariantVault",
    "amount_usd": null,
    "source": "",
@@ -110,8 +134,8 @@
   {
    "name": "Affluent",
    "date": "2026-10-16",
-   "plain_english": "The incident was classified as Token & Share Accounting using the Unbacked Mint technique. The amount involved was 1053000 USD.",
-   "lesson_for_builders": "Validate all mint operations against strict share accounting invariants.",
+   "plain_english": "The Affluent incident on TON involved 1053000 USD lost under Token & Share Accounting classification with Unbacked Mint technique. It targeted a DeFi Protocol and was not a bridge.",
+   "lesson_for_builders": "Enforce supply invariants that reject any unbacked mint operations.",
    "related_lab": "L28 InvariantVault",
    "amount_usd": 1053000,
    "source": "",
@@ -122,8 +146,8 @@
   {
    "name": "UNCX Network V2",
    "date": "2026-10-14",
-   "plain_english": "The incident was classified as Token & Share Accounting using the Incorrect Share Accounting technique. The amount involved was 86000 USD.",
-   "lesson_for_builders": "Validate all share accounting calculations against invariants.",
+   "plain_english": "The UNCX Network V2 incident on Ethereum, Base, BSC, Robinhood Chain involved 86000 USD lost under Token & Share Accounting classification with Incorrect Share Accounting technique. It targeted a DeFi Protocol and was not a bridge.",
+   "lesson_for_builders": "Audit share calculations to ensure they always match actual token balances.",
    "related_lab": "L28 InvariantVault",
    "amount_usd": 86000,
    "source": "",
@@ -132,37 +156,6 @@
     "Base",
     "BSC",
     "Robinhood Chain"
-   ]
-  },
-  {
-   "name": "Gamdom",
-   "date": "2026-10-13",
-   "plain_english": "The incident was classified as Frontend & Infrastructure using the Key Leaked via Infrastructure technique. The amount involved was 4208000 USD.",
-   "lesson_for_builders": "Secure all infrastructure keys against leakage.",
-   "related_lab": null,
-   "amount_usd": 4208000,
-   "source": "",
-   "chains": [
-    "Ethereum",
-    "BSC",
-    "Polygon",
-    "Arbitrum",
-    "Optimism",
-    "Solana",
-    "TRON",
-    "Bitcoin"
-   ]
-  },
-  {
-   "name": "Papertrade",
-   "date": "2026-10-10",
-   "plain_english": "The incident was classified as Oracle Manipulation using the Spot Price Manipulation technique. The amount involved was 1280000 USD.",
-   "lesson_for_builders": "Protect spot price oracles from manipulation in lending protocols.",
-   "related_lab": "L42 SpotOracleLending",
-   "amount_usd": 1280000,
-   "source": "",
-   "chains": [
-    "Hyperliquid L1"
    ]
   }
  ],
