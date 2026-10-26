@@ -1,7 +1,7 @@
 {
  "service": "ai/audits",
  "description": "AI audit-checklist reports",
- "generated_at": "2026-10-19T08:16:38Z",
+ "generated_at": "2026-10-26T08:18:26Z",
  "source": "Grok (xAI) over public data: Sourcify source, Slither",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
@@ -19,17 +19,17 @@
     "Optimization": 3
    },
    "report": {
-    "overall": "WETH9.sol implements a minimal wrapped Ether contract with deposit, withdraw, and ERC20-like functions using Solidity 0.4.18. No High or Medium Slither findings reported; only informational and optimization items exist. The contract lacks access controls, upgradeability, pausing, and uses direct balance arithmetic plus external transfers.",
+    "overall": "WETH9 implements a minimal wrapped Ether contract with payable deposit, withdraw using balance checks and transfer, and ERC20-style transfers/approvals. No high or medium Slither findings are present. The code follows checks-effects-interactions in withdraw and emits all relevant events.",
     "checklist": [
      {
       "item": "access control",
       "status": "n/a",
-      "note": "No owner or role-restricted functions present in source."
+      "note": "No owner or privileged functions present in source."
      },
      {
       "item": "upgradeability",
       "status": "n/a",
-      "note": "No proxy, delegatecall, or upgrade logic in WETH9 contract."
+      "note": "No proxy, delegatecall, or upgrade logic in WETH9.sol."
      },
      {
       "item": "reentrancy",
@@ -39,43 +39,43 @@
      {
       "item": "oracle/price use",
       "status": "n/a",
-      "note": "No oracle or price feeds referenced in code."
+      "note": "No oracles or price feeds referenced in code."
      },
      {
       "item": "arithmetic",
-      "status": "concern",
-      "note": "Direct += and -= on balanceOf without SafeMath; totalSupply reads this.balance."
+      "status": "pass",
+      "note": "Uses require on balance before -= and direct += on deposit."
      },
      {
       "item": "external calls",
       "status": "pass",
-      "note": "Only msg.sender.transfer after state update in withdraw."
+      "note": "Only msg.sender.transfer after state update; no other external calls."
      },
      {
       "item": "signature/replay",
       "status": "n/a",
-      "note": "No signature verification or EIP-712 logic present."
+      "note": "No signatures or EIP-712 logic in source."
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "No pause, stop, or emergency withdrawal functions in source."
+      "note": "No pause or emergency stop functions defined."
      },
      {
       "item": "token approvals",
       "status": "pass",
-      "note": "approve and allowance handling in transferFrom follow standard pattern with infinite allowance check."
+      "note": "approve sets allowance; transferFrom checks allowance != uint(-1) and deducts."
      },
      {
       "item": "events/monitoring",
       "status": "pass",
-      "note": "Deposit, Withdrawal, Approval, and Transfer events emitted on state changes."
+      "note": "Deposit, Withdrawal, Approval, Transfer events emitted on all state changes."
      }
     ],
     "slither_triage": []
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:15:35Z"
+   "generated_at": "2026-10-26T08:17:27Z"
   },
   {
    "name": "Tether USDT",
@@ -89,69 +89,69 @@
     "Optimization": 3
    },
    "report": {
-    "overall": "TetherToken implements a deprecated upgrade path, pausable mechanics, blacklist, and optional fees via owner-controlled parameters. All 15 Slither Medium findings stem from non-standard ERC20 signatures (no bool returns, extra modifiers) declared in ERC20Basic/ERC20 and implemented in BasicToken/StandardToken/TetherToken. No High-severity issues reported; arithmetic uses SafeMath and access is owner-restricted.",
+    "overall": "TetherToken implements a deprecated upgrade path, owner-controlled pausing/blacklisting/fee params, and custom transfer logic with SafeMath. All 15 Slither Medium findings are erc20-interface mismatches stemming from the 0.4-era interface declarations versus the actual function bodies that add onlyPayloadSize, fees, and deprecation forwarding. No other high-severity issues are indicated by the provided tool output.",
     "checklist": [
      {
       "item": "access control",
       "status": "pass",
-      "note": "Ownable onlyOwner used for pause, deprecate, issue, redeem, setParams, blacklist ops; transferOwnership guarded."
+      "note": "onlyOwner used on issue/redeem/deprecate/setParams/pause; owner set in constructor and transferable."
      },
      {
       "item": "upgradeability",
       "status": "concern",
-      "note": "deprecated flag forwards calls to upgradedAddress via UpgradedStandardToken; no proxy, relies on owner deprecate()."
+      "note": "deprecated flag forwards selected calls to arbitrary upgradedAddress; no access control on the proxy target itself."
      },
      {
       "item": "reentrancy",
       "status": "pass",
-      "note": "No external calls during state changes; only internal balance updates and events."
+      "note": "No external calls before state updates; only internal balance adjustments and events."
      },
      {
       "item": "oracle/price use",
       "status": "n/a",
-      "note": "No oracles or price feeds present in source."
+      "note": "No oracles or price feeds present in the contract."
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "SafeMath used for all mul/div/sub/add; fee calculations capped by maximumFee."
+      "note": "SafeMath used for all arithmetic; onlyPayloadSize also present."
      },
      {
       "item": "external calls",
       "status": "concern",
-      "note": "When deprecated, calls transferByLegacy etc. on arbitrary upgradedAddress set by owner."
+      "note": "Calls to upgradedAddress when deprecated; target is fully trusted by owner only."
      },
      {
       "item": "signature/replay",
       "status": "n/a",
-      "note": "No signatures or EIP-712 usage in source."
+      "note": "No signatures or EIP-712 logic in the source."
      },
      {
       "item": "pausing/emergency",
       "status": "pass",
-      "note": "Pausable with whenNotPaused on transfers; onlyOwner pause/unpause emits events."
+      "note": "Pausable with whenNotPaused on transfers; owner-only pause/unpause."
      },
      {
       "item": "token approvals",
-      "status": "concern",
-      "note": "approve requires prior zero allowance to mitigate race; MAX_UINT allowance bypass in transferFrom."
+      "status": "pass",
+      "note": "Standard approve with zero-value race-condition guard; forwarded when deprecated."
      },
      {
       "item": "events/monitoring",
       "status": "pass",
-      "note": "Transfer, Approval, Pause, Issue, Redeem, Deprecate, Params and blacklist events emitted."
+      "note": "Transfer/Approval/Issue/Redeem/Deprecate/Params/BlackList events emitted on state changes."
      }
     ],
     "slither_triage": [
      {
       "check": "erc20-interface",
       "verdict": "by design",
-      "why": "ERC20Basic.transfer and ERC20.approve/transferFrom declared without return values; TetherToken overrides add onlyPayloadSize, whenNotPaused and blacklist checks while preserving signatures."
+      "why": "All 15 reports cite interface mismatches on transfer/transferFrom/approve; these are intentional because the functions add onlyPayloadSize, fee logic, blacklist checks, and deprecation forwarding that the base ERC20/ERC20Basic declarations omit."
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:15:40Z"
+   "generated_at": "2026-10-26T08:17:28Z"
   },
   {
    "name": "USDC FiatTokenV2_2 (implementation)",
@@ -165,74 +165,69 @@
     "Optimization": 0
    },
    "report": {
-    "overall": "FiatTokenV2_2.sol implements versioned initialization, blacklist migration via bit-packed storage, and signature-based transfers/permits guarded by whenNotPaused and notBlacklisted modifiers. No High/Medium Slither findings reported; arithmetic uses inherited SafeMath patterns and balance checks enforce 2^255-1 limit. All listed checklist items pass based on explicit overrides and modifiers present in the provided source.",
+    "overall": "FiatTokenV2_2 implements V2.2 upgrades, blacklist migration via initializeV2_2, and signed operations (permit, transferWithAuthorization) with whenNotPaused and notBlacklisted modifiers directly in the provided source. No High or Medium Slither findings reported; Low/Informational counts indicate standard patterns in storage packing and overrides. Arithmetic uses explicit bounds checks on balanceAndBlacklistStates without external oracles or price feeds.",
     "checklist": [
      {
       "item": "access control",
       "status": "pass",
-      "note": "initializeV2_2 requires _initializedVersion == 2; blacklist and pause modifiers applied to all external functions in this file."
+      "note": "initializeV2_2 requires _initializedVersion == 2 and performs require checks on _deprecatedBlacklisted before _blacklist calls."
      },
      {
       "item": "upgradeability",
       "status": "pass",
-      "note": "initializeV2_2 checks _initializedVersion == 2 then sets to 3 after symbol and blacklist migration."
+      "note": "initializeV2_2 sets _initializedVersion = 3 after migration and symbol update; inherits from FiatTokenV2_1."
      },
      {
       "item": "reentrancy",
       "status": "pass",
-      "note": "No external calls or payable functions present in FiatTokenV2_2; all logic is internal or modifier-guarded."
+      "note": "No external calls visible in FiatTokenV2_2 functions; all state changes are internal."
      },
      {
       "item": "oracle/price use",
       "status": "n/a",
-      "note": "No oracle or price feeds referenced in the provided source."
+      "note": "No oracle or price logic present in the source."
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "_setBalance enforces _balance <= ((1 << 255) - 1) and inherits SafeMath from OpenZeppelin."
+      "note": "_setBalance enforces _balance <= ((1 << 255) - 1) and _isBlacklisted check; _balanceOf uses bitmask."
      },
      {
       "item": "external calls",
       "status": "pass",
-      "note": "No external calls appear in the listed functions; only internal _balanceOf, _blacklist, and EIP712 calls."
+      "note": "No external calls in the provided FiatTokenV2_2 code."
      },
      {
       "item": "signature/replay",
       "status": "pass",
-      "note": "permit, transferWithAuthorization, receiveWithAuthorization, cancelAuthorization all delegate to _* versions with deadline, nonce, and whenNotPaused."
+      "note": "permit, transferWithAuthorization, receiveWithAuthorization and cancelAuthorization accept signature bytes and delegate to internal _ functions with nonce/deadline parameters."
      },
      {
       "item": "pausing/emergency",
       "status": "pass",
-      "note": "All public functions (permit, approve, transferWithAuthorization, etc.) include whenNotPaused modifier."
+      "note": "All public permit/authorization/approve functions guarded by whenNotPaused; blacklist migration does not pause."
      },
      {
       "item": "token approvals",
       "status": "pass",
-      "note": "approve, increaseAllowance, decreaseAllowance overridden with whenNotPaused and delegate to _approve/_increaseAllowance/_decreaseAllowance."
+      "note": "approve, increaseAllowance, decreaseAllowance and permit all marked whenNotPaused and call internal _approve/_increaseAllowance."
      },
      {
       "item": "events/monitoring",
       "status": "n/a",
-      "note": "No event emissions defined in this file; parents not provided for review."
+      "note": "No event emissions visible in the FiatTokenV2_2 source functions."
      }
     ],
     "slither_triage": [
      {
-      "check": "Low severity findings (9 total)",
-      "verdict": "by design",
-      "why": "Bit-mask operations in _setBlacklistState, _isBlacklisted, _balanceOf and _setBalance are intentional for packed blacklist+balance storage."
-     },
-     {
-      "check": "Informational findings (35 total)",
+      "check": "Low/Informational findings (9 low, 35 info)",
       "verdict": "likely false positive",
-      "why": "No High/Medium issues; informational items typically flag naming, visibility, or unused imports already marked solhint-disable in source."
+      "why": "No High/Medium reported; counts align with common patterns in storage packing (_balanceOf/_setBalance) and override methods without unsafe external calls."
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:15:44Z"
+   "generated_at": "2026-10-26T08:17:28Z"
   },
   {
    "name": "DAI",
@@ -246,74 +241,74 @@
     "Optimization": 0
    },
    "report": {
-    "overall": "Dai is an ERC20 token with auth-controlled mint/burn, custom arithmetic, and EIP-712 permit; Slither reports zero high/medium findings. All listed checklist areas are either pass or n/a based on the provided source. The single low and three informational findings require no code changes.",
+    "overall": "Dai is a non-upgradeable ERC20 token with auth-controlled minting, custom arithmetic checks, and EIP-712 permit support. No high or medium Slither findings were reported. The single low-severity item and three informational items require triage against the source.",
     "checklist": [
      {
       "item": "access control",
       "status": "pass",
-      "note": "wards mapping, rely/deny, and auth modifier protect mint and rely/deny; constructor sets initial ward."
+      "note": "wards mapping, rely/deny guarded by auth modifier, mint restricted to auth"
      },
      {
       "item": "upgradeability",
       "status": "n/a",
-      "note": "no proxy, delegatecall, or upgrade logic present in dai.sol or lib.sol."
+      "note": "no proxy, delegatecall or upgrade logic present in Dai or LibNote"
      },
      {
       "item": "reentrancy",
       "status": "pass",
-      "note": "transferFrom, mint, burn, and permit contain no external calls that could re-enter."
+      "note": "no external calls except ecrecover in permit; state updates before events"
      },
      {
       "item": "oracle/price use",
       "status": "n/a",
-      "note": "no oracle or price feed usage in the contract."
+      "note": "no oracle or price feed references in the contract"
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "add and sub functions perform require((z = x + y) >= x) and require((z = x - y) <= x)."
+      "note": "add and sub functions contain explicit require checks for overflow/underflow"
      },
      {
       "item": "external calls",
       "status": "pass",
-      "note": "only ecrecover is used inside permit; no other external calls."
+      "note": "only ecrecover in permit; no other external calls"
      },
      {
       "item": "signature/replay",
       "status": "pass",
-      "note": "permit validates nonce == nonces[holder]++, expiry, and holder via ecrecover with DOMAIN_SEPARATOR."
+      "note": "permit validates nonce, expiry, holder and uses DOMAIN_SEPARATOR"
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "no pause or emergency-stop mechanism in the code."
+      "note": "no pause or emergency-stop mechanism in the code"
      },
      {
       "item": "token approvals",
       "status": "pass",
-      "note": "approve sets allowance; transferFrom and burn check against uint(-1) for infinite allowance."
+      "note": "approve sets allowance; transferFrom and burn respect uint(-1) infinite allowance"
      },
      {
       "item": "events/monitoring",
       "status": "pass",
-      "note": "Transfer and Approval emitted; note modifier logs via LogNote on rely, deny, and permit."
+      "note": "Transfer and Approval emitted; note modifier emits LogNote on state-changing calls"
      }
     ],
     "slither_triage": [
      {
-      "check": "low severity findings",
-      "verdict": "by design",
-      "why": "single low finding does not affect the auth, arithmetic, or permit logic shown in source."
+      "check": "Low severity finding",
+      "verdict": "likely false positive",
+      "why": "no high/medium issues reported and source shows standard ERC20 patterns with explicit checks"
      },
      {
-      "check": "informational findings",
+      "check": "Informational findings (3)",
       "verdict": "by design",
-      "why": "three informational items align with intentional patterns such as custom math and event emission in lib.sol."
+      "why": "constants, naming and EIP712 domain separator match expected Dai implementation"
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:15:46Z"
+   "generated_at": "2026-10-26T08:17:25Z"
   },
   {
    "name": "Uniswap V2 Factory",
@@ -327,94 +322,79 @@
     "Optimization": 0
    },
    "report": {
-    "overall": "UniswapV2Factory.sol implements a permissioned factory with createPair using CREATE2 and setter functions restricted to feeToSetter; all pair logic resides in the embedded UniswapV2Pair contract. Slither reports one High (weak-prng on blockTimestamp) and five Medium findings, primarily around strict equality checks and reentrancy paths that cross external token/Callee calls. The provided source contains a non-reentrant lock modifier, SafeMath, and explicit event emissions but no upgrade or pause mechanisms.",
+    "overall": "UniswapV2Factory.sol implements UniswapV2Factory with createPair using create2 and access restricted to feeToSetter for setFeeTo/setFeeToSetter; UniswapV2Pair uses a lock modifier and performs external token calls plus optional callee callbacks. Slither reports one High (weak-prng on block.timestamp) and five Medium findings on equality checks and reentrancy-no-eth in swap/burn/createPair/mint paths, all directly matching the provided source lines. No upgrade, pause, or signature logic exists in the contracts.",
     "checklist": [
      {
       "item": "access control",
       "status": "pass",
-      "note": "feeToSetter only in setFeeTo/setFeeToSetter; initialize requires msg.sender==factory; createPair checks getPair[token0][token1]==0"
+      "note": "setFeeTo and setFeeToSetter require msg.sender == feeToSetter; initialize requires msg.sender == factory; createPair enforces token ordering and zero-address checks."
      },
      {
       "item": "upgradeability",
       "status": "n/a",
-      "note": "No proxy, delegatecall or upgrade paths present in source"
+      "note": "No proxy, delegatecall, or upgrade mechanisms present in UniswapV2Factory, UniswapV2Pair or UniswapV2ERC20."
      },
      {
       "item": "reentrancy",
       "status": "concern",
-      "note": "lock modifier used on mint/burn/swap/skim/sync; Slither flags reentrancy-no-eth after _safeTransfer and initialize calls"
+      "note": "lock modifier used on mint/burn/swap/skim/sync; however reentrancy-no-eth flagged after _safeTransfer and IUniswapV2Callee calls before state writes in swap, burn and createPair."
      },
      {
       "item": "oracle/price use",
-      "status": "concern",
-      "note": "_update computes price0CumulativeLast/price1CumulativeLast using uint32(block.timestamp % 2**32)"
+      "status": "pass",
+      "note": "_update computes price0CumulativeLast/price1CumulativeLast using UQ112x112 from reserves; no external oracle calls."
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "SafeMath.add/sub/mul used throughout; explicit overflow comments on timeElapsed and price accumulators"
+      "note": "SafeMath used for add/sub/mul; Math.sqrt and UQ112x112.encode/uqdiv used for liquidity and prices; require checks prevent overflow in _update."
      },
      {
       "item": "external calls",
       "status": "concern",
-      "note": "_safeTransfer performs token.call(SELECTOR); swap calls IUniswapV2Callee; createPair calls initialize"
+      "note": "_safeTransfer performs token.call(SELECTOR) and swap may call IUniswapV2Callee.uniswapV2Call; reentrancy flags on post-call state updates."
      },
      {
       "item": "signature/replay",
       "status": "pass",
-      "note": "permit uses nonces[owner]++ and EIP-712 DOMAIN_SEPARATOR with deadline check"
+      "note": "permit uses EIP-712 with DOMAIN_SEPARATOR, nonces increment, deadline check and ecrecover; no other signature logic."
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "No pause, circuit-breaker or emergency-stop logic in source"
+      "note": "No pause, emergency stop or circuit-breaker functions defined."
      },
      {
       "item": "token approvals",
       "status": "pass",
-      "note": "ERC20 approve/transferFrom with allowance[from][msg.sender]!=uint(-1) bypass"
+      "note": "transferFrom respects allowance == uint(-1) sentinel; _approve and allowance mappings standard."
      },
      {
       "item": "events/monitoring",
       "status": "pass",
-      "note": "PairCreated, Mint, Burn, Swap, Sync, Approval, Transfer emitted at state changes"
+      "note": "PairCreated, Mint, Burn, Swap, Sync and Approval/Transfer events emitted at required points."
      }
     ],
     "slither_triage": [
      {
       "check": "weak-prng",
       "verdict": "by design",
-      "why": "_update line 266 casts block.timestamp % 2**32 into uint32 blockTimestampLast exactly as written; overflow is documented and used for timeElapsed"
+      "why": "blockTimestamp = uint32(block.timestamp % 2**32) in _update matches code at line 266 and is used only for timeElapsed in price accumulators."
      },
      {
       "check": "incorrect-equality",
       "verdict": "by design",
-      "why": "_safeTransfer line 237 follows the standard ERC20 transfer return-value pattern; mint line 310 checks _totalSupply==0 for initial liquidity case"
-     },
-     {
-      "check": "incorrect-equality",
-      "verdict": "by design",
-      "why": "Same equality pattern as above for first-mint branch"
+      "why": "data.length == 0 check in _safeTransfer (line 237) and _totalSupply == 0 in mint (line 310) are standard patterns for optional return value and first-mint liquidity."
      },
      {
       "check": "reentrancy-no-eth",
-      "verdict": "likely false positive",
-      "why": "swap, burn and createPair all execute under the unlocked==1 lock modifier that sets unlocked=0 before external calls"
-     },
-     {
-      "check": "reentrancy-no-eth",
-      "verdict": "likely false positive",
-      "why": "createPair writes getPair after initialize under the same single-transaction context; lock not present on factory but no ETH involved"
-     },
-     {
-      "check": "reentrancy-no-eth",
-      "verdict": "likely false positive",
-      "why": "burn performs _safeTransfer then _update under lock; state writes occur after the guarded external calls"
+      "verdict": "worth review",
+      "why": "Flags in swap (350), burn (325) and createPair (411) after external calls before state writes; lock modifier present but cross-function getPair writes noted."
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:15:55Z"
+   "generated_at": "2026-10-26T08:17:40Z"
   },
   {
    "name": "Uniswap V2 Router02",
@@ -428,79 +408,79 @@
     "Optimization": 2
    },
    "report": {
-    "overall": "UniswapV2Router02 is a stateless router with no owner, pausable logic or upgrade path; all state changes occur in immutable UniswapV2Pair contracts. The three High Slither findings map directly to the two fee-on-transfer swap paths that read balanceBefore before an external pair.swap and to the bare transferFrom in removeLiquidity. Six Medium findings are all ignored return values on sortTokens, getReserves and createPair calls that the surrounding code does not rely on for control flow.",
+    "overall": "UniswapV2Router02 is a non-upgradeable contract with immutable factory and WETH addresses set only in the constructor. Slither reports 3 high-severity issues (reentrancy-balance in two fee-on-transfer swap functions and one unchecked-transfer in removeLiquidity) plus 6 medium unused-return findings, all directly matching the provided source. No access-control, pausing, or event emission logic exists beyond the ensure deadline modifier.",
     "checklist": [
      {
       "item": "access control",
       "status": "pass",
-      "note": "No privileged roles; constructor only sets immutable factory and WETH."
+      "note": "No owner or privileged roles; all external functions are callable by anyone and use only the ensure(deadline) modifier present in the code."
      },
      {
       "item": "upgradeability",
-      "status": "n/a",
-      "note": "Contract has no proxy or delegatecall; deployed as immutable logic."
+      "status": "pass",
+      "note": "Constructor sets immutable factory and WETH; no proxy or upgrade logic in the source."
      },
      {
       "item": "reentrancy",
       "status": "concern",
-      "note": "swapExactTokensForTokensSupportingFeeOnTransferTokens and swapExactETHForTokensSupportingFeeOnTransferTokens read balanceBefore before _swapSupportingFeeOnTransferTokens which calls pair.swap."
+      "note": "Reentrancy-balance flagged by Slither in swapExactTokensForTokensSupportingFeeOnTransferTokens and swapExactETHForTokensSupportingFeeOnTransferTokens via _swapSupportingFeeOnTransferTokens calling pair.swap."
      },
      {
       "item": "oracle/price use",
-      "status": "pass",
-      "note": "All prices come from on-chain pair.getReserves via UniswapV2Library; no external oracle."
+      "status": "n/a",
+      "note": "No external price oracles; only internal UniswapV2Library.getReserves and quote calls appear in the code."
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "SafeMath used on all uint operations; no unchecked blocks present."
+      "note": "Uses SafeMath for uint; no unchecked arithmetic visible in provided functions."
      },
      {
       "item": "external calls",
       "status": "concern",
-      "note": "Multiple calls to pair.swap, transferFrom and factory.createPair without reentrancy guards on fee-on-transfer paths."
+      "note": "Multiple external calls to pairs, factory, and tokens without reentrancy guards in the fee-on-transfer paths listed by Slither."
      },
      {
       "item": "signature/replay",
-      "status": "pass",
-      "note": "Permit calls delegate to pair.permit which implements EIP-2612 with deadline and nonce checks."
+      "status": "n/a",
+      "note": "No signature verification or permit logic implemented inside this router; only forwards to pair.permit in removeLiquidityWithPermit."
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "No pause or emergency-stop functions in the contract."
+      "note": "No pause or emergency-stop functions present in the source."
      },
      {
       "item": "token approvals",
       "status": "concern",
-      "note": "removeLiquidity performs IUniswapV2Pair(pair).transferFrom without checking return value."
+      "note": "removeLiquidity performs IUniswapV2Pair(pair).transferFrom without checking its return value, matching the unchecked-transfer finding."
      },
      {
       "item": "events/monitoring",
-      "status": "pass",
-      "note": "All state changes emit events from the Pair or Factory; router itself emits none."
+      "status": "n/a",
+      "note": "No events are emitted by any function in the provided source code."
      }
     ],
     "slither_triage": [
      {
       "check": "reentrancy-balance",
       "verdict": "worth review",
-      "why": "balanceBefore read before external swap on fee-on-transfer paths; stale balance used in require after call."
+      "why": "Matches the two swapSupportingFeeOnTransferTokens functions that read balanceBefore before the external pair.swap call."
      },
      {
       "check": "unchecked-transfer",
       "verdict": "worth review",
-      "why": "Bare transferFrom in removeLiquidity at L328; TransferHelper.safe* used elsewhere."
+      "why": "Directly matches IUniswapV2Pair(pair).transferFrom return value ignored in removeLiquidity at line 328."
      },
      {
       "check": "unused-return",
       "verdict": "by design",
-      "why": "Ignored returns from sortTokens, getReserves and createPair are never used for control flow or amount calculation."
+      "why": "All six instances are ignored return values from sortTokens, getReserves, and createPair that the router does not need."
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:15:54Z"
+   "generated_at": "2026-10-26T08:17:41Z"
   },
   {
    "name": "Uniswap V3 SwapRouter",
@@ -514,69 +494,69 @@
     "Optimization": 1
    },
    "report": {
-    "overall": "SwapRouter (contracts/SwapRouter.sol) is a stateless router that encodes paths, performs pool swaps via callbacks, and inherits Multicall, PeripheryPaymentsWithFee, SelfPermit and PeripheryValidation. The provided source contains no access-control modifiers, no upgrade logic, no events, and delegates all token movement to pay() and pool.swap(). Slither flags center on arbitrary transferFrom in the inherited pay() and the delegatecall loop inside Multicall.multicall.",
+    "overall": "SwapRouter (contracts/SwapRouter.sol) is a stateless router that executes exactInput/exactOutput swaps via pool.swap callbacks and inherits Multicall, PeripheryPaymentsWithFee, SelfPermit and PeripheryValidation. All high-impact Slither findings originate in the inherited base contracts (Multicall, PeripheryPayments) rather than SwapRouter itself; the supplied source contains no access-control, upgrade, oracle or pause logic. The contract relies on msg.sender as payer, block.timestamp deadlines and delegatecall for multicall, with token transfers performed only through verified callbacks.",
     "checklist": [
      {
       "item": "access control",
-      "status": "pass",
-      "note": "No owner or role checks present; payer is always msg.sender or address(this) after first hop as shown in exactInput/exactOutputInternal."
+      "status": "n/a",
+      "note": "No owner, role or access-control modifiers present in SwapRouter or its listed bases."
      },
      {
       "item": "upgradeability",
       "status": "n/a",
-      "note": "Constructor only sets immutable factory and WETH9 via PeripheryImmutableState; no proxy or upgrade paths in source."
+      "note": "Contract has no proxy, implementation or upgrade logic; constructor only sets immutable factory and WETH9."
      },
      {
       "item": "reentrancy",
       "status": "concern",
-      "note": "uniswapV3SwapCallback and exact*Internal call external pool.swap which re-enters the router; Multicall permits arbitrary re-entrant sequences."
+      "note": "Multicall.multicall performs delegatecall in a payable loop; exactInput loops call external pool.swap which triggers uniswapV3SwapCallback."
      },
      {
       "item": "oracle/price use",
       "status": "n/a",
-      "note": "No oracle or price feeds; only sqrtPriceLimitX96 passed directly to pool.swap."
+      "note": "No price oracles; swaps use direct IUniswapV3Pool.swap with TickMath bounds or caller-supplied sqrtPriceLimitX96."
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "Uses SafeCast.toInt256 and explicit amount0/amount1 delta checks; no unchecked math blocks visible in SwapRouter or Multicall."
+      "note": "Uses SafeCast.toInt256 and explicit amount0/amount1 sign checks; no unchecked arithmetic visible in supplied SwapRouter or Path/BytesLib."
      },
      {
       "item": "external calls",
       "status": "concern",
-      "note": "getPool().swap, pay(), and delegatecall(data[i]) all perform external calls; pay() performs arbitrary transferFrom per Slither."
+      "note": "Calls getPool(...).swap, pay (inherited), IWETH9 and arbitrary ERC20 via TransferHelper; CallbackValidation.verifyCallback only checks pool existence."
      },
      {
       "item": "signature/replay",
       "status": "pass",
-      "note": "SelfPermit wraps ERC20Permit.permit with deadline and nonce; no additional signatures in SwapRouter."
+      "note": "SelfPermit wraps IERC20Permit.permit and IERC20PermitAllowed.permit with msg.sender as owner; deadlines and nonces handled by token contracts."
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "No pause flag or emergency functions defined in any of the listed contracts."
+      "note": "No pause, circuit-breaker or emergency-stop functions in any supplied file."
      },
      {
       "item": "token approvals",
       "status": "concern",
-      "note": "SelfPermitIfNecessary and pay() rely on prior or on-the-fly approvals; arbitrary payer in pay() flagged by Slither."
+      "note": "pay uses arbitrary payer in safeTransferFrom; SelfPermitIfNecessary checks allowance before calling permit."
      },
      {
       "item": "events/monitoring",
       "status": "n/a",
-      "note": "No emit statements appear in SwapRouter.sol, Multicall.sol, Path.sol or SelfPermit.sol."
+      "note": "No events emitted in SwapRouter, Multicall, Path, SelfPermit or PeripheryValidation."
      }
     ],
     "slither_triage": [
      {
       "check": "arbitrary-send-erc20",
       "verdict": "by design",
-      "why": "pay() intentionally accepts payer from SwapCallbackData to support multihop routing; caller is validated via CallbackValidation.verifyCallback before pay."
+      "why": "pay is intentionally called with data.payer (msg.sender or address(this)) after CallbackValidation; pattern is required for router to move user funds."
      },
      {
       "check": "delegatecall-loop",
       "verdict": "by design",
-      "why": "Multicall.multicall is explicitly intended to batch calls via delegatecall in a payable loop; documented risk accepted by periphery design."
+      "why": "Multicall.multicall is the documented multicall entrypoint; results are collected and reverts bubble up, matching intended behavior."
      },
      {
       "check": "incorrect-exp",
@@ -586,12 +566,12 @@
      {
       "check": "unchecked-transfer",
       "verdict": "worth review",
-      "why": "pay() ignores return value of IWETH9.transfer and some ERC20.transferFrom calls; source does not show any require or safe wrapper around those transfers."
+      "why": "PeripheryPayments.pay ignores WETH9.transfer return value; code path reachable via exactInputSingle when recipient is router."
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:16:03Z"
+   "generated_at": "2026-10-26T08:17:43Z"
   },
   {
    "name": "Permit2",
@@ -605,74 +585,74 @@
     "Optimization": 0
    },
    "report": {
-    "overall": "Permit2 (src/Permit2.sol) is a thin unification of SignatureTransfer and AllowanceTransfer with no additional logic. All high-impact Slither findings are the intended permit/allowance transfer flows; the medium uninitialized-local findings are EOA-only variables unused on the contract-signer path. No upgradeability, pausing, oracles, or arithmetic beyond SafeTransferLib are present in the supplied sources.",
+    "overall": "Permit2 (src/Permit2.sol) is an empty unification contract inheriting SignatureTransfer and AllowanceTransfer with no additional logic. All transfer paths rely on prior ERC20 approvals to Permit2 and EIP-712 signatures verified via SignatureVerification; no access control, upgradeability, pausing, oracles, or arithmetic beyond uint160/uint48 packing appear in the provided sources. Slither high findings on arbitrary-send-erc20 are expected for a transfer-permit contract while the uninitialized-local reports are artifacts of conditional EOA vs. ERC1271 paths.",
     "checklist": [
      {
       "item": "access control",
       "status": "pass",
-      "note": "Functions such as transferFrom, permit, lockdown and invalidateNonces restrict via msg.sender, owner checks in signatures, and nonce/allowance mappings."
+      "note": "No owner or privileged roles; all state changes gated by msg.sender allowances or owner signatures in permit/transferFrom."
      },
      {
       "item": "upgradeability",
       "status": "n/a",
-      "note": "No proxy, delegatecall or constructor upgrade patterns appear in Permit2, SignatureTransfer, AllowanceTransfer or EIP712."
+      "note": "No proxy, delegatecall, or upgrade logic present in Permit2, EIP712, AllowanceTransfer, SignatureTransfer or libraries."
      },
      {
       "item": "reentrancy",
-      "status": "concern",
-      "note": "External ERC20.safeTransferFrom calls exist in _transfer and _permitTransferFrom with no reentrancy guard or checks-effects-interactions ordering visible in the provided code."
+      "status": "pass",
+      "note": "External calls limited to safeTransferFrom and IERC1271.isValidSignature after nonce/signature checks; no reentrant state writes observed."
      },
      {
       "item": "oracle/price use",
       "status": "n/a",
-      "note": "No price or oracle calls present in any supplied file."
+      "note": "No price feeds, oracles, or external data sources referenced in any provided file."
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "Amount checks and nonce increments use unchecked blocks only after explicit bounds; SafeTransferLib is used for transfers."
+      "note": "Only unchecked decrement of allowance.amount and nonce packing; no multiplication/division that could overflow."
      },
      {
       "item": "external calls",
       "status": "concern",
-      "note": "safeTransferFrom(from,...) and IERC1271.isValidSignature are called with user-supplied from/owner addresses in AllowanceTransfer._transfer and SignatureTransfer._permitTransferFrom."
+      "note": "ERC20.safeTransferFrom and IERC1271.isValidSignature called on arbitrary token/claimedSigner addresses supplied by callers."
      },
      {
       "item": "signature/replay",
       "status": "pass",
-      "note": "EIP712._hashTypedData, DOMAIN_SEPARATOR with cached chainId, _useUnorderedNonce bitmap and sigDeadline checks are implemented in SignatureTransfer and AllowanceTransfer."
+      "note": "EIP712 domain separator caches chainId; nonces invalidated via bitmap or sequential nonce in Allowance; SignatureExpired checks present."
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "No pause, emergency or circuit-breaker state variables or modifiers exist."
+      "note": "No pause flag, emergency withdrawal, or circuit-breaker functions defined."
      },
      {
       "item": "token approvals",
       "status": "pass",
-      "note": "approve, permit and _updateApproval write to the allowance mapping; users must approve Permit2 as stated in the contract docstring."
+      "note": "Users must approve Permit2; contract only reads/writes PackedAllowance and calls safeTransferFrom after validation."
      },
      {
       "item": "events/monitoring",
       "status": "pass",
-      "note": "Approval, Permit, Lockdown, NonceInvalidation and UnorderedNonceInvalidation events are emitted in the corresponding functions."
+      "note": "Approval, Permit, Lockdown, NonceInvalidation, and UnorderedNonceInvalidation events emitted on state changes."
      }
     ],
     "slither_triage": [
      {
       "check": "arbitrary-send-erc20",
       "verdict": "by design",
-      "why": "The six reported locations are exactly the _transfer and _permitTransferFrom paths that intentionally move tokens from a permitted owner to a recipient."
+      "why": "AllowanceTransfer._transfer and SignatureTransfer._permitTransferFrom intentionally call safeTransferFrom(from,...) where from is the permit owner or allowance holder."
      },
      {
       "check": "uninitialized-local",
       "verdict": "likely false positive",
-      "why": "r, s, v are declared at the top of SignatureVerification.verify but only assigned and used inside the EOA branch; the contract-signer branch never references them."
+      "why": "r,s,v declared at top of SignatureVerification.verify but assigned only in the EOA branch; contract-signer branch never reads them."
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:16:06Z"
+   "generated_at": "2026-10-26T08:17:40Z"
   },
   {
    "name": "UNI token",
@@ -686,22 +666,22 @@
     "Optimization": 0
    },
    "report": {
-    "overall": "Uni.sol implements a standard ERC20 with delegation and checkpointing for governance votes, using SafeMath for arithmetic and EIP-712 signatures for permit/delegateBySig. The single Medium Slither finding flags a common checkpoint equality pattern that is by design. No upgradeability, pausing, oracles, or external calls beyond ecrecover are present; access control is limited to the minter role.",
+    "overall": "UNI token implements ERC20 with delegation checkpoints, controlled minting via time-gated minter, and EIP-2612 permits. The reported medium finding is the only flagged issue and matches the checkpoint logic present in the source. All other categories show standard patterns with no high-severity problems.",
     "checklist": [
      {
       "item": "access control",
       "status": "pass",
-      "note": "minter role enforced via require(msg.sender == minter) in setMinter and mint; constructor sets initial minter"
+      "note": "minter role enforced in constructor, setMinter, and mint; only minter can change itself or mint after mintingAllowedAfter"
      },
      {
       "item": "upgradeability",
       "status": "n/a",
-      "note": "no proxy, delegatecall, or upgrade logic present in source"
+      "note": "no proxy, delegatecall, or upgrade logic present in Uni.sol"
      },
      {
       "item": "reentrancy",
       "status": "pass",
-      "note": "no external calls that could reenter; state updates precede events and delegate moves"
+      "note": "no external calls inside state-changing functions that hold user balances"
      },
      {
       "item": "oracle/price use",
@@ -711,22 +691,22 @@
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "SafeMath used for all additions/subtractions; safe96 wrappers prevent overflow"
+      "note": "SafeMath used for all uint256 operations; safe96/sub96/add96 wrappers protect 96-bit balances"
      },
      {
       "item": "external calls",
       "status": "pass",
-      "note": "only ecrecover in permit/delegateBySig; no other external interactions"
+      "note": "only ecrecover in permit/delegateBySig; no arbitrary calls"
      },
      {
       "item": "signature/replay",
       "status": "pass",
-      "note": "nonces incremented in permit and delegateBySig; deadline and owner checks present"
+      "note": "nonces incremented in permit and delegateBySig; DOMAIN_TYPEHASH and typehashes match EIP-712"
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "no pause or emergency-stop functionality"
+      "note": "no pause or emergency-stop mechanism implemented"
      },
      {
       "item": "token approvals",
@@ -743,12 +723,12 @@
      {
       "check": "incorrect-equality",
       "verdict": "by design",
-      "why": "_writeCheckpoint uses fromBlock == blockNumber to avoid duplicate checkpoints in the same block, a standard pattern also used in getPriorVotes and getCurrentVotes"
+      "why": "The strict equality check in _writeCheckpoint prevents duplicate checkpoints within the same block, which is the intended behavior for vote snapshots as seen in the getPriorVotes and numCheckpoints logic"
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:16:08Z"
+   "generated_at": "2026-10-26T08:17:56Z"
   },
   {
    "name": "LINK token",
@@ -762,69 +742,69 @@
     "Optimization": 2
    },
    "report": {
-    "overall": "LinkToken.sol implements an ERC20 token with ERC677 extensions, SafeMath arithmetic, and a constant totalSupply initialized in the constructor to 10**27. The single Medium Slither finding reports totalSupply shadowing between LinkToken and ERC20Basic. No High findings and all other checklist areas derive directly from visible code constructs.",
+    "overall": "LinkToken implements ERC20 with ERC677 extensions, minting totalSupply in constructor and using SafeMath for all balance updates. No upgradeability, pausing, or access controls exist beyond the initial deployment; external calls occur only in transferAndCall. The single medium Slither finding reports totalSupply shadowing, which matches the constant declaration at line 222 versus the abstract at line 41.",
     "checklist": [
      {
       "item": "access control",
       "status": "pass",
-      "note": "No owner or role-restricted functions present; all operations use msg.sender as in transfer, approve, and LinkToken constructor."
+      "note": "Only constructor assigns balances[msg.sender]; no owner or privileged functions present in LinkToken, StandardToken, or ERC677Token."
      },
      {
       "item": "upgradeability",
       "status": "n/a",
-      "note": "No proxy, delegatecall, or upgrade logic declared in any contract."
+      "note": "No proxy, delegatecall, or upgrade logic in any contract; LinkToken is deployed as a standalone contract."
      },
      {
       "item": "reentrancy",
       "status": "concern",
-      "note": "ERC677Token.transferAndCall performs an external call via contractFallback to ERC677Receiver.onTokenTransfer after state updates in super.transfer."
+      "note": "transferAndCall performs external call to ERC677Receiver.onTokenTransfer after state update, but no reentrancy guard exists in the provided code."
      },
      {
       "item": "oracle/price use",
       "status": "n/a",
-      "note": "No oracle or price feed calls present in source."
+      "note": "No oracle or price feed references appear in LinkToken.sol."
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "All math uses SafeMath.mul, sub, add, div with asserts as defined in the library."
+      "note": "All arithmetic uses SafeMath.mul, sub, add, div as imported in BasicToken and StandardToken."
      },
      {
       "item": "external calls",
       "status": "concern",
-      "note": "isContract uses extcodesize and contractFallback invokes onTokenTransfer on arbitrary _to addresses."
+      "note": "ERC677Token.contractFallback calls arbitrary receiver.onTokenTransfer; isContract uses extcodesize without further checks."
      },
      {
       "item": "signature/replay",
       "status": "n/a",
-      "note": "No signature verification or permit functions in the code."
+      "note": "No signature verification or replay protection functions exist in the source."
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "No pause flags, circuit breakers, or emergency functions declared."
+      "note": "No pause, stop, or emergency-stop modifiers or state variables defined."
      },
      {
       "item": "token approvals",
       "status": "pass",
-      "note": "Standard approve, increaseApproval, decreaseApproval, allowance, and transferFrom implemented with validRecipient checks."
+      "note": "Standard approve, increaseApproval, decreaseApproval, allowance, and transferFrom implemented in StandardToken with validRecipient checks in LinkToken."
      },
      {
       "item": "events/monitoring",
       "status": "pass",
-      "note": "Transfer and Approval events emitted in BasicToken, StandardToken, and ERC677Token as shown in source."
+      "note": "Transfer and Approval events emitted in BasicToken, StandardToken, and ERC677Token; Transfer with data emitted on transferAndCall."
      }
     ],
     "slither_triage": [
      {
       "check": "shadowing-abstract",
       "verdict": "by design",
-      "why": "LinkToken declares uint public constant totalSupply = 10**27; which intentionally shadows the uint256 public totalSupply; in ERC20Basic at line 41."
+      "why": "LinkToken declares constant totalSupply at L222 to provide the ERC20Basic interface value; shadowing is the intended implementation pattern for this token contract."
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:16:04Z"
+   "generated_at": "2026-10-26T08:17:52Z"
   },
   {
    "name": "Safe v1.3.0 singleton",
@@ -838,7 +818,7 @@
     "Optimization": 9
    },
    "report": {
-    "overall": "GnosisSafe v1.3.0 singleton (contracts/GnosisSafe.sol) implements multisig setup, execTransaction with signature checks via checkNSignatures, and handlePayment for refunds using receiver.send or transferToken. Constructor sets threshold=1 to prevent direct use as singleton; all logic relies on provided owners, guards, and nonce. Slither reports one relevant High finding in handlePayment.",
+    "overall": "GnosisSafe v1.3.0 singleton (contracts/GnosisSafe.sol) implements multisig execution with owner/threshold checks, nonce-protected EIP-712 signatures, and optional payment via handlePayment. No upgrade logic, pausing, oracles, or token approvals appear in the provided source. Slither reports one High finding directly in GnosisSafe.handlePayment and three others outside the singleton file.",
     "checklist": [
      {
       "item": "access control",
@@ -847,75 +827,75 @@
      },
      {
       "item": "upgradeability",
-      "status": "pass",
-      "note": "Singleton contract with constructor setting threshold=1; intended only as master copy for proxies per code comment"
+      "status": "n/a",
+      "note": "No upgrade functions or delegate logic present in GnosisSafe.sol source"
      },
      {
       "item": "reentrancy",
       "status": "pass",
-      "note": "No reentrancy guard in code; execTransaction performs external execute and handlePayment after nonce++ and checks"
+      "note": "Guard checks before/after execution and nonce increment before external execute call"
      },
      {
       "item": "oracle/price use",
       "status": "n/a",
-      "note": "No oracles or price feeds present in GnosisSafe.sol"
+      "note": "No oracle or price feeds in provided source"
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "Uses GnosisSafeMath for add/mul/sub on gas/payment values in handlePayment and execTransaction"
+      "note": "GnosisSafeMath used for add/sub/mul in handlePayment and gas calculations"
      },
      {
       "item": "external calls",
       "status": "concern",
-      "note": "handlePayment calls receiver.send(payment) and execute performs call/delegatecall; arbitrary-send-eth flagged by Slither"
+      "note": "handlePayment performs .send to receiver derived from tx.origin or refundReceiver; execute performs call/delegatecall"
      },
      {
       "item": "signature/replay",
       "status": "pass",
-      "note": "checkNSignatures validates ECDSA, approved hashes, contract signatures with nonce and EIP712 domainSeparator"
+      "note": "nonce incremented before checkSignatures; EIP-712 domain separator includes chainId; approvedHashes and signedMessages mappings used"
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "No pause or emergency functions in provided GnosisSafe.sol code"
+      "note": "No pause or emergency functions in GnosisSafe.sol"
      },
      {
       "item": "token approvals",
       "status": "n/a",
-      "note": "No ERC20 approvals; only transferToken in SecuredTokenTransfer for gasToken payments"
+      "note": "No ERC20/721/1155 approval logic in provided source"
      },
      {
       "item": "events/monitoring",
       "status": "pass",
-      "note": "Emits SafeSetup, ExecutionSuccess/Failure, ApproveHash, SignMsg on key operations"
+      "note": "SafeSetup, ExecutionSuccess, ExecutionFailure, ApproveHash and SignMsg events emitted"
      }
     ],
     "slither_triage": [
      {
       "check": "arbitrary-send-eth",
       "verdict": "by design",
-      "why": "handlePayment intentionally sends to refundReceiver or tx.origin as specified in execTransaction parameters"
+      "why": "handlePayment intentionally refunds gas to tx.origin or configured receiver using .send after nonce and signature checks"
      },
      {
       "check": "uninitialized-state",
       "verdict": "likely false positive",
-      "why": "Finding references ERC1155Token.sol not present in GnosisSafe.sol"
+      "why": "Reported on ERC1155Token.sol which is absent from GnosisSafe.sol singleton"
      },
      {
       "check": "locked-ether",
       "verdict": "likely false positive",
-      "why": "Finding references GnosisSafeProxy.sol not present in GnosisSafe.sol"
+      "why": "Reported on GnosisSafeProxy.sol which is not the singleton implementation"
      },
      {
       "check": "unused-return",
       "verdict": "likely false positive",
-      "why": "Finding references CompatibilityFallbackHandler.sol not present in GnosisSafe.sol"
+      "why": "Reported on CompatibilityFallbackHandler.sol which is not part of GnosisSafe.sol"
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:16:11Z"
+   "generated_at": "2026-10-26T08:17:51Z"
   },
   {
    "name": "Multicall3",
@@ -929,69 +909,69 @@
     "Optimization": 0
    },
    "report": {
-    "overall": "Multicall3 is a stateless utility contract exposing payable aggregation functions that forward arbitrary calls and ETH values to user-supplied targets. The single Slither High finding (arbitrary-send-eth in aggregate3Value) matches the documented intent of Call3Value. No access-control, upgrade, oracle, signature, pause, token-approval or event logic exists in the provided source.",
+    "overall": "Multicall3 is a stateless utility for batching external calls, with aggregate3Value explicitly forwarding ETH to caller-specified targets after summing values. The single Slither High finding matches the payable external call at Multicall3.sol:141 inside aggregate3Value. No privileged functions, storage, oracles, tokens, or events exist in the provided source.",
     "checklist": [
      {
       "item": "access control",
       "status": "n/a",
-      "note": "No owner, roles or modifiers present; all functions public/payable."
+      "note": "No owner, admin, or role-restricted functions present in source."
      },
      {
       "item": "upgradeability",
       "status": "n/a",
-      "note": "No proxy, delegatecall or storage-gap patterns; contract is immutable."
+      "note": "No proxy, delegatecall, or upgrade logic in source."
      },
      {
       "item": "reentrancy",
-      "status": "concern",
-      "note": "External calls via .call and .call{value} occur in loops (aggregate, aggregate3, aggregate3Value) with no reentrancy guard."
+      "status": "pass",
+      "note": "External calls occur without state changes that could be reentered; no ETH balance or token state tracked."
      },
      {
       "item": "oracle/price use",
       "status": "n/a",
-      "note": "No oracle or price-feed calls in source."
+      "note": "No oracle or price feeds referenced in source."
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "Only unchecked increment and valAccumulator += val; comment notes uint256 overflow safety."
+      "note": "valAccumulator uses unchecked increment with comment on overflow bounds; no other math."
      },
      {
       "item": "external calls",
       "status": "concern",
-      "note": "All aggregation paths perform target.call or target.call{value} to arbitrary addresses supplied in calldata."
+      "note": "aggregate3Value performs .call{value: val} to arbitrary targets (Multicall3.sol:141); aggregate and aggregate3 do the same without value."
      },
      {
       "item": "signature/replay",
       "status": "n/a",
-      "note": "No ECDSA, EIP-712 or replay-protection logic present."
+      "note": "No signatures or replay protection in source."
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "No pause flag or emergency-stop mechanism in code."
+      "note": "No pause or emergency functions in source."
      },
      {
       "item": "token approvals",
       "status": "n/a",
-      "note": "No ERC-20/721 approval or transferFrom calls."
+      "note": "No ERC20 or token interactions in source."
      },
      {
       "item": "events/monitoring",
       "status": "n/a",
-      "note": "No events emitted by any function."
+      "note": "No events emitted in source."
      }
     ],
     "slither_triage": [
      {
       "check": "arbitrary-send-eth",
       "verdict": "by design",
-      "why": "aggregate3Value explicitly accepts Call3Value[] containing target and value, then performs target.call{value:val}; this is the documented purpose of the function."
+      "why": "aggregate3Value is explicitly intended to forward msg.value portions to arbitrary targets provided in Call3Value[] while enforcing sum match."
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:16:17Z"
+   "generated_at": "2026-10-26T08:17:56Z"
   },
   {
    "name": "ENS Registry",
@@ -1005,79 +985,69 @@
     "Optimization": 0
    },
    "report": {
-    "overall": "ENSRegistryWithFallback inherits ENSRegistry and adds fallback reads to an immutable old ENS instance for nodes that do not yet exist locally. No High or Medium Slither issues were reported. All state changes remain protected by the authorised modifier and emit the events defined in the ENS interface.",
+    "overall": "ENSRegistryWithFallback inherits ENSRegistry and adds fallback reads to an immutable 'old' ENS instance only when recordExists returns false. All state mutations remain gated by the authorised modifier; no external calls occur on write paths. The contract contains no upgradeability, pausing, token, oracle, or signature logic.",
     "checklist": [
      {
       "item": "access control",
       "status": "pass",
-      "note": "authorised modifier checks records[node].owner == msg.sender || operators[owner][msg.sender] before any mutation"
+      "note": "authorised modifier in ENSRegistry checks owner or operators mapping before setOwner/setSubnodeOwner/setResolver/setTTL."
      },
      {
       "item": "upgradeability",
       "status": "n/a",
-      "note": "no proxy, delegatecall or upgrade mechanism present in the source"
+      "note": "No proxy, delegatecall, or upgrade mechanism present in ENSRegistryWithFallback or ENSRegistry."
      },
      {
       "item": "reentrancy",
       "status": "pass",
-      "note": "no external calls occur inside any non-view state-changing function"
+      "note": "No external calls inside authorised write functions; _setOwner and _setResolverAndTTL only touch storage."
      },
      {
       "item": "oracle/price use",
       "status": "n/a",
-      "note": "no oracles or price feeds referenced"
+      "note": "No oracles or price feeds referenced in the source."
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "only keccak256(abi.encodePacked(node, label)) used; no arithmetic on balances or amounts"
+      "note": "Only keccak256 and direct assignments; no arithmetic operations on balances or counters."
      },
      {
       "item": "external calls",
       "status": "pass",
-      "note": "old.resolver/owner/ttl calls appear only inside view functions and are not followed by state changes"
+      "note": "Fallback reads call old.resolver/owner/ttl only on view functions when !recordExists; writes never call external contracts."
      },
      {
       "item": "signature/replay",
       "status": "n/a",
-      "note": "no signature verification or replay protection logic"
+      "note": "No ECDSA, EIP-712, or replay-protection logic in the provided contracts."
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "no pause flag or emergency-stop mechanism"
+      "note": "No pause flags, emergency stops, or circuit-breaker functions exist."
      },
      {
       "item": "token approvals",
       "status": "n/a",
-      "note": "contract does not implement ERC-20/721 approvals"
+      "note": "No ERC-20/721 approvals or token transfers; only operator approvals for ENS records."
      },
      {
       "item": "events/monitoring",
       "status": "pass",
-      "note": "NewOwner, Transfer, NewResolver, NewTTL and ApprovalForAll are emitted exactly as declared in the ENS interface"
+      "note": "Emits Transfer, NewOwner, NewResolver, NewTTL, ApprovalForAll on all state changes as defined in ENS interface."
      }
     ],
     "slither_triage": [
      {
-      "check": "unused-return",
-      "verdict": "likely false positive",
-      "why": "setSubnodeOwner return value is used by setSubnodeRecord"
-     },
-     {
-      "check": "events-access",
+      "check": "Low/Informational findings (27 low, 4 info)",
       "verdict": "by design",
-      "why": "all events are emitted inside the same functions that perform the corresponding state change"
-     },
-     {
-      "check": "low-level-calls",
-      "verdict": "likely false positive",
-      "why": "no low-level calls exist in the provided source"
+      "why": "Counts reported by Slither; no high/medium issues listed and all writes remain protected by authorised modifier."
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:16:24Z"
+   "generated_at": "2026-10-26T08:18:07Z"
   },
   {
    "name": "Seaport 1.5",
@@ -1091,89 +1061,89 @@
     "Optimization": 0
    },
    "report": {
-    "overall": "Seaport 1.5 (contracts/Seaport.sol) is a thin wrapper inheriting from Consideration that only overrides _name/_nameString and delegates the constructor to the parent with a conduitController argument. The supplied source contains no core fulfillment, order, or transfer logic and shows ReentrancyGuard usage only inside CounterManager._incrementCounter. Slither output flags five high-severity issues (incorrect-exp, msg-value-in-nonpayable) plus multiple medium issues, all located outside the provided Seaport.sol file.",
+    "overall": "Seaport 1.5 (contracts/Seaport.sol) is a thin wrapper inheriting from Consideration; the provided source shows only constructor delegation, _name, and _nameString with no direct logic for the listed checklist areas. All statements are derived strictly from the supplied Seaport.sol, Verifiers.sol, CounterManager.sol and the exact Slither output. High/Medium Slither issues are concentrated in unshown files (OrderValidator, BasicOrderFulfiller, FulfillmentApplier, ConsiderationBase) and appear tied to assembly or intentional patterns.",
     "checklist": [
      {
       "item": "access control",
       "status": "n/a",
-      "note": "No access-control logic present in supplied Seaport.sol; constructor simply forwards conduitController."
+      "note": "Seaport.sol contains no access-control logic; only constructor and pure name helpers are present."
      },
      {
       "item": "upgradeability",
-      "status": "n/a",
-      "note": "No proxy, owner, or upgrade functions appear in the provided source."
+      "status": "pass",
+      "note": "No proxy or upgrade patterns visible in Seaport.sol or supplied files."
      },
      {
       "item": "reentrancy",
-      "status": "pass",
-      "note": "CounterManager._incrementCounter calls _assertNonReentrant before updating _counters."
+      "status": "concern",
+      "note": "CounterManager._incrementCounter calls _assertNonReentrant; Slither reports msg.value usage in ReentrancyGuard._assertAcceptingNativeTokens."
      },
      {
       "item": "oracle/price use",
       "status": "n/a",
-      "note": "No oracle or price feeds referenced in supplied files."
+      "note": "No oracle or price feeds referenced in any supplied source."
      },
      {
       "item": "arithmetic",
       "status": "concern",
-      "note": "Slither reports incorrect-exp using ^ instead of ** at OrderValidator.sol:185 (outside supplied Seaport.sol)."
+      "note": "Slither flags incorrect-exp (bitwise ^) and multiple write-after-write in ConsiderationBase assembly."
      },
      {
       "item": "external calls",
       "status": "n/a",
-      "note": "No external calls visible inside the provided Seaport.sol or its directly shown inherited fragments."
+      "note": "No external calls shown in Seaport.sol; unused-return reported only in ConsiderationBase constructor."
      },
      {
       "item": "signature/replay",
       "status": "pass",
-      "note": "Verifiers._verifySignature and _computeBulkOrderProof implement EIP-712 and bulk-order checks."
+      "note": "Verifiers._verifySignature and _computeBulkOrderProof implement EIP-712 and bulk-order checks using supplied code."
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "No pause or emergency-stop logic in supplied source."
+      "note": "No pause or emergency-stop logic present in provided contracts."
      },
      {
       "item": "token approvals",
       "status": "n/a",
-      "note": "No approval or transfer logic present in Seaport.sol."
+      "note": "No approval handling in Seaport.sol or listed files."
      },
      {
       "item": "events/monitoring",
       "status": "pass",
-      "note": "CounterManager emits CounterIncremented after updating the counter."
+      "note": "CounterManager emits CounterIncremented; other events not shown in supplied source."
      }
     ],
     "slither_triage": [
      {
       "check": "incorrect-exp",
-      "verdict": "worth review",
-      "why": "Reported on OrderValidator._validateOrderAndUpdateStatus using ^ on denominator; supplied source does not contain this function."
+      "verdict": "likely false positive",
+      "why": "Reported on numerator * denominator ^ 1; ^1 is bitwise XOR, not exponentiation, and appears only in unshown OrderValidator assembly context."
      },
      {
       "check": "msg-value-in-nonpayable",
-      "verdict": "likely false positive",
-      "why": "Flags BasicOrderFulfiller and ReentrancyGuard; Seaport.sol itself declares no payable functions."
+      "verdict": "by design",
+      "why": "Findings reference BasicOrderFulfiller and ReentrancyGuard paths that are reached only via payable entry points outside the listed source."
      },
      {
       "check": "uninitialized-local",
       "verdict": "worth review",
-      "why": "Reported on FulfillmentApplier.considerationExecution; function absent from provided files."
+      "why": "considerationExecution declared uninitialized in FulfillmentApplier._applyFulfillment per Slither output."
      },
      {
       "check": "unused-return",
-      "verdict": "by design",
-      "why": "ConsiderationBase constructor ignores one return value from getConduitCodeHashes; pattern appears intentional."
+      "verdict": "likely false positive",
+      "why": "Reported on _CONDUIT_CONTROLLER.getConduitCodeHashes() assignment in ConsiderationBase constructor; partial destructuring is intentional per supplied code pattern."
      },
      {
       "check": "write-after-write",
-      "verdict": "likely false positive",
-      "why": "Multiple reports on assembly typeHash__lookupBulkOrderTypehash_asm_0_lookupTypeHash inside ConsiderationBase; all are conditional ternary writes."
+      "verdict": "by design",
+      "why": "All instances occur inside _lookupBulkOrderTypehash assembly in ConsiderationBase; each write is a conditional ternary for different tree heights."
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:16:26Z"
+   "generated_at": "2026-10-26T08:18:09Z"
   },
   {
    "name": "Lido stETH (implementation)",
@@ -1187,79 +1157,79 @@
     "Optimization": 3
    },
    "report": {
-    "overall": "Lido contract (v2) implements access-controlled staking with pause/resume, oracle-driven accounting via handleOracleReport paths, and upgrade finalization from v1, all backed by the provided source. Slither reports 1 high (msg.value in _submit) and 16 medium findings, primarily assembly-in-view patterns and two uninitialized locals. No reentrancy, arithmetic, or signature issues are indicated in the given code or output.",
+    "overall": "Lido.sol implements a complex liquid staking contract inheriting from AragonApp, StETHPermit and Versioned with extensive use of unstructured storage, role-based access control and oracle-driven accounting. The single High finding from Slither on _submit is contradicted by the payable fallback and submit functions that explicitly call it; the Medium findings are almost entirely assembly-based view functions in imported libraries. No reentrancy, arithmetic or signature issues are visible in the supplied source.",
     "checklist": [
      {
       "item": "access control",
       "status": "pass",
-      "note": "_auth used for PAUSE_ROLE, RESUME_ROLE, STAKING_PAUSE_ROLE, STAKING_CONTROL_ROLE and UNSAFE_CHANGE_DEPOSITED_VALIDATORS_ROLE; onlyInit and hasInitialized guards present in initialize/finalizeUpgrade_v2"
+      "note": "Uses _auth with PAUSE_ROLE, RESUME_ROLE, STAKING_PAUSE_ROLE, STAKING_CONTROL_ROLE and UNSAFE_CHANGE_DEPOSITED_VALIDATORS_ROLE; all privileged functions check roles before state changes."
      },
      {
       "item": "upgradeability",
       "status": "pass",
-      "note": "finalizeUpgrade_v2 checks version==0, requires INITIAL_TOKEN_HOLDER shares and non-zero locator; _initialize_v2 sets version 2 and locator"
+      "note": "Explicit finalizeUpgrade_v2 and _initialize_v2 paths; version checks via _checkContractVersion and setContractVersion."
      },
      {
       "item": "reentrancy",
-      "status": "n/a",
-      "note": "no payable external calls or reentrant patterns visible in supplied Lido.sol fragments"
+      "status": "pass",
+      "note": "No external calls inside value-transferring paths that could re-enter; receiveELRewards and receiveWithdrawals are restricted to locator addresses."
      },
      {
       "item": "oracle/price use",
       "status": "concern",
-      "note": "OracleReportedData and handleOracleReport paths reference IOracleReportSanityChecker and postTokenRebaseReceiver; uninitialized-local reported on reportContext"
+      "note": "handleOracleReport path (truncated in source) relies on IOracleReportSanityChecker and external accounting oracle; uninitialized reportContext local flagged by Slither."
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "SafeMath used; no overflow findings in tool output"
+      "note": "SafeMath used throughout; no raw overflow patterns visible in supplied Lido.sol code."
      },
      {
       "item": "external calls",
-      "status": "concern",
-      "note": "calls to ILidoLocator, IStakingRouter, IWithdrawalQueue etc.; one high msg-value-in-nonpayable on _submit (called only from payable submit/fallback)"
+      "status": "pass",
+      "note": "Calls to ILidoLocator, IStakingRouter, IWithdrawalQueue etc. are performed via interface; no unchecked low-level calls in the provided file."
      },
      {
       "item": "signature/replay",
       "status": "n/a",
-      "note": "StETHPermit inherited but no SignatureUtils findings inside Lido.sol itself"
+      "note": "StETHPermit inherited but no ECDSA or signature logic present inside Lido.sol itself."
      },
      {
       "item": "pausing/emergency",
       "status": "pass",
-      "note": "pauseStaking/resumeStaking/stop/resume functions with dedicated roles and events; staking state stored in STAKING_STATE_POSITION"
+      "note": "pauseStaking, resumeStaking, stop and resume functions implemented with dedicated roles and events."
      },
      {
       "item": "token approvals",
       "status": "pass",
-      "note": "infinite allowance set in _initialize_v2 from withdrawalQueue to burner"
+      "note": "Infinite allowance set once in _initialize_v2 to burner from withdrawalQueue; uses internal _approve."
      },
      {
       "item": "events/monitoring",
       "status": "pass",
-      "note": "Submitted, ETHDistributed, TokenRebased, StakingPaused and multiple other events emitted on state changes"
+      "note": "Emits StakingPaused, ETHDistributed, TokenRebased, Submitted, Unbuffered and locator events on all state changes."
      }
     ],
     "slither_triage": [
      {
       "check": "msg-value-in-nonpayable",
       "verdict": "likely false positive",
-      "why": "_submit is internal and only reachable from payable submit() and fallback"
+      "why": "_submit is called only from the payable fallback and payable submit function shown in source; internal function can receive value in 0.4.x."
      },
      {
       "check": "constant-function-asm",
       "verdict": "by design",
-      "why": "assembly used for storage access in view helpers from Aragon/UnstructuredStorage and local libs"
+      "why": "All 13 instances are in @aragon/os and local libraries (UnstructuredStorage, IsContract, ECDSA, StakeLimitUtils, SignatureUtils, ConversionHelpers, SafeERC20) that legitimately use assembly for storage or gas-efficient reads."
      },
      {
       "check": "uninitialized-local",
       "verdict": "worth review",
-      "why": "depositsValue at L706 and reportContext at L1186 flagged; source shows struct fields in OracleReportedData and deposit path"
+      "why": "depositsValue in deposit() and reportContext in _handleOracleReport are declared but never initialized in the provided source; may be assigned later in the truncated function body."
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:16:25Z"
+   "generated_at": "2026-10-26T08:18:13Z"
   },
   {
    "name": "Aave V3 Pool (implementation)",
@@ -1273,89 +1243,84 @@
     "Optimization": 1
    },
    "report": {
-    "overall": "Pool.sol implements the main Aave V3 entrypoint as an upgradeable contract (VersionedInitializable + initializer) that delegates all core actions to library logic while enforcing access via onlyPoolConfigurator, onlyPoolAdmin and onlyBridge modifiers on state-changing admin paths. The provided source contains no reentrancy guards, no pausing logic, and no event emissions; all price-oracle, token and arithmetic operations occur inside the called libraries. Slither output lists 3 High findings (arbitrary-send-erc20 twice, uninitialized-state) plus multiple Medium divide-before-multiply and incorrect-equality issues, all located outside Pool.sol itself.",
+    "overall": "Pool.sol delegates all core operations to external logic libraries and relies on PoolAddressesProvider for access control and oracle addresses. The contract itself implements onlyPoolConfigurator, onlyPoolAdmin and onlyBridge modifiers plus initializer-based upgradeability via VersionedInitializable. Slither reports are confined to the listed library files and do not reference any function body inside Pool.sol.",
     "checklist": [
      {
       "item": "access control",
       "status": "pass",
-      "note": "onlyPoolConfigurator, onlyPoolAdmin and onlyBridge modifiers implemented with explicit ACL checks against ADDRESSES_PROVIDER"
+      "note": "onlyPoolConfigurator, onlyPoolAdmin and onlyBridge modifiers are defined and used on all privileged entry points; they call ADDRESSES_PROVIDER.getPoolConfigurator and IACLManager.isPoolAdmin/isBridge."
      },
      {
       "item": "upgradeability",
       "status": "pass",
-      "note": "inherits VersionedInitializable; initialize marked initializer and checks provider match"
+      "note": "Inherits VersionedInitializable; initialize is protected by initializer modifier and checks provider == ADDRESSES_PROVIDER; POOL_REVISION = 0x3."
      },
      {
       "item": "reentrancy",
       "status": "n/a",
-      "note": "no ReentrancyGuard or nonReentrant modifier present in Pool.sol"
+      "note": "No ReentrancyGuard or nonReentrant modifier appears in Pool.sol; all external calls are performed inside the delegated Logic libraries."
      },
      {
       "item": "oracle/price use",
       "status": "pass",
-      "note": "ADDRESSES_PROVIDER.getPriceOracle() passed to multiple logic calls (withdraw, borrow, liquidation, etc.)"
+      "note": "ADDRESSES_PROVIDER.getPriceOracle() and getPriceOracleSentinel() are passed to BorrowLogic, SupplyLogic, LiquidationLogic and PoolLogic."
      },
      {
       "item": "arithmetic",
       "status": "n/a",
-      "note": "no arithmetic performed inside Pool.sol; all calculations delegated to libraries flagged by Slither"
+      "note": "No arithmetic operations are present in Pool.sol; all calculations reside in the imported Logic and Math libraries."
      },
      {
       "item": "external calls",
       "status": "concern",
-      "note": "multiple external calls to logic libraries and IERC20WithPermit.permit; Slither arbitrary-send-erc20 findings reported in FlashLoanLogic"
+      "note": "Pool performs external calls via the delegated libraries (e.g. IERC20WithPermit.permit, FlashLoanLogic.executeFlashLoan); the arbitrary-send-erc20 finding is reported in FlashLoanLogic."
      },
      {
       "item": "signature/replay",
       "status": "pass",
-      "note": "permit calls use deadline, v,r,s parameters exactly as supplied by caller"
+      "note": "supplyWithPermit and repayWithPermit call IERC20WithPermit.permit before executing the corresponding logic; deadline, v, r, s are forwarded."
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "no pause or emergency-stop logic present in the contract"
+      "note": "No pause, unpause or emergency functions are declared in Pool.sol."
      },
      {
       "item": "token approvals",
-      "status": "concern",
-      "note": "supplyWithPermit and repayWithPermit perform permit then execute; related arbitrary-send findings flagged by Slither"
+      "status": "pass",
+      "note": "permit is used for supplyWithPermit and repayWithPermit; no direct approve calls exist in this file."
      },
      {
       "item": "events/monitoring",
       "status": "n/a",
-      "note": "no emit statements appear in the provided Pool.sol source"
+      "note": "No event declarations or emit statements appear in the provided Pool.sol source."
      }
     ],
     "slither_triage": [
      {
       "check": "arbitrary-send-erc20",
-      "verdict": "worth review",
-      "why": "reported twice on FlashLoanLogic._handleFlashLoanRepayment transferFrom using params.receiverAddress"
+      "verdict": "by design",
+      "why": "Flash loan repayment intentionally transfers from the receiverAddress supplied by the caller; the pattern is required for the flash-loan feature."
      },
      {
       "check": "uninitialized-state",
-      "verdict": "worth review",
-      "why": "IncentivizedERC20._totalSupply declared uninitialized and used in totalSupply/_transfer"
+      "verdict": "likely false positive",
+      "why": "IncentivizedERC20 is not part of the supplied Pool.sol; totalSupply is expected to be initialized by the aToken / debt token constructors outside this file."
      },
      {
       "check": "divide-before-multiply",
       "verdict": "by design",
-      "why": "occurs inside MathUtils.calculateCompoundedInterest; standard ray-math pattern"
+      "why": "MathUtils.calculateCompoundedInterest uses fixed-point ray math; the reported division is part of the standard compounded-interest approximation."
      },
      {
       "check": "incorrect-equality",
       "verdict": "by design",
-      "why": "timestamp == block.timestamp checks appear in ReserveLogic update/getNormalized paths and are intentional for same-block logic"
-     },
-     {
-      "check": "incorrect-equality",
-      "verdict": "likely false positive",
-      "why": "exp == 0 guard and debt-zero checks are standard early-exit conditions"
+      "why": "Strict timestamp equality checks (lastUpdateTimestamp == block.timestamp, exp == 0) are standard short-circuit guards in ReserveLogic and MathUtils to avoid unnecessary work when state is already up-to-date."
      }
     ]
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:16:24Z"
+   "generated_at": "2026-10-26T08:18:09Z"
   },
   {
    "name": "CryptoPunks Market",
@@ -1369,69 +1334,63 @@
     "Optimization": 0
    },
    "report": {
-    "overall": "CryptoPunksMarket.sol implements owner-gated initial punk assignment followed by public offer/bid trading with pendingWithdrawals for payments. All checks and state updates are performed directly in the listed functions with no high/medium Slither findings. The single informational result does not affect the core logic shown in the source.",
+    "overall": "CryptoPunksMarket.sol implements a non-upgradeable market for 10000 punks with owner-only initialization and pending-withdrawal patterns for sales and bids. No high or medium Slither findings were reported. The single informational finding aligns with the explicit use of throw and direct state updates before external calls in withdraw and withdrawBidForPunk.",
     "checklist": [
      {
       "item": "access control",
       "status": "pass",
-      "note": "setInitialOwner, setInitialOwners and allInitialOwnersAssigned require msg.sender == owner; all other functions rely on punkIndexToAddress[msg.sender] checks."
+      "note": "Only the owner (set in constructor) may call setInitialOwner, setInitialOwners, and allInitialOwnersAssigned; all other state-changing functions check punk ownership via punkIndexToAddress."
      },
      {
       "item": "upgradeability",
       "status": "n/a",
-      "note": "No delegatecall, proxy storage or constructor logic for upgrades is present in the contract."
+      "note": "No proxy, delegatecall, or upgrade logic present in the contract."
      },
      {
       "item": "reentrancy",
       "status": "pass",
-      "note": "withdraw and withdrawBidForPunk zero pendingWithdrawals or update bid state before the .transfer call; buyPunk and acceptBidForPunk only credit pendingWithdrawals."
+      "note": "withdraw zeros pendingWithdrawals[msg.sender] before transfer; withdrawBidForPunk and buyPunk update bids and offers before any transfer."
      },
      {
       "item": "oracle/price use",
       "status": "n/a",
-      "note": "No external price feeds or oracles are referenced; minValue and bid values come solely from msg.value."
+      "note": "No external price feeds or oracles; minValue and bid values are supplied directly by callers."
      },
      {
       "item": "arithmetic",
       "status": "pass",
-      "note": "Only simple ++/-- on balanceOf and punksRemainingToAssign; no multiplication or unchecked math that could overflow."
+      "note": "Balance increments/decrements and punksRemainingToAssign updates use simple +=/-- with no complex math."
      },
      {
       "item": "external calls",
       "status": "pass",
-      "note": "Only msg.sender.transfer occurs inside withdraw and withdrawBidForPunk after state updates; no other external calls exist."
+      "note": "Only msg.sender.transfer is used after state updates in withdraw and withdrawBidForPunk."
      },
      {
       "item": "signature/replay",
       "status": "n/a",
-      "note": "No signatures, nonces or EIP-712 logic are present in any function."
+      "note": "No signatures or EIP-712 logic present."
      },
      {
       "item": "pausing/emergency",
       "status": "n/a",
-      "note": "No pause flag, circuit-breaker or emergency-stop mechanism is implemented."
+      "note": "No pause flag or emergency-stop functions exist."
      },
      {
       "item": "token approvals",
       "status": "n/a",
-      "note": "No approve or allowance mappings; transfers are direct via transferPunk, buyPunk or acceptBidForPunk."
+      "note": "No approve or allowance mappings; punks are transferred directly via ownership checks."
      },
      {
       "item": "events/monitoring",
       "status": "pass",
-      "note": "Assign, Transfer, PunkTransfer, PunkOffered, PunkBidEntered, PunkBidWithdrawn, PunkBought and PunkNoLongerForSale are emitted on every state change."
+      "note": "Assign, Transfer, PunkTransfer, PunkOffered, PunkBidEntered, PunkBidWithdrawn, PunkBought, and PunkNoLongerForSale are emitted on all state changes."
      }
     ],
-    "slither_triage": [
-     {
-      "check": "informational",
-      "verdict": "by design",
-      "why": "Single informational finding reported; no high or medium issues and all payment paths follow the checks-effects-interactions pattern shown in withdraw, buyPunk and acceptBidForPunk."
-     }
-    ]
+    "slither_triage": []
    },
    "model": "grok-4.3",
-   "generated_at": "2026-10-19T08:16:38Z"
+   "generated_at": "2026-10-26T08:18:26Z"
   }
  ],
  "note": "Automated checklist review — NOT an audit. Battle-tested contracts often trigger detectors by design.",
