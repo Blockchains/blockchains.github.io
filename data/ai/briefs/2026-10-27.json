@@ -1,0 +1,60 @@
+{
+ "headline": "Crypto Market Structure Brief - 27 October 2026",
+ "summary": "Ethereum leads chains by TVL at $48.18bn, followed by Base at $5.99bn and Solana at $5.71bn. Uniswap V4 recorded the highest DEX volume at $889m in 24h while Tether generated the top fees at $17.3m. USDT remains the largest stablecoin at $181.85bn circulating with minor 1d contraction; several stablecoins show peg deviations. Base holds the highest L2 TVS at $14.82bn amid multiple recent governance and key compromise incidents.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum: $48.18bn TVL (rank 1)",
+    "Base: $5.99bn TVL (rank 2)",
+    "Solana: $5.71bn TVL (rank 3)",
+    "BSC: $5.49bn TVL (rank 4)",
+    "Tron: $5.40bn TVL (rank 5)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V4: $889m 24h volume (rank 1)",
+    "Uniswap V3: $864m 24h volume (rank 2)",
+    "Tether: $17.3m 24h fees (rank 1)",
+    "Circle USDC: $6.82m 24h fees (rank 2)",
+    "PumpSwap: $3.08m 24h fees (rank 3)"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT: $181.85bn circulating, -0.21% 1d change",
+    "USDC: $71.18bn circulating, -0.67% 1d change",
+    "USDS: $6.80bn circulating, +1.63% 1d change",
+    "Seven stablecoins on watch or depeg status including USDf, apxUSD and USDA"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base: $14.82bn TVS, Stage 1, OP Stack",
+    "Arbitrum One: $9.76bn TVS, Stage 1, Arbitrum stack",
+    "Hyperliquid: $6.59bn TVS, L3 on Arbitrum",
+    "Polygon PoS: $3.82bn TVS"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "14 incidents in last 14 days, largest $16m at CoinDCX (TRON)",
+    "Multiple governance attacks and hot wallet compromises reported",
+    "Yapeswap and X100 hit by malicious proposals and flashloan attacks on Ethereum"
+   ]
+  }
+ ],
+ "watchlist": [
+  "Stablecoin peg deviations: Falcon USD, apxUSD, USDA",
+  "Recent incidents: CoinDCX, X100, Initia",
+  "L2 exit window risks across Base, Arbitrum and OP Mainnet"
+ ],
+ "date": "2026-10-27",
+ "model": "grok-4.3",
+ "tokens": 13390
+}
