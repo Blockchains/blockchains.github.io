@@ -1,16 +1,76 @@
 {
  "service": "ai/incidents",
  "description": "AI incident explainer",
- "generated_at": "2026-10-27T09:57:03Z",
+ "generated_at": "2026-10-28T10:43:30Z",
  "source": "Grok (xAI) over public data: DefiLlama hacks",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "items": [
   {
+   "name": "Fence Finance",
+   "date": "2026-10-27",
+   "plain_english": "Fence Finance suffered a Token & Share Accounting incident using Incorrect Share Accounting technique. The amount involved was 1010000 USD.",
+   "lesson_for_builders": "Builders must address Incorrect Share Accounting in Token & Share Accounting to avoid 1010000 USD losses.",
+   "related_lab": null,
+   "amount_usd": 1010000,
+   "source": "",
+   "chains": [
+    "Avalanche"
+   ]
+  },
+  {
+   "name": "Zilliqa X-Bridge",
+   "date": "2026-10-27",
+   "plain_english": "Zilliqa X-Bridge suffered a Key Compromise incident using Private Key Compromised technique. No amount was reported.",
+   "lesson_for_builders": "Builders must address Private Key Compromised in Key Compromise to avoid losses.",
+   "related_lab": null,
+   "amount_usd": null,
+   "source": "",
+   "chains": [
+    "Zilliqa"
+   ]
+  },
+  {
+   "name": "Predict Fun",
+   "date": "2026-10-27",
+   "plain_english": "Predict Fun suffered a Frontend & Infrastructure incident using Frontend Compromise technique. The amount involved was 400000 USD.",
+   "lesson_for_builders": "Builders must address Frontend Compromise in Frontend & Infrastructure to avoid 400000 USD losses.",
+   "related_lab": null,
+   "amount_usd": 400000,
+   "source": "",
+   "chains": [
+    "BSC"
+   ]
+  },
+  {
+   "name": "Bloom Trading Bot",
+   "date": "2026-10-26",
+   "plain_english": "Bloom Trading Bot suffered a Frontend & Infrastructure incident using Supply Chain Attack technique. The amount involved was 953000 USD.",
+   "lesson_for_builders": "Builders must address Supply Chain Attack in Frontend & Infrastructure to avoid 953000 USD losses.",
+   "related_lab": null,
+   "amount_usd": 953000,
+   "source": "",
+   "chains": [
+    "Solana"
+   ]
+  },
+  {
+   "name": "Myriad Markets",
+   "date": "2026-10-26",
+   "plain_english": "Myriad Markets suffered a Frontend & Infrastructure incident using Key Leaked via Infrastructure technique. The amount involved was 0 USD.",
+   "lesson_for_builders": "Builders must address Key Leaked via Infrastructure in Frontend & Infrastructure to avoid 0 USD losses.",
+   "related_lab": null,
+   "amount_usd": 0,
+   "source": "",
+   "chains": [
+    "BSC"
+   ]
+  },
+  {
    "name": "Yapeswap",
    "date": "2026-10-25",
-   "plain_english": "The incident was classified as Governance using technique Malicious Proposal for amount 21900. The amount lost was 21900 USD under Governance classification.",
-   "lesson_for_builders": "Secure governance mechanisms against malicious proposals.",
+   "plain_english": "Yapeswap suffered a Governance incident using Malicious Proposal technique. The amount involved was 21900 USD.",
+   "lesson_for_builders": "Builders must address Malicious Proposal in Governance to avoid 21900 USD losses.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": 21900,
    "source": "",
@@ -21,8 +81,8 @@
   {
    "name": "X100",
    "date": "2026-10-24",
-   "plain_english": "The incident was classified as Governance using technique Flashloan Governance Attack for amount 4750000. The amount lost was 4750000 USD under Governance classification.",
-   "lesson_for_builders": "Protect against flashloan governance attacks.",
+   "plain_english": "X100 suffered a Governance incident using Flashloan Governance Attack technique. The amount involved was 4750000 USD.",
+   "lesson_for_builders": "Builders must address Flashloan Governance Attack in Governance to avoid 4750000 USD losses.",
    "related_lab": "L19 FlashLoan",
    "amount_usd": 4750000,
    "source": "",
@@ -33,8 +93,8 @@
   {
    "name": "Initia",
    "date": "2026-10-23",
-   "plain_english": "The incident was classified as Token & Share Accounting using technique Infinite Mint for amount 2600000. The amount lost was 2600000 USD under Token & Share Accounting classification.",
-   "lesson_for_builders": "Validate token minting logic to avoid infinite mints.",
+   "plain_english": "Initia suffered a Token & Share Accounting incident using Infinite Mint technique. The amount involved was 2600000 USD.",
+   "lesson_for_builders": "Builders must address Infinite Mint in Token & Share Accounting to avoid 2600000 USD losses.",
    "related_lab": null,
    "amount_usd": 2600000,
    "source": "",
@@ -45,8 +105,8 @@
   {
    "name": "WAX Multi-Chain Bridge",
    "date": "2026-10-22",
-   "plain_english": "The incident was classified as Input Validation using technique Missing Input Validation for amount 90500. The amount lost was 90500 USD under Input Validation classification.",
-   "lesson_for_builders": "Implement strict input validation checks.",
+   "plain_english": "WAX Multi-Chain Bridge suffered a Input Validation incident using Missing Input Validation technique. The amount involved was 90500 USD.",
+   "lesson_for_builders": "Builders must address Missing Input Validation in Input Validation to avoid 90500 USD losses.",
    "related_lab": null,
    "amount_usd": 90500,
    "source": "",
@@ -59,8 +119,8 @@
   {
    "name": "Swell",
    "date": "2026-10-21",
-   "plain_english": "The incident was classified as Key Compromise using technique Hot Wallet Key Compromised for amount null. The amount lost was null USD under Key Compromise classification.",
-   "lesson_for_builders": "Secure hot wallet keys properly.",
+   "plain_english": "Swell suffered a Key Compromise incident using Hot Wallet Key Compromised technique. No amount was reported.",
+   "lesson_for_builders": "Builders must address Hot Wallet Key Compromised in Key Compromise to avoid losses.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -74,8 +134,8 @@
   {
    "name": "CoinDCX",
    "date": "2026-10-21",
-   "plain_english": "The incident was classified as Key Compromise using technique Hot Wallet Key Compromised for amount 16000000. The amount lost was 16000000 USD under Key Compromise classification.",
-   "lesson_for_builders": "Secure hot wallet keys properly.",
+   "plain_english": "CoinDCX suffered a Key Compromise incident using Hot Wallet Key Compromised technique. The amount involved was 16000000 USD.",
+   "lesson_for_builders": "Builders must address Hot Wallet Key Compromised in Key Compromise to avoid 16000000 USD losses.",
    "related_lab": null,
    "amount_usd": 16000000,
    "source": "",
@@ -85,77 +145,14 @@
   },
   {
    "name": "AlpsCon AI Trade Hub",
-   "date": "2026-10-18",
-   "plain_english": "The incident was classified as Token & Share Accounting using technique Incorrect Share Accounting for amount 152809.36. The amount lost was 152809.36 USD under Token & Share Accounting classification.",
-   "lesson_for_builders": "Ensure correct share accounting calculations.",
-   "related_lab": "L28 InvariantVault",
+   "date": "2026-10-19",
+   "plain_english": "AlpsCon AI Trade Hub suffered a Token & Share Accounting incident using Incorrect Share Accounting technique. The amount involved was 152809.36 USD.",
+   "lesson_for_builders": "Builders must address Incorrect Share Accounting in Token & Share Accounting to avoid 152809.36 USD losses.",
+   "related_lab": null,
    "amount_usd": 152809.36,
    "source": "",
    "chains": [
     "BSC"
-   ]
-  },
-  {
-   "name": "Coffer",
-   "date": "2026-10-17",
-   "plain_english": "The incident was classified as Token & Share Accounting using technique Rounding Error for amount 0.7. The amount lost was 0.7 USD under Token & Share Accounting classification.",
-   "lesson_for_builders": "Handle rounding errors in accounting.",
-   "related_lab": "L28 InvariantVault",
-   "amount_usd": 0.7,
-   "source": "",
-   "chains": [
-    "Solana"
-   ]
-  },
-  {
-   "name": "Qubic",
-   "date": "2026-10-16",
-   "plain_english": "The incident was classified as Key Compromise using technique Weak Key Generation for amount 1300000. The amount lost was 1300000 USD under Key Compromise classification.",
-   "lesson_for_builders": "Use strong key generation methods.",
-   "related_lab": null,
-   "amount_usd": 1300000,
-   "source": "",
-   "chains": [
-    "Qubic"
-   ]
-  },
-  {
-   "name": "Pirate Chain",
-   "date": "2026-10-16",
-   "plain_english": "The incident was classified as Token & Share Accounting using technique Unbacked Mint for amount null. The amount lost was null USD under Token & Share Accounting classification.",
-   "lesson_for_builders": "Prevent unbacked mint operations.",
-   "related_lab": null,
-   "amount_usd": null,
-   "source": "",
-   "chains": [
-    "Pirate Chain"
-   ]
-  },
-  {
-   "name": "Affluent",
-   "date": "2026-10-16",
-   "plain_english": "The incident was classified as Token & Share Accounting using technique Unbacked Mint for amount 1053000. The amount lost was 1053000 USD under Token & Share Accounting classification.",
-   "lesson_for_builders": "Prevent unbacked mint operations.",
-   "related_lab": null,
-   "amount_usd": 1053000,
-   "source": "",
-   "chains": [
-    "TON"
-   ]
-  },
-  {
-   "name": "UNCX Network V2",
-   "date": "2026-10-14",
-   "plain_english": "The incident was classified as Token & Share Accounting using technique Incorrect Share Accounting for amount 86000. The amount lost was 86000 USD under Token & Share Accounting classification.",
-   "lesson_for_builders": "Ensure correct share accounting calculations.",
-   "related_lab": "L28 InvariantVault",
-   "amount_usd": 86000,
-   "source": "",
-   "chains": [
-    "Ethereum",
-    "Base",
-    "BSC",
-    "Robinhood Chain"
    ]
   }
  ],

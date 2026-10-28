@@ -1,14 +1,89 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-27T09:56:20Z",
+ "generated_at": "2026-10-28T10:42:46Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21191501156.12813,
- "ytd_usd": 2321785307.128132,
+ "total_all_time_usd": 21193864156.12813,
+ "ytd_usd": 2263898307.128132,
  "incidents": [
+  {
+   "date": "2026-10-27",
+   "name": "Fence Finance",
+   "amount_usd": 1010000,
+   "chains": [
+    "Avalanche"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Incorrect Share Accounting",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-10-27",
+   "name": "Zilliqa X-Bridge",
+   "amount_usd": null,
+   "chains": [
+    "Zilliqa"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-10-27",
+   "name": "Predict Fun",
+   "amount_usd": 400000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Frontend Compromise",
+   "target_type": "Prediction Market",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-10-26",
+   "name": "Bloom Trading Bot",
+   "amount_usd": 953000,
+   "chains": [
+    "Solana"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Supply Chain Attack",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-10-26",
+   "name": "Myriad Markets",
+   "amount_usd": 0,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Key Leaked via Infrastructure",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
   {
    "date": "2026-10-25",
    "name": "Yapeswap",
@@ -559,6 +634,21 @@
    "returned_usd": null,
    "source": "",
    "language": "Solidity"
+  },
+  {
+   "date": "2026-09-20",
+   "name": "BV-7X",
+   "amount_usd": null,
+   "chains": [
+    "Robinhood Chain"
+   ],
+   "classification": "Social Engineering",
+   "technique": "Phishing",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
   },
   {
    "date": "2026-09-19",
@@ -4482,97 +4572,6 @@
    ],
    "classification": "Oracle Manipulation",
    "technique": "Oracle Misconfiguration",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-02-01",
-   "name": "CrossCurve",
-   "amount_usd": 3000000,
-   "chains": [],
-   "classification": "Bridge & Cross-Chain",
-   "technique": "Cross-Chain Message Spoofing",
-   "target_type": "DeFi Protocol",
-   "bridge": true,
-   "returned_usd": null,
-   "source": "",
-   "language": null
-  },
-  {
-   "date": "2026-01-31",
-   "name": "Step Finance",
-   "amount_usd": 40000000,
-   "chains": [
-    "Solana"
-   ],
-   "classification": "Key Compromise",
-   "technique": "Private Key Compromised",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Rust"
-  },
-  {
-   "date": "2026-01-29",
-   "name": "Revert Lend",
-   "amount_usd": 50000,
-   "chains": [
-    "Base"
-   ],
-   "classification": "Protocol Logic",
-   "technique": "Staking Logic Flaw",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-27",
-   "name": "PGNLZ",
-   "amount_usd": 100000,
-   "chains": [
-    "BSC"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Incorrect Share Accounting",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-25",
-   "name": "Aperture LM",
-   "amount_usd": 3670000,
-   "chains": [
-    "Ethereum",
-    "Base",
-    "BSC"
-   ],
-   "classification": "Access Control",
-   "technique": "Token Approval Abuse",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-01-25",
-   "name": "Matcha",
-   "amount_usd": 13430000,
-   "chains": [
-    "Base",
-    "Ethereum"
-   ],
-   "classification": "Frontend & Infrastructure",
-   "technique": "Frontend Compromise",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

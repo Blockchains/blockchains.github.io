@@ -1,0 +1,55 @@
+{
+ "headline": "Crypto Market Structure Brief: 28 Oct 2026",
+ "summary": "Ethereum holds the top TVL position at $46.2 billion while Base ranks third at $6.13 billion. Uniswap V4 leads 24-hour DEX volume at $858.5 million and Tether reports the highest fees at $17.3 million. USDT circulating supply stands at $181.2 billion with several stablecoins showing peg deviations. Multiple security incidents occurred in the prior 14 days, primarily involving key compromises and accounting errors.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum leads with $46.21 billion TVL",
+    "Bitcoin follows at $6.36 billion, Base at $6.13 billion, Solana at $5.76 billion",
+    "BSC at $5.52 billion and Tron at $5.33 billion complete the top six"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V4 records $858.5 million 24h volume, Uniswap V3 $745.8 million",
+    "PancakeSwap AMM V3 follows at $591.9 million 24h volume",
+    "Tether leads fees at $17.3 million 24h, Circle USDC at $6.8 million"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulating supply $181.2 billion, USDC $71.3 billion",
+    "USDS at $6.67 billion, DAI at $4.70 billion, USDe at $4.54 billion",
+    "Six stablecoins under watch or depegged, including AP USDA at -4.73% deviation"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base TVS $15.10 billion, Arbitrum One $9.82 billion",
+    "Hyperliquid $6.61 billion, Polygon PoS $3.83 billion",
+    "Robinhood Chain $2.35 billion TVS among tracked L2s"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Fence Finance lost $1.01 million on Avalanche via incorrect share accounting",
+    "CoinDCX reported $16 million loss on TRON from hot wallet key compromise",
+    "14 incidents logged in prior 14 days across multiple chains and categories"
+   ]
+  }
+ ],
+ "watchlist": [
+  "Stablecoin peg deviations for AP USDA and pmUSD",
+  "TVS changes on Base and Arbitrum One",
+  "Ongoing incidents involving key compromises",
+  "USDT and USDC supply shifts across chains"
+ ],
+ "date": "2026-10-28",
+ "model": "grok-4.3",
+ "tokens": 13351
+}
