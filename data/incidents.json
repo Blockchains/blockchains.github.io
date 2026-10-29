@@ -1,14 +1,44 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-28T10:42:46Z",
+ "generated_at": "2026-10-29T11:00:08Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21193864156.12813,
- "ytd_usd": 2263898307.128132,
+ "total_all_time_usd": 21194647256.12813,
+ "ytd_usd": 2262500407.128132,
  "incidents": [
+  {
+   "date": "2026-10-28",
+   "name": "zkLink Nova",
+   "amount_usd": 783100,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Cross-Chain Message Spoofing",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-10-28",
+   "name": "Hifi Finance",
+   "amount_usd": null,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Governance",
+   "technique": "Malicious Proposal",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
   {
    "date": "2026-10-27",
    "name": "Fence Finance",
@@ -4544,36 +4574,6 @@
    "technique": "Validator Key Compromised",
    "target_type": "DeFi Protocol",
    "bridge": true,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-02-19",
-   "name": "Velar Perps",
-   "amount_usd": 401000,
-   "chains": [
-    "Mezo"
-   ],
-   "classification": "Oracle Manipulation",
-   "technique": "Predictable Oracle Update",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-02-15",
-   "name": "Moonwell Lending",
-   "amount_usd": 1780000,
-   "chains": [
-    "Base"
-   ],
-   "classification": "Oracle Manipulation",
-   "technique": "Oracle Misconfiguration",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
    "returned_usd": null,
    "source": "",
    "language": "Solidity"
