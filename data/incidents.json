@@ -1,14 +1,50 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-10-29T11:00:08Z",
+ "generated_at": "2026-10-30T10:57:32Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 21194647256.12813,
- "ytd_usd": 2262500407.128132,
+ "total_all_time_usd": 27557347256.12813,
+ "ytd_usd": 8620795407.128132,
  "incidents": [
+  {
+   "date": "2026-10-29",
+   "name": "Polymarket International",
+   "amount_usd": 2700000,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Supply Chain Attack",
+   "target_type": "Prediction Market",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "JavaScript"
+  },
+  {
+   "date": "2026-10-29",
+   "name": "Binance CEX",
+   "amount_usd": 6360000000,
+   "chains": [
+    "Ethereum",
+    "Bitcoin",
+    "TRON",
+    "Avalanche",
+    "Optimism",
+    "Arbitrum",
+    "Base"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Key Leaked via Infrastructure",
+   "target_type": "CEX",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
   {
    "date": "2026-10-28",
    "name": "zkLink Nova",
@@ -2908,8 +2944,8 @@
    "chains": [
     "Ethereum"
    ],
-   "classification": "Frontend & Infrastructure",
-   "technique": "Key Leaked via Infrastructure",
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
@@ -4544,36 +4580,6 @@
    "technique": "Incorrect Share Accounting",
    "target_type": "DeFi Protocol",
    "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-02-21",
-   "name": "Veil Cash",
-   "amount_usd": 5000,
-   "chains": [
-    "Base"
-   ],
-   "classification": "Bridge & Cross-Chain",
-   "technique": "Proof Verifier Bug",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-02-21",
-   "name": "IoTeX",
-   "amount_usd": 4400000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Key Compromise",
-   "technique": "Validator Key Compromised",
-   "target_type": "DeFi Protocol",
-   "bridge": true,
    "returned_usd": null,
    "source": "",
    "language": "Solidity"

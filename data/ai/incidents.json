@@ -1,16 +1,46 @@
 {
  "service": "ai/incidents",
  "description": "AI incident explainer",
- "generated_at": "2026-10-29T11:00:50Z",
+ "generated_at": "2026-10-30T10:58:07Z",
  "source": "Grok (xAI) over public data: DefiLlama hacks",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "items": [
   {
+   "name": "Polymarket International",
+   "date": "2026-10-29",
+   "plain_english": "The incident was classified as Frontend & Infrastructure using technique Supply Chain Attack with amount 2700000 USD.",
+   "lesson_for_builders": "Secure frontend infrastructure against supply chain attacks to prevent losses of this scale.",
+   "related_lab": null,
+   "amount_usd": 2700000,
+   "source": "",
+   "chains": [
+    "Polygon"
+   ]
+  },
+  {
+   "name": "Binance CEX",
+   "date": "2026-10-29",
+   "plain_english": "The incident was classified as Frontend & Infrastructure using technique Key Leaked via Infrastructure with amount 6360000000 USD.",
+   "lesson_for_builders": "Protect infrastructure keys to avoid large-scale leaks in frontend and infrastructure setups.",
+   "related_lab": null,
+   "amount_usd": 6360000000,
+   "source": "",
+   "chains": [
+    "Ethereum",
+    "Bitcoin",
+    "TRON",
+    "Avalanche",
+    "Optimism",
+    "Arbitrum",
+    "Base"
+   ]
+  },
+  {
    "name": "zkLink Nova",
    "date": "2026-10-28",
-   "plain_english": "The incident involved Bridge & Cross-Chain using Cross-Chain Message Spoofing resulting in 783100 USD loss. The target was a DeFi Protocol.",
-   "lesson_for_builders": "Validate all cross-chain messages to prevent spoofing attacks.",
+   "plain_english": "The incident was classified as Bridge & Cross-Chain using technique Cross-Chain Message Spoofing with amount 783100 USD.",
+   "lesson_for_builders": "Validate cross-chain messages rigorously to mitigate spoofing in bridge scenarios.",
    "related_lab": "L43 CrossChainReplay",
    "amount_usd": 783100,
    "source": "",
@@ -21,8 +51,8 @@
   {
    "name": "Hifi Finance",
    "date": "2026-10-28",
-   "plain_english": "The incident involved Governance using Malicious Proposal with no amount reported. The target was a DeFi Protocol.",
-   "lesson_for_builders": "Implement strict access controls on governance proposals.",
+   "plain_english": "The incident was classified as Governance using technique Malicious Proposal with amount null USD.",
+   "lesson_for_builders": "Implement strong access controls for governance proposals to prevent malicious actions.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": null,
    "source": "",
@@ -33,8 +63,8 @@
   {
    "name": "Fence Finance",
    "date": "2026-10-27",
-   "plain_english": "The incident involved Token & Share Accounting using Incorrect Share Accounting resulting in 1010000 USD loss. The target was a DeFi Protocol.",
-   "lesson_for_builders": "Enforce invariants on share accounting to avoid miscalculations.",
+   "plain_english": "The incident was classified as Token & Share Accounting using technique Incorrect Share Accounting with amount 1010000 USD.",
+   "lesson_for_builders": "Enforce invariant checks on share accounting to avoid incorrect token distributions.",
    "related_lab": "L28 InvariantVault",
    "amount_usd": 1010000,
    "source": "",
@@ -45,9 +75,9 @@
   {
    "name": "Zilliqa X-Bridge",
    "date": "2026-10-27",
-   "plain_english": "The incident involved Key Compromise using Private Key Compromised with no amount reported. The target was a DeFi Protocol.",
-   "lesson_for_builders": "Use multisig for key management on bridges.",
-   "related_lab": "L14 MultiSig",
+   "plain_english": "The incident was classified as Key Compromise using technique Private Key Compromised with amount null USD.",
+   "lesson_for_builders": "Safeguard private keys in bridge operations to prevent compromise.",
+   "related_lab": null,
    "amount_usd": null,
    "source": "",
    "chains": [
@@ -57,8 +87,8 @@
   {
    "name": "Predict Fun",
    "date": "2026-10-27",
-   "plain_english": "The incident involved Frontend & Infrastructure using Frontend Compromise resulting in 400000 USD loss. The target was a Prediction Market.",
-   "lesson_for_builders": "Secure frontend infrastructure against compromises.",
+   "plain_english": "The incident was classified as Frontend & Infrastructure using technique Frontend Compromise with amount 400000 USD.",
+   "lesson_for_builders": "Harden frontend components against compromises in prediction market targets.",
    "related_lab": null,
    "amount_usd": 400000,
    "source": "",
@@ -69,8 +99,8 @@
   {
    "name": "Bloom Trading Bot",
    "date": "2026-10-26",
-   "plain_english": "The incident involved Frontend & Infrastructure using Supply Chain Attack resulting in 953000 USD loss. The target was a Wallet.",
-   "lesson_for_builders": "Audit supply chain dependencies in wallet tools.",
+   "plain_english": "The incident was classified as Frontend & Infrastructure using technique Supply Chain Attack with amount 953000 USD.",
+   "lesson_for_builders": "Audit supply chains in wallet-related frontend infrastructure to block attacks.",
    "related_lab": null,
    "amount_usd": 953000,
    "source": "",
@@ -81,8 +111,8 @@
   {
    "name": "Myriad Markets",
    "date": "2026-10-26",
-   "plain_english": "The incident involved Frontend & Infrastructure using Key Leaked via Infrastructure with no amount reported. The target was a DeFi Protocol.",
-   "lesson_for_builders": "Protect infrastructure keys from leaks.",
+   "plain_english": "The incident was classified as Frontend & Infrastructure using technique Key Leaked via Infrastructure with amount 0 USD.",
+   "lesson_for_builders": "Secure infrastructure keys even when no funds are lost in frontend incidents.",
    "related_lab": null,
    "amount_usd": 0,
    "source": "",
@@ -93,9 +123,9 @@
   {
    "name": "Yapeswap",
    "date": "2026-10-25",
-   "plain_english": "The incident involved Governance using Malicious Proposal resulting in 21900 USD loss. The target was a DeFi Protocol.",
-   "lesson_for_builders": "Implement strict access controls on governance proposals.",
-   "related_lab": "L03 Ownable/access control",
+   "plain_english": "The incident was classified as Governance using technique Malicious Proposal with amount 21900 USD.",
+   "lesson_for_builders": "Use multisig protections for governance to stop malicious proposals.",
+   "related_lab": "L14 MultiSig",
    "amount_usd": 21900,
    "source": "",
    "chains": [
@@ -105,8 +135,8 @@
   {
    "name": "X100",
    "date": "2026-10-24",
-   "plain_english": "The incident involved Governance using Flashloan Governance Attack resulting in 4750000 USD loss. The target was a DeFi Protocol.",
-   "lesson_for_builders": "Guard governance against flashloan manipulations.",
+   "plain_english": "The incident was classified as Governance using technique Flashloan Governance Attack with amount 4750000 USD.",
+   "lesson_for_builders": "Guard against flashloan usage in governance attacks to limit losses.",
    "related_lab": "L19 FlashLoan",
    "amount_usd": 4750000,
    "source": "",
@@ -117,42 +147,13 @@
   {
    "name": "Initia",
    "date": "2026-10-23",
-   "plain_english": "The incident involved Token & Share Accounting using Infinite Mint resulting in 2600000 USD loss. The target was a Chain.",
-   "lesson_for_builders": "Enforce invariants to prevent infinite minting.",
+   "plain_english": "The incident was classified as Token & Share Accounting using technique Infinite Mint with amount 2600000 USD.",
+   "lesson_for_builders": "Apply strict accounting invariants to prevent infinite minting in token systems.",
    "related_lab": "L28 InvariantVault",
    "amount_usd": 2600000,
    "source": "",
    "chains": [
     "Initia"
-   ]
-  },
-  {
-   "name": "WAX Multi-Chain Bridge",
-   "date": "2026-10-22",
-   "plain_english": "The incident involved Input Validation using Missing Input Validation resulting in 90500 USD loss. The target was a DeFi Protocol.",
-   "lesson_for_builders": "Validate inputs on cross-chain bridges.",
-   "related_lab": "L43 CrossChainReplay",
-   "amount_usd": 90500,
-   "source": "",
-   "chains": [
-    "Solana",
-    "Ethereum",
-    "WAX"
-   ]
-  },
-  {
-   "name": "Swell",
-   "date": "2026-10-21",
-   "plain_english": "The incident involved Key Compromise using Hot Wallet Key Compromised with no amount reported. The target was a DeFi Protocol.",
-   "lesson_for_builders": "Use multisig for hot wallet key protection.",
-   "related_lab": "L14 MultiSig",
-   "amount_usd": null,
-   "source": "",
-   "chains": [
-    "Ethereum",
-    "Arbitrum",
-    "Base",
-    "Hyperliquid L1"
    ]
   }
  ],
