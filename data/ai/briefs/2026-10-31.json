@@ -1,0 +1,62 @@
+{
+ "headline": "31 October 2026: Ethereum tops TVL at $43.9bn; USDT leads stablecoins",
+ "summary": "Ethereum holds the largest chain TVL at $43.9bn, followed by Bitcoin at $6.1bn and Base at $5.8bn. Uniswap V4 recorded the highest 24h DEX volume at $1.33bn while Tether generated the top fees at $16.9m. USDT circulation stands at $179.6bn and USDC at $71.9bn, with several stablecoins showing peg deviations. Multiple security incidents occurred in the prior 14 days, including a $6.36bn event at Binance CEX.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum: $43.91bn TVL (rank 1)",
+    "Bitcoin: $6.11bn TVL (rank 2)",
+    "Base: $5.85bn TVL (rank 3)",
+    "Tron: $5.48bn TVL (rank 4)",
+    "Solana: $5.45bn TVL (rank 5)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V4: $1.33bn 24h volume, $11.6m fees",
+    "Uniswap V3: $1.09bn 24h volume",
+    "PancakeSwap AMM V3: $948.7m 24h volume",
+    "Tether: $16.9m 24h fees (rank 1)",
+    "Flashbots: $13.7m 24h fees (rank 2)"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT: $179.65bn circulating, -0.38% 1d change",
+    "USDC: $71.92bn circulating, +0.63% 1d change",
+    "USDS: $6.45bn circulating",
+    "Six stablecoins on watch or depeg status, including AP USDA at -4.92% deviation"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base: $14.53bn TVS, Stage 1, OP Stack",
+    "Arbitrum One: $9.63bn TVS, Stage 1",
+    "Hyperliquid: $6.46bn TVS, layer 3",
+    "Polygon PoS: $3.85bn TVS"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Binance CEX incident: $6.36bn, 29 Oct, key leak",
+    "14 incidents recorded in last 14 days across chains",
+    "Ethereum base fee: 0.07 gwei",
+    "Base gas price: 0.006 gwei"
+   ]
+  }
+ ],
+ "watchlist": [
+  "Stablecoin peg deviations (AP USDA, pmUSD)",
+  "Binance CEX $6.36bn incident (29 Oct)",
+  "zkLink Nova bridge exploit (28 Oct)",
+  "Top L2 TVS changes (Base, Arbitrum)"
+ ],
+ "date": "2026-10-31",
+ "model": "grok-4.3",
+ "tokens": 13559
+}

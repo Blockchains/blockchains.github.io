@@ -1,18 +1,18 @@
 {
  "service": "depeg",
  "description": "Stablecoin depeg monitor (USD-pegged, > $50M)",
- "generated_at": "2026-10-30T10:57:40Z",
+ "generated_at": "2026-10-31T10:30:12Z",
  "source": "DefiLlama stablecoins API",
  "source_url": "https://stablecoins.llama.fi/stablecoins",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
- "count": 57,
+ "count": 56,
  "alerts": [
   {
    "name": "Falcon USD",
    "symbol": "USDf",
-   "price": 0.9926004818289392,
-   "deviation_pct": -0.74,
-   "circulating_usd": 1715307664,
+   "price": 0.9901653793855877,
+   "deviation_pct": -0.983,
+   "circulating_usd": 1662871849,
    "mechanism": "crypto-backed",
    "status": "watch",
    "url": "https://defillama.com/stablecoin/falcon-usd"
@@ -20,9 +20,9 @@
   {
    "name": "apxUSD",
    "symbol": "apxUSD",
-   "price": 0.9938221033646906,
-   "deviation_pct": -0.618,
-   "circulating_usd": 284107418,
+   "price": 0.9866084830414494,
+   "deviation_pct": -1.339,
+   "circulating_usd": 282045235,
    "mechanism": "crypto-backed",
    "status": "watch",
    "url": "https://defillama.com/stablecoin/apxusd"
@@ -30,39 +30,39 @@
   {
    "name": "Frax",
    "symbol": "FRAX",
-   "price": 0.9907895935075381,
-   "deviation_pct": -0.921,
-   "circulating_usd": 142487209,
+   "price": 0.9911219028991471,
+   "deviation_pct": -0.888,
+   "circulating_usd": 142987160,
    "mechanism": "algorithmic",
    "status": "watch",
    "url": "https://defillama.com/stablecoin/frax"
   },
   {
+   "name": "River Stablecoin",
+   "symbol": "satUSD",
+   "price": 0.9938277800801026,
+   "deviation_pct": -0.617,
+   "circulating_usd": 87085534,
+   "mechanism": "crypto-backed",
+   "status": "watch",
+   "url": "https://defillama.com/stablecoin/river-stablecoin"
+  },
+  {
    "name": "AP USDA",
    "symbol": "USDA",
-   "price": 0.9575768965177098,
-   "deviation_pct": -4.242,
-   "circulating_usd": 83277828,
+   "price": 0.9508523983244261,
+   "deviation_pct": -4.915,
+   "circulating_usd": 82693017,
    "mechanism": "fiat-backed",
    "status": "depeg",
    "url": "https://defillama.com/stablecoin/ap-usda"
   },
   {
-   "name": "Cygnus Finance Global USD",
-   "symbol": "cgUSD",
-   "price": 0.9915955612999547,
-   "deviation_pct": -0.84,
-   "circulating_usd": 75618124,
-   "mechanism": "fiat-backed",
-   "status": "watch",
-   "url": "https://defillama.com/stablecoin/cygnus-finance-global-usd"
-  },
-  {
    "name": "pmUSD",
    "symbol": "pmUSD",
-   "price": 0.5798619662425344,
-   "deviation_pct": -42.014,
-   "circulating_usd": 54507723,
+   "price": 0.5404404256252928,
+   "deviation_pct": -45.956,
+   "circulating_usd": 50802050,
    "mechanism": "crypto-backed",
    "status": "depeg",
    "url": "https://defillama.com/stablecoin/pmusd"
@@ -72,9 +72,9 @@
   {
    "name": "Tether",
    "symbol": "USDT",
-   "price": 0.9990435756886592,
-   "deviation_pct": -0.096,
-   "circulating_usd": 180309470236,
+   "price": 0.9991845426440502,
+   "deviation_pct": -0.082,
+   "circulating_usd": 179646510522,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/tether"
@@ -82,9 +82,9 @@
   {
    "name": "USD Coin",
    "symbol": "USDC",
-   "price": 0.9995272396911025,
-   "deviation_pct": -0.047,
-   "circulating_usd": 71591118980,
+   "price": 0.9998425304531249,
+   "deviation_pct": -0.016,
+   "circulating_usd": 71920612155,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/usd-coin"
@@ -92,9 +92,9 @@
   {
    "name": "Sky Dollar",
    "symbol": "USDS",
-   "price": 0.9998285757383513,
-   "deviation_pct": -0.017,
-   "circulating_usd": 6496968584,
+   "price": 1.0004050480282427,
+   "deviation_pct": 0.041,
+   "circulating_usd": 6452970355,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/sky-dollar"
@@ -102,9 +102,9 @@
   {
    "name": "Dai",
    "symbol": "DAI",
-   "price": 0.9999920570120189,
-   "deviation_pct": -0.001,
-   "circulating_usd": 4734878527,
+   "price": 1.0001921620066068,
+   "deviation_pct": 0.019,
+   "circulating_usd": 4736480560,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/dai"
@@ -112,9 +112,9 @@
   {
    "name": "Ethena USDe",
    "symbol": "USDe",
-   "price": 0.9984964754028086,
-   "deviation_pct": -0.15,
-   "circulating_usd": 4524080655,
+   "price": 0.9989705930987526,
+   "deviation_pct": -0.103,
+   "circulating_usd": 4509383635,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/ethena-usde"
@@ -122,9 +122,9 @@
   {
    "name": "World Liberty Financial USD",
    "symbol": "USD1",
-   "price": 0.9983938750237304,
-   "deviation_pct": -0.161,
-   "circulating_usd": 3887018161,
+   "price": 0.9981909659501814,
+   "deviation_pct": -0.181,
+   "circulating_usd": 3886227598,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/world-liberty-financial-usd"
@@ -132,9 +132,9 @@
   {
    "name": "Global Dollar",
    "symbol": "USDG",
-   "price": 1.0001498935954327,
-   "deviation_pct": 0.015,
-   "circulating_usd": 2990259106,
+   "price": 1.000097884551136,
+   "deviation_pct": 0.01,
+   "circulating_usd": 2917100992,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/global-dollar"
@@ -142,9 +142,9 @@
   {
    "name": "PayPal USD",
    "symbol": "PYUSD",
-   "price": 0.9990312888007857,
-   "deviation_pct": -0.097,
-   "circulating_usd": 2957968087,
+   "price": 1.0002736956135172,
+   "deviation_pct": 0.027,
+   "circulating_usd": 2810522960,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/paypal-usd"
@@ -152,9 +152,9 @@
   {
    "name": "Ripple USD",
    "symbol": "RLUSD",
-   "price": 1.000257785851608,
-   "deviation_pct": 0.026,
-   "circulating_usd": 2564160708,
+   "price": 1.0000508934883117,
+   "deviation_pct": 0.005,
+   "circulating_usd": 2417319462,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/ripple-usd"
@@ -164,7 +164,7 @@
    "symbol": "BUIDL",
    "price": 1.0,
    "deviation_pct": 0.0,
-   "circulating_usd": 2097595097,
+   "circulating_usd": 2007537546,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/blackrock-usd"
@@ -172,9 +172,9 @@
   {
    "name": "Falcon USD",
    "symbol": "USDf",
-   "price": 0.9926004818289392,
-   "deviation_pct": -0.74,
-   "circulating_usd": 1715307664,
+   "price": 0.9901653793855877,
+   "deviation_pct": -0.983,
+   "circulating_usd": 1662871849,
    "mechanism": "crypto-backed",
    "status": "watch",
    "url": "https://defillama.com/stablecoin/falcon-usd"
@@ -182,9 +182,9 @@
   {
    "name": "United Stables",
    "symbol": "U",
-   "price": 0.9990389757806226,
-   "deviation_pct": -0.096,
-   "circulating_usd": 1605100710,
+   "price": 0.9992075242558028,
+   "deviation_pct": -0.079,
+   "circulating_usd": 1605371508,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/united-stables"
@@ -192,9 +192,9 @@
   {
    "name": "USDD",
    "symbol": "USDD",
-   "price": 0.998747649893364,
-   "deviation_pct": -0.125,
-   "circulating_usd": 1489718013,
+   "price": 0.9988677307043783,
+   "deviation_pct": -0.113,
+   "circulating_usd": 1519829895,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/usdd"
@@ -202,9 +202,9 @@
   {
    "name": "USDGO",
    "symbol": "USDGO",
-   "price": 1.0004012773413924,
-   "deviation_pct": 0.04,
-   "circulating_usd": 1270077382,
+   "price": 1.0001440362513203,
+   "deviation_pct": 0.014,
+   "circulating_usd": 1262749789,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/usdgo"
@@ -212,9 +212,9 @@
   {
    "name": "Open USD",
    "symbol": "OUSD",
-   "price": 1.002757240510743,
-   "deviation_pct": 0.276,
-   "circulating_usd": 888419067,
+   "price": 1.001266252158372,
+   "deviation_pct": 0.127,
+   "circulating_usd": 888351441,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/open-usd"
@@ -222,9 +222,9 @@
   {
    "name": "GHO",
    "symbol": "GHO",
-   "price": 0.9979478868875005,
-   "deviation_pct": -0.205,
-   "circulating_usd": 697565573,
+   "price": 0.9982447126604304,
+   "deviation_pct": -0.176,
+   "circulating_usd": 697773054,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/gho"
@@ -232,9 +232,9 @@
   {
    "name": "Usual USD",
    "symbol": "USD0",
-   "price": 0.9991204362184392,
-   "deviation_pct": -0.088,
-   "circulating_usd": 541430263,
+   "price": 0.9991304516077806,
+   "deviation_pct": -0.087,
+   "circulating_usd": 541435692,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/usual-usd"
@@ -242,49 +242,49 @@
   {
    "name": "Ethena USDtb",
    "symbol": "USDTB",
-   "price": 0.998792425149638,
-   "deviation_pct": -0.121,
-   "circulating_usd": 514389441,
+   "price": 0.9989350861183005,
+   "deviation_pct": -0.106,
+   "circulating_usd": 514396349,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/ethena-usdtb"
   },
   {
-   "name": "Polymarket USD",
-   "symbol": "pUSD",
-   "price": 0.999329716907601,
-   "deviation_pct": -0.067,
-   "circulating_usd": 491059737,
-   "mechanism": "crypto-backed",
-   "status": "ok",
-   "url": "https://defillama.com/stablecoin/polymarket-usd"
-  },
-  {
-   "name": "Multipli rwaUSDi",
-   "symbol": "rwaUSDi",
-   "price": 0.9987262433801334,
-   "deviation_pct": -0.127,
-   "circulating_usd": 486821497,
-   "mechanism": "crypto-backed",
-   "status": "ok",
-   "url": "https://defillama.com/stablecoin/multipli-rwausdi"
-  },
-  {
    "name": "YLDS",
    "symbol": "YLDS",
-   "price": 0.9996442820478183,
-   "deviation_pct": -0.036,
-   "circulating_usd": 485690613,
+   "price": 0.9996079074276571,
+   "deviation_pct": -0.039,
+   "circulating_usd": 493927952,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/ylds"
   },
   {
+   "name": "Multipli rwaUSDi",
+   "symbol": "rwaUSDi",
+   "price": 0.9990120985638516,
+   "deviation_pct": -0.099,
+   "circulating_usd": 486960835,
+   "mechanism": "crypto-backed",
+   "status": "ok",
+   "url": "https://defillama.com/stablecoin/multipli-rwausdi"
+  },
+  {
+   "name": "Polymarket USD",
+   "symbol": "pUSD",
+   "price": 0.9993302346493842,
+   "deviation_pct": -0.067,
+   "circulating_usd": 485984099,
+   "mechanism": "crypto-backed",
+   "status": "ok",
+   "url": "https://defillama.com/stablecoin/polymarket-usd"
+  },
+  {
    "name": "TrueUSD",
    "symbol": "TUSD",
-   "price": 0.998641777592254,
-   "deviation_pct": -0.136,
-   "circulating_usd": 483826681,
+   "price": 0.9986652544472494,
+   "deviation_pct": -0.133,
+   "circulating_usd": 483838055,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/trueusd"
@@ -292,9 +292,9 @@
   {
    "name": "Gate USD",
    "symbol": "GUSD",
-   "price": 0.9973139131536256,
-   "deviation_pct": -0.269,
-   "circulating_usd": 319140452,
+   "price": 0.997619226444123,
+   "deviation_pct": -0.238,
+   "circulating_usd": 319238152,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/gate-usd"
@@ -302,9 +302,9 @@
   {
    "name": "SoFiUSD",
    "symbol": "SOFID",
-   "price": 0.9992666814528877,
-   "deviation_pct": -0.073,
-   "circulating_usd": 300647744,
+   "price": 0.9997297916608544,
+   "deviation_pct": -0.027,
+   "circulating_usd": 300610946,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/sofiusd"
@@ -312,9 +312,9 @@
   {
    "name": "First Digital USD",
    "symbol": "FDUSD",
-   "price": 0.9972521046133829,
-   "deviation_pct": -0.275,
-   "circulating_usd": 299575586,
+   "price": 0.9975201138923357,
+   "deviation_pct": -0.248,
+   "circulating_usd": 299656097,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/first-digital-usd"
@@ -322,9 +322,9 @@
   {
    "name": "apxUSD",
    "symbol": "apxUSD",
-   "price": 0.9938221033646906,
-   "deviation_pct": -0.618,
-   "circulating_usd": 284107418,
+   "price": 0.9866084830414494,
+   "deviation_pct": -1.339,
+   "circulating_usd": 282045235,
    "mechanism": "crypto-backed",
    "status": "watch",
    "url": "https://defillama.com/stablecoin/apxusd"
@@ -332,9 +332,9 @@
   {
    "name": "USD.AI",
    "symbol": "USDai",
-   "price": 0.9987667001415204,
-   "deviation_pct": -0.123,
-   "circulating_usd": 271989000,
+   "price": 0.998884563641758,
+   "deviation_pct": -0.112,
+   "circulating_usd": 273528402,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/usd.ai"
@@ -342,9 +342,9 @@
   {
    "name": "Binance Peg BUSD",
    "symbol": "BUSD",
-   "price": 0.9983362999157417,
-   "deviation_pct": -0.166,
-   "circulating_usd": 232588854,
+   "price": 0.9985881697822311,
+   "deviation_pct": -0.141,
+   "circulating_usd": 232647534,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/binance-peg-busd"
@@ -352,9 +352,9 @@
   {
    "name": "crvUSD",
    "symbol": "crvUSD",
-   "price": 0.9987814297504967,
-   "deviation_pct": -0.122,
-   "circulating_usd": 226839963,
+   "price": 0.9987323758199766,
+   "deviation_pct": -0.127,
+   "circulating_usd": 224846735,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/crvusd"
@@ -362,39 +362,39 @@
   {
    "name": "Solstice USX",
    "symbol": "USX",
-   "price": 0.9986533489498807,
-   "deviation_pct": -0.135,
-   "circulating_usd": 201295952,
+   "price": 0.9993090669211334,
+   "deviation_pct": -0.069,
+   "circulating_usd": 201428123,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/solstice-usx"
   },
   {
-   "name": "Agora Dollar",
-   "symbol": "AUSD",
-   "price": 0.9988206724021091,
-   "deviation_pct": -0.118,
-   "circulating_usd": 187546283,
-   "mechanism": "fiat-backed",
-   "status": "ok",
-   "url": "https://defillama.com/stablecoin/agora-dollar"
-  },
-  {
    "name": "USAT",
    "symbol": "USAT",
-   "price": 0.9984706633014868,
-   "deviation_pct": -0.153,
-   "circulating_usd": 182038761,
+   "price": 0.9987006977124427,
+   "deviation_pct": -0.13,
+   "circulating_usd": 180083298,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/usat"
   },
   {
+   "name": "Agora Dollar",
+   "symbol": "AUSD",
+   "price": 0.9992284220654896,
+   "deviation_pct": -0.077,
+   "circulating_usd": 175909026,
+   "mechanism": "fiat-backed",
+   "status": "ok",
+   "url": "https://defillama.com/stablecoin/agora-dollar"
+  },
+  {
    "name": "flexUSD",
    "symbol": "FLEXUSD",
-   "price": 0.9987262433801334,
-   "deviation_pct": -0.127,
-   "circulating_usd": 166138356,
+   "price": 0.9990120985638516,
+   "deviation_pct": -0.099,
+   "circulating_usd": 166185908,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/flexusd"
@@ -402,9 +402,9 @@
   {
    "name": "Mustang Finance",
    "symbol": "MUST",
-   "price": 0.9987262433801334,
-   "deviation_pct": -0.127,
-   "circulating_usd": 154190898,
+   "price": 0.9990120985638516,
+   "deviation_pct": -0.099,
+   "circulating_usd": 154235031,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/mustang-finance"
@@ -412,9 +412,9 @@
   {
    "name": "Frax",
    "symbol": "FRAX",
-   "price": 0.9907895935075381,
-   "deviation_pct": -0.921,
-   "circulating_usd": 142487209,
+   "price": 0.9911219028991471,
+   "deviation_pct": -0.888,
+   "circulating_usd": 142987160,
    "mechanism": "algorithmic",
    "status": "watch",
    "url": "https://defillama.com/stablecoin/frax"
@@ -422,39 +422,39 @@
   {
    "name": "CASH",
    "symbol": "CASH",
-   "price": 0.9986993387393892,
-   "deviation_pct": -0.13,
-   "circulating_usd": 129183713,
+   "price": 0.9987761955971196,
+   "deviation_pct": -0.122,
+   "circulating_usd": 130199640,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/cash"
   },
   {
-   "name": "CFX MoveUSD",
-   "symbol": "MOVEUSD",
-   "price": 0.9987262433801334,
-   "deviation_pct": -0.127,
-   "circulating_usd": 115811894,
-   "mechanism": "fiat-backed",
-   "status": "ok",
-   "url": "https://defillama.com/stablecoin/cfx-moveusd"
-  },
-  {
    "name": "Avant USD",
    "symbol": "avUSD",
-   "price": 0.995113874387163,
-   "deviation_pct": -0.489,
-   "circulating_usd": 114821813,
+   "price": 0.9969442566864443,
+   "deviation_pct": -0.306,
+   "circulating_usd": 114973119,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/avant-usd"
   },
   {
+   "name": "CFX MoveUSD",
+   "symbol": "MOVEUSD",
+   "price": 0.9990120985638516,
+   "deviation_pct": -0.099,
+   "circulating_usd": 113533943,
+   "mechanism": "fiat-backed",
+   "status": "ok",
+   "url": "https://defillama.com/stablecoin/cfx-moveusd"
+  },
+  {
    "name": "Dola",
    "symbol": "DOLA",
-   "price": 0.9960714861071429,
-   "deviation_pct": -0.393,
-   "circulating_usd": 112613968,
+   "price": 0.9968250170207619,
+   "deviation_pct": -0.317,
+   "circulating_usd": 112699161,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/dola"
@@ -462,9 +462,9 @@
   {
    "name": "Astherus",
    "symbol": "USDF",
-   "price": 0.9964117657401821,
-   "deviation_pct": -0.359,
-   "circulating_usd": 111985377,
+   "price": 0.99503271466202,
+   "deviation_pct": -0.497,
+   "circulating_usd": 111882769,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/astherus"
@@ -472,9 +472,9 @@
   {
    "name": "Saturn Dollar",
    "symbol": "USDAT",
-   "price": 0.9982980803156244,
-   "deviation_pct": -0.17,
-   "circulating_usd": 109909743,
+   "price": 0.9989832589481226,
+   "deviation_pct": -0.102,
+   "circulating_usd": 108292600,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/saturn-dollar"
@@ -482,119 +482,109 @@
   {
    "name": "Frax USD",
    "symbol": "FRXUSD",
-   "price": 1.0001040233633354,
-   "deviation_pct": 0.01,
-   "circulating_usd": 94430958,
+   "price": 1.0000083681518117,
+   "deviation_pct": 0.001,
+   "circulating_usd": 92394887,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/frax-usd"
   },
   {
+   "name": "River Stablecoin",
+   "symbol": "satUSD",
+   "price": 0.9938277800801026,
+   "deviation_pct": -0.617,
+   "circulating_usd": 87085534,
+   "mechanism": "crypto-backed",
+   "status": "watch",
+   "url": "https://defillama.com/stablecoin/river-stablecoin"
+  },
+  {
    "name": "AP USDA",
    "symbol": "USDA",
-   "price": 0.9575768965177098,
-   "deviation_pct": -4.242,
-   "circulating_usd": 83277828,
+   "price": 0.9508523983244261,
+   "deviation_pct": -4.915,
+   "circulating_usd": 82693017,
    "mechanism": "fiat-backed",
    "status": "depeg",
    "url": "https://defillama.com/stablecoin/ap-usda"
+  },
+  {
+   "name": "Lista USD",
+   "symbol": "LISUSD",
+   "price": 0.9973515864573164,
+   "deviation_pct": -0.265,
+   "circulating_usd": 75685844,
+   "mechanism": "crypto-backed",
+   "status": "ok",
+   "url": "https://defillama.com/stablecoin/lista-usd"
+  },
+  {
+   "name": "Sui Dollar",
+   "symbol": "USDSUI",
+   "price": 0.9989053907930822,
+   "deviation_pct": -0.109,
+   "circulating_usd": 75318094,
+   "mechanism": "fiat-backed",
+   "status": "ok",
+   "url": "https://defillama.com/stablecoin/sui-dollar"
+  },
+  {
+   "name": "fxUSD",
+   "symbol": "fxUSD",
+   "price": 0.9998918425138347,
+   "deviation_pct": -0.011,
+   "circulating_usd": 74580009,
+   "mechanism": "crypto-backed",
+   "status": "ok",
+   "url": "https://defillama.com/stablecoin/fxusd"
+  },
+  {
+   "name": "Tori trUSD",
+   "symbol": "trUSD",
+   "price": 0.9990100191278773,
+   "deviation_pct": -0.099,
+   "circulating_usd": 72227854,
+   "mechanism": "crypto-backed",
+   "status": "ok",
+   "url": "https://defillama.com/stablecoin/tori-trusd"
+  },
+  {
+   "name": "infiniFi USD",
+   "symbol": "IUSD",
+   "price": 0.9998147880366228,
+   "deviation_pct": -0.019,
+   "circulating_usd": 67900056,
+   "mechanism": "crypto-backed",
+   "status": "ok",
+   "url": "https://defillama.com/stablecoin/infinifi-usd"
+  },
+  {
+   "name": "Axis USD",
+   "symbol": "USDx",
+   "price": 0.9983457470169219,
+   "deviation_pct": -0.165,
+   "circulating_usd": 66540594,
+   "mechanism": "crypto-backed",
+   "status": "ok",
+   "url": "https://defillama.com/stablecoin/axis-usd"
   },
   {
    "name": "Ondo U.S. Dollar Token",
    "symbol": "USDon",
    "price": 1.0,
    "deviation_pct": 0.0,
-   "circulating_usd": 79510159,
+   "circulating_usd": 65706102,
    "mechanism": "fiat-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/ondo-u.s.-dollar-token"
   },
   {
-   "name": "Sui Dollar",
-   "symbol": "USDSUI",
-   "price": 0.9984953362046659,
-   "deviation_pct": -0.15,
-   "circulating_usd": 76425560,
-   "mechanism": "fiat-backed",
-   "status": "ok",
-   "url": "https://defillama.com/stablecoin/sui-dollar"
-  },
-  {
-   "name": "Lista USD",
-   "symbol": "LISUSD",
-   "price": 0.996504075839954,
-   "deviation_pct": -0.35,
-   "circulating_usd": 75621221,
-   "mechanism": "crypto-backed",
-   "status": "ok",
-   "url": "https://defillama.com/stablecoin/lista-usd"
-  },
-  {
-   "name": "Cygnus Finance Global USD",
-   "symbol": "cgUSD",
-   "price": 0.9915955612999547,
-   "deviation_pct": -0.84,
-   "circulating_usd": 75618124,
-   "mechanism": "fiat-backed",
-   "status": "watch",
-   "url": "https://defillama.com/stablecoin/cygnus-finance-global-usd"
-  },
-  {
-   "name": "fxUSD",
-   "symbol": "fxUSD",
-   "price": 0.9998615167394246,
-   "deviation_pct": -0.014,
-   "circulating_usd": 73873125,
-   "mechanism": "crypto-backed",
-   "status": "ok",
-   "url": "https://defillama.com/stablecoin/fxusd"
-  },
-  {
-   "name": "PathUSD",
-   "symbol": "pathUSD",
-   "price": 1.00052779194752,
-   "deviation_pct": 0.053,
-   "circulating_usd": 72903209,
-   "mechanism": "fiat-backed",
-   "status": "ok",
-   "url": "https://defillama.com/stablecoin/pathusd"
-  },
-  {
-   "name": "Tori trUSD",
-   "symbol": "trUSD",
-   "price": 0.9989266106819205,
-   "deviation_pct": -0.107,
-   "circulating_usd": 72221823,
-   "mechanism": "crypto-backed",
-   "status": "ok",
-   "url": "https://defillama.com/stablecoin/tori-trusd"
-  },
-  {
-   "name": "Axis USD",
-   "symbol": "USDx",
-   "price": 0.9982511162282055,
-   "deviation_pct": -0.175,
-   "circulating_usd": 67533922,
-   "mechanism": "crypto-backed",
-   "status": "ok",
-   "url": "https://defillama.com/stablecoin/axis-usd"
-  },
-  {
-   "name": "infiniFi USD",
-   "symbol": "IUSD",
-   "price": 0.9977872213815968,
-   "deviation_pct": -0.221,
-   "circulating_usd": 67231207,
-   "mechanism": "crypto-backed",
-   "status": "ok",
-   "url": "https://defillama.com/stablecoin/infinifi-usd"
-  },
-  {
    "name": "USP Stablecoin",
    "symbol": "USP",
-   "price": 0.9987262433801334,
-   "deviation_pct": -0.127,
-   "circulating_usd": 65354537,
+   "price": 0.9990120985638516,
+   "deviation_pct": -0.099,
+   "circulating_usd": 65373243,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/usp-stablecoin"
@@ -602,9 +592,9 @@
   {
    "name": "Cap cUSD",
    "symbol": "CUSD",
-   "price": 0.99940167,
-   "deviation_pct": -0.06,
-   "circulating_usd": 64169562,
+   "price": 0.99976826,
+   "deviation_pct": -0.023,
+   "circulating_usd": 64691467,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/cap-cusd"
@@ -612,32 +602,32 @@
   {
    "name": "Yuzu USD",
    "symbol": "YZUSD",
-   "price": 0.9987489100883828,
-   "deviation_pct": -0.125,
-   "circulating_usd": 55062151,
+   "price": 0.9991524792156816,
+   "deviation_pct": -0.085,
+   "circulating_usd": 55084400,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/yuzu-usd"
   },
   {
-   "name": "pmUSD",
-   "symbol": "pmUSD",
-   "price": 0.5798619662425344,
-   "deviation_pct": -42.014,
-   "circulating_usd": 54507723,
-   "mechanism": "crypto-backed",
-   "status": "depeg",
-   "url": "https://defillama.com/stablecoin/pmusd"
-  },
-  {
    "name": "Unitas",
    "symbol": "USDU",
-   "price": 0.9995272396911025,
-   "deviation_pct": -0.047,
-   "circulating_usd": 52581120,
+   "price": 0.9998425304531249,
+   "deviation_pct": -0.016,
+   "circulating_usd": 52703844,
    "mechanism": "crypto-backed",
    "status": "ok",
    "url": "https://defillama.com/stablecoin/unitas"
+  },
+  {
+   "name": "pmUSD",
+   "symbol": "pmUSD",
+   "price": 0.5404404256252928,
+   "deviation_pct": -45.956,
+   "circulating_usd": 50802050,
+   "mechanism": "crypto-backed",
+   "status": "depeg",
+   "url": "https://defillama.com/stablecoin/pmusd"
   }
  ]
 }
