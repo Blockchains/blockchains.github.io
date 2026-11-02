@@ -1,0 +1,84 @@
+{
+ "slug": "api-solenrich-com-entrypoints-enrich-token-light-invoke",
+ "name": "SolEnrich: Price (median of 3 sources), market cap, volume, liquidity, slippage e",
+ "seller": "SolEnrich",
+ "host": "api.solenrich.com",
+ "provider": "https://api.solenrich.com",
+ "description": "Price (median of 3 sources), market cap, volume, liquidity, slippage estimates at 4 position sizes, risk flags, verification status.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "token-risk",
+  "solana",
+  "onchain",
+  "ai-agents",
+  "defi"
+ ],
+ "endpoint": "https://api.solenrich.com/entrypoints/enrich-token-light/invoke",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x8EdE9eD2E6ACdd9B2BaFa42ff4078d3F3263607c",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "format": "json",
+   "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"output\":{\"concentration\":{\"herfindahl_index\":209,\"top10_pct\":38.58,\"top1_pct\":8.83,\"top5_pct\":25.21},\"decimals\":5,\"holder_count\":0,\"holders_source\":\"birdeye\",\"market_cap\":297149393,\"mint\":\"DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263\",\"name\":\"Bonk\",\"price_change_24h\":11.73,\"price_usd\":0.000003376,\"supply\":87994000000000,\"symbol\":\"Bonk\",\"top_holders\":[{\"address\":\"9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM\",\"balance\":7770500000000,\"pct_supply\":8.8307}],\"volatility\":{\"classification\":\"MODERATE\",\"daily_std_7d\":4.66,\"high_7d\":0.0000034,\"low_7d\":0.00000302,\"range_pct_7d\":12.4},\"volume_24h\":1096000},\"run_id\":\"uuid\",\"status\":\"succeeded\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1780954502/bazaar-icons/31c7c2e1c5cde08e.png",
+ "docs": "https://api.solenrich.com/llms.txt",
+ "docsChecked": 1793609274912,
+ "payers30d": 11,
+ "calls30d": 27,
+ "lastCalledAt": "2026-11-02T02:31:14.174Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 255,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 255,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-solenrich-com-entrypoints-enrich-token-light-invoke",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.solenrich.com/entrypoints/enrich-token-light/invoke' -H 'content-type: application/json' -d '{\"format\":\"json\",\"mint\":\"DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-solenrich-com-entrypoints-enrich-token-light-invoke&body=%7B%22slug%22%3A%22api-solenrich-com-entrypoints-enrich-token-light-invoke%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-solenrich-com-entrypoints-enrich-token-light-invoke\",\"body\":\"{\\\"slug\\\":\\\"api-solenrich-com-entrypoints-enrich-token-light-invoke\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SolEnrich%3A%20Price%20(median%20of%203%20sources)%2C%20market%20cap%2C%20volume%2C%20liquidity%2C%20slippage%20e&seller=https%3A%2F%2Fapi.solenrich.com%2Fentrypoints%2Fenrich-token-light%2Finvoke"
+}

@@ -1,0 +1,90 @@
+{
+ "slug": "x402-telnyx-com-v1-chat-completions-t-gemma-2b",
+ "name": "Gemma 2B chat: Chat completions via Telnyx Inference (google/gemma-2b-it)",
+ "seller": "Gemma 2B chat",
+ "host": "x402.telnyx.com",
+ "provider": "https://x402.telnyx.com",
+ "description": "Chat completions via Telnyx Inference (google/gemma-2b-it). OpenAI-compatible. $0.002 USDC per call.",
+ "category": "AI & LLM",
+ "tags": [
+  "ai",
+  "llm",
+  "chat-completions",
+  "openai-compatible",
+  "telnyx"
+ ],
+ "endpoint": "https://x402.telnyx.com/v1/chat/completions/_t/gemma-2b",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x19a78B27a28eD93C3c914878bde7f2f843AfAEa8",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "max_tokens": 64,
+   "messages": [
+    {
+     "content": "Say hello in one short sentence.",
+     "role": "user"
+    }
+   ],
+   "model": "google/gemma-2b-it"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"Hello!\",\"role\":\"assistant\"}}],\"id\":\"chatcmpl-xxx\",\"object\":\"chat.completion\",\"usage\":{\"completion_tokens\":4,\"prompt_tokens\":12,\"total_tokens\":16}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791994496/bazaar-icons/6b6a1c77c7753d6a.png",
+ "docs": null,
+ "docsChecked": 1793609271499,
+ "payers30d": 13,
+ "calls30d": 25,
+ "lastCalledAt": "2026-10-31T12:02:47.01Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 67,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 67,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-telnyx-com-v1-chat-completions-t-gemma-2b",
+ "rating": null,
+ "related": [
+  "gibbr-app-agent-translate",
+  "x402-onhub-ai-v1-chat-completions",
+  "api-manylives-me-paid-util-time",
+  "agentshield-live-ean",
+  "ask-singitai-app-v1-responses",
+  "api-mekler-ai-v1-compute-inference-generate-completions"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://x402.telnyx.com/v1/chat/completions/_t/gemma-2b' -H 'content-type: application/json' -d '{\"max_tokens\":64,\"messages\":[{\"content\":\"Say hello in one short sentence.\",\"role\":\"user\"}],\"model\":\"google/gemma-2b-it\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-telnyx-com-v1-chat-completions-t-gemma-2b&body=%7B%22slug%22%3A%22x402-telnyx-com-v1-chat-completions-t-gemma-2b%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-telnyx-com-v1-chat-completions-t-gemma-2b\",\"body\":\"{\\\"slug\\\":\\\"x402-telnyx-com-v1-chat-completions-t-gemma-2b\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Gemma%202B%20chat%3A%20Chat%20completions%20via%20Telnyx%20Inference%20(google%2Fgemma-2b-it)&seller=https%3A%2F%2Fx402.telnyx.com%2Fv1%2Fchat%2Fcompletions%2F_t%2Fgemma-2b"
+}

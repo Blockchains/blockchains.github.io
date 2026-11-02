@@ -1,0 +1,83 @@
+{
+ "slug": "coingecko-use-x402atlas-com-coin",
+ "name": "CoinGecko Crypto Price & Data: Crypto coin metadata and market data by CoinGecko id — name, symbol, m",
+ "seller": "CoinGecko Crypto Price & Data",
+ "host": "coingecko.use.x402atlas.com",
+ "provider": "https://coingecko.use.x402atlas.com",
+ "description": "Crypto coin metadata and market data by CoinGecko id — name, symbol, market-cap rank, price, homepage and categories for any token.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto",
+  "token",
+  "metadata",
+  "market-cap",
+  "coin-info"
+ ],
+ "endpoint": "https://coingecko.use.x402atlas.com/coin",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x32793F68dC2EA26BBC75eB900DA120069e8B6d02",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "id": "bitcoin"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"categories\":[\"Cryptocurrency\"],\"homepage\":\"https://www.bitcoin.org\",\"id\":\"bitcoin\",\"image\":\"https://assets.coingecko.com/coins/images/1/large/bitcoin.png\",\"market_cap_rank\":1,\"market_data\":{\"current_price_usd\":67000,\"market_cap_usd\":1300000000000},\"name\":\"Bitcoin\",\"queried_at\":\"2026-06-08T12:00:00Z\",\"symbol\":\"btc\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://coingecko.use.x402atlas.com/llms.txt",
+ "docsChecked": 1793609275967,
+ "payers30d": 11,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T23:15:19.037Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 168,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 168,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/coingecko-use-x402atlas-com-coin",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-contract-address",
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "hyperliquid-predict-use-x402atlas-com-outcomes",
+  "notary-forgemesh-io-api-notarize",
+  "scry-solanahub-de-x402-network-priority-fees-live",
+  "verifier-quantumshieldlabs-dev-x402-preflight"
+ ],
+ "example": {
+  "curl": "curl -i 'https://coingecko.use.x402atlas.com/coin?id=bitcoin'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20coingecko-use-x402atlas-com-coin&body=%7B%22slug%22%3A%22coingecko-use-x402atlas-com-coin%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: coingecko-use-x402atlas-com-coin\",\"body\":\"{\\\"slug\\\":\\\"coingecko-use-x402atlas-com-coin\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=CoinGecko%20Crypto%20Price%20%26%20Data%3A%20Crypto%20coin%20metadata%20and%20market%20data%20by%20CoinGecko%20id%20%E2%80%94%20name%2C%20symbol%2C%20m&seller=https%3A%2F%2Fcoingecko.use.x402atlas.com%2Fcoin"
+}

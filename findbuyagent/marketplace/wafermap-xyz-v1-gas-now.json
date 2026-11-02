@@ -1,0 +1,77 @@
+{
+ "slug": "wafermap-xyz-v1-gas-now",
+ "name": "Gas Now — Current gas price and latest block on Robinhood Chain or Bas",
+ "seller": "wafermap.xyz",
+ "host": "wafermap.xyz",
+ "provider": "https://wafermap.xyz",
+ "description": "Gas Now — Current gas price and latest block on Robinhood Chain or Base.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://wafermap.xyz/v1/gas-now",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xefa0FDf4Ca8FD79227fb9A19E5CFd24a2A864B81",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "network": "robinhood"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"receipt\":{\"amountUsd\":0.001,\"asset\":\"USDC\",\"ms\":1200,\"network\":\"eip155:8453\",\"payer\":\"0x…\",\"tx\":\"0x…\"},\"resource\":\"gas-now\",\"result\":\"{ network, block, gasPriceGwei }\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1793166422/bazaar-icons/5ef39b93b2d49e3c.png",
+ "docs": null,
+ "docsChecked": 1793609274268,
+ "payers30d": 11,
+ "calls30d": 541,
+ "lastCalledAt": "2026-11-01T06:53:33.785Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 204,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 204,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/wafermap-xyz-v1-gas-now",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://wafermap.xyz/v1/gas-now' -H 'content-type: application/json' -d '{\"network\":\"robinhood\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20wafermap-xyz-v1-gas-now&body=%7B%22slug%22%3A%22wafermap-xyz-v1-gas-now%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: wafermap-xyz-v1-gas-now\",\"body\":\"{\\\"slug\\\":\\\"wafermap-xyz-v1-gas-now\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Gas%20Now%20%E2%80%94%20Current%20gas%20price%20and%20latest%20block%20on%20Robinhood%20Chain%20or%20Bas&seller=https%3A%2F%2Fwafermap.xyz%2Fv1%2Fgas-now"
+}

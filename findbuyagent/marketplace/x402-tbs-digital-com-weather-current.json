@@ -1,0 +1,83 @@
+{
+ "slug": "x402-tbs-digital-com-weather-current",
+ "name": "TBS Weather & Climate API: Complete weather bundle in one call: current conditions (temperature,",
+ "seller": "TBS Weather & Climate API",
+ "host": "x402.tbs-digital.com",
+ "provider": "https://x402.tbs-digital.com",
+ "description": "Complete weather bundle in one call: current conditions (temperature, feels-like, humidity, wind speed/direction/gusts, pressure, cloud cover, precipitation, UV, day/night) plus 24-hour hourly and 7-day daily forecast, air quality (AQI, PM2.5, PM10, ozone), solar radiation, and severe-weather alerts. Query by city name or lat/lon. Times in the location local timezone. Most complete weather data per call.",
+ "category": "Weather & geo",
+ "tags": [
+  "weather",
+  "forecast",
+  "current-conditions",
+  "air-quality",
+  "alerts"
+ ],
+ "endpoint": "https://x402.tbs-digital.com/weather/current",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xd6fCE15298Fc9D60f867d9455D497177Da9BFB0a",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "city": "Paris"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"air_quality\":{\"aqi_european\":20,\"ozone\":68,\"pm2_5\":5.1},\"alerts\":[{\"code\":\"uv_high\",\"message\":\"High UV index around midday\",\"severity\":\"moderate\"}],\"astronomy\":{\"moon_illumination_pct\":99.1,\"moon_phase\":0.52,\"moon_phase_name\":\"Full moon\",\"sunrise\":\"2026-08-09T04:12:00Z\",\"sunset\":\"2026-08-09T19:34:00Z\"},\"current\":{\"condition\":\"Clear sky\",\"condition_code\":\"0\",\"feels_like_c\":20.1,\"humidity_pct\":55,\"is_day\":true,\"observed_at\":\"2026-08-09T11:00:00Z\",\"pressure_hpa\":1015,\"temp_c\":21.3,\"uv_index\":3,\"wind_kmh\":12},\"forecast\":{\"daily\":[{\"date\":\"2026-08-09\",\"temp_max_c\":25,\"temp_min_c\":15}],\"hourly\":[{\"precip_prob_pct\":5,\"temp_c\":22.1,\"time\":\"2026-08-09T12:00:00Z\"}]},\"generated_at\":\"2026-08-09T12:00:00.000Z\",\"location\":{\"country\":\"FR\",\"lat\":48.85,\"lon\":2.35,\"name\":\"Paris\"},\"payer\":{\"address\":\"0x0000000000000000000000000000000000000000\",\"network\":\"base\"},\"request_id\":\"0b21c0e6-6a3f-4e2a-8b1e-2f9d4c7a1e55\",\"solar\":{\"direct_radiation_wm2\":410,\"shortwave_radiation_wm2\":512},\"source\":\"open-meteo\",\"timezone\":\"Europe/Paris\",\"utc_offset_seconds\":7200}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402.tbs-digital.com/llms.txt",
+ "docsChecked": 1793609275854,
+ "payers30d": 11,
+ "calls30d": 12,
+ "lastCalledAt": "2026-10-31T12:42:06.423Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 360,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 360,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-tbs-digital-com-weather-current",
+ "rating": null,
+ "related": [
+  "hypernatt-com-api-m2m-liq-radar",
+  "weather-agentic-jp-com-areas",
+  "api-losbeto-xyz-gas-price",
+  "x402-data-api-sigrunner-workers-dev-defi-yields",
+  "x402-agentutility-ai-ip-asn",
+  "x402-seller-onrender-com-geo-lookup"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.tbs-digital.com/weather/current?city=Paris'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-tbs-digital-com-weather-current&body=%7B%22slug%22%3A%22x402-tbs-digital-com-weather-current%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-tbs-digital-com-weather-current\",\"body\":\"{\\\"slug\\\":\\\"x402-tbs-digital-com-weather-current\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=TBS%20Weather%20%26%20Climate%20API%3A%20Complete%20weather%20bundle%20in%20one%20call%3A%20current%20conditions%20(temperature%2C&seller=https%3A%2F%2Fx402.tbs-digital.com%2Fweather%2Fcurrent"
+}

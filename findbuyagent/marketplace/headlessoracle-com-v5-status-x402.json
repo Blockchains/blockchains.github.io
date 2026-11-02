@@ -1,0 +1,77 @@
+{
+ "slug": "headlessoracle-com-v5-status-x402",
+ "name": "Signed market-state receipt for one exchange",
+ "seller": "headlessoracle.com",
+ "host": "headlessoracle.com",
+ "provider": "https://headlessoracle.com",
+ "description": "Signed market-state receipt for one exchange. OPEN/CLOSED/HALTED/UNKNOWN - Ed25519 signed, 60s TTL.",
+ "category": "Utilities",
+ "tags": [],
+ "endpoint": "https://headlessoracle.com/v5/status/x402",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x26D4Ffe98017D2f160E2dAaE9d119e3d8b860AD3",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "mic": "XNYS"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"expires_at\":\"2026-06-05T16:04:15.257Z\",\"halt_detection\":\"active\",\"issued_at\":\"2026-06-05T16:03:15.257Z\",\"issuer\":\"headlessoracle.com\",\"mic\":\"XNYS\",\"public_key_id\":\"key_2026_v1\",\"receipt_id\":\"eb2a23e4-c3cc-49dc-aa1e-e443eb89045e\",\"receipt_mode\":\"live\",\"schema_version\":\"v5.0\",\"signature\":\"ab5413710ca2c4b71a5241efe3be386b6e2d3e1746deb1686e42c2f718cdb76e6e4e5a077817c972e8c1c04a301da5465b147b533fc1e4505523f81d35b98901\",\"source\":\"SCHEDULE\",\"status\":\"OPEN\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://headlessoracle.com/llms.txt",
+ "docsChecked": 1793609271276,
+ "payers30d": 13,
+ "calls30d": 36,
+ "lastCalledAt": "2026-11-01T06:58:56.386Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 161,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 161,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/headlessoracle-com-v5-status-x402",
+ "rating": null,
+ "related": [
+  "scvd-store-api-buy-spot-check",
+  "api-aurenic-org-treasury-debt",
+  "workspace-x402-paywall-onrender-com-utils-uuid",
+  "api-printmoneylab-com-api-v1-fx-rate",
+  "fanfare-run-nba-teams",
+  "agent-treats-production-up-railway-app-api-fact"
+ ],
+ "example": {
+  "curl": "curl -i 'https://headlessoracle.com/v5/status/x402?mic=XNYS'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20headlessoracle-com-v5-status-x402&body=%7B%22slug%22%3A%22headlessoracle-com-v5-status-x402%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: headlessoracle-com-v5-status-x402\",\"body\":\"{\\\"slug\\\":\\\"headlessoracle-com-v5-status-x402\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Signed%20market-state%20receipt%20for%20one%20exchange&seller=https%3A%2F%2Fheadlessoracle.com%2Fv5%2Fstatus%2Fx402"
+}

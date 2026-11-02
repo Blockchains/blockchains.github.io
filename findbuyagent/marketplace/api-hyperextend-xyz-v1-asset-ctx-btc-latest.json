@@ -1,0 +1,84 @@
+{
+ "slug": "api-hyperextend-xyz-v1-asset-ctx-btc-latest",
+ "name": "hyperextend: The most-recent N open-interest / funding / ctx rows (≤5000), as {coin",
+ "seller": "hyperextend",
+ "host": "api.hyperextend.xyz",
+ "provider": "https://api.hyperextend.xyz",
+ "description": "The most-recent N open-interest / funding / ctx rows (≤5000), as {coin, ctx, time}. Priced per row ($0.000025 premium); served live (no lag).",
+ "category": "Data & analytics",
+ "tags": [
+  "hyperliquid",
+  "market-data",
+  "candles",
+  "open-interest",
+  "hip-3"
+ ],
+ "endpoint": "https://api.hyperextend.xyz/v1/asset_ctx/BTC/latest",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.003475,
+ "amount": "3475",
+ "payTo": "0x548fC289526ab2F0391D562a723cdA64Bbf1abc4",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": false,
+ "input": {
+  "queryParams": {
+   "dex": "main",
+   "n": 100
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"coin\":\"BTC\",\"ctx\":{\"dayBaseVlm\":\"23456.7\",\"dayNtlVlm\":\"987654321.0\",\"funding\":\"0.0000125\",\"impactPxs\":[\"42079.0\",\"42080.0\"],\"markPx\":\"42080.0\",\"midPx\":\"42079.5\",\"openInterest\":\"12345.6\",\"oraclePx\":\"42010.0\",\"premium\":\"0.0001\",\"prevDayPx\":\"41000.0\"},\"time\":1700000000}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609279967,
+ "payers30d": 9,
+ "calls30d": 28,
+ "lastCalledAt": "2026-11-01T23:16:23.75Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 111,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 111,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-hyperextend-xyz-v1-asset-ctx-btc-latest",
+ "rating": null,
+ "related": [
+  "api-mekler-ai-v1-email-domains-check-mail-configuration",
+  "agent402-tools-api-demand-radar",
+  "agent402-tools-api-bestsellers",
+  "www-robbiegeorgephotography-com-v1-query-atomic-robbie-george-biograph",
+  "dns-use-x402atlas-com-a",
+  "api-oblique-markets-api-v1-paid-bazaar-pulse"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.hyperextend.xyz/v1/asset_ctx/BTC/latest?dex=main&n=100'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-hyperextend-xyz-v1-asset-ctx-btc-latest&body=%7B%22slug%22%3A%22api-hyperextend-xyz-v1-asset-ctx-btc-latest%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-hyperextend-xyz-v1-asset-ctx-btc-latest\",\"body\":\"{\\\"slug\\\":\\\"api-hyperextend-xyz-v1-asset-ctx-btc-latest\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=hyperextend%3A%20The%20most-recent%20N%20open-interest%20%2F%20funding%20%2F%20ctx%20rows%20(%E2%89%A45000)%2C%20as%20%7Bcoin&seller=https%3A%2F%2Fapi.hyperextend.xyz%2Fv1%2Fasset_ctx%2FBTC%2Flatest"
+}

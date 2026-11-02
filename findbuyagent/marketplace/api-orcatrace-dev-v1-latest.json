@@ -1,0 +1,75 @@
+{
+ "slug": "api-orcatrace-dev-v1-latest",
+ "name": "Paid ($0.01 USDC via x402)",
+ "seller": "api.orcatrace.dev",
+ "host": "api.orcatrace.dev",
+ "provider": "https://api.orcatrace.dev",
+ "description": "Paid ($0.01 USDC via x402). Most recent Polymarket feed item — mover, whale entry (with calibration), or predetermined signal. Same shape as /v1/signal without ?index. Free index poll: GET /v1/index; free shape preview: GET /v1/sample. Compute-first / settle-after — you are never charged for an error.",
+ "category": "Finance & markets",
+ "tags": [],
+ "endpoint": "https://api.orcatrace.dev/v1/latest",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0xf444abc53f5e1e73caec7df64d147ddb119514a0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"charged\":true,\"data\":{\"createdAt\":\"2026-07-09T19:05:00.000Z\",\"data\":{},\"feedIndex\":1044,\"title\":\"Will Contestant X win Season 4 of The Masked Singer?\",\"type\":\"predetermined\"},\"status\":\"live\",\"success\":true}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.orcatrace.dev/llms.txt",
+ "docsChecked": 1793609268919,
+ "payers30d": 18,
+ "calls30d": 92,
+ "lastCalledAt": "2026-11-02T04:51:03.14Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 144,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 144,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-orcatrace-dev-v1-latest",
+ "rating": null,
+ "related": [
+  "cloud-trycorpus-ai-v1-tokens-quotes",
+  "cloud-trycorpus-ai-v1-reserved",
+  "cloud-trycorpus-ai-v1-term-instance",
+  "www-blockchainiq-co-api-x402-v1-brief",
+  "headers-use-x402atlas-com",
+  "omniterminal-app-api-x402-v1-news"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.orcatrace.dev/v1/latest'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-orcatrace-dev-v1-latest&body=%7B%22slug%22%3A%22api-orcatrace-dev-v1-latest%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-orcatrace-dev-v1-latest\",\"body\":\"{\\\"slug\\\":\\\"api-orcatrace-dev-v1-latest\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Paid%20(%240.01%20USDC%20via%20x402)&seller=https%3A%2F%2Fapi.orcatrace.dev%2Fv1%2Flatest"
+}

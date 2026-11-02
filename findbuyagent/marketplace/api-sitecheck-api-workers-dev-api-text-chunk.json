@@ -1,0 +1,85 @@
+{
+ "slug": "api-sitecheck-api-workers-dev-api-text-chunk",
+ "name": "SiteCheck: Split a long text into chunks for retrieval (RAG): split on paragraphs",
+ "seller": "SiteCheck",
+ "host": "api.sitecheck-api.workers.dev",
+ "provider": "https://api.sitecheck-api.workers.dev",
+ "description": "Split a long text into chunks for retrieval (RAG): split on paragraphs, then sentences, then words, each chunk within maxTokens (default 500) with the overlap you ask for (default 50 tokens). Each chunk has its index, text, start and end character offsets and an estimated token count (characters divided by 4, a rough rule for English). Up to 1 MB and 2,000 chunks.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "chunking",
+  "rag",
+  "text splitter",
+  "embeddings",
+  "retrieval"
+ ],
+ "endpoint": "https://api.sitecheck-api.workers.dev/api/text/chunk",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xb8491F953e6860D3b5840b73c60883Ff099ceAfA",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "maxTokens": "20",
+   "overlap": "5",
+   "text": "Alpha beta gamma delta. Epsilon zeta eta theta iota kappa.\n\nLambda mu nu xi omicron pi rho."
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"checkedAt\":\"2026-10-15T13:48:02.048Z\",\"chunks\":[{\"end\":58,\"estimatedTokens\":15,\"index\":0,\"start\":0,\"text\":\"Alpha beta gamma delta. Epsilon zeta eta theta iota kappa.\"},{\"end\":91,\"estimatedTokens\":17,\"index\":1,\"start\":24,\"text\":\"Epsilon zeta eta theta iota kappa.\\n\\nLambda mu nu xi omicron pi rho.\"}],\"count\":2,\"maxTokens\":20,\"overlap\":5,\"source\":\"Computed here (pure code): paragraph, sentence and word boundaries\",\"tokenEstimate\":\"characters / 4\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.sitecheck-api.workers.dev/llms.txt",
+ "docsChecked": 1793609280152,
+ "payers30d": 9,
+ "calls30d": 15,
+ "lastCalledAt": "2026-11-01T07:38:51.52Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 21,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 21,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-sitecheck-api-workers-dev-api-text-chunk",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.sitecheck-api.workers.dev/api/text/chunk' -H 'content-type: application/json' -d '{\"maxTokens\":\"20\",\"overlap\":\"5\",\"text\":\"Alpha beta gamma delta. Epsilon zeta eta theta iota kappa.\\n\\nLambda mu nu xi omicron pi rho.\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-sitecheck-api-workers-dev-api-text-chunk&body=%7B%22slug%22%3A%22api-sitecheck-api-workers-dev-api-text-chunk%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-sitecheck-api-workers-dev-api-text-chunk\",\"body\":\"{\\\"slug\\\":\\\"api-sitecheck-api-workers-dev-api-text-chunk\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SiteCheck%3A%20Split%20a%20long%20text%20into%20chunks%20for%20retrieval%20(RAG)%3A%20split%20on%20paragraphs&seller=https%3A%2F%2Fapi.sitecheck-api.workers.dev%2Fapi%2Ftext%2Fchunk"
+}

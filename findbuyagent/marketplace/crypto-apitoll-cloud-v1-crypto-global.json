@@ -1,0 +1,81 @@
+{
+ "slug": "crypto-apitoll-cloud-v1-crypto-global",
+ "name": "ApiToll Crypto Market Overview: A snapshot of the total crypto market: aggregate market capitalization",
+ "seller": "ApiToll Crypto Market Overview",
+ "host": "crypto.apitoll.cloud",
+ "provider": "https://crypto.apitoll.cloud",
+ "description": "A snapshot of the total crypto market: aggregate market capitalization in USD, 24-hour trading volume, Bitcoin and Ethereum dominance percentages, 24h market-cap change, and the number of active cryptocurrencies and markets. The macro view in one call. Sourced from CoinGecko.",
+ "category": "Finance & markets",
+ "tags": [
+  "crypto",
+  "market-overview",
+  "market-cap",
+  "btc-dominance",
+  "macro"
+ ],
+ "endpoint": "https://crypto.apitoll.cloud/v1/crypto/global",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x3dA40A9aD36640a2C0F533BAC368490095574664",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"activeCryptocurrencies\":17000,\"asOf\":\"2026-06-15T12:00:00.000Z\",\"btcDominancePct\":56.5,\"ethDominancePct\":13.2,\"marketCapChange24hPct\":-1.4,\"markets\":1100,\"source\":{\"name\":\"CoinGecko\"},\"totalMarketCapUsd\":2350000000000,\"totalVolume24hUsd\":95000000000}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609270326,
+ "payers30d": 15,
+ "calls30d": 23,
+ "lastCalledAt": "2026-11-01T23:12:42.237Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 100,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 100,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/crypto-apitoll-cloud-v1-crypto-global",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "intel-degenscan-io-v1-br-ptax",
+  "joyful-charm-production-bf6d-up-railway-app-stats"
+ ],
+ "example": {
+  "curl": "curl -i 'https://crypto.apitoll.cloud/v1/crypto/global'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20crypto-apitoll-cloud-v1-crypto-global&body=%7B%22slug%22%3A%22crypto-apitoll-cloud-v1-crypto-global%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: crypto-apitoll-cloud-v1-crypto-global\",\"body\":\"{\\\"slug\\\":\\\"crypto-apitoll-cloud-v1-crypto-global\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ApiToll%20Crypto%20Market%20Overview%3A%20A%20snapshot%20of%20the%20total%20crypto%20market%3A%20aggregate%20market%20capitalization&seller=https%3A%2F%2Fcrypto.apitoll.cloud%2Fv1%2Fcrypto%2Fglobal"
+}

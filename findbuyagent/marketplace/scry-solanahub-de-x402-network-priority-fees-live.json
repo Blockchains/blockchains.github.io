@@ -1,0 +1,79 @@
+{
+ "slug": "scry-solanahub-de-x402-network-priority-fees-live",
+ "name": "Solana priority fee estimates via x402: micro-lamports per compute uni",
+ "seller": "scry.solanahub.de",
+ "host": "scry.solanahub.de",
+ "provider": "https://scry.solanahub.de",
+ "description": "Solana priority fee estimates via x402: micro-lamports per compute unit for global, Jupiter, Raydium or custom account keys. Lookback 1-150 slots (default 50), 20-second cache. Network fee evidence, not a wallet check; no transaction inclusion guarantee.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://scry.solanahub.de/x402/network/priority-fees-live",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xF4A904d8326786d90157cf791C281302F11b2036",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "account_keys": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+   "lookback_slots": 50,
+   "preset": "jupiter_swap"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"account_keys\":[\"JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4\"],\"agent_decision_support\":{\"confidence\":\"HIGH\",\"posture\":\"evidence_only\"},\"as_of\":\"2026-05-05T13:17:40Z\",\"caveat\":\"Network fee evidence only. Priority fees do not guarantee transaction inclusion and are not financial advice or a tra...\",\"confidence_score\":0.9,\"coverage\":{\"confidence\":0.9},\"estimate\":{},\"evidence_pack\":{\"contract\":\"scry_evidence_pack_v1\",\"posture\":\"evidence_for_caller_policy\"},\"field_provenance\":{},\"fixture_note\":\"Frozen-but-current response-shape fixture refreshed on 2026-05-05. Paid responses return response-level freshness fie...\",\"frozen_at\":\"2026-05-05T13:17:40Z\",\"is_example\":true,\"lookback_slots\":50,\"methodology\":\"scry_priority_fees_live_v1\",\"preset\":\"jupiter_swap\",\"preset_label\":\"Jupiter swap route account-key estimate\",\"product\":\"scry_priority_fees_live\",\"response_generated_at\":\"2026-05-05T13:17:40Z\",\"source_updated_at\":\"2026-05-05T13:17:40Z\",\"sources\":[\"helius-priority-fee-api\"],\"spend_rationale\":{},\"status\":\"success\",\"supported\":true,\"workflow_continuation\":{\"contract\":\"scry_workflow_continuation_v1\",\"posture\":\"caller_selects_no_automatic_purchase\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://scry.solanahub.de/llms.txt",
+ "docsChecked": 1793609271287,
+ "payers30d": 13,
+ "calls30d": 68,
+ "lastCalledAt": "2026-11-02T04:46:35.008Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 364,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 364,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/scry-solanahub-de-x402-network-priority-fees-live",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-contract-address",
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "hyperliquid-predict-use-x402atlas-com-outcomes",
+  "notary-forgemesh-io-api-notarize",
+  "coingecko-use-x402atlas-com-price",
+  "verifier-quantumshieldlabs-dev-x402-preflight"
+ ],
+ "example": {
+  "curl": "curl -i 'https://scry.solanahub.de/x402/network/priority-fees-live?account_keys=JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4&lookback_slots=50&preset=jupiter_swap'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20scry-solanahub-de-x402-network-priority-fees-live&body=%7B%22slug%22%3A%22scry-solanahub-de-x402-network-priority-fees-live%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: scry-solanahub-de-x402-network-priority-fees-live\",\"body\":\"{\\\"slug\\\":\\\"scry-solanahub-de-x402-network-priority-fees-live\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Solana%20priority%20fee%20estimates%20via%20x402%3A%20micro-lamports%20per%20compute%20uni&seller=https%3A%2F%2Fscry.solanahub.de%2Fx402%2Fnetwork%2Fpriority-fees-live"
+}

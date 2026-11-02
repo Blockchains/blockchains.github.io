@@ -1,0 +1,126 @@
+{
+ "slug": "stableenrich-dev-api-fullenrich-people-search",
+ "name": "StableEnrich: FullEnrich People Search — filter by company domain/name/LinkedIn URL,",
+ "seller": "StableEnrich",
+ "host": "stableenrich.dev",
+ "provider": "https://stableenrich.dev",
+ "description": "FullEnrich People Search — filter by company domain/name/LinkedIn URL, seniority, title, location, skills, and 20+ FullEnrich filters. Default lean roster: companies map + company_id refs; include_employment_history or verbose for full history. $0.15 when results found; free when no matches.",
+ "category": "Weather & geo",
+ "tags": [
+  "Fullenrich"
+ ],
+ "endpoint": "https://stableenrich.dev/api/fullenrich/people-search",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.15,
+ "amount": "150000",
+ "payTo": "0x325bdF6F7efAB24a2210c48c1b64cAb2eAe1d430",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "current_company_domains": [
+    {
+     "value": "stripe.com"
+    }
+   ],
+   "current_company_names": [
+    {
+     "value": "Timber Creek High School"
+    }
+   ],
+   "current_position_seniority_level": [
+    {
+     "value": "C-level"
+    },
+    {
+     "value": "VP"
+    },
+    {
+     "value": "Director"
+    },
+    {
+     "value": "Senior"
+    }
+   ],
+   "current_position_titles": [
+    {
+     "value": "Software Engineer"
+    }
+   ],
+   "offset": 0,
+   "person_locations": [
+    {
+     "value": "New York"
+    }
+   ],
+   "person_names": [
+    {
+     "value": "Julie Abel"
+    }
+   ],
+   "person_skills": [
+    {
+     "value": "Rust"
+    },
+    {
+     "value": "DeFi"
+    }
+   ]
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"companies\":{\"co_stripe\":{\"domain\":\"stripe.com\",\"id\":\"co_stripe\",\"name\":\"Stripe\"}},\"metadata\":{\"offset\":0,\"total\":1},\"people\":[{\"employment\":{\"current\":{\"company_id\":\"co_stripe\",\"is_current\":true,\"seniority\":\"VP\",\"title\":\"VP Engineering\"}},\"full_name\":\"Jane Doe\",\"location\":{\"city\":\"San Francisco\",\"country\":\"United States\"},\"social_profiles\":{\"professional_network\":{\"url\":\"https://www.linkedin.com/in/janedoe\"}}}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://stableenrich.dev/llms.txt",
+ "docsChecked": 1793609267330,
+ "payers30d": 43,
+ "calls30d": 820,
+ "lastCalledAt": "2026-11-02T00:18:04.817Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 324,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 324,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/stableenrich-dev-api-fullenrich-people-search",
+ "rating": null,
+ "related": [
+  "agi-apify-com-protocols-x402-prepaid-tokens",
+  "x402tap-com-api-weather",
+  "api-x402node-dev-finance-econ-calendar",
+  "quantagentshop-com-v1-weather",
+  "geoip-bip-rep-com-lookup",
+  "x402-forgemesh-io-current-time"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://stableenrich.dev/api/fullenrich/people-search' -H 'content-type: application/json' -d '{\"current_company_domains\":[{\"value\":\"stripe.com\"}],\"current_company_names\":[{\"value\":\"Timber Creek High School\"}],\"current_position_seniority_level\":[{\"value\":\"C-level\"},{\"value\":\"VP\"},{\"value\":\"Director\"},{\"value\":\"Senior\"}],\"current_position_titles\":[{\"value\":\"Software Engineer\"}],\"offset\":0,\"person_locations\":[{\"value\":\"New York\"}],\"person_names\":[{\"value\":\"Julie Abel\"}],\"person_skills\":[{\"value\":\"Rust\"},{\"value\":\"DeFi\"}]}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20stableenrich-dev-api-fullenrich-people-search&body=%7B%22slug%22%3A%22stableenrich-dev-api-fullenrich-people-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: stableenrich-dev-api-fullenrich-people-search\",\"body\":\"{\\\"slug\\\":\\\"stableenrich-dev-api-fullenrich-people-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=StableEnrich%3A%20FullEnrich%20People%20Search%20%E2%80%94%20filter%20by%20company%20domain%2Fname%2FLinkedIn%20URL%2C&seller=https%3A%2F%2Fstableenrich.dev%2Fapi%2Ffullenrich%2Fpeople-search"
+}

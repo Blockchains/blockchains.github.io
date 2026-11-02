@@ -1,0 +1,86 @@
+{
+ "slug": "agent-data-api-agentdata-workers-dev-v1-contracts-opportunities",
+ "name": "Agent Data API: Search open U.S. federal contract opportunities (solicitations, presol",
+ "seller": "Agent Data API",
+ "host": "agent-data-api.agentdata.workers.dev",
+ "provider": "https://agent-data-api.agentdata.workers.dev",
+ "description": "Search open U.S. federal contract opportunities (solicitations, presolicitations, sources sought) from a copy synced from SAM.gov several times a day. Use when you need current government RFPs or bids matching a title keyword, 6-digit NAICS code, small-business set-aside or place-of-performance state. Returns deduplicated JSON: notice ID, title, agency, NAICS, set-aside, posted date, response deadline, state, SAM.gov link and lastSynced. Defaults: last 7 days, 25 results (max 100).",
+ "category": "Search & web",
+ "tags": [
+  "government",
+  "contracts",
+  "sam.gov",
+  "procurement",
+  "rfp"
+ ],
+ "endpoint": "https://agent-data-api.agentdata.workers.dev/v1/contracts/opportunities",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x18b170f3Eb904B80fcF90AD9dcc2fC0EE45cD872",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": 25,
+   "naics": "541512",
+   "postedDays": 7,
+   "q": "cybersecurity"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":1,\"coverageComplete\":true,\"lastSynced\":\"2026-09-26T18:40:02.000Z\",\"query\":{\"limit\":25,\"naics\":\"541512\",\"postedDays\":7,\"postedFrom\":\"2026-09-19\",\"postedTo\":\"2026-09-26\",\"q\":\"cybersecurity\"},\"results\":[{\"agency\":\"DEPT OF DEFENSE\",\"naics\":\"541512\",\"noticeId\":\"0a1b2c3d4e5f60718293a4b5c6d7e8f9\",\"placeOfPerformanceState\":\"MD\",\"postedDate\":\"2026-09-24\",\"responseDeadline\":\"2026-10-15T17:00:00-04:00\",\"setAside\":\"SBA\",\"setAsideDescription\":\"Total Small Business Set-Aside (FAR 19.5)\",\"subAgency\":\"DEPT OF THE ARMY\",\"title\":\"Cybersecurity Operations Support Services\",\"url\":\"https://sam.gov/workspace/contract/opp/0a1b2c3d4e5f60718293a4b5c6d7e8f9/view\"}],\"source\":\"SAM.gov Get Opportunities API v2 (synced copy)\",\"totalMatches\":1}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609281485,
+ "payers30d": 9,
+ "calls30d": 11,
+ "lastCalledAt": "2026-11-01T23:17:48.151Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 154,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 154,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agent-data-api-agentdata-workers-dev-v1-contracts-opportunities",
+ "rating": null,
+ "related": [
+  "stableenrich-dev-api-exa-search",
+  "websearch-use-x402atlas-com-search",
+  "x402-twit-sh-tweets-user",
+  "x402-orthogonal-com-icypeas-api-find-people",
+  "mcp-newstex-com-x402-trending",
+  "supplier-risk-api-production-up-railway-app-abandonment-check"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agent-data-api.agentdata.workers.dev/v1/contracts/opportunities?limit=25&naics=541512&postedDays=7&q=cybersecurity'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agent-data-api-agentdata-workers-dev-v1-contracts-opportunities&body=%7B%22slug%22%3A%22agent-data-api-agentdata-workers-dev-v1-contracts-opportunities%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agent-data-api-agentdata-workers-dev-v1-contracts-opportunities\",\"body\":\"{\\\"slug\\\":\\\"agent-data-api-agentdata-workers-dev-v1-contracts-opportunities\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent%20Data%20API%3A%20Search%20open%20U.S.%20federal%20contract%20opportunities%20(solicitations%2C%20presol&seller=https%3A%2F%2Fagent-data-api.agentdata.workers.dev%2Fv1%2Fcontracts%2Fopportunities"
+}

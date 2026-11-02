@@ -1,0 +1,80 @@
+{
+ "slug": "datastand-dev-api-bazaar-cheapest",
+ "name": "Cost-optimised endpoint selection: name a capability (web search, toke",
+ "seller": "datastand.dev",
+ "host": "datastand.dev",
+ "provider": "https://datastand.dev",
+ "description": "Cost-optimised endpoint selection: name a capability (web search, token safety, enrichment) and get the x402 endpoints that provide it ranked cheapest-first in USDC per call, with adoption stats. Refreshed daily from the Bazaar discovery index. The corpus is the most-used slice of the Bazaar, so read `price_floor_complete` and `corpus.cutoff` for whether the price floor you get is the Bazaar's or only ours — both are free on the catalog listing.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://datastand.dev/api/bazaar/cheapest",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x470a1b647d668d3820add26d70c8371557ff4c6b",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "capability": "web search",
+   "limit": "20",
+   "min_payers": "1",
+   "offset": "0"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"capability\":\"web search\",\"cheapest\":{\"payers_30d\":12,\"price_usd\":0.001,\"resource\":\"https://example.com/api/search\"},\"corpus\":{\"cutoff\":{\"calls_30d\":3,\"note\":\"Weakest row in the searchable slice. Resources at or below this 30-day usage may not be indexed; ranking is payers, then calls, then most recently restamped by the index, then resource URL.\",\"payers_30d\":3},\"indexed\":8007,\"of_total\":94275},\"count\":7,\"filters\":{\"min_payers\":1,\"min_payers_effective\":3},\"page\":{\"has_more\":false,\"limit\":20,\"next_offset\":null,\"offset\":0,\"returned\":7,\"total\":7},\"price_floor_complete\":false}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://datastand.dev/llms.txt",
+ "docsChecked": 1793609277807,
+ "payers30d": 10,
+ "calls30d": 10,
+ "lastCalledAt": "2026-10-30T09:56:52.701Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 252,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 252,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/datastand-dev-api-bazaar-cheapest",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-contract-address",
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "hyperliquid-predict-use-x402atlas-com-outcomes",
+  "notary-forgemesh-io-api-notarize",
+  "coingecko-use-x402atlas-com-price",
+  "scry-solanahub-de-x402-network-priority-fees-live"
+ ],
+ "example": {
+  "curl": "curl -i 'https://datastand.dev/api/bazaar/cheapest?capability=web+search&limit=20&min_payers=1&offset=0'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20datastand-dev-api-bazaar-cheapest&body=%7B%22slug%22%3A%22datastand-dev-api-bazaar-cheapest%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: datastand-dev-api-bazaar-cheapest\",\"body\":\"{\\\"slug\\\":\\\"datastand-dev-api-bazaar-cheapest\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Cost-optimised%20endpoint%20selection%3A%20name%20a%20capability%20(web%20search%2C%20toke&seller=https%3A%2F%2Fdatastand.dev%2Fapi%2Fbazaar%2Fcheapest"
+}

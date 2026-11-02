@@ -1,0 +1,85 @@
+{
+ "slug": "tolca-tonbot-ca-v1-web-search",
+ "name": "Tolca: Search the web and read the top pages in ONE call: 10 results (title,",
+ "seller": "Tolca",
+ "host": "tolca.tonbot.ca",
+ "provider": "https://tolca.tonbot.ca",
+ "description": "Search the web and read the top pages in ONE call: 10 results (title, url, snippet, date) plus the clean text of the best pages, with fetch time and sha256. French and Canada by default when the query is French; official-sources mode (governments, registries, courts, laws); freshness filter; site: restriction. No results = HTTP 404 = you are not charged. Input: query, optional read (0-5), official, lang, country, freshness, site.",
+ "category": "Search & web",
+ "tags": [
+  "search",
+  "web",
+  "scrape",
+  "markdown",
+  "research"
+ ],
+ "endpoint": "https://tolca.tonbot.ca/v1/web-search",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.008,
+ "amount": "8000",
+ "payTo": "0x35F0B86a7E33F561faf7cfa5654CAd9162C4A17d",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "freshness": "30d",
+   "query": "subvention thermopompe Québec 2026",
+   "read": 3
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":10,\"country\":\"CA\",\"lang\":\"fr\",\"notice\":\"No results = HTTP 404 = no charge.\",\"official\":false,\"pages\":[{\"chars\":5400,\"fetched_at\":\"2026-10-17T20:00:00Z\",\"kind\":\"html\",\"read_ms\":820,\"sha256\":\"3b1c...\",\"text\":\"Clean page text...\",\"title\":\"Programme LogisVert\",\"truncated\":false,\"url\":\"https://www.hydroquebec.com/residentiel/mieux-consommer/logisvert/\"}],\"query\":\"subvention thermopompe Québec 2026\",\"results\":[{\"age\":\"2026-09-02\",\"official\":false,\"rank\":1,\"snippet\":\"Aide financière pour l'installation d'une thermopompe...\",\"title\":\"Programme LogisVert\",\"url\":\"https://www.hydroquebec.com/residentiel/mieux-consommer/logisvert/\"}],\"took_ms\":2100}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://tolca.tonbot.ca/llms.txt",
+ "docsChecked": 1793609273293,
+ "payers30d": 12,
+ "calls30d": 45,
+ "lastCalledAt": "2026-11-01T08:10:44.524Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 655,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 655,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/tolca-tonbot-ca-v1-web-search",
+ "rating": null,
+ "related": [
+  "api-exa-ai-search",
+  "quantagentshop-com-v1-company-lookup",
+  "stableenrich-dev-api-exa-search",
+  "websearch-use-x402atlas-com-search",
+  "x402-twit-sh-tweets-user",
+  "x402-orthogonal-com-icypeas-api-find-people"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://tolca.tonbot.ca/v1/web-search' -H 'content-type: application/json' -d '{\"freshness\":\"30d\",\"query\":\"subvention thermopompe Québec 2026\",\"read\":3}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20tolca-tonbot-ca-v1-web-search&body=%7B%22slug%22%3A%22tolca-tonbot-ca-v1-web-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: tolca-tonbot-ca-v1-web-search\",\"body\":\"{\\\"slug\\\":\\\"tolca-tonbot-ca-v1-web-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Tolca%3A%20Search%20the%20web%20and%20read%20the%20top%20pages%20in%20ONE%20call%3A%2010%20results%20(title%2C&seller=https%3A%2F%2Ftolca.tonbot.ca%2Fv1%2Fweb-search"
+}

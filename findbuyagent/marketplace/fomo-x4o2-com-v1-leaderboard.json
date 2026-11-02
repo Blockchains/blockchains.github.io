@@ -1,0 +1,86 @@
+{
+ "slug": "fomo-x4o2-com-v1-leaderboard",
+ "name": "x4o2 FOMO Data: FOMO's best traders for the period (24h, 7d, 30d or all time), best fi",
+ "seller": "x4o2 FOMO Data",
+ "host": "fomo.x4o2.com",
+ "provider": "https://fomo.x4o2.com",
+ "description": "FOMO's best traders for the period (24h, 7d, 30d or all time), best first. Each entry is the trader's profile (handle, user id, Solana and EVM wallets, picture, follower and trade counts, top holdings) plus rank and pnl for the period (also in FOMO's field pnl24h, pnl7d, pnl30d or totalPnL). This is all FOMO publishes: 150 entries per period, 100 all-time, no paging. Ranks beyond that are per user: /v1/profile/{handle}?include=rank, or 50 at a time via /v1/profiles?ids=&include=rank.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "fomo",
+  "leaderboard",
+  "pnl",
+  "smart money",
+  "top traders"
+ ],
+ "endpoint": "https://fomo.x4o2.com/v1/leaderboard",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x46E18AA644CFF035Aec1cb9ca412900aAe78E928",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": 150,
+   "maxAge": 5,
+   "period": "24h",
+   "stale": 0
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"leaderboard\":[{\"activated\":false,\"address\":\"FJDy9FDRy6bwGEUKuAC98bUtN8MkpE2pT7Dj7HE3Z7Q1\",\"badge\":{\"image\":null,\"metadata\":{\"rank\":1,\"totalPnL\":3283256.666338974},\"text\":\"Awarded to traders who have reached all-time top 100 on t...\",\"title\":\"Top 1\",\"type\":\"top_100_badge\"},\"clan\":{\"iconLink\":\"https://prod-fomo-profile-pics.s3.amazonaws.com/4d5de9da1...\",\"iconThumbhash\":\"phgWJwJoh4iPd4Z0hmhneIh4l/xoB3sC\",\"id\":\"715a68a6-657e-4424-8c65-68ad3af899b1\",\"name\":\"Fantom Troupe\"},\"clanBadge\":{\"image\":\"https://prod-fomo-profile-pics.s3.amazonaws.com/4d5de9da1...\",\"metadata\":{\"clanId\":\"715a68a6-657e-4424-8c65-68ad3af899b1\",\"memberType\":\"member\"},\"text\":\"Awarded for being in a clan\",\"title\":\"Fantom Troupe\",\"type\":\"clan\"},\"coverPhotoLink\":null,\"coverPhotoThumbhash\":null,\"createdAt\":\"2026-05-18T12:45:58.832Z\",\"description\":\"\\\"If the Lord will, we shall live, and do this, or that.\\\" ...\",\"displayName\":\"Unipcs\",\"evmAddress\":\"0x2ac082e252143c89c6e3bcb972e49855f9f6711c\",\"followers\":812488,\"following\":44,\"id\":\"36adb85a-c0fd-5fa8-916d-8fdc32fe4237\",\"isReferred\":true,\"isRestricted\":false,\"numTrades\":7786,\"pnl\":3283256.666338974,\"private\":false,\"profilePictureLink\":\"https://prod-fomo-profile-pics.s3.amazonaws.com/685a72bf4...\",\"rank\":1,\"swapCount\":1255,\"thumbhash\":\"VzkKPwIEWoh7hXiLd5l3t3eGaHB3BoQE\",\"topHoldings\":[{\"humanAmount\":10958918.177889977,\"imageUrl\":\"https://metadata.mobula.io/assets/logos/f03b6095dc83bde16...\",\"networkId\":4663,\"pnl\":2559347.6541244076,\"price\":0.23975544795342196,\"tokenAddress\":\"0x39dbed3a2bd333467115de45665cc57f813c4571\",\"value\":2627460.3368249102}],\"totalHoldings\":247,\"totalPnL\":3283256.666338974,\"totalVolume\":5381648.839373,\"twitter\":null,\"userHandle\":\"unipcs\",\"verified\":false}]},\"meta\":{\"ageMs\":6517,\"observedAt\":1793069276751,\"parts\":{\"leaderboard\":{\"observedAt\":1793069276751,\"source\":\"cache\"}},\"source\":\"cache\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://fomo.x4o2.com/llms.txt",
+ "docsChecked": 1793609269237,
+ "payers30d": 16,
+ "calls30d": 35,
+ "lastCalledAt": "2026-11-01T07:06:05.379Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 58,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 58,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/fomo-x4o2-com-v1-leaderboard",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://fomo.x4o2.com/v1/leaderboard?limit=150&maxAge=5&period=24h&stale=0'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20fomo-x4o2-com-v1-leaderboard&body=%7B%22slug%22%3A%22fomo-x4o2-com-v1-leaderboard%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: fomo-x4o2-com-v1-leaderboard\",\"body\":\"{\\\"slug\\\":\\\"fomo-x4o2-com-v1-leaderboard\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x4o2%20FOMO%20Data%3A%20FOMO's%20best%20traders%20for%20the%20period%20(24h%2C%207d%2C%2030d%20or%20all%20time)%2C%20best%20fi&seller=https%3A%2F%2Ffomo.x4o2.com%2Fv1%2Fleaderboard"
+}

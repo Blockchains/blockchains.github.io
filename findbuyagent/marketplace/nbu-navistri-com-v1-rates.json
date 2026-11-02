@@ -1,0 +1,84 @@
+{
+ "slug": "nbu-navistri-com-v1-rates",
+ "name": "NBU Data Ukraine: Official National Bank of Ukraine (NBU) exchange rates of the hryvnia",
+ "seller": "NBU Data Ukraine",
+ "host": "nbu.navistri.com",
+ "provider": "https://nbu.navistri.com",
+ "description": "Official National Bank of Ukraine (NBU) exchange rates of the hryvnia (UAH) on a date: 40+ currencies, gold, silver and SDR, with English names. Call it when you need the legally official UAH rate for Ukrainian accounting, tax, invoices or customs, or to convert to/from UAH on a given date. Params: date (YYYY-MM-DD, default today in Kyiv), currency (ISO code, optional; omit for all).",
+ "category": "Data & analytics",
+ "tags": [
+  "data",
+  "finance",
+  "ukraine",
+  "exchange-rates",
+  "nbu"
+ ],
+ "endpoint": "https://nbu.navistri.com/v1/rates",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x44e5eBeB366Ab69A0a3C1c05080a01FE0d8013ef",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "currency": "USD",
+   "date": "2026-10-09"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"base\":\"UAH\",\"count\":1,\"date\":\"2026-10-09\",\"rates\":[{\"currency\":\"USD\",\"name\":\"US Dollar\",\"nameUk\":\"Долар США\",\"numericCode\":840,\"rate\":44.8526,\"ratePerUnit\":44.8526,\"setOn\":\"2026-10-08\",\"specialConditions\":false,\"units\":1}]},\"meta\":{\"cached\":false,\"endpoint\":\"GET /v1/rates\",\"params\":{\"currency\":\"USD\",\"date\":\"2026-10-09\"},\"retrievedAt\":\"2026-10-12T12:00:00.000Z\",\"source\":\"National Bank of Ukraine open data (bank.gov.ua)\",\"sourceUrl\":\"https://bank.gov.ua/ua/open-data/api-dev\",\"terms\":\"Ukrainian public open data: free reuse including commercial use, with mandatory attribution to the source (Law of Ukraine 'On Access to Public Information', art. 10-1; https://bank.gov.ua/ua/open-data). Values are passed through unchanged. Not affiliated with or endorsed by the NBU.\",\"upstreamUrl\":\"https://bank.gov.ua/...\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://nbu.navistri.com/llms.txt",
+ "docsChecked": 1793609269400,
+ "payers30d": 16,
+ "calls30d": 19,
+ "lastCalledAt": "2026-11-01T07:04:40.386Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 71,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 71,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/nbu-navistri-com-v1-rates",
+ "rating": null,
+ "related": [
+  "api-402rates-com-v1-ping",
+  "rubric-protocol-com-v1-x402-hedera-facts-exchange-rate",
+  "api-hyperextend-xyz-v1-liquidations-coverage",
+  "api-govparse-io-v1-stats-opportunities",
+  "http-forest-gas-station-mainnet-lcjl27p8lmjs-code-run-dns-changed",
+  "nordata-hihat-workers-dev-helligdager"
+ ],
+ "example": {
+  "curl": "curl -i 'https://nbu.navistri.com/v1/rates?currency=USD&date=2026-10-09'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20nbu-navistri-com-v1-rates&body=%7B%22slug%22%3A%22nbu-navistri-com-v1-rates%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: nbu-navistri-com-v1-rates\",\"body\":\"{\\\"slug\\\":\\\"nbu-navistri-com-v1-rates\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=NBU%20Data%20Ukraine%3A%20Official%20National%20Bank%20of%20Ukraine%20(NBU)%20exchange%20rates%20of%20the%20hryvnia&seller=https%3A%2F%2Fnbu.navistri.com%2Fv1%2Frates"
+}

@@ -1,0 +1,84 @@
+{
+ "slug": "concordancehq-duckdns-org-tools-search",
+ "name": "search: Full-text search across every aggregated data source in one call: news",
+ "seller": "search",
+ "host": "concordancehq.duckdns.org",
+ "provider": "https://concordancehq.duckdns.org",
+ "description": "Full-text search across every aggregated data source in one call: news, SEC filings, court opinions, academic papers, government records, and developer discussions. One query surfaces everything concordant across independently-sourced, citable results -- not a single-source wrapper. Optional source/category/since filters.",
+ "category": "Finance & markets",
+ "tags": [
+  "search",
+  "aggregator",
+  "full-text-search",
+  "multi-source",
+  "news"
+ ],
+ "endpoint": "https://concordancehq.duckdns.org/tools/search",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x1f5f8474fA0dc1Fde79187abd68Ef8Ea15ADAe34",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "limit": 10,
+   "query": "central bank interest rate"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":1,\"results\":[{\"category\":\"news_events\",\"content\":\"Central bank signals rate cut\",\"metadata\":{\"domain\":\"example.com\"},\"published_at\":\"2026-07-19T18:30:00+00:00\",\"source\":\"gdelt\",\"title\":\"Central bank signals rate cut\",\"url\":\"https://example.com/article\"}]}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1786579391/bazaar-icons/8d838c55be0bf55d.jpg",
+ "docs": "https://concordancehq.duckdns.org/llms.txt",
+ "docsChecked": 1793609280951,
+ "payers30d": 9,
+ "calls30d": 13,
+ "lastCalledAt": "2026-10-28T23:08:05.582Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 392,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 392,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/concordancehq-duckdns-org-tools-search",
+ "rating": null,
+ "related": [
+  "cloud-trycorpus-ai-v1-tokens-quotes",
+  "cloud-trycorpus-ai-v1-reserved",
+  "cloud-trycorpus-ai-v1-term-instance",
+  "www-blockchainiq-co-api-x402-v1-brief",
+  "api-orcatrace-dev-v1-latest",
+  "headers-use-x402atlas-com"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://concordancehq.duckdns.org/tools/search' -H 'content-type: application/json' -d '{\"limit\":10,\"query\":\"central bank interest rate\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20concordancehq-duckdns-org-tools-search&body=%7B%22slug%22%3A%22concordancehq-duckdns-org-tools-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: concordancehq-duckdns-org-tools-search\",\"body\":\"{\\\"slug\\\":\\\"concordancehq-duckdns-org-tools-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=search%3A%20Full-text%20search%20across%20every%20aggregated%20data%20source%20in%20one%20call%3A%20news&seller=https%3A%2F%2Fconcordancehq.duckdns.org%2Ftools%2Fsearch"
+}

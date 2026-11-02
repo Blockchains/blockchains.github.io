@@ -1,0 +1,75 @@
+{
+ "slug": "keyring-agent-blockchhub-link-api-send-nft",
+ "name": "Pay the send-nft execution fee (ERC-721/1155 transfer)",
+ "seller": "keyring-agent.blockchhub.link",
+ "host": "keyring-agent.blockchhub.link",
+ "provider": "https://keyring-agent.blockchhub.link",
+ "description": "Pay the send-nft execution fee (ERC-721/1155 transfer)",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://keyring-agent.blockchhub.link/api/send-nft",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.05,
+ "amount": "50000",
+ "payTo": "0x17cd53C04D707eF0Dd615EF56c633f02915a7905",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 3600,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"status\":\"ok\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609273393,
+ "payers30d": 12,
+ "calls30d": 161,
+ "lastCalledAt": "2026-11-01T12:47:35.683Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 209,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 209,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/keyring-agent-blockchhub-link-api-send-nft",
+ "rating": null,
+ "related": [
+  "x402-glassnode-com-v1-metrics-market-mvrv",
+  "api-insumermodel-com-v1-attest",
+  "kronossignals-com-api-v1-funding-extremes",
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets"
+ ],
+ "example": {
+  "curl": "curl -i 'https://keyring-agent.blockchhub.link/api/send-nft'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20keyring-agent-blockchhub-link-api-send-nft&body=%7B%22slug%22%3A%22keyring-agent-blockchhub-link-api-send-nft%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: keyring-agent-blockchhub-link-api-send-nft\",\"body\":\"{\\\"slug\\\":\\\"keyring-agent-blockchhub-link-api-send-nft\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Pay%20the%20send-nft%20execution%20fee%20(ERC-721%2F1155%20transfer)&seller=https%3A%2F%2Fkeyring-agent.blockchhub.link%2Fapi%2Fsend-nft"
+}

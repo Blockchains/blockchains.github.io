@@ -1,0 +1,82 @@
+{
+ "slug": "toolrail-dev-vat-rates",
+ "name": "Toolrail: Current VAT rates for supported European countries (EU-27 + UK, CH, NO",
+ "seller": "Toolrail",
+ "host": "toolrail.dev",
+ "provider": "https://toolrail.dev",
+ "description": "Current VAT rates for supported European countries (EU-27 + UK, CH, NO...). Standard, reduced and super-reduced rates, provided through the third-party vatnode dataset; verify applicability for your transaction. Use when pricing, invoicing or checking tax for a customer in Europe and you need that country's VAT rate.",
+ "category": "Security & compliance",
+ "tags": [
+  "vat",
+  "tax",
+  "europe",
+  "compliance"
+ ],
+ "endpoint": "https://toolrail.dev/vat/rates",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xC6E6138dAAc78CeC93d491b4581Afa1a61B98a17",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "country": "DE"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"code\":\"DE\",\"country\":\"Germany\",\"currency\":\"EUR\",\"reduced\":[7],\"source\":\"vatnode EU VAT rates dataset\",\"standard\":19,\"vat_abbr\":\"MwSt\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791214414/bazaar-icons/9a546448e64c900b.png",
+ "docs": "https://toolrail.dev/llms.txt",
+ "docsChecked": 1793609276793,
+ "payers30d": 10,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-01T23:15:51.887Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 153,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 153,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/toolrail-dev-vat-rates",
+ "rating": null,
+ "related": [
+  "netintel-dev-email-auth",
+  "modelmarket-dev-x402-histor-check",
+  "quartermaster-surewhynot-app-v1-dns",
+  "forensik-halowerk-com-v1-bytecode-clone-provenance",
+  "tienda-textokit-store-api-cuit-ar",
+  "forensik-halowerk-com-v1-address-poisoning-detector"
+ ],
+ "example": {
+  "curl": "curl -i 'https://toolrail.dev/vat/rates?country=DE'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20toolrail-dev-vat-rates&body=%7B%22slug%22%3A%22toolrail-dev-vat-rates%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: toolrail-dev-vat-rates\",\"body\":\"{\\\"slug\\\":\\\"toolrail-dev-vat-rates\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Toolrail%3A%20Current%20VAT%20rates%20for%20supported%20European%20countries%20(EU-27%20%2B%20UK%2C%20CH%2C%20NO&seller=https%3A%2F%2Ftoolrail.dev%2Fvat%2Frates"
+}

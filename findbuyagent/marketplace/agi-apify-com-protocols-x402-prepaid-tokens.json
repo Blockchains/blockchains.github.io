@@ -3,8 +3,9 @@
  "name": "Apify: Apify is the largest and most trusted marketplace of tools for web scr",
  "seller": "Apify",
  "host": "agi.apify.com",
+ "provider": "https://agi.apify.com",
  "description": "Apify is the largest and most trusted marketplace of tools for web scraping, crawling, data extraction, and automation. Use these tools, called Actors, to extract structured data from social media, e-commerce sites, search engines, maps, travel sites, or any other website. Turn the open web into a real-time data source for your research, lead generation, and monitoring.",
- "category": "Search & web",
+ "category": "Weather & geo",
  "tags": [
   "automation",
   "web-data",
@@ -14,11 +15,13 @@
  ],
  "endpoint": "https://agi.apify.com/protocols/x402/prepaid-tokens",
  "method": "GET",
+ "payment": "x402",
  "priceUsd": 1,
  "amount": "1000000",
  "payTo": "0x4aAbE17C239eF71c3A26bA7C2b3e0AeBbfC1DF26",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
  "listedTermsMatch": true,
  "input": {
   "queryParams": {
@@ -26,21 +29,53 @@
    "currency": "usd"
   },
   "body": null,
-  "bodyType": null
+  "bodyType": null,
+  "headers": null
  },
+ "outputType": "json",
  "outputExample": "{\"expiresAt\":\"2027-01-01T00:00:00.000Z\",\"remainingBalanceUsd\":2,\"token\":\"apify_api_xxxxxxxxxxxxxxxxxxxxxxxx\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1782409571/bazaar-icons/1cba6e0591a8daf3.png",
  "docs": "https://agi.apify.com/llms.txt",
  "docsChecked": 1793596018565,
  "payers30d": 42,
- "calls30d": 162,
+ "calls30d": 153,
+ "lastCalledAt": "2026-11-01T20:20:05.648Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 136,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 540,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 540,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/agi-apify-com-protocols-x402-prepaid-tokens",
  "rating": null,
+ "related": [
+  "stableenrich-dev-api-fullenrich-people-search",
+  "x402tap-com-api-weather",
+  "api-x402node-dev-finance-econ-calendar",
+  "quantagentshop-com-v1-weather",
+  "geoip-bip-rep-com-lookup",
+  "x402-forgemesh-io-current-time"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agi.apify.com/protocols/x402/prepaid-tokens?amount=2&currency=usd'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agi-apify-com-protocols-x402-prepaid-tokens&body=%7B%22slug%22%3A%22agi-apify-com-protocols-x402-prepaid-tokens%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agi-apify-com-protocols-x402-prepaid-tokens\",\"body\":\"{\\\"slug\\\":\\\"agi-apify-com-protocols-x402-prepaid-tokens\\\",\\\"stars\\\":1-5}\"}"

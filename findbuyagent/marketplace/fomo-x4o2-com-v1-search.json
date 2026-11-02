@@ -1,0 +1,86 @@
+{
+ "slug": "fomo-x4o2-com-v1-search",
+ "name": "x4o2 FOMO Data: FOMO's token search across the chains it trades: matches name, symbol",
+ "seller": "x4o2 FOMO Data",
+ "host": "fomo.x4o2.com",
+ "provider": "https://fomo.x4o2.com",
+ "description": "FOMO's token search across the chains it trades: matches name, symbol or address and returns each token's address, network id, metadata and market data. Use to resolve a name or ticker to a chain and address for the /v1/token routes.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "fomo",
+  "search",
+  "token",
+  "memecoin",
+  "discovery"
+ ],
+ "endpoint": "https://fomo.x4o2.com/v1/search",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x46E18AA644CFF035Aec1cb9ca412900aAe78E928",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": 20,
+   "maxAge": 5,
+   "q": "cate",
+   "stale": 0
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":[{\"change24\":\"-0.06718606218800116\",\"createdAt\":1785083564,\"holders\":144672,\"liquidity\":\"1330467.735606206\",\"marketCap\":\"44299891.45289496\",\"priceUSD\":\"0.04594730845954886\",\"token\":{\"address\":\"Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump\",\"decimals\":6,\"info\":{\"circulatingSupply\":\"964145516.63882\",\"id\":\"Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump:1399811149\",\"imageLargeUrl\":\"https://metadata.mobula.io/assets/logos/solana_solana_Ai6...\",\"imageSmallUrl\":\"https://metadata.mobula.io/assets/logos/solana_solana_Ai6...\",\"imageThumbUrl\":\"https://metadata.mobula.io/assets/logos/solana_solana_Ai6...\",\"name\":\"Cate\",\"symbol\":\"CATE\",\"totalSupply\":\"964145516.63882\"},\"launchpad\":{\"graduationPercent\":0,\"launchpadIconUrl\":\"https://metadata.mobula.io/assets/logos/factory_pumpfun.webp\",\"launchpadName\":\"Pump.fun\"},\"name\":\"Cate\",\"networkId\":1399811149,\"socialLinks\":{\"discord\":null,\"telegram\":\"https://t.me/catecoin_telegram\",\"twitter\":\"https://x.com/i/communities/2004330768022004131\",\"website\":\"https://cate.meme/\"},\"symbol\":\"CATE\"},\"volume24\":\"1952427.280316228\"}],\"meta\":{\"ageMs\":283,\"observedAt\":1793069283352,\"parts\":{\"search\":{\"observedAt\":1793069283352,\"source\":\"fresh\"}},\"source\":\"fresh\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://fomo.x4o2.com/llms.txt",
+ "docsChecked": 1793609275033,
+ "payers30d": 11,
+ "calls30d": 18,
+ "lastCalledAt": "2026-11-01T07:10:36.864Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 20,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 20,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/fomo-x4o2-com-v1-search",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://fomo.x4o2.com/v1/search?limit=20&maxAge=5&q=cate&stale=0'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20fomo-x4o2-com-v1-search&body=%7B%22slug%22%3A%22fomo-x4o2-com-v1-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: fomo-x4o2-com-v1-search\",\"body\":\"{\\\"slug\\\":\\\"fomo-x4o2-com-v1-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x4o2%20FOMO%20Data%3A%20FOMO's%20token%20search%20across%20the%20chains%20it%20trades%3A%20matches%20name%2C%20symbol&seller=https%3A%2F%2Ffomo.x4o2.com%2Fv1%2Fsearch"
+}

@@ -1,0 +1,75 @@
+{
+ "slug": "agentpaystore-com-api-directory-search",
+ "name": "Search every verified x402 agent endpoint listed in the AgentPay Direc",
+ "seller": "agentpaystore.com",
+ "host": "agentpaystore.com",
+ "provider": "https://agentpaystore.com",
+ "description": "Search every verified x402 agent endpoint listed in the AgentPay Directory. One query matches names, categories, tags and descriptions across all live listings and returns prices, endpoints and payment terms. 0.001 USDC per query via x402 on Base L2.",
+ "category": "Search & web",
+ "tags": [],
+ "endpoint": "https://agentpaystore.com/api/directory/search",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x367F1b3D8Ca90D1e087481a9A40d585Bf3451a03",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": "{\"count\":1,\"ok\":true,\"query\":\"translate\",\"results\":[{\"category\":\"language\",\"endpoint_url\":\"https://gibbr.app/agent/translate\",\"name\":\"Gibbr\",\"price_usdc\":\"0.10\",\"slug\":\"gibbr\",\"status\":\"verified\"}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://agentpaystore.com/llms.txt",
+ "docsChecked": 1793609280890,
+ "payers30d": 9,
+ "calls30d": 15,
+ "lastCalledAt": "2026-11-01T07:18:17.713Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 634,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 634,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agentpaystore-com-api-directory-search",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "minifetch-com-api-v1-x402-preflight-url-check",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "cdp-agent-0-01-onrender-com"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agentpaystore.com/api/directory/search'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agentpaystore-com-api-directory-search&body=%7B%22slug%22%3A%22agentpaystore-com-api-directory-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agentpaystore-com-api-directory-search\",\"body\":\"{\\\"slug\\\":\\\"agentpaystore-com-api-directory-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Search%20every%20verified%20x402%20agent%20endpoint%20listed%20in%20the%20AgentPay%20Direc&seller=https%3A%2F%2Fagentpaystore.com%2Fapi%2Fdirectory%2Fsearch"
+}

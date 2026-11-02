@@ -1,0 +1,75 @@
+{
+ "slug": "coil-trade-api-crypto-gate",
+ "name": "Coil Crypto Gate: START HERE — the cheapest answer we sell ($0.001) and the first call m",
+ "seller": "Coil Crypto Gate",
+ "host": "coil.trade",
+ "provider": "https://coil.trade",
+ "description": "START HERE — the cheapest answer we sell ($0.001) and the first call most agents make. Is crypto risk-on right now? Whether the BTC 200-day master gate is open or closed, the LONG/CASH state of the BTC and ETH sleeves, and a one-line verdict, all evaluated on UTC daily closes by a long-only rules engine. Poll it every cycle; when the gate flips, step up to /api/board/regime for the equity tape and /api/board/indices for the index ladder ($0.005 each). Research, not advice.",
+ "category": "Finance & markets",
+ "tags": [],
+ "endpoint": "https://coil.trade/api/crypto/gate",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x7B53524d5c5D29EfB8C1d128C56F62FE38Cd9476",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 3600,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asof_daily\":\"2026-07-24\",\"freshness\":{\"data_age_seconds\":142,\"market_open\":true,\"next_refresh_at\":\"<ISO-8601 UTC — always present; do not re-buy before this>\",\"poll_hint\":\"Market open — this board recomputes about every 5 minutes; polling faster returns the same payload.\"},\"gate_open\":false,\"mode\":\"RISK_OFF\",\"product\":\"coil-crypto-gate\",\"sleeves\":[{\"state\":\"CASH\",\"sym\":\"BTC-USD\"},{\"state\":\"CASH\",\"sym\":\"ETH-USD\"}],\"verdict\":\"CASH — BTC closed below its 200-day gate…\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://coil.trade/llms.txt",
+ "docsChecked": 1793609266890,
+ "payers30d": 31,
+ "calls30d": 131,
+ "lastCalledAt": "2026-11-02T05:04:23.676Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 131,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 131,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/coil-trade-api-crypto-gate",
+ "rating": null,
+ "related": [
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps",
+  "intel-degenscan-io-v1-br-ptax"
+ ],
+ "example": {
+  "curl": "curl -i 'https://coil.trade/api/crypto/gate'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20coil-trade-api-crypto-gate&body=%7B%22slug%22%3A%22coil-trade-api-crypto-gate%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: coil-trade-api-crypto-gate\",\"body\":\"{\\\"slug\\\":\\\"coil-trade-api-crypto-gate\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Coil%20Crypto%20Gate%3A%20START%20HERE%20%E2%80%94%20the%20cheapest%20answer%20we%20sell%20(%240.001)%20and%20the%20first%20call%20m&seller=https%3A%2F%2Fcoil.trade%2Fapi%2Fcrypto%2Fgate"
+}

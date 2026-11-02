@@ -1,0 +1,81 @@
+{
+ "slug": "x402-ochinimus-app-api-eth-price",
+ "name": "AgentFeed: ETH spot price in USD, read on-chain from the two deepest WETH/USDC Un",
+ "seller": "AgentFeed",
+ "host": "x402.ochinimus.app",
+ "provider": "https://x402.ochinimus.app",
+ "description": "ETH spot price in USD, read on-chain from the two deepest WETH/USDC Uniswap V3 pools, on Ethereum and on Base. Use when you need to answer: What is ETH worth? Returns their median plus each pool's own price, so a caller can see the spread between chains. Computed from chain state; no exchange feed.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "price",
+  "eth",
+  "ethereum",
+  "crypto",
+  "onchain"
+ ],
+ "endpoint": "https://x402.ochinimus.app/api/eth-price",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x22DB3A9686EE5261e7Bf3ed4f91277232E8076e6",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"confidence\":null,\"method\":\"each pool's current price (concentrated-liquidity sqrt price, fee excluded) read from chain state; price is their median\",\"price\":2491.81,\"publish_time\":1791842008,\"quotes\":[{\"pair\":\"WETH/USDC 0.05%\",\"pool\":\"0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640\",\"price\":2491.8574,\"source\":\"uniswap-v3:ethereum\"},{\"pair\":\"WETH/USDC 0.05%\",\"pool\":\"0xd0b53D9277642d899DF5C87A3966A349A798F224\",\"price\":2491.7659,\"source\":\"uniswap-v3:base\"}],\"source\":\"on-chain DEX mid, median of 2 pools\",\"symbol\":\"ETH\"},\"paid\":true,\"tool\":\"get_eth_price\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1790342068/bazaar-icons/e1b26d9582fdb91c.png",
+ "docs": "https://x402.ochinimus.app/llms.txt",
+ "docsChecked": 1793609271642,
+ "payers30d": 13,
+ "calls30d": 18,
+ "lastCalledAt": "2026-11-01T23:26:04.58Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 141,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 141,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-ochinimus-app-api-eth-price",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.ochinimus.app/api/eth-price'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-ochinimus-app-api-eth-price&body=%7B%22slug%22%3A%22x402-ochinimus-app-api-eth-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-ochinimus-app-api-eth-price\",\"body\":\"{\\\"slug\\\":\\\"x402-ochinimus-app-api-eth-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=AgentFeed%3A%20ETH%20spot%20price%20in%20USD%2C%20read%20on-chain%20from%20the%20two%20deepest%20WETH%2FUSDC%20Un&seller=https%3A%2F%2Fx402.ochinimus.app%2Fapi%2Feth-price"
+}

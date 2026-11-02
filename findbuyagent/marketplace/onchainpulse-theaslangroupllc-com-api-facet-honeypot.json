@@ -1,0 +1,84 @@
+{
+ "slug": "onchainpulse-theaslangroupllc-com-api-facet-honeypot",
+ "name": "OnchainPulse: Honeypot check, half a cent: can this token actually be sold",
+ "seller": "OnchainPulse",
+ "host": "onchainpulse.theaslangroupllc.com",
+ "provider": "https://onchainpulse.theaslangroupllc.com",
+ "description": "Honeypot check, half a cent: can this token actually be sold? Simulated buy+sell verdict, buy/sell/transfer tax, mint authority, ownership renounced, transfer-pausable, blacklist — the raw flags, one source, no fusion. Base, Ethereum, BSC, Arbitrum, Polygon, Optimism, Avalanche. Cheapest token safety check before you trade; upgrade to /api/evmtoken ($0.015) for the fused CLEAR/CAUTION/AVOID verdict. Answers: is this token safe?",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "honeypot",
+  "rug-check",
+  "token-safety",
+  "evm",
+  "pre-trade"
+ ],
+ "endpoint": "https://onchainpulse.theaslangroupllc.com/api/facet/honeypot",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x50ab2018c06c6E4eAA9BA52057Eb55eD284912fc",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "address": "0x532f27101965dd16442E59d40670FaF5eBB142E4",
+   "chain": "base"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"address\":\"0x532f27101965dd16442E59d40670FaF5eBB142E4\",\"blacklist_capable\":false,\"buy_tax_pct\":\"0\",\"cannot_buy\":false,\"chain\":\"base\",\"is_honeypot\":false,\"mintable\":false,\"ownership_renounced\":true,\"sell_tax_pct\":\"0\",\"sellable\":true,\"source\":\"goplus\",\"token\":{\"name\":\"Brett\",\"symbol\":\"BRETT\"},\"transfer_pausable\":false,\"transfer_tax_pct\":\"0\",\"upgrade\":{\"due_diligence_receipt\":\"/api/receipts — $0.35 evidence-backed receipt\",\"full_scan\":\"/api/evmtoken — $0.015 fused CLEAR/CAUTION/AVOID verdict\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://onchainpulse.theaslangroupllc.com/llms.txt",
+ "docsChecked": 1793609278506,
+ "payers30d": 9,
+ "calls30d": 69,
+ "lastCalledAt": "2026-11-02T01:26:59.41Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 433,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 433,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/onchainpulse-theaslangroupllc-com-api-facet-honeypot",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-contract-address",
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "hyperliquid-predict-use-x402atlas-com-outcomes",
+  "notary-forgemesh-io-api-notarize",
+  "coingecko-use-x402atlas-com-price",
+  "scry-solanahub-de-x402-network-priority-fees-live"
+ ],
+ "example": {
+  "curl": "curl -i 'https://onchainpulse.theaslangroupllc.com/api/facet/honeypot?address=0x532f27101965dd16442E59d40670FaF5eBB142E4&chain=base'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20onchainpulse-theaslangroupllc-com-api-facet-honeypot&body=%7B%22slug%22%3A%22onchainpulse-theaslangroupllc-com-api-facet-honeypot%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: onchainpulse-theaslangroupllc-com-api-facet-honeypot\",\"body\":\"{\\\"slug\\\":\\\"onchainpulse-theaslangroupllc-com-api-facet-honeypot\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=OnchainPulse%3A%20Honeypot%20check%2C%20half%20a%20cent%3A%20can%20this%20token%20actually%20be%20sold&seller=https%3A%2F%2Fonchainpulse.theaslangroupllc.com%2Fapi%2Ffacet%2Fhoneypot"
+}

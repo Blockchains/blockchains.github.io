@@ -1,0 +1,79 @@
+{
+ "slug": "api-orcatrace-dev-v1-resolving",
+ "name": "Paid ($0.02 USDC via x402)",
+ "seller": "api.orcatrace.dev",
+ "host": "api.orcatrace.dev",
+ "provider": "https://api.orcatrace.dev",
+ "description": "Paid ($0.02 USDC via x402). Markets resolving within ?withinHours (1-72): odds, contested-vs-converged, liquidity, and order-book microstructure for the nearest expiries. Mechanical short-interval markets excluded by default (?includeNoise=1 to include). Settle-early with a guaranteed refund — if we charge you but cannot deliver, the payment is refunded.",
+ "category": "Utilities",
+ "tags": [],
+ "endpoint": "https://api.orcatrace.dev/v1/resolving",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.02,
+ "amount": "20000",
+ "payTo": "0xf444abc53f5e1e73caec7df64d147ddb119514a0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "includeNoise": "example",
+   "minLiquidity": 5000,
+   "withinHours": 24
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":1,\"data\":[{\"convergence\":\"contested\",\"eventEndDate\":\"2026-06-14T00:00:00Z\",\"hoursRemaining\":22.5,\"liquidityUsd\":41000,\"question\":\"Will X happen by June 14?\",\"yesMid\":0.83}],\"filters\":{\"includeNoise\":false,\"minLiquidity\":5000,\"withinHours\":24},\"success\":true}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.orcatrace.dev/llms.txt",
+ "docsChecked": 1793609280622,
+ "payers30d": 9,
+ "calls30d": 14,
+ "lastCalledAt": "2026-10-30T12:42:55.451Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 153,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 153,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-orcatrace-dev-v1-resolving",
+ "rating": null,
+ "related": [
+  "appstore-use-x402atlas-com-reviews",
+  "api-oblique-markets-api-v1-paid-time",
+  "api-myceliasignal-com-oracle-price-btc-usd",
+  "finance-api-kdlcfa-workers-dev-us30y-yield",
+  "randomfactsx402-vercel-app-api-random-fact",
+  "api-gitbeacon-dev-v1-repos"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.orcatrace.dev/v1/resolving?includeNoise=example&minLiquidity=5000&withinHours=24'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-orcatrace-dev-v1-resolving&body=%7B%22slug%22%3A%22api-orcatrace-dev-v1-resolving%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-orcatrace-dev-v1-resolving\",\"body\":\"{\\\"slug\\\":\\\"api-orcatrace-dev-v1-resolving\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Paid%20(%240.02%20USDC%20via%20x402)&seller=https%3A%2F%2Fapi.orcatrace.dev%2Fv1%2Fresolving"
+}

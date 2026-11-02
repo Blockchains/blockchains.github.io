@@ -1,0 +1,78 @@
+{
+ "slug": "payments-intel-production-up-railway-app-v1-token",
+ "name": "What are the symbol, name, decimals, contract address and issuer of th",
+ "seller": "payments-intel-production.up.railway.app",
+ "host": "payments-intel-production.up.railway.app",
+ "provider": "https://payments-intel-production.up.railway.app",
+ "description": "What are the symbol, name, decimals, contract address and issuer of this stablecoin on this chain? Cited stablecoin token facts from a prepared dataset (USDC, EURC, USDT, PYUSD, DAI on the chains /v1/chain covers, where a permissively licensed source lists them): symbol, name, decimals, contract address, chain, issuer, each with a source citation and license. Fields not established from a source are the string \"unknown\". Malformed input and tokens not in the dataset return 400/404 and are never",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://payments-intel-production.up.railway.app/v1/token",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x4421dea0F91E67608B52BCE35D9fb2a3574e4453",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "chain": "base",
+   "symbol": "USDC"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"as_of\":\"2026-10-13\",\"note\":\"...\",\"sources\":[{\"id\":\"trustwallet-assets\",\"license\":\"MIT\",\"url\":\"https://github.com/trustwallet/assets\"}],\"token\":{\"address\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\"as_of\":\"2026-10-13\",\"chain\":\"base\",\"chain_id\":\"eip155:8453\",\"decimals\":6,\"issuer\":\"unknown\",\"name\":\"USDC\",\"source\":[{\"fact\":\"decimals\",\"source_id\":\"trustwallet-assets\",\"url\":\"https://github.com/trustwallet/assets/blob/master/blockchains/base/assets/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913/info.json\"}],\"symbol\":\"USDC\",\"website_listed\":\"https://centre.io/usdc\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://payments-intel-production.up.railway.app/llms.txt",
+ "docsChecked": 1793609281913,
+ "payers30d": 9,
+ "calls30d": 11,
+ "lastCalledAt": "2026-11-01T06:50:24.565Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 298,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 298,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/payments-intel-production-up-railway-app-v1-token",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://payments-intel-production.up.railway.app/v1/token?chain=base&symbol=USDC'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20payments-intel-production-up-railway-app-v1-token&body=%7B%22slug%22%3A%22payments-intel-production-up-railway-app-v1-token%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: payments-intel-production-up-railway-app-v1-token\",\"body\":\"{\\\"slug\\\":\\\"payments-intel-production-up-railway-app-v1-token\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=What%20are%20the%20symbol%2C%20name%2C%20decimals%2C%20contract%20address%20and%20issuer%20of%20th&seller=https%3A%2F%2Fpayments-intel-production.up.railway.app%2Fv1%2Ftoken"
+}

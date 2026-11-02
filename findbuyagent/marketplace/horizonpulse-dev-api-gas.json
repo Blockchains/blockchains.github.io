@@ -1,0 +1,81 @@
+{
+ "slug": "horizonpulse-dev-api-gas",
+ "name": "Horizon Pulse: Gas price API for Base and Ethereum: base fee, priority fee and a max-",
+ "seller": "Horizon Pulse",
+ "host": "horizonpulse.dev",
+ "provider": "https://horizonpulse.dev",
+ "description": "Gas price API for Base and Ethereum: base fee, priority fee and a max-fee suggestion in one GET, no parameters. Returns JSON per network: baseFeeGwei, priorityFeeGwei (p50, with p10/p90), suggestedMaxFeeGwei (2x base + priority), timingHint (cheap/normal/expensive vs the last 20 blocks) and simpleTransfer cost in ETH and USD, plus ethUsd. From eth_feeHistory with eth_gasPrice fallback. Descriptive, not a forecast. Errors are not charged on Base (other rails may charge).",
+ "category": "Weather & geo",
+ "tags": [
+  "crypto",
+  "gas-fees",
+  "base",
+  "ethereum",
+  "transactions"
+ ],
+ "endpoint": "https://horizonpulse.dev/api/gas",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x5b32c973596078a967562ca652761404f19be0e9",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asOf\":\"2026-10-01T14:36:44.639Z\",\"ethUsd\":2699.12,\"networks\":[{\"baseFeeGwei\":\"0.005\",\"chainId\":8453,\"network\":\"base\",\"ok\":true,\"priorityFeeGwei\":\"0.001\",\"priorityFeePercentilesGwei\":{\"p10\":\"0.000000079\",\"p50\":\"0.001\",\"p90\":\"0.01\"},\"simpleTransfer\":{\"costEth\":\"0.000000231\",\"costUsd\":0.000623,\"costWei\":\"231000000000\",\"gasLimit\":21000},\"suggestedMaxFeeGwei\":\"0.011\",\"timingHint\":\"normal\"},{\"baseFeeGwei\":\"0.47866594\",\"chainId\":1,\"network\":\"ethereum\",\"ok\":true,\"priorityFeeGwei\":\"0.244726498\",\"priorityFeePercentilesGwei\":{\"p10\":\"0.001003273\",\"p50\":\"0.244726498\",\"p90\":\"2\"},\"simpleTransfer\":{\"costEth\":\"0.000025243225938\",\"costUsd\":0.068134,\"costWei\":\"25243225938000\",\"gasLimit\":21000},\"suggestedMaxFeeGwei\":\"1.202058378\",\"timingHint\":\"expensive\"}],\"ok\":true}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1790623595/bazaar-icons/2ff6a4fc61cbe047.png",
+ "docs": "https://horizonpulse.dev/llms.txt",
+ "docsChecked": 1793609272132,
+ "payers30d": 13,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-01T23:13:37.929Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 548,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 548,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/horizonpulse-dev-api-gas",
+ "rating": null,
+ "related": [
+  "netintel-dev-weather-current",
+  "weather-cyberwarex-com-forecast",
+  "apiacre-com-v1-data-timezone-convert",
+  "agentsvc-io-api-v1-proxy-weather",
+  "win-oneshotagent-com-v1-tools-lookup-place-weather-alerts",
+  "2s-io-api-stocks-metrics"
+ ],
+ "example": {
+  "curl": "curl -i 'https://horizonpulse.dev/api/gas'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20horizonpulse-dev-api-gas&body=%7B%22slug%22%3A%22horizonpulse-dev-api-gas%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: horizonpulse-dev-api-gas\",\"body\":\"{\\\"slug\\\":\\\"horizonpulse-dev-api-gas\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Horizon%20Pulse%3A%20Gas%20price%20API%20for%20Base%20and%20Ethereum%3A%20base%20fee%2C%20priority%20fee%20and%20a%20max-&seller=https%3A%2F%2Fhorizonpulse.dev%2Fapi%2Fgas"
+}

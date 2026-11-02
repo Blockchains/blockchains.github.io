@@ -1,0 +1,83 @@
+{
+ "slug": "crypto-apitoll-cloud-v1-crypto-sentiment",
+ "name": "ApiToll Crypto Sentiment: The Crypto Fear & Greed index: the current market-sentiment score (0–1",
+ "seller": "ApiToll Crypto Sentiment",
+ "host": "crypto.apitoll.cloud",
+ "provider": "https://crypto.apitoll.cloud",
+ "description": "The Crypto Fear & Greed index: the current market-sentiment score (0–100) and its classification (Extreme Fear → Extreme Greed), plus optional daily history. A widely-watched contrarian signal for crypto market timing. Sourced from Alternative.me.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto",
+  "sentiment",
+  "fear-and-greed",
+  "market-sentiment",
+  "indicator"
+ ],
+ "endpoint": "https://crypto.apitoll.cloud/v1/crypto/sentiment",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x3dA40A9aD36640a2C0F533BAC368490095574664",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": 7
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asOf\":\"2026-06-15T00:00:00Z\",\"classification\":\"Extreme Fear\",\"count\":1,\"history\":[{\"asOf\":\"2026-06-15T00:00:00Z\",\"classification\":\"Extreme Fear\",\"timestamp\":1781481600,\"value\":20}],\"source\":{\"name\":\"Alternative.me\"},\"value\":20}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609270562,
+ "payers30d": 14,
+ "calls30d": 23,
+ "lastCalledAt": "2026-11-01T23:13:10.807Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 101,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 101,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/crypto-apitoll-cloud-v1-crypto-sentiment",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details",
+  "api-loyalspark-online-x402-gateway-recipient-api-workflow-reward-statu"
+ ],
+ "example": {
+  "curl": "curl -i 'https://crypto.apitoll.cloud/v1/crypto/sentiment?limit=7'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20crypto-apitoll-cloud-v1-crypto-sentiment&body=%7B%22slug%22%3A%22crypto-apitoll-cloud-v1-crypto-sentiment%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: crypto-apitoll-cloud-v1-crypto-sentiment\",\"body\":\"{\\\"slug\\\":\\\"crypto-apitoll-cloud-v1-crypto-sentiment\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ApiToll%20Crypto%20Sentiment%3A%20The%20Crypto%20Fear%20%26%20Greed%20index%3A%20the%20current%20market-sentiment%20score%20(0%E2%80%931&seller=https%3A%2F%2Fcrypto.apitoll.cloud%2Fv1%2Fcrypto%2Fsentiment"
+}

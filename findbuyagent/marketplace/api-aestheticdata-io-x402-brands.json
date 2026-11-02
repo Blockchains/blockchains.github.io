@@ -1,0 +1,83 @@
+{
+ "slug": "api-aestheticdata-io-x402-brands",
+ "name": "AestheticData: Curated aesthetic-medicine brand directory, partially verified",
+ "seller": "AestheticData",
+ "host": "api.aestheticdata.io",
+ "provider": "https://api.aestheticdata.io",
+ "description": "Curated aesthetic-medicine brand directory, partially verified. One call returns the full core catalog of filler, toxin, and thread brands: name, manufacturer, country, categories, certifications, treatment areas, and verification status. Some fields may be null.",
+ "category": "Data & analytics",
+ "tags": [
+  "aesthetics",
+  "medical-devices",
+  "eudamed",
+  "brands",
+  "agent-data"
+ ],
+ "endpoint": "https://api.aestheticdata.io/x402/brands",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x407ebFbE56172FAC4795541eB5AEF6F463CfC868",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "include_review_pool": false
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":[{\"_id\":\"67c4bb62705bf6d0c3ec64a5\",\"acquisition\":{},\"agentReadiness\":{\"reason\":\"audit_pass\",\"recommended_for\":[\"retrieval\",\"qa\",\"pricing_api\"],\"tier\":\"core\"},\"brandGroup\":\"ha_filler\",\"certifications\":[\"CE Mark (European Conformity)\"],\"country\":\"France\",\"description\":\"Stylage is a premium line of hyaluronic acid-based dermal fillers developed by Laboratoires VIVACY in Paris, designed to smooth wrinkles, restore volume, and enhance facial contours.\",\"foundedYear\":2005,\"longevityRange\":{\"max\":12,\"min\":6,\"notes\":\"Duration varies by specific product and treatment area.\",\"unit\":\"months\"},\"manufacturer\":\"Laboratoires VIVACY\",\"name\":\"Stylage\",\"parentCompany\":{},\"productCategories\":[\"Facial Fillers\",\"Lip Fillers\",\"Hydrating Treatments\"],\"regulatoryByRegion\":{\"EU\":{\"notes\":\"Requires CE/MDR or local authorization check.\",\"status\":\"review_required\"},\"global\":{\"notes\":\"Regulatory authorization depends on product variant, indication, and jurisdiction.\",\"status\":\"verify_per_market\"}},\"regulatoryEvidence\":[{\"authority\":\"official\",\"kind\":\"brand_page\",\"retrieved\":\"2026-02-22\",\"url\":\"https://mdmedicalvivacy.com/en/products/stylage-by-vivacy/\"}],\"socialMedia\":{\"facebook\":\"https://www.facebook.com/laboratoiresvivacy/\",\"instagram\":\"https://www.instagram.com/vivacylab.uk/\",\"linkedin\":\"https://www.linkedin.com/company/laboratoires-vivacy-uk/\",\"twitter(X)\":\"https://twitter.com/vivacy_lab\",\"youtube\":\"https://www.youtube.com/@laboratoiresvivacy7668\"},\"sources\":[{\"retrieved\":\"2026-02-22\",\"type\":\"official_brand_website\",\"url\":\"https://mdmedicalvivacy.com/en/products/stylage-by-vivacy/\"},{\"note\":\"Manufacturer: Laboratoires VIVACY\",\"retrieved\":\"2026-02-22\",\"type\":\"manufacturer_reference\",\"url\":\"\"}],\"targetDemographic\":[\"Adults 21+\",\"Anti-aging market\",\"Cosmetic enhancement\"],\"treatmentAreas\":[\"Nasolabial folds\",\"Cheeks\",\"Lips\",\"Under-eye hollows\",\"Jawline\",\"Marionette lines\"],\"verification\":{\"confidence\":\"medium\",\"last_verified_at\":\"2026-02-22\",\"notes\":\"Automated full audit (2026-02-22): pass | issues=none\",\"status\":\"partially_verified\"},\"website\":\"https://mdmedicalvivacy.com/en/products/stylage-by-vivacy/\"}],\"pagination\":{\"page\":1,\"page_size\":85,\"pages\":1,\"total\":85},\"status\":\"success\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.aestheticdata.io/llms.txt",
+ "docsChecked": 1793609275216,
+ "payers30d": 11,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-02T04:26:06.927Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 155,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 155,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-aestheticdata-io-x402-brands",
+ "rating": null,
+ "related": [
+  "api-402rates-com-v1-ping",
+  "rubric-protocol-com-v1-x402-hedera-facts-exchange-rate",
+  "nbu-navistri-com-v1-rates",
+  "api-hyperextend-xyz-v1-liquidations-coverage",
+  "api-govparse-io-v1-stats-opportunities",
+  "http-forest-gas-station-mainnet-lcjl27p8lmjs-code-run-dns-changed"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.aestheticdata.io/x402/brands?include_review_pool=false'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-aestheticdata-io-x402-brands&body=%7B%22slug%22%3A%22api-aestheticdata-io-x402-brands%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-aestheticdata-io-x402-brands\",\"body\":\"{\\\"slug\\\":\\\"api-aestheticdata-io-x402-brands\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=AestheticData%3A%20Curated%20aesthetic-medicine%20brand%20directory%2C%20partially%20verified&seller=https%3A%2F%2Fapi.aestheticdata.io%2Fx402%2Fbrands"
+}

@@ -1,0 +1,81 @@
+{
+ "slug": "api-agentweather-io-v1-pulse-providers",
+ "name": "Agent Weather: AI provider health reading from public status pages (currently GitHub)",
+ "seller": "Agent Weather",
+ "host": "api.agentweather.io",
+ "provider": "https://api.agentweather.io",
+ "description": "AI provider health reading from public status pages (currently GitHub): degraded (boolean), level, one reason, per-provider indicator, asOf and sources with attribution. openai and cursor keys return null until 2026-11-12; the anthropic key returns null (no longer measured since 2026-10-20). Additi…",
+ "category": "AI & LLM",
+ "tags": [
+  "ai-agents",
+  "status",
+  "mcp",
+  "x402",
+  "xrpl"
+ ],
+ "endpoint": "https://api.agentweather.io/v1/pulse/providers",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xA15c55f39Ec1dfd87Afb09e1959EFac2Bf44F4Ec",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asOf\":\"2026-10-14T01:01:38.437Z\",\"degraded\":false,\"deprecated\":{\"keys\":[\"openai\"],\"note\":\"providers.openai and providers.cursor are no longer measured and always return …\",\"until\":\"2026-11-12\"},\"level\":\"operational\",\"method\":\"Public Statuspage summary.json indicator per tracked status page (none/minor/ma…\",\"notice\":\"Recorded measurements. Third-party status data is provided as is, may be late o…\",\"providers\":{\"anthropic\":null,\"cursor\":null,\"github\":\"none\",\"openai\":null},\"reason\":\"all 2 tracked providers report no incident\",\"schema_version\":\"pulse-0.2.0\",\"signal\":\"providers\",\"sources\":[{\"attribution\":\"Source: GitHub Status (githubstatus.com), public Statuspage API, polled at most…\",\"id\":\"github\",\"not_affiliated\":\"Agent Weather is not affiliated with, endorsed by or sponsored by this source.\",\"observed_at\":\"2026-10-14T01:01:38.539Z\",\"status\":\"ok\",\"terms_url\":\"https://docs.github.com/en/site-policy/github-terms/github-terms-of-service\",\"url\":\"https://www.githubstatus.com/api/v2/summary.json\"}]}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791666380/bazaar-icons/b867a1a365127ad9.png",
+ "docs": "https://api.agentweather.io/llms.txt",
+ "docsChecked": 1793609278836,
+ "payers30d": 9,
+ "calls30d": 34,
+ "lastCalledAt": "2026-11-01T06:51:49.953Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 211,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 211,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-agentweather-io-v1-pulse-providers",
+ "rating": null,
+ "related": [
+  "jev-x402-vercel-app-jev",
+  "contextslim-friczero-com-fetch",
+  "gateway-spraay-app-bittensor-v1-models",
+  "767-2676-com-v2-receipt",
+  "golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions",
+  "www-amnt-io-api-agent-amnt-bitcoin-price"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.agentweather.io/v1/pulse/providers'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-agentweather-io-v1-pulse-providers&body=%7B%22slug%22%3A%22api-agentweather-io-v1-pulse-providers%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-agentweather-io-v1-pulse-providers\",\"body\":\"{\\\"slug\\\":\\\"api-agentweather-io-v1-pulse-providers\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent%20Weather%3A%20AI%20provider%20health%20reading%20from%20public%20status%20pages%20(currently%20GitHub)&seller=https%3A%2F%2Fapi.agentweather.io%2Fv1%2Fpulse%2Fproviders"
+}

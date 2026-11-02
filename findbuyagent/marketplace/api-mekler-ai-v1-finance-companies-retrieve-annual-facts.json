@@ -1,0 +1,85 @@
+{
+ "slug": "api-mekler-ai-v1-finance-companies-retrieve-annual-facts",
+ "name": "Mekler AI: Annual US-GAAP facts by CIK, SEC sources, same-filing growth checks an",
+ "seller": "Mekler AI",
+ "host": "api.mekler.ai",
+ "provider": "https://api.mekler.ai",
+ "description": "Annual US-GAAP facts by CIK, SEC sources, same-filing growth checks and observed revisions. Fast quote or coverage preview. Free SEC data; paid selection.",
+ "category": "Data & analytics",
+ "tags": [
+  "finance",
+  "financial-statements",
+  "company-fundamentals",
+  "annual-reports",
+  "SEC"
+ ],
+ "endpoint": "https://api.mekler.ai/v1/finance/companies/retrieve-annual-facts",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.05,
+ "amount": "50000",
+ "payTo": "0xF6c6E2e530bb311c14a49C1a07C720fc232c07c5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "cik": "320193",
+   "quote_mode": "fast",
+   "years": 1
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"cik\":\"0000320193\",\"comparisons\":[],\"coverage\":{\"complete\":true,\"reported_fields\":6,\"requested_fields\":6,\"requested_years\":1,\"returned_years\":1},\"limitations\":[\"US-GAAP standard whole-entity USD facts in annual 10-K/10-K/A only.\"],\"retrieved_at\":\"2026-10-05T00:00:00Z\",\"selection_policy\":\"latest-annual-filed-per-field-v1\",\"sources\":{\"companyfacts\":\"https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json\",\"submissions\":\"https://data.sec.gov/submissions/CIK0000320193.json\"},\"status\":\"ok\",\"years\":[{\"fields\":{\"assets\":{\"accession\":\"0000320193-25-000079\",\"filed\":\"2025-10-31\",\"form\":\"10-K\",\"period_end\":\"2025-09-27\",\"period_start\":null,\"status\":\"reported\",\"tag\":\"Assets\",\"taxonomy\":\"us-gaap\",\"unit\":\"USD\",\"value\":359241000000},\"cash\":{\"status\":\"reported\",\"value\":35934000000},\"liabilities\":{\"status\":\"reported\",\"value\":285508000000},\"net_income\":{\"status\":\"reported\",\"value\":112010000000},\"operating_cash_flow\":{\"status\":\"reported\",\"value\":111482000000},\"revenue\":{\"status\":\"reported\",\"value\":416161000000}},\"fiscal_year\":2025,\"period_end\":\"2025-09-27\"}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.mekler.ai/llms.txt",
+ "docsChecked": 1793609272790,
+ "payers30d": 13,
+ "calls30d": 13,
+ "lastCalledAt": "2026-10-22T21:30:44.373Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 537,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 537,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-mekler-ai-v1-finance-companies-retrieve-annual-facts",
+ "rating": null,
+ "related": [
+  "enrichmatch-dev-api-v1-enrich-person",
+  "ip402-xyz-v1-geo",
+  "api-polyform-org-v1-threat-scanners",
+  "insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard",
+  "fuelscout-scalpstream-com-fuel",
+  "cpi-report-us-underscoredone-com-cpi"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.mekler.ai/v1/finance/companies/retrieve-annual-facts' -H 'content-type: application/json' -d '{\"cik\":\"320193\",\"quote_mode\":\"fast\",\"years\":1}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-mekler-ai-v1-finance-companies-retrieve-annual-facts&body=%7B%22slug%22%3A%22api-mekler-ai-v1-finance-companies-retrieve-annual-facts%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-mekler-ai-v1-finance-companies-retrieve-annual-facts\",\"body\":\"{\\\"slug\\\":\\\"api-mekler-ai-v1-finance-companies-retrieve-annual-facts\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Mekler%20AI%3A%20Annual%20US-GAAP%20facts%20by%20CIK%2C%20SEC%20sources%2C%20same-filing%20growth%20checks%20an&seller=https%3A%2F%2Fapi.mekler.ai%2Fv1%2Ffinance%2Fcompanies%2Fretrieve-annual-facts"
+}

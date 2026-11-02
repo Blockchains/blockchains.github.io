@@ -1,0 +1,80 @@
+{
+ "slug": "api-aidress-ai-pay-agent-api-dev-v2-ixs-finance",
+ "name": "IXS: IXS Real world asset vaults — 6% yields, BlackRock exposure, tokenized",
+ "seller": "IXS",
+ "host": "api.aidress.ai",
+ "provider": "https://api.aidress.ai",
+ "description": "IXS Real world asset vaults — 6% yields, BlackRock exposure, tokenized on-chain",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "rwa",
+  "defi",
+  "tokenization",
+  "erc4626"
+ ],
+ "endpoint": "https://api.aidress.ai/pay/agent_api_dev_v2_ixs_finance",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xE341Add833F9d62082e97eA260BAA6546Cd09F73",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"hasNextPage\":false,\"hasPreviousPage\":false,\"items\":[{\"chainId\":8453,\"chainName\":\"base\",\"contractAddress\":\"0x974AbbD28E6c1752f7816E7F15cA3Bf9989A8D4C\",\"explorerUrl\":\"https://basescan.org/address/0x974AbbD28E6c1752f7816E7F15cA3Bf9989A8D4C\",\"id\":\"69e587a2a631785cb319f3f7\",\"legacyId\":null,\"logoUrl\":\"https://cdn.investax.io/chains/base.png\",\"metrics\":null,\"name\":\"Benjie Vault\",\"network\":\"base\",\"requiresWhitelist\":false,\"routeId\":\"8453-0x974abbd28e6c1752f7816e7f15ca3bf9989a8d4c\",\"rpcUrl\":\"https://mainnet.base.org/\",\"status\":\"active\",\"subgraphUrl\":\"https://api.goldsky.com/api/public/project_cmgzm21qo008x5np27bk21873/subgraphs/ixs-tokenized-vault-async-withdrawals-base-mainnet/2.0.0/gn\",\"symbol\":\"vtbg\",\"underlyingAsset\":{\"address\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\"decimals\":6,\"symbol\":\"USDC\"}}],\"page\":1,\"pageSize\":20,\"totalItems\":1,\"totalPages\":1},\"ok\":true}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1780029294/bazaar-icons/97e02162cc3ae235.png",
+ "docs": "https://api.aidress.ai/llms.txt",
+ "docsChecked": 1793609278095,
+ "payers30d": 10,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T23:16:34.146Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 459,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 459,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-aidress-ai-pay-agent-api-dev-v2-ixs-finance",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.aidress.ai/pay/agent_api_dev_v2_ixs_finance'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-aidress-ai-pay-agent-api-dev-v2-ixs-finance&body=%7B%22slug%22%3A%22api-aidress-ai-pay-agent-api-dev-v2-ixs-finance%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-aidress-ai-pay-agent-api-dev-v2-ixs-finance\",\"body\":\"{\\\"slug\\\":\\\"api-aidress-ai-pay-agent-api-dev-v2-ixs-finance\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=IXS%3A%20IXS%20Real%20world%20asset%20vaults%20%E2%80%94%206%25%20yields%2C%20BlackRock%20exposure%2C%20tokenized&seller=https%3A%2F%2Fapi.aidress.ai%2Fpay%2Fagent_api_dev_v2_ixs_finance"
+}

@@ -1,0 +1,83 @@
+{
+ "slug": "agent-massive-com-v2-reference-news",
+ "name": "Massive: Get the most recent news articles relating to a stock ticker symbol, i",
+ "seller": "Massive",
+ "host": "agent.massive.com",
+ "provider": "https://agent.massive.com",
+ "description": "Get the most recent news articles relating to a stock ticker symbol, including a summary of the article and a link to the original source. Can't find what you're looking for? POST feedback to /feedback, no charge.",
+ "category": "Finance & markets",
+ "tags": [
+  "news",
+  "articles",
+  "stocks"
+ ],
+ "endpoint": "https://agent.massive.com/v2/reference/news",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x525f6dDcE9aF7a7179D7696aaBfCd5FCd15a21e6",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": 10,
+   "order": "asc",
+   "sort": "published_utc"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":1,\"next_url\":\"https://api.massive.com:443/v2/reference/news?cursor=eyJsaW1pdCI6MSwic29ydCI6InB1Ymxpc2hlZF91dGMiLCJvcmRlciI6ImFzY2VuZGluZyIsInRpY2tlciI6e30sInB1Ymxpc2hlZF91dGMiOnsiZ3RlIjoiMjAyMS0wNC0yNiJ9LCJzZWFyY2hfYWZ0ZXIiOlsxNjE5NDA0Mzk3MDAwLG51bGxdfQ\",\"request_id\":\"831afdb0b8078549fed053476984947a\",\"results\":[{\"amp_url\":\"https://m.uk.investing.com/news/stock-market-news/markets-are-underestimating-fed-cuts-ubs-3559968?ampMode=1\",\"article_url\":\"https://uk.investing.com/news/stock-market-news/markets-are-underestimating-fed-cuts-ubs-3559968\",\"author\":\"Sam Boughedda\",\"description\":\"UBS analysts warn that markets are underestimating the extent of future interest rate cuts by the Federal Reserve, as the weakening economy is likely to justify more cuts than currently anticipated.\",\"id\":\"8ec638777ca03b553ae516761c2a22ba2fdd2f37befae3ab6fdab74e9e5193eb\",\"image_url\":\"https://i-invdn-com.investing.com/news/LYNXNPEC4I0AL_L.jpg\",\"insights\":[{\"sentiment\":\"positive\",\"sentiment_reasoning\":\"UBS analysts are providing a bullish outlook on the extent of future Federal Reserve rate cuts, suggesting that markets are underestimating the number of cuts that will occur.\",\"ticker\":\"UBS\"}],\"keywords\":[\"Federal Reserve\",\"interest rates\",\"economic data\"],\"published_utc\":\"2024-06-24T18:33:53Z\",\"publisher\":{\"favicon_url\":\"https://s3.massive.com/public/assets/news/favicons/investing.ico\",\"homepage_url\":\"https://www.investing.com/\",\"logo_url\":\"https://s3.massive.com/public/assets/news/logos/investing.png\",\"name\":\"Investing.com\"},\"tickers\":[\"UBS\"],\"title\":\"Markets are underestimating Fed cuts: UBS By Investing.com - Investing.com UK\"}],\"status\":\"OK\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1788187276/bazaar-icons/32c8913d310477e1.png",
+ "docs": "https://agent.massive.com/llms.txt",
+ "docsChecked": 1793609273885,
+ "payers30d": 12,
+ "calls30d": 33,
+ "lastCalledAt": "2026-11-02T04:20:18.052Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 600,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 600,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agent-massive-com-v2-reference-news",
+ "rating": null,
+ "related": [
+  "cloud-trycorpus-ai-v1-tokens-quotes",
+  "cloud-trycorpus-ai-v1-reserved",
+  "cloud-trycorpus-ai-v1-term-instance",
+  "www-blockchainiq-co-api-x402-v1-brief",
+  "api-orcatrace-dev-v1-latest",
+  "headers-use-x402atlas-com"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agent.massive.com/v2/reference/news?limit=10&order=asc&sort=published_utc'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agent-massive-com-v2-reference-news&body=%7B%22slug%22%3A%22agent-massive-com-v2-reference-news%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agent-massive-com-v2-reference-news\",\"body\":\"{\\\"slug\\\":\\\"agent-massive-com-v2-reference-news\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Massive%3A%20Get%20the%20most%20recent%20news%20articles%20relating%20to%20a%20stock%20ticker%20symbol%2C%20i&seller=https%3A%2F%2Fagent.massive.com%2Fv2%2Freference%2Fnews"
+}

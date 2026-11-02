@@ -1,0 +1,85 @@
+{
+ "slug": "edgar-apitoll-cloud-v1-edgar-filings",
+ "name": "ApiToll SEC Filings: Latest SEC EDGAR filings for any US-listed company by stock ticker or",
+ "seller": "ApiToll SEC Filings",
+ "host": "edgar.apitoll.cloud",
+ "provider": "https://edgar.apitoll.cloud",
+ "description": "Latest SEC EDGAR filings for any US-listed company by stock ticker or CIK: 10-K annual reports, 10-Q quarterly reports, and 8-K material events. Resolves ticker to CIK via SEC's official index and returns the parsed filing (company, form type, dated items). Sourced live from data.sec.gov.",
+ "category": "Finance & markets",
+ "tags": [
+  "sec",
+  "edgar",
+  "filings",
+  "10-K",
+  "10-Q"
+ ],
+ "endpoint": "https://edgar.apitoll.cloud/v1/edgar/filings",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.003,
+ "amount": "3000",
+ "payTo": "0x58BdAD5e654691aC5eD4631758f3d8DA00666B6c",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "form": "10-K",
+   "limit": 5,
+   "ticker": "AAPL"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"appliedSince\":null,\"count\":1,\"form\":\"10-K\",\"items\":[{\"accessionNumber\":\"0000320193-24-000123\",\"cik\":\"0000320193\",\"filingDate\":\"2024-11-01\",\"filingUrl\":\"https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm\",\"form\":\"10-K\",\"immutable\":true,\"primaryDocument\":\"aapl-20240928.htm\",\"reportDate\":\"2024-09-28\"}],\"meta\":{\"relatedEndpoints\":[]},\"resolved\":{\"cik\":\"0000320193\",\"cikInt\":320193,\"companyName\":\"Apple Inc.\",\"entityType\":\"operating\",\"mappingAgeSeconds\":1842,\"sic\":\"3571\",\"ticker\":\"AAPL\",\"tickerSnapshotDate\":\"2026-05-30\"},\"source\":{\"fetchedAt\":\"2026-05-30T14:22:01Z\",\"name\":\"data.sec.gov\",\"servedFromCache\":true,\"sourceLastFetchedAt\":\"2026-05-30T14:11:43Z\"},\"truncation\":null}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://edgar.apitoll.cloud/.well-known/x402",
+ "docsChecked": 1793609267725,
+ "payers30d": 32,
+ "calls30d": 95,
+ "lastCalledAt": "2026-11-02T03:28:48.924Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 631,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 631,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/edgar-apitoll-cloud-v1-edgar-filings",
+ "rating": null,
+ "related": [
+  "x402-ottoai-services-tradfi-data",
+  "mtbandy-sec-ratio-engine-serve-app-modal-run-ratios",
+  "api-vextorium-com-v1-ecb-rates-history",
+  "data-tollkit-dev-sec-company",
+  "mcp-blocksize-info-v1-bidask-btc-usd",
+  "intel-degenscan-io-v1-oracle-board"
+ ],
+ "example": {
+  "curl": "curl -i 'https://edgar.apitoll.cloud/v1/edgar/filings?form=10-K&limit=5&ticker=AAPL'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20edgar-apitoll-cloud-v1-edgar-filings&body=%7B%22slug%22%3A%22edgar-apitoll-cloud-v1-edgar-filings%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: edgar-apitoll-cloud-v1-edgar-filings\",\"body\":\"{\\\"slug\\\":\\\"edgar-apitoll-cloud-v1-edgar-filings\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ApiToll%20SEC%20Filings%3A%20Latest%20SEC%20EDGAR%20filings%20for%20any%20US-listed%20company%20by%20stock%20ticker%20or&seller=https%3A%2F%2Fedgar.apitoll.cloud%2Fv1%2Fedgar%2Ffilings"
+}

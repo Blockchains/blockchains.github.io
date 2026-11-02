@@ -1,0 +1,83 @@
+{
+ "slug": "x402-glassnode-com-v1-metadata-metrics",
+ "name": "Glassnode: Metrics Catalog — Lists all available metric paths",
+ "seller": "Glassnode",
+ "host": "x402.glassnode.com",
+ "provider": "https://x402.glassnode.com",
+ "description": "Metrics Catalog — Lists all available metric paths. Use the optional filter parameters (asset, exchange, interval, currency, etc.) to narrow the catalog to metrics that support a given combination. Data by Glassnode.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "glassnode",
+  "crypto",
+  "metadata",
+  "reference",
+  "metrics"
+ ],
+ "endpoint": "https://x402.glassnode.com/v1/metadata/metrics",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x1f81da453901D15296c1710af83e0Bc0371D39f1",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "a": "BTC"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"paths\":[\"/addresses/active_count\",\"/addresses/count\",\"/market/price_usd_close\"]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402.glassnode.com/llms.txt",
+ "docsChecked": 1793609273983,
+ "payers30d": 12,
+ "calls30d": 19,
+ "lastCalledAt": "2026-11-02T03:33:25.579Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 300,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 300,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-glassnode-com-v1-metadata-metrics",
+ "rating": null,
+ "related": [
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets",
+  "api-nansen-ai-api-v1-tgm-token-information",
+  "api-x402node-dev-chain-honeypot",
+  "api-gondola-ai-com-v1-chat-completions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.glassnode.com/v1/metadata/metrics?a=BTC'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-glassnode-com-v1-metadata-metrics&body=%7B%22slug%22%3A%22x402-glassnode-com-v1-metadata-metrics%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-glassnode-com-v1-metadata-metrics\",\"body\":\"{\\\"slug\\\":\\\"x402-glassnode-com-v1-metadata-metrics\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Glassnode%3A%20Metrics%20Catalog%20%E2%80%94%20Lists%20all%20available%20metric%20paths&seller=https%3A%2F%2Fx402.glassnode.com%2Fv1%2Fmetadata%2Fmetrics"
+}

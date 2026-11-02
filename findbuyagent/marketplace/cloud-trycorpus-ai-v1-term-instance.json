@@ -3,16 +3,19 @@
  "name": "corpusAI Cloud Pricing: Price ladder for one instance type: spot, on-d",
  "seller": "cloud.trycorpus.ai",
  "host": "cloud.trycorpus.ai",
+ "provider": "https://cloud.trycorpus.ai",
  "description": "corpusAI Cloud Pricing: Price ladder for one instance type: spot, on-demand, 1-year and 3-year commitments, with discounts.",
  "category": "Finance & markets",
  "tags": [],
  "endpoint": "https://cloud.trycorpus.ai/v1/term/instance",
  "method": "GET",
+ "payment": "x402",
  "priceUsd": 0.01,
  "amount": "10000",
  "payTo": "0x4DfBc274fD84b67DfcB4B01A188c37aD28177a95",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
  "listedTermsMatch": true,
  "input": {
   "queryParams": {
@@ -21,21 +24,53 @@
    "region": "us-east-1"
   },
   "body": null,
-  "bodyType": null
+  "bodyType": null,
+  "headers": null
  },
- "outputExample": "{}",
+ "outputType": "json",
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": null,
  "docs": "https://cloud.trycorpus.ai/llms.txt",
  "docsChecked": 1793596023137,
- "payers30d": 33,
- "calls30d": 33,
+ "payers30d": 32,
+ "calls30d": 32,
+ "lastCalledAt": "2026-10-20T14:27:02.964Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 38,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 11,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 11,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/cloud-trycorpus-ai-v1-term-instance",
  "rating": null,
+ "related": [
+  "www-blockchainiq-co-api-x402-v1-brief",
+  "api-orcatrace-dev-v1-latest",
+  "headers-use-x402atlas-com",
+  "omniterminal-app-api-x402-v1-news",
+  "agent-massive-com-v2-reference-news",
+  "agentpay-tools-tools-pre-trade-check-call"
+ ],
+ "example": {
+  "curl": "curl -i 'https://cloud.trycorpus.ai/v1/term/instance?instance=c5.large&provider=aws&region=us-east-1'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20cloud-trycorpus-ai-v1-term-instance&body=%7B%22slug%22%3A%22cloud-trycorpus-ai-v1-term-instance%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: cloud-trycorpus-ai-v1-term-instance\",\"body\":\"{\\\"slug\\\":\\\"cloud-trycorpus-ai-v1-term-instance\\\",\\\"stars\\\":1-5}\"}"

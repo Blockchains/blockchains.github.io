@@ -1,0 +1,78 @@
+{
+ "slug": "api-vapinetwork-ai-shim-o1-token",
+ "name": "o1.exchange via vAPI: Hosted by vAPI for o1.exchange: Get details for one tracked launch tok",
+ "seller": "o1.exchange via vAPI",
+ "host": "api.vapinetwork.ai",
+ "provider": "https://api.vapinetwork.ai",
+ "description": "Hosted by vAPI for o1.exchange: Get details for one tracked launch token.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://api.vapinetwork.ai/shim/o1/token",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x1cAa1962428382106Eb3f29B9719bdF797621C90",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "chain_id": 8453,
+   "token_address": "0x1111111111111111111111111111111111111111"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.vapinetwork.ai/.well-known/x402",
+ "docsChecked": 1793609274893,
+ "payers30d": 11,
+ "calls30d": 66,
+ "lastCalledAt": "2026-11-01T22:05:51.842Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 137,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 137,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-vapinetwork-ai-shim-o1-token",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.vapinetwork.ai/shim/o1/token' -H 'content-type: application/json' -d '{\"chain_id\":8453,\"token_address\":\"0x1111111111111111111111111111111111111111\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-vapinetwork-ai-shim-o1-token&body=%7B%22slug%22%3A%22api-vapinetwork-ai-shim-o1-token%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-vapinetwork-ai-shim-o1-token\",\"body\":\"{\\\"slug\\\":\\\"api-vapinetwork-ai-shim-o1-token\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=o1.exchange%20via%20vAPI%3A%20Hosted%20by%20vAPI%20for%20o1.exchange%3A%20Get%20details%20for%20one%20tracked%20launch%20tok&seller=https%3A%2F%2Fapi.vapinetwork.ai%2Fshim%2Fo1%2Ftoken"
+}

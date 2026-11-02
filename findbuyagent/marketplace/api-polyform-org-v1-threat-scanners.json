@@ -1,0 +1,82 @@
+{
+ "slug": "api-polyform-org-v1-threat-scanners",
+ "name": "Polyform: Recent IPs caught probing Polyform's honeypot paths (credential/vuln s",
+ "seller": "Polyform",
+ "host": "api.polyform.org",
+ "provider": "https://api.polyform.org",
+ "description": "Recent IPs caught probing Polyform's honeypot paths (credential/vuln scanners) — Polyform's own first-party telemetry, not a repackaged public list. Returns up to 500 most-recent scanner IPs with first-seen. For blocklists and threat research. JSON.",
+ "category": "Data & analytics",
+ "tags": [
+  "data",
+  "api",
+  "v1",
+  "threat"
+ ],
+ "endpoint": "https://api.polyform.org/v1/threat/scanners",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0xE9468282B22c09243Ce1a455fE2d1DF0d7276dE6",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": "1-500 (default 200)"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":200,\"scanners\":[{\"firstSeen\":\"2026-08-25T04:00:00Z\",\"ip\":\"45.134.26.5\",\"probe\":\"/.env\"}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.polyform.org/llms.txt",
+ "docsChecked": 1793609275085,
+ "payers30d": 11,
+ "calls30d": 17,
+ "lastCalledAt": "2026-11-01T23:14:54.717Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 51,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 51,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-polyform-org-v1-threat-scanners",
+ "rating": null,
+ "related": [
+  "ip402-xyz-v1-geo",
+  "insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard",
+  "fuelscout-scalpstream-com-fuel",
+  "cpi-report-us-underscoredone-com-cpi",
+  "quantagentshop-com-v1-ip-geo",
+  "quantagentshop-com-v1-domain-lookup"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.polyform.org/v1/threat/scanners?limit=1-500+%28default+200%29'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-polyform-org-v1-threat-scanners&body=%7B%22slug%22%3A%22api-polyform-org-v1-threat-scanners%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-polyform-org-v1-threat-scanners\",\"body\":\"{\\\"slug\\\":\\\"api-polyform-org-v1-threat-scanners\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Polyform%3A%20Recent%20IPs%20caught%20probing%20Polyform's%20honeypot%20paths%20(credential%2Fvuln%20s&seller=https%3A%2F%2Fapi.polyform.org%2Fv1%2Fthreat%2Fscanners"
+}

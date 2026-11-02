@@ -1,0 +1,77 @@
+{
+ "slug": "rest-coincap-io-v3-agentfriendly-full-assets-by-slug",
+ "name": "CoinCap: Full asset data for one or more slugs (agent-optimized)",
+ "seller": "CoinCap",
+ "host": "rest.coincap.io",
+ "provider": "https://rest.coincap.io",
+ "description": "Full asset data for one or more slugs (agent-optimized).",
+ "category": "Data & analytics",
+ "tags": [],
+ "endpoint": "https://rest.coincap.io/v3/agentFriendly/full_assets_by_slug",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x9baa4417D1E78F2eD5b09aa4Abfb541aeB2cD6Ed",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "slugs": "bitcoin,ethereum"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://rest.coincap.io/llms.txt",
+ "docsChecked": 1793609273855,
+ "payers30d": 12,
+ "calls30d": 21,
+ "lastCalledAt": "2026-11-02T04:40:29.599Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 151,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 151,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/rest-coincap-io-v3-agentfriendly-full-assets-by-slug",
+ "rating": null,
+ "related": [
+  "api-hyperextend-xyz-v1-candles-btc-1m-latest",
+  "api-oblique-markets-api-v1-paid-bazaar-pulse",
+  "kaisha-api-hp-vladic-workers-dev-calendar-holidays",
+  "brasil-dados-api-onrender-com-cambio",
+  "jmt-x402-proxy-jmthomasofficial-workers-dev-v2-api-whois",
+  "nbu-navistri-com-v1-ovdp-auctions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://rest.coincap.io/v3/agentFriendly/full_assets_by_slug?slugs=bitcoin%2Cethereum'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20rest-coincap-io-v3-agentfriendly-full-assets-by-slug&body=%7B%22slug%22%3A%22rest-coincap-io-v3-agentfriendly-full-assets-by-slug%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: rest-coincap-io-v3-agentfriendly-full-assets-by-slug\",\"body\":\"{\\\"slug\\\":\\\"rest-coincap-io-v3-agentfriendly-full-assets-by-slug\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=CoinCap%3A%20Full%20asset%20data%20for%20one%20or%20more%20slugs%20(agent-optimized)&seller=https%3A%2F%2Frest.coincap.io%2Fv3%2FagentFriendly%2Ffull_assets_by_slug"
+}

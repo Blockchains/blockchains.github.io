@@ -1,0 +1,83 @@
+{
+ "slug": "headers-use-x402atlas-com",
+ "name": "HTTP Security Headers Check: Audit a URL's HTTP security headers over a single body-free (HEAD) req",
+ "seller": "HTTP Security Headers Check",
+ "host": "headers.use.x402atlas.com",
+ "provider": "https://headers.use.x402atlas.com",
+ "description": "Audit a URL's HTTP security headers over a single body-free (HEAD) request. Grades Strict-Transport-Security, Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Referrer-Policy and Permissions-Policy, flags information-leak headers (Server, X-Powered-By), and returns the parsed values plus advisory warnings. Clean JSON for security and pentest automation.",
+ "category": "Finance & markets",
+ "tags": [
+  "http",
+  "headers",
+  "security",
+  "hsts",
+  "csp"
+ ],
+ "endpoint": "https://headers.use.x402atlas.com/",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x7f8043c400799643bcb62B41B84b297a8Ecb7b9c",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "url": "https://example.com/"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"headers\":{\"content_security_policy\":\"default-src 'self'\",\"permissions_policy\":null,\"referrer_policy\":\"strict-origin-when-cross-origin\",\"server\":null,\"strict_transport_security\":{\"include_subdomains\":true,\"max_age\":31536000,\"preload\":false,\"value\":\"max-age=31536000; includeSubDomains\"},\"x_content_type_options\":\"nosniff\",\"x_frame_options\":\"DENY\",\"x_powered_by\":null},\"queried_at\":\"2026-07-03T12:00:00Z\",\"status_code\":200,\"url\":\"https://example.com/\",\"warnings\":[\"no Permissions-Policy header (powerful browser features are not restricted)\"]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://headers.use.x402atlas.com/llms.txt",
+ "docsChecked": 1793609269590,
+ "payers30d": 18,
+ "calls30d": 26,
+ "lastCalledAt": "2026-11-02T03:29:52.193Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 590,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 590,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/headers-use-x402atlas-com",
+ "rating": null,
+ "related": [
+  "cloud-trycorpus-ai-v1-tokens-quotes",
+  "cloud-trycorpus-ai-v1-reserved",
+  "cloud-trycorpus-ai-v1-term-instance",
+  "www-blockchainiq-co-api-x402-v1-brief",
+  "api-orcatrace-dev-v1-latest",
+  "omniterminal-app-api-x402-v1-news"
+ ],
+ "example": {
+  "curl": "curl -i 'https://headers.use.x402atlas.com/?url=https%3A%2F%2Fexample.com%2F'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20headers-use-x402atlas-com&body=%7B%22slug%22%3A%22headers-use-x402atlas-com%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: headers-use-x402atlas-com\",\"body\":\"{\\\"slug\\\":\\\"headers-use-x402atlas-com\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=HTTP%20Security%20Headers%20Check%3A%20Audit%20a%20URL's%20HTTP%20security%20headers%20over%20a%20single%20body-free%20(HEAD)%20req&seller=https%3A%2F%2Fheaders.use.x402atlas.com%2F"
+}

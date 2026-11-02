@@ -1,0 +1,83 @@
+{
+ "slug": "br-intelligence-brverify-api-workers-dev-v1-ptax",
+ "name": "Brazil PTAX exchange rate (official, Central Bank of Brazil): USD/BRL",
+ "seller": "br-intelligence.brverify-api.workers.dev",
+ "host": "br-intelligence.brverify-api.workers.dev",
+ "provider": "https://br-intelligence.brverify-api.workers.dev",
+ "description": "Brazil PTAX exchange rate (official, Central Bank of Brazil): USD/BRL dollar, EUR/BRL euro and other currencies to Brazilian real, buy and sell, closing (Fechamento) and intraday bulletins, today or any past date.",
+ "category": "Finance & markets",
+ "tags": [
+  "brazil",
+  "ptax",
+  "exchange-rate",
+  "usd-brl",
+  "fx"
+ ],
+ "endpoint": "https://br-intelligence.brverify-api.workers.dev/v1/ptax",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xe0c665a465888ca44dadca8241a8040a292ed1e5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "currency": "USD"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"closing\":{\"buy\":5.0123,\"sell\":5.0129,\"time\":\"2026-10-22 13:09:00\",\"type\":\"Fechamento\"},\"currency\":\"USD\",\"date\":\"2026-10-22\",\"latest\":{\"buy\":5.0123,\"sell\":5.0129,\"time\":\"2026-10-22 13:09:00\",\"type\":\"Fechamento\"},\"source\":\"Banco Central do Brasil - PTAX\",\"unit\":\"BRL per 1 USD\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://br-intelligence.brverify-api.workers.dev/llms.txt",
+ "docsChecked": 1793609277132,
+ "payers30d": 10,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T07:24:41.62Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 87,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 87,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/br-intelligence-brverify-api-workers-dev-v1-ptax",
+ "rating": null,
+ "related": [
+  "data-tollkit-dev-sec-company",
+  "mcp-blocksize-info-v1-bidask-btc-usd",
+  "intel-degenscan-io-v1-oracle-board",
+  "toolcall-click-t-fx-rates",
+  "api-sitecheck-api-workers-dev-api-fx",
+  "api-sitecheck-api-workers-dev-api-macro"
+ ],
+ "example": {
+  "curl": "curl -i 'https://br-intelligence.brverify-api.workers.dev/v1/ptax?currency=USD'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20br-intelligence-brverify-api-workers-dev-v1-ptax&body=%7B%22slug%22%3A%22br-intelligence-brverify-api-workers-dev-v1-ptax%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: br-intelligence-brverify-api-workers-dev-v1-ptax\",\"body\":\"{\\\"slug\\\":\\\"br-intelligence-brverify-api-workers-dev-v1-ptax\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Brazil%20PTAX%20exchange%20rate%20(official%2C%20Central%20Bank%20of%20Brazil)%3A%20USD%2FBRL&seller=https%3A%2F%2Fbr-intelligence.brverify-api.workers.dev%2Fv1%2Fptax"
+}

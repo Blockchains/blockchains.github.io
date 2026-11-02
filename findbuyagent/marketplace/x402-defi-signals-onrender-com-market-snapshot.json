@@ -1,0 +1,75 @@
+{
+ "slug": "x402-defi-signals-onrender-com-market-snapshot",
+ "name": "One-call market snapshot: BTC/ETH/SOL spot prices with 24h change plus",
+ "seller": "x402-defi-signals.onrender.com",
+ "host": "x402-defi-signals.onrender.com",
+ "provider": "https://x402-defi-signals.onrender.com",
+ "description": "One-call market snapshot: BTC/ETH/SOL spot prices with 24h change plus the Crypto Fear & Greed index. The cheapest way for an agent to establish market context.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://x402-defi-signals.onrender.com/market/snapshot",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xE72b85A97A6e19413D8b80633787Eda6d6237A77",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"fear_greed\":{\"classification\":\"Greed\",\"value\":71},\"prices\":{\"btc_usd\":118431,\"eth_usd\":4212.55}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402-defi-signals.onrender.com/llms.txt",
+ "docsChecked": 1793609275012,
+ "payers30d": 11,
+ "calls30d": 18,
+ "lastCalledAt": "2026-11-02T04:41:01.616Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 95,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 95,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-defi-signals-onrender-com-market-snapshot",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402-defi-signals.onrender.com/market/snapshot'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-defi-signals-onrender-com-market-snapshot&body=%7B%22slug%22%3A%22x402-defi-signals-onrender-com-market-snapshot%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-defi-signals-onrender-com-market-snapshot\",\"body\":\"{\\\"slug\\\":\\\"x402-defi-signals-onrender-com-market-snapshot\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=One-call%20market%20snapshot%3A%20BTC%2FETH%2FSOL%20spot%20prices%20with%2024h%20change%20plus&seller=https%3A%2F%2Fx402-defi-signals.onrender.com%2Fmarket%2Fsnapshot"
+}

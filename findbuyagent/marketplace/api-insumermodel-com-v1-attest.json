@@ -1,0 +1,91 @@
+{
+ "slug": "api-insumermodel-com-v1-attest",
+ "name": "InsumerAPI: Signed attestation (ECDSA plus a post-quantum ML-DSA-65 companion) of",
+ "seller": "InsumerAPI",
+ "host": "api.insumermodel.com",
+ "provider": "https://api.insumermodel.com",
+ "description": "Signed attestation (ECDSA plus a post-quantum ML-DSA-65 companion) of on-chain wallet conditions across 37 chains: token balance, NFT ownership, EAS, Farcaster, view calls, ratio rules, account code (plain key, EIP-7702 delegation, or contract), and agent standing (ERC-8004 registration, ERC-7710 delegation validity). A verifiable boolean, never raw balances or code. Up to 10 conditions per pay-per-call request. Pay in USDC on Base, Polygon, Arbitrum, Arc, or Solana.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "wallet auth",
+  "attestation",
+  "token gating",
+  "agent standing",
+  "erc-8004"
+ ],
+ "endpoint": "https://api.insumermodel.com/v1/attest",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.05,
+ "amount": "50000",
+ "payTo": "0xee432065474D2C852700f74e3fD81e2Bcc16a3D4",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "conditions": [
+    {
+     "chainId": 8453,
+     "contractAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+     "threshold": "1",
+     "type": "token_balance"
+    }
+   ],
+   "wallet": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+  },
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"attestation\":{\"id\":\"ATST-…\",\"pass\":true,\"results\":[{\"blockNumber\":\"0x…\",\"conditionHash\":\"0x…\",\"met\":true}]},\"kid\":\"insumer-attest-v2\",\"sig\":\"…\"}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1785532321/bazaar-icons/5c6c6d531d2a0891.png",
+ "docs": "https://api.insumermodel.com/llms.txt",
+ "docsChecked": 1793609276178,
+ "payers30d": 10,
+ "calls30d": 23,
+ "lastCalledAt": "2026-10-30T13:15:08.236Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 109,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 109,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-insumermodel-com-v1-attest",
+ "rating": null,
+ "related": [
+  "keyring-agent-blockchhub-link-api-send-token",
+  "keyring-agent-blockchhub-link-api-send-nft",
+  "x402-glassnode-com-v1-metrics-market-mvrv",
+  "kronossignals-com-api-v1-funding-extremes",
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.insumermodel.com/v1/attest' -H 'content-type: application/json' -d '{\"conditions\":[{\"chainId\":8453,\"contractAddress\":\"0x833589fcd6edb6e08f4c7c32d4f71b54bda02913\",\"threshold\":\"1\",\"type\":\"token_balance\"}],\"wallet\":\"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-insumermodel-com-v1-attest&body=%7B%22slug%22%3A%22api-insumermodel-com-v1-attest%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-insumermodel-com-v1-attest\",\"body\":\"{\\\"slug\\\":\\\"api-insumermodel-com-v1-attest\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=InsumerAPI%3A%20Signed%20attestation%20(ECDSA%20plus%20a%20post-quantum%20ML-DSA-65%20companion)%20of&seller=https%3A%2F%2Fapi.insumermodel.com%2Fv1%2Fattest"
+}

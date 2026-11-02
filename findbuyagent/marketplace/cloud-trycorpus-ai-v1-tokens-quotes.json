@@ -3,37 +3,72 @@
  "name": "corpusAI Cloud Pricing: Every listed price for one model on one day: e",
  "seller": "cloud.trycorpus.ai",
  "host": "cloud.trycorpus.ai",
+ "provider": "https://cloud.trycorpus.ai",
  "description": "corpusAI Cloud Pricing: Every listed price for one model on one day: each source and hosting provider, USD per million tokens.",
  "category": "Finance & markets",
  "tags": [],
  "endpoint": "https://cloud.trycorpus.ai/v1/tokens/quotes",
  "method": "GET",
+ "payment": "x402",
  "priceUsd": 0.01,
  "amount": "10000",
  "payTo": "0x4DfBc274fD84b67DfcB4B01A188c37aD28177a95",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
  "listedTermsMatch": true,
  "input": {
   "queryParams": {
    "model": "deepseek-v3"
   },
   "body": null,
-  "bodyType": null
+  "bodyType": null,
+  "headers": null
  },
- "outputExample": "{}",
+ "outputType": "json",
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": null,
  "docs": "https://cloud.trycorpus.ai/llms.txt",
  "docsChecked": 1793596019335,
- "payers30d": 41,
- "calls30d": 41,
+ "payers30d": 40,
+ "calls30d": 40,
+ "lastCalledAt": "2026-11-01T08:13:37.35Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 339,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 42,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 42,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/cloud-trycorpus-ai-v1-tokens-quotes",
  "rating": null,
+ "related": [
+  "www-blockchainiq-co-api-x402-v1-brief",
+  "api-orcatrace-dev-v1-latest",
+  "headers-use-x402atlas-com",
+  "omniterminal-app-api-x402-v1-news",
+  "agent-massive-com-v2-reference-news",
+  "agentpay-tools-tools-pre-trade-check-call"
+ ],
+ "example": {
+  "curl": "curl -i 'https://cloud.trycorpus.ai/v1/tokens/quotes?model=deepseek-v3'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20cloud-trycorpus-ai-v1-tokens-quotes&body=%7B%22slug%22%3A%22cloud-trycorpus-ai-v1-tokens-quotes%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: cloud-trycorpus-ai-v1-tokens-quotes\",\"body\":\"{\\\"slug\\\":\\\"cloud-trycorpus-ai-v1-tokens-quotes\\\",\\\"stars\\\":1-5}\"}"

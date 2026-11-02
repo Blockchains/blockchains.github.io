@@ -1,0 +1,81 @@
+{
+ "slug": "api-manylives-me-paid-crypto-price",
+ "name": "ManyLives Market Data: Use when you need a current crypto price: live US-dollar prices for up",
+ "seller": "ManyLives Market Data",
+ "host": "api.manylives.me",
+ "provider": "https://api.manylives.me",
+ "description": "Use when you need a current crypto price: live US-dollar prices for up to 25 crypto assets in one call, by ticker (BTC, SOL…), price id (e.g. coingecko:bitcoin) or chain:address (e.g. base:0x…), with symbol, confidence and timestamp.",
+ "category": "Finance & markets",
+ "tags": [
+  "trading",
+  "crypto",
+  "price"
+ ],
+ "endpoint": "https://api.manylives.me/paid/crypto/price",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xD161874249321F8AE3000C19DdD070e46682f1B3",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "coins": "BTC,SOL,base:0x4200000000000000000000000000000000000006"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"prices\":[{\"coin\":\"BTC\",\"confidence\":0.99,\"symbol\":\"BTC\",\"time\":\"…\",\"usd\":100000}]}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791574235/bazaar-icons/dee04b199148b5de.png",
+ "docs": "https://api.manylives.me/llms.txt",
+ "docsChecked": 1793609282039,
+ "payers30d": 9,
+ "calls30d": 11,
+ "lastCalledAt": "2026-11-01T10:17:10.769Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 273,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 273,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-manylives-me-paid-crypto-price",
+ "rating": null,
+ "related": [
+  "data-tollkit-dev-sec-company",
+  "mcp-blocksize-info-v1-bidask-btc-usd",
+  "intel-degenscan-io-v1-oracle-board",
+  "toolcall-click-t-fx-rates",
+  "api-sitecheck-api-workers-dev-api-fx",
+  "br-intelligence-brverify-api-workers-dev-v1-ptax"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.manylives.me/paid/crypto/price?coins=BTC%2CSOL%2Cbase%3A0x4200000000000000000000000000000000000006'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-manylives-me-paid-crypto-price&body=%7B%22slug%22%3A%22api-manylives-me-paid-crypto-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-manylives-me-paid-crypto-price\",\"body\":\"{\\\"slug\\\":\\\"api-manylives-me-paid-crypto-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ManyLives%20Market%20Data%3A%20Use%20when%20you%20need%20a%20current%20crypto%20price%3A%20live%20US-dollar%20prices%20for%20up&seller=https%3A%2F%2Fapi.manylives.me%2Fpaid%2Fcrypto%2Fprice"
+}

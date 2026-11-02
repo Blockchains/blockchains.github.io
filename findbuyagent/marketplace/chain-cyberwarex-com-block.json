@@ -1,0 +1,83 @@
+{
+ "slug": "chain-cyberwarex-com-block",
+ "name": "Onchain Query API: Latest block on any major EVM chain: block number, timestamp, age in s",
+ "seller": "Onchain Query API",
+ "host": "chain.cyberwarex.com",
+ "provider": "https://chain.cyberwarex.com",
+ "description": "Latest block on any major EVM chain: block number, timestamp, age in seconds, base fee and gas used/limit. The cheapest possible liveness and chain-tip check for an agent: confirm a chain is progressing, timestamp an observation, or pick a block for a query.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "block",
+  "blockchain",
+  "evm",
+  "chain-tip",
+  "onchain-data"
+ ],
+ "endpoint": "https://chain.cyberwarex.com/block",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x058D0Cc5CC97e61e8A9f38D6d6365bce525921B2",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "chain": "base"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"age_seconds\":3,\"base_fee_gwei\":0.0061,\"chain\":\"base\",\"chain_id\":8453,\"gas_limit\":150000000,\"gas_used\":18234012,\"hash\":\"0x9a1c…\",\"number\":51142663,\"timestamp\":1789081234,\"tx_count\":212}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1788960152/bazaar-icons/f98489fd044477d5.png",
+ "docs": "https://chain.cyberwarex.com/llms.txt",
+ "docsChecked": 1793609276033,
+ "payers30d": 10,
+ "calls30d": 34,
+ "lastCalledAt": "2026-11-02T04:20:18.45Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 404,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 404,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/chain-cyberwarex-com-block",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://chain.cyberwarex.com/block?chain=base'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20chain-cyberwarex-com-block&body=%7B%22slug%22%3A%22chain-cyberwarex-com-block%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: chain-cyberwarex-com-block\",\"body\":\"{\\\"slug\\\":\\\"chain-cyberwarex-com-block\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Onchain%20Query%20API%3A%20Latest%20block%20on%20any%20major%20EVM%20chain%3A%20block%20number%2C%20timestamp%2C%20age%20in%20s&seller=https%3A%2F%2Fchain.cyberwarex.com%2Fblock"
+}

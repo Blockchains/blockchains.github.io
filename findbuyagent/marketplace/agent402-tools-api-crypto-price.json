@@ -1,0 +1,84 @@
+{
+ "slug": "agent402-tools-api-crypto-price",
+ "name": "Crypto price: Live spot price for one or many coins in any quote currency: last pric",
+ "seller": "Crypto price",
+ "host": "agent402.tools",
+ "provider": "https://agent402.tools",
+ "description": "Live spot price for one or many coins in any quote currency: last price, 24h change, 24h volume and market cap per coin, from a maintained market feed and answered in under a second. Use it when an agent needs a current crypto price to size, compare or display, or a cheap read to poll on a schedule.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "data",
+  "crypto",
+  "price",
+  "market-data",
+  "bitcoin"
+ ],
+ "endpoint": "https://agent402.tools/api/crypto-price",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xaBF4FAbd7c416fB67202E5f9002389Fc75e2a9D0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "coins": "BTC,ETH,SOL",
+   "currency": "usd"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"coins\":{\"bitcoin\":{\"change24hPct\":1.42,\"lastUpdated\":\"2026-06-20T00:30:00Z\",\"marketCap\":1320000000000,\"price\":67234.12,\"volume24h\":28100000000},\"ethereum\":{\"change24hPct\":2.18,\"lastUpdated\":\"2026-06-20T00:30:00Z\",\"marketCap\":423000000000,\"price\":3520.45,\"volume24h\":14200000000},\"solana\":{\"change24hPct\":-0.65,\"lastUpdated\":\"2026-06-20T00:30:00Z\",\"marketCap\":68000000000,\"price\":148.2,\"volume24h\":2400000000}},\"count\":3,\"currency\":\"usd\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1784247360/bazaar-icons/478aced8e219894c.png",
+ "docs": "https://agent402.tools/llms.txt",
+ "docsChecked": 1793609269180,
+ "payers30d": 17,
+ "calls30d": 138,
+ "lastCalledAt": "2026-11-02T03:35:11.961Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 107,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 107,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agent402-tools-api-crypto-price",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agent402.tools/api/crypto-price?coins=BTC%2CETH%2CSOL&currency=usd'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agent402-tools-api-crypto-price&body=%7B%22slug%22%3A%22agent402-tools-api-crypto-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agent402-tools-api-crypto-price\",\"body\":\"{\\\"slug\\\":\\\"agent402-tools-api-crypto-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Crypto%20price%3A%20Live%20spot%20price%20for%20one%20or%20many%20coins%20in%20any%20quote%20currency%3A%20last%20pric&seller=https%3A%2F%2Fagent402.tools%2Fapi%2Fcrypto-price"
+}

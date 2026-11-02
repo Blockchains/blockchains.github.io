@@ -1,0 +1,84 @@
+{
+ "slug": "api-mekler-ai-v1-email-domains-check-mail-configuration",
+ "name": "Mekler AI: Check one email address or domain",
+ "seller": "Mekler AI",
+ "host": "api.mekler.ai",
+ "provider": "https://api.mekler.ai",
+ "description": "Check one email address or domain. Report common address syntax, MX or null MX and A/AAAA fallback, SPF, exact-domain DMARC and optional caller-supplied DKIM selector records, and a small known disposable-domain list. DNS failures remain unknown. Does not verify a mailbox or predict delivery.",
+ "category": "Data & analytics",
+ "tags": [
+  "email",
+  "domain",
+  "dns",
+  "mail configuration",
+  "dkim"
+ ],
+ "endpoint": "https://api.mekler.ai/v1/email/domains/check-mail-configuration",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.003,
+ "amount": "3000",
+ "payTo": "0xF6c6E2e530bb311c14a49C1a07C720fc232c07c5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "kind": "domain",
+   "value": "example.org"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"disposable\":\"not_on_small_known_list\",\"dkim\":{\"status\":\"selector_required\"},\"dmarc\":{\"dns\":{\"status\":\"ok\",\"ttl_seconds\":60},\"record\":\"v=DMARC1; p=reject\",\"status\":\"record_found\"},\"domain\":\"example.org\",\"mail_route\":{\"mx\":{\"status\":\"ok\",\"ttl_seconds\":60,\"values\":[[10,\"mail.example.org\"]]},\"status\":\"mx_configured\"},\"mailbox_exists\":\"unknown\",\"schema_version\":\"1\",\"service\":\"email-domain-checks\",\"spf\":{\"dns\":{\"status\":\"ok\",\"ttl_seconds\":60},\"record\":\"v=spf1 -all\",\"status\":\"record_found\"},\"syntax\":\"not_applicable\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.mekler.ai/llms.txt",
+ "docsChecked": 1793609274285,
+ "payers30d": 12,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-02T03:43:41.83Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 200,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 200,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-mekler-ai-v1-email-domains-check-mail-configuration",
+ "rating": null,
+ "related": [
+  "api-hyperextend-xyz-v1-asset-ctx-btc-latest",
+  "api-hyperextend-xyz-v1-candles-btc-1m-latest",
+  "api-oblique-markets-api-v1-paid-bazaar-pulse",
+  "rest-coincap-io-v3-agentfriendly-full-assets-by-slug",
+  "kaisha-api-hp-vladic-workers-dev-calendar-holidays",
+  "brasil-dados-api-onrender-com-cambio"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.mekler.ai/v1/email/domains/check-mail-configuration' -H 'content-type: application/json' -d '{\"kind\":\"domain\",\"value\":\"example.org\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-mekler-ai-v1-email-domains-check-mail-configuration&body=%7B%22slug%22%3A%22api-mekler-ai-v1-email-domains-check-mail-configuration%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-mekler-ai-v1-email-domains-check-mail-configuration\",\"body\":\"{\\\"slug\\\":\\\"api-mekler-ai-v1-email-domains-check-mail-configuration\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Mekler%20AI%3A%20Check%20one%20email%20address%20or%20domain&seller=https%3A%2F%2Fapi.mekler.ai%2Fv1%2Femail%2Fdomains%2Fcheck-mail-configuration"
+}

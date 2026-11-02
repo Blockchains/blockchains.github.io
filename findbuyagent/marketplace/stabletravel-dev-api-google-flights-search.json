@@ -1,0 +1,89 @@
+{
+ "slug": "stabletravel-dev-api-google-flights-search",
+ "name": "StableTravel: Search Google Flights for flight offers",
+ "seller": "StableTravel",
+ "host": "stabletravel.dev",
+ "provider": "https://stabletravel.dev",
+ "description": "Search Google Flights for flight offers. Returns best flights, other flights, price insights, and airport info.",
+ "category": "Search & web",
+ "tags": [
+  "Google Flights"
+ ],
+ "endpoint": "https://stabletravel.dev/api/google-flights/search",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.02,
+ "amount": "20000",
+ "payTo": "0xDd257723b86B4947483905cdAcBbBC70fACF2ec0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "adults": 1,
+   "arrival_id": "LAX",
+   "children": 0,
+   "currency": "USD",
+   "departure_id": "JFK",
+   "hl": "en",
+   "infants_in_seat": 0,
+   "infants_on_lap": 0,
+   "outbound_date": "2026-12-01",
+   "return_date": "2026-12-08",
+   "type": "1"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"best_flights\":[{\"flights\":[{\"airline\":\"American\",\"arrival_airport\":{\"id\":\"LAX\",\"name\":\"Los Angeles International Airport\",\"time\":\"2026-12-01 11:00\"},\"departure_airport\":{\"id\":\"JFK\",\"name\":\"John F. Kennedy International Airport\",\"time\":\"2026-12-01 08:00\"},\"duration\":360,\"flight_number\":\"AA 100\",\"travel_class\":\"Economy\"}],\"price\":350,\"total_duration\":360,\"type\":\"Round trip\"}],\"search_metadata\":{\"created_at\":\"2026-04-22 12:00:00 UTC\",\"google_flights_url\":\"https://www.google.com/travel/flights\",\"id\":\"search-123\",\"status\":\"Success\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://stabletravel.dev/llms.txt",
+ "docsChecked": 1793609268165,
+ "payers30d": 24,
+ "calls30d": 168,
+ "lastCalledAt": "2026-11-01T15:20:31.488Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 675,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 675,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/stabletravel-dev-api-google-flights-search",
+ "rating": null,
+ "related": [
+  "api-kadec0-xyz-v1-papers",
+  "x402-botsmith-dev-x-search",
+  "www-trezalabs-com-api-x402-speech",
+  "appstore-use-x402atlas-com-search",
+  "x402-asterpay-io-v2-x402-ai-fact-check",
+  "x402-asterpay-io-v2-x402-agent-readiness"
+ ],
+ "example": {
+  "curl": "curl -i 'https://stabletravel.dev/api/google-flights/search?adults=1&arrival_id=LAX&children=0&currency=USD&departure_id=JFK&hl=en&infants_in_seat=0&infants_on_lap=0&outbound_date=2026-12-01&return_date=2026-12-08&type=1'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20stabletravel-dev-api-google-flights-search&body=%7B%22slug%22%3A%22stabletravel-dev-api-google-flights-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: stabletravel-dev-api-google-flights-search\",\"body\":\"{\\\"slug\\\":\\\"stabletravel-dev-api-google-flights-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=StableTravel%3A%20Search%20Google%20Flights%20for%20flight%20offers&seller=https%3A%2F%2Fstabletravel.dev%2Fapi%2Fgoogle-flights%2Fsearch"
+}

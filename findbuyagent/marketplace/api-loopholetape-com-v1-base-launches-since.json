@@ -1,0 +1,86 @@
+{
+ "slug": "api-loopholetape-com-v1-base-launches-since",
+ "name": "loophole tape: New Solana tokens as they launch on pump.fun: a cursor feed of new mem",
+ "seller": "loophole tape",
+ "host": "api.loopholetape.com",
+ "provider": "https://api.loopholetape.com",
+ "description": "New Solana tokens as they launch on pump.fun: a cursor feed of new memecoin launches with rug probability and graduation odds ($0.001 per poll). Use when a bot polls for newly launched Solana tokens on pump.fun with their calibrated odds; for a one-off screen of the last hour use GET /v1/launches/recent, and for one mint the $0.005 rug check.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "pump.fun",
+  "memecoin",
+  "new-solana-tokens",
+  "rug-probability",
+  "polling"
+ ],
+ "endpoint": "https://api.loopholetape.com/v1/base/launches/since",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x25d408eF54e60F3006bD13d5A040d525E2F359c2",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": 100,
+   "min_p_grad": 0,
+   "no_avoid": false,
+   "since": 1789228000
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"coverage\":\"full\",\"data\":{\"count\":2,\"items\":[{\"age_s\":1.6,\"check_url\":\"https://api.loopholetape.com/v1/check/mint/73sfnFgqQzpSRZSimCC4sxpubqghRGYewYLmiUH2pump\",\"created_at\":1789228058.4,\"dev_share\":0.03,\"flags\":[],\"mint\":\"73sfnFgqQzpSRZSimCC4sxpubqghRGYewYLmiUH2pump\",\"n_buys\":2,\"name\":\"Memestock\",\"p_rug_300s\":0.41,\"p_true_graduation\":0.006,\"probabilities\":{\"rug_within_300s\":0.41,\"true_graduation\":0.006},\"rs_sol\":30.9,\"symbol\":\"MEME\",\"top5_share\":0.61,\"unique_buyers_60s\":2,\"verdict\":\"caution\"}],\"next_cursor\":1789228058.4,\"since\":1789228000,\"truncated\":false},\"ok\":true}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.loopholetape.com/llms.txt",
+ "docsChecked": 1793609279580,
+ "payers30d": 9,
+ "calls30d": 38,
+ "lastCalledAt": "2026-11-02T01:27:03.205Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 812,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 812,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-loopholetape-com-v1-base-launches-since",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.loopholetape.com/v1/base/launches/since?limit=100&min_p_grad=0&no_avoid=false&since=1789228000'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-loopholetape-com-v1-base-launches-since&body=%7B%22slug%22%3A%22api-loopholetape-com-v1-base-launches-since%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-loopholetape-com-v1-base-launches-since\",\"body\":\"{\\\"slug\\\":\\\"api-loopholetape-com-v1-base-launches-since\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=loophole%20tape%3A%20New%20Solana%20tokens%20as%20they%20launch%20on%20pump.fun%3A%20a%20cursor%20feed%20of%20new%20mem&seller=https%3A%2F%2Fapi.loopholetape.com%2Fv1%2Fbase%2Flaunches%2Fsince"
+}

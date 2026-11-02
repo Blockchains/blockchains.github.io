@@ -1,0 +1,83 @@
+{
+ "slug": "scraplingdata-xyz-v1-lookup-pool",
+ "name": "Scrapling x402 Data Store: Details for one on-chain DeFi lending pool (Aave v3, Compound v3, Moon",
+ "seller": "Scrapling x402 Data Store",
+ "host": "scraplingdata.xyz",
+ "provider": "https://scraplingdata.xyz",
+ "description": "Details for one on-chain DeFi lending pool (Aave v3, Compound v3, Moonwell, Morpho Blue) by pool id protocol:chain:token_address: supply APY, borrow APY, utilization, TVL and 0-100 risk score. Example: pool_id=aave-v3:base:0x833589fcd6edb6e08f4c7c32d4f71b54bda02913 (Aave Base USDC). Pool ids come from /v1/lookup/yields results. Refreshed about every 30 min",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "web-scraping",
+  "crypto",
+  "defi",
+  "ecommerce",
+  "datasets"
+ ],
+ "endpoint": "https://scraplingdata.xyz/v1/lookup/pool",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x72C80C01fD89Bac74f47cf604b61ACd119c9BCdb",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "pool_id": "aave-v3:base:0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"apy_pct\":4.2,\"borrow_apy_pct\":5.3,\"pool_id\":\"aave-v3:base:0x8335...\",\"project\":\"aave-v3\",\"tvl_usd\":190000000}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://scraplingdata.xyz/llms.txt",
+ "docsChecked": 1793609276969,
+ "payers30d": 10,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-01T06:55:12.357Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 72,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 72,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/scraplingdata-xyz-v1-lookup-pool",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://scraplingdata.xyz/v1/lookup/pool?pool_id=aave-v3%3Abase%3A0x833589fcd6edb6e08f4c7c32d4f71b54bda02913'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20scraplingdata-xyz-v1-lookup-pool&body=%7B%22slug%22%3A%22scraplingdata-xyz-v1-lookup-pool%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: scraplingdata-xyz-v1-lookup-pool\",\"body\":\"{\\\"slug\\\":\\\"scraplingdata-xyz-v1-lookup-pool\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Scrapling%20x402%20Data%20Store%3A%20Details%20for%20one%20on-chain%20DeFi%20lending%20pool%20(Aave%20v3%2C%20Compound%20v3%2C%20Moon&seller=https%3A%2F%2Fscraplingdata.xyz%2Fv1%2Flookup%2Fpool"
+}

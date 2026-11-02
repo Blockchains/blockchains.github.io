@@ -1,0 +1,80 @@
+{
+ "slug": "x402-agentutility-ai-ip-asn",
+ "name": "AgentUtility.ai: Looks up ASN and geolocation for any IPv4 or IPv6 address: ASN number,",
+ "seller": "AgentUtility.ai",
+ "host": "x402.agentutility.ai",
+ "provider": "https://x402.agentutility.ai",
+ "description": "Looks up ASN and geolocation for any IPv4 or IPv6 address: ASN number, ASN org, ISP, country, region, city, postal, latitude/longitude, and timezone. Primary backend: ipapi.co (1k req/day free); fallback: ip-api.com (45 req/min free). Both are free public APIs with no auth. Use it as an IP-to-ASN, IP geolocation, IP-to-ISP lookup, WHOIS for IP, or cloud-provider attribution tool.",
+ "category": "Weather & geo",
+ "tags": [
+  "web-probe",
+  "asn"
+ ],
+ "endpoint": "https://x402.agentutility.ai/ip-asn",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x6c0752c09e7F6fA6526fCDf40e456a159ebB5621",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "ip": "8.8.8.8"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asn\":15169,\"asn_org\":\"Google LLC\",\"city\":\"Mountain View\",\"country\":\"United States\",\"country_code\":\"US\",\"ip\":\"8.8.8.8\",\"latitude\":37.4056,\"longitude\":-122.0775,\"postal\":\"94043\",\"region\":\"California\",\"source\":\"ipapi.co\",\"timezone\":\"America/Los_Angeles\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1783070352/bazaar-icons/54f004eda341546b.png",
+ "docs": "https://x402.agentutility.ai/llms.txt",
+ "docsChecked": 1793609275150,
+ "payers30d": 11,
+ "calls30d": 18,
+ "lastCalledAt": "2026-10-30T18:44:18.75Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 2833,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 2833,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-agentutility-ai-ip-asn",
+ "rating": null,
+ "related": [
+  "hypernatt-com-api-m2m-liq-radar",
+  "weather-agentic-jp-com-areas",
+  "api-losbeto-xyz-gas-price",
+  "x402-data-api-sigrunner-workers-dev-defi-yields",
+  "x402-seller-onrender-com-geo-lookup",
+  "x402-tbs-digital-com-weather-current"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://x402.agentutility.ai/ip-asn' -H 'content-type: application/json' -d '{\"ip\":\"8.8.8.8\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-agentutility-ai-ip-asn&body=%7B%22slug%22%3A%22x402-agentutility-ai-ip-asn%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-agentutility-ai-ip-asn\",\"body\":\"{\\\"slug\\\":\\\"x402-agentutility-ai-ip-asn\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=AgentUtility.ai%3A%20Looks%20up%20ASN%20and%20geolocation%20for%20any%20IPv4%20or%20IPv6%20address%3A%20ASN%20number%2C&seller=https%3A%2F%2Fx402.agentutility.ai%2Fip-asn"
+}

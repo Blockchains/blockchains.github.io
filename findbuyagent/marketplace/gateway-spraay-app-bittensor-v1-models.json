@@ -1,0 +1,75 @@
+{
+ "slug": "gateway-spraay-app-bittensor-v1-models",
+ "name": "List all AI models on Bittensor",
+ "seller": "gateway.spraay.app",
+ "host": "gateway.spraay.app",
+ "provider": "https://gateway.spraay.app",
+ "description": "List all AI models on Bittensor. OpenAI /v1/models compatible. Drop-in: just change base_url to gateway.spraay.app/bittensor/v1",
+ "category": "AI & LLM",
+ "tags": [],
+ "endpoint": "https://gateway.spraay.app/bittensor/v1/models",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xAd62f03C7514bb8c51f1eA70C2b75C37404695c8",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":[{\"id\":\"deepseek-ai/DeepSeek-V3.2-TEE\",\"object\":\"model\"}],\"object\":\"list\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://gateway.spraay.app/llms.txt",
+ "docsChecked": 1793609271135,
+ "payers30d": 13,
+ "calls30d": 74,
+ "lastCalledAt": "2026-11-02T01:26:43.335Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 421,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 421,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/gateway-spraay-app-bittensor-v1-models",
+ "rating": null,
+ "related": [
+  "jev-x402-vercel-app-jev",
+  "contextslim-friczero-com-fetch",
+  "767-2676-com-v2-receipt",
+  "golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions",
+  "www-amnt-io-api-agent-amnt-bitcoin-price",
+  "api-agentweather-io-v1-pulse-storm"
+ ],
+ "example": {
+  "curl": "curl -i 'https://gateway.spraay.app/bittensor/v1/models'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20gateway-spraay-app-bittensor-v1-models&body=%7B%22slug%22%3A%22gateway-spraay-app-bittensor-v1-models%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: gateway-spraay-app-bittensor-v1-models\",\"body\":\"{\\\"slug\\\":\\\"gateway-spraay-app-bittensor-v1-models\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=List%20all%20AI%20models%20on%20Bittensor&seller=https%3A%2F%2Fgateway.spraay.app%2Fbittensor%2Fv1%2Fmodels"
+}

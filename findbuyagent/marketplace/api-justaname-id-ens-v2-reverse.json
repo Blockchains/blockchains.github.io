@@ -1,0 +1,83 @@
+{
+ "slug": "api-justaname-id-ens-v2-reverse",
+ "name": "JAW.id ENS Reverse Resolver: Resolves an address into its ENS reverse record on a given chain, with",
+ "seller": "JAW.id ENS Reverse Resolver",
+ "host": "api.justaname.id",
+ "provider": "https://api.justaname.id",
+ "description": "Resolves an address into its ENS reverse record on a given chain, with batch support up to 50 addresses and per-address chain scoping via interop addresses.",
+ "category": "Utilities",
+ "tags": [
+  "ens",
+  "identity",
+  "reverse-resolution",
+  "primary-name"
+ ],
+ "endpoint": "https://api.justaname.id/ens/v2/reverse",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xc529edd6d47c60923902514c7c0b3993ae42c2ec",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "address": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+   "coinType": "60"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"address\":\"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045\",\"name\":\"vitalik.eth\",\"viaUniversalResolver\":true}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.justaname.id/.well-known/x402",
+ "docsChecked": 1793609273627,
+ "payers30d": 12,
+ "calls30d": 54,
+ "lastCalledAt": "2026-10-28T22:19:28.669Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 453,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 453,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-justaname-id-ens-v2-reverse",
+ "rating": null,
+ "related": [
+  "www-api-xpay-com-x402-network",
+  "www-api-xpay-com-x402-ping",
+  "www-api-xpay-com-x402-uuid",
+  "www-api-xpay-com-x402-payment",
+  "api-geoprimitives-dev-v1-marine-depth",
+  "bunnvault-xyz-api-vault-apy"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.justaname.id/ens/v2/reverse?address=0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045&coinType=60'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-justaname-id-ens-v2-reverse&body=%7B%22slug%22%3A%22api-justaname-id-ens-v2-reverse%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-justaname-id-ens-v2-reverse\",\"body\":\"{\\\"slug\\\":\\\"api-justaname-id-ens-v2-reverse\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=JAW.id%20ENS%20Reverse%20Resolver%3A%20Resolves%20an%20address%20into%20its%20ENS%20reverse%20record%20on%20a%20given%20chain%2C%20with&seller=https%3A%2F%2Fapi.justaname.id%2Fens%2Fv2%2Freverse"
+}

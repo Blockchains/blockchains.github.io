@@ -1,0 +1,84 @@
+{
+ "slug": "multichain-rpc-clankerceo-workers-dev-balance",
+ "name": "Multichain RPC/balance: Native coin and ERC-20 token balance for any wallet address on Base, P",
+ "seller": "Multichain RPC/balance",
+ "host": "multichain-rpc.clankerceo.workers.dev",
+ "provider": "https://multichain-rpc.clankerceo.workers.dev",
+ "description": "Native coin and ERC-20 token balance for any wallet address on Base, Polygon, Arbitrum, Optimism or Ethereum. Returns raw and human-decimal amounts in one call.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "chain-data",
+  "rpc",
+  "evm",
+  "base",
+  "polygon"
+ ],
+ "endpoint": "https://multichain-rpc.clankerceo.workers.dev/balance",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xCa03Fb4b1D2f66f5a83A5cA91021b874ac4a34a3",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "address": "0x0000000000000000000000000000000000000000",
+   "chain": "base"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"address\":\"0x…\",\"chain\":\"base\",\"native\":{\"amount\":\"0.000001\",\"symbol\":\"ETH\",\"wei\":\"1000000\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://multichain-rpc.clankerceo.workers.dev/.well-known/x402",
+ "docsChecked": 1793609281281,
+ "payers30d": 9,
+ "calls30d": 12,
+ "lastCalledAt": "2026-10-22T21:31:17.246Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 97,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 97,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/multichain-rpc-clankerceo-workers-dev-balance",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i 'https://multichain-rpc.clankerceo.workers.dev/balance?address=0x0000000000000000000000000000000000000000&chain=base'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20multichain-rpc-clankerceo-workers-dev-balance&body=%7B%22slug%22%3A%22multichain-rpc-clankerceo-workers-dev-balance%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: multichain-rpc-clankerceo-workers-dev-balance\",\"body\":\"{\\\"slug\\\":\\\"multichain-rpc-clankerceo-workers-dev-balance\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Multichain%20RPC%2Fbalance%3A%20Native%20coin%20and%20ERC-20%20token%20balance%20for%20any%20wallet%20address%20on%20Base%2C%20P&seller=https%3A%2F%2Fmultichain-rpc.clankerceo.workers.dev%2Fbalance"
+}

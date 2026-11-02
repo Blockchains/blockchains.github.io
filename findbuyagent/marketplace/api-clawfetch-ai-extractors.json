@@ -1,0 +1,79 @@
+{
+ "slug": "api-clawfetch-ai-extractors",
+ "name": "ClawFetch: Discovery endpoint listing all 17 available structured-data extractors",
+ "seller": "ClawFetch",
+ "host": "api.clawfetch.ai",
+ "provider": "https://api.clawfetch.ai",
+ "description": "Discovery endpoint listing all 17 available structured-data extractors and the domains each one supports, so an agent can decide whether /extract can handle a given URL before paying for it.",
+ "category": "Search & web",
+ "tags": [
+  "web-scraping",
+  "structured-data",
+  "discovery"
+ ],
+ "endpoint": "https://api.clawfetch.ai/extractors",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xc2afB91833f4dE19542A025872C6085cC29185eB",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"extractors\":[{\"domains\":[\"twitter.com\"],\"name\":\"Twitter\"}]}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1793532299/bazaar-icons/cce7de56dee923d5.png",
+ "docs": "https://api.clawfetch.ai/llms.txt",
+ "docsChecked": 1793609269690,
+ "payers30d": 14,
+ "calls30d": 82,
+ "lastCalledAt": "2026-11-01T23:12:18.304Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 123,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 123,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-clawfetch-ai-extractors",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "minifetch-com-api-v1-x402-preflight-url-check",
+  "web-cyberwarex-com-fetch",
+  "cdp-agent-0-01-onrender-com",
+  "agent-web-tools-agent-web-tools-workers-dev-v1-check",
+  "gamemaxxing-baes-so-api-agent-v1-search"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.clawfetch.ai/extractors'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-clawfetch-ai-extractors&body=%7B%22slug%22%3A%22api-clawfetch-ai-extractors%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-clawfetch-ai-extractors\",\"body\":\"{\\\"slug\\\":\\\"api-clawfetch-ai-extractors\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ClawFetch%3A%20Discovery%20endpoint%20listing%20all%2017%20available%20structured-data%20extractors&seller=https%3A%2F%2Fapi.clawfetch.ai%2Fextractors"
+}

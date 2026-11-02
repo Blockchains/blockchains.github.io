@@ -1,0 +1,75 @@
+{
+ "slug": "booaip-vercel-app-api-feargreed",
+ "name": "Current crypto Fear & Greed Index with 1-day change (alternative.me)",
+ "seller": "booaip.vercel.app",
+ "host": "booaip.vercel.app",
+ "provider": "https://booaip.vercel.app",
+ "description": "Current crypto Fear & Greed Index with 1-day change (alternative.me).",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://booaip.vercel.app/api/feargreed",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xcd6b6d99b7751ff30b68fa1365488eb73fa7cefa",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"change1d\":3,\"classification\":\"Greed\",\"value\":55}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://booaip.vercel.app/llms.txt",
+ "docsChecked": 1793609277341,
+ "payers30d": 10,
+ "calls30d": 15,
+ "lastCalledAt": "2026-10-31T12:37:59.447Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 446,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 446,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/booaip-vercel-app-api-feargreed",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-contract-address",
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "hyperliquid-predict-use-x402atlas-com-outcomes",
+  "notary-forgemesh-io-api-notarize",
+  "coingecko-use-x402atlas-com-price",
+  "scry-solanahub-de-x402-network-priority-fees-live"
+ ],
+ "example": {
+  "curl": "curl -i 'https://booaip.vercel.app/api/feargreed'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20booaip-vercel-app-api-feargreed&body=%7B%22slug%22%3A%22booaip-vercel-app-api-feargreed%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: booaip-vercel-app-api-feargreed\",\"body\":\"{\\\"slug\\\":\\\"booaip-vercel-app-api-feargreed\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Current%20crypto%20Fear%20%26%20Greed%20Index%20with%201-day%20change%20(alternative.me)&seller=https%3A%2F%2Fbooaip.vercel.app%2Fapi%2Ffeargreed"
+}

@@ -1,0 +1,81 @@
+{
+ "slug": "stablestudio-dev-api-upload",
+ "name": "StableStudio: Get a client token for direct upload to Vercel Blob",
+ "seller": "StableStudio",
+ "host": "stablestudio.dev",
+ "provider": "https://stablestudio.dev",
+ "description": "Get a client token for direct upload to Vercel Blob",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "Upload"
+ ],
+ "endpoint": "https://stablestudio.dev/api/upload",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x07F067959297767c887dbfA3C72379c66E82a045",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "contentType": "image/jpeg",
+   "filename": "photo.jpg",
+   "size": 1524605
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"clientToken\":\"vercel_blob_client_token_example_redacted\",\"curlExample\":\"curl -X PUT \\\"https://vercel.com/api/blob/?pathname=uploads%2F8eecdb7b-bd76-4054-94f9-94c9abb57eab%2Fphoto.jpg\\\" -H \\\"authorization: Bearer <client-token>\\\" -H \\\"x-content-type: image/jpeg\\\" -H \\\"x-api-version: 11\\\" --data-binary @photo.jpg\",\"expiresAt\":\"2026-05-18T20:11:05.273Z\",\"pathname\":\"uploads/8eecdb7b-bd76-4054-94f9-94c9abb57eab/photo.jpg\",\"uploadId\":\"8eecdb7b-bd76-4054-94f9-94c9abb57eab\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://stablestudio.dev/llms.txt",
+ "docsChecked": 1793609269810,
+ "payers30d": 15,
+ "calls30d": 59,
+ "lastCalledAt": "2026-10-30T17:37:24.905Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 1058,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 1058,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/stablestudio-dev-api-upload",
+ "rating": null,
+ "related": [
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets",
+  "api-nansen-ai-api-v1-tgm-token-information",
+  "api-x402node-dev-chain-honeypot",
+  "api-gondola-ai-com-v1-chat-completions"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://stablestudio.dev/api/upload' -H 'content-type: application/json' -d '{\"contentType\":\"image/jpeg\",\"filename\":\"photo.jpg\",\"size\":1524605}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20stablestudio-dev-api-upload&body=%7B%22slug%22%3A%22stablestudio-dev-api-upload%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: stablestudio-dev-api-upload\",\"body\":\"{\\\"slug\\\":\\\"stablestudio-dev-api-upload\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=StableStudio%3A%20Get%20a%20client%20token%20for%20direct%20upload%20to%20Vercel%20Blob&seller=https%3A%2F%2Fstablestudio.dev%2Fapi%2Fupload"
+}

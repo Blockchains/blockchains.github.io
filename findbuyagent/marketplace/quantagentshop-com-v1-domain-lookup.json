@@ -1,0 +1,86 @@
+{
+ "slug": "quantagentshop-com-v1-domain-lookup",
+ "name": "Quant Agent Shop: Domain lookup in one call: DNS records (A, AAAA, MX, TXT, NS, CNAME, S",
+ "seller": "Quant Agent Shop",
+ "host": "quantagentshop.com",
+ "provider": "https://quantagentshop.com",
+ "description": "Domain lookup in one call: DNS records (A, AAAA, MX, TXT, NS, CNAME, SOA, CAA with TTLs), registry RDAP registration data (registrar, created, updated and expiry dates, status, nameservers, DNSSEC) and the TLS certificate (issuer, names, validity, days left, chain verified). Use to check a domain before linking to, buying or trusting it. No registrant contact data. Typical response 1 to 2 s. Failed calls are not charged.",
+ "category": "Data & analytics",
+ "tags": [
+  "domain-lookup",
+  "dns",
+  "whois",
+  "data"
+ ],
+ "endpoint": "https://quantagentshop.com/v1/domain-lookup",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.0099,
+ "amount": "9900",
+ "payTo": "0x4d8d8D4f04512029172e0176744Eec4AE5238309",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "domain": "quantagentshop.com",
+   "parts": [
+    "registration",
+    "tls"
+   ]
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"checked_at\":\"2026-10-22T09:00:00+00:00\",\"dns\":null,\"domain\":\"quantagentshop.com\",\"exists\":true,\"registration\":{\"created\":\"2026-10-22T05:23:20Z\",\"dnssec\":false,\"expires\":\"2027-10-22T05:23:20Z\",\"nameservers\":[\"anna.ns.cloudflare.com\",\"greg.ns.cloudflare.com\"],\"rdap_url\":\"https://rdap.verisign.com/com/v1/domain/quantagentshop.com\",\"registered\":true,\"registrar\":\"Cloudflare, Inc.\",\"registrar_iana_id\":\"1910\",\"retrieved_at\":\"2026-10-22T09:00:00+00:00\",\"status\":[\"client transfer prohibited\"],\"updated\":\"2026-10-22T05:23:21Z\"},\"tls\":{\"cipher\":\"TLS_AES_256_GCM_SHA384\",\"days_left\":90,\"error\":null,\"ip\":\"104.21.0.1\",\"issuer\":\"Google Trust Services WE1\",\"key\":\"EC secp256r1\",\"not_after\":\"2027-01-20T04:00:00Z\",\"not_before\":\"2026-10-22T04:00:00Z\",\"sans\":[\"quantagentshop.com\",\"*.quantagentshop.com\"],\"subject_cn\":\"quantagentshop.com\",\"tls_version\":\"TLSv1.3\",\"verified\":true},\"unavailable\":[]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://quantagentshop.com/llms.txt",
+ "docsChecked": 1793609279076,
+ "payers30d": 9,
+ "calls30d": 26,
+ "lastCalledAt": "2026-10-30T12:37:24.011Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 82,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 82,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/quantagentshop-com-v1-domain-lookup",
+ "rating": null,
+ "related": [
+  "ip402-xyz-v1-geo",
+  "api-polyform-org-v1-threat-scanners",
+  "insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard",
+  "fuelscout-scalpstream-com-fuel",
+  "cpi-report-us-underscoredone-com-cpi",
+  "agent402-tools-api-demand-radar"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://quantagentshop.com/v1/domain-lookup' -H 'content-type: application/json' -d '{\"domain\":\"quantagentshop.com\",\"parts\":[\"registration\",\"tls\"]}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20quantagentshop-com-v1-domain-lookup&body=%7B%22slug%22%3A%22quantagentshop-com-v1-domain-lookup%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: quantagentshop-com-v1-domain-lookup\",\"body\":\"{\\\"slug\\\":\\\"quantagentshop-com-v1-domain-lookup\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Quant%20Agent%20Shop%3A%20Domain%20lookup%20in%20one%20call%3A%20DNS%20records%20(A%2C%20AAAA%2C%20MX%2C%20TXT%2C%20NS%2C%20CNAME%2C%20S&seller=https%3A%2F%2Fquantagentshop.com%2Fv1%2Fdomain-lookup"
+}

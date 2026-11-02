@@ -1,0 +1,83 @@
+{
+ "slug": "lionx402-com-api-x402-wallet-screen-json",
+ "name": "LION Verified Company: Is this crypto wallet sanctioned",
+ "seller": "LION Verified Company",
+ "host": "lionx402.com",
+ "provider": "https://lionx402.com",
+ "description": "Is this crypto wallet sanctioned? Instant OFAC SDN address screen for AI agents. Returns PASS, WARN, or BLOCK. $0.001 Base USDC, keyless x402.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "wallet",
+  "ofac",
+  "aml",
+  "sanctions",
+  "screen"
+ ],
+ "endpoint": "https://lionx402.com/api/x402/wallet-screen-json",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x68e3E7822cf83C824cF9606EC999b5e8a93c85B5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "address": "0x8589427373D6D84E98730D7795D8f6f8731FDA16"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asset_id\":\"LION_WALLET_SCREEN_001\",\"ofac\":{\"hit\":false,\"list\":\"US Treasury OFAC SDN\",\"snapshot_as_of\":\"2026-10-21\",\"total_listed_addresses\":1050},\"resolved\":true,\"score\":100,\"upsell\":{\"compliance_bundle\":{\"price_usdc\":\"0.05\"},\"recheck\":{\"price_usdc\":\"0.01\"},\"verified_company_file\":{\"price_usdc\":\"0.95\"}},\"verdict\":\"PASS\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://lionx402.com/llms.txt",
+ "docsChecked": 1793609268801,
+ "payers30d": 20,
+ "calls30d": 28,
+ "lastCalledAt": "2026-11-01T23:11:58.675Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 353,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 353,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/lionx402-com-api-x402-wallet-screen-json",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://lionx402.com/api/x402/wallet-screen-json?address=0x8589427373D6D84E98730D7795D8f6f8731FDA16'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20lionx402-com-api-x402-wallet-screen-json&body=%7B%22slug%22%3A%22lionx402-com-api-x402-wallet-screen-json%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: lionx402-com-api-x402-wallet-screen-json\",\"body\":\"{\\\"slug\\\":\\\"lionx402-com-api-x402-wallet-screen-json\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=LION%20Verified%20Company%3A%20Is%20this%20crypto%20wallet%20sanctioned&seller=https%3A%2F%2Flionx402.com%2Fapi%2Fx402%2Fwallet-screen-json"
+}

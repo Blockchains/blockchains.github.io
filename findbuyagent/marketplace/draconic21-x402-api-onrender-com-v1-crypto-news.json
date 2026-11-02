@@ -1,0 +1,81 @@
+{
+ "slug": "draconic21-x402-api-onrender-com-v1-crypto-news",
+ "name": "d21 crypto_news: Crypto News ($0.001 -- matches the category-leading incumbent's price",
+ "seller": "d21 crypto_news",
+ "host": "draconic21-x402-api.onrender.com",
+ "provider": "https://draconic21-x402-api.onrender.com",
+ "description": "Crypto News ($0.001 -- matches the category-leading incumbent's price exactly): fixed, no-required-params crypto headline feed -- a drop-in-shaped alternative to the category leader (GET, headlines[] with title/url/source/publishedAt; also mirrors its {status, data:{headlines[] with rank/whyItMatters/match, report}, meta} nesting field-for-field, as an additive alias). Built on this origin's own news_search GDELT client (narrowed to a crypto query) merged with Hacker News crypto stories for…",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto-news",
+  "headlines",
+  "bitcoin",
+  "ethereum",
+  "market-brief"
+ ],
+ "endpoint": "https://draconic21-x402-api.onrender.com/v1/crypto_news",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x1520Ef5530AA71350049BE2903Cf078B38c40AE5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"brief\":{\"tag_counts\":{\"BTC\":1,\"ETF\":1},\"top_headlines\":[{\"title\":\"Bitcoin ETFs notch best month of 2026\",\"url\":\"https://example.com/a\"}]},\"caveats\":[\"No per-headline sentiment/whyItMatters is fabricated. topic_tags are simple rule-based key…\"],\"data\":{\"headlines\":[{\"match\":null,\"publishedAt\":\"2026-09-28T13:15:00Z\",\"rank\":1,\"source\":\"example.com\",\"title\":\"Bitcoin ETFs notch best month of 2026\",\"url\":\"https://example.com/a\",\"whyItMatters\":null}],\"report\":\"1 ranked crypto headlines from GDELT + Hacker News, most recent first (deterministic, not …\"},\"headline_count\":1,\"headlines\":[{\"language\":\"English\",\"publishedAt\":\"2026-09-28T13:15:00Z\",\"source\":\"example.com\",\"title\":\"Bitcoin ETFs notch best month of 2026\",\"topic_tags\":[\"BTC\"],\"url\":\"https://example.com/a\"}],\"market_tone\":{\"avg_tone\":-1.2,\"window\":\"1d\"},\"meta\":{\"dataAsOf\":\"2026-09-28T13:15:00Z\",\"degraded\":false,\"freshness\":\"fresh\",\"generatedAt\":\"2026-09-28T13:20:00Z\",\"sourceHealth\":{\"gdelt\":\"ok\",\"hackernews\":\"ok\"},\"stalenessSec\":0},\"status\":\"success\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://draconic21-x402-api.onrender.com/llms.txt",
+ "docsChecked": 1793609272199,
+ "payers30d": 13,
+ "calls30d": 15,
+ "lastCalledAt": "2026-10-29T13:19:36.927Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 263,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 263,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/draconic21-x402-api-onrender-com-v1-crypto-news",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://draconic21-x402-api.onrender.com/v1/crypto_news'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20draconic21-x402-api-onrender-com-v1-crypto-news&body=%7B%22slug%22%3A%22draconic21-x402-api-onrender-com-v1-crypto-news%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: draconic21-x402-api-onrender-com-v1-crypto-news\",\"body\":\"{\\\"slug\\\":\\\"draconic21-x402-api-onrender-com-v1-crypto-news\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=d21%20crypto_news%3A%20Crypto%20News%20(%240.001%20--%20matches%20the%20category-leading%20incumbent's%20price&seller=https%3A%2F%2Fdraconic21-x402-api.onrender.com%2Fv1%2Fcrypto_news"
+}

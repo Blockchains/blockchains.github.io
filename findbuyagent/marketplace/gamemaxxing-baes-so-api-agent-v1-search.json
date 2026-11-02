@@ -1,0 +1,80 @@
+{
+ "slug": "gamemaxxing-baes-so-api-agent-v1-search",
+ "name": "Search GAMEMAXXING's video games and gaming knowledge base for game co",
+ "seller": "gamemaxxing.baes.so",
+ "host": "gamemaxxing.baes.so",
+ "provider": "https://gamemaxxing.baes.so",
+ "description": "Search GAMEMAXXING's video games and gaming knowledge base for game concepts across game design, game business, game culture, and gaming history, then return ranked JSON hits with full content first and source URLs second.",
+ "category": "Search & web",
+ "tags": [],
+ "endpoint": "https://gamemaxxing.baes.so/api/agent/v1/search",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x702ba46435D1E55B18440100BC81EB055574875e",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "category": "game-business",
+   "limit": 5,
+   "offset": 0,
+   "query": "battle pass retention"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"apiVersion\":\"v1\",\"categoryHits\":[{\"category\":\"game-business\",\"count\":1,\"label\":\"Game Business\",\"score\":1.32}],\"hits\":[{\"category\":\"game-business\",\"categoryLabel\":\"Game Business\",\"content\":{\"body\":\"A battle pass sells a limited-time progression track and turns player time into a recurring monetization loop. The better versions make seasonal retention feel rewarding rather than purely extractive.\",\"example\":\"Fortnite normalized the modern battle pass model by tying cosmetics, quests, and season cadence into one repeatable system.\",\"oneLiner\":\"Battle passes turn engagement into recurring monetization without charging upfront.\",\"relatedTerms\":[\"Games as a Service (GaaS)\",\"Whale Economics\",\"DLC Strategy\"],\"tags\":[\"monetization\",\"live-service\",\"progression\"],\"whyItMatters\":\"Battle passes influence retention, content cadence, and revenue at the same time, which is why they sit near the center of live-service strategy.\"},\"id\":\"battle-pass-economics\",\"matchedFields\":[\"term\",\"body\"],\"score\":1.32,\"source\":{\"url\":\"https://gamemaxxing.baes.so/concept/battle-pass-economics\"},\"term\":\"Battle Pass Economics\"}],\"pageInfo\":{\"hasMore\":true,\"limit\":5,\"nextOffset\":1,\"offset\":0,\"returned\":1,\"totalHits\":2},\"query\":\"battle pass retention\",\"totalHits\":2}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609273075,
+ "payers30d": 12,
+ "calls30d": 131,
+ "lastCalledAt": "2026-11-01T22:11:44.451Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 662,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 662,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/gamemaxxing-baes-so-api-agent-v1-search",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "minifetch-com-api-v1-x402-preflight-url-check",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "cdp-agent-0-01-onrender-com"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://gamemaxxing.baes.so/api/agent/v1/search' -H 'content-type: application/json' -d '{\"category\":\"game-business\",\"limit\":5,\"offset\":0,\"query\":\"battle pass retention\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20gamemaxxing-baes-so-api-agent-v1-search&body=%7B%22slug%22%3A%22gamemaxxing-baes-so-api-agent-v1-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: gamemaxxing-baes-so-api-agent-v1-search\",\"body\":\"{\\\"slug\\\":\\\"gamemaxxing-baes-so-api-agent-v1-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Search%20GAMEMAXXING's%20video%20games%20and%20gaming%20knowledge%20base%20for%20game%20co&seller=https%3A%2F%2Fgamemaxxing.baes.so%2Fapi%2Fagent%2Fv1%2Fsearch"
+}

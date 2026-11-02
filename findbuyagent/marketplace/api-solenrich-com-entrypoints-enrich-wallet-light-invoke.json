@@ -1,0 +1,84 @@
+{
+ "slug": "api-solenrich-com-entrypoints-enrich-wallet-light-invoke",
+ "name": "SolEnrich: SOL balance, token holdings, NFT breakdown (collected vs compressed ai",
+ "seller": "SolEnrich",
+ "host": "api.solenrich.com",
+ "provider": "https://api.solenrich.com",
+ "description": "SOL balance, token holdings, NFT breakdown (collected vs compressed airdrops vs suspected spam, with a per-collection list), labels (including behavioral flags: regular_intervals, high_frequency, 24_7_active, repetitive_actions — algorithmic signals from tx timing that indicate automated activity), risk score. Fast and cheap.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "wallet-risk",
+  "wallet-profiling",
+  "solana",
+  "onchain",
+  "ai-agents"
+ ],
+ "endpoint": "https://api.solenrich.com/entrypoints/enrich-wallet-light/invoke",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x8EdE9eD2E6ACdd9B2BaFa42ff4078d3F3263607c",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "address": "vines1vzrYbzLMRdu58ou5XTby4qAqVRLmqo36NKPTg",
+   "format": "json"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"output\":{\"address\":\"vines1vzrYbzLMRdu58ou5XTby4qAqVRLmqo36NKPTg\",\"defi_positions\":[],\"first_tx_date\":\"2022-04-15T22:33:33.000Z\",\"labels\":[\"dormant\"],\"nft_collections\":[{\"collection_mint\":\"7gCKeoTNBq8BvX5KQgeMiwbkBrtuxMcUN4JRMNfizTSK\",\"compressed\":true,\"count\":1,\"name\":\"Qualified #611\",\"suspected_spam\":false}],\"nft_count\":9,\"nft_summary\":{\"airdropped\":8,\"collected\":0,\"distinct_collections\":0,\"suspected_spam\":1,\"total\":9},\"portfolio_value_usd\":4.7307,\"risk_level\":\"LOW\",\"risk_score\":0.15,\"sol_balance\":0.039869,\"token_count\":6,\"top_holdings\":[{\"balance\":29.621,\"mint\":\"FS66v5XYtJAFo14LiPz5HT93EUMAHmYipCfQhLpU4ss8\",\"symbol\":\"SMOG\",\"usd_value\":0.0015731}],\"tx_count_30d\":0},\"run_id\":\"uuid\",\"status\":\"succeeded\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1780954502/bazaar-icons/31c7c2e1c5cde08e.png",
+ "docs": "https://api.solenrich.com/llms.txt",
+ "docsChecked": 1793609276494,
+ "payers30d": 10,
+ "calls30d": 18,
+ "lastCalledAt": "2026-11-01T17:11:36.406Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 231,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 231,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-solenrich-com-entrypoints-enrich-wallet-light-invoke",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.solenrich.com/entrypoints/enrich-wallet-light/invoke' -H 'content-type: application/json' -d '{\"address\":\"vines1vzrYbzLMRdu58ou5XTby4qAqVRLmqo36NKPTg\",\"format\":\"json\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-solenrich-com-entrypoints-enrich-wallet-light-invoke&body=%7B%22slug%22%3A%22api-solenrich-com-entrypoints-enrich-wallet-light-invoke%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-solenrich-com-entrypoints-enrich-wallet-light-invoke\",\"body\":\"{\\\"slug\\\":\\\"api-solenrich-com-entrypoints-enrich-wallet-light-invoke\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SolEnrich%3A%20SOL%20balance%2C%20token%20holdings%2C%20NFT%20breakdown%20(collected%20vs%20compressed%20ai&seller=https%3A%2F%2Fapi.solenrich.com%2Fentrypoints%2Fenrich-wallet-light%2Finvoke"
+}

@@ -1,0 +1,77 @@
+{
+ "slug": "api-loyalspark-online-x402-gateway-recipient-api-vouchers",
+ "name": "List a customer's redeemed reward vouchers and voucher codes",
+ "seller": "api.loyalspark.online",
+ "host": "api.loyalspark.online",
+ "provider": "https://api.loyalspark.online",
+ "description": "List a customer's redeemed reward vouchers and voucher codes. Onchain loyalty on Base: brands launch rewards in minutes, customers earn with every purchase, AI agents automate the rest via REST and MCP. Pay-only works: the paying wallet is the caller; API key optional. Scoped to the key's wallet. Skill guides: loyalspark.online/.well-known/skills/index.md",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://api.loyalspark.online/x402-gateway/recipient-api/vouchers",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x40a8CdD6a10EC1a8cB3dFb2834675e7a2CF4ad8b",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "token_address": "0xb2000000000000000000008ce542828ec5f09bb7"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"vouchers\":[]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.loyalspark.online/llms.txt",
+ "docsChecked": 1793609267429,
+ "payers30d": 30,
+ "calls30d": 139,
+ "lastCalledAt": "2026-11-02T05:05:22.254Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 36,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 36,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-loyalspark-online-x402-gateway-recipient-api-vouchers",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details",
+  "x402-ottoai-services-defi-analytics"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.loyalspark.online/x402-gateway/recipient-api/vouchers?token_address=0xb2000000000000000000008ce542828ec5f09bb7'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-loyalspark-online-x402-gateway-recipient-api-vouchers&body=%7B%22slug%22%3A%22api-loyalspark-online-x402-gateway-recipient-api-vouchers%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-loyalspark-online-x402-gateway-recipient-api-vouchers\",\"body\":\"{\\\"slug\\\":\\\"api-loyalspark-online-x402-gateway-recipient-api-vouchers\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=List%20a%20customer's%20redeemed%20reward%20vouchers%20and%20voucher%20codes&seller=https%3A%2F%2Fapi.loyalspark.online%2Fx402-gateway%2Frecipient-api%2Fvouchers"
+}

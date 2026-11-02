@@ -1,0 +1,86 @@
+{
+ "slug": "api-anchor-x402-com-v1-roll",
+ "name": "Roll: Verifiable RNG — cryptographically-random integer(s) signed by the tre",
+ "seller": "Roll",
+ "host": "api.anchor-x402.com",
+ "provider": "https://api.anchor-x402.com",
+ "description": "Verifiable RNG — cryptographically-random integer(s) signed by the treasury key. Drop-in VRF for game studios. $0.001 USDC.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "rng",
+  "vrf",
+  "random",
+  "gaming",
+  "signed"
+ ],
+ "endpoint": "https://api.anchor-x402.com/v1/roll",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x127462e296fAc1A7F5cF33bA57bB2f0FFf5cD0B6",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "count": 1,
+   "high": 100,
+   "label": "treasure_drop_42",
+   "low": 1
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"commitment\":null,\"count\":1,\"domain\":\"anchor-x402/roll/v1\",\"input_hash\":\"f4a1c5e3b9d8a2e0c7b4f6d9e1a3c8b5f7d2e4a9c1b6e8f3d5a7c2b4e9f1d6a8\",\"label\":\"treasure_drop_42\",\"range\":[1,100],\"result\":[47],\"result_hash\":\"8a6d1f9e4b2c7a3e5f0c9b8a4d2f6e1c3b7a5f9d2e8c4b6a1f3e7d5c9b2a4f6e\",\"scheme\":\"eip191\",\"signature\":\"0x6b3e2a7c…\",\"signer\":\"0x127462e296fAc1A7F5cF33bA57bB2f0FFf5cD0B6\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1780027237/bazaar-icons/c4def16dea5cc5aa.png",
+ "docs": "https://api.anchor-x402.com/llms.txt",
+ "docsChecked": 1793609275428,
+ "payers30d": 11,
+ "calls30d": 20,
+ "lastCalledAt": "2026-11-01T22:03:25.657Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 941,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 941,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-anchor-x402-com-v1-roll",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.anchor-x402.com/v1/roll' -H 'content-type: application/json' -d '{\"count\":1,\"high\":100,\"label\":\"treasure_drop_42\",\"low\":1}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-anchor-x402-com-v1-roll&body=%7B%22slug%22%3A%22api-anchor-x402-com-v1-roll%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-anchor-x402-com-v1-roll\",\"body\":\"{\\\"slug\\\":\\\"api-anchor-x402-com-v1-roll\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Roll%3A%20Verifiable%20RNG%20%E2%80%94%20cryptographically-random%20integer(s)%20signed%20by%20the%20tre&seller=https%3A%2F%2Fapi.anchor-x402.com%2Fv1%2Froll"
+}

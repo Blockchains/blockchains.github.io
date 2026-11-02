@@ -1,0 +1,84 @@
+{
+ "slug": "api-bitrefill-com-x402-esims-search",
+ "name": "Bitrefill: Search prepaid eSIM data plans for 180+ countries and regions",
+ "seller": "Bitrefill",
+ "host": "api.bitrefill.com",
+ "provider": "https://api.bitrefill.com",
+ "description": "Search prepaid eSIM data plans for 180+ countries and regions. Pay in USDC via x402, no account.",
+ "category": "Search & web",
+ "tags": [
+  "esims",
+  "data-plans",
+  "travel",
+  "usdc",
+  "base"
+ ],
+ "endpoint": "https://api.bitrefill.com/x402/esims/search",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x480CD46E6faDe651a0437DeaddA53D5c8e7D846A",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "country": "US",
+   "q": "europe"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"next_step\":{\"body\":{\"slug\":\"<product slug from results>\"},\"url\":\"/x402/products/detail\"},\"products\":[{\"in_stock\":true,\"name\":\"Europe eSIM\",\"recipient_type\":\"none\",\"region\":\"EU\",\"slug\":\"esim-europe\"}]}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1780566420/bazaar-icons/33192fb7239597bd.png",
+ "docs": null,
+ "docsChecked": 1793609273275,
+ "payers30d": 12,
+ "calls30d": 43,
+ "lastCalledAt": "2026-11-01T23:13:55.101Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 119,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 119,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-bitrefill-com-x402-esims-search",
+ "rating": null,
+ "related": [
+  "stableenrich-dev-api-exa-contents",
+  "win-oneshotagent-com-v1-tools-web-read",
+  "search-cyberwarex-com-contents",
+  "apexfaucet-xyz-api-x402-page-markdown",
+  "sift-srv1996466-hstgr-cloud-v1-feeds",
+  "x240-jvnclk88-workers-dev-url-check"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.bitrefill.com/x402/esims/search?country=US&q=europe'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-bitrefill-com-x402-esims-search&body=%7B%22slug%22%3A%22api-bitrefill-com-x402-esims-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-bitrefill-com-x402-esims-search\",\"body\":\"{\\\"slug\\\":\\\"api-bitrefill-com-x402-esims-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Bitrefill%3A%20Search%20prepaid%20eSIM%20data%20plans%20for%20180%2B%20countries%20and%20regions&seller=https%3A%2F%2Fapi.bitrefill.com%2Fx402%2Fesims%2Fsearch"
+}

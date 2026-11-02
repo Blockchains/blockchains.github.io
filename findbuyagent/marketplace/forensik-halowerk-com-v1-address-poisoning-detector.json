@@ -1,0 +1,101 @@
+{
+ "slug": "forensik-halowerk-com-v1-address-poisoning-detector",
+ "name": "Address Poisoning Detector analyses only the evidence supplied by the",
+ "seller": "forensik.halowerk.com",
+ "host": "forensik.halowerk.com",
+ "provider": "https://forensik.halowerk.com",
+ "description": "Address Poisoning Detector analyses only the evidence supplied by the caller. It does not claim to query a chain, identify a legal status or replace an independent audit. Missing signals lower confidence and are listed explicitly; every classification includes the exact thresholds used.",
+ "category": "Security & compliance",
+ "tags": [],
+ "endpoint": "https://forensik.halowerk.com/v1/address-poisoning-detector",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x2880EdfFF13100677Bf97A3CBdF3Bc34771C4E5E",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "context": {
+    "environment": "production"
+   },
+   "evidence": [
+    {
+     "metric": "lookalike_transfers",
+     "source": "caller-observation",
+     "timestamp": "2026-09-03T10:00:00Z",
+     "value": 1
+    },
+    {
+     "metric": "prefix_suffix_match_chars",
+     "source": "caller-observation",
+     "timestamp": "2026-09-03T10:00:00Z",
+     "value": 1
+    },
+    {
+     "metric": "zero_value_bait_count",
+     "source": "caller-observation",
+     "timestamp": "2026-09-03T10:00:00Z",
+     "value": 1
+    }
+   ],
+   "strict": true,
+   "subject": "address-poisoning-detector-sample"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"classification\":\"low\",\"confidence\":100,\"engine\":\"detector\",\"generated_at\":\"2026-10-23T00:07:35.704Z\",\"recommendation\":\"No supplied metric crossed a warning thr\",\"risk_score\":15,\"scope\":\"caller_supplied_evidence_only\",\"service\":\"Address Poisoning Detector\",\"service_number\":93,\"subject\":\"address-poisoning-detector-sample\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://forensik.halowerk.com/llms.txt",
+ "docsChecked": 1793609280554,
+ "payers30d": 9,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T07:05:49.869Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 129,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 129,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/forensik-halowerk-com-v1-address-poisoning-detector",
+ "rating": null,
+ "related": [
+  "modelmarket-dev-x402-histor-check",
+  "quartermaster-surewhynot-app-v1-dns",
+  "tienda-textokit-store-api-cuit-ar",
+  "netintel-dev-email-auth",
+  "toolrail-dev-vat-rates",
+  "agent-guild-5d5r-onrender-com-flags"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://forensik.halowerk.com/v1/address-poisoning-detector' -H 'content-type: application/json' -d '{\"context\":{\"environment\":\"production\"},\"evidence\":[{\"metric\":\"lookalike_transfers\",\"source\":\"caller-observation\",\"timestamp\":\"2026-09-03T10:00:00Z\",\"value\":1},{\"metric\":\"prefix_suffix_match_chars\",\"source\":\"caller-observation\",\"timestamp\":\"2026-09-03T10:00:00Z\",\"value\":1},{\"metric\":\"zero_value_bait_count\",\"source\":\"caller-observation\",\"timestamp\":\"2026-09-03T10:00:00Z\",\"value\":1}],\"strict\":true,\"subject\":\"address-poisoning-detector-sample\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20forensik-halowerk-com-v1-address-poisoning-detector&body=%7B%22slug%22%3A%22forensik-halowerk-com-v1-address-poisoning-detector%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: forensik-halowerk-com-v1-address-poisoning-detector\",\"body\":\"{\\\"slug\\\":\\\"forensik-halowerk-com-v1-address-poisoning-detector\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Address%20Poisoning%20Detector%20analyses%20only%20the%20evidence%20supplied%20by%20the&seller=https%3A%2F%2Fforensik.halowerk.com%2Fv1%2Faddress-poisoning-detector"
+}

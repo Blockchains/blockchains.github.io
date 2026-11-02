@@ -1,0 +1,83 @@
+{
+ "slug": "api-datos-uy-ar-vercel-app-uy-ui",
+ "name": "api-datos-uy-ar: Unidad Indexada (BCU) para una fecha",
+ "seller": "api-datos-uy-ar",
+ "host": "api-datos-uy-ar.vercel.app",
+ "provider": "https://api-datos-uy-ar.vercel.app",
+ "description": "Unidad Indexada (BCU) para una fecha. Sin `fecha` devuelve la de hoy.",
+ "category": "Utilities",
+ "tags": [
+  "uruguay",
+  "argentina",
+  "finanzas",
+  "bcu",
+  "bcra"
+ ],
+ "endpoint": "https://api-datos-uy-ar.vercel.app/uy/ui",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xc7E3156fA4C44709f0963A5cb886e4c84Bc182E0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "fecha": "2026-10-06"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"fecha\":\"2026-10-06\",\"moneda\":\"UYU\",\"unidad\":\"UI\",\"valor\":6.6549}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api-datos-uy-ar.vercel.app/llms.txt",
+ "docsChecked": 1793609278341,
+ "payers30d": 10,
+ "calls30d": 11,
+ "lastCalledAt": "2026-11-01T07:19:33.001Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 607,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 607,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-datos-uy-ar-vercel-app-uy-ui",
+ "rating": null,
+ "related": [
+  "br-intelligence-brverify-api-workers-dev-v1-bank",
+  "kaisha-api-hp-vladic-workers-dev-calendar-business-days",
+  "timecode-openverbs-com-v1-convert",
+  "cryptofeed402-site-funding-extreme",
+  "coord-taifoon-dev-v1-x402-class-market-price",
+  "scvd-store-api-buy-spot-check"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api-datos-uy-ar.vercel.app/uy/ui?fecha=2026-10-06'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-datos-uy-ar-vercel-app-uy-ui&body=%7B%22slug%22%3A%22api-datos-uy-ar-vercel-app-uy-ui%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-datos-uy-ar-vercel-app-uy-ui\",\"body\":\"{\\\"slug\\\":\\\"api-datos-uy-ar-vercel-app-uy-ui\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=api-datos-uy-ar%3A%20Unidad%20Indexada%20(BCU)%20para%20una%20fecha&seller=https%3A%2F%2Fapi-datos-uy-ar.vercel.app%2Fuy%2Fui"
+}

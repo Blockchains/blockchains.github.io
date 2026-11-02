@@ -1,0 +1,83 @@
+{
+ "slug": "netintel-dev-web-extract",
+ "name": "NetIntel: Extract web content from any page or PDF as clean Markdown — web page",
+ "seller": "NetIntel",
+ "host": "netintel.dev",
+ "provider": "https://netintel.dev",
+ "description": "Extract web content from any page or PDF as clean Markdown — web page text, HTML to Markdown for any URL: strips scripts, nav, ads, and boilerplate while preserving headings, links, lists, tables, code blocks, and blockquotes; extracts the text layer from PDFs. Returns Markdown body, title, word count, and a quality grade. Web reader for article and main content. For JS-rendered or bot-walled pages a plain fetch can't read, use /exa/contents.",
+ "category": "Search & web",
+ "tags": [
+  "web content",
+  "retrieve url content",
+  "read webpage",
+  "html to markdown",
+  "web reader"
+ ],
+ "endpoint": "https://netintel.dev/web/extract",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.003,
+ "amount": "3000",
+ "payTo": "0xdaDc335482AD545296Fd7b28518A251fFCbEb9Df",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "url": "https://www.sitemaps.org/protocol.html"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"char_count\":21619,\"content_type\":\"article\",\"final_url\":\"https://www.sitemaps.org/protocol.html\",\"findings\":[],\"grade\":\"A\",\"markdown\":\"## Sitemaps XML format\\n\\nThis document describes the XML schema for the Sitemap protocol...\",\"output_bytes\":21619,\"score\":100,\"status_code\":200,\"title\":\"sitemaps.org - Protocol\",\"truncated\":false,\"url\":\"https://www.sitemaps.org/protocol.html\",\"word_count\":2707}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1784214098/bazaar-icons/7d2bf437631b2e4e.png",
+ "docs": "https://netintel.dev/llms.txt",
+ "docsChecked": 1793609272515,
+ "payers30d": 12,
+ "calls30d": 103,
+ "lastCalledAt": "2026-11-02T04:31:28.926Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 232,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 232,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/netintel-dev-web-extract",
+ "rating": null,
+ "related": [
+  "blockrun-ai-api-v1-exa-contents",
+  "search-cyberwarex-com-search",
+  "agent-tools-production-e6aa-up-railway-app-v1-extract",
+  "api-agentstools-dev-search-news",
+  "agentreader-dev-dns",
+  "softbot-reader-mainnet-softbot-workers-dev-v1-read"
+ ],
+ "example": {
+  "curl": "curl -i 'https://netintel.dev/web/extract?url=https%3A%2F%2Fwww.sitemaps.org%2Fprotocol.html'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20netintel-dev-web-extract&body=%7B%22slug%22%3A%22netintel-dev-web-extract%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: netintel-dev-web-extract\",\"body\":\"{\\\"slug\\\":\\\"netintel-dev-web-extract\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=NetIntel%3A%20Extract%20web%20content%20from%20any%20page%20or%20PDF%20as%20clean%20Markdown%20%E2%80%94%20web%20page&seller=https%3A%2F%2Fnetintel.dev%2Fweb%2Fextract"
+}

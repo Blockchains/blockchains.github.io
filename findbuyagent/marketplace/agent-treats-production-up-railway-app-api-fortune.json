@@ -1,0 +1,75 @@
+{
+ "slug": "agent-treats-production-up-railway-app-api-fortune",
+ "name": "Fortune cookie with unique fortune and lucky numbers for AI agents",
+ "seller": "agent-treats-production.up.railway.app",
+ "host": "agent-treats-production.up.railway.app",
+ "provider": "https://agent-treats-production.up.railway.app",
+ "description": "Fortune cookie with unique fortune and lucky numbers for AI agents.",
+ "category": "AI & LLM",
+ "tags": [],
+ "endpoint": "https://agent-treats-production.up.railway.app/api/fortune",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xBD65c2d2aC9D3df9CE77e5e2579B5b38eFEe36f0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"fortune\":\"example_fortune\",\"lucky_numbers\":[\"item1\"],\"wisdom_level\":\"example_wisdom_level\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://agent-treats-production.up.railway.app/llms.txt",
+ "docsChecked": 1793609280492,
+ "payers30d": 9,
+ "calls30d": 15,
+ "lastCalledAt": "2026-10-31T18:43:26.796Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 173,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 173,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agent-treats-production-up-railway-app-api-fortune",
+ "rating": null,
+ "related": [
+  "jev-x402-vercel-app-jev",
+  "contextslim-friczero-com-fetch",
+  "gateway-spraay-app-bittensor-v1-models",
+  "767-2676-com-v2-receipt",
+  "golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions",
+  "www-amnt-io-api-agent-amnt-bitcoin-price"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agent-treats-production.up.railway.app/api/fortune'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agent-treats-production-up-railway-app-api-fortune&body=%7B%22slug%22%3A%22agent-treats-production-up-railway-app-api-fortune%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agent-treats-production-up-railway-app-api-fortune\",\"body\":\"{\\\"slug\\\":\\\"agent-treats-production-up-railway-app-api-fortune\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Fortune%20cookie%20with%20unique%20fortune%20and%20lucky%20numbers%20for%20AI%20agents&seller=https%3A%2F%2Fagent-treats-production.up.railway.app%2Fapi%2Ffortune"
+}

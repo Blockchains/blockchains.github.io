@@ -1,0 +1,80 @@
+{
+ "slug": "agent-web-tools-agent-web-tools-workers-dev-v1-check",
+ "name": "Agent Web Tools: Check if a URL is up: status, latency, redirects, title",
+ "seller": "Agent Web Tools",
+ "host": "agent-web-tools.agent-web-tools.workers.dev",
+ "provider": "https://agent-web-tools.agent-web-tools.workers.dev",
+ "description": "Check if a URL is up: status, latency, redirects, title.",
+ "category": "Search & web",
+ "tags": [
+  "web",
+  "uptime"
+ ],
+ "endpoint": "https://agent-web-tools.agent-web-tools.workers.dev/v1/check",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xF22b154E0858c97c42CC4a1151e26Ea1797fa6C3",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "url": "https://example.com"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"checkedAt\":\"2026-10-14T00:00:00.000Z\",\"contentType\":\"text/html\",\"finalUrl\":\"https://example.com/\",\"https\":true,\"latencyMs\":120,\"redirects\":[],\"server\":\"cloudflare\",\"status\":200,\"title\":\"Example Domain\",\"up\":true,\"url\":\"https://example.com\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://agent-web-tools.agent-web-tools.workers.dev/.well-known/x402",
+ "docsChecked": 1793609271185,
+ "payers30d": 13,
+ "calls30d": 74,
+ "lastCalledAt": "2026-11-01T22:11:58.013Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 59,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 59,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agent-web-tools-agent-web-tools-workers-dev-v1-check",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "minifetch-com-api-v1-x402-preflight-url-check",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "cdp-agent-0-01-onrender-com"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agent-web-tools.agent-web-tools.workers.dev/v1/check?url=https%3A%2F%2Fexample.com'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agent-web-tools-agent-web-tools-workers-dev-v1-check&body=%7B%22slug%22%3A%22agent-web-tools-agent-web-tools-workers-dev-v1-check%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agent-web-tools-agent-web-tools-workers-dev-v1-check\",\"body\":\"{\\\"slug\\\":\\\"agent-web-tools-agent-web-tools-workers-dev-v1-check\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent%20Web%20Tools%3A%20Check%20if%20a%20URL%20is%20up%3A%20status%2C%20latency%2C%20redirects%2C%20title&seller=https%3A%2F%2Fagent-web-tools.agent-web-tools.workers.dev%2Fv1%2Fcheck"
+}

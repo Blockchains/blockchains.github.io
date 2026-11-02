@@ -1,0 +1,83 @@
+{
+ "slug": "apexfaucet-xyz-api-x402-page-markdown",
+ "name": "HTML to Markdown: URL to Markdow: HTML to Markdown: any web page, JavaScript rendered, as clean Markdown",
+ "seller": "HTML to Markdown: URL to Markdow",
+ "host": "apexfaucet.xyz",
+ "provider": "https://apexfaucet.xyz",
+ "description": "HTML to Markdown: any web page, JavaScript rendered, as clean Markdown for LLMs. A web page as clean Markdown for an LLM: pass ?url= and the page is rendered in a real headless Chrome (JavaScript runs), then its main content comes back with headings, lists, links, code blocks, quotes and tables kept as Markdown, and the menus, header, footer and forms left out. Bot walls and empty renders are refused before any charge. Paid in USDC on Base.",
+ "category": "Search & web",
+ "tags": [
+  "html to markdown",
+  "url to markdown",
+  "markdown",
+  "scraping",
+  "llm context"
+ ],
+ "endpoint": "https://apexfaucet.xyz/api/x402/page-markdown",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xd334ab5151c624cada654854e2879903dc4217ed",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "url": "https://docs.arc.io/"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"characters\":1533,\"finalUrl\":\"https://docs.arc.io/\",\"httpStatus\":200,\"markdown\":\"# Arc developer documentation\\n\\nEverything you need to build onchain finance with stablecoins: start fast, scale reliably…\",\"title\":\"Welcome to Arc docs - Arc Docs\",\"truncated\":false,\"url\":\"https://docs.arc.io/\"},\"ok\":true,\"paid\":0.002}",
+ "outputSchema": "{\"properties\":{\"data\":{\"type\":\"object\"},\"ok\":{\"type\":\"boolean\"},\"paid\":{\"type\":\"number\"}},\"type\":\"object\"}",
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791909159/bazaar-icons/f4adc3a60c4cd07b.png",
+ "docs": "https://apexfaucet.xyz/llms.txt",
+ "docsChecked": 1793609271178,
+ "payers30d": 13,
+ "calls30d": 39,
+ "lastCalledAt": "2026-11-01T10:13:40.16Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 5168,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 5168,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/apexfaucet-xyz-api-x402-page-markdown",
+ "rating": null,
+ "related": [
+  "api-bitrefill-com-x402-gift-cards-search",
+  "stableenrich-dev-api-exa-contents",
+  "win-oneshotagent-com-v1-tools-web-read",
+  "search-cyberwarex-com-contents",
+  "sift-srv1996466-hstgr-cloud-v1-feeds",
+  "x240-jvnclk88-workers-dev-url-check"
+ ],
+ "example": {
+  "curl": "curl -i 'https://apexfaucet.xyz/api/x402/page-markdown?url=https%3A%2F%2Fdocs.arc.io%2F'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20apexfaucet-xyz-api-x402-page-markdown&body=%7B%22slug%22%3A%22apexfaucet-xyz-api-x402-page-markdown%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: apexfaucet-xyz-api-x402-page-markdown\",\"body\":\"{\\\"slug\\\":\\\"apexfaucet-xyz-api-x402-page-markdown\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=HTML%20to%20Markdown%3A%20URL%20to%20Markdow%3A%20HTML%20to%20Markdown%3A%20any%20web%20page%2C%20JavaScript%20rendered%2C%20as%20clean%20Markdown&seller=https%3A%2F%2Fapexfaucet.xyz%2Fapi%2Fx402%2Fpage-markdown"
+}

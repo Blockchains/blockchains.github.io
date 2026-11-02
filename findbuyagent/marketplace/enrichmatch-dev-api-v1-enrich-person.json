@@ -1,0 +1,79 @@
+{
+ "slug": "enrichmatch-dev-api-v1-enrich-person",
+ "name": "Apollo.io Verified B2B Person Enrichment & Work Email Finder ($0.03 US",
+ "seller": "enrichmatch.dev",
+ "host": "enrichmatch.dev",
+ "provider": "https://enrichmatch.dev",
+ "description": "Apollo.io Verified B2B Person Enrichment & Work Email Finder ($0.03 USDC on Match — Free on Miss)",
+ "category": "Data & analytics",
+ "tags": [],
+ "endpoint": "https://enrichmatch.dev/api/v1/enrich/person",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.03,
+ "amount": "30000",
+ "payTo": "0x7C38096030c9CF41Ec551dAcDFC1aBaA60590AbC",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "domain": "instacart.com",
+   "first_name": "Fidji",
+   "last_name": "Simo"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"latency_ms\":420,\"matched\":true,\"payment_settled\":true,\"person\":{\"apollo_id\":\"64a1b2c3d4e5f60001234567\",\"departments\":[\"c_suite\"],\"email\":\"fidji@instacart.com\",\"email_status\":\"verified\",\"employment_history\":[{\"current\":true,\"end_date\":\"present\",\"organization_name\":\"Instacart\",\"start_date\":\"2021-08-01\",\"title\":\"CEO & Chair\"}],\"full_name\":\"Fidji Simo\",\"linkedin_url\":\"https://www.linkedin.com/in/fidjisimo\",\"location\":{\"city\":\"San Francisco\",\"country\":\"United States\",\"state\":\"California\"},\"organization\":{\"estimated_num_employees\":3000,\"founded_year\":2012,\"id\":\"5f1a2b3c4d5e6f0001112222\",\"industry\":\"information technology & services\",\"linkedin_url\":\"https://www.linkedin.com/company/instacart\",\"name\":\"Instacart\",\"primary_domain\":\"instacart.com\",\"website_url\":\"https://www.instacart.com\"},\"seniority\":\"c_suite\",\"title\":\"CEO & Chair\"},\"source\":\"apollo_live\",\"timestamp\":\"2026-10-17T23:00:39.000Z\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://enrichmatch.dev/llms.txt",
+ "docsChecked": 1793609270859,
+ "payers30d": 14,
+ "calls30d": 18,
+ "lastCalledAt": "2026-11-01T10:06:28.862Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 517,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 517,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/enrichmatch-dev-api-v1-enrich-person",
+ "rating": null,
+ "related": [
+  "api-mekler-ai-v1-finance-companies-retrieve-annual-facts",
+  "ip402-xyz-v1-geo",
+  "api-polyform-org-v1-threat-scanners",
+  "insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard",
+  "fuelscout-scalpstream-com-fuel",
+  "cpi-report-us-underscoredone-com-cpi"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://enrichmatch.dev/api/v1/enrich/person' -H 'content-type: application/json' -d '{\"domain\":\"instacart.com\",\"first_name\":\"Fidji\",\"last_name\":\"Simo\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20enrichmatch-dev-api-v1-enrich-person&body=%7B%22slug%22%3A%22enrichmatch-dev-api-v1-enrich-person%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: enrichmatch-dev-api-v1-enrich-person\",\"body\":\"{\\\"slug\\\":\\\"enrichmatch-dev-api-v1-enrich-person\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Apollo.io%20Verified%20B2B%20Person%20Enrichment%20%26%20Work%20Email%20Finder%20(%240.03%20US&seller=https%3A%2F%2Fenrichmatch.dev%2Fapi%2Fv1%2Fenrich%2Fperson"
+}

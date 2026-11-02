@@ -1,0 +1,83 @@
+{
+ "slug": "tanod-dev-v1-chain-block-number",
+ "name": "Tanod chainpeek: chainpeek (Tanod) latest block number, timestamp and age in seconds of",
+ "seller": "Tanod chainpeek",
+ "host": "tanod.dev",
+ "provider": "https://tanod.dev",
+ "description": "chainpeek (Tanod) latest block number, timestamp and age in seconds of Ethereum, Base or Robinhood Chain. Use when an agent needs the latest block number of Ethereum, Base or Robinhood Chain, with its timestamp and age in seconds.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "chainpeek",
+  "chain",
+  "block",
+  "number",
+  "ens"
+ ],
+ "endpoint": "https://tanod.dev/v1/chain/block-number",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x593857A4a4F619543ea12394137C3004ce841720",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "chain": "base"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"age_seconds\":1,\"block_number\":52396570,\"block_time\":\"2026-10-09T21:48:07Z\",\"block_timestamp\":1791582487,\"chain\":\"base\",\"note\":\"RPC reads are cached up to 30 s\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791364949/bazaar-icons/d8143c9bc952f5cd.png",
+ "docs": "https://tanod.dev/llms.txt",
+ "docsChecked": 1793609281534,
+ "payers30d": 9,
+ "calls30d": 12,
+ "lastCalledAt": "2026-11-01T07:13:52.739Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 890,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 890,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/tanod-dev-v1-chain-block-number",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://tanod.dev/v1/chain/block-number' -H 'content-type: application/json' -d '{\"chain\":\"base\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20tanod-dev-v1-chain-block-number&body=%7B%22slug%22%3A%22tanod-dev-v1-chain-block-number%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: tanod-dev-v1-chain-block-number\",\"body\":\"{\\\"slug\\\":\\\"tanod-dev-v1-chain-block-number\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Tanod%20chainpeek%3A%20chainpeek%20(Tanod)%20latest%20block%20number%2C%20timestamp%20and%20age%20in%20seconds%20of&seller=https%3A%2F%2Ftanod.dev%2Fv1%2Fchain%2Fblock-number"
+}

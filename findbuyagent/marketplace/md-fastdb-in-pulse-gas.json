@@ -1,0 +1,80 @@
+{
+ "slug": "md-fastdb-in-pulse-gas",
+ "name": "Live gas on Ethereum, Base, Arbitrum, Optimism, Polygon — base fee, pr",
+ "seller": "md.fastdb.in",
+ "host": "md.fastdb.in",
+ "provider": "https://md.fastdb.in",
+ "description": "Live gas on Ethereum, Base, Arbitrum, Optimism, Polygon — base fee, priority fee tiers, and USD transfer cost, straight from chain RPC.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://md.fastdb.in/pulse/gas",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x072F3a2bD93bB75b1Eb84a9E45D17a4F90a6D801",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "chains": [
+    "base",
+    "ethereum"
+   ]
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"at\":\"2026-07-17T15:00:00.000Z\",\"chains\":[\"base\"],\"gas\":{\"base\":{\"baseFeeGwei\":0.005,\"blockNumber\":48755195,\"chain\":\"base\",\"gasPriceGwei\":0.006,\"nativeSymbol\":\"ETH\",\"nativeUsd\":1818.32,\"priorityFee\":{\"fastGwei\":0.019,\"slowGwei\":0.0001,\"standardGwei\":0.0011},\"transferCostUsd\":0.0002291}}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://md.fastdb.in/.well-known/x402",
+ "docsChecked": 1793609276659,
+ "payers30d": 10,
+ "calls30d": 18,
+ "lastCalledAt": "2026-11-01T07:01:20.912Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 99,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 99,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/md-fastdb-in-pulse-gas",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://md.fastdb.in/pulse/gas' -H 'content-type: application/json' -d '{\"chains\":[\"base\",\"ethereum\"]}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20md-fastdb-in-pulse-gas&body=%7B%22slug%22%3A%22md-fastdb-in-pulse-gas%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: md-fastdb-in-pulse-gas\",\"body\":\"{\\\"slug\\\":\\\"md-fastdb-in-pulse-gas\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Live%20gas%20on%20Ethereum%2C%20Base%2C%20Arbitrum%2C%20Optimism%2C%20Polygon%20%E2%80%94%20base%20fee%2C%20pr&seller=https%3A%2F%2Fmd.fastdb.in%2Fpulse%2Fgas"
+}

@@ -1,0 +1,79 @@
+{
+ "slug": "api-x402node-dev-chain-honeypot",
+ "name": "Heuristic honeypot and risk check for an ERC20 token via on-chain eth_",
+ "seller": "api.x402node.dev",
+ "host": "api.x402node.dev",
+ "provider": "https://api.x402node.dev",
+ "description": "Heuristic honeypot and risk check for an ERC20 token via on-chain eth_call - detects active owner control and transfer restrictions that can trap buyers, on Ethereum and Base. honeypot check, honeypot detector, can i sell token, token scam check, rug detection, transfer restriction Accepts payment on Base or Solana — either network works.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://api.x402node.dev/chain/honeypot",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x4466d4A84b7c49a6A094ec6eef4a0712D6dd125e",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "address": "string",
+   "chain": "string",
+   "token": "string"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.x402node.dev/llms.txt",
+ "docsChecked": 1793609269048,
+ "payers30d": 23,
+ "calls30d": 115,
+ "lastCalledAt": "2026-11-02T04:32:48.311Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 746,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 746,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-x402node-dev-chain-honeypot",
+ "rating": null,
+ "related": [
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets",
+  "api-nansen-ai-api-v1-tgm-token-information",
+  "api-gondola-ai-com-v1-chat-completions",
+  "api-gondola-ai-com-v1-images-generations"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.x402node.dev/chain/honeypot?address=string&chain=string&token=string'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-x402node-dev-chain-honeypot&body=%7B%22slug%22%3A%22api-x402node-dev-chain-honeypot%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-x402node-dev-chain-honeypot\",\"body\":\"{\\\"slug\\\":\\\"api-x402node-dev-chain-honeypot\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Heuristic%20honeypot%20and%20risk%20check%20for%20an%20ERC20%20token%20via%20on-chain%20eth_&seller=https%3A%2F%2Fapi.x402node.dev%2Fchain%2Fhoneypot"
+}

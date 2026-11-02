@@ -1,0 +1,75 @@
+{
+ "slug": "x402-forgemesh-io-agent-fortune",
+ "name": "Agent fortune API: a fortune cookie written specifically for AI agents",
+ "seller": "x402.forgemesh.io",
+ "host": "x402.forgemesh.io",
+ "provider": "https://x402.forgemesh.io",
+ "description": "Agent fortune API: a fortune cookie written specifically for AI agents ('A cached response is worth two upstream calls'), plus a lucky number and lucky HTTP status code. The cheapest, most delightful way to make your first x402 payment and verify your wallet stack works end to end. New fortune every call.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://x402.forgemesh.io/agent-fortune",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x850363a27F0aC6fEb9C7a3eC4C1d295262dF9432",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"fortune\":\"He who retries with exponential backoff prospers.\",\"lucky_http_status\":402,\"lucky_number\":42}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402.forgemesh.io/llms.txt",
+ "docsChecked": 1793609278682,
+ "payers30d": 9,
+ "calls30d": 34,
+ "lastCalledAt": "2026-10-31T23:27:22.975Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 81,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 81,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-forgemesh-io-agent-fortune",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-contract-address",
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "hyperliquid-predict-use-x402atlas-com-outcomes",
+  "notary-forgemesh-io-api-notarize",
+  "coingecko-use-x402atlas-com-price",
+  "scry-solanahub-de-x402-network-priority-fees-live"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://x402.forgemesh.io/agent-fortune' -H 'content-type: application/json' -d '{}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-forgemesh-io-agent-fortune&body=%7B%22slug%22%3A%22x402-forgemesh-io-agent-fortune%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-forgemesh-io-agent-fortune\",\"body\":\"{\\\"slug\\\":\\\"x402-forgemesh-io-agent-fortune\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent%20fortune%20API%3A%20a%20fortune%20cookie%20written%20specifically%20for%20AI%20agents&seller=https%3A%2F%2Fx402.forgemesh.io%2Fagent-fortune"
+}

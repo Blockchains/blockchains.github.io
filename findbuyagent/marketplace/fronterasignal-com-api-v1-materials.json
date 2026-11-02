@@ -1,0 +1,83 @@
+{
+ "slug": "fronterasignal-com-api-v1-materials",
+ "name": "Frontera Signal: Use to check what common building materials cost on the shelf in the R",
+ "seller": "Frontera Signal",
+ "host": "fronterasignal.com",
+ "provider": "https://fronterasignal.com",
+ "description": "Use to check what common building materials cost on the shelf in the Rio Grande Valley (McAllen, Mission, Edinburg): 2x4 and 2x6 studs, OSB, drywall, concrete mix, CMU block, rebar, shingles, underlayment, housewrap, insulation, paint, doors, deck screws. Dated prices at big box stores and a local yard, checked twice a week, for estimating or checking a bid. Not a quote. Example: \"What does a sheet of 7/16 OSB cost in McAllen this week?\"",
+ "category": "Utilities",
+ "tags": [
+  "construction",
+  "real-estate",
+  "texas",
+  "rio-grande-valley",
+  "building-permits"
+ ],
+ "endpoint": "https://fronterasignal.com/api/v1/materials",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x6B7a56B58c89631aB60E7153b6170677A1Af00be",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "item": "osb"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"cadence\":\"twice a week\",\"count\":5,\"data_through\":\"2026-10-29\",\"dataset\":\"materials\",\"disclaimer\":\"Every value carries as_of, age_days, cadence and stale (weekly measures go stale after 14 days, monthly measures after …\",\"first_observed\":\"2026-09-28\",\"latest\":[{\"age_days\":3,\"city\":null,\"item\":\"OSB 7/16 in, 4x8 sheet\",\"item_key\":\"osb_7_16_4x8\",\"observed\":\"2026-10-29\",\"outlet_id\":\"LY-91a314\",\"price_usd\":14.51,\"product\":\"OSB 7/16 4x8\",\"source\":\"Frontera Signal\",\"store\":\"big box\",\"unit\":\"sheet\"}],\"note\":\"store is big box or local yard; outlet_id tells two stores of the same kind apart. city is null where the check did not…\",\"publisher\":\"Frontera Signal\",\"query\":{\"item\":\"osb\"},\"region\":\"Rio Grande Valley, Texas\",\"rows\":[{\"city\":null,\"item\":\"OSB 7/16 in, 4x8 sheet\",\"item_key\":\"osb_7_16_4x8\",\"observed\":\"2026-10-29\",\"outlet_id\":\"LY-91a314\",\"price_usd\":14.51,\"product\":\"OSB 7/16 4x8\",\"source\":\"Frontera Signal\",\"store\":\"big box\",\"unit\":\"sheet\"}],\"rule\":\"Only single-unit shelf prices. Volume-only and volume-tier prices are counted as misses, never as prices.\",\"source\":\"Frontera Signal\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://fronterasignal.com/llms.txt",
+ "docsChecked": 1793609277849,
+ "payers30d": 10,
+ "calls30d": 11,
+ "lastCalledAt": "2026-11-02T04:53:55.602Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 363,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 363,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/fronterasignal-com-api-v1-materials",
+ "rating": null,
+ "related": [
+  "api-oblique-markets-api-v1-paid-time",
+  "api-myceliasignal-com-oracle-price-btc-usd",
+  "finance-api-kdlcfa-workers-dev-us30y-yield",
+  "randomfactsx402-vercel-app-api-random-fact",
+  "api-gitbeacon-dev-v1-repos",
+  "fractalai-net-co-api-x402-midas-attest"
+ ],
+ "example": {
+  "curl": "curl -i 'https://fronterasignal.com/api/v1/materials?item=osb'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20fronterasignal-com-api-v1-materials&body=%7B%22slug%22%3A%22fronterasignal-com-api-v1-materials%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: fronterasignal-com-api-v1-materials\",\"body\":\"{\\\"slug\\\":\\\"fronterasignal-com-api-v1-materials\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Frontera%20Signal%3A%20Use%20to%20check%20what%20common%20building%20materials%20cost%20on%20the%20shelf%20in%20the%20R&seller=https%3A%2F%2Ffronterasignal.com%2Fapi%2Fv1%2Fmaterials"
+}

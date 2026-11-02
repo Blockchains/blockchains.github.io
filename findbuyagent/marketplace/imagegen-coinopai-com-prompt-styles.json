@@ -1,0 +1,75 @@
+{
+ "slug": "imagegen-coinopai-com-prompt-styles",
+ "name": "Prompt Styles — a curated FLUX prompt-engineering cheat sheet: 12 prov",
+ "seller": "imagegen.coinopai.com",
+ "host": "imagegen.coinopai.com",
+ "provider": "https://imagegen.coinopai.com",
+ "description": "Prompt Styles — a curated FLUX prompt-engineering cheat sheet: 12 proven style recipes, an aspect-ratio guide, and a tier picker for the paid /generate endpoints. Static JSON, answers in milliseconds. Spend $0.005 here before spending $0.25-$0.75 on a generation.",
+ "category": "AI & LLM",
+ "tags": [],
+ "endpoint": "https://imagegen.coinopai.com/prompt-styles",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x4C1a4FcE51Fea51f128a01ccE8BecB106d391155",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 1800,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":12,\"styles\":[{\"name\":\"editorial-tech\",\"template\":\"minimalist editorial tech illustration of {subject}, dark navy background, glowing blue accent, cinematic lighting, no text\"}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://imagegen.coinopai.com/llms.txt",
+ "docsChecked": 1793609269872,
+ "payers30d": 14,
+ "calls30d": 35,
+ "lastCalledAt": "2026-11-02T04:31:54.235Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 78,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 78,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/imagegen-coinopai-com-prompt-styles",
+ "rating": null,
+ "related": [
+  "wiki-use-x402atlas-com-summary",
+  "x402-forgemesh-io-the-daily-402",
+  "agentshield-live-iban",
+  "trust402-vercel-app-api-trust-check-x402",
+  "ads-forgemesh-io-api-network-stats",
+  "agentshield-live-holiday"
+ ],
+ "example": {
+  "curl": "curl -i 'https://imagegen.coinopai.com/prompt-styles'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20imagegen-coinopai-com-prompt-styles&body=%7B%22slug%22%3A%22imagegen-coinopai-com-prompt-styles%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: imagegen-coinopai-com-prompt-styles\",\"body\":\"{\\\"slug\\\":\\\"imagegen-coinopai-com-prompt-styles\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Prompt%20Styles%20%E2%80%94%20a%20curated%20FLUX%20prompt-engineering%20cheat%20sheet%3A%2012%20prov&seller=https%3A%2F%2Fimagegen.coinopai.com%2Fprompt-styles"
+}

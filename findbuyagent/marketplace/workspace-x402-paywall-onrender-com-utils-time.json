@@ -1,0 +1,79 @@
+{
+ "slug": "workspace-x402-paywall-onrender-com-utils-time",
+ "name": "Spread Paywall API: Returns a JSON object with the current Unix timestamp integer and ISO",
+ "seller": "Spread Paywall API",
+ "host": "workspace-x402-paywall.onrender.com",
+ "provider": "https://workspace-x402-paywall.onrender.com",
+ "description": "Returns a JSON object with the current Unix timestamp integer and ISO 8601 time string",
+ "category": "Utilities",
+ "tags": [
+  "utilities",
+  "tools",
+  "developer"
+ ],
+ "endpoint": "https://workspace-x402-paywall.onrender.com/utils/time",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xD7CDd563e8F6A249B076A702b7e2C233CCF3481d",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": "{\"result\":\"example-value\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://workspace-x402-paywall.onrender.com/llms.txt",
+ "docsChecked": 1793609275052,
+ "payers30d": 11,
+ "calls30d": 19,
+ "lastCalledAt": "2026-11-01T07:02:59.547Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 121,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 121,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/workspace-x402-paywall-onrender-com-utils-time",
+ "rating": null,
+ "related": [
+  "scvd-store-api-buy-spot-check",
+  "api-aurenic-org-treasury-debt",
+  "api-printmoneylab-com-api-v1-fx-rate",
+  "headlessoracle-com-v5-status-x402",
+  "fanfare-run-nba-teams",
+  "agent-treats-production-up-railway-app-api-fact"
+ ],
+ "example": {
+  "curl": "curl -i 'https://workspace-x402-paywall.onrender.com/utils/time'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20workspace-x402-paywall-onrender-com-utils-time&body=%7B%22slug%22%3A%22workspace-x402-paywall-onrender-com-utils-time%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: workspace-x402-paywall-onrender-com-utils-time\",\"body\":\"{\\\"slug\\\":\\\"workspace-x402-paywall-onrender-com-utils-time\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Spread%20Paywall%20API%3A%20Returns%20a%20JSON%20object%20with%20the%20current%20Unix%20timestamp%20integer%20and%20ISO&seller=https%3A%2F%2Fworkspace-x402-paywall.onrender.com%2Futils%2Ftime"
+}

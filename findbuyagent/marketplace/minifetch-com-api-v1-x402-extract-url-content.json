@@ -1,0 +1,83 @@
+{
+ "slug": "minifetch-com-api-v1-x402-extract-url-content",
+ "name": "Minifetch Technical SEO API: Extracts live, clean markdown from a page after nav, ads, and scripts",
+ "seller": "Minifetch Technical SEO API",
+ "host": "minifetch.com",
+ "provider": "https://minifetch.com",
+ "description": "Extracts live, clean markdown from a page after nav, ads, and scripts are stripped. Can also be used by site owners auditing AI readability: see what survives for AEO, GEO and AI search. Obeys robots.txt. Supports GET & POST",
+ "category": "Search & web",
+ "tags": [
+  "seo",
+  "aeo",
+  "geo",
+  "content-audit",
+  "markdown"
+ ],
+ "endpoint": "https://minifetch.com/api/v1/x402/extract/url-content",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xffA9155A0e4B3d8d42351Da226cC1feEe449686f",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "url": "https://www.weather.com/weather/today"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"queryParameters\":{\"includeMediaUrls\":false},\"results\":[{\"data\":{\"minifetchCache\":{\"cachedAt\":\"\",\"expiresAt\":\"\",\"hit\":false},\"proxy\":{\"proxyType\":\"\",\"proxyUrl\":null,\"robotsTxt\":{\"allowed\":false},\"userAgent\":\"\"},\"requestUrl\":\"\",\"summary\":\"\",\"url\":\"\"}}],\"success\":true}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1781035850/bazaar-icons/d02845f9304a54ee.png",
+ "docs": "https://minifetch.com/llms.txt",
+ "docsChecked": 1793609279636,
+ "payers30d": 9,
+ "calls30d": 30,
+ "lastCalledAt": "2026-10-30T03:02:50.393Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 841,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 841,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/minifetch-com-api-v1-x402-extract-url-content",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "cdp-agent-0-01-onrender-com",
+  "agent-web-tools-agent-web-tools-workers-dev-v1-check"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://minifetch.com/api/v1/x402/extract/url-content' -H 'content-type: application/json' -d '{\"url\":\"https://www.weather.com/weather/today\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20minifetch-com-api-v1-x402-extract-url-content&body=%7B%22slug%22%3A%22minifetch-com-api-v1-x402-extract-url-content%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: minifetch-com-api-v1-x402-extract-url-content\",\"body\":\"{\\\"slug\\\":\\\"minifetch-com-api-v1-x402-extract-url-content\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Minifetch%20Technical%20SEO%20API%3A%20Extracts%20live%2C%20clean%20markdown%20from%20a%20page%20after%20nav%2C%20ads%2C%20and%20scripts&seller=https%3A%2F%2Fminifetch.com%2Fapi%2Fv1%2Fx402%2Fextract%2Furl-content"
+}

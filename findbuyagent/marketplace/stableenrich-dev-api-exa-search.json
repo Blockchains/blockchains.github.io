@@ -3,6 +3,7 @@
  "name": "StableEnrich: Exa Search - Neural search across the web",
  "seller": "StableEnrich",
  "host": "stableenrich.dev",
+ "provider": "https://stableenrich.dev",
  "description": "Exa Search - Neural search across the web",
  "category": "Search & web",
  "tags": [
@@ -10,11 +11,13 @@
  ],
  "endpoint": "https://stableenrich.dev/api/exa/search",
  "method": "POST",
+ "payment": "x402",
  "priceUsd": 0.01,
  "amount": "10000",
  "payTo": "0x325bdF6F7efAB24a2210c48c1b64cAb2eAe1d430",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
  "listedTermsMatch": true,
  "input": {
   "queryParams": null,
@@ -24,21 +27,53 @@
    "query": "hedge fund portfolio manager New York",
    "type": "auto"
   },
-  "bodyType": "json"
+  "bodyType": "json",
+  "headers": null
  },
+ "outputType": null,
  "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": null,
  "docs": "https://stableenrich.dev/llms.txt",
  "docsChecked": 1793596013384,
- "payers30d": 155,
- "calls30d": 29530,
+ "payers30d": 154,
+ "calls30d": 29491,
+ "lastCalledAt": "2026-11-02T05:11:58.916Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 282,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 522,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 522,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/stableenrich-dev-api-exa-search",
  "rating": null,
+ "related": [
+  "websearch-use-x402atlas-com-search",
+  "x402-twit-sh-tweets-user",
+  "x402-orthogonal-com-icypeas-api-find-people",
+  "mcp-newstex-com-x402-trending",
+  "agent-data-api-agentdata-workers-dev-v1-contracts-opportunities",
+  "supplier-risk-api-production-up-railway-app-abandonment-check"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://stableenrich.dev/api/exa/search' -H 'content-type: application/json' -d '{}'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20stableenrich-dev-api-exa-search&body=%7B%22slug%22%3A%22stableenrich-dev-api-exa-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: stableenrich-dev-api-exa-search\",\"body\":\"{\\\"slug\\\":\\\"stableenrich-dev-api-exa-search\\\",\\\"stars\\\":1-5}\"}"

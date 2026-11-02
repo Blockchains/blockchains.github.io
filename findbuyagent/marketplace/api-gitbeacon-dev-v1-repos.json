@@ -1,0 +1,78 @@
+{
+ "slug": "api-gitbeacon-dev-v1-repos",
+ "name": "Paid ($0.01 USDC via x402)",
+ "seller": "api.gitbeacon.dev",
+ "host": "api.gitbeacon.dev",
+ "provider": "https://api.gitbeacon.dev",
+ "description": "Paid ($0.01 USDC via x402). Top trending GitHub repos from the latest daily scan, sorted by stars — description, language, topics, license, forks, author followers, and README excerpt. Filterable by programming language. Response carries the scanDate provenance. Compute-first / settle-after — you are never charged for an error.",
+ "category": "Utilities",
+ "tags": [],
+ "endpoint": "https://api.gitbeacon.dev/v1/repos",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0xf444abc53f5e1e73caec7df64d147ddb119514a0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "language": "example",
+   "limit": 30
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"charged\":true,\"count\":30,\"data\":[{\"authorFollowers\":1200,\"description\":\"Accelerates and streamlines code understanding\",\"forks\":45,\"fullName\":\"HKUDS/FastCode\",\"language\":\"Python\",\"license\":\"MIT\",\"readmeExcerpt\":\"FastCode is an AI-powered tool for accelerating code comprehension...\",\"stars\":321,\"topics\":[\"ai\",\"code-understanding\",\"llm\"]}],\"scanDate\":\"2026-02-25T00:00:00.000Z\",\"success\":true}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.gitbeacon.dev/llms.txt",
+ "docsChecked": 1793609275982,
+ "payers30d": 10,
+ "calls30d": 88,
+ "lastCalledAt": "2026-11-02T04:51:00.554Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 180,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 180,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-gitbeacon-dev-v1-repos",
+ "rating": null,
+ "related": [
+  "api-oblique-markets-api-v1-paid-time",
+  "api-myceliasignal-com-oracle-price-btc-usd",
+  "finance-api-kdlcfa-workers-dev-us30y-yield",
+  "randomfactsx402-vercel-app-api-random-fact",
+  "fractalai-net-co-api-x402-midas-attest",
+  "fronterasignal-com-api-v1-materials"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.gitbeacon.dev/v1/repos?language=example&limit=30'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-gitbeacon-dev-v1-repos&body=%7B%22slug%22%3A%22api-gitbeacon-dev-v1-repos%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-gitbeacon-dev-v1-repos\",\"body\":\"{\\\"slug\\\":\\\"api-gitbeacon-dev-v1-repos\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Paid%20(%240.01%20USDC%20via%20x402)&seller=https%3A%2F%2Fapi.gitbeacon.dev%2Fv1%2Frepos"
+}

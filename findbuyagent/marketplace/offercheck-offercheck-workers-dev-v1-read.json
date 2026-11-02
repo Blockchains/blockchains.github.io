@@ -1,0 +1,83 @@
+{
+ "slug": "offercheck-offercheck-workers-dev-v1-read",
+ "name": "offercheck: Read any public web page as clean Markdown: main-content extraction (n",
+ "seller": "offercheck",
+ "host": "offercheck.offercheck.workers.dev",
+ "provider": "https://offercheck.offercheck.workers.dev",
+ "description": "Read any public web page as clean Markdown: main-content extraction (navigation, footers, scripts and hidden elements removed), headings, lists, tables, code blocks, links (absolute, deduplicated), images, plus title, description, canonical URL, language, author and publish date, and a content hash + fetch time as evidence. JSON and plain-text URLs are returned as-is. No JavaScript rendering. $0.001 per page.",
+ "category": "Search & web",
+ "tags": [
+  "web",
+  "read",
+  "markdown",
+  "scrape",
+  "extract"
+ ],
+ "endpoint": "https://offercheck.offercheck.workers.dev/v1/read",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xB9721FDD2EC85F7f604F5BBcA2292d7C4ff6B62c",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "url": "https://example.com/blog/post"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"author\":\"Jane Doe\",\"canonical\":\"https://example.com/blog/post\",\"chars\":91,\"content\":\"# Post title\\n\\nFirst paragraph with a [link](https://example.com/other).\\n\\n- item one\\n- item two\",\"content_type\":\"text/html; charset=utf-8\",\"description\":\"Meta description\",\"evidence\":{\"bytes\":48213,\"content_sha256\":\"…\",\"fetched_at\":\"2026-09-25T20:00:00.000Z\"},\"final_url\":\"https://example.com/blog/post\",\"format\":\"markdown\",\"http_status\":200,\"image\":\"https://example.com/og.png\",\"lang\":\"en\",\"link_count\":1,\"links\":[{\"href\":\"https://example.com/other\",\"text\":\"link\"}],\"ms\":640,\"published_time\":\"2026-09-01T00:00:00Z\",\"site_name\":\"Example\",\"title\":\"Post title\",\"truncated\":false,\"url\":\"https://example.com/blog/post\",\"warnings\":[],\"word_count\":14}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://offercheck.offercheck.workers.dev/llms.txt",
+ "docsChecked": 1793609273415,
+ "payers30d": 12,
+ "calls30d": 31,
+ "lastCalledAt": "2026-10-29T18:08:58.999Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 63,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 63,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/offercheck-offercheck-workers-dev-v1-read",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "minifetch-com-api-v1-x402-preflight-url-check",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "cdp-agent-0-01-onrender-com"
+ ],
+ "example": {
+  "curl": "curl -i 'https://offercheck.offercheck.workers.dev/v1/read?url=https%3A%2F%2Fexample.com%2Fblog%2Fpost'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20offercheck-offercheck-workers-dev-v1-read&body=%7B%22slug%22%3A%22offercheck-offercheck-workers-dev-v1-read%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: offercheck-offercheck-workers-dev-v1-read\",\"body\":\"{\\\"slug\\\":\\\"offercheck-offercheck-workers-dev-v1-read\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=offercheck%3A%20Read%20any%20public%20web%20page%20as%20clean%20Markdown%3A%20main-content%20extraction%20(n&seller=https%3A%2F%2Foffercheck.offercheck.workers.dev%2Fv1%2Fread"
+}

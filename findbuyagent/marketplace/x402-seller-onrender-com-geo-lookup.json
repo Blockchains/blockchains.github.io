@@ -1,0 +1,79 @@
+{
+ "slug": "x402-seller-onrender-com-geo-lookup",
+ "name": "Data Lookup API: Forward geocode a free-text address, place name, or city (e.g",
+ "seller": "Data Lookup API",
+ "host": "x402-seller.onrender.com",
+ "provider": "https://x402-seller.onrender.com",
+ "description": "Forward geocode a free-text address, place name, or city (e.g. \"Tokyo, Japan\") into geographic coordinates — latitude and longitude — plus its IANA timezone. Use this to convert a location description into coordinates for mapping, distance, or timezone-aware lookups, or as the first step before coordinate-based endpoints like weather forecasts.",
+ "category": "Weather & geo",
+ "tags": [
+  "geo"
+ ],
+ "endpoint": "https://x402-seller.onrender.com/geo/lookup",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xbd61dfb01f81c91f02b0ccd51b0220e0c8918639",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "address": "Tokyo, Japan"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"display_name\":\"Tokyo, Japan\",\"lat\":35.6762,\"lng\":139.6503,\"query\":\"Tokyo, Japan\",\"timezone\":\"Asia/Tokyo\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402-seller.onrender.com/.well-known/x402",
+ "docsChecked": 1793609275450,
+ "payers30d": 11,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T12:41:19.042Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 59,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 59,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-seller-onrender-com-geo-lookup",
+ "rating": null,
+ "related": [
+  "hypernatt-com-api-m2m-liq-radar",
+  "weather-agentic-jp-com-areas",
+  "api-losbeto-xyz-gas-price",
+  "x402-data-api-sigrunner-workers-dev-defi-yields",
+  "x402-agentutility-ai-ip-asn",
+  "x402-tbs-digital-com-weather-current"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402-seller.onrender.com/geo/lookup?address=Tokyo%2C+Japan'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-seller-onrender-com-geo-lookup&body=%7B%22slug%22%3A%22x402-seller-onrender-com-geo-lookup%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-seller-onrender-com-geo-lookup\",\"body\":\"{\\\"slug\\\":\\\"x402-seller-onrender-com-geo-lookup\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Data%20Lookup%20API%3A%20Forward%20geocode%20a%20free-text%20address%2C%20place%20name%2C%20or%20city%20(e.g&seller=https%3A%2F%2Fx402-seller.onrender.com%2Fgeo%2Flookup"
+}

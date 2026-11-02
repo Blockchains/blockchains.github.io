@@ -1,0 +1,112 @@
+{
+ "slug": "jev-x402-vercel-app-jev",
+ "name": "Jev Structured Evaluation: Structured evaluation with TypeSafe's Jev (System One) model",
+ "seller": "Jev Structured Evaluation",
+ "host": "jev-x402.vercel.app",
+ "provider": "https://jev-x402.vercel.app",
+ "description": "Structured evaluation with TypeSafe's Jev (System One) model. Send any state plus typed questions — noul (true/false), choice (pick one), or score (ordinal scale) — and get back calibrated probabilities and confidence for each. Built for routing, classification, triage and policy checks where a fast, predictable, machine-readable answer beats prose.",
+ "category": "AI & LLM",
+ "tags": [
+  "ai",
+  "classification",
+  "routing",
+  "decision",
+  "llm"
+ ],
+ "endpoint": "https://jev-x402.vercel.app/jev",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xE813d34C0525E0fBb1e6478B86D40B83603C2008",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "model": "jev-latest",
+   "questions": {
+    "needs_review": {
+     "criteria": {
+      "false": "a routine question a bot can close",
+      "true": "money, legal, or an unanswered complaint"
+     },
+     "instructions": "Does this ticket need a human agent?",
+     "type": "noul"
+    },
+    "route": {
+     "criteria": {
+      "billing": "payment or charge problems",
+      "shipping": "delivery problems",
+      "technical": "application bugs"
+     },
+     "instructions": "Route this ticket to a team.",
+     "type": "choice"
+    },
+    "urgency": {
+     "criteria": [
+      "low",
+      "medium",
+      "high"
+     ],
+     "instructions": "How urgent is this ticket?",
+     "type": "score"
+    }
+   },
+   "state": "My card was charged twice for one order and nobody has replied in three days."
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"answers\":{\"needs_review\":{\"noul\":0.94,\"type\":\"noul\"},\"route\":{\"choice\":\"billing\",\"confidence\":1,\"probabilities\":{\"billing\":1,\"shipping\":0,\"technical\":0},\"type\":\"choice\"},\"urgency\":{\"confidence\":0.83,\"legend\":{\"0\":\"low\",\"1\":\"medium\",\"2\":\"high\"},\"probabilities\":{\"0\":0,\"1\":0.11,\"2\":0.89},\"score\":1.89,\"type\":\"score\"}},\"model\":\"jev-1.13.0\",\"usage\":{\"input_tokens\":423,\"output_tokens\":70}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609270706,
+ "payers30d": 14,
+ "calls30d": 269,
+ "lastCalledAt": "2026-11-01T22:11:31.696Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 424,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 424,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/jev-x402-vercel-app-jev",
+ "rating": null,
+ "related": [
+  "contextslim-friczero-com-fetch",
+  "gateway-spraay-app-bittensor-v1-models",
+  "767-2676-com-v2-receipt",
+  "golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions",
+  "www-amnt-io-api-agent-amnt-bitcoin-price",
+  "api-agentweather-io-v1-pulse-storm"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://jev-x402.vercel.app/jev' -H 'content-type: application/json' -d '{\"model\":\"jev-latest\",\"questions\":{\"needs_review\":{\"criteria\":{\"false\":\"a routine question a bot can close\",\"true\":\"money, legal, or an unanswered complaint\"},\"instructions\":\"Does this ticket need a human agent?\",\"type\":\"noul\"},\"route\":{\"criteria\":{\"billing\":\"payment or charge problems\",\"shipping\":\"delivery problems\",\"technical\":\"application bugs\"},\"instructions\":\"Route this ticket to a team.\",\"type\":\"choice\"},\"urgency\":{\"criteria\":[\"low\",\"medium\",\"high\"],\"instructions\":\"How urgent is this ticket?\",\"type\":\"score\"}},\"state\":\"My card was charged twice for one order and nobody has replied in three days.\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20jev-x402-vercel-app-jev&body=%7B%22slug%22%3A%22jev-x402-vercel-app-jev%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: jev-x402-vercel-app-jev\",\"body\":\"{\\\"slug\\\":\\\"jev-x402-vercel-app-jev\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Jev%20Structured%20Evaluation%3A%20Structured%20evaluation%20with%20TypeSafe's%20Jev%20(System%20One)%20model&seller=https%3A%2F%2Fjev-x402.vercel.app%2Fjev"
+}

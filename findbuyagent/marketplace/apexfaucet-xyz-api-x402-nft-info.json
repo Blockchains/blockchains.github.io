@@ -1,0 +1,85 @@
+{
+ "slug": "apexfaucet-xyz-api-x402-nft-info",
+ "name": "NFT owner and metadata: NFT owner and metadata link for an ERC721 token on Ethereum, Base, Arc",
+ "seller": "NFT owner and metadata",
+ "host": "apexfaucet.xyz",
+ "provider": "https://apexfaucet.xyz",
+ "description": "NFT owner and metadata link for an ERC721 token on Ethereum, Base, Arc or BNB Chain: the current owner, the collection name and symbol, and the tokenURI (with an IPFS gateway link when it is ipfs://). A token that does not exist is refused before any charge.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "nft",
+  "erc721",
+  "nft owner",
+  "token uri",
+  "ethereum"
+ ],
+ "endpoint": "https://apexfaucet.xyz/api/x402/nft-info",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xd334ab5151c624cada654854e2879903dc4217ed",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "chain": "base",
+   "contract": "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D",
+   "id": "1"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"block\":53308809,\"blockTime\":\"2026-10-31T00:36:05.000Z\",\"chain\":\"base\",\"contract\":\"0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D\",\"id\":\"1\",\"name\":\"Bored Ape Yacht Club Shadow\",\"note\":\"ipfs:// URI: fetch through any IPFS gateway, e.g. https://ipfs.io/ipfs/QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1\",\"ok\":true,\"owner\":\"0x46EFbAedc92067E6d60E84ED6395099723252496\",\"symbol\":\"BAYC\",\"tokenURI\":\"ipfs://QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/1\"},\"ok\":true,\"paid\":0.001}",
+ "outputSchema": "{\"properties\":{\"data\":{\"type\":\"object\"},\"ok\":{\"type\":\"boolean\"},\"paid\":{\"type\":\"number\"}},\"type\":\"object\"}",
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791909159/bazaar-icons/f4adc3a60c4cd07b.png",
+ "docs": "https://apexfaucet.xyz/llms.txt",
+ "docsChecked": 1793609277166,
+ "payers30d": 10,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T07:02:38.56Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 1660,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 1660,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/apexfaucet-xyz-api-x402-nft-info",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://apexfaucet.xyz/api/x402/nft-info?chain=base&contract=0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D&id=1'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20apexfaucet-xyz-api-x402-nft-info&body=%7B%22slug%22%3A%22apexfaucet-xyz-api-x402-nft-info%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: apexfaucet-xyz-api-x402-nft-info\",\"body\":\"{\\\"slug\\\":\\\"apexfaucet-xyz-api-x402-nft-info\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=NFT%20owner%20and%20metadata%3A%20NFT%20owner%20and%20metadata%20link%20for%20an%20ERC721%20token%20on%20Ethereum%2C%20Base%2C%20Arc&seller=https%3A%2F%2Fapexfaucet.xyz%2Fapi%2Fx402%2Fnft-info"
+}

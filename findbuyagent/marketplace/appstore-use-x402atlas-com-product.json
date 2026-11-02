@@ -1,0 +1,84 @@
+{
+ "slug": "appstore-use-x402atlas-com-product",
+ "name": "Apple App Store Search & Reviews: Apple App Store product details — full profile for a single app by pro",
+ "seller": "Apple App Store Search & Reviews",
+ "host": "appstore.use.x402atlas.com",
+ "provider": "https://appstore.use.x402atlas.com",
+ "description": "Apple App Store product details — full profile for a single app by product_id: rating, price, description, version history, screenshots & metadata as clean JSON.",
+ "category": "Images & media",
+ "tags": [
+  "app-store",
+  "apple",
+  "ios",
+  "app-details",
+  "apps"
+ ],
+ "endpoint": "https://appstore.use.x402atlas.com/product",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.02,
+ "amount": "20000",
+ "payTo": "0x59ea036C64f0F54CDD14a3BE8a1a6586B58DA71c",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "country": "us",
+   "product_id": "1069513131"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"product\":{\"age_rating\":\"12+\",\"developer\":{\"name\":\"Grailr LLC\"},\"id\":\"1069513131\",\"price\":\"Free\",\"rating\":4.8,\"rating_count\":\"51K Ratings\",\"title\":\"CARROT Weather: Alerts & Radar\"},\"queried_at\":\"2026-07-11T12:00:00Z\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://appstore.use.x402atlas.com/llms.txt",
+ "docsChecked": 1793609274118,
+ "payers30d": 12,
+ "calls30d": 21,
+ "lastCalledAt": "2026-10-31T12:41:25.577Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 621,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 621,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/appstore-use-x402atlas-com-product",
+ "rating": null,
+ "related": [
+  "x402engine-app-api-tts-elevenlabs",
+  "x402-aispace-bot-api-v1-image-generate",
+  "mart402-com-v1-pdf-pages",
+  "api-vextorium-com-v1-wikipedia-summary",
+  "timecode-openverbs-com-v1-parse",
+  "ask-singitai-app-v1-audio-speech"
+ ],
+ "example": {
+  "curl": "curl -i 'https://appstore.use.x402atlas.com/product?country=us&product_id=1069513131'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20appstore-use-x402atlas-com-product&body=%7B%22slug%22%3A%22appstore-use-x402atlas-com-product%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: appstore-use-x402atlas-com-product\",\"body\":\"{\\\"slug\\\":\\\"appstore-use-x402atlas-com-product\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Apple%20App%20Store%20Search%20%26%20Reviews%3A%20Apple%20App%20Store%20product%20details%20%E2%80%94%20full%20profile%20for%20a%20single%20app%20by%20pro&seller=https%3A%2F%2Fappstore.use.x402atlas.com%2Fproduct"
+}

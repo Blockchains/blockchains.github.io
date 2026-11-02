@@ -1,0 +1,81 @@
+{
+ "slug": "whaletape-xyz-coverage",
+ "name": "Hyperliquid Smart Money Data API: Hyperliquid perps (perpetual futures)",
+ "seller": "Hyperliquid Smart Money Data API",
+ "host": "whaletape.xyz",
+ "provider": "https://whaletape.xyz",
+ "description": "Hyperliquid perps (perpetual futures). What history exists before you pay for it: how many markets we track, which asset classes, and the range covered. The cheap probe that tells an agent whether the paid series is worth buying",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "hyperliquid",
+  "crypto",
+  "market-data",
+  "perps",
+  "perpetuals"
+ ],
+ "endpoint": "https://whaletape.xyz/coverage",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x25a8b697Da5c0bAF698Fd6BD9701B5e825214145",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asset_classes\":[\"commodity\",\"crypto\",\"equity\",\"fx\",\"index\",\"rates\"],\"first_ts\":1787245200,\"last_ts\":1791726060,\"symbols\":355}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://whaletape.xyz/llms.txt",
+ "docsChecked": 1793609273106,
+ "payers30d": 12,
+ "calls30d": 44,
+ "lastCalledAt": "2026-11-02T04:36:38.843Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 356,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 356,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/whaletape-xyz-coverage",
+ "rating": null,
+ "related": [
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets",
+  "api-nansen-ai-api-v1-tgm-token-information",
+  "api-x402node-dev-chain-honeypot",
+  "api-gondola-ai-com-v1-chat-completions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://whaletape.xyz/coverage'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20whaletape-xyz-coverage&body=%7B%22slug%22%3A%22whaletape-xyz-coverage%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: whaletape-xyz-coverage\",\"body\":\"{\\\"slug\\\":\\\"whaletape-xyz-coverage\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Hyperliquid%20Smart%20Money%20Data%20API%3A%20Hyperliquid%20perps%20(perpetual%20futures)&seller=https%3A%2F%2Fwhaletape.xyz%2Fcoverage"
+}

@@ -1,0 +1,81 @@
+{
+ "slug": "kaisha-api-hp-vladic-workers-dev-calendar-holidays",
+ "name": "Japanese national holidays for a given year (1955-2027), from the offi",
+ "seller": "kaisha-api.hp-vladic.workers.dev",
+ "host": "kaisha-api.hp-vladic.workers.dev",
+ "provider": "https://kaisha-api.hp-vladic.workers.dev",
+ "description": "Japanese national holidays for a given year (1955-2027), from the official Cabinet Office dataset.",
+ "category": "Data & analytics",
+ "tags": [
+  "japan",
+  "calendar",
+  "holidays"
+ ],
+ "endpoint": "https://kaisha-api.hp-vladic.workers.dev/calendar/holidays",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xF2A6416EBb0C594Ab2977695bED061729ddEb47b",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "year": 2026
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"holidays\":[{\"date\":\"2026-01-01\",\"name\":\"元日\"}],\"source\":\"Cabinet Office of Japan (内閣府)\",\"year\":2026}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://kaisha-api.hp-vladic.workers.dev/llms.txt",
+ "docsChecked": 1793609274034,
+ "payers30d": 12,
+ "calls30d": 15,
+ "lastCalledAt": "2026-11-02T04:39:25.759Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 60,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 60,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/kaisha-api-hp-vladic-workers-dev-calendar-holidays",
+ "rating": null,
+ "related": [
+  "api-hyperextend-xyz-v1-candles-btc-1m-latest",
+  "api-oblique-markets-api-v1-paid-bazaar-pulse",
+  "rest-coincap-io-v3-agentfriendly-full-assets-by-slug",
+  "brasil-dados-api-onrender-com-cambio",
+  "jmt-x402-proxy-jmthomasofficial-workers-dev-v2-api-whois",
+  "nbu-navistri-com-v1-ovdp-auctions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://kaisha-api.hp-vladic.workers.dev/calendar/holidays?year=2026'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20kaisha-api-hp-vladic-workers-dev-calendar-holidays&body=%7B%22slug%22%3A%22kaisha-api-hp-vladic-workers-dev-calendar-holidays%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: kaisha-api-hp-vladic-workers-dev-calendar-holidays\",\"body\":\"{\\\"slug\\\":\\\"kaisha-api-hp-vladic-workers-dev-calendar-holidays\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Japanese%20national%20holidays%20for%20a%20given%20year%20(1955-2027)%2C%20from%20the%20offi&seller=https%3A%2F%2Fkaisha-api.hp-vladic.workers.dev%2Fcalendar%2Fholidays"
+}

@@ -1,0 +1,77 @@
+{
+ "slug": "api-x402node-dev-forex-convert-usd-cny-usd-cny",
+ "name": "Convert USD to CNY at live rate",
+ "seller": "api.x402node.dev",
+ "host": "api.x402node.dev",
+ "provider": "https://api.x402node.dev",
+ "description": "Convert USD to CNY at live rate. Pass ?amount=100 for value in Chinese Yuan. 美元兑换人民币换算。米ドルを人民元に換算。Convertir dólar a yuan. 달러를 위안로 환전. usd to cny convert. Accepts payment on Base or Solana — either network works.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://api.x402node.dev/forex/convert/usd/cny/usd-cny",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.004,
+ "amount": "4000",
+ "payTo": "0x4466d4A84b7c49a6A094ec6eef4a0712D6dd125e",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "amount": "string"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.x402node.dev/llms.txt",
+ "docsChecked": 1793609269178,
+ "payers30d": 23,
+ "calls30d": 104,
+ "lastCalledAt": "2026-11-02T06:13:58.378Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 707,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 707,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-x402node-dev-forex-convert-usd-cny-usd-cny",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-contract-address",
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "hyperliquid-predict-use-x402atlas-com-outcomes",
+  "notary-forgemesh-io-api-notarize",
+  "coingecko-use-x402atlas-com-price",
+  "scry-solanahub-de-x402-network-priority-fees-live"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.x402node.dev/forex/convert/usd/cny/usd-cny?amount=string'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-x402node-dev-forex-convert-usd-cny-usd-cny&body=%7B%22slug%22%3A%22api-x402node-dev-forex-convert-usd-cny-usd-cny%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-x402node-dev-forex-convert-usd-cny-usd-cny\",\"body\":\"{\\\"slug\\\":\\\"api-x402node-dev-forex-convert-usd-cny-usd-cny\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Convert%20USD%20to%20CNY%20at%20live%20rate&seller=https%3A%2F%2Fapi.x402node.dev%2Fforex%2Fconvert%2Fusd%2Fcny%2Fusd-cny"
+}

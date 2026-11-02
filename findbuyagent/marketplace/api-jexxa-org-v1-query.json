@@ -1,0 +1,85 @@
+{
+ "slug": "api-jexxa-org-v1-query",
+ "name": "Live Open Data India & World: Official government and open data API: 94 public sources in one endpoi",
+ "seller": "Live Open Data India & World",
+ "host": "api.jexxa.org",
+ "provider": "https://api.jexxa.org",
+ "description": "Official government and open data API: 94 public sources in one endpoint, 51 real-time, across India, Europe, Asia, Africa and Latin America. India: disaster alerts, CPI inflation, GDP, jobs, IFSC. World: earthquakes, weather forecasts and warnings, train and transit departures, flight and ship tracking, fuel and electricity prices, exchange rates, public tenders, company registries, geocoding, public holidays. The dataset parameter selects the source; responses cite source and licence.",
+ "category": "Weather & geo",
+ "tags": [
+  "india",
+  "government-data",
+  "open-data",
+  "live-data",
+  "statistics"
+ ],
+ "endpoint": "https://api.jexxa.org/v1/query",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x747F1b82589a96BF4E88bf82985280100a1663CA",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "dataset": "weather.forecast",
+   "lat": "28.61",
+   "lon": "77.21"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"backend\":\"weather:api.met.no\",\"cached\":false,\"data\":{\"coordinates\":[77.21],\"timeseries\":[{\"data\":{\"instant\":{\"details\":{\"air_pressure_at_sea_level\":1010.8,\"air_temperature\":24.4,\"cloud_area_fraction\":0.8,\"relative_humidity\":59.9,\"wind_from_direction\":52.6,\"wind_speed\":2.9}},\"next_12_hours\":{\"details\":{},\"summary\":{\"symbol_code\":\"clearsky_night\"}},\"next_1_hours\":{\"details\":{\"precipitation_amount\":0},\"summary\":{\"symbol_code\":\"clearsky_night\"}},\"next_6_hours\":{\"details\":{\"precipitation_amount\":0},\"summary\":{\"symbol_code\":\"clearsky_night\"}}},\"time\":\"2026-10-24T15:00:00Z\"}],\"units\":{\"air_pressure_at_sea_level\":\"hPa\",\"air_temperature\":\"celsius\",\"cloud_area_fraction\":\"%\",\"precipitation_amount\":\"mm\",\"relative_humidity\":\"%\",\"wind_from_direction\":\"degrees\",\"wind_speed\":\"m/s\"},\"updated_at\":\"2026-10-24T13:17:27Z\"},\"dataset\":\"weather.forecast\",\"params\":{\"lat\":\"28.6139\",\"lon\":\"77.2090\"},\"price_usd\":0.005,\"retrieved_at\":\"2026-10-24T09:00:00.000Z\",\"source\":{\"attribution\":\"Data from MET Norway (api.met.no), CC BY 4.0\",\"license\":\"CC BY 4.0 / NLOD 2.0\",\"name\":\"MET Norway Locationforecast\",\"url\":\"https://api.met.no\"},\"stale\":false}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792856444/bazaar-icons/59df005847ba5658.png",
+ "docs": "https://api.jexxa.org/llms.txt",
+ "docsChecked": 1793609280530,
+ "payers30d": 9,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T07:59:19.634Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 113,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 113,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-jexxa-org-v1-query",
+ "rating": null,
+ "related": [
+  "geoip-bip-rep-com-lookup",
+  "x402-forgemesh-io-current-time",
+  "api-magentlab-com-api-codes-search",
+  "quantagentshop-com-v1-weather",
+  "x402tap-com-api-weather",
+  "api-x402node-dev-finance-econ-calendar"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.jexxa.org/v1/query?dataset=weather.forecast&lat=28.61&lon=77.21'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-jexxa-org-v1-query&body=%7B%22slug%22%3A%22api-jexxa-org-v1-query%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-jexxa-org-v1-query\",\"body\":\"{\\\"slug\\\":\\\"api-jexxa-org-v1-query\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Live%20Open%20Data%20India%20%26%20World%3A%20Official%20government%20and%20open%20data%20API%3A%2094%20public%20sources%20in%20one%20endpoi&seller=https%3A%2F%2Fapi.jexxa.org%2Fv1%2Fquery"
+}

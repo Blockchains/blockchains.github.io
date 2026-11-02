@@ -1,0 +1,83 @@
+{
+ "slug": "x402-agent-api-onrender-com-api-v1-email-verify",
+ "name": "Agent Utility Suite: Is this email address real and safe to send to",
+ "seller": "Agent Utility Suite",
+ "host": "x402-agent-api.onrender.com",
+ "provider": "https://x402-agent-api.onrender.com",
+ "description": "Is this email address real and safe to send to? Checks syntax, MX records (and null MX), disposable providers, free webmail, role accounts (info@, support@), likely typos of big providers with a suggestion (gmial.com to gmail.com), SPF and DMARC. Returns deliverable / risky / undeliverable, a 0-100 score and reasons. No mail is sent. $0.001 USDC per call.",
+ "category": "Search & web",
+ "tags": [
+  "email",
+  "email-verification",
+  "lead-enrichment",
+  "deliverability",
+  "dns"
+ ],
+ "endpoint": "https://x402-agent-api.onrender.com/api/v1/email-verify",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x6847231bD28E16A0A57c59793f6B8BD8CC0043aC",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "email": "jane.doe@example.com"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"checks\":{\"accepts_mail\":false,\"disposable\":false,\"dmarc\":true,\"domain_has_mx\":false,\"free_provider\":false,\"null_mx\":true,\"role_account\":false,\"spf\":true,\"syntax_valid\":true},\"domain\":\"example.com\",\"email\":\"jane.doe@example.com\",\"email_provider\":null,\"local_part\":\"jane.doe\",\"mailbox_checked\":false,\"mx_hosts\":[],\"next_calls\":[],\"reasons\":[{\"code\":\"null_mx\",\"message\":\"The domain publishes a null MX: it accepts no email.\"}],\"score\":0,\"suggestion\":null,\"verdict\":\"undeliverable\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402-agent-api.onrender.com/llms.txt",
+ "docsChecked": 1793609281782,
+ "payers30d": 9,
+ "calls30d": 11,
+ "lastCalledAt": "2026-10-29T14:19:33.994Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 267,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 267,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-agent-api-onrender-com-api-v1-email-verify",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "minifetch-com-api-v1-x402-preflight-url-check",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "cdp-agent-0-01-onrender-com"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://x402-agent-api.onrender.com/api/v1/email-verify' -H 'content-type: application/json' -d '{\"email\":\"jane.doe@example.com\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-agent-api-onrender-com-api-v1-email-verify&body=%7B%22slug%22%3A%22x402-agent-api-onrender-com-api-v1-email-verify%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-agent-api-onrender-com-api-v1-email-verify\",\"body\":\"{\\\"slug\\\":\\\"x402-agent-api-onrender-com-api-v1-email-verify\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent%20Utility%20Suite%3A%20Is%20this%20email%20address%20real%20and%20safe%20to%20send%20to&seller=https%3A%2F%2Fx402-agent-api.onrender.com%2Fapi%2Fv1%2Femail-verify"
+}

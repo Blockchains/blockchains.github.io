@@ -1,0 +1,85 @@
+{
+ "slug": "search-cyberwarex-com-search",
+ "name": "x402 Web Search: Web search that returns structured SERP results as JSON. Runs on a ded",
+ "seller": "x402 Web Search",
+ "host": "search.cyberwarex.com",
+ "provider": "https://search.cyberwarex.com",
+ "description": "Web search that returns structured SERP results as JSON. Runs on a dedicated SearXNG instance aggregating multiple engines, so there is no per-engine API key, quota or HTML scraping to manage. Each result carries title, URL, snippet, the source engine and a published date where available. Choose general web, news, or image results, up to 10 per call. Use it to ground an answer in current web sources, research a topic, or monitor news on a query.",
+ "category": "Search & web",
+ "tags": [
+  "web-search",
+  "serp",
+  "search-engine",
+  "news-search",
+  "research"
+ ],
+ "endpoint": "https://search.cyberwarex.com/search",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.003,
+ "amount": "3000",
+ "payTo": "0x058D0Cc5CC97e61e8A9f38D6d6365bce525921B2",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "category": "general",
+   "max_results": 5,
+   "q": "base l2 gas fees"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":2,\"query\":\"base l2 gas fees\",\"results\":[{\"engine\":\"google\",\"snippet\":\"Track current gas prices on Base, an Ethereum L2 built by Coinbase.\",\"title\":\"Base Network Gas Tracker\",\"url\":\"https://basescan.org/gastracker\"},{\"engine\":\"brave\",\"published\":\"2025-11-14T00:00:00\",\"snippet\":\"Base inherits Ethereum security while batching calldata to cut cost.\",\"title\":\"Why are Base fees so low?\",\"url\":\"https://blog.base.org/fees\"}]}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1787649784/bazaar-icons/f98489fd044477d5.png",
+ "docs": "https://search.cyberwarex.com/llms.txt",
+ "docsChecked": 1793609268638,
+ "payers30d": 19,
+ "calls30d": 73,
+ "lastCalledAt": "2026-11-02T03:43:16.274Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 419,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 419,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/search-cyberwarex-com-search",
+ "rating": null,
+ "related": [
+  "blockrun-ai-api-v1-exa-contents",
+  "netintel-dev-web-extract",
+  "agent-tools-production-e6aa-up-railway-app-v1-extract",
+  "api-agentstools-dev-search-news",
+  "agentreader-dev-dns",
+  "softbot-reader-mainnet-softbot-workers-dev-v1-read"
+ ],
+ "example": {
+  "curl": "curl -i 'https://search.cyberwarex.com/search?category=general&max_results=5&q=base+l2+gas+fees'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20search-cyberwarex-com-search&body=%7B%22slug%22%3A%22search-cyberwarex-com-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: search-cyberwarex-com-search\",\"body\":\"{\\\"slug\\\":\\\"search-cyberwarex-com-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x402%20Web%20Search%3A%20Web%20search%20that%20returns%20structured%20SERP%20results%20as%20JSON.%20Runs%20on%20a%20ded&seller=https%3A%2F%2Fsearch.cyberwarex.com%2Fsearch"
+}

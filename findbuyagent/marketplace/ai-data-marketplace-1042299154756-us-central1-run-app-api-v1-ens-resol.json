@@ -1,0 +1,83 @@
+{
+ "slug": "ai-data-marketplace-1042299154756-us-central1-run-app-api-v1-ens-resol",
+ "name": "Resolve an ENS name to its current Ethereum address or perform a rever",
+ "seller": "ai-data-marketplace-1042299154756.us-central1.run.app",
+ "host": "ai-data-marketplace-1042299154756.us-central1.run.app",
+ "provider": "https://ai-data-marketplace-1042299154756.us-central1.run.app",
+ "description": "Resolve an ENS name to its current Ethereum address or perform a reverse address lookup with forward-confirmation against the live ENS registry.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "ens",
+  "ethereum",
+  "name-resolution",
+  "reverse-lookup",
+  "wallet-identity"
+ ],
+ "endpoint": "https://ai-data-marketplace-1042299154756.us-central1.run.app/api/v1/ens_resolve",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x8647F7D7a1368a467Ad1FF757fBc2e7167973558",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "input": "vitalik.eth"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"address\":\"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045\",\"ens_name\":\"vitalik.eth\",\"mode\":\"forward\",\"network\":\"ethereum\",\"success\":true}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://ai-data-marketplace-1042299154756.us-central1.run.app/llms.txt",
+ "docsChecked": 1793609271648,
+ "payers30d": 13,
+ "calls30d": 17,
+ "lastCalledAt": "2026-11-01T06:59:37.802Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 72,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 72,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/ai-data-marketplace-1042299154756-us-central1-run-app-api-v1-ens-resol",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://ai-data-marketplace-1042299154756.us-central1.run.app/api/v1/ens_resolve?input=vitalik.eth'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20ai-data-marketplace-1042299154756-us-central1-run-app-api-v1-ens-resol&body=%7B%22slug%22%3A%22ai-data-marketplace-1042299154756-us-central1-run-app-api-v1-ens-resol%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: ai-data-marketplace-1042299154756-us-central1-run-app-api-v1-ens-resol\",\"body\":\"{\\\"slug\\\":\\\"ai-data-marketplace-1042299154756-us-central1-run-app-api-v1-ens-resol\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Resolve%20an%20ENS%20name%20to%20its%20current%20Ethereum%20address%20or%20perform%20a%20rever&seller=https%3A%2F%2Fai-data-marketplace-1042299154756.us-central1.run.app%2Fapi%2Fv1%2Fens_resolve"
+}

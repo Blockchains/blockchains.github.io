@@ -1,0 +1,84 @@
+{
+ "slug": "reddit-apitoll-cloud-v1-reddit-search",
+ "name": "ApiToll Reddit Search: Reddit search scraper — keyword-search all of Reddit, or scope to one",
+ "seller": "ApiToll Reddit Search",
+ "host": "reddit.apitoll.cloud",
+ "provider": "https://reddit.apitoll.cloud",
+ "description": "Reddit search scraper — keyword-search all of Reddit, or scope to one subreddit, for AI agents. Find posts matching any query, sorted by relevance, top, new, hot, or comments, with an optional time window. Returns each post’s title, author, subreddit, score, comment count, permalink, external link + domain, flair, and timestamp. No login, no API key. Track brand mentions, monitor topics, and surface Reddit discussion for agents.",
+ "category": "Search & web",
+ "tags": [
+  "reddit",
+  "reddit-scraper",
+  "search",
+  "social-media",
+  "social-listening"
+ ],
+ "endpoint": "https://reddit.apitoll.cloud/v1/reddit/search",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.03,
+ "amount": "30000",
+ "payTo": "0x667cc5A90ffA911279a5FBE377c1018DDF45373B",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 150,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "q": "rust language",
+   "sort": "relevance"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asOf\":\"2026-07-15T12:00:00Z\",\"count\":25,\"posts\":[{\"author\":\"rustacean\",\"createdAt\":\"2026-07-14T18:02:00Z\",\"fullId\":\"t3_def456\",\"id\":\"def456\",\"isNsfw\":false,\"isSelf\":true,\"numComments\":118,\"recordType\":\"post\",\"score\":934,\"scrapedAt\":\"2026-07-15T12:00:00Z\",\"subreddit\":\"rust\",\"title\":\"Why Rust’s ownership model clicks after a month\",\"url\":\"https://www.reddit.com/r/rust/comments/def456/why_rusts_ownership/\"}],\"query\":{\"q\":\"rust language\",\"scoped\":false},\"sort\":\"relevance\",\"source\":{\"name\":\"Reddit\",\"via\":\"Apify\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://reddit.apitoll.cloud/.well-known/x402",
+ "docsChecked": 1793609280347,
+ "payers30d": 9,
+ "calls30d": 21,
+ "lastCalledAt": "2026-10-28T04:39:20.628Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 330,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 330,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/reddit-apitoll-cloud-v1-reddit-search",
+ "rating": null,
+ "related": [
+  "x402-asterpay-io-v2-x402-agent-readiness",
+  "google-trends-use-x402atlas-com-related-queries",
+  "agent-connskill-com-v1-keyword-ideas",
+  "stabletravel-dev-api-google-flights-search",
+  "stabletravel-dev-api-seats-aero-search",
+  "api-kadec0-xyz-v1-papers"
+ ],
+ "example": {
+  "curl": "curl -i 'https://reddit.apitoll.cloud/v1/reddit/search?q=rust+language&sort=relevance'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20reddit-apitoll-cloud-v1-reddit-search&body=%7B%22slug%22%3A%22reddit-apitoll-cloud-v1-reddit-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: reddit-apitoll-cloud-v1-reddit-search\",\"body\":\"{\\\"slug\\\":\\\"reddit-apitoll-cloud-v1-reddit-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ApiToll%20Reddit%20Search%3A%20Reddit%20search%20scraper%20%E2%80%94%20keyword-search%20all%20of%20Reddit%2C%20or%20scope%20to%20one&seller=https%3A%2F%2Freddit.apitoll.cloud%2Fv1%2Freddit%2Fsearch"
+}

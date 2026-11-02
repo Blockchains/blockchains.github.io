@@ -1,0 +1,87 @@
+{
+ "slug": "agentpay-tools-tools-pre-trade-check-call",
+ "name": "AgentPay Pre-Trade Risk Check: Pre-trade risk check for AI agents trading crypto: live orderbook slip",
+ "seller": "AgentPay Pre-Trade Risk Check",
+ "host": "agentpay.tools",
+ "provider": "https://agentpay.tools",
+ "description": "Pre-trade risk check for AI agents trading crypto: live orderbook slippage at YOUR size, side-aware funding carry, open-interest crowding, and optional contract security — composed into a single ok/caution/avoid verdict with per-factor reasons and raw data embedded. Answers 'is this trade sane?' before trading, not after. Replaces four API integrations plus the judgment layer.",
+ "category": "Finance & markets",
+ "tags": [
+  "trading",
+  "trade",
+  "risk",
+  "slippage",
+  "pre-trade-check"
+ ],
+ "endpoint": "https://agentpay.tools/tools/pre_trade_check/call",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0xE8B25A72dD6aeF69515452a61AD231C7DF2843b7",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "parameters": {
+    "side": "long",
+    "size_usd": 50000,
+    "symbol": "ETH"
+   }
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"factors\":{\"carry\":{\"level\":\"ok\",\"median_funding_pct\":0.01,\"reason\":\"carry unremarkable\"},\"crowding\":{\"level\":\"ok\",\"long_short_ratio\":1.2,\"reason\":\"positioning unremarkable\"},\"liquidity\":{\"level\":\"ok\",\"reason\":\"fills within 0.001% of best price\",\"slippage_pct\":0.001},\"security\":{\"level\":\"skipped\",\"reason\":\"no token_address provided\"}},\"side\":\"long\",\"size_usd\":50000,\"symbol\":\"ETH\",\"verdict\":\"ok\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://agentpay.tools/llms.txt",
+ "docsChecked": 1793609273920,
+ "payers30d": 12,
+ "calls30d": 20,
+ "lastCalledAt": "2026-10-24T15:56:00.266Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 313,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 313,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agentpay-tools-tools-pre-trade-check-call",
+ "rating": null,
+ "related": [
+  "cloud-trycorpus-ai-v1-tokens-quotes",
+  "cloud-trycorpus-ai-v1-reserved",
+  "cloud-trycorpus-ai-v1-term-instance",
+  "www-blockchainiq-co-api-x402-v1-brief",
+  "api-orcatrace-dev-v1-latest",
+  "headers-use-x402atlas-com"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://agentpay.tools/tools/pre_trade_check/call' -H 'content-type: application/json' -d '{\"parameters\":{\"side\":\"long\",\"size_usd\":50000,\"symbol\":\"ETH\"}}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agentpay-tools-tools-pre-trade-check-call&body=%7B%22slug%22%3A%22agentpay-tools-tools-pre-trade-check-call%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agentpay-tools-tools-pre-trade-check-call\",\"body\":\"{\\\"slug\\\":\\\"agentpay-tools-tools-pre-trade-check-call\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=AgentPay%20Pre-Trade%20Risk%20Check%3A%20Pre-trade%20risk%20check%20for%20AI%20agents%20trading%20crypto%3A%20live%20orderbook%20slip&seller=https%3A%2F%2Fagentpay.tools%2Ftools%2Fpre_trade_check%2Fcall"
+}

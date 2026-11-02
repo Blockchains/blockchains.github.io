@@ -1,0 +1,81 @@
+{
+ "slug": "a-upgradenet-com-x402-base-block",
+ "name": "a-un: Base Latest Block: current Base mainnet block number, timestamp, base",
+ "seller": "a-un",
+ "host": "a-upgradenet.com",
+ "provider": "https://a-upgradenet.com",
+ "description": "Base Latest Block: current Base mainnet block number, timestamp, base fee and gas used. $0.001 per call.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "base",
+  "blockchain",
+  "block",
+  "onchain",
+  "rpc"
+ ],
+ "endpoint": "https://a-upgradenet.com/x402/base-block",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xBdae34e121dFf6Da6fbB71208322E8BE0A923512",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 900,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"base_fee_gwei\":\"0.004\",\"block_number\":\"21000000\",\"chain\":\"base\",\"chain_id\":8453,\"gas_used\":\"12000000\",\"iso_time\":\"2026-10-13T00:00:00.000Z\",\"status\":\"completed\",\"timestamp\":1760000000,\"tx_count\":180}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://a-upgradenet.com/llms.txt",
+ "docsChecked": 1793609277961,
+ "payers30d": 10,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-01T06:53:48.536Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 505,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 505,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/a-upgradenet-com-x402-base-block",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://a-upgradenet.com/x402/base-block' -H 'content-type: application/json' -d '{}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20a-upgradenet-com-x402-base-block&body=%7B%22slug%22%3A%22a-upgradenet-com-x402-base-block%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: a-upgradenet-com-x402-base-block\",\"body\":\"{\\\"slug\\\":\\\"a-upgradenet-com-x402-base-block\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=a-un%3A%20Base%20Latest%20Block%3A%20current%20Base%20mainnet%20block%20number%2C%20timestamp%2C%20base&seller=https%3A%2F%2Fa-upgradenet.com%2Fx402%2Fbase-block"
+}

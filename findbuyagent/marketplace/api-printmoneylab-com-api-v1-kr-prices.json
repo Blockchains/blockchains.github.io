@@ -3,16 +3,19 @@
  "name": "Korean exchange prices (Upbit, Bithumb) for a single token in KRW",
  "seller": "api.printmoneylab.com",
  "host": "api.printmoneylab.com",
+ "provider": "https://api.printmoneylab.com",
  "description": "Korean exchange prices (Upbit, Bithumb) for a single token in KRW",
  "category": "Crypto & on-chain",
  "tags": [],
  "endpoint": "https://api.printmoneylab.com/api/v1/kr-prices",
  "method": "GET",
+ "payment": "x402",
  "priceUsd": 0.002,
  "amount": "2000",
  "payTo": "0xcF9223eCe895258dEa8D288AEBcf846Ab8E342fB",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
  "listedTermsMatch": true,
  "input": {
   "queryParams": {
@@ -20,21 +23,53 @@
    "symbol": "BTC"
   },
   "body": null,
-  "bodyType": null
+  "bodyType": null,
+  "headers": null
  },
+ "outputType": "json",
  "outputExample": "{\"data\":{\"bithumb\":{\"change_rate\":0.019,\"data_age_seconds\":0,\"exchange\":\"bithumb\",\"price_krw\":141950000,\"symbol\":\"BTC\",\"volume_24h\":987654.32},\"upbit\":{\"change_rate\":0.02,\"data_age_seconds\":0,\"exchange\":\"upbit\",\"price_krw\":142000000,\"symbol\":\"BTC\",\"volume_24h\":1234567.89}},\"symbol\":\"BTC\",\"timestamp\":1776340000000}",
+ "outputSchema": null,
+ "iconUrl": null,
  "docs": "https://api.printmoneylab.com/llms.txt",
  "docsChecked": 1793596018346,
  "payers30d": 46,
- "calls30d": 70,
+ "calls30d": 71,
+ "lastCalledAt": "2026-11-02T03:26:10.723Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 381,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 406,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 406,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/api-printmoneylab-com-api-v1-kr-prices",
  "rating": null,
+ "related": [
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas",
+  "agent402-tools-api-perp-funding"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.printmoneylab.com/api/v1/kr-prices?exchange=all&symbol=BTC'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-printmoneylab-com-api-v1-kr-prices&body=%7B%22slug%22%3A%22api-printmoneylab-com-api-v1-kr-prices%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-printmoneylab-com-api-v1-kr-prices\",\"body\":\"{\\\"slug\\\":\\\"api-printmoneylab-com-api-v1-kr-prices\\\",\\\"stars\\\":1-5}\"}"

@@ -1,0 +1,83 @@
+{
+ "slug": "www-x402financialdata-com-crypto-prices",
+ "name": "Crypto Market Data: Real crypto market data in one batched call: price, market cap, market",
+ "seller": "Crypto Market Data",
+ "host": "www.x402financialdata.com",
+ "provider": "https://www.x402financialdata.com",
+ "description": "Real crypto market data in one batched call: price, market cap, market-cap rank, 24h volume/high/low/change, circulating/total/max supply, and all-time-high with date -- for BTC, ETH, SOL, and 17+ other major coins by ticker. Richer than a plain price feed: most stock-data APIs' crypto tickers report null market cap. From CoinGecko. $0.005/call.",
+ "category": "Finance & markets",
+ "tags": [
+  "crypto",
+  "bitcoin",
+  "ethereum",
+  "solana",
+  "market-cap"
+ ],
+ "endpoint": "https://www.x402financialdata.com/crypto-prices",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xe4181c7de066959bcca010525304ba68a84768e0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "symbols": "BTC,ETH,SOL"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"as_of\":\"2026-07-30\",\"coins\":[{\"ath\":126080,\"ath_change_pct\":-49.1701,\"ath_date\":\"2025-10-06T10:57:42.000Z\",\"change_24h\":253.14,\"change_24h_pct\":0.7,\"circulating_supply\":20063068,\"coingecko_id\":\"bitcoin\",\"high_24h\":64660,\"last_updated\":\"2026-07-30T03:40:20.000Z\",\"low_24h\":63247,\"market_cap\":1285707905419,\"market_cap_rank\":1,\"max_supply\":21000000,\"name\":\"Bitcoin\",\"price\":64086,\"symbol\":\"BTC\",\"total_supply\":20063103,\"volume_24h\":28246728640}],\"errors\":[],\"source\":\"coingecko\",\"vs_currency\":\"usd\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609279122,
+ "payers30d": 9,
+ "calls30d": 80,
+ "lastCalledAt": "2026-11-02T05:18:37.855Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 666,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 666,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/www-x402financialdata-com-crypto-prices",
+ "rating": null,
+ "related": [
+  "tick-hugen-tokyo-tick-latest",
+  "tick-hugen-tokyo-tick-symbols",
+  "tick-hugen-tokyo-tick-all",
+  "deskfeed-dev-v1-events",
+  "agentshield-live-fx",
+  "4yearcycle-com-x402-fx-rates"
+ ],
+ "example": {
+  "curl": "curl -i 'https://www.x402financialdata.com/crypto-prices?symbols=BTC%2CETH%2CSOL'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-x402financialdata-com-crypto-prices&body=%7B%22slug%22%3A%22www-x402financialdata-com-crypto-prices%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-x402financialdata-com-crypto-prices\",\"body\":\"{\\\"slug\\\":\\\"www-x402financialdata-com-crypto-prices\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Crypto%20Market%20Data%3A%20Real%20crypto%20market%20data%20in%20one%20batched%20call%3A%20price%2C%20market%20cap%2C%20market&seller=https%3A%2F%2Fwww.x402financialdata.com%2Fcrypto-prices"
+}

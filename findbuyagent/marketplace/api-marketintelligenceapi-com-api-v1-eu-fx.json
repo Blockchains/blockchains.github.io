@@ -1,0 +1,81 @@
+{
+ "slug": "api-marketintelligenceapi-com-api-v1-eu-fx",
+ "name": "Market Intelligence API: Euro exchange rates and forex reference rates ($0.001): official ECB e",
+ "seller": "Market Intelligence API",
+ "host": "api.marketintelligenceapi.com",
+ "provider": "https://api.marketintelligenceapi.com",
+ "description": "Euro exchange rates and forex reference rates ($0.001): official ECB euro rates for about 30 currencies (USD, GBP, JPY, CHF, CNY, ...) with the date and the change vs the previous fixing. Use for official FX conversion rates.",
+ "category": "Finance & markets",
+ "tags": [
+  "forex",
+  "fx",
+  "euro",
+  "ecb",
+  "exchange rates"
+ ],
+ "endpoint": "https://api.marketintelligenceapi.com/api/v1/eu/fx",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x48d5A78d480B4C32dE319C2aEF69e682Dc304615",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"base\":\"EUR\",\"date\":\"2026-09-25\",\"rates\":[{\"changePercent\":-0.214,\"currency\":\"USD\",\"pair\":\"EURUSD\",\"rate\":1.1712}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.marketintelligenceapi.com/llms.txt",
+ "docsChecked": 1793609275564,
+ "payers30d": 11,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-02T03:47:22.819Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 121,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 121,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-marketintelligenceapi-com-api-v1-eu-fx",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.marketintelligenceapi.com/api/v1/eu/fx'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-marketintelligenceapi-com-api-v1-eu-fx&body=%7B%22slug%22%3A%22api-marketintelligenceapi-com-api-v1-eu-fx%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-marketintelligenceapi-com-api-v1-eu-fx\",\"body\":\"{\\\"slug\\\":\\\"api-marketintelligenceapi-com-api-v1-eu-fx\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Market%20Intelligence%20API%3A%20Euro%20exchange%20rates%20and%20forex%20reference%20rates%20(%240.001)%3A%20official%20ECB%20e&seller=https%3A%2F%2Fapi.marketintelligenceapi.com%2Fapi%2Fv1%2Feu%2Ffx"
+}

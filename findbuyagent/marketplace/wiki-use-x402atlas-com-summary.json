@@ -1,0 +1,84 @@
+{
+ "slug": "wiki-use-x402atlas-com-summary",
+ "name": "Wikipedia Article Summary: Wikipedia article summary — plain-text and HTML extract, short descrip",
+ "seller": "Wikipedia Article Summary",
+ "host": "wiki.use.x402atlas.com",
+ "provider": "https://wiki.use.x402atlas.com",
+ "description": "Wikipedia article summary — plain-text and HTML extract, short description, thumbnail and Wikidata id for any title, in a clean normalized envelope with CC-BY-SA attribution.",
+ "category": "AI & LLM",
+ "tags": [
+  "wikipedia",
+  "summary",
+  "encyclopedia",
+  "knowledge",
+  "extract"
+ ],
+ "endpoint": "https://wiki.use.x402atlas.com/summary",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x6A706D6Fcf192C15fB592d7502258Ed41425DD36",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "redirect": "true",
+   "title": "Albert Einstein"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"attribution\":{\"license\":\"CC BY-SA 4.0\",\"license_url\":\"https://creativecommons.org/licenses/by-sa/4.0/\",\"source_url\":\"https://en.wikipedia.org/wiki/Albert_Einstein\",\"text\":\"\\\"Albert Einstein\\\" by Wikipedia contributors, licensed under CC BY-SA 4.0.\"},\"content_url\":\"https://en.wikipedia.org/wiki/Albert_Einstein\",\"description\":\"German-born theoretical physicist (1879–1955)\",\"extract\":\"Albert Einstein was a German-born theoretical physicist who is widely held to be one of the greatest and most influential scientists of all time...\",\"lang\":\"en\",\"queried_at\":\"2026-07-06T12:00:00Z\",\"title\":\"Albert Einstein\",\"type\":\"standard\",\"wikibase_item\":\"Q937\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://wiki.use.x402atlas.com/llms.txt",
+ "docsChecked": 1793609269501,
+ "payers30d": 18,
+ "calls30d": 64,
+ "lastCalledAt": "2026-11-01T23:12:32.081Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 514,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 514,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/wiki-use-x402atlas-com-summary",
+ "rating": null,
+ "related": [
+  "imagegen-coinopai-com-prompt-styles",
+  "x402-forgemesh-io-the-daily-402",
+  "agentshield-live-iban",
+  "trust402-vercel-app-api-trust-check-x402",
+  "ads-forgemesh-io-api-network-stats",
+  "agentshield-live-holiday"
+ ],
+ "example": {
+  "curl": "curl -i 'https://wiki.use.x402atlas.com/summary?redirect=true&title=Albert+Einstein'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20wiki-use-x402atlas-com-summary&body=%7B%22slug%22%3A%22wiki-use-x402atlas-com-summary%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: wiki-use-x402atlas-com-summary\",\"body\":\"{\\\"slug\\\":\\\"wiki-use-x402atlas-com-summary\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Wikipedia%20Article%20Summary%3A%20Wikipedia%20article%20summary%20%E2%80%94%20plain-text%20and%20HTML%20extract%2C%20short%20descrip&seller=https%3A%2F%2Fwiki.use.x402atlas.com%2Fsummary"
+}

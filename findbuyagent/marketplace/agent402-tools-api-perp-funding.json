@@ -1,0 +1,84 @@
+{
+ "slug": "agent402-tools-api-perp-funding",
+ "name": "Perp funding rate and history: Current and historical funding rate for one perpetual futures market,",
+ "seller": "Perp funding rate and history",
+ "host": "agent402.tools",
+ "provider": "https://agent402.tools",
+ "description": "Current and historical funding rate for one perpetual futures market, from a live derivatives venue: hourly rate, the 8-hour and annualized equivalents, the mark-vs-oracle premium, and a window of past prints with average, minimum, maximum and the share that were positive. Use it when an agent needs to know what holding a leveraged position costs right now, or wants to detect a funding regime flip before sizing a trade.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto",
+  "derivatives",
+  "perpetuals",
+  "funding",
+  "funding-history"
+ ],
+ "endpoint": "https://agent402.tools/api/perp-funding",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xaBF4FAbd7c416fB67202E5f9002389Fc75e2a9D0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "coin": "BTC",
+   "limit": 24
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"coin\":\"BTC\",\"current\":{\"aprPct\":10.95,\"hourly\":0.0000125,\"per8h\":0.0001,\"premiumPct\":0.0388},\"fetchedAt\":\"2026-08-22T12:00:00.000Z\",\"history\":[{\"fundingRate\":0.0000125,\"premium\":0.00043,\"time\":\"2026-08-22T11:00:00.000Z\"}],\"markPx\":77267,\"source\":\"hyperliquid\",\"stats\":{\"avgAprPct\":10.95,\"avgHourly\":0.0000125,\"avgPer8h\":0.0001,\"maxHourly\":0.0000125,\"minHourly\":0.0000125,\"points\":24,\"positiveSharePct\":100}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1787497819/bazaar-icons/478aced8e219894c.png",
+ "docs": "https://agent402.tools/llms.txt",
+ "docsChecked": 1793609269250,
+ "payers30d": 16,
+ "calls30d": 1037,
+ "lastCalledAt": "2026-11-02T03:36:25.678Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 139,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 139,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agent402-tools-api-perp-funding",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://agent402.tools/api/perp-funding' -H 'content-type: application/json' -d '{\"coin\":\"BTC\",\"limit\":24}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agent402-tools-api-perp-funding&body=%7B%22slug%22%3A%22agent402-tools-api-perp-funding%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agent402-tools-api-perp-funding\",\"body\":\"{\\\"slug\\\":\\\"agent402-tools-api-perp-funding\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Perp%20funding%20rate%20and%20history%3A%20Current%20and%20historical%20funding%20rate%20for%20one%20perpetual%20futures%20market%2C&seller=https%3A%2F%2Fagent402.tools%2Fapi%2Fperp-funding"
+}

@@ -1,0 +1,81 @@
+{
+ "slug": "energy-halowerk-com-price-spot",
+ "name": "HALOWERK Energy: Trading and dispatch agents buy this endpoint to obtain the current Ge",
+ "seller": "HALOWERK Energy",
+ "host": "energy.halowerk.com",
+ "provider": "https://energy.halowerk.com",
+ "description": "Trading and dispatch agents buy this endpoint to obtain the current German EPEX spot price for immediate decisions.",
+ "category": "Finance & markets",
+ "tags": [
+  "compute-scheduling",
+  "depin-workloads",
+  "carbon-aware-compute",
+  "battery-dispatch",
+  "power-trading"
+ ],
+ "endpoint": "https://energy.halowerk.com/price/spot",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x2880EdfFF13100677Bf97A3CBdF3Bc34771C4E5E",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"current_price_ct_kwh\":\"13.96\",\"current_price_eur_mwh\":139.64,\"source\":\"EPEX DE/AT (aWATTar)\",\"timestamp\":\"2026-07-13T22:51:12.102Z\",\"valid_until\":\"2026-07-13T23:00:00.000Z\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://energy.halowerk.com/llms.txt",
+ "docsChecked": 1793609279218,
+ "payers30d": 9,
+ "calls30d": 23,
+ "lastCalledAt": "2026-10-31T18:43:28.373Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 244,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 244,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/energy-halowerk-com-price-spot",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://energy.halowerk.com/price/spot' -H 'content-type: application/json' -d '{}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20energy-halowerk-com-price-spot&body=%7B%22slug%22%3A%22energy-halowerk-com-price-spot%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: energy-halowerk-com-price-spot\",\"body\":\"{\\\"slug\\\":\\\"energy-halowerk-com-price-spot\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=HALOWERK%20Energy%3A%20Trading%20and%20dispatch%20agents%20buy%20this%20endpoint%20to%20obtain%20the%20current%20Ge&seller=https%3A%2F%2Fenergy.halowerk.com%2Fprice%2Fspot"
+}

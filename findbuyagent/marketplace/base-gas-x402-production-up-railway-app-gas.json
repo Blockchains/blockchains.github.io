@@ -1,0 +1,83 @@
+{
+ "slug": "base-gas-x402-production-up-railway-app-gas",
+ "name": "base-gas-x402: Current gas price on Base and what a transaction costs in USD right no",
+ "seller": "base-gas-x402",
+ "host": "base-gas-x402-production.up.railway.app",
+ "provider": "https://base-gas-x402-production.up.railway.app",
+ "description": "Current gas price on Base and what a transaction costs in USD right now: base fee, priority tiers, ready-to-sign maxFeePerGas.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "gas",
+  "gas price",
+  "gas oracle",
+  "base",
+  "base-l2"
+ ],
+ "endpoint": "https://base-gas-x402-production.up.railway.app/gas",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x0D083590c048A243e24a75E3a7C968145DE25B44",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "gasLimit": 21000
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"baseFeePerGas\":\"0.005\",\"estimatedTransferCost\":{\"eth\":\"0.00000012621\",\"gasLimit\":21000,\"usd\":\"0.0003069\"},\"priorityFeePerGas\":{\"high\":\"0.0064\",\"low\":\"0.000486\",\"medium\":\"0.00101\"},\"suggestedFees\":{\"medium\":{\"maxFeePerGas\":\"11010000\",\"maxPriorityFeePerGas\":\"1010000\"},\"unit\":\"wei\"}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792766315/bazaar-icons/86f29c707672da7a.png",
+ "docs": null,
+ "docsChecked": 1793609269819,
+ "payers30d": 18,
+ "calls30d": 658,
+ "lastCalledAt": "2026-11-02T06:00:02.119Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 602,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 602,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/base-gas-x402-production-up-railway-app-gas",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "agent402-tools-api-perp-funding"
+ ],
+ "example": {
+  "curl": "curl -i 'https://base-gas-x402-production.up.railway.app/gas?gasLimit=21000'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20base-gas-x402-production-up-railway-app-gas&body=%7B%22slug%22%3A%22base-gas-x402-production-up-railway-app-gas%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: base-gas-x402-production-up-railway-app-gas\",\"body\":\"{\\\"slug\\\":\\\"base-gas-x402-production-up-railway-app-gas\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=base-gas-x402%3A%20Current%20gas%20price%20on%20Base%20and%20what%20a%20transaction%20costs%20in%20USD%20right%20no&seller=https%3A%2F%2Fbase-gas-x402-production.up.railway.app%2Fgas"
+}

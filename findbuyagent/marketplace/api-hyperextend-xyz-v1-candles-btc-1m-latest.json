@@ -1,0 +1,84 @@
+{
+ "slug": "api-hyperextend-xyz-v1-candles-btc-1m-latest",
+ "name": "hyperextend: The most-recent N OHLCV candles (≤5000), in Hyperliquid's candleSnapsh",
+ "seller": "hyperextend",
+ "host": "api.hyperextend.xyz",
+ "provider": "https://api.hyperextend.xyz",
+ "description": "The most-recent N OHLCV candles (≤5000), in Hyperliquid's candleSnapshot shape. Same per-row pricing as the windowed read ($0.00001 base for main/spot, $0.000025 premium for HIP-3/HIP-4); candles lag ~2 days.",
+ "category": "Data & analytics",
+ "tags": [
+  "hyperliquid",
+  "market-data",
+  "candles",
+  "open-interest",
+  "hip-3"
+ ],
+ "endpoint": "https://api.hyperextend.xyz/v1/candles/BTC/1m/latest",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x548fC289526ab2F0391D562a723cdA64Bbf1abc4",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "dex": "main",
+   "n": 100
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"T\":1700000059999,\"c\":\"42080.0\",\"h\":\"42100.0\",\"i\":\"1m\",\"l\":\"41950.0\",\"n\":340,\"o\":\"42000.0\",\"s\":\"BTC\",\"t\":1700000000000,\"v\":\"12.5\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609267911,
+ "payers30d": 32,
+ "calls30d": 49,
+ "lastCalledAt": "2026-11-02T03:28:56.614Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 475,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 475,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-hyperextend-xyz-v1-candles-btc-1m-latest",
+ "rating": null,
+ "related": [
+  "api-oblique-markets-api-v1-paid-bazaar-pulse",
+  "rest-coincap-io-v3-agentfriendly-full-assets-by-slug",
+  "kaisha-api-hp-vladic-workers-dev-calendar-holidays",
+  "brasil-dados-api-onrender-com-cambio",
+  "jmt-x402-proxy-jmthomasofficial-workers-dev-v2-api-whois",
+  "nbu-navistri-com-v1-ovdp-auctions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.hyperextend.xyz/v1/candles/BTC/1m/latest?dex=main&n=100'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-hyperextend-xyz-v1-candles-btc-1m-latest&body=%7B%22slug%22%3A%22api-hyperextend-xyz-v1-candles-btc-1m-latest%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-hyperextend-xyz-v1-candles-btc-1m-latest\",\"body\":\"{\\\"slug\\\":\\\"api-hyperextend-xyz-v1-candles-btc-1m-latest\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=hyperextend%3A%20The%20most-recent%20N%20OHLCV%20candles%20(%E2%89%A45000)%2C%20in%20Hyperliquid's%20candleSnapsh&seller=https%3A%2F%2Fapi.hyperextend.xyz%2Fv1%2Fcandles%2FBTC%2F1m%2Flatest"
+}

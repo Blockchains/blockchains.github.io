@@ -3,37 +3,72 @@
  "name": "Agent-readiness scan of any public website: scores 0-100 on MCP server",
  "seller": "x402.asterpay.io",
  "host": "x402.asterpay.io",
+ "provider": "https://x402.asterpay.io",
  "description": "Agent-readiness scan of any public website: scores 0-100 on MCP server, /.well-known/agent.json, llms.txt, OpenAPI validity, JSON-LD catalog and x402/MPP payability. Same published methodology as the asterpay.io checker. Paid via x402.",
  "category": "Search & web",
  "tags": [],
  "endpoint": "https://x402.asterpay.io/v2/x402/agent-readiness",
  "method": "GET",
+ "payment": "x402",
  "priceUsd": 0.03,
  "amount": "30000",
  "payTo": "0xd5f8481D8F25d3966d2010DBf9B47fFbdf745A9E",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
  "listedTermsMatch": true,
  "input": {
   "queryParams": {
    "url": "example.com"
   },
   "body": null,
-  "bodyType": null
+  "bodyType": null,
+  "headers": null
  },
+ "outputType": "json",
  "outputExample": "{\"bucket\":\"partial\",\"mcp\":{\"detected\":false,\"verified\":false,\"via\":[]},\"openapi\":{\"security_schemes\":false,\"valid\":true},\"score\":60,\"signals\":{\"discoverable\":{\"earned\":25,\"weight\":25},\"llms\":{\"earned\":15,\"weight\":15}},\"top_gaps\":[{\"label\":\"Agents can't pay you yet\"}],\"url\":\"https://example.com/\"}",
+ "outputSchema": null,
+ "iconUrl": null,
  "docs": "https://x402.asterpay.io/llms.txt",
  "docsChecked": 1793596022379,
- "payers30d": 34,
- "calls30d": 34,
+ "payers30d": 35,
+ "calls30d": 35,
+ "lastCalledAt": "2026-11-02T03:05:10.67Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 143,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 135,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 135,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-asterpay-io-v2-x402-agent-readiness",
  "rating": null,
+ "related": [
+  "google-trends-use-x402atlas-com-related-queries",
+  "agent-connskill-com-v1-keyword-ideas",
+  "reddit-apitoll-cloud-v1-reddit-search",
+  "stabletravel-dev-api-google-flights-search",
+  "stabletravel-dev-api-seats-aero-search",
+  "api-kadec0-xyz-v1-papers"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.asterpay.io/v2/x402/agent-readiness?url=example.com'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-asterpay-io-v2-x402-agent-readiness&body=%7B%22slug%22%3A%22x402-asterpay-io-v2-x402-agent-readiness%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-asterpay-io-v2-x402-agent-readiness\",\"body\":\"{\\\"slug\\\":\\\"x402-asterpay-io-v2-x402-agent-readiness\\\",\\\"stars\\\":1-5}\"}"

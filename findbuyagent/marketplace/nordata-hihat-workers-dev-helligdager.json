@@ -1,0 +1,84 @@
+{
+ "slug": "nordata-hihat-workers-dev-helligdager",
+ "name": "Public Holidays and Workdays: Public holidays and business-day check for Norway and 200+ other count",
+ "seller": "Public Holidays and Workdays",
+ "host": "nordata.hihat.workers.dev",
+ "provider": "https://nordata.hihat.workers.dev",
+ "description": "Public holidays and business-day check for Norway and 200+ other countries, from the open-source Nager.Date holiday database. Without dato: every public and bank holiday of a year with local and English name and whether it is nationwide or regional. With dato: whether that date is a holiday or weekend, plus the next business day. Use it for deadline and SLA maths, delivery and payroll scheduling, or opening-hours logic. Compact JSON.",
+ "category": "Data & analytics",
+ "tags": [
+  "norway public holidays",
+  "helligdager",
+  "business day calculator",
+  "public holiday api",
+  "next working day"
+ ],
+ "endpoint": "https://nordata.hihat.workers.dev/helligdager",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xF00679CD8B440C8bd541fB2AAB1382E6fFd65A51",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "aar": "2026",
+   "land": "NO"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"aar\":2026,\"antall\":13,\"format\":\"helligdager = [dato, navn, navn_en, landsdekkende, regioner?]\",\"helligdager\":[[\"2026-01-01\",\"Første nyttårsdag\",\"New Year's Day\",true],[\"2026-04-02\",\"Skjærtorsdag\",\"Maundy Thursday\",true],[\"2026-04-03\",\"Langfredag\",\"Good Friday\",true],[\"2026-04-05\",\"Første påskedag\",\"Easter Sunday\",true],[\"2026-04-06\",\"Andre påskedag\",\"Easter Monday\",true],[\"2026-05-01\",\"Første mai\",\"Labour Day\",true],[\"2026-05-14\",\"Kristi himmelfartsdag\",\"Ascension Day\",true],[\"2026-05-17\",\"Syttende mai\",\"Constitution Day\",true]],\"hentet\":\"2026-10-22T12:00:00.000Z\",\"kilde\":\"date.nager.at\",\"land\":\"NO\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792679440/bazaar-icons/8de7d9353fcf6793.png",
+ "docs": "https://nordata.hihat.workers.dev/llms.txt",
+ "docsChecked": 1793609274041,
+ "payers30d": 12,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-01T07:07:04.111Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 63,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 63,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/nordata-hihat-workers-dev-helligdager",
+ "rating": null,
+ "related": [
+  "api-402rates-com-v1-ping",
+  "rubric-protocol-com-v1-x402-hedera-facts-exchange-rate",
+  "nbu-navistri-com-v1-rates",
+  "api-hyperextend-xyz-v1-liquidations-coverage",
+  "api-govparse-io-v1-stats-opportunities",
+  "http-forest-gas-station-mainnet-lcjl27p8lmjs-code-run-dns-changed"
+ ],
+ "example": {
+  "curl": "curl -i 'https://nordata.hihat.workers.dev/helligdager?aar=2026&land=NO'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20nordata-hihat-workers-dev-helligdager&body=%7B%22slug%22%3A%22nordata-hihat-workers-dev-helligdager%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: nordata-hihat-workers-dev-helligdager\",\"body\":\"{\\\"slug\\\":\\\"nordata-hihat-workers-dev-helligdager\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Public%20Holidays%20and%20Workdays%3A%20Public%20holidays%20and%20business-day%20check%20for%20Norway%20and%20200%2B%20other%20count&seller=https%3A%2F%2Fnordata.hihat.workers.dev%2Fhelligdager"
+}

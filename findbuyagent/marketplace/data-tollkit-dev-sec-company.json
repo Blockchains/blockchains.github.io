@@ -1,0 +1,84 @@
+{
+ "slug": "data-tollkit-dev-sec-company",
+ "name": "SEC Filings: 10-K, 10-Q, 8-K: SEC filings lookup: give a US stock ticker or CIK, get the company's r",
+ "seller": "SEC Filings: 10-K, 10-Q, 8-K",
+ "host": "data.tollkit.dev",
+ "provider": "https://data.tollkit.dev",
+ "description": "SEC filings lookup: give a US stock ticker or CIK, get the company's recent SEC EDGAR filings (10-K, 10-Q, 8-K and more) with links, plus its profile.",
+ "category": "Finance & markets",
+ "tags": [
+  "sec",
+  "filings",
+  "edgar",
+  "10-k",
+  "8-k"
+ ],
+ "endpoint": "https://data.tollkit.dev/sec/company",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x6b11C413f916eCFA846302ff05c171c3B497924e",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "limit": 5,
+   "ticker": "AAPL"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"business_address\":\"ONE APPLE PARK WAY, CUPERTINO, CA, 95014\",\"cik\":320193,\"edgar_url\":\"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=320193\",\"exchanges\":[\"Nasdaq\"],\"filer_category\":\"Large accelerated filer\",\"filter\":null,\"fiscal_year_end\":\"09-26\",\"industry\":\"Electronic Computers\",\"name\":\"Apple Inc.\",\"recent_filings\":[{\"accession\":\"0001958244-26-000636\",\"description\":null,\"filed\":\"2026-10-02\",\"form\":\"144\",\"report_date\":null,\"url\":\"https://www.sec.gov/Archives/edgar/data/320193/000195824426000636/xsl144X01/primary_doc.xml\"},{\"accession\":\"0001959173-26-007235\",\"description\":null,\"filed\":\"2026-10-02\",\"form\":\"144\",\"report_date\":null,\"url\":\"https://www.sec.gov/Archives/edgar/data/320193/000195917326007235/xsl144X01/primary_doc.xml\"}],\"sic\":\"3571\",\"source\":\"U.S. Securities and Exchange Commission, EDGAR (data.sec.gov)\",\"state_of_incorporation\":\"CA\",\"tickers\":[\"AAPL\"],\"website\":null}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791089541/bazaar-icons/6490ef4ad700a0e0.png",
+ "docs": "https://data.tollkit.dev/llms.txt",
+ "docsChecked": 1793609269285,
+ "payers30d": 16,
+ "calls30d": 20,
+ "lastCalledAt": "2026-10-31T11:39:31.833Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 49,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 49,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/data-tollkit-dev-sec-company",
+ "rating": null,
+ "related": [
+  "mcp-blocksize-info-v1-bidask-btc-usd",
+  "intel-degenscan-io-v1-oracle-board",
+  "toolcall-click-t-fx-rates",
+  "api-sitecheck-api-workers-dev-api-fx",
+  "br-intelligence-brverify-api-workers-dev-v1-ptax",
+  "api-sitecheck-api-workers-dev-api-macro"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://data.tollkit.dev/sec/company' -H 'content-type: application/json' -d '{\"limit\":5,\"ticker\":\"AAPL\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20data-tollkit-dev-sec-company&body=%7B%22slug%22%3A%22data-tollkit-dev-sec-company%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: data-tollkit-dev-sec-company\",\"body\":\"{\\\"slug\\\":\\\"data-tollkit-dev-sec-company\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SEC%20Filings%3A%2010-K%2C%2010-Q%2C%208-K%3A%20SEC%20filings%20lookup%3A%20give%20a%20US%20stock%20ticker%20or%20CIK%2C%20get%20the%20company's%20r&seller=https%3A%2F%2Fdata.tollkit.dev%2Fsec%2Fcompany"
+}

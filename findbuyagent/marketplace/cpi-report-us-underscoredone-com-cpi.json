@@ -1,0 +1,83 @@
+{
+ "slug": "cpi-report-us-underscoredone-com-cpi",
+ "name": "US CPI Data & Inflation Report: Gives you official United States inflation numbers from the government",
+ "seller": "US CPI Data & Inflation Report",
+ "host": "cpi-report-us.underscoredone.com",
+ "provider": "https://cpi-report-us.underscoredone.com",
+ "description": "Gives you official United States inflation numbers from the government's BLS Consumer Price Index. Ask for the newest reading, a specific month in the past, or a whole range of months, and get back clear percentages for overall inflation and 'core' inflation (which ignores food and energy prices), plus a plain-English summary sentence.",
+ "category": "Data & analytics",
+ "tags": [
+  "data",
+  "cpi",
+  "inflation",
+  "consumer price index",
+  "bls"
+ ],
+ "endpoint": "https://cpi-report-us.underscoredone.com/cpi",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0xE9740820225B3918b4ddd1292C7cA4Ca0e2C2F08",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "period": "2024-03"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"api_version\":\"1.0.0\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609277898,
+ "payers30d": 10,
+ "calls30d": 10,
+ "lastCalledAt": "2026-10-28T22:54:19.903Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 74,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 74,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/cpi-report-us-underscoredone-com-cpi",
+ "rating": null,
+ "related": [
+  "ip402-xyz-v1-geo",
+  "api-polyform-org-v1-threat-scanners",
+  "insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard",
+  "fuelscout-scalpstream-com-fuel",
+  "quantagentshop-com-v1-ip-geo",
+  "quantagentshop-com-v1-domain-lookup"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://cpi-report-us.underscoredone.com/cpi' -H 'content-type: application/json' -d '{\"period\":\"2024-03\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20cpi-report-us-underscoredone-com-cpi&body=%7B%22slug%22%3A%22cpi-report-us-underscoredone-com-cpi%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: cpi-report-us-underscoredone-com-cpi\",\"body\":\"{\\\"slug\\\":\\\"cpi-report-us-underscoredone-com-cpi\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=US%20CPI%20Data%20%26%20Inflation%20Report%3A%20Gives%20you%20official%20United%20States%20inflation%20numbers%20from%20the%20government&seller=https%3A%2F%2Fcpi-report-us.underscoredone.com%2Fcpi"
+}

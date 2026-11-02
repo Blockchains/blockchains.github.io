@@ -1,0 +1,79 @@
+{
+ "slug": "rubric-protocol-com-v1-x402-agent-record-rubric-assert",
+ "name": "TenPrint: Unforgeable operating history for any AI agent attesting through TenPr",
+ "seller": "TenPrint",
+ "host": "rubric-protocol.com",
+ "provider": "https://rubric-protocol.com",
+ "description": "Unforgeable operating history for any AI agent attesting through TenPrint: record count, first-seen date, continuity days, and recent activity, computed from HCS-anchored attestations that cannot be backdated.",
+ "category": "AI & LLM",
+ "tags": [
+  "reputation",
+  "agent",
+  "diligence"
+ ],
+ "endpoint": "https://rubric-protocol.com/v1/x402/agent-record/rubric-assert",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xaB6731A0BcDf511c2842C768a03448075aB654ca",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"agentId\":\"rubric-assert\",\"continuityDays\":11,\"operator\":\"TenPrint\",\"paid\":true,\"recordCount\":3993,\"settled\":true,\"success\":true,\"vsr\":{\"hashProfile\":\"vsr/v0.4/sha3-256\",\"spec\":\"https://rubric-protocol.com/specs/vsr-v0.4.md\",\"vsrVersion\":\"0.4-draft\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://rubric-protocol.com/llms.txt",
+ "docsChecked": 1793609278987,
+ "payers30d": 9,
+ "calls30d": 41,
+ "lastCalledAt": "2026-11-01T23:15:38.798Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 561,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 561,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/rubric-protocol-com-v1-x402-agent-record-rubric-assert",
+ "rating": null,
+ "related": [
+  "wiki-use-x402atlas-com-summary",
+  "imagegen-coinopai-com-prompt-styles",
+  "x402-forgemesh-io-the-daily-402",
+  "agentshield-live-iban",
+  "trust402-vercel-app-api-trust-check-x402",
+  "ads-forgemesh-io-api-network-stats"
+ ],
+ "example": {
+  "curl": "curl -i 'https://rubric-protocol.com/v1/x402/agent-record/rubric-assert'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20rubric-protocol-com-v1-x402-agent-record-rubric-assert&body=%7B%22slug%22%3A%22rubric-protocol-com-v1-x402-agent-record-rubric-assert%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: rubric-protocol-com-v1-x402-agent-record-rubric-assert\",\"body\":\"{\\\"slug\\\":\\\"rubric-protocol-com-v1-x402-agent-record-rubric-assert\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=TenPrint%3A%20Unforgeable%20operating%20history%20for%20any%20AI%20agent%20attesting%20through%20TenPr&seller=https%3A%2F%2Frubric-protocol.com%2Fv1%2Fx402%2Fagent-record%2Frubric-assert"
+}

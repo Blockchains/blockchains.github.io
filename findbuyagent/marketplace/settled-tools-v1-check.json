@@ -1,0 +1,83 @@
+{
+ "slug": "settled-tools-v1-check",
+ "name": "Settled: Price: $0.002 in USDC on Base",
+ "seller": "Settled",
+ "host": "settled.tools",
+ "provider": "https://settled.tools",
+ "description": "Price: $0.002 in USDC on Base. Signed check of an x402 endpoint before you pay it: who really pays it on Base (settlements and unique payers over 30 days), a fresh unpaid probe (cached ≤5 min) with status, latency and the parsed quote, payability, paying agents' reports, the seller's claim, the scout's last real purchase (settlement transaction and whether it matched the listing), a quality score and risk flags. Free up to 300 calls a day per client at /v1/free/check.",
+ "category": "Data & analytics",
+ "tags": [
+  "x402",
+  "reputation",
+  "settlement-integrity",
+  "verification",
+  "monitoring"
+ ],
+ "endpoint": "https://settled.tools/v1/check",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xb92bb76e3c5575160a2a561913047727d33af9a6",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "url": "https://api.example.com/search"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asset\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\"cached\":false,\"checked_at\":\"2026-09-25T15:10:00.000Z\",\"delivery_verified\":true,\"flags\":[],\"http_status_last\":402,\"last_delivery_at\":\"2026-09-24T09:00:00.000Z\",\"last_ok_at\":\"2026-09-25T15:10:00.000Z\",\"latency_ms\":412,\"network\":\"eip155:8453\",\"ok_count\":14,\"onchain\":{\"last_settlement_at\":\"2026-09-25T14:02:00.000Z\",\"settlements_30d\":1840,\"status\":\"ok\",\"unique_payers_30d\":63,\"window\":{\"days\":30}},\"pay_to\":\"0x52E29e0d2Aa49bfBfC548C0A9F2196F4aa51f3ea\",\"payability\":{\"declared_verb\":\"GET\",\"payable_verb\":\"GET\",\"verdict\":\"delivered\"},\"price_usd\":0.01,\"probe_count\":14,\"quality\":{\"activity\":14,\"delivery\":15,\"latency\":10,\"liveness\":40,\"schema\":12,\"total\":91},\"reports\":{\"counts\":true,\"failed\":0,\"wallets\":4,\"worked\":4},\"schema_score\":0.8,\"status\":\"live\",\"url\":\"https://api.example.com/search\",\"x402_version\":2}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://settled.tools/llms.txt",
+ "docsChecked": 1793609280466,
+ "payers30d": 9,
+ "calls30d": 15,
+ "lastCalledAt": "2026-11-01T13:00:59.801Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 447,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 447,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/settled-tools-v1-check",
+ "rating": null,
+ "related": [
+  "api-hyperextend-xyz-v1-candles-btc-1m-latest",
+  "api-oblique-markets-api-v1-paid-bazaar-pulse",
+  "rest-coincap-io-v3-agentfriendly-full-assets-by-slug",
+  "kaisha-api-hp-vladic-workers-dev-calendar-holidays",
+  "brasil-dados-api-onrender-com-cambio",
+  "jmt-x402-proxy-jmthomasofficial-workers-dev-v2-api-whois"
+ ],
+ "example": {
+  "curl": "curl -i 'https://settled.tools/v1/check?url=https%3A%2F%2Fapi.example.com%2Fsearch'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20settled-tools-v1-check&body=%7B%22slug%22%3A%22settled-tools-v1-check%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: settled-tools-v1-check\",\"body\":\"{\\\"slug\\\":\\\"settled-tools-v1-check\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Settled%3A%20Price%3A%20%240.002%20in%20USDC%20on%20Base&seller=https%3A%2F%2Fsettled.tools%2Fv1%2Fcheck"
+}

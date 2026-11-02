@@ -1,0 +1,83 @@
+{
+ "slug": "2s-io-api-stocks-metrics",
+ "name": "2s: Key fundamental metrics and 52-week price statistics for a US-listed c",
+ "seller": "2s",
+ "host": "2s.io",
+ "provider": "https://2s.io",
+ "description": "Key fundamental metrics and 52-week price statistics for a US-listed company. Pass ticker; returns headline valuation, margin, and per-share figures — P/E, P/B, P/S, PEG, EV/EBITDA, gross/operating/net margins, ROE, ROA, current ratio, debt/equity, dividend yield, beta, 52-week high/low, and YTD/52-week price returns — plus the full Finnhub metric map under `metric`. Computed ratios you would otherwise derive yourself from raw filings. Market & fundamental data by Finnhub.",
+ "category": "Weather & geo",
+ "tags": [
+  "public-records",
+  "identifiers",
+  "ai-agents",
+  "us-gov-data",
+  "x402"
+ ],
+ "endpoint": "https://2s.io/api/stocks/metrics",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.0025,
+ "amount": "2500",
+ "payTo": "0x2b6D4988Db4723E6908Db86Ab2b8dFBc51FC32C5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "ticker": "AAPL"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1782067076/bazaar-icons/58f7ba8f2b3b8047.png",
+ "docs": "https://2s.io/llms.txt",
+ "docsChecked": 1793609273942,
+ "payers30d": 12,
+ "calls30d": 41,
+ "lastCalledAt": "2026-11-01T12:43:10.29Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 399,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 399,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/2s-io-api-stocks-metrics",
+ "rating": null,
+ "related": [
+  "netintel-dev-weather-current",
+  "horizonpulse-dev-api-pulse",
+  "horizonpulse-dev-api-gas",
+  "weather-cyberwarex-com-forecast",
+  "apiacre-com-v1-data-timezone-convert",
+  "agentsvc-io-api-v1-proxy-weather"
+ ],
+ "example": {
+  "curl": "curl -i 'https://2s.io/api/stocks/metrics?ticker=AAPL'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%202s-io-api-stocks-metrics&body=%7B%22slug%22%3A%222s-io-api-stocks-metrics%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: 2s-io-api-stocks-metrics\",\"body\":\"{\\\"slug\\\":\\\"2s-io-api-stocks-metrics\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=2s%3A%20Key%20fundamental%20metrics%20and%2052-week%20price%20statistics%20for%20a%20US-listed%20c&seller=https%3A%2F%2F2s.io%2Fapi%2Fstocks%2Fmetrics"
+}

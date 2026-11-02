@@ -1,0 +1,77 @@
+{
+ "slug": "api-vindexapi-dev-v1-decode",
+ "name": "Normalized NHTSA vPIC VIN decode (?vin=) — make/model/year/engine/body",
+ "seller": "api.vindexapi.dev",
+ "host": "api.vindexapi.dev",
+ "provider": "https://api.vindexapi.dev",
+ "description": "Normalized NHTSA vPIC VIN decode (?vin=) — make/model/year/engine/body/… with fetch provenance, plus ORIGINAL factory new-vehicle warranty terms (basic/powertrain/corrosion/roadside/EV battery) keyed off make + model-year.",
+ "category": "AI & LLM",
+ "tags": [],
+ "endpoint": "https://api.vindexapi.dev/v1/decode",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x444731dac7c9cde478147f41e621a064fcbe70f2",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "vin": "1FTFW1ET5DFC10312"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"charged\":true,\"provenance\":{\"cache\":\"miss\",\"source\":\"nhtsa-vpic\"},\"vehicle\":{\"bodyClass\":\"Pickup\",\"make\":\"FORD\",\"model\":\"F-150\",\"year\":2013},\"vin\":\"1FTFW1ET5DFC10312\",\"warranty\":{\"basic\":{\"miles\":36000,\"years\":3},\"make\":\"FORD\",\"matched\":true,\"powertrain\":{\"miles\":60000,\"years\":5}}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.vindexapi.dev/llms.txt",
+ "docsChecked": 1793609278473,
+ "payers30d": 9,
+ "calls30d": 65,
+ "lastCalledAt": "2026-11-02T02:49:54.765Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 138,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 138,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-vindexapi-dev-v1-decode",
+ "rating": null,
+ "related": [
+  "www-getbags-app-api-v1",
+  "api-signalis-dev-v1-pulse-narratives",
+  "humanmirror-fr-api-x402-safe-preflight",
+  "x402-telnyx-com-v1-chat-completions-t-deepseek-v4-1-flash",
+  "wiki-use-x402atlas-com-summary",
+  "imagegen-coinopai-com-prompt-styles"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.vindexapi.dev/v1/decode?vin=1FTFW1ET5DFC10312'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-vindexapi-dev-v1-decode&body=%7B%22slug%22%3A%22api-vindexapi-dev-v1-decode%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-vindexapi-dev-v1-decode\",\"body\":\"{\\\"slug\\\":\\\"api-vindexapi-dev-v1-decode\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Normalized%20NHTSA%20vPIC%20VIN%20decode%20(%3Fvin%3D)%20%E2%80%94%20make%2Fmodel%2Fyear%2Fengine%2Fbody&seller=https%3A%2F%2Fapi.vindexapi.dev%2Fv1%2Fdecode"
+}

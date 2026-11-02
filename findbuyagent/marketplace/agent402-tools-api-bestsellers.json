@@ -1,0 +1,85 @@
+{
+ "slug": "agent402-tools-api-bestsellers",
+ "name": "Agent402 bestsellers: What agents actually pay for across a 500+ tool x402 catalog: the tool",
+ "seller": "Agent402 bestsellers",
+ "host": "agent402.tools",
+ "provider": "https://agent402.tools",
+ "description": "What agents actually pay for across a 500+ tool x402 catalog: the tools ranked by settled calls, distinct buyers and dollars over a window you choose, read from the seller's own sales ledger rather than the chain.",
+ "category": "Data & analytics",
+ "tags": [
+  "research",
+  "bestsellers",
+  "demand",
+  "market-intelligence",
+  "sales"
+ ],
+ "endpoint": "https://agent402.tools/api/bestsellers",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xaBF4FAbd7c416fB67202E5f9002389Fc75e2a9D0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "days": 30,
+   "limit": 10,
+   "sort": "buyers"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"bestsellers\":[{\"avgTicketUsd\":0.004,\"buyers\":6,\"deltaSales\":11,\"firstAt\":\"2026-07-05T11:00:00.000Z\",\"lastAt\":\"2026-07-14T09:30:00.000Z\",\"organicScore\":0.4286,\"prevSales\":3,\"rank\":1,\"revenueShare\":0.0966,\"revenueUsd\":0.056,\"sales\":14,\"slug\":\"vin-decode\",\"trend\":\"rising\"}],\"days\":30,\"generatedAt\":\"2026-07-16T00:00:05.000Z\",\"limit\":10,\"note\":\"External paid demand only - canary/burner/heartbeat traffic excluded at the source.\",\"persistent\":true,\"recordingSince\":\"2026-07-04T00:00:00.000Z\",\"sort\":\"buyers\",\"totals\":{\"distinctTools\":12,\"revenueUsd\":0.58,\"sales\":63}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1784423094/bazaar-icons/478aced8e219894c.png",
+ "docs": "https://agent402.tools/llms.txt",
+ "docsChecked": 1793609269301,
+ "payers30d": 16,
+ "calls30d": 32,
+ "lastCalledAt": "2026-11-02T05:53:59.463Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 98,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 98,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agent402-tools-api-bestsellers",
+ "rating": null,
+ "related": [
+  "www-robbiegeorgephotography-com-v1-query-atomic-robbie-george-biograph",
+  "dns-use-x402atlas-com-a",
+  "api-hyperextend-xyz-v1-asset-ctx-btc-latest",
+  "api-mekler-ai-v1-email-domains-check-mail-configuration",
+  "quantagentshop-com-v1-ip-geo",
+  "quantagentshop-com-v1-domain-lookup"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agent402.tools/api/bestsellers?days=30&limit=10&sort=buyers'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agent402-tools-api-bestsellers&body=%7B%22slug%22%3A%22agent402-tools-api-bestsellers%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agent402-tools-api-bestsellers\",\"body\":\"{\\\"slug\\\":\\\"agent402-tools-api-bestsellers\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent402%20bestsellers%3A%20What%20agents%20actually%20pay%20for%20across%20a%20500%2B%20tool%20x402%20catalog%3A%20the%20tool&seller=https%3A%2F%2Fagent402.tools%2Fapi%2Fbestsellers"
+}

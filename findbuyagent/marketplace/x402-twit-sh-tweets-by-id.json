@@ -1,0 +1,77 @@
+{
+ "slug": "x402-twit-sh-tweets-by-id",
+ "name": "Look up a single Twitter/X tweet by its numeric tweet ID. Returns full",
+ "seller": "x402.twit.sh",
+ "host": "x402.twit.sh",
+ "provider": "https://x402.twit.sh",
+ "description": "Look up a single Twitter/X tweet by its numeric tweet ID. Returns full tweet data including text, author profile, creation date, engagement metrics (likes, retweets, replies, quotes, bookmarks), and referenced tweets. Query param: id (string, required) - numeric tweet ID, e.g. GET /tweets/by/id?id=1110302988. Returns X v2 API-compatible JSON.",
+ "category": "Search & web",
+ "tags": [],
+ "endpoint": "https://x402.twit.sh/tweets/by/id",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.0025,
+ "amount": "2500",
+ "payTo": "0x9dBA414637c611a16BEa6f0796BFcbcBdc410df8",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "id": "1110302988"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"author\":{\"id\":\"9253672\",\"name\":\"Hal Finney\",\"username\":\"halfin\"},\"created_at\":\"2009-01-11T03:39:18.000Z\",\"id\":\"1110302988\",\"public_metrics\":{\"like_count\":134000,\"quote_count\":3500,\"reply_count\":5400,\"retweet_count\":32000},\"text\":\"Running bitcoin\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402.twit.sh/.well-known/x402",
+ "docsChecked": 1793609272474,
+ "payers30d": 12,
+ "calls30d": 663,
+ "lastCalledAt": "2026-11-02T02:57:41.788Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 126,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 126,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-twit-sh-tweets-by-id",
+ "rating": null,
+ "related": [
+  "2s-io-api-stocks-company-news",
+  "hirescrape-com-api-tools-tiktok",
+  "blockrun-ai-api-v1-exa-contents",
+  "search-cyberwarex-com-search",
+  "netintel-dev-web-extract",
+  "agent-tools-production-e6aa-up-railway-app-v1-extract"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.twit.sh/tweets/by/id?id=1110302988'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-twit-sh-tweets-by-id&body=%7B%22slug%22%3A%22x402-twit-sh-tweets-by-id%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-twit-sh-tweets-by-id\",\"body\":\"{\\\"slug\\\":\\\"x402-twit-sh-tweets-by-id\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Look%20up%20a%20single%20Twitter%2FX%20tweet%20by%20its%20numeric%20tweet%20ID.%20Returns%20full&seller=https%3A%2F%2Fx402.twit.sh%2Ftweets%2Fby%2Fid"
+}

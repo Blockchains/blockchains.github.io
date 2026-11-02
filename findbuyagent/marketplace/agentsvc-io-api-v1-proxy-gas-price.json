@@ -1,0 +1,87 @@
+{
+ "slug": "agentsvc-io-api-v1-proxy-gas-price",
+ "name": "Gas Price Tracker: Current gas prices on Ethereum, Base, Arbitrum, Optimism, Polygon, BNB",
+ "seller": "Gas Price Tracker",
+ "host": "agentsvc.io",
+ "provider": "https://agentsvc.io",
+ "description": "Current gas prices on Ethereum, Base, Arbitrum, Optimism, Polygon, BNB Chain and Avalanche: gas price, base fee, low/medium/high priority fee in gwei, native token USD price and estimated USD cost of an ETH transfer, ERC20 transfer and swap. Params: chains (optional list, default all).",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "gas-price",
+  "gas-fees",
+  "gas",
+  "fees",
+  "evm"
+ ],
+ "endpoint": "https://agentsvc.io/api/v1/proxy/gas-price",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x622efA6Ceb83a5b6EdBC931332f4db68B7f74F27",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "chains": [
+    "base",
+    "ethereum",
+    "arbitrum"
+   ]
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"chains\":[{\"base_fee_gwei\":0.005,\"chain\":\"base\",\"chain_id\":8453,\"est_cost_usd\":{\"erc20_transfer\":0.001057,\"eth_transfer\":0.000342,\"swap\":0.002927},\"gas_price_gwei\":0.006,\"native_token\":\"ETH\",\"native_usd\":2710.355,\"priority_fee_gwei\":{\"high\":0.007469,\"low\":0.00004,\"medium\":0.001059}},{\"base_fee_gwei\":0.854496,\"chain\":\"ethereum\",\"chain_id\":1,\"est_cost_usd\":{\"erc20_transfer\":0.155051,\"eth_transfer\":0.050093,\"swap\":0.429372},\"gas_price_gwei\":0.880105,\"native_token\":\"ETH\",\"native_usd\":2710.355,\"priority_fee_gwei\":{\"high\":12.90606,\"low\":0.2387,\"medium\":1.694767}}],\"checked_at\":\"2026-10-06T14:17:44.635Z\",\"note\":\"L2 costs exclude the L1 data fee, which can dominate on rollups.\"},\"success\":true}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791462963/bazaar-icons/243ff0b79dbee242.png",
+ "docs": "https://agentsvc.io/llms.txt",
+ "docsChecked": 1793609280159,
+ "payers30d": 9,
+ "calls30d": 19,
+ "lastCalledAt": "2026-11-01T07:43:12.429Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 545,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 545,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agentsvc-io-api-v1-proxy-gas-price",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://agentsvc.io/api/v1/proxy/gas-price' -H 'content-type: application/json' -d '{\"chains\":[\"base\",\"ethereum\",\"arbitrum\"]}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agentsvc-io-api-v1-proxy-gas-price&body=%7B%22slug%22%3A%22agentsvc-io-api-v1-proxy-gas-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agentsvc-io-api-v1-proxy-gas-price\",\"body\":\"{\\\"slug\\\":\\\"agentsvc-io-api-v1-proxy-gas-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Gas%20Price%20Tracker%3A%20Current%20gas%20prices%20on%20Ethereum%2C%20Base%2C%20Arbitrum%2C%20Optimism%2C%20Polygon%2C%20BNB&seller=https%3A%2F%2Fagentsvc.io%2Fapi%2Fv1%2Fproxy%2Fgas-price"
+}

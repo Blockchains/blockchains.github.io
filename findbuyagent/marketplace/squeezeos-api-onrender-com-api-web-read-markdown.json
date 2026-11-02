@@ -1,0 +1,85 @@
+{
+ "slug": "squeezeos-api-onrender-com-api-web-read-markdown",
+ "name": "SCRIPTMASTERLABS: URL to Markdown API and converter for AI agents — convert any public H",
+ "seller": "SCRIPTMASTERLABS",
+ "host": "squeezeos-api.onrender.com",
+ "provider": "https://squeezeos-api.onrender.com",
+ "description": "URL to Markdown API and converter for AI agents — convert any public HTTPS URL to clean Markdown, HTML-to-text, and LLM-ready web content with no separate scraper account or API key.",
+ "category": "Search & web",
+ "tags": [
+  "scriptmasterlabs",
+  "x402",
+  "mcp",
+  "openapi",
+  "agent-commerce"
+ ],
+ "endpoint": "https://squeezeos-api.onrender.com/api/web/read-markdown",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "format": "json",
+   "max_chars": "12000",
+   "url": "https://example.com/"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"markdown\":\"# Example Domain\\n\\nExample Domain ...\",\"price_usdc\":\"0.001\",\"product\":\"URL to Markdown API\",\"source_url\":\"https://example.com/\",\"status\":\"ready\",\"technical_service\":\"SML URL to Markdown API\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://squeezeos-api.onrender.com/llms.txt",
+ "docsChecked": 1793609279970,
+ "payers30d": 9,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-01T06:45:58.839Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 187,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 187,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/squeezeos-api-onrender-com-api-web-read-markdown",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "minifetch-com-api-v1-x402-preflight-url-check",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "cdp-agent-0-01-onrender-com"
+ ],
+ "example": {
+  "curl": "curl -i 'https://squeezeos-api.onrender.com/api/web/read-markdown?format=json&max_chars=12000&url=https%3A%2F%2Fexample.com%2F'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20squeezeos-api-onrender-com-api-web-read-markdown&body=%7B%22slug%22%3A%22squeezeos-api-onrender-com-api-web-read-markdown%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: squeezeos-api-onrender-com-api-web-read-markdown\",\"body\":\"{\\\"slug\\\":\\\"squeezeos-api-onrender-com-api-web-read-markdown\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SCRIPTMASTERLABS%3A%20URL%20to%20Markdown%20API%20and%20converter%20for%20AI%20agents%20%E2%80%94%20convert%20any%20public%20H&seller=https%3A%2F%2Fsqueezeos-api.onrender.com%2Fapi%2Fweb%2Fread-markdown"
+}

@@ -1,0 +1,77 @@
+{
+ "slug": "geoip-bip-rep-com-lookup",
+ "name": "IP Geolocation Lookup: Resolve any public IPv4/IPv6 address (or hostname) to geolocation for",
+ "seller": "IP Geolocation Lookup",
+ "host": "geoip.bip-rep.com",
+ "provider": "https://geoip.bip-rep.com",
+ "description": "Resolve any public IPv4/IPv6 address (or hostname) to geolocation for analytics, fraud, and ops agents. Returns ISO country code, region, city, IANA timezone, latitude/longitude, EU membership flag, and the matched network range. Backed by an embedded MaxMind GeoLite2 dataset (no external API calls). Private and reserved IP ranges are rejected; no shell access.",
+ "category": "Weather & geo",
+ "tags": [],
+ "endpoint": "https://geoip.bip-rep.com/lookup",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x46830A57cA3806EC71B981E063dC39Ca2A3c6fB0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "ip": "8.8.8.8"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"area\":1000,\"city\":\"Mountain View\",\"country\":\"US\",\"eu\":false,\"found\":true,\"ip\":\"8.8.8.8\",\"latency_ms\":1,\"location\":{\"lat\":37.405992,\"lon\":-122.078515},\"metro\":807,\"range\":[134744064,134744319],\"region\":\"CA\",\"timezone\":\"America/Los_Angeles\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://geoip.bip-rep.com/llms.txt",
+ "docsChecked": 1793609275417,
+ "payers30d": 11,
+ "calls30d": 16,
+ "lastCalledAt": "2026-10-30T04:19:00.756Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 324,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 324,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/geoip-bip-rep-com-lookup",
+ "rating": null,
+ "related": [
+  "x402-forgemesh-io-current-time",
+  "api-magentlab-com-api-codes-search",
+  "api-jexxa-org-v1-query",
+  "quantagentshop-com-v1-weather",
+  "x402tap-com-api-weather",
+  "api-x402node-dev-finance-econ-calendar"
+ ],
+ "example": {
+  "curl": "curl -i 'https://geoip.bip-rep.com/lookup?ip=8.8.8.8'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20geoip-bip-rep-com-lookup&body=%7B%22slug%22%3A%22geoip-bip-rep-com-lookup%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: geoip-bip-rep-com-lookup\",\"body\":\"{\\\"slug\\\":\\\"geoip-bip-rep-com-lookup\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=IP%20Geolocation%20Lookup%3A%20Resolve%20any%20public%20IPv4%2FIPv6%20address%20(or%20hostname)%20to%20geolocation%20for&seller=https%3A%2F%2Fgeoip.bip-rep.com%2Flookup"
+}

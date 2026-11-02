@@ -1,0 +1,83 @@
+{
+ "slug": "ozmium-org-v1-prices",
+ "name": "Ozmium Agent API: Live prices from TWO labeled venues per symbol: Coinbase exchange spot",
+ "seller": "Ozmium Agent API",
+ "host": "ozmium.org",
+ "provider": "https://ozmium.org",
+ "description": "Live prices from TWO labeled venues per symbol: Coinbase exchange spot (+ 24h stats) AND the gTrade venue leg { gains: { pairIndex, mark, index } } — mark is what fills on Gains, index is the oracle spot liquidations use. Same feeds the human chart runs on; the cross-venue spread between them is real, tradeable divergence (lead/lag arbitrage). Covers Gains-listed symbols Coinbase lacks (e.g. Full details: GET /v1.",
+ "category": "Finance & markets",
+ "tags": [
+  "defi",
+  "trading",
+  "crypto",
+  "cryptocurrency",
+  "portfolio"
+ ],
+ "endpoint": "https://ozmium.org/v1/prices",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x53a05c0eed6cbf065f31aedbae7b0d8ce1a0f4db",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "symbols": "ETH,BTC,SOL"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"prices\":{\"ETH\":{\"change24h\":1.2,\"usd\":3500,\"volume24h\":250000000}}},\"network\":\"eip155:8453\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1784724070/bazaar-icons/09c15b3297041bb2.png",
+ "docs": "https://ozmium.org/llms.txt",
+ "docsChecked": 1793609277344,
+ "payers30d": 10,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T18:40:31.617Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 100,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 100,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/ozmium-org-v1-prices",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i 'https://ozmium.org/v1/prices?symbols=ETH%2CBTC%2CSOL'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20ozmium-org-v1-prices&body=%7B%22slug%22%3A%22ozmium-org-v1-prices%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: ozmium-org-v1-prices\",\"body\":\"{\\\"slug\\\":\\\"ozmium-org-v1-prices\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Ozmium%20Agent%20API%3A%20Live%20prices%20from%20TWO%20labeled%20venues%20per%20symbol%3A%20Coinbase%20exchange%20spot&seller=https%3A%2F%2Fozmium.org%2Fv1%2Fprices"
+}

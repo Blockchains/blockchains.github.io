@@ -1,0 +1,83 @@
+{
+ "slug": "tolca-tonbot-ca-v1-qc-licence",
+ "name": "Tolca: Cheapest check: does this Québec contractor hold an ACTIVE RBQ licence",
+ "seller": "Tolca",
+ "host": "tolca.tonbot.ca",
+ "provider": "https://tolca.tonbot.ca",
+ "description": "Cheapest check: does this Québec contractor hold an ACTIVE RBQ licence right now? Returns active true/false, licence number, name, NEQ, city, restriction flag and authorized work categories. Use to vet many contractors fast; use qc-contractor-check for RENA and penalties. Input: name, NEQ or RBQ licence number.",
+ "category": "Utilities",
+ "tags": [
+  "contractor",
+  "license",
+  "verification",
+  "quebec",
+  "kyb"
+ ],
+ "endpoint": "https://tolca.tonbot.ca/v1/qc-licence",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x35F0B86a7E33F561faf7cfa5654CAd9162C4A17d",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "name": "Neolect"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"active\":true,\"categories\":[\"1.2 Petits bâtiments\",\"16.0 Électricité\"],\"licence\":\"8315-8105-31\",\"municipality\":\"Candiac\",\"name\":\"Néolect inc.\",\"neq\":\"1166302126\",\"restricted\":false,\"source\":{\"extracted_at\":\"2026-10-14T06:00:00Z\",\"id\":\"rbq\",\"license\":\"CC-BY 4.0\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://tolca.tonbot.ca/llms.txt",
+ "docsChecked": 1793609279458,
+ "payers30d": 9,
+ "calls30d": 31,
+ "lastCalledAt": "2026-11-01T10:35:03.821Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 194,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 194,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/tolca-tonbot-ca-v1-qc-licence",
+ "rating": null,
+ "related": [
+  "api-oblique-markets-api-v1-paid-time",
+  "api-myceliasignal-com-oracle-price-btc-usd",
+  "finance-api-kdlcfa-workers-dev-us30y-yield",
+  "randomfactsx402-vercel-app-api-random-fact",
+  "api-gitbeacon-dev-v1-repos",
+  "fractalai-net-co-api-x402-midas-attest"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://tolca.tonbot.ca/v1/qc-licence' -H 'content-type: application/json' -d '{\"name\":\"Neolect\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20tolca-tonbot-ca-v1-qc-licence&body=%7B%22slug%22%3A%22tolca-tonbot-ca-v1-qc-licence%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: tolca-tonbot-ca-v1-qc-licence\",\"body\":\"{\\\"slug\\\":\\\"tolca-tonbot-ca-v1-qc-licence\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Tolca%3A%20Cheapest%20check%3A%20does%20this%20Qu%C3%A9bec%20contractor%20hold%20an%20ACTIVE%20RBQ%20licence&seller=https%3A%2F%2Ftolca.tonbot.ca%2Fv1%2Fqc-licence"
+}

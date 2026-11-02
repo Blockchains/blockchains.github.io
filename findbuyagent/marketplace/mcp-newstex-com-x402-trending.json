@@ -1,0 +1,83 @@
+{
+ "slug": "mcp-newstex-com-x402-trending",
+ "name": "Newstex: Newstex MCP Network: metadata-only trending story search across all li",
+ "seller": "Newstex",
+ "host": "mcp.newstex.com",
+ "provider": "https://mcp.newstex.com",
+ "description": "Newstex MCP Network: metadata-only trending story search across all licensed publications.",
+ "category": "Search & web",
+ "tags": [
+  "news",
+  "search",
+  "licensed",
+  "publishers"
+ ],
+ "endpoint": "https://mcp.newstex.com/x402/trending",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x01b41c2ec1579B562bab44EC5Cb4C48F3f810A53",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": 10,
+   "q": "artificial intelligence"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"hits\":[],\"result_count\":0}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1793051794/bazaar-icons/c4b2dc94d3b11604.png",
+ "docs": null,
+ "docsChecked": 1793609281581,
+ "payers30d": 9,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T23:17:00.624Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 802,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 802,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/mcp-newstex-com-x402-trending",
+ "rating": null,
+ "related": [
+  "stableenrich-dev-api-exa-search",
+  "websearch-use-x402atlas-com-search",
+  "x402-twit-sh-tweets-user",
+  "x402-orthogonal-com-icypeas-api-find-people",
+  "agent-data-api-agentdata-workers-dev-v1-contracts-opportunities",
+  "supplier-risk-api-production-up-railway-app-abandonment-check"
+ ],
+ "example": {
+  "curl": "curl -i 'https://mcp.newstex.com/x402/trending?limit=10&q=artificial+intelligence'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20mcp-newstex-com-x402-trending&body=%7B%22slug%22%3A%22mcp-newstex-com-x402-trending%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: mcp-newstex-com-x402-trending\",\"body\":\"{\\\"slug\\\":\\\"mcp-newstex-com-x402-trending\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Newstex%3A%20Newstex%20MCP%20Network%3A%20metadata-only%20trending%20story%20search%20across%20all%20li&seller=https%3A%2F%2Fmcp.newstex.com%2Fx402%2Ftrending"
+}

@@ -1,0 +1,77 @@
+{
+ "slug": "pro-api-coinmarketcap-com-x402-v1-dex-search",
+ "name": "Search for DEX tokens by keyword (name, symbol, or contract address)",
+ "seller": "pro-api.coinmarketcap.com",
+ "host": "pro-api.coinmarketcap.com",
+ "provider": "https://pro-api.coinmarketcap.com",
+ "description": "Search for DEX tokens by keyword (name, symbol, or contract address).",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://pro-api.coinmarketcap.com/x402/v1/dex/search",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x3C5f3a6cE224BB89D72f5EB4232ecC27F67B3eeA",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 30,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "q": "bnb"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"tks\":[{\"addr\":\"0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c\",\"cid\":7192,\"dec\":18,\"liq\":141742079.24,\"mc\":1053227843.87,\"n\":\"Wrapped BNB\",\"pc24h\":0.0395,\"plt\":\"BSC\",\"pltId\":14,\"plti\":1839,\"pu\":\"626.34551132653429346570\",\"s\":\"WBNB\",\"v24h\":253425810.06}],\"total\":50},\"status\":{\"credit_count\":1,\"elapsed\":2388,\"error_code\":\"0\",\"error_message\":\"\",\"timestamp\":\"2026-02-26T11:05:46.935Z\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609271789,
+ "payers30d": 13,
+ "calls30d": 30,
+ "lastCalledAt": "2026-10-28T22:50:57.456Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 175,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 175,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/pro-api-coinmarketcap-com-x402-v1-dex-search",
+ "rating": null,
+ "related": [
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets",
+  "api-nansen-ai-api-v1-tgm-token-information",
+  "api-x402node-dev-chain-honeypot",
+  "api-gondola-ai-com-v1-chat-completions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://pro-api.coinmarketcap.com/x402/v1/dex/search?q=bnb'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20pro-api-coinmarketcap-com-x402-v1-dex-search&body=%7B%22slug%22%3A%22pro-api-coinmarketcap-com-x402-v1-dex-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: pro-api-coinmarketcap-com-x402-v1-dex-search\",\"body\":\"{\\\"slug\\\":\\\"pro-api-coinmarketcap-com-x402-v1-dex-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Search%20for%20DEX%20tokens%20by%20keyword%20(name%2C%20symbol%2C%20or%20contract%20address)&seller=https%3A%2F%2Fpro-api.coinmarketcap.com%2Fx402%2Fv1%2Fdex%2Fsearch"
+}

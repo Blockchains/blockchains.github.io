@@ -1,0 +1,87 @@
+{
+ "slug": "news-apitoll-cloud-v1-cointelegraph-news",
+ "name": "ApiToll Crypto News: Latest crypto news and breaking headlines, real-time from Cointelegrap",
+ "seller": "ApiToll Crypto News",
+ "host": "news.apitoll.cloud",
+ "provider": "https://news.apitoll.cloud",
+ "description": "Latest crypto news and breaking headlines, real-time from Cointelegraph. Search any topic (bitcoin, ethereum, DeFi, regulation, market sentiment) or pull the live feed, with full article text across 14 languages. Built for agents tracking crypto markets, tokens, and Web3.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto",
+  "news",
+  "bitcoin",
+  "ethereum",
+  "defi"
+ ],
+ "endpoint": "https://news.apitoll.cloud/v1/cointelegraph/news",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xcc69d619E6053F88A4845066518f465bD06Fc96c",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "full_text": true,
+   "lang": "en",
+   "limit": 10,
+   "search": "bitcoin",
+   "views": true
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"articles\":[{\"author\":{\"authorTranslates\":[{\"id\":\"at1\",\"name\":\"John Smith\"}],\"author_url\":\"https://cointelegraph.com/authors/john-smith\",\"id\":\"auth123\"},\"category\":{\"categoryTranslates\":[{\"id\":\"ct1\",\"title\":\"Bitcoin\"}],\"category_url\":\"https://cointelegraph.com/tags/bitcoin\",\"id\":\"cat456\"},\"full_text\":\"Bitcoin reached a new all-time high today... [full article text]\",\"id\":\"123456\",\"postBadge\":null,\"postTranslate\":{\"author\":{\"authorTranslates\":[{\"id\":\"at1\",\"name\":\"John Smith\"}],\"author_url\":\"https://cointelegraph.com/authors/john-smith\",\"id\":\"auth123\",\"innovationCircleUrl\":null},\"avatar\":\"https://images.cointelegraph.com/banner.jpg\",\"id\":\"654321\",\"leadText\":\"BTC reaches new highs amid market momentum.\",\"published\":\"2026-06-13T14:30:00+00:00\",\"publishedHumanFormat\":\"2 hours ago\",\"title\":\"Bitcoin Surges Above $100K\"},\"post_url\":\"https://cointelegraph.com/news/bitcoin-article\",\"views\":5420},{\"author\":null,\"category\":{\"categoryTranslates\":[{\"id\":\"ct2\",\"title\":\"Ethereum\"}],\"category_url\":\"https://cointelegraph.com/tags/ethereum\",\"id\":\"cat789\"},\"id\":\"123457\",\"postBadge\":{\"id\":\"badge1\",\"label\":\"Breaking\",\"postBadgeTranslates\":[{\"id\":\"pb1\",\"title\":\"Breaking News\"}]},\"postTranslate\":{\"author\":null,\"avatar\":\"https://images.cointelegraph.com/eth.jpg\",\"id\":\"654322\",\"leadText\":\"Eth2 upgrade brings efficiency gains.\",\"published\":\"2026-06-13T12:00:00+00:00\",\"publishedHumanFormat\":\"4 hours ago\",\"title\":\"Ethereum Network Upgrade Complete\"},\"post_url\":\"https://cointelegraph.com/news/ethereum-upgrade\",\"views\":3150}],\"count\":2,\"lang\":\"en\",\"query\":null,\"source\":\"cointelegraph\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://news.apitoll.cloud/.well-known/x402",
+ "docsChecked": 1793609273701,
+ "payers30d": 12,
+ "calls30d": 69,
+ "lastCalledAt": "2026-11-02T03:42:24.929Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 318,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 318,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/news-apitoll-cloud-v1-cointelegraph-news",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://news.apitoll.cloud/v1/cointelegraph/news?full_text=true&lang=en&limit=10&search=bitcoin&views=true'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20news-apitoll-cloud-v1-cointelegraph-news&body=%7B%22slug%22%3A%22news-apitoll-cloud-v1-cointelegraph-news%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: news-apitoll-cloud-v1-cointelegraph-news\",\"body\":\"{\\\"slug\\\":\\\"news-apitoll-cloud-v1-cointelegraph-news\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ApiToll%20Crypto%20News%3A%20Latest%20crypto%20news%20and%20breaking%20headlines%2C%20real-time%20from%20Cointelegrap&seller=https%3A%2F%2Fnews.apitoll.cloud%2Fv1%2Fcointelegraph%2Fnews"
+}

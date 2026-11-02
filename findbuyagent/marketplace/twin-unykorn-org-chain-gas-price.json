@@ -1,0 +1,88 @@
+{
+ "slug": "twin-unykorn-org-chain-gas-price",
+ "name": "Gas price on Base and Ethereum in ONE call (legacy gas price + EIP-155",
+ "seller": "twin.unykorn.org",
+ "host": "twin.unykorn.org",
+ "provider": "https://twin.unykorn.org",
+ "description": "Gas price on Base and Ethereum in ONE call (legacy gas price + EIP-1559 priority fee, wei and gwei) — Genesis402 / UnyKorn Operator Network",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "EVM",
+  "RPC",
+  "onchain data",
+  "multi-chain",
+  "gas"
+ ],
+ "endpoint": "https://twin.unykorn.org/chain/gas-price",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x7d9a65d06dcc435a52D5880C6310Bd6E96c156DB",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "params": {
+    "chains": [
+     "base",
+     "ethereum"
+    ]
+   }
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"generated_at\":\"<iso8601>\",\"ok\":true,\"receipt\":{\"amount_usd\":0.001,\"receipt_id\":\"g402-<16hex>\",\"tx_hash\":\"0x<64hex>\"},\"type\":\"chain-gas-price\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://twin.unykorn.org/llms.txt",
+ "docsChecked": 1793609273742,
+ "payers30d": 12,
+ "calls30d": 20,
+ "lastCalledAt": "2026-11-01T06:59:00.237Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 69,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 69,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/twin-unykorn-org-chain-gas-price",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://twin.unykorn.org/chain/gas-price' -H 'content-type: application/json' -d '{\"params\":{\"chains\":[\"base\",\"ethereum\"]}}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20twin-unykorn-org-chain-gas-price&body=%7B%22slug%22%3A%22twin-unykorn-org-chain-gas-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: twin-unykorn-org-chain-gas-price\",\"body\":\"{\\\"slug\\\":\\\"twin-unykorn-org-chain-gas-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Gas%20price%20on%20Base%20and%20Ethereum%20in%20ONE%20call%20(legacy%20gas%20price%20%2B%20EIP-155&seller=https%3A%2F%2Ftwin.unykorn.org%2Fchain%2Fgas-price"
+}

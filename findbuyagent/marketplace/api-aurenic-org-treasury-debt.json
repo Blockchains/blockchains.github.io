@@ -1,0 +1,75 @@
+{
+ "slug": "api-aurenic-org-treasury-debt",
+ "name": "Total US public debt outstanding, to the penny, latest available",
+ "seller": "api.aurenic.org",
+ "host": "api.aurenic.org",
+ "provider": "https://api.aurenic.org",
+ "description": "Total US public debt outstanding, to the penny, latest available",
+ "category": "Utilities",
+ "tags": [],
+ "endpoint": "https://api.aurenic.org/treasury/debt",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x594BB80bb2993E5B1b6AdF3C94Df980d94A54933",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"record_date\":\"2026-09-30\",\"total_debt\":\"35,000,000,000,000.00\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.aurenic.org/.well-known/x402",
+ "docsChecked": 1793609270714,
+ "payers30d": 14,
+ "calls30d": 37,
+ "lastCalledAt": "2026-11-02T04:27:40.924Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 396,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 396,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-aurenic-org-treasury-debt",
+ "rating": null,
+ "related": [
+  "scvd-store-api-buy-spot-check",
+  "workspace-x402-paywall-onrender-com-utils-uuid",
+  "api-printmoneylab-com-api-v1-fx-rate",
+  "headlessoracle-com-v5-status-x402",
+  "fanfare-run-nba-teams",
+  "agent-treats-production-up-railway-app-api-fact"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.aurenic.org/treasury/debt'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-aurenic-org-treasury-debt&body=%7B%22slug%22%3A%22api-aurenic-org-treasury-debt%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-aurenic-org-treasury-debt\",\"body\":\"{\\\"slug\\\":\\\"api-aurenic-org-treasury-debt\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Total%20US%20public%20debt%20outstanding%2C%20to%20the%20penny%2C%20latest%20available&seller=https%3A%2F%2Fapi.aurenic.org%2Ftreasury%2Fdebt"
+}

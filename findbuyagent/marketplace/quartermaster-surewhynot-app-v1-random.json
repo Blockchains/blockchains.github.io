@@ -1,0 +1,85 @@
+{
+ "slug": "quartermaster-surewhynot-app-v1-random",
+ "name": "Quartermaster Random Numbers: Cryptographically-secure random integers in a chosen range (CSPRNG, re",
+ "seller": "Quartermaster Random Numbers",
+ "host": "quartermaster.surewhynot.app",
+ "provider": "https://quartermaster.surewhynot.app",
+ "description": "Cryptographically-secure random integers in a chosen range (CSPRNG, rejection-sampled to avoid modulo bias) — real entropy an LLM cannot produce itself.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "dev",
+  "random",
+  "csprng",
+  "entropy",
+  "sampling"
+ ],
+ "endpoint": "https://quartermaster.surewhynot.app/v1/random",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x5253666c40432f009ebd99908b9cd2a7fd1019cb",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "count": 2,
+   "max": 6,
+   "min": 1
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":2,\"max\":6,\"min\":1,\"source\":\"crypto.getRandomValues (CSPRNG)\",\"values\":[4,1]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://quartermaster.surewhynot.app/llms.txt",
+ "docsChecked": 1793609277053,
+ "payers30d": 10,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T23:16:15.051Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 19,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 19,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/quartermaster-surewhynot-app-v1-random",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://quartermaster.surewhynot.app/v1/random?count=2&max=6&min=1'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20quartermaster-surewhynot-app-v1-random&body=%7B%22slug%22%3A%22quartermaster-surewhynot-app-v1-random%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: quartermaster-surewhynot-app-v1-random\",\"body\":\"{\\\"slug\\\":\\\"quartermaster-surewhynot-app-v1-random\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Quartermaster%20Random%20Numbers%3A%20Cryptographically-secure%20random%20integers%20in%20a%20chosen%20range%20(CSPRNG%2C%20re&seller=https%3A%2F%2Fquartermaster.surewhynot.app%2Fv1%2Frandom"
+}

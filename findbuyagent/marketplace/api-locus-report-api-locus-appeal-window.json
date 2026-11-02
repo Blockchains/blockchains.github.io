@@ -1,0 +1,77 @@
+{
+ "slug": "api-locus-report-api-locus-appeal-window",
+ "name": "Cited property-value appeal deadline for owners in a covered state; re",
+ "seller": "api.locus.report",
+ "host": "api.locus.report",
+ "provider": "https://api.locus.report",
+ "description": "Cited property-value appeal deadline for owners in a covered state; returns the rule, statute, source, computed dates when inputs support them, caveats, and verify-next, for a notice date or protest window. Returns the same records as locus_appeal_window. Use this when your client can only call paid x402 routes. Use locus_appeal_window instead when you can call Locus free tools (REST tools/call or MCP).",
+ "category": "Utilities",
+ "tags": [],
+ "endpoint": "https://api.locus.report/api/locus-appeal-window",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0xF121fbeceC43e1B616D47285851c20d5fC64431b",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "address": "1 E Edenton St, Raleigh, NC 27601"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"caveats\":[\"Deadlines are set by statute and administered by the county; confirm the operative date with the county before relying on it.\",\"This is date arithmetic on a cited rule, not legal advice, and not a recommendation to appeal.\"],\"citation\":{\"sourceName\":\"N.C.G.S. - 105-322(g)(2)\",\"sourceUrl\":\"https://www.ncdor.gov/taxes-forms/property-tax/property-tax-appeal-process\",\"verifiedAt\":\"2026-09-02\"},\"county\":\"Wake\",\"inputsUsed\":{\"state\":\"NC\",\"year\":2026},\"kind\":\"appeal_window\",\"notLegalAdvice\":true,\"note\":\"Awareness/diagnostic only. Full briefs are x402-paid. Agents can discover live free tools at https://api.locus.report/tools/list and paid tools, prices, and manifests at https://api.locus.report/.well-known/ai-tool/index.json.\",\"ok\":true,\"resolvedAddress\":{\"displayName\":\"Raleigh, Wake County, NC\",\"jurisdictionId\":\"us-nc-raleigh\"},\"rule\":{\"fact\":\"Later of the Board of Equalization and Review adjournment (set per county each year, not stored) or 30 days after a notice of value change. Without the adjournment date the tool returns only the notice-based lower bound and says so.\",\"kind\":\"later_of_board_or_notice_plus\",\"sourceUrl\":\"https://www.ncdor.gov/taxes-forms/property-tax/property-tax-appeal-process\",\"statute\":\"N.C.G.S. - 105-322(g)(2)\"},\"state\":\"NC\",\"verifyNext\":[{\"step\":\"Confirm the operative filing rule and date at the cited official source.\",\"url\":\"https://www.ncdor.gov/taxes-forms/property-tax/property-tax-appeal-process\"},{\"step\":\"Call locus_tax_calendar to find the county's official tax office URL and current-year source pointers.\",\"url\":\"https://api.locus.report/tools/list\"}],\"workflowHandoff\":{\"attachments\":[\"evidence packet from locus-valuation-challenge (JSON or your own rendering)\",\"recorded-sales table\"],\"disclaimer\":\"Locus does not file, does not see the portal session and has no affiliation with these providers. Confirm the portal's terms of use permit automated filing; many portals require the owner's own login or a CAPTCHA, in which case the owner files by hand.\",\"discovery\":{\"bazaar\":\"https://agentcash.ai\",\"note\":\"Any x402-payable browser provider works; the list above is what Locus verified on 2026-09-02.\",\"query\":\"browser automation fill and submit web forms\"},\"portalKind\":\"unknown\",\"portalUrl\":\"https://www.ncdor.gov/taxes-forms/property-tax/property-tax-appeal-process\",\"providers\":[{\"entry\":\"POST /browser/session/create\",\"kind\":\"session\",\"name\":\"Browserbase x402 gateway\",\"origin\":\"https://x402.browserbase.com\",\"pricingNote\":\"pay-p",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.locus.report/llms.txt",
+ "docsChecked": 1793609279589,
+ "payers30d": 9,
+ "calls30d": 37,
+ "lastCalledAt": "2026-11-01T10:37:04.068Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 1295,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 1295,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-locus-report-api-locus-appeal-window",
+ "rating": null,
+ "related": [
+  "api-oblique-markets-api-v1-paid-time",
+  "api-myceliasignal-com-oracle-price-btc-usd",
+  "finance-api-kdlcfa-workers-dev-us30y-yield",
+  "randomfactsx402-vercel-app-api-random-fact",
+  "api-gitbeacon-dev-v1-repos",
+  "fractalai-net-co-api-x402-midas-attest"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.locus.report/api/locus-appeal-window' -H 'content-type: application/json' -d '{\"address\":\"1 E Edenton St, Raleigh, NC 27601\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-locus-report-api-locus-appeal-window&body=%7B%22slug%22%3A%22api-locus-report-api-locus-appeal-window%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-locus-report-api-locus-appeal-window\",\"body\":\"{\\\"slug\\\":\\\"api-locus-report-api-locus-appeal-window\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Cited%20property-value%20appeal%20deadline%20for%20owners%20in%20a%20covered%20state%3B%20re&seller=https%3A%2F%2Fapi.locus.report%2Fapi%2Flocus-appeal-window"
+}

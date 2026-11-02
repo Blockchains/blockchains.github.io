@@ -1,0 +1,75 @@
+{
+ "slug": "gibbr-app-agent-translate",
+ "name": "Translation tuned for skilled-trade work: HVAC, refrigeration, electri",
+ "seller": "gibbr.app",
+ "host": "gibbr.app",
+ "provider": "https://gibbr.app",
+ "description": "Translation tuned for skilled-trade work: HVAC, refrigeration, electrical and construction terms stay correct instead of collapsing into a generic word. Handles text typed fast without accent marks.",
+ "category": "AI & LLM",
+ "tags": [],
+ "endpoint": "https://gibbr.app/agent/translate",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x367F1b3D8Ca90D1e087481a9A40d585Bf3451a03",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": "{\"engine\":\"qwen\",\"source\":\"en\",\"target\":\"es\",\"translated\":\"Cambia ese capacitor, no el condensador.\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://gibbr.app/llms.txt",
+ "docsChecked": 1793609270510,
+ "payers30d": 14,
+ "calls30d": 38,
+ "lastCalledAt": "2026-11-01T06:57:19.27Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 624,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 624,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/gibbr-app-agent-translate",
+ "rating": null,
+ "related": [
+  "x402-telnyx-com-v1-chat-completions-t-gemma-2b",
+  "x402-onhub-ai-v1-chat-completions",
+  "api-manylives-me-paid-util-time",
+  "agentshield-live-ean",
+  "ask-singitai-app-v1-responses",
+  "x402-telnyx-com-v1-chat-completions-t-llama-3-1-8b"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://gibbr.app/agent/translate' -H 'content-type: application/json' -d '{}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20gibbr-app-agent-translate&body=%7B%22slug%22%3A%22gibbr-app-agent-translate%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: gibbr-app-agent-translate\",\"body\":\"{\\\"slug\\\":\\\"gibbr-app-agent-translate\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Translation%20tuned%20for%20skilled-trade%20work%3A%20HVAC%2C%20refrigeration%2C%20electri&seller=https%3A%2F%2Fgibbr.app%2Fagent%2Ftranslate"
+}

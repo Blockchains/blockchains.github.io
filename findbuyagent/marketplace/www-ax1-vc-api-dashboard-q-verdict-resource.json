@@ -3,6 +3,7 @@
  "name": "AX1 Console: Send a Base token contract address, get an AI-written verdict: onchain",
  "seller": "AX1 Console",
  "host": "www.ax1.vc",
+ "provider": "https://www.ax1.vc",
  "description": "Send a Base token contract address, get an AI-written verdict: onchain metrics, a plain-language take, and a shareable verdict card. Entertainment, not trading advice.",
  "category": "Finance & markets",
  "tags": [
@@ -12,11 +13,13 @@
  ],
  "endpoint": "https://www.ax1.vc/api/dashboard/q-verdict/resource",
  "method": "POST",
+ "payment": "x402",
  "priceUsd": 0.02,
  "amount": "20000",
  "payTo": "0x7284D41b5b852F2bd4c99bDf95043D84452d299C",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
  "listedTermsMatch": true,
  "input": {
   "queryParams": null,
@@ -24,21 +27,53 @@
    "requestKey": "q-verdict-3f7b2c1e-8a4d-4e9f-9c21-0b6d7a5e1f22",
    "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
   },
-  "bodyType": "json"
+  "bodyType": "json",
+  "headers": null
  },
+ "outputType": "json",
  "outputExample": "{\"disclaimer\":\"Not financial advice.\",\"grade\":\"MID\",\"one_liner\":\"The accounting department of Base\",\"price\":\"$0.02\",\"roast\":\"Six-figure holder count, real liquidity, boring chart. Congratulations on being the accounting department of Base.\"}",
+ "outputSchema": null,
+ "iconUrl": null,
  "docs": "https://www.ax1.vc/llms.txt",
  "docsChecked": 1793596011596,
  "payers30d": 474,
- "calls30d": 114085,
+ "calls30d": 110034,
+ "lastCalledAt": "2026-10-21T09:39:38.381Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 314,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 717,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 717,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/www-ax1-vc-api-dashboard-q-verdict-resource",
  "rating": null,
+ "related": [
+  "cloud-trycorpus-ai-v1-tokens-quotes",
+  "cloud-trycorpus-ai-v1-reserved",
+  "cloud-trycorpus-ai-v1-term-instance",
+  "www-blockchainiq-co-api-x402-v1-brief",
+  "api-orcatrace-dev-v1-latest",
+  "headers-use-x402atlas-com"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://www.ax1.vc/api/dashboard/q-verdict/resource' -H 'content-type: application/json' -d '{\"requestKey\":\"q-verdict-3f7b2c1e-8a4d-4e9f-9c21-0b6d7a5e1f22\",\"tokenAddress\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\"}'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-ax1-vc-api-dashboard-q-verdict-resource&body=%7B%22slug%22%3A%22www-ax1-vc-api-dashboard-q-verdict-resource%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-ax1-vc-api-dashboard-q-verdict-resource\",\"body\":\"{\\\"slug\\\":\\\"www-ax1-vc-api-dashboard-q-verdict-resource\\\",\\\"stars\\\":1-5}\"}"

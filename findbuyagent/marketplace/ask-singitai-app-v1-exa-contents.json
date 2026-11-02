@@ -1,0 +1,86 @@
+{
+ "slug": "ask-singitai-app-v1-exa-contents",
+ "name": "SingIt Web Page Contents (Exa): Page contents API (Exa): text, highlights or a summary from up to 10 U",
+ "seller": "SingIt Web Page Contents (Exa)",
+ "host": "ask.singitai.app",
+ "provider": "https://ask.singitai.app",
+ "description": "Page contents API (Exa): text, highlights or a summary from up to 10 URLs. Pay per call in USDC on Base or Solana, no key. Exa list price plus $0.001.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "web-page-contents",
+  "web-scraping",
+  "page-contents",
+  "exa",
+  "web-search"
+ ],
+ "endpoint": "https://ask.singitai.app/v1/exa/contents",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xC23d1Dc0f5fCe1abfFB051e06cB93f0329968B4e",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "text": true,
+   "urls": [
+    "https://x402.org"
+   ]
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"billing\":{\"currency\":\"USDC\",\"exaAtomic\":\"1000\",\"feeAtomic\":\"1000\",\"markupAtomic\":\"0\",\"totalAtomic\":\"2000\"},\"requestId\":\"example\",\"results\":[{\"id\":\"https://x402.org\",\"text\":\"x402 is an open payment standard…\",\"title\":\"x402\",\"url\":\"https://x402.org\"}]}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792921332/bazaar-icons/a240c598b3f928d1.png",
+ "docs": "https://ask.singitai.app/llms.txt",
+ "docsChecked": 1793609277236,
+ "payers30d": 10,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T22:18:57.86Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 141,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 141,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/ask-singitai-app-v1-exa-contents",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://ask.singitai.app/v1/exa/contents' -H 'content-type: application/json' -d '{\"text\":true,\"urls\":[\"https://x402.org\"]}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20ask-singitai-app-v1-exa-contents&body=%7B%22slug%22%3A%22ask-singitai-app-v1-exa-contents%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: ask-singitai-app-v1-exa-contents\",\"body\":\"{\\\"slug\\\":\\\"ask-singitai-app-v1-exa-contents\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SingIt%20Web%20Page%20Contents%20(Exa)%3A%20Page%20contents%20API%20(Exa)%3A%20text%2C%20highlights%20or%20a%20summary%20from%20up%20to%2010%20U&seller=https%3A%2F%2Fask.singitai.app%2Fv1%2Fexa%2Fcontents"
+}

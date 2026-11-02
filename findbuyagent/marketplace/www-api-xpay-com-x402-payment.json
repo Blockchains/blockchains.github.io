@@ -1,0 +1,81 @@
+{
+ "slug": "www-api-xpay-com-x402-payment",
+ "name": "X Pay: Payment receipt with transaction details",
+ "seller": "X Pay",
+ "host": "www.api-xpay.com",
+ "provider": "https://www.api-xpay.com",
+ "description": "Payment receipt with transaction details",
+ "category": "Utilities",
+ "tags": [
+  "payment",
+  "receipt",
+  "usdc",
+  "transaction",
+  "settlement"
+ ],
+ "endpoint": "https://www.api-xpay.com/x402/payment",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x589a2314a2E05F45e40C4823Da3Ba58D421dB3d8",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"payment\":{\"amount\":\"0.005\",\"asset\":\"USDC\",\"network\":\"base\",\"payer\":\"0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb0\",\"receiver\":\"0x589a2314a2E05F45e40C4823Da3Ba58D421dB3d8\",\"requestId\":\"req_abc123\",\"transactionHash\":\"0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef\"},\"service\":\"X Pay\",\"success\":true}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1789136262/bazaar-icons/101f79e83d7e2744.png",
+ "docs": null,
+ "docsChecked": 1793609267991,
+ "payers30d": 258,
+ "calls30d": 6972,
+ "lastCalledAt": "2026-11-01T07:21:45.763Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 241,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 241,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/www-api-xpay-com-x402-payment",
+ "rating": null,
+ "related": [
+  "api-justaname-id-ens-v2-reverse",
+  "api-justaname-id-ens-v2-resolve",
+  "api-geoprimitives-dev-v1-marine-depth",
+  "bunnvault-xyz-api-vault-apy",
+  "coord-taifoon-dev-v1-market-candles",
+  "fractalai-net-co-api-x402-witness"
+ ],
+ "example": {
+  "curl": "curl -i 'https://www.api-xpay.com/x402/payment'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-api-xpay-com-x402-payment&body=%7B%22slug%22%3A%22www-api-xpay-com-x402-payment%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-api-xpay-com-x402-payment\",\"body\":\"{\\\"slug\\\":\\\"www-api-xpay-com-x402-payment\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=X%20Pay%3A%20Payment%20receipt%20with%20transaction%20details&seller=https%3A%2F%2Fwww.api-xpay.com%2Fx402%2Fpayment"
+}

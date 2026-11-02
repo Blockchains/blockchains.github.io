@@ -1,0 +1,77 @@
+{
+ "slug": "win-oneshotagent-com-v1-tools-search",
+ "name": "Web search returning URLs, titles, and descriptions",
+ "seller": "win.oneshotagent.com",
+ "host": "win.oneshotagent.com",
+ "provider": "https://win.oneshotagent.com",
+ "description": "Web search returning URLs, titles, and descriptions",
+ "category": "Search & web",
+ "tags": [],
+ "endpoint": "https://win.oneshotagent.com/v1/tools/search",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x9fb365E4E9385E2a39FeBAd70368267e6f571d9A",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "query": "latest AI agent frameworks"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"query\":\"...\",\"result_count\":5,\"results\":[{\"description\":\"...\",\"published_at\":\"2026-01-15\",\"title\":\"...\",\"url\":\"...\"}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609267211,
+ "payers30d": 43,
+ "calls30d": 2254,
+ "lastCalledAt": "2026-11-02T03:33:08.948Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 95,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 95,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/win-oneshotagent-com-v1-tools-search",
+ "rating": null,
+ "related": [
+  "minifetch-com-api-v1-x402-preflight-url-check",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "cdp-agent-0-01-onrender-com",
+  "agent-web-tools-agent-web-tools-workers-dev-v1-check"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://win.oneshotagent.com/v1/tools/search' -H 'content-type: application/json' -d '{\"query\":\"latest AI agent frameworks\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20win-oneshotagent-com-v1-tools-search&body=%7B%22slug%22%3A%22win-oneshotagent-com-v1-tools-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: win-oneshotagent-com-v1-tools-search\",\"body\":\"{\\\"slug\\\":\\\"win-oneshotagent-com-v1-tools-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Web%20search%20returning%20URLs%2C%20titles%2C%20and%20descriptions&seller=https%3A%2F%2Fwin.oneshotagent.com%2Fv1%2Ftools%2Fsearch"
+}

@@ -1,0 +1,83 @@
+{
+ "slug": "nordata-hihat-workers-dev-valuta",
+ "name": "NOK Exchange Rates: Official daily exchange rates against the Norwegian krone (NOK) from N",
+ "seller": "NOK Exchange Rates",
+ "host": "nordata.hihat.workers.dev",
+ "provider": "https://nordata.hihat.workers.dev",
+ "description": "Official daily exchange rates against the Norwegian krone (NOK) from Norges Bank, the central bank of Norway. Get the latest published rate for USD, EUR, GBP, SEK, DKK or any currency Norges Bank quotes, normalised to NOK per 1 unit, with the quote date. Use it for currency conversion, invoicing, accounting and price comparisons involving Norway. Compact JSON, authoritative source.",
+ "category": "Utilities",
+ "tags": [
+  "nok exchange rate",
+  "norges bank",
+  "currency conversion",
+  "usd to nok",
+  "eur to nok"
+ ],
+ "endpoint": "https://nordata.hihat.workers.dev/valuta",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xF00679CD8B440C8bd541fB2AAB1382E6fFd65A51",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "valutaer": "USD,EUR,GBP,SEK,DKK"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"dato\":\"2026-10-21\",\"hentet\":\"2026-10-22T12:00:00.000Z\",\"kilde\":\"data.norges-bank.no\",\"nok_per_enhet\":{\"EUR\":10.512,\"USD\":9.3573}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792679440/bazaar-icons/8de7d9353fcf6793.png",
+ "docs": "https://nordata.hihat.workers.dev/llms.txt",
+ "docsChecked": 1793609275270,
+ "payers30d": 11,
+ "calls30d": 15,
+ "lastCalledAt": "2026-11-01T06:49:28.114Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 30,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 30,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/nordata-hihat-workers-dev-valuta",
+ "rating": null,
+ "related": [
+  "scvd-store-api-buy-spot-check",
+  "api-aurenic-org-treasury-debt",
+  "workspace-x402-paywall-onrender-com-utils-uuid",
+  "api-printmoneylab-com-api-v1-fx-rate",
+  "headlessoracle-com-v5-status-x402",
+  "fanfare-run-nba-teams"
+ ],
+ "example": {
+  "curl": "curl -i 'https://nordata.hihat.workers.dev/valuta?valutaer=USD%2CEUR%2CGBP%2CSEK%2CDKK'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20nordata-hihat-workers-dev-valuta&body=%7B%22slug%22%3A%22nordata-hihat-workers-dev-valuta%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: nordata-hihat-workers-dev-valuta\",\"body\":\"{\\\"slug\\\":\\\"nordata-hihat-workers-dev-valuta\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=NOK%20Exchange%20Rates%3A%20Official%20daily%20exchange%20rates%20against%20the%20Norwegian%20krone%20(NOK)%20from%20N&seller=https%3A%2F%2Fnordata.hihat.workers.dev%2Fvaluta"
+}

@@ -1,0 +1,81 @@
+{
+ "slug": "api-bitrefill-com-x402-checkout-info",
+ "name": "Bitrefill: Discover the Bitrefill x402 storefront: supported networks, the full r",
+ "seller": "Bitrefill",
+ "host": "api.bitrefill.com",
+ "provider": "https://api.bitrefill.com",
+ "description": "Discover the Bitrefill x402 storefront: supported networks, the full route flow, and wallet persistence rules.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "checkout",
+  "storefront",
+  "discovery",
+  "usdc",
+  "base"
+ ],
+ "endpoint": "https://api.bitrefill.com/x402/checkout/info",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x480CD46E6faDe651a0437DeaddA53D5c8e7D846A",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"next_step\":{\"url\":\"/x402/gift-cards/search\"},\"routes\":[{\"method\":\"GET\",\"path\":\"/x402/gift-cards/search\",\"purpose\":\"Search gift card products by query and country.\"}],\"service\":\"Bitrefill x402 storefront\",\"supported_networks\":[\"eip155:8453\",\"solana:mainnet\"],\"wallet_persistence\":\"Codes and eSIMs are bound to the paying wallet; recovery and top-ups require the same wallet\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1780566420/bazaar-icons/33192fb7239597bd.png",
+ "docs": null,
+ "docsChecked": 1793609268905,
+ "payers30d": 22,
+ "calls30d": 99,
+ "lastCalledAt": "2026-11-02T04:20:16.694Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 129,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 129,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-bitrefill-com-x402-checkout-info",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.bitrefill.com/x402/checkout/info'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-bitrefill-com-x402-checkout-info&body=%7B%22slug%22%3A%22api-bitrefill-com-x402-checkout-info%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-bitrefill-com-x402-checkout-info\",\"body\":\"{\\\"slug\\\":\\\"api-bitrefill-com-x402-checkout-info\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Bitrefill%3A%20Discover%20the%20Bitrefill%20x402%20storefront%3A%20supported%20networks%2C%20the%20full%20r&seller=https%3A%2F%2Fapi.bitrefill.com%2Fx402%2Fcheckout%2Finfo"
+}

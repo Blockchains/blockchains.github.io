@@ -1,0 +1,81 @@
+{
+ "slug": "api-agentweather-io-v1-pulse-storm",
+ "name": "Agent Weather: One combined reading for agent loops: AI provider health from public s",
+ "seller": "Agent Weather",
+ "host": "api.agentweather.io",
+ "provider": "https://api.agentweather.io",
+ "description": "One combined reading for agent loops: AI provider health from public status pages, x402 facilitator reachability on the XRP Ledger and recent changes in our record. Returns storm (boolean), level, one reason, asOf and sources with timestamps. Additive measured fields: observed_payment_success (15m/…",
+ "category": "AI & LLM",
+ "tags": [
+  "ai-agents",
+  "status",
+  "mcp",
+  "x402",
+  "xrpl"
+ ],
+ "endpoint": "https://api.agentweather.io/v1/pulse/storm",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xA15c55f39Ec1dfd87Afb09e1959EFac2Bf44F4Ec",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asOf\":\"2026-10-12T02:30:02.000Z\",\"deprecated\":{\"keys\":[\"openai\"],\"note\":\"providers.openai and providers.cursor are no longer measured and always return …\",\"until\":\"2026-11-12\"},\"level\":\"calm\",\"method\":\"level = worst of: tracked public status pages (critical=storm, major=unsettled,…\",\"notice\":\"Recorded measurements. Third-party status data is provided as is, may be late o…\",\"reason\":\"no provider incidents, facilitator ok, no fronts\",\"schema_version\":\"pulse-0.2.0\",\"signal\":\"storm\",\"sources\":[{\"observed_at\":\"2026-10-12T02:34:12.093Z\",\"signal\":\"providers\",\"sources\":[]}],\"storm\":false}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791666380/bazaar-icons/b867a1a365127ad9.png",
+ "docs": "https://api.agentweather.io/llms.txt",
+ "docsChecked": 1793609273456,
+ "payers30d": 12,
+ "calls30d": 38,
+ "lastCalledAt": "2026-11-01T07:04:33.81Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 162,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 162,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-agentweather-io-v1-pulse-storm",
+ "rating": null,
+ "related": [
+  "jev-x402-vercel-app-jev",
+  "contextslim-friczero-com-fetch",
+  "gateway-spraay-app-bittensor-v1-models",
+  "767-2676-com-v2-receipt",
+  "golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions",
+  "www-amnt-io-api-agent-amnt-bitcoin-price"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.agentweather.io/v1/pulse/storm'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-agentweather-io-v1-pulse-storm&body=%7B%22slug%22%3A%22api-agentweather-io-v1-pulse-storm%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-agentweather-io-v1-pulse-storm\",\"body\":\"{\\\"slug\\\":\\\"api-agentweather-io-v1-pulse-storm\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent%20Weather%3A%20One%20combined%20reading%20for%20agent%20loops%3A%20AI%20provider%20health%20from%20public%20s&seller=https%3A%2F%2Fapi.agentweather.io%2Fv1%2Fpulse%2Fstorm"
+}

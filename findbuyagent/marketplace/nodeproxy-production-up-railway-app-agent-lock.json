@@ -1,0 +1,86 @@
+{
+ "slug": "nodeproxy-production-up-railway-app-agent-lock",
+ "name": "nodeproxy: Distributed lock / idempotency primitive for multi-agent swarms",
+ "seller": "nodeproxy",
+ "host": "nodeproxy-production.up.railway.app",
+ "provider": "https://nodeproxy-production.up.railway.app",
+ "description": "Distributed lock / idempotency primitive for multi-agent swarms. claim(key) returns a token if free (with TTL); release(token) frees it; check(key) reports whether held. Stops multiple agents from double-processing the same work item.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "web",
+  "scrape",
+  "markdown",
+  "llm",
+  "parser"
+ ],
+ "endpoint": "https://nodeproxy-production.up.railway.app/agent-lock",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x8E57BFDE053dBb6862991759c19affC5F383d5D0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "arguments": {
+    "key": "job:42",
+    "op": "check"
+   }
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"lock\":{\"acquired\":true,\"key\":\"job:42\",\"op\":\"claim\",\"token\":\"c3…\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609272176,
+ "payers30d": 13,
+ "calls30d": 39,
+ "lastCalledAt": "2026-11-01T12:53:12.242Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 423,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 423,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/nodeproxy-production-up-railway-app-agent-lock",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://nodeproxy-production.up.railway.app/agent-lock' -H 'content-type: application/json' -d '{\"arguments\":{\"key\":\"job:42\",\"op\":\"check\"}}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20nodeproxy-production-up-railway-app-agent-lock&body=%7B%22slug%22%3A%22nodeproxy-production-up-railway-app-agent-lock%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: nodeproxy-production-up-railway-app-agent-lock\",\"body\":\"{\\\"slug\\\":\\\"nodeproxy-production-up-railway-app-agent-lock\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=nodeproxy%3A%20Distributed%20lock%20%2F%20idempotency%20primitive%20for%20multi-agent%20swarms&seller=https%3A%2F%2Fnodeproxy-production.up.railway.app%2Fagent-lock"
+}

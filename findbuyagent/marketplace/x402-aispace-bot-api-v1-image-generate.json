@@ -1,0 +1,86 @@
+{
+ "slug": "x402-aispace-bot-api-v1-image-generate",
+ "name": "AiSpace Venice: Text-to-image generation on Venice models (Flux, SD3.5, GPT-Image, Hun",
+ "seller": "AiSpace Venice",
+ "host": "x402.aispace.bot",
+ "provider": "https://x402.aispace.bot",
+ "description": "Text-to-image generation on Venice models (Flux, SD3.5, GPT-Image, HunyuanImage, and more), paid per request in USDC on Base via x402, no API key. Charge is catalog unit × variants (1–4). A bare unpaid probe (no model) quotes default venice-sd35 (from $0.01; flux-2-pro $0.015). S",
+ "category": "Images & media",
+ "tags": [
+  "venice",
+  "image",
+  "text-to-image",
+  "generative",
+  "aispace"
+ ],
+ "endpoint": "https://x402.aispace.bot/api/v1/image/generate",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0xA7f3Ad0E69F61864092FAbBa6Cee00AF6e584689",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": false,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "height": 1024,
+   "model": "flux-2-pro",
+   "prompt": "A neon-lit cyberpunk street at night, cinematic lighting, photorealistic",
+   "width": 1024
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"id\":\"yidY-aAgyVYbeSQfKnu4gaLS2FhTus0k\",\"images\":[\"UklGRkaBAABXRUJQVlA4IDqBAACQZwGdASoAAgACPhkMhEGhBFcvbAQAYSm3i1vP/1fFy8M/nmmzw39XzLNN9Nt+/Ez/o+YH9G/2fQs58/xP/neqj+H/6f1l\"],\"request\":{\"data\":{\"embed_exif_metadata\":false,\"format\":\"webp\",\"height\":512,\"hide_watermark\":false,\"model\":\"venice-sd35\",\"prompt\":\"a dot\",\"return_binary\":false,\"safe_mode\":true,\"seed\":-238869555,\"steps\":20,\"width\":512},\"success\":true},\"timing\":{\"inferenceDuration\":3377,\"inferencePreprocessingTime\":3389,\"inferenceQueueTime\":557,\"total\":3953}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1785852238/bazaar-icons/33013603ae44be93.png",
+ "docs": "https://x402.aispace.bot/llms.txt",
+ "docsChecked": 1793609273655,
+ "payers30d": 13,
+ "calls30d": 44,
+ "lastCalledAt": "2026-11-02T00:58:44.025Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 420,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 420,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-aispace-bot-api-v1-image-generate",
+ "rating": null,
+ "related": [
+  "x402engine-app-api-tts-elevenlabs",
+  "appstore-use-x402atlas-com-product",
+  "mart402-com-v1-pdf-pages",
+  "api-vextorium-com-v1-wikipedia-summary",
+  "timecode-openverbs-com-v1-parse",
+  "ask-singitai-app-v1-audio-speech"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://x402.aispace.bot/api/v1/image/generate' -H 'content-type: application/json' -d '{\"height\":1024,\"model\":\"flux-2-pro\",\"prompt\":\"A neon-lit cyberpunk street at night, cinematic lighting, photorealistic\",\"width\":1024}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-aispace-bot-api-v1-image-generate&body=%7B%22slug%22%3A%22x402-aispace-bot-api-v1-image-generate%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-aispace-bot-api-v1-image-generate\",\"body\":\"{\\\"slug\\\":\\\"x402-aispace-bot-api-v1-image-generate\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=AiSpace%20Venice%3A%20Text-to-image%20generation%20on%20Venice%20models%20(Flux%2C%20SD3.5%2C%20GPT-Image%2C%20Hun&seller=https%3A%2F%2Fx402.aispace.bot%2Fapi%2Fv1%2Fimage%2Fgenerate"
+}

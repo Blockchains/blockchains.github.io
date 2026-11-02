@@ -1,0 +1,83 @@
+{
+ "slug": "edgar-apitoll-cloud-v1-edgar-smart-money",
+ "name": "ApiToll Smart Money: Smart-money bundle in one call for any US-listed company by stock tick",
+ "seller": "ApiToll Smart Money",
+ "host": "edgar.apitoll.cloud",
+ "provider": "https://edgar.apitoll.cloud",
+ "description": "Smart-money bundle in one call for any US-listed company by stock ticker or CIK: insider trades (Form 4), institutional 13F-HR holdings, and recent 8-K material events together. Track what executives and hedge funds are doing — buys, sells, portfolio positions, and corporate events. Resolves ticker to CIK via SEC's official index. Sourced live from data.sec.gov.",
+ "category": "Finance & markets",
+ "tags": [
+  "sec",
+  "edgar",
+  "smart-money",
+  "insider-trades",
+  "13f"
+ ],
+ "endpoint": "https://edgar.apitoll.cloud/v1/edgar/smart-money",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.006,
+ "amount": "6000",
+ "payTo": "0x58BdAD5e654691aC5eD4631758f3d8DA00666B6c",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "ticker": "AAPL"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"holdings\":{\"count\":0,\"form\":\"13F-HR\",\"items\":[]},\"insider\":{\"count\":10,\"form\":\"4\",\"items\":[]},\"recentFilings\":{\"count\":8,\"form\":\"8-K\",\"items\":[]},\"resolved\":{\"cik\":\"0000320193\",\"companyName\":\"Apple Inc.\",\"ticker\":\"AAPL\"},\"source\":{\"name\":\"data.sec.gov\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://edgar.apitoll.cloud/.well-known/x402",
+ "docsChecked": 1793609281579,
+ "payers30d": 9,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T23:17:18.339Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 301,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 301,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/edgar-apitoll-cloud-v1-edgar-smart-money",
+ "rating": null,
+ "related": [
+  "tick-hugen-tokyo-tick-latest",
+  "tick-hugen-tokyo-tick-symbols",
+  "tick-hugen-tokyo-tick-all",
+  "deskfeed-dev-v1-events",
+  "www-x402financialdata-com-crypto-prices",
+  "agentshield-live-fx"
+ ],
+ "example": {
+  "curl": "curl -i 'https://edgar.apitoll.cloud/v1/edgar/smart-money?ticker=AAPL'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20edgar-apitoll-cloud-v1-edgar-smart-money&body=%7B%22slug%22%3A%22edgar-apitoll-cloud-v1-edgar-smart-money%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: edgar-apitoll-cloud-v1-edgar-smart-money\",\"body\":\"{\\\"slug\\\":\\\"edgar-apitoll-cloud-v1-edgar-smart-money\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ApiToll%20Smart%20Money%3A%20Smart-money%20bundle%20in%20one%20call%20for%20any%20US-listed%20company%20by%20stock%20tick&seller=https%3A%2F%2Fedgar.apitoll.cloud%2Fv1%2Fedgar%2Fsmart-money"
+}

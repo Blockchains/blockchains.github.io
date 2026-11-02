@@ -1,0 +1,84 @@
+{
+ "slug": "api-verdixapi-com-risk-address-lite",
+ "name": "Verdix Address Risk (lite): Verdix lite ($0.01): call before an agent sends funds to an unfamiliar",
+ "seller": "Verdix Address Risk (lite)",
+ "host": "api.verdixapi.com",
+ "provider": "https://api.verdixapi.com",
+ "description": "Verdix lite ($0.01): call before an agent sends funds to an unfamiliar address on Base or Ethereum (chain=ethereum). Checks OFAC, known scam/phishing addresses (GoPlus), address poisoning and burn addresses; phishing tokens and flagged deployers on Base only. Ethereum poisoning data is a daily scan, not live. Clean = no_known_risk, never safe; for safe use /risk/address/quick.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "pre-payment-check",
+  "sanctions",
+  "scam",
+  "address-poisoning",
+  "wallet-risk"
+ ],
+ "endpoint": "https://api.verdixapi.com/risk/address/lite",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x495Ae6921Cac6e7CDbF8FFF7F62BB678cc1f47E2",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "address": "0x71b749F58f63008672eEd55396151DC0C7493A78",
+   "chain": "base"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"address\":\"0x71b749F58f63008672eEd55396151DC0C7493A78\",\"as_of\":\"2026-09-24T10:00:00+00:00\",\"chain\":\"base\",\"checked\":[\"ofac\",\"scam_lists\",\"poisoning_watch\",\"burn_list\",\"phishing_token\",\"deployer_flagged\"],\"checks_performed\":[\"ofac\",\"scam_lists\",\"poisoning_watch\",\"burn_list\",\"phishing_token\",\"deployer_flagged\"],\"full_check\":\"Limited checks only: no known risk on these lists is not a safety verdict. For a full check that can return \\\"safe\\\", use POST /risk/address/quick.\",\"limited_checks\":true,\"not_checked\":[\"address_age\",\"flash_loan_contracts\",\"unverified_contracts\"],\"price_usd\":0.01,\"reasons\":[\"lite_no_match:ofac,scam_lists,poisoning_watch,burn_list,phishing_token,deployer_flagged\",\"not_checked_in_lite:address_age,flash_loan_contracts,unverified_contracts\"],\"risk_score\":40,\"tier\":\"lite\",\"verdict\":\"no_known_risk\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791143345/bazaar-icons/3a35ea942f599989.png",
+ "docs": "https://api.verdixapi.com/llms.txt",
+ "docsChecked": 1793609279960,
+ "payers30d": 9,
+ "calls30d": 21,
+ "lastCalledAt": "2026-10-31T20:20:43.851Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 453,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 453,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-verdixapi-com-risk-address-lite",
+ "rating": null,
+ "related": [
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets",
+  "api-nansen-ai-api-v1-tgm-token-information",
+  "api-x402node-dev-chain-honeypot",
+  "api-gondola-ai-com-v1-chat-completions"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.verdixapi.com/risk/address/lite' -H 'content-type: application/json' -d '{\"address\":\"0x71b749F58f63008672eEd55396151DC0C7493A78\",\"chain\":\"base\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-verdixapi-com-risk-address-lite&body=%7B%22slug%22%3A%22api-verdixapi-com-risk-address-lite%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-verdixapi-com-risk-address-lite\",\"body\":\"{\\\"slug\\\":\\\"api-verdixapi-com-risk-address-lite\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Verdix%20Address%20Risk%20(lite)%3A%20Verdix%20lite%20(%240.01)%3A%20call%20before%20an%20agent%20sends%20funds%20to%20an%20unfamiliar&seller=https%3A%2F%2Fapi.verdixapi.com%2Frisk%2Faddress%2Flite"
+}

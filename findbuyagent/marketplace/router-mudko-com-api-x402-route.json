@@ -1,0 +1,81 @@
+{
+ "slug": "router-mudko-com-api-x402-route",
+ "name": "OnRamperX: OnRamperX is a non-custodial value router for agents and humans: fiat<",
+ "seller": "OnRamperX",
+ "host": "router.mudko.com",
+ "provider": "https://router.mudko.com",
+ "description": "OnRamperX is a non-custodial value router for agents and humans: fiat<->crypto and cross-chain via one quote interface (Coinbase Onramp v2, Relay, x402). This endpoint returns the router's live capabilities and rail status; use /api/x402/quote for a ranked route. Settlement centers on USDC on Base.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "value-router",
+  "onramp",
+  "offramp",
+  "crypto",
+  "agent"
+ ],
+ "endpoint": "https://router.mudko.com/api/x402/route",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x53598173ce7c26025bab0520d9e9d0c28fbcf7de",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"paid\":true,\"quote_endpoint\":\"/api/x402/quote\",\"rails\":[\"relay\",\"coinbase-onramp\",\"x402\"],\"service\":\"OnRamperX\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://router.mudko.com/.well-known/x402",
+ "docsChecked": 1793609272644,
+ "payers30d": 13,
+ "calls30d": 17,
+ "lastCalledAt": "2026-11-01T23:13:35.177Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 522,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 522,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/router-mudko-com-api-x402-route",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-contract-address",
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "hyperliquid-predict-use-x402atlas-com-outcomes",
+  "notary-forgemesh-io-api-notarize",
+  "coingecko-use-x402atlas-com-price",
+  "scry-solanahub-de-x402-network-priority-fees-live"
+ ],
+ "example": {
+  "curl": "curl -i 'https://router.mudko.com/api/x402/route'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20router-mudko-com-api-x402-route&body=%7B%22slug%22%3A%22router-mudko-com-api-x402-route%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: router-mudko-com-api-x402-route\",\"body\":\"{\\\"slug\\\":\\\"router-mudko-com-api-x402-route\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=OnRamperX%3A%20OnRamperX%20is%20a%20non-custodial%20value%20router%20for%20agents%20and%20humans%3A%20fiat%3C&seller=https%3A%2F%2Frouter.mudko.com%2Fapi%2Fx402%2Froute"
+}

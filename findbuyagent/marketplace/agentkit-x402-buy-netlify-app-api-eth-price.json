@@ -1,0 +1,77 @@
+{
+ "slug": "agentkit-x402-buy-netlify-app-api-eth-price",
+ "name": "ETH/USD spot via AgentKit x402 — $0.001 USDC",
+ "seller": "agentkit-x402-buy.netlify.app",
+ "host": "agentkit-x402-buy.netlify.app",
+ "provider": "https://agentkit-x402-buy.netlify.app",
+ "description": "ETH/USD spot via AgentKit x402 — $0.001 USDC",
+ "category": "AI & LLM",
+ "tags": [],
+ "endpoint": "https://agentkit-x402-buy.netlify.app/api/eth-price",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xEb76f3442EAF192EBdDbc1F7EeBD59CdE5e00D35",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "format": "json"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"change_24h\":1.2,\"eth_usd\":3500,\"network\":\"eip155:8453\",\"seller\":\"0xEb76f3442EAF192EBdDbc1F7EeBD59CdE5e00D35\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://agentkit-x402-buy.netlify.app/llms.txt",
+ "docsChecked": 1793609275532,
+ "payers30d": 11,
+ "calls30d": 12,
+ "lastCalledAt": "2026-11-02T04:25:52.893Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 126,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 126,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agentkit-x402-buy-netlify-app-api-eth-price",
+ "rating": null,
+ "related": [
+  "jev-x402-vercel-app-jev",
+  "contextslim-friczero-com-fetch",
+  "gateway-spraay-app-bittensor-v1-models",
+  "767-2676-com-v2-receipt",
+  "golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions",
+  "www-amnt-io-api-agent-amnt-bitcoin-price"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agentkit-x402-buy.netlify.app/api/eth-price?format=json'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agentkit-x402-buy-netlify-app-api-eth-price&body=%7B%22slug%22%3A%22agentkit-x402-buy-netlify-app-api-eth-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agentkit-x402-buy-netlify-app-api-eth-price\",\"body\":\"{\\\"slug\\\":\\\"agentkit-x402-buy-netlify-app-api-eth-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ETH%2FUSD%20spot%20via%20AgentKit%20x402%20%E2%80%94%20%240.001%20USDC&seller=https%3A%2F%2Fagentkit-x402-buy.netlify.app%2Fapi%2Feth-price"
+}

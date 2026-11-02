@@ -1,0 +1,84 @@
+{
+ "slug": "serp402-com-api-v1-search",
+ "name": "serp402: Google: Scrape Google search results in JSON format automatically usin",
+ "seller": "serp402",
+ "host": "serp402.com",
+ "provider": "https://serp402.com",
+ "description": "Google: Scrape Google search results in JSON format automatically using custom parameters. Structured JSON, USD 0.05 per call in USDC — no API key, no account, no subscription, no minimum. Not affiliated with, endorsed by or an official channel of any of the services the results come from. All trademarks and copyright remain the property of their respective owners.",
+ "category": "Search & web",
+ "tags": [
+  "search",
+  "google",
+  "x402",
+  "agents",
+  "api"
+ ],
+ "endpoint": "https://serp402.com/api/v1/search",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.05,
+ "amount": "50000",
+ "payTo": "0xAA1252D726567293cffE6Ca495e32c6AEcfDC56d",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "location": "Austin, Texas, United States",
+   "q": "Coffee"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"endpoint\":\"search\",\"meta\":{\"latencyMs\":1400}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://serp402.com/llms.txt",
+ "docsChecked": 1793609278405,
+ "payers30d": 9,
+ "calls30d": 370,
+ "lastCalledAt": "2026-10-28T19:08:19.511Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 453,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 453,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/serp402-com-api-v1-search",
+ "rating": null,
+ "related": [
+  "google-trends-use-x402atlas-com-trend",
+  "x402-asterpay-io-v2-x402-agent-readiness",
+  "google-trends-use-x402atlas-com-related-queries",
+  "agent-connskill-com-v1-keyword-ideas",
+  "reddit-apitoll-cloud-v1-reddit-search",
+  "stabletravel-dev-api-google-flights-search"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://serp402.com/api/v1/search' -H 'content-type: application/json' -d '{\"location\":\"Austin, Texas, United States\",\"q\":\"Coffee\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20serp402-com-api-v1-search&body=%7B%22slug%22%3A%22serp402-com-api-v1-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: serp402-com-api-v1-search\",\"body\":\"{\\\"slug\\\":\\\"serp402-com-api-v1-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=serp402%3A%20Google%3A%20Scrape%20Google%20search%20results%20in%20JSON%20format%20automatically%20usin&seller=https%3A%2F%2Fserp402.com%2Fapi%2Fv1%2Fsearch"
+}

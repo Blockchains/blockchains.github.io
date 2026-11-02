@@ -1,0 +1,81 @@
+{
+ "slug": "api-agentweather-io-v1-pulse-facilitator",
+ "name": "Agent Weather: x402 facilitator reading on the XRP Ledger: reachability of the t54 fa",
+ "seller": "Agent Weather",
+ "host": "api.agentweather.io",
+ "provider": "https://api.agentweather.io",
+ "description": "x402 facilitator reading on the XRP Ledger: reachability of the t54 facilitator and on-ledger payment success from our own ledger scan, plus the share of known XRPL x402 endpoints answering with a valid 402. Returns ok, level, one reason, asOf, success_rate_15m and sources. Additive measured fields…",
+ "category": "AI & LLM",
+ "tags": [
+  "ai-agents",
+  "status",
+  "mcp",
+  "x402",
+  "xrpl"
+ ],
+ "endpoint": "https://api.agentweather.io/v1/pulse/facilitator",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xA15c55f39Ec1dfd87Afb09e1959EFac2Bf44F4Ec",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asOf\":\"2026-10-12T02:31:29.364Z\",\"endpoints_checked_at\":\"2026-10-12T02:31:29.366Z\",\"facilitator\":\"t54 xrpl:0\",\"level\":\"ok\",\"method\":\"t54 /supported reachability + on-ledger success rate, fee spikes and tagged-vol…\",\"notice\":\"Recorded measurements. Third-party status data is provided as is, may be late o…\",\"ok\":true,\"reason\":\"t54 reachable; on-ledger success rate, fees and tagged volume within normal bou…\",\"schema_version\":\"pulse-0.2.0\",\"signal\":\"facilitator\",\"sources\":[{\"attribution\":\"Our own measurement: reachability of the t54 XRPL x402 facilitator /supported e…\",\"not_affiliated\":\"Agent Weather is not affiliated with, endorsed by or sponsored by T54 Labs.\",\"observed_at\":\"2026-10-12T02:31:29.168Z\",\"terms_note\":\"facilitator terms not published; requested from T54 Labs\",\"terms_url\":null,\"url\":\"https://xrpl-facilitator-mainnet.t54.ai/supported\"}],\"success_rate_15m\":1,\"t54_supported_ms\":414,\"x402_endpoints_live\":\"59/77\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791666380/bazaar-icons/b867a1a365127ad9.png",
+ "docs": "https://api.agentweather.io/llms.txt",
+ "docsChecked": 1793609278819,
+ "payers30d": 9,
+ "calls30d": 34,
+ "lastCalledAt": "2026-11-01T07:09:55.007Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 127,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 127,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-agentweather-io-v1-pulse-facilitator",
+ "rating": null,
+ "related": [
+  "jev-x402-vercel-app-jev",
+  "contextslim-friczero-com-fetch",
+  "gateway-spraay-app-bittensor-v1-models",
+  "767-2676-com-v2-receipt",
+  "golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions",
+  "www-amnt-io-api-agent-amnt-bitcoin-price"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.agentweather.io/v1/pulse/facilitator'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-agentweather-io-v1-pulse-facilitator&body=%7B%22slug%22%3A%22api-agentweather-io-v1-pulse-facilitator%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-agentweather-io-v1-pulse-facilitator\",\"body\":\"{\\\"slug\\\":\\\"api-agentweather-io-v1-pulse-facilitator\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent%20Weather%3A%20x402%20facilitator%20reading%20on%20the%20XRP%20Ledger%3A%20reachability%20of%20the%20t54%20fa&seller=https%3A%2F%2Fapi.agentweather.io%2Fv1%2Fpulse%2Ffacilitator"
+}

@@ -1,0 +1,85 @@
+{
+ "slug": "search-cyberwarex-com-contents",
+ "name": "x402 Web Search: Fetch one public web page and return its readable content as clean tex",
+ "seller": "x402 Web Search",
+ "host": "search.cyberwarex.com",
+ "provider": "https://search.cyberwarex.com",
+ "description": "Fetch one public web page and return its readable content as clean text or markdown, with JavaScript executed, so the result reads like the page a human sees. The retrieval half of research: pair it with /search to go from a query to grounded page text. Returns the content, its length, the final URL and the HTTP status. Truncate with max_chars.",
+ "category": "Search & web",
+ "tags": [
+  "web-content",
+  "page-reader",
+  "scraping",
+  "markdown",
+  "research"
+ ],
+ "endpoint": "https://search.cyberwarex.com/contents",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x058D0Cc5CC97e61e8A9f38D6d6365bce525921B2",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "format": "markdown",
+   "max_chars": 8000,
+   "url": "https://docs.x402.org"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"chars\":6120,\"content\":\"# x402\\n\\nAn open standard for internet-native payments...\",\"final_url\":\"https://docs.x402.org/\",\"format\":\"markdown\",\"status\":200,\"truncated\":false,\"url\":\"https://docs.x402.org\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1788960152/bazaar-icons/f98489fd044477d5.png",
+ "docs": "https://search.cyberwarex.com/llms.txt",
+ "docsChecked": 1793609269717,
+ "payers30d": 14,
+ "calls30d": 48,
+ "lastCalledAt": "2026-10-31T23:59:36.088Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 139,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 139,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/search-cyberwarex-com-contents",
+ "rating": null,
+ "related": [
+  "api-bitrefill-com-x402-gift-cards-search",
+  "stableenrich-dev-api-exa-contents",
+  "win-oneshotagent-com-v1-tools-web-read",
+  "apexfaucet-xyz-api-x402-page-markdown",
+  "sift-srv1996466-hstgr-cloud-v1-feeds",
+  "x240-jvnclk88-workers-dev-url-check"
+ ],
+ "example": {
+  "curl": "curl -i 'https://search.cyberwarex.com/contents?format=markdown&max_chars=8000&url=https%3A%2F%2Fdocs.x402.org'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20search-cyberwarex-com-contents&body=%7B%22slug%22%3A%22search-cyberwarex-com-contents%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: search-cyberwarex-com-contents\",\"body\":\"{\\\"slug\\\":\\\"search-cyberwarex-com-contents\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x402%20Web%20Search%3A%20Fetch%20one%20public%20web%20page%20and%20return%20its%20readable%20content%20as%20clean%20tex&seller=https%3A%2F%2Fsearch.cyberwarex.com%2Fcontents"
+}

@@ -1,0 +1,75 @@
+{
+ "slug": "money-reactor-makar52nn2016-workers-dev-api-block-number",
+ "name": "Latest Base mainnet block height (eth_blockNumber via public RPC) — ch",
+ "seller": "money-reactor.makar52nn2016.workers.dev",
+ "host": "money-reactor.makar52nn2016.workers.dev",
+ "provider": "https://money-reactor.makar52nn2016.workers.dev",
+ "description": "Latest Base mainnet block height (eth_blockNumber via public RPC) — cheapest chain-tip probe",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://money-reactor.makar52nn2016.workers.dev/api/block-number",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xf47b7e5912Fd4218aC4c992Cdc6FAE04e1fF512E",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"at\":\"2026-10-17T08:00:00.000Z\",\"blockNumber\":29834711,\"hex\":\"0x1c74697\",\"network\":\"base\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://money-reactor.makar52nn2016.workers.dev/llms.txt",
+ "docsChecked": 1793609281272,
+ "payers30d": 9,
+ "calls30d": 12,
+ "lastCalledAt": "2026-11-02T04:38:20.835Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 173,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 173,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/money-reactor-makar52nn2016-workers-dev-api-block-number",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://money-reactor.makar52nn2016.workers.dev/api/block-number'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20money-reactor-makar52nn2016-workers-dev-api-block-number&body=%7B%22slug%22%3A%22money-reactor-makar52nn2016-workers-dev-api-block-number%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: money-reactor-makar52nn2016-workers-dev-api-block-number\",\"body\":\"{\\\"slug\\\":\\\"money-reactor-makar52nn2016-workers-dev-api-block-number\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Latest%20Base%20mainnet%20block%20height%20(eth_blockNumber%20via%20public%20RPC)%20%E2%80%94%20ch&seller=https%3A%2F%2Fmoney-reactor.makar52nn2016.workers.dev%2Fapi%2Fblock-number"
+}

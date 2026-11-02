@@ -1,0 +1,84 @@
+{
+ "slug": "api-solenrich-com-entrypoints-parse-transaction-invoke",
+ "name": "SolEnrich: Type detection, protocol identification, transfer breakdown, account r",
+ "seller": "SolEnrich",
+ "host": "api.solenrich.com",
+ "provider": "https://api.solenrich.com",
+ "description": "Type detection, protocol identification, transfer breakdown, account roles.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "transaction",
+  "tx-parsing",
+  "solana",
+  "onchain",
+  "ai-agents"
+ ],
+ "endpoint": "https://api.solenrich.com/entrypoints/parse-transaction/invoke",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x8EdE9eD2E6ACdd9B2BaFa42ff4078d3F3263607c",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "format": "json",
+   "signature": "bqTH7u2PJ33gDQwZMy9BXVxABRpgUbY8xSuK6y9PpKYxucFKhiJyiD7JTrH1zxFvMEJGz4847tvotMoP1Ekavaa"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"output\":{\"accounts_involved\":[\"E16prLnWTwfLUYgXRTELYgw4u8QUnN9CAcHceLrDTjN1\",\"vines1vzrYbzLMRdu58ou5XTby4qAqVRLmqo36NKPTg\",\"11111111111111111111111111111111\"],\"description\":\"E16prLnWTwfLUYgXRTELYgw4u8QUnN9CAcHceLrDTjN1 transferred 0.0001 SOL to vines1...\",\"fee_payer\":\"E16prLnWTwfLUYgXRTELYgw4u8QUnN9CAcHceLrDTjN1\",\"fee_sol\":0.00008,\"last_updated\":\"2026-09-22T00:00:28.297Z\",\"native_transfers\":[{\"amount_sol\":0.0001,\"from\":\"E16prLnWTwfLUYgXRTELYgw4u8QUnN9CAcHceLrDTjN1\",\"to\":\"vines1vzrYbzLMRdu58ou5XTby4qAqVRLmqo36NKPTg\"}],\"protocol\":null,\"signature\":\"bqTH7u2PJ33gDQwZMy9BXVxABRpgUbY8xSuK6y9PpKYxucFKhiJyiD7JTrH1zxFvMEJGz4847tvot...\",\"success\":true,\"timestamp\":\"2026-05-31T09:20:05.000Z\",\"token_transfers\":[],\"type\":\"TRANSFER\"},\"run_id\":\"uuid\",\"status\":\"succeeded\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1780954502/bazaar-icons/31c7c2e1c5cde08e.png",
+ "docs": "https://api.solenrich.com/llms.txt",
+ "docsChecked": 1793609273846,
+ "payers30d": 12,
+ "calls30d": 23,
+ "lastCalledAt": "2026-11-01T17:11:44.739Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 448,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 448,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-solenrich-com-entrypoints-parse-transaction-invoke",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.solenrich.com/entrypoints/parse-transaction/invoke' -H 'content-type: application/json' -d '{\"format\":\"json\",\"signature\":\"bqTH7u2PJ33gDQwZMy9BXVxABRpgUbY8xSuK6y9PpKYxucFKhiJyiD7JTrH1zxFvMEJGz4847tvotMoP1Ekavaa\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-solenrich-com-entrypoints-parse-transaction-invoke&body=%7B%22slug%22%3A%22api-solenrich-com-entrypoints-parse-transaction-invoke%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-solenrich-com-entrypoints-parse-transaction-invoke\",\"body\":\"{\\\"slug\\\":\\\"api-solenrich-com-entrypoints-parse-transaction-invoke\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SolEnrich%3A%20Type%20detection%2C%20protocol%20identification%2C%20transfer%20breakdown%2C%20account%20r&seller=https%3A%2F%2Fapi.solenrich.com%2Fentrypoints%2Fparse-transaction%2Finvoke"
+}

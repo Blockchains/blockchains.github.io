@@ -1,0 +1,83 @@
+{
+ "slug": "nbu-navistri-com-v1-key-rate",
+ "name": "NBU Data Ukraine: National Bank of Ukraine key policy rate (облікова ставка) on a date,",
+ "seller": "NBU Data Ukraine",
+ "host": "nbu.navistri.com",
+ "provider": "https://nbu.navistri.com",
+ "description": "National Bank of Ukraine key policy rate (облікова ставка) on a date, with the overnight deposit and overnight loan rates and every policy-rate change in the previous ~13 months. Call it for Ukrainian loan or deposit maths, late-payment penalties tied to the NBU rate, macro briefs, or to see when the rate last moved. Param: date (YYYY-MM-DD, default today in Kyiv).",
+ "category": "Finance & markets",
+ "tags": [
+  "data",
+  "finance",
+  "ukraine",
+  "interest-rates",
+  "nbu"
+ ],
+ "endpoint": "https://nbu.navistri.com/v1/key-rate",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x44e5eBeB366Ab69A0a3C1c05080a01FE0d8013ef",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "date": "2026-10-12"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"asOf\":\"2026-10-12\",\"date\":\"2026-10-12\",\"lookbackFrom\":\"2025-09-07\",\"overnightDepositRatePct\":16,\"overnightLoanRatePct\":20,\"policyRateChanges\":[{\"effectiveFrom\":\"2026-09-18\",\"previousRatePct\":15.5,\"ratePct\":16},{\"effectiveFrom\":\"2026-07-31\",\"previousRatePct\":15,\"ratePct\":15.5},{\"effectiveFrom\":\"2026-01-30\",\"previousRatePct\":15.5,\"ratePct\":15}],\"policyRateEffectiveFrom\":\"2026-09-18\",\"policyRatePct\":16},\"meta\":{\"cached\":false,\"endpoint\":\"GET /v1/key-rate\",\"params\":{\"date\":\"2026-10-12\"},\"retrievedAt\":\"2026-10-12T12:00:00.000Z\",\"source\":\"National Bank of Ukraine open data (bank.gov.ua)\",\"sourceUrl\":\"https://bank.gov.ua/ua/open-data/api-dev\",\"terms\":\"Ukrainian public open data: free reuse including commercial use, with mandatory attribution to the source (Law of Ukraine 'On Access to Public Information', art. 10-1; https://bank.gov.ua/ua/open-data). Values are passed through unchanged. Not affiliated with or endorsed by the NBU.\",\"upstreamUrl\":\"https://bank.gov.ua/...\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://nbu.navistri.com/llms.txt",
+ "docsChecked": 1793609274086,
+ "payers30d": 12,
+ "calls30d": 15,
+ "lastCalledAt": "2026-11-01T06:50:08.654Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 48,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 48,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/nbu-navistri-com-v1-key-rate",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i 'https://nbu.navistri.com/v1/key-rate?date=2026-10-12'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20nbu-navistri-com-v1-key-rate&body=%7B%22slug%22%3A%22nbu-navistri-com-v1-key-rate%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: nbu-navistri-com-v1-key-rate\",\"body\":\"{\\\"slug\\\":\\\"nbu-navistri-com-v1-key-rate\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=NBU%20Data%20Ukraine%3A%20National%20Bank%20of%20Ukraine%20key%20policy%20rate%20(%D0%BE%D0%B1%D0%BB%D1%96%D0%BA%D0%BE%D0%B2%D0%B0%20%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0)%20on%20a%20date%2C&seller=https%3A%2F%2Fnbu.navistri.com%2Fv1%2Fkey-rate"
+}

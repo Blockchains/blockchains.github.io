@@ -1,0 +1,80 @@
+{
+ "slug": "www-getbags-app-api-v1",
+ "name": "BAGS Agent API: BAGS Agent API index — machine-readable directory of the agentic payme",
+ "seller": "BAGS Agent API",
+ "host": "www.getbags.app",
+ "provider": "https://www.getbags.app",
+ "description": "BAGS Agent API index — machine-readable directory of the agentic payment API, MCP server, and x402 payment surface.",
+ "category": "AI & LLM",
+ "tags": [
+  "payments",
+  "usdc",
+  "x402",
+  "api"
+ ],
+ "endpoint": "https://www.getbags.app/api/v1",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x374cFb844a5C702d637d72a5387fD9EF6B82108C",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"api_catalog\":\"https://www.getbags.app/.well-known/api-catalog\",\"auth\":\"https://www.getbags.app/auth.md\",\"documentation\":\"https://docs.getbags.app\",\"mcp_server\":\"https://www.getbags.app/api/mcp/mcp\",\"name\":\"BAGS Agent API\",\"openapi\":\"https://www.getbags.app/api/openapi.json\",\"version\":\"v1\",\"x402\":{\"agentic_payments\":\"https://docs.getbags.app/docs/providers/sell-to-agents\",\"discovery_challenge\":\"https://www.getbags.app/api/v1\",\"protocol\":\"https://x402.org\",\"resource_pattern\":\"https://www.getbags.app/api/agent/link/pl-{paymentLinkId}\"}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1782818905/bazaar-icons/ef17adde8d678389.png",
+ "docs": "https://www.getbags.app/llms.txt",
+ "docsChecked": 1793609275525,
+ "payers30d": 11,
+ "calls30d": 12,
+ "lastCalledAt": "2026-11-01T23:15:34.933Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 417,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 417,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/www-getbags-app-api-v1",
+ "rating": null,
+ "related": [
+  "api-signalis-dev-v1-pulse-narratives",
+  "api-vindexapi-dev-v1-decode",
+  "humanmirror-fr-api-x402-safe-preflight",
+  "x402-telnyx-com-v1-chat-completions-t-deepseek-v4-1-flash",
+  "wiki-use-x402atlas-com-summary",
+  "imagegen-coinopai-com-prompt-styles"
+ ],
+ "example": {
+  "curl": "curl -i 'https://www.getbags.app/api/v1'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-getbags-app-api-v1&body=%7B%22slug%22%3A%22www-getbags-app-api-v1%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-getbags-app-api-v1\",\"body\":\"{\\\"slug\\\":\\\"www-getbags-app-api-v1\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=BAGS%20Agent%20API%3A%20BAGS%20Agent%20API%20index%20%E2%80%94%20machine-readable%20directory%20of%20the%20agentic%20payme&seller=https%3A%2F%2Fwww.getbags.app%2Fapi%2Fv1"
+}

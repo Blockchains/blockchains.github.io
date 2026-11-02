@@ -1,0 +1,88 @@
+{
+ "slug": "apiacre-com-v1-crypto-base-network-status",
+ "name": "API Acre: Read the latest Base mainnet block and a bounded EIP-1559 fee history",
+ "seller": "API Acre",
+ "host": "apiacre.com",
+ "provider": "https://apiacre.com",
+ "description": "Read the latest Base mainnet block and a bounded EIP-1559 fee history in one RPC batch, including gas utilization and priority-fee percentile samples.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto",
+  "evm",
+  "base",
+  "ethereum",
+  "rpc"
+ ],
+ "endpoint": "https://apiacre.com/v1/crypto/base-network-status",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xa0BFa4f07281c9b248DC3AED2217836BcA24869B",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "fee_history_blocks": 5,
+   "reward_percentiles": [
+    10,
+    50,
+    90
+   ]
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"disclaimer\":\"A point-in-time public Base RPC observation, not a fee guarantee or transacti...\",\"fees\":{\"gasPriceWei\":\"1000000\",\"history\":{\"blockCount\":5,\"headAligned\":true,\"newestBlock\":34600000,\"oldestBlock\":34599996,\"rewardPercentiles\":[10,50,90]}},\"latestBlock\":{\"ageSeconds\":2,\"hash\":\"0x4444444444444444444444444444444444444444444444444444444444444444\",\"number\":34600000,\"parentHash\":\"0x3333333333333333333333333333333333333333333333333333333333333333\",\"timestamp\":\"2026-08-11T13:00:00+00:00\"},\"network\":{\"caip2\":\"eip155:8453\",\"chainId\":8453,\"name\":\"Base Mainnet\"},\"networkRequestsMade\":1,\"observedAt\":\"2026-08-11T13:00:02+00:00\",\"readOnly\":true,\"source\":\"https://docs.base.org/base-chain/quickstart/connecting-to-base\",\"transactionBroadcast\":false,\"warnings\":[]},\"meta\":{\"cached\":false,\"duration_ms\":42,\"next_actions\":[],\"sources\":[],\"warnings\":[]},\"request_id\":\"018f1f54-7f38-7ba2-8dc3-5f90272d9f1a\",\"service\":\"crypto.base-network-status\",\"version\":\"1\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1786471603/bazaar-icons/3cd5dfbdc8c7913d.png",
+ "docs": "https://apiacre.com/llms.txt",
+ "docsChecked": 1793609281277,
+ "payers30d": 9,
+ "calls30d": 12,
+ "lastCalledAt": "2026-11-02T03:30:07.01Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 134,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 134,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/apiacre-com-v1-crypto-base-network-status",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://apiacre.com/v1/crypto/base-network-status' -H 'content-type: application/json' -d '{\"fee_history_blocks\":5,\"reward_percentiles\":[10,50,90]}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20apiacre-com-v1-crypto-base-network-status&body=%7B%22slug%22%3A%22apiacre-com-v1-crypto-base-network-status%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: apiacre-com-v1-crypto-base-network-status\",\"body\":\"{\\\"slug\\\":\\\"apiacre-com-v1-crypto-base-network-status\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=API%20Acre%3A%20Read%20the%20latest%20Base%20mainnet%20block%20and%20a%20bounded%20EIP-1559%20fee%20history&seller=https%3A%2F%2Fapiacre.com%2Fv1%2Fcrypto%2Fbase-network-status"
+}

@@ -1,0 +1,81 @@
+{
+ "slug": "api-asi-xynatec-com-v1-x402-search",
+ "name": "ASI Agent Search Index: Web search for AI agents over ASI's own crawled English index: title,",
+ "seller": "ASI Agent Search Index",
+ "host": "api.asi.xynatec.com",
+ "provider": "https://api.asi.xynatec.com",
+ "description": "Web search for AI agents over ASI's own crawled English index: title, URL, snippet, source, date and score as JSON.",
+ "category": "Search & web",
+ "tags": [
+  "search",
+  "web-search",
+  "agents"
+ ],
+ "endpoint": "https://api.asi.xynatec.com/v1/x402/search",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x00F057e7A338143ed94Dbf32cE28e6831f6E4776",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "q": "rust async runtime"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"page\":1,\"query\":\"rust async runtime\",\"results\":[{\"date\":null,\"score\":31.5,\"snippet\":\"Tokio is an asynchronous runtime for the Rust programming language.\",\"source\":\"tokio.rs\",\"title\":\"Tokio - An asynchronous Rust runtime\",\"url\":\"https://tokio.rs/\"}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609282329,
+ "payers30d": 9,
+ "calls30d": 11,
+ "lastCalledAt": "2026-11-01T07:59:54.153Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 426,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 426,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-asi-xynatec-com-v1-x402-search",
+ "rating": null,
+ "related": [
+  "agent-pocket-network-v1-meadow",
+  "glim-sh-api-v1-twitter-search",
+  "twitter-use-x402atlas-com-search",
+  "agent-pocket-network-v1-agentsearch-web-search-v1",
+  "agent-pocket-network-v1-federal-register",
+  "agent-pocket-network-v1-dns-whois-rdap"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.asi.xynatec.com/v1/x402/search?q=rust+async+runtime'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-asi-xynatec-com-v1-x402-search&body=%7B%22slug%22%3A%22api-asi-xynatec-com-v1-x402-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-asi-xynatec-com-v1-x402-search\",\"body\":\"{\\\"slug\\\":\\\"api-asi-xynatec-com-v1-x402-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ASI%20Agent%20Search%20Index%3A%20Web%20search%20for%20AI%20agents%20over%20ASI's%20own%20crawled%20English%20index%3A%20title%2C&seller=https%3A%2F%2Fapi.asi.xynatec.com%2Fv1%2Fx402%2Fsearch"
+}

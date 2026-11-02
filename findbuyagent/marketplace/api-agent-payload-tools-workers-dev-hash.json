@@ -1,0 +1,83 @@
+{
+ "slug": "api-agent-payload-tools-workers-dev-hash",
+ "name": "Agent Payload Tools: Hash text, strings, or UTF-8 payload data with SHA256, SHA384, or SHA5",
+ "seller": "Agent Payload Tools",
+ "host": "api.agent-payload-tools.workers.dev",
+ "provider": "https://api.agent-payload-tools.workers.dev",
+ "description": "Hash text, strings, or UTF-8 payload data with SHA256, SHA384, or SHA512. Compute a cryptographic hash, checksum, or digest for payload integrity, content fingerprinting, cache keys, and verifying that data has not changed.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "AI agent payload tools",
+  "hash API",
+  "SHA256",
+  "SHA512"
+ ],
+ "endpoint": "https://api.agent-payload-tools.workers.dev/hash",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x6B2683F66d35b91ED05a1646c0305b02260B6acB",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "algorithm": "SHA-256",
+   "input": "hello"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.agent-payload-tools.workers.dev/llms.txt",
+ "docsChecked": 1793609281537,
+ "payers30d": 9,
+ "calls30d": 11,
+ "lastCalledAt": "2026-10-30T03:01:47.59Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 37,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 37,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-agent-payload-tools-workers-dev-hash",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.agent-payload-tools.workers.dev/hash' -H 'content-type: application/json' -d '{\"algorithm\":\"SHA-256\",\"input\":\"hello\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-agent-payload-tools-workers-dev-hash&body=%7B%22slug%22%3A%22api-agent-payload-tools-workers-dev-hash%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-agent-payload-tools-workers-dev-hash\",\"body\":\"{\\\"slug\\\":\\\"api-agent-payload-tools-workers-dev-hash\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent%20Payload%20Tools%3A%20Hash%20text%2C%20strings%2C%20or%20UTF-8%20payload%20data%20with%20SHA256%2C%20SHA384%2C%20or%20SHA5&seller=https%3A%2F%2Fapi.agent-payload-tools.workers.dev%2Fhash"
+}

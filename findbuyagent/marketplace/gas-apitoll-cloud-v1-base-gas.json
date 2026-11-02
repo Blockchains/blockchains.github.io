@@ -1,0 +1,83 @@
+{
+ "slug": "gas-apitoll-cloud-v1-base-gas",
+ "name": "ApiToll Base Gas Oracle: Base gas oracle / gas price API for AI agents and bots — get the gas p",
+ "seller": "ApiToll Base Gas Oracle",
+ "host": "gas.apitoll.cloud",
+ "provider": "https://gas.apitoll.cloud",
+ "description": "Base gas oracle / gas price API for AI agents and bots — get the gas price for a transaction on Base in one x402 call. Real-time slow/standard/fast EIP-1559 fee tiers from a live eth_feeHistory call, returned as DROP-IN maxFeePerGas + maxPriorityFeePerGas in wei — plug straight into a viem/ethers transaction, no gwei conversion. Plus base fee, head block, and network fullness. Call it before every Base tx to set a fair fee or wait out congestion.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "base",
+  "gas",
+  "gas-oracle",
+  "gas-price",
+  "transaction-fees"
+ ],
+ "endpoint": "https://gas.apitoll.cloud/v1/base/gas",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xcc69d619E6053F88A4845066518f465bD06Fc96c",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "blocks": 20
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"base_fee_gwei\":0.0042,\"base_fee_wei\":\"4200000\",\"block_number\":16842103,\"network\":\"base-mainnet\",\"stats\":{\"blocks_sampled\":20,\"median_fullness_pct\":31.5,\"ts\":\"2026-05-28T15:42:30.000Z\"},\"tiers\":{\"fast\":{\"maxFeePerGas\":\"16300000\",\"maxPriorityFeePerGas\":\"10000000\",\"max_fee_gwei\":0.0163,\"max_priority_gwei\":0.01},\"slow\":{\"maxFeePerGas\":\"8300000\",\"maxPriorityFeePerGas\":\"2000000\",\"max_fee_gwei\":0.0083,\"max_priority_gwei\":0.002},\"standard\":{\"maxFeePerGas\":\"10300000\",\"maxPriorityFeePerGas\":\"4000000\",\"max_fee_gwei\":0.0103,\"max_priority_gwei\":0.004}}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://gas.apitoll.cloud/.well-known/x402",
+ "docsChecked": 1793609271242,
+ "payers30d": 14,
+ "calls30d": 19,
+ "lastCalledAt": "2026-11-02T03:29:36.476Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 354,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 354,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/gas-apitoll-cloud-v1-base-gas",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://gas.apitoll.cloud/v1/base/gas?blocks=20'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20gas-apitoll-cloud-v1-base-gas&body=%7B%22slug%22%3A%22gas-apitoll-cloud-v1-base-gas%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: gas-apitoll-cloud-v1-base-gas\",\"body\":\"{\\\"slug\\\":\\\"gas-apitoll-cloud-v1-base-gas\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ApiToll%20Base%20Gas%20Oracle%3A%20Base%20gas%20oracle%20%2F%20gas%20price%20API%20for%20AI%20agents%20and%20bots%20%E2%80%94%20get%20the%20gas%20p&seller=https%3A%2F%2Fgas.apitoll.cloud%2Fv1%2Fbase%2Fgas"
+}

@@ -1,0 +1,83 @@
+{
+ "slug": "material-halowerk-com-awg-metric",
+ "name": "awg_metric_convert: Uses the geometric AWG definition, so results are exact for solid roun",
+ "seller": "awg_metric_convert",
+ "host": "material.halowerk.com",
+ "provider": "https://material.halowerk.com",
+ "description": "Uses the geometric AWG definition, so results are exact for solid round conductors. Mass per metre and resistance follow from the material density and resistivity at 20 degrees Celsius; stranded conductors carry roughly two to five percent more mass and resistance per metre than the same nominal size and are not modelled separately. Supply either awg or cross_section_mm2, not both. Sizes 4/0 through 40 AWG are covered.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "materials",
+  "cable",
+  "conversion"
+ ],
+ "endpoint": "https://material.halowerk.com/awg-metric",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x2880EdfFF13100677Bf97A3CBdF3Bc34771C4E5E",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "awg": "12",
+   "length_m": 10,
+   "material": "copper"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"assumptions\":[\"Solid round conductor per the geometric AWG definition.\",\"Stranded conductors add roughly two to five percent mass and resistance per metre.\",\"Resistance is DC at 20 degrees Celsius, no temperature or skin effect correction.\"],\"awg\":\"12\",\"awg_exact_match\":true,\"cross_section_mm2\":3.3088,\"dc_resistance_ohm_per_km_at_20c\":5.2107,\"density_g_per_cm3\":8.96,\"diameter_mm\":2.0525,\"direction\":\"awg_to_metric\",\"length_m\":10,\"mass_kg\":0.2965,\"mass_kg_per_km\":29.647,\"material\":\"copper\",\"method\":\"diameter_mm = 0.127 * 92^((36-n)/39)\",\"nearest_iec_60228_mm2\":4,\"resistivity_ohm_mm2_per_m\":0.017241}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://material.halowerk.com/llms.txt",
+ "docsChecked": 1793609274326,
+ "payers30d": 12,
+ "calls30d": 18,
+ "lastCalledAt": "2026-11-01T07:00:23.495Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 311,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 311,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/material-halowerk-com-awg-metric",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://material.halowerk.com/awg-metric' -H 'content-type: application/json' -d '{\"awg\":\"12\",\"length_m\":10,\"material\":\"copper\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20material-halowerk-com-awg-metric&body=%7B%22slug%22%3A%22material-halowerk-com-awg-metric%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: material-halowerk-com-awg-metric\",\"body\":\"{\\\"slug\\\":\\\"material-halowerk-com-awg-metric\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=awg_metric_convert%3A%20Uses%20the%20geometric%20AWG%20definition%2C%20so%20results%20are%20exact%20for%20solid%20roun&seller=https%3A%2F%2Fmaterial.halowerk.com%2Fawg-metric"
+}

@@ -1,0 +1,82 @@
+{
+ "slug": "api-justaname-id-ens-v2-resolve",
+ "name": "JAW.id ENS Resolver: Resolves an ENS name into its addresses, text records, and content has",
+ "seller": "JAW.id ENS Resolver",
+ "host": "api.justaname.id",
+ "provider": "https://api.justaname.id",
+ "description": "Resolves an ENS name into its addresses, text records, and content hash, with batch support up to 50 names and per-name chain scoping via interop addresses.",
+ "category": "Utilities",
+ "tags": [
+  "ens",
+  "identity",
+  "name-resolution",
+  "forward-resolution"
+ ],
+ "endpoint": "https://api.justaname.id/ens/v2/resolve",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xc529edd6d47c60923902514c7c0b3993ae42c2ec",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "ens": "vitalik.eth"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"fullName\":\"vitalik.eth\",\"records\":{\"contentHash\":{\"decoded\":\"ipns://k51qzi5uqu5dgox2z23r6e99oqency055a6xt92xzmyvpz8mwz5ycjavm0u2u8\",\"protocolType\":\"ipns\"},\"texts\":[{\"key\":\"url\",\"value\":\"https://vitalik.ca\"},{\"key\":\"avatar\",\"value\":\"eip155:1/erc721:0x...\"}]},\"resolvedAddress\":{\"coinType\":\"60\",\"value\":\"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.justaname.id/.well-known/x402",
+ "docsChecked": 1793609274794,
+ "payers30d": 11,
+ "calls30d": 39,
+ "lastCalledAt": "2026-11-02T03:30:24.163Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 107,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 107,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-justaname-id-ens-v2-resolve",
+ "rating": null,
+ "related": [
+  "www-api-xpay-com-x402-network",
+  "www-api-xpay-com-x402-ping",
+  "www-api-xpay-com-x402-uuid",
+  "www-api-xpay-com-x402-payment",
+  "api-geoprimitives-dev-v1-marine-depth",
+  "bunnvault-xyz-api-vault-apy"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.justaname.id/ens/v2/resolve?ens=vitalik.eth'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-justaname-id-ens-v2-resolve&body=%7B%22slug%22%3A%22api-justaname-id-ens-v2-resolve%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-justaname-id-ens-v2-resolve\",\"body\":\"{\\\"slug\\\":\\\"api-justaname-id-ens-v2-resolve\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=JAW.id%20ENS%20Resolver%3A%20Resolves%20an%20ENS%20name%20into%20its%20addresses%2C%20text%20records%2C%20and%20content%20has&seller=https%3A%2F%2Fapi.justaname.id%2Fens%2Fv2%2Fresolve"
+}

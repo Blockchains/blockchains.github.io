@@ -1,0 +1,84 @@
+{
+ "slug": "api-nansen-ai-api-v1-tgm-token-information",
+ "name": "Nansen: Get \"Token God Mode\" (TGM) token information data",
+ "seller": "Nansen",
+ "host": "api.nansen.ai",
+ "provider": "https://api.nansen.ai",
+ "description": "Get \"Token God Mode\" (TGM) token information data",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto",
+  "analytics",
+  "smart-money",
+  "on-chain"
+ ],
+ "endpoint": "https://api.nansen.ai/api/v1/tgm/token-information",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x93053f1e7A5eFEDa532Fe69CbbE43cBEc3A0F13f",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "chain": "ethereum",
+   "timeframe": "1d",
+   "token_address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1780076798/bazaar-icons/d6ed3d2e7dd37d8a.png",
+ "docs": null,
+ "docsChecked": 1793609272258,
+ "payers30d": 42,
+ "calls30d": 72,
+ "lastCalledAt": "2026-11-01T22:04:27.662Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 55,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 55,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-nansen-ai-api-v1-tgm-token-information",
+ "rating": null,
+ "related": [
+  "api-x402node-dev-chain-honeypot",
+  "api-gondola-ai-com-v1-chat-completions",
+  "api-gondola-ai-com-v1-images-generations",
+  "stablestudio-dev-api-upload",
+  "pro-api-coinmarketcap-com-x402-v3-cryptocurrency-quotes-latest",
+  "pro-api-coinmarketcap-com-x402-v1-dex-search"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.nansen.ai/api/v1/tgm/token-information' -H 'content-type: application/json' -d '{\"chain\":\"ethereum\",\"timeframe\":\"1d\",\"token_address\":\"0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-nansen-ai-api-v1-tgm-token-information&body=%7B%22slug%22%3A%22api-nansen-ai-api-v1-tgm-token-information%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-nansen-ai-api-v1-tgm-token-information\",\"body\":\"{\\\"slug\\\":\\\"api-nansen-ai-api-v1-tgm-token-information\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Nansen%3A%20Get%20%22Token%20God%20Mode%22%20(TGM)%20token%20information%20data&seller=https%3A%2F%2Fapi.nansen.ai%2Fapi%2Fv1%2Ftgm%2Ftoken-information"
+}

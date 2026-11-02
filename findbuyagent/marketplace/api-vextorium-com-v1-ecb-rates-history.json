@@ -1,0 +1,86 @@
+{
+ "slug": "api-vextorium-com-v1-ecb-rates-history",
+ "name": "Historical ECB rates | Vextorium: Historical ECB euro reference exchange rate for any date since 1999 an",
+ "seller": "Historical ECB rates | Vextorium",
+ "host": "api.vextorium.com",
+ "provider": "https://api.vextorium.com",
+ "description": "Historical ECB euro reference exchange rate for any date since 1999 and conversion between any two published currencies.",
+ "category": "Finance & markets",
+ "tags": [
+  "forex",
+  "ecb",
+  "historical",
+  "exchange-rates",
+  "eur"
+ ],
+ "endpoint": "https://api.vextorium.com/v1/ecb-rates-history",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.003,
+ "amount": "3000",
+ "payTo": "0xb9f06D2734B7E9D7b21B64C4D8b95bd774b71aCf",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "amount": 100,
+   "date": "2024-06-14",
+   "from": "EUR",
+   "to": "USD"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"amount\":100,\"from\":\"EUR\",\"note\":\"If the date is a holiday or weekend, the last previous published day is used.\",\"rate\":1.0686,\"reference_date\":\"2024-06-14\",\"requested_date\":\"2024-06-14\",\"result\":106.86,\"source\":\"European Central Bank - euro reference exchange rates\",\"to\":\"USD\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.vextorium.com/llms.txt",
+ "docsChecked": 1793609277405,
+ "payers30d": 10,
+ "calls30d": 14,
+ "lastCalledAt": "2026-10-23T06:53:23.922Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 142,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 142,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-vextorium-com-v1-ecb-rates-history",
+ "rating": null,
+ "related": [
+  "edgar-apitoll-cloud-v1-edgar-filings",
+  "x402-ottoai-services-tradfi-data",
+  "mtbandy-sec-ratio-engine-serve-app-modal-run-ratios",
+  "data-tollkit-dev-sec-company",
+  "mcp-blocksize-info-v1-bidask-btc-usd",
+  "intel-degenscan-io-v1-oracle-board"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.vextorium.com/v1/ecb-rates-history' -H 'content-type: application/json' -d '{\"amount\":100,\"date\":\"2024-06-14\",\"from\":\"EUR\",\"to\":\"USD\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-vextorium-com-v1-ecb-rates-history&body=%7B%22slug%22%3A%22api-vextorium-com-v1-ecb-rates-history%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-vextorium-com-v1-ecb-rates-history\",\"body\":\"{\\\"slug\\\":\\\"api-vextorium-com-v1-ecb-rates-history\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Historical%20ECB%20rates%20%7C%20Vextorium%3A%20Historical%20ECB%20euro%20reference%20exchange%20rate%20for%20any%20date%20since%201999%20an&seller=https%3A%2F%2Fapi.vextorium.com%2Fv1%2Fecb-rates-history"
+}

@@ -1,0 +1,84 @@
+{
+ "slug": "deskfeed-dev-v1-events",
+ "name": "Agent Desk API: Event Facts: Verified market-moving events for crypto agents: headlines categorized",
+ "seller": "Agent Desk API: Event Facts",
+ "host": "deskfeed.dev",
+ "provider": "https://deskfeed.dev",
+ "description": "Verified market-moving events for crypto agents: headlines categorized (liquidations, macro, regulation and more) and tagged to BTC/ETH, each with source, publisher, timestamp, original link, and a trust tier distinguishing primary official sources from aggregated headlines. Filter by symbol, category, and count. Fresh every 15 minutes.",
+ "category": "Finance & markets",
+ "tags": [
+  "crypto",
+  "news",
+  "events",
+  "sentiment",
+  "macro"
+ ],
+ "endpoint": "https://deskfeed.dev/v1/events",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xff0e58F29d1161E9B0f8ab80b4a0Cb22764716A5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": 10,
+   "symbol": "BTCUSDT"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"as_of\":\"2026-10-13T08:01:02Z\",\"availability\":\"AVAILABLE\",\"data_age_seconds\":12,\"disclaimer\":\"Descriptive market data for informational purposes only. Not financial advice.\",\"events\":[{\"article_url\":\"https://example.com/article\",\"categories\":[\"LIQUIDATION\"],\"event_id\":\"E-f60f3b69a32122755ee9\",\"published_at\":\"2026-10-13T07:58:00Z\",\"publisher\":\"Example Publisher\",\"symbols\":[\"BTCUSDT\"],\"title\":\"Bitcoin Falls Below $82K as $770M in Crypto Liquidations Hit\",\"trust_tier\":\"AGGREGATED_UNVERIFIED\"}],\"source_status\":[{\"source_id\":\"federal_reserve_press\",\"status\":\"PASS\",\"trust_tier\":\"PRIMARY_OFFICIAL\"}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://deskfeed.dev/llms.txt",
+ "docsChecked": 1793609273947,
+ "payers30d": 12,
+ "calls30d": 17,
+ "lastCalledAt": "2026-11-01T08:03:09.494Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 75,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 75,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/deskfeed-dev-v1-events",
+ "rating": null,
+ "related": [
+  "tick-hugen-tokyo-tick-latest",
+  "tick-hugen-tokyo-tick-symbols",
+  "tick-hugen-tokyo-tick-all",
+  "www-x402financialdata-com-crypto-prices",
+  "agentshield-live-fx",
+  "4yearcycle-com-x402-fx-rates"
+ ],
+ "example": {
+  "curl": "curl -i 'https://deskfeed.dev/v1/events?limit=10&symbol=BTCUSDT'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20deskfeed-dev-v1-events&body=%7B%22slug%22%3A%22deskfeed-dev-v1-events%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: deskfeed-dev-v1-events\",\"body\":\"{\\\"slug\\\":\\\"deskfeed-dev-v1-events\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent%20Desk%20API%3A%20Event%20Facts%3A%20Verified%20market-moving%20events%20for%20crypto%20agents%3A%20headlines%20categorized&seller=https%3A%2F%2Fdeskfeed.dev%2Fv1%2Fevents"
+}

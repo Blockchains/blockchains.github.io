@@ -1,0 +1,83 @@
+{
+ "slug": "twitter-use-x402atlas-com-user-tweets",
+ "name": "Twitter/X API: Get a paginated timeline of posts from an X user",
+ "seller": "Twitter/X API",
+ "host": "twitter.use.x402atlas.com",
+ "provider": "https://twitter.use.x402atlas.com",
+ "description": "Get a paginated timeline of posts from an X user.",
+ "category": "Search & web",
+ "tags": [
+  "twitter",
+  "x",
+  "user-tweets",
+  "timeline",
+  "social-listening"
+ ],
+ "endpoint": "https://twitter.use.x402atlas.com/user-tweets",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x51D577C8CBB8b3fB1BA0CE31c7923cC27a07F78B",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "username": "BillGates"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"cursor\":\"NEXT_PAGE_CURSOR\",\"data\":[{\"created_at\":\"Sun Mar 23 12:00:00 +0000 2025\",\"favorite_count\":120,\"full_text\":\"Example X post\",\"id_str\":\"1903602810652082591\",\"reply_count\":8,\"retweet_count\":15,\"user\":{\"id_str\":\"50393960\",\"name\":\"Bill Gates\",\"screen_name\":\"BillGates\"}}],\"queried_at\":\"2026-07-26T12:00:00Z\",\"result_count\":1}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://twitter.use.x402atlas.com/llms.txt",
+ "docsChecked": 1793609275032,
+ "payers30d": 11,
+ "calls30d": 57,
+ "lastCalledAt": "2026-11-01T23:22:21.828Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 168,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 168,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/twitter-use-x402atlas-com-user-tweets",
+ "rating": null,
+ "related": [
+  "agent-pocket-network-v1-meadow",
+  "glim-sh-api-v1-twitter-search",
+  "agent-pocket-network-v1-agentsearch-web-search-v1",
+  "agent-pocket-network-v1-federal-register",
+  "agent-pocket-network-v1-dns-whois-rdap",
+  "api-you-com-v1-search"
+ ],
+ "example": {
+  "curl": "curl -i 'https://twitter.use.x402atlas.com/user-tweets?username=BillGates'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20twitter-use-x402atlas-com-user-tweets&body=%7B%22slug%22%3A%22twitter-use-x402atlas-com-user-tweets%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: twitter-use-x402atlas-com-user-tweets\",\"body\":\"{\\\"slug\\\":\\\"twitter-use-x402atlas-com-user-tweets\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Twitter%2FX%20API%3A%20Get%20a%20paginated%20timeline%20of%20posts%20from%20an%20X%20user&seller=https%3A%2F%2Ftwitter.use.x402atlas.com%2Fuser-tweets"
+}

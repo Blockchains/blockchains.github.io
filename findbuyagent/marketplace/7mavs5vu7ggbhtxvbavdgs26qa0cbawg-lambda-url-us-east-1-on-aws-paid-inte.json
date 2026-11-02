@@ -1,0 +1,81 @@
+{
+ "slug": "7mavs5vu7ggbhtxvbavdgs26qa0cbawg-lambda-url-us-east-1-on-aws-paid-inte",
+ "name": "RSoft Bank: Live USDC lending rates of RSoft Bank, a real lender for AI agents on",
+ "seller": "RSoft Bank",
+ "host": "7mavs5vu7ggbhtxvbavdgs26qa0cbawg.lambda-url.us-east-1.on.aws",
+ "provider": "https://7mavs5vu7ggbhtxvbavdgs26qa0cbawg.lambda-url.us-east-1.on.aws",
+ "description": "Live USDC lending rates of RSoft Bank, a real lender for AI agents on Base mainnet. Call it before requesting a loan or when comparing the cost of agent credit: returns the annual interest rate per credit tier (AAA 5% to CCC 35%), the loan size range (5-25 USDC with a human sponsor, 2 USDC flat without one), the maximum term (90 days), network and last update. Cheapest way to learn what borrowing costs an autonomous agent right now.",
+ "category": "Finance & markets",
+ "tags": [
+  "lending",
+  "interest-rates",
+  "usdc",
+  "base",
+  "ai-agents"
+ ],
+ "endpoint": "https://7mavs5vu7ggbhtxvbavdgs26qa0cbawg.lambda-url.us-east-1.on.aws/paid/interest-rates",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xB684898D3f4437D93848456141445c66Aa322B13",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"max_amount\":25,\"network\":\"Base Mainnet\",\"rates\":{\"AAA\":{\"annual_rate\":0.05},\"CCC\":{\"annual_rate\":0.35}}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609279817,
+ "payers30d": 9,
+ "calls30d": 18,
+ "lastCalledAt": "2026-11-01T06:55:44.811Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 49,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 49,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/7mavs5vu7ggbhtxvbavdgs26qa0cbawg-lambda-url-us-east-1-on-aws-paid-inte",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i 'https://7mavs5vu7ggbhtxvbavdgs26qa0cbawg.lambda-url.us-east-1.on.aws/paid/interest-rates'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%207mavs5vu7ggbhtxvbavdgs26qa0cbawg-lambda-url-us-east-1-on-aws-paid-inte&body=%7B%22slug%22%3A%227mavs5vu7ggbhtxvbavdgs26qa0cbawg-lambda-url-us-east-1-on-aws-paid-inte%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: 7mavs5vu7ggbhtxvbavdgs26qa0cbawg-lambda-url-us-east-1-on-aws-paid-inte\",\"body\":\"{\\\"slug\\\":\\\"7mavs5vu7ggbhtxvbavdgs26qa0cbawg-lambda-url-us-east-1-on-aws-paid-inte\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=RSoft%20Bank%3A%20Live%20USDC%20lending%20rates%20of%20RSoft%20Bank%2C%20a%20real%20lender%20for%20AI%20agents%20on&seller=https%3A%2F%2F7mavs5vu7ggbhtxvbavdgs26qa0cbawg.lambda-url.us-east-1.on.aws%2Fpaid%2Finterest-rates"
+}

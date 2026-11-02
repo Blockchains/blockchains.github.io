@@ -1,0 +1,81 @@
+{
+ "slug": "horizonpulse-dev-api-pulse",
+ "name": "Horizon Pulse: Crypto market data: a current USD price snapshot for BTC, ETH and SOL,",
+ "seller": "Horizon Pulse",
+ "host": "horizonpulse.dev",
+ "provider": "https://horizonpulse.dev",
+ "description": "Crypto market data: a current USD price snapshot for BTC, ETH and SOL, or one coin via symbol= (bad symbol: 400), for quick market context. JSON per asset: priceUsd, change24hPct, momentum; plus overall momentum, sentiment, direction, avgChange24hPct, asOf. Prices from Coinbase Exchange, CoinGecko fallback (source field). Labels are fixed rules on 24h change, not a forecast and not financial advice. Errors are not charged on Base (other rails may charge).",
+ "category": "Weather & geo",
+ "tags": [
+  "crypto",
+  "market-data",
+  "spot-prices",
+  "btc-eth-sol",
+  "momentum"
+ ],
+ "endpoint": "https://horizonpulse.dev/api/pulse",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x5b32c973596078a967562ca652761404f19be0e9",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asOf\":\"2026-10-16T15:44:52.573Z\",\"assets\":{\"BTC\":{\"change24hPct\":-0.9247164120007333,\"id\":\"bitcoin\",\"momentum\":\"neutral\",\"priceUsd\":81572},\"ETH\":{\"change24hPct\":0.10212786901384002,\"id\":\"ethereum\",\"momentum\":\"neutral\",\"priceUsd\":2440.61},\"SOL\":{\"change24hPct\":-1.3586187376167542,\"id\":\"solana\",\"momentum\":\"neutral\",\"priceUsd\":104.55}},\"ok\":true,\"overall\":{\"avgChange24hPct\":-0.7270690935345492,\"direction\":\"flat\",\"momentum\":\"neutral\",\"sentiment\":\"neutral\"},\"priced\":{\"amountAtomic\":\"2000\",\"amountUsd\":\"$0.002\",\"asset\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\"network\":\"base\",\"payTo\":\"0x5b32c973596078a967562ca652761404f19be0e9\"},\"source\":\"coinbase\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1790623595/bazaar-icons/2ff6a4fc61cbe047.png",
+ "docs": "https://horizonpulse.dev/llms.txt",
+ "docsChecked": 1793609272071,
+ "payers30d": 13,
+ "calls30d": 17,
+ "lastCalledAt": "2026-11-02T04:22:19.845Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 429,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 429,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/horizonpulse-dev-api-pulse",
+ "rating": null,
+ "related": [
+  "netintel-dev-weather-current",
+  "weather-cyberwarex-com-forecast",
+  "apiacre-com-v1-data-timezone-convert",
+  "agentsvc-io-api-v1-proxy-weather",
+  "win-oneshotagent-com-v1-tools-lookup-place-weather-alerts",
+  "2s-io-api-stocks-metrics"
+ ],
+ "example": {
+  "curl": "curl -i 'https://horizonpulse.dev/api/pulse'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20horizonpulse-dev-api-pulse&body=%7B%22slug%22%3A%22horizonpulse-dev-api-pulse%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: horizonpulse-dev-api-pulse\",\"body\":\"{\\\"slug\\\":\\\"horizonpulse-dev-api-pulse\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Horizon%20Pulse%3A%20Crypto%20market%20data%3A%20a%20current%20USD%20price%20snapshot%20for%20BTC%2C%20ETH%20and%20SOL%2C&seller=https%3A%2F%2Fhorizonpulse.dev%2Fapi%2Fpulse"
+}

@@ -1,0 +1,78 @@
+{
+ "slug": "agent-connskill-com-v1-keyword-ideas",
+ "name": "Keyword suggestions for a seed keyword, with search volume and CPC",
+ "seller": "agent.connskill.com",
+ "host": "agent.connskill.com",
+ "provider": "https://agent.connskill.com",
+ "description": "Keyword suggestions for a seed keyword, with search volume and CPC",
+ "category": "Search & web",
+ "tags": [],
+ "endpoint": "https://agent.connskill.com/v1/keyword-ideas",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.03,
+ "amount": "30000",
+ "payTo": "0x43B85AE58f0A2505c710Bc715d6f3EB16b1f63dE",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "keyword": "electric bikes",
+   "limit": 50
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"items\":[{\"competition\":0.7,\"cpc\":5.2,\"keyword\":\"webdesign agentur\",\"searchVolume\":1900}],\"status\":\"delivered\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://agent.connskill.com/llms.txt",
+ "docsChecked": 1793609278806,
+ "payers30d": 9,
+ "calls30d": 38,
+ "lastCalledAt": "2026-11-01T07:23:03.693Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 349,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 349,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agent-connskill-com-v1-keyword-ideas",
+ "rating": null,
+ "related": [
+  "x402-asterpay-io-v2-x402-agent-readiness",
+  "google-trends-use-x402atlas-com-related-queries",
+  "reddit-apitoll-cloud-v1-reddit-search",
+  "stabletravel-dev-api-google-flights-search",
+  "stabletravel-dev-api-seats-aero-search",
+  "api-kadec0-xyz-v1-papers"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://agent.connskill.com/v1/keyword-ideas' -H 'content-type: application/json' -d '{\"keyword\":\"electric bikes\",\"limit\":50}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agent-connskill-com-v1-keyword-ideas&body=%7B%22slug%22%3A%22agent-connskill-com-v1-keyword-ideas%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agent-connskill-com-v1-keyword-ideas\",\"body\":\"{\\\"slug\\\":\\\"agent-connskill-com-v1-keyword-ideas\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Keyword%20suggestions%20for%20a%20seed%20keyword%2C%20with%20search%20volume%20and%20CPC&seller=https%3A%2F%2Fagent.connskill.com%2Fv1%2Fkeyword-ideas"
+}

@@ -1,0 +1,79 @@
+{
+ "slug": "agentshield-live-fx",
+ "name": "Call when an agent needs a daily reference exchange rate for a currenc",
+ "seller": "agentshield.live",
+ "host": "agentshield.live",
+ "provider": "https://agentshield.live",
+ "description": "Call when an agent needs a daily reference exchange rate for a currency pair on a date. Not a live trading price.",
+ "category": "Finance & markets",
+ "tags": [],
+ "endpoint": "https://agentshield.live/fx",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xC87e9a5F237eADA767E57eee8fae67aB565225AE",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "date": "2026-10-21",
+   "from": "EUR",
+   "to": "USD"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"date\":\"2026-10-21\",\"from\":\"EUR\",\"known\":true,\"rate\":1.08,\"source\":\"ECB\",\"to\":\"USD\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://agentshield.live/llms.txt",
+ "docsChecked": 1793609280965,
+ "payers30d": 9,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T08:07:25.956Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 136,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 136,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agentshield-live-fx",
+ "rating": null,
+ "related": [
+  "tick-hugen-tokyo-tick-latest",
+  "tick-hugen-tokyo-tick-symbols",
+  "tick-hugen-tokyo-tick-all",
+  "deskfeed-dev-v1-events",
+  "www-x402financialdata-com-crypto-prices",
+  "4yearcycle-com-x402-fx-rates"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agentshield.live/fx?date=2026-10-21&from=EUR&to=USD'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agentshield-live-fx&body=%7B%22slug%22%3A%22agentshield-live-fx%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agentshield-live-fx\",\"body\":\"{\\\"slug\\\":\\\"agentshield-live-fx\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Call%20when%20an%20agent%20needs%20a%20daily%20reference%20exchange%20rate%20for%20a%20currenc&seller=https%3A%2F%2Fagentshield.live%2Ffx"
+}

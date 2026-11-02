@@ -1,0 +1,78 @@
+{
+ "slug": "win-oneshotagent-com-v1-tools-lookup-place-weather-alerts",
+ "name": "List the weather watches, warnings and advisories active at a US point",
+ "seller": "win.oneshotagent.com",
+ "host": "win.oneshotagent.com",
+ "provider": "https://win.oneshotagent.com",
+ "description": "List the weather watches, warnings and advisories active at a US point, including those issued but not yet begun.",
+ "category": "Weather & geo",
+ "tags": [],
+ "endpoint": "https://win.oneshotagent.com/v1/tools/lookup/place-weather-alerts",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x9fb365E4E9385E2a39FeBAd70368267e6f571d9A",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "latitude": 30.1487,
+   "longitude": -94.0188
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"alerts\":[{\"area\":\"Hardin, TX; Jasper, TX; Jefferson, TX; Orange, TX\",\"certainty\":\"Observed\",\"description\":\"The Flood Warning is extended for the following rivers.\",\"effective_at\":\"2026-10-12T10:35:00-05:00\",\"ends_at\":null,\"event\":\"Flood Warning\",\"expires_at\":\"2026-10-13T01:00:00-05:00\",\"headline\":\"Flood Warning issued October 12 at 10:35AM CDT by NWS Lake Charles LA\",\"instruction\":\"Turn around, do not drown when encountering flooded roads.\",\"onset_at\":\"2026-10-12T10:35:00-05:00\",\"sender\":\"NWS Lake Charles LA\",\"severity\":\"Severe\",\"urgency\":\"Immediate\"}],\"total\":1}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609279429,
+ "payers30d": 9,
+ "calls30d": 23,
+ "lastCalledAt": "2026-11-01T07:37:11.386Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 97,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 97,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/win-oneshotagent-com-v1-tools-lookup-place-weather-alerts",
+ "rating": null,
+ "related": [
+  "netintel-dev-weather-current",
+  "horizonpulse-dev-api-pulse",
+  "horizonpulse-dev-api-gas",
+  "weather-cyberwarex-com-forecast",
+  "apiacre-com-v1-data-timezone-convert",
+  "agentsvc-io-api-v1-proxy-weather"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://win.oneshotagent.com/v1/tools/lookup/place-weather-alerts' -H 'content-type: application/json' -d '{\"latitude\":30.1487,\"longitude\":-94.0188}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20win-oneshotagent-com-v1-tools-lookup-place-weather-alerts&body=%7B%22slug%22%3A%22win-oneshotagent-com-v1-tools-lookup-place-weather-alerts%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: win-oneshotagent-com-v1-tools-lookup-place-weather-alerts\",\"body\":\"{\\\"slug\\\":\\\"win-oneshotagent-com-v1-tools-lookup-place-weather-alerts\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=List%20the%20weather%20watches%2C%20warnings%20and%20advisories%20active%20at%20a%20US%20point&seller=https%3A%2F%2Fwin.oneshotagent.com%2Fv1%2Ftools%2Flookup%2Fplace-weather-alerts"
+}

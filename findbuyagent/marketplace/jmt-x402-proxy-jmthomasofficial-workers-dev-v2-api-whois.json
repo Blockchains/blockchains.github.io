@@ -1,0 +1,82 @@
+{
+ "slug": "jmt-x402-proxy-jmthomasofficial-workers-dev-v2-api-whois",
+ "name": "JMT WHOIS RDAP: Raw RDAP registration record for a domain, returned as structured JSON",
+ "seller": "JMT WHOIS RDAP",
+ "host": "jmt-x402-proxy.jmthomasofficial.workers.dev",
+ "provider": "https://jmt-x402-proxy.jmthomasofficial.workers.dev",
+ "description": "Raw RDAP registration record for a domain, returned as structured JSON.",
+ "category": "Data & analytics",
+ "tags": [
+  "domain",
+  "whois",
+  "rdap",
+  "network"
+ ],
+ "endpoint": "https://jmt-x402-proxy.jmthomasofficial.workers.dev/v2/api/whois",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x624FaF18C78456C8Da5bf156Cd77c1A2033F21c5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "domain": "example.com"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"domain\":\"example.com\",\"rdap\":{\"objectClassName\":\"domain\"},\"timestamp\":1783720000000}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://jmt-x402-proxy.jmthomasofficial.workers.dev/llms.txt",
+ "docsChecked": 1793609276513,
+ "payers30d": 10,
+ "calls30d": 19,
+ "lastCalledAt": "2026-11-02T03:26:02.69Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 273,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 273,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/jmt-x402-proxy-jmthomasofficial-workers-dev-v2-api-whois",
+ "rating": null,
+ "related": [
+  "api-hyperextend-xyz-v1-candles-btc-1m-latest",
+  "api-oblique-markets-api-v1-paid-bazaar-pulse",
+  "rest-coincap-io-v3-agentfriendly-full-assets-by-slug",
+  "kaisha-api-hp-vladic-workers-dev-calendar-holidays",
+  "brasil-dados-api-onrender-com-cambio",
+  "nbu-navistri-com-v1-ovdp-auctions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://jmt-x402-proxy.jmthomasofficial.workers.dev/v2/api/whois?domain=example.com'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20jmt-x402-proxy-jmthomasofficial-workers-dev-v2-api-whois&body=%7B%22slug%22%3A%22jmt-x402-proxy-jmthomasofficial-workers-dev-v2-api-whois%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: jmt-x402-proxy-jmthomasofficial-workers-dev-v2-api-whois\",\"body\":\"{\\\"slug\\\":\\\"jmt-x402-proxy-jmthomasofficial-workers-dev-v2-api-whois\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=JMT%20WHOIS%20RDAP%3A%20Raw%20RDAP%20registration%20record%20for%20a%20domain%2C%20returned%20as%20structured%20JSON&seller=https%3A%2F%2Fjmt-x402-proxy.jmthomasofficial.workers.dev%2Fv2%2Fapi%2Fwhois"
+}

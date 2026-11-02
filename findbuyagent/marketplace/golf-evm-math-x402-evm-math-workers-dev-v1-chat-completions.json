@@ -1,0 +1,90 @@
+{
+ "slug": "golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions",
+ "name": "Chat completions API: LLM inference API: OpenAI-compatible chat completions, send messages,",
+ "seller": "Chat completions API",
+ "host": "golf-evm-math.x402-evm-math.workers.dev",
+ "provider": "https://golf-evm-math.x402-evm-math.workers.dev",
+ "description": "LLM inference API: OpenAI-compatible chat completions, send messages, get choices and usage. Cheap LLM inference for agents (Llama 3.1 8B), no key, no streaming.",
+ "category": "AI & LLM",
+ "tags": [
+  "llm",
+  "inference",
+  "chat-completions",
+  "openai",
+  "llama"
+ ],
+ "endpoint": "https://golf-evm-math.x402-evm-math.workers.dev/v1/chat/completions",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x0881B857608F996e4c8DcFE09D55C6C188CF19b5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "max_tokens": 20,
+   "messages": [
+    {
+     "content": "Say hi in 3 words",
+     "role": "user"
+    }
+   ],
+   "model": "llama-3.1-8b-instruct"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"choices\":[{\"message\":{\"content\":\"Hi there, friend!\",\"role\":\"assistant\"}}],\"usage\":{}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://golf-evm-math.x402-evm-math.workers.dev/llms.txt",
+ "docsChecked": 1793609271503,
+ "payers30d": 13,
+ "calls30d": 19,
+ "lastCalledAt": "2026-11-02T05:18:26.6Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 82,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 82,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions",
+ "rating": null,
+ "related": [
+  "jev-x402-vercel-app-jev",
+  "contextslim-friczero-com-fetch",
+  "gateway-spraay-app-bittensor-v1-models",
+  "767-2676-com-v2-receipt",
+  "www-amnt-io-api-agent-amnt-bitcoin-price",
+  "api-agentweather-io-v1-pulse-storm"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://golf-evm-math.x402-evm-math.workers.dev/v1/chat/completions' -H 'content-type: application/json' -d '{\"max_tokens\":20,\"messages\":[{\"content\":\"Say hi in 3 words\",\"role\":\"user\"}],\"model\":\"llama-3.1-8b-instruct\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions&body=%7B%22slug%22%3A%22golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions\",\"body\":\"{\\\"slug\\\":\\\"golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Chat%20completions%20API%3A%20LLM%20inference%20API%3A%20OpenAI-compatible%20chat%20completions%2C%20send%20messages%2C&seller=https%3A%2F%2Fgolf-evm-math.x402-evm-math.workers.dev%2Fv1%2Fchat%2Fcompletions"
+}

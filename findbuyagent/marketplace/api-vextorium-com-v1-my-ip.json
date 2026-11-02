@@ -1,0 +1,81 @@
+{
+ "slug": "api-vextorium-com-v1-my-ip",
+ "name": "What is my IP | Vextorium: Your public IP address as the server sees it, IPv4/IPv6, whether it is",
+ "seller": "What is my IP | Vextorium",
+ "host": "api.vextorium.com",
+ "provider": "https://api.vextorium.com",
+ "description": "Your public IP address as the server sees it, IPv4/IPv6, whether it is public or private, plus your user agent. Calculated by Vextorium, no third-party lookups. Check where an agent exits from or whether a proxy/VPN works.",
+ "category": "AI & LLM",
+ "tags": [
+  "ip",
+  "network",
+  "proxy",
+  "vpn",
+  "utility"
+ ],
+ "endpoint": "https://api.vextorium.com/v1/my-ip",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xb9f06D2734B7E9D7b21B64C4D8b95bd774b71aCf",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"ip\":null,\"note\":\"Only available through the paid route (the server injects the IP).\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.vextorium.com/llms.txt",
+ "docsChecked": 1793609274538,
+ "payers30d": 12,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T07:04:29.778Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 381,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 381,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-vextorium-com-v1-my-ip",
+ "rating": null,
+ "related": [
+  "jev-x402-vercel-app-jev",
+  "contextslim-friczero-com-fetch",
+  "gateway-spraay-app-bittensor-v1-models",
+  "767-2676-com-v2-receipt",
+  "golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions",
+  "www-amnt-io-api-agent-amnt-bitcoin-price"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.vextorium.com/v1/my-ip' -H 'content-type: application/json' -d '{}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-vextorium-com-v1-my-ip&body=%7B%22slug%22%3A%22api-vextorium-com-v1-my-ip%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-vextorium-com-v1-my-ip\",\"body\":\"{\\\"slug\\\":\\\"api-vextorium-com-v1-my-ip\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=What%20is%20my%20IP%20%7C%20Vextorium%3A%20Your%20public%20IP%20address%20as%20the%20server%20sees%20it%2C%20IPv4%2FIPv6%2C%20whether%20it%20is&seller=https%3A%2F%2Fapi.vextorium.com%2Fv1%2Fmy-ip"
+}

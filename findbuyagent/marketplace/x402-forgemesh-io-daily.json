@@ -1,0 +1,77 @@
+{
+ "slug": "x402-forgemesh-io-daily",
+ "name": "The Daily 402: one featured x402 endpoint per UTC day, rotated determi",
+ "seller": "x402.forgemesh.io",
+ "host": "x402.forgemesh.io",
+ "provider": "https://x402.forgemesh.io",
+ "description": "The Daily 402: one featured x402 endpoint per UTC day, rotated deterministically through every paid route in the 11-service ForgeMesh fleet (500+ routes). Returns the pick's route, price, input schema, example output, and exactly how to pay it. Stable URL, rotating payload — the same date always returns the same pick, and an optional date (YYYY-MM-DD) previews any day. The cheapest daily way to discover a new agent capability.",
+ "category": "Search & web",
+ "tags": [],
+ "endpoint": "https://x402.forgemesh.io/daily",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x84A1827F1705C257e80771fDc2B152Aea4A57a08",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "date": "2026-07-18"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"catalog_generated_at\":\"2026-07-18T16:21:11.232Z\",\"date\":\"2026-07-18\",\"featured\":{\"category\":\"utility-grid\",\"description\":\"Recent earthquakes API: latest global quakes above your magnitude threshold from a real-time seismic feed…\",\"example_output\":{\"attribution\":\"U.S. Geological Survey (public domain)\",\"data\":{\"type\":\"FeatureCollection\"}},\"host\":\"x402.forgemesh.io\",\"input_schema\":{\"properties\":{\"min_magnitude\":{\"description\":\"Minimum magnitude, default 4\",\"type\":\"string\"}},\"type\":\"object\"},\"method\":\"POST\",\"price\":\"$0.005\",\"product_id\":\"utility-grid\",\"product_name\":\"ForgeMesh Utility Grid\",\"route\":\"/recent-earthquakes\"},\"full_product_sheet\":\"POST https://x402.forgemesh.io/fleet-product-detail ($0.05) with {\\\"product\\\":\\\"utility-grid\\\"} for every route, schema, and worked example on ForgeMesh Utility Grid.\",\"pool_size\":547,\"rotation\":\"deterministic by UTC date — same date always returns the same pick; every route in the fleet gets its day\",\"try_it\":\"POST https://x402.forgemesh.io/recent-earthquakes — the first bare call returns HTTP 402 with exact USDC payment requirements (Base mainnet); settle with any x402 client and retry to get the data.\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402.forgemesh.io/llms.txt",
+ "docsChecked": 1793609278649,
+ "payers30d": 9,
+ "calls30d": 35,
+ "lastCalledAt": "2026-11-01T10:24:40.077Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 29,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 29,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-forgemesh-io-daily",
+ "rating": null,
+ "related": [
+  "agent-pocket-network-v1-meadow",
+  "glim-sh-api-v1-twitter-search",
+  "twitter-use-x402atlas-com-search",
+  "agent-pocket-network-v1-agentsearch-web-search-v1",
+  "agent-pocket-network-v1-federal-register",
+  "agent-pocket-network-v1-dns-whois-rdap"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://x402.forgemesh.io/daily' -H 'content-type: application/json' -d '{\"date\":\"2026-07-18\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-forgemesh-io-daily&body=%7B%22slug%22%3A%22x402-forgemesh-io-daily%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-forgemesh-io-daily\",\"body\":\"{\\\"slug\\\":\\\"x402-forgemesh-io-daily\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=The%20Daily%20402%3A%20one%20featured%20x402%20endpoint%20per%20UTC%20day%2C%20rotated%20determi&seller=https%3A%2F%2Fx402.forgemesh.io%2Fdaily"
+}

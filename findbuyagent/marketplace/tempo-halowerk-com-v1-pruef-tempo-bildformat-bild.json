@@ -1,0 +1,80 @@
+{
+ "slug": "tempo-halowerk-com-v1-pruef-tempo-bildformat-bild",
+ "name": "HALOWERK tempo: Prüft am Objekt bild den Befund Anteil moderner Bildformate",
+ "seller": "HALOWERK tempo",
+ "host": "tempo.halowerk.com",
+ "provider": "https://tempo.halowerk.com",
+ "description": "Prüft am Objekt bild den Befund Anteil moderner Bildformate.",
+ "category": "Utilities",
+ "tags": [
+  "tempo",
+  "bildformat"
+ ],
+ "endpoint": "https://tempo.halowerk.com/v1/pruef/tempo/bildformat/bild",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x2880EdfFF13100677Bf97A3CBdF3Bc34771C4E5E",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "ziel": "https://example.com/"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"einheit\":\"Anteil\",\"meta\":{\"hinweis\":null,\"methode\":\"Antwort-MIME der initial geladenen Bilder\",\"objektart\":\"bild\",\"partial\":false},\"moderne_bildformate_anteil\":0.5}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://tempo.halowerk.com/llms.txt",
+ "docsChecked": 1793609281237,
+ "payers30d": 9,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T10:10:26.223Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 335,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 335,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/tempo-halowerk-com-v1-pruef-tempo-bildformat-bild",
+ "rating": null,
+ "related": [
+  "scvd-store-api-buy-spot-check",
+  "api-aurenic-org-treasury-debt",
+  "workspace-x402-paywall-onrender-com-utils-uuid",
+  "api-printmoneylab-com-api-v1-fx-rate",
+  "headlessoracle-com-v5-status-x402",
+  "fanfare-run-nba-teams"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://tempo.halowerk.com/v1/pruef/tempo/bildformat/bild' -H 'content-type: application/json' -d '{\"ziel\":\"https://example.com/\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20tempo-halowerk-com-v1-pruef-tempo-bildformat-bild&body=%7B%22slug%22%3A%22tempo-halowerk-com-v1-pruef-tempo-bildformat-bild%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: tempo-halowerk-com-v1-pruef-tempo-bildformat-bild\",\"body\":\"{\\\"slug\\\":\\\"tempo-halowerk-com-v1-pruef-tempo-bildformat-bild\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=HALOWERK%20tempo%3A%20Pr%C3%BCft%20am%20Objekt%20bild%20den%20Befund%20Anteil%20moderner%20Bildformate&seller=https%3A%2F%2Ftempo.halowerk.com%2Fv1%2Fpruef%2Ftempo%2Fbildformat%2Fbild"
+}

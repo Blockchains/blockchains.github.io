@@ -1,0 +1,83 @@
+{
+ "slug": "tienda-textokit-store-api-crypto-prices",
+ "name": "Textokit: Crypto price in USD for bitcoin, ethereum, solana and up to 20 coins p",
+ "seller": "Textokit",
+ "host": "tienda.textokit.store",
+ "provider": "https://tienda.textokit.store",
+ "description": "Crypto price in USD for bitcoin, ethereum, solana and up to 20 coins per call by CoinGecko id: spot price, market cap, 24h change, provider update time and source URL. Use this when an agent needs a current BTC, ETH or token price before a quote, a conversion, a report or an alert, with a citation it can re-check. Live from CoinGecko's public API, no key, JSON, no model inference. Free sample at /api/crypto-prices/sample.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto",
+  "prices",
+  "spot-price",
+  "coingecko",
+  "market-data"
+ ],
+ "endpoint": "https://tienda.textokit.store/api/crypto-prices",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x6b5aF9924f4CD35643c11a9fd1C983f77261A6E1",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "coins": "bitcoin,ethereum"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"currency\":\"usd\",\"items\":[{\"change24hPercent\":-2,\"id\":\"bitcoin\",\"marketCapUsd\":456,\"priceUsd\":123,\"sourceUpdatedAt\":null}],\"readAt\":\"2026-01-01T00:00:00.000Z\",\"scope\":\"Illustrative fixture with simulated values and timestamp; not a live market reading.\",\"source\":\"CoinGecko public API\",\"sourceUrl\":\"https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_market_cap=true&include_24hr_change=true&include_last_updated_at=true\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792912421/bazaar-icons/ae1fd91a209ba3fd.png",
+ "docs": "https://tienda.textokit.store/llms.txt",
+ "docsChecked": 1793609279735,
+ "payers30d": 9,
+ "calls30d": 23,
+ "lastCalledAt": "2026-10-29T20:13:59.693Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 525,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 525,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/tienda-textokit-store-api-crypto-prices",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://tienda.textokit.store/api/crypto-prices' -H 'content-type: application/json' -d '{\"coins\":\"bitcoin,ethereum\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20tienda-textokit-store-api-crypto-prices&body=%7B%22slug%22%3A%22tienda-textokit-store-api-crypto-prices%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: tienda-textokit-store-api-crypto-prices\",\"body\":\"{\\\"slug\\\":\\\"tienda-textokit-store-api-crypto-prices\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Textokit%3A%20Crypto%20price%20in%20USD%20for%20bitcoin%2C%20ethereum%2C%20solana%20and%20up%20to%2020%20coins%20p&seller=https%3A%2F%2Ftienda.textokit.store%2Fapi%2Fcrypto-prices"
+}

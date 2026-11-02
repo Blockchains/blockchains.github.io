@@ -1,0 +1,81 @@
+{
+ "slug": "cryptofeed402-site-funding-extreme",
+ "name": "cryptofeed402: Perpetual futures funding rates and open interest (Hyperliquid), live:",
+ "seller": "cryptofeed402",
+ "host": "cryptofeed402.site",
+ "provider": "https://cryptofeed402.site",
+ "description": "Perpetual futures funding rates and open interest (Hyperliquid), live: the 10 perps with the most extreme funding rate now (over $1M 24h volume), each with annualized funding APR and open interest in USD, plus the current funding rate for a BTC/ETH/SOL/HYPE/NEAR/AAVE watchlist. Use it to spot crowded longs or shorts, squeeze risk and funding-carry candidates. Failed calls are never charged. JSON. Free sample: /samples/funding. $0.0025 USDC per call on Base.",
+ "category": "Utilities",
+ "tags": [
+  "funding-rate",
+  "open-interest",
+  "perpetuals",
+  "derivatives",
+  "hyperliquid"
+ ],
+ "endpoint": "https://cryptofeed402.site/funding/extreme",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.0025,
+ "amount": "2500",
+ "payTo": "0x93e4B468A88B1f084Efc781ec7A1E2D195a40D22",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"as_of\":\"2026-10-18T03:00:00.000Z\",\"disclaimer\":\"Automated data for AI agents. Not financial advice.\",\"most_extreme\":[{\"funding_apr_pct\":-54.37,\"open_interest_usd\":9825646,\"symbol\":\"PENGU\"},{\"funding_apr_pct\":-48.4,\"open_interest_usd\":33350000,\"symbol\":\"ADA\"}],\"venue\":\"hyperliquid\",\"watchlist\":[{\"funding_apr_pct\":2.72,\"symbol\":\"BTC\"},{\"funding_apr_pct\":-0.88,\"symbol\":\"ETH\"}]}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792293388/bazaar-icons/98767f120c2f6858.png",
+ "docs": "https://cryptofeed402.site/llms.txt",
+ "docsChecked": 1793609281133,
+ "payers30d": 9,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T22:11:31.803Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 760,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 760,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/cryptofeed402-site-funding-extreme",
+ "rating": null,
+ "related": [
+  "coord-taifoon-dev-v1-x402-class-market-price",
+  "br-intelligence-brverify-api-workers-dev-v1-bank",
+  "api-datos-uy-ar-vercel-app-uy-ui",
+  "kaisha-api-hp-vladic-workers-dev-calendar-business-days",
+  "timecode-openverbs-com-v1-convert",
+  "www-api-xpay-com-x402-network"
+ ],
+ "example": {
+  "curl": "curl -i 'https://cryptofeed402.site/funding/extreme'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20cryptofeed402-site-funding-extreme&body=%7B%22slug%22%3A%22cryptofeed402-site-funding-extreme%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: cryptofeed402-site-funding-extreme\",\"body\":\"{\\\"slug\\\":\\\"cryptofeed402-site-funding-extreme\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=cryptofeed402%3A%20Perpetual%20futures%20funding%20rates%20and%20open%20interest%20(Hyperliquid)%2C%20live%3A&seller=https%3A%2F%2Fcryptofeed402.site%2Ffunding%2Fextreme"
+}

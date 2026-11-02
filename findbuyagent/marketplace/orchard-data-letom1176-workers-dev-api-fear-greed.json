@@ -1,0 +1,79 @@
+{
+ "slug": "orchard-data-letom1176-workers-dev-api-fear-greed",
+ "name": "orchard-data: Crypto Fear & Greed Index (0-100) with its classification (Extreme Fea",
+ "seller": "orchard-data",
+ "host": "orchard-data.letom1176.workers.dev",
+ "provider": "https://orchard-data.letom1176.workers.dev",
+ "description": "Crypto Fear & Greed Index (0-100) with its classification (Extreme Fear to Extreme Greed) and the previous reading, from alternative.me. For gauging crypto market sentiment in a daily summary or before a trade. Updates daily. If the source is down the call returns 503 and is not charged. JSON.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto",
+  "sentiment",
+  "fear-greed"
+ ],
+ "endpoint": "https://orchard-data.letom1176.workers.dev/api/fear-greed",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xc863b1c6658971ca427e90665dccce90a41a2bc2",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"crypto_fear_greed\":{\"classification\":\"Extreme Fear\",\"previous_value\":25,\"value\":25}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792816054/bazaar-icons/67a94f48371c4c75.png",
+ "docs": "https://orchard-data.letom1176.workers.dev/llms.txt",
+ "docsChecked": 1793609277075,
+ "payers30d": 10,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-02T04:34:05.808Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 350,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 350,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/orchard-data-letom1176-workers-dev-api-fear-greed",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i 'https://orchard-data.letom1176.workers.dev/api/fear-greed'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20orchard-data-letom1176-workers-dev-api-fear-greed&body=%7B%22slug%22%3A%22orchard-data-letom1176-workers-dev-api-fear-greed%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: orchard-data-letom1176-workers-dev-api-fear-greed\",\"body\":\"{\\\"slug\\\":\\\"orchard-data-letom1176-workers-dev-api-fear-greed\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=orchard-data%3A%20Crypto%20Fear%20%26%20Greed%20Index%20(0-100)%20with%20its%20classification%20(Extreme%20Fea&seller=https%3A%2F%2Forchard-data.letom1176.workers.dev%2Fapi%2Ffear-greed"
+}

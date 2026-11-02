@@ -1,0 +1,93 @@
+{
+ "slug": "api-mekler-ai-v1-compute-inference-generate-completions",
+ "name": "Mekler AI: Compare exact prices across eight models: GPT-6 Luna, GPT-6.1 Sol, Min",
+ "seller": "Mekler AI",
+ "host": "api.mekler.ai",
+ "provider": "https://api.mekler.ai",
+ "description": "Compare exact prices across eight models: GPT-6 Luna, GPT-6.1 Sol, Ministral 3B/8B/14B, Nemotron 3 Nano and Qwen3 Next/Coder Next. Review a recommendation and supported model/effort alternatives, then accept one quote or use automatic selection. Generate text or JSON with one USDC payment and no supplier account. Recover private results after completion. Recommendations use task rules, not a quality guarantee. No tools, browsing or streaming.",
+ "category": "AI & LLM",
+ "tags": [
+  "inference",
+  "models",
+  "routing"
+ ],
+ "endpoint": "https://api.mekler.ai/v1/compute/inference/generate-completions",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002796,
+ "amount": "2796",
+ "payTo": "0xF6c6E2e530bb311c14a49C1a07C720fc232c07c5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "max_price_usdc": "0.003",
+   "tasks": [
+    {
+     "max_output_tokens": 64,
+     "messages": [
+      {
+       "content": "Summarize: the meeting starts at noon.",
+       "role": "user"
+      }
+     ],
+     "task": "summarize"
+    }
+   ]
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"expires_at\":1794528000,\"job_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"plan\":{\"models\":[{\"index\":0,\"model\":\"gpt-6-luna\",\"reason\":\"bounded_general_task\"}],\"price_micros\":2796,\"version\":\"inference-v4-purchase\"},\"receipt\":{\"finalized\":true,\"network\":\"eip155:8453\",\"price_micros\":2796,\"transaction\":\"0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\"},\"recovery_token\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"results\":[{\"content\":\"The meeting starts at noon.\",\"finish_reason\":\"stop\",\"index\":0,\"model\":\"gpt-6-luna\",\"provider_model\":\"gpt-6-luna\",\"reported_model\":\"gpt-6-luna\",\"usage\":{\"completion_tokens\":7,\"prompt_tokens\":18,\"total_tokens\":25}}],\"retry\":\"Recover with the original proof or private token. Do not pay again.\",\"state\":\"complete\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.mekler.ai/llms.txt",
+ "docsChecked": 1793609275742,
+ "payers30d": 11,
+ "calls30d": 11,
+ "lastCalledAt": "2026-10-18T23:00:32.18Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 217,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 217,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-mekler-ai-v1-compute-inference-generate-completions",
+ "rating": null,
+ "related": [
+  "x402-telnyx-com-v1-chat-completions-t-llama-3-1-8b",
+  "gibbr-app-agent-translate",
+  "x402-telnyx-com-v1-chat-completions-t-gemma-2b",
+  "x402-onhub-ai-v1-chat-completions",
+  "api-manylives-me-paid-util-time",
+  "agentshield-live-ean"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.mekler.ai/v1/compute/inference/generate-completions' -H 'content-type: application/json' -d '{\"max_price_usdc\":\"0.003\",\"tasks\":[{\"max_output_tokens\":64,\"messages\":[{\"content\":\"Summarize: the meeting starts at noon.\",\"role\":\"user\"}],\"task\":\"summarize\"}]}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-mekler-ai-v1-compute-inference-generate-completions&body=%7B%22slug%22%3A%22api-mekler-ai-v1-compute-inference-generate-completions%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-mekler-ai-v1-compute-inference-generate-completions\",\"body\":\"{\\\"slug\\\":\\\"api-mekler-ai-v1-compute-inference-generate-completions\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Mekler%20AI%3A%20Compare%20exact%20prices%20across%20eight%20models%3A%20GPT-6%20Luna%2C%20GPT-6.1%20Sol%2C%20Min&seller=https%3A%2F%2Fapi.mekler.ai%2Fv1%2Fcompute%2Finference%2Fgenerate-completions"
+}

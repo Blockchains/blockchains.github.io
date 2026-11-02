@@ -3,35 +3,70 @@
  "name": "Set prototype tier ($0.10 USDC) — auto-detects start/renew/upgrade",
  "seller": "api.run402.com",
  "host": "api.run402.com",
+ "provider": "https://api.run402.com",
  "description": "Set prototype tier ($0.10 USDC) — auto-detects start/renew/upgrade",
  "category": "Utilities",
  "tags": [],
  "endpoint": "https://api.run402.com/tiers/v1/prototype",
  "method": "POST",
+ "payment": "x402",
  "priceUsd": 0.1,
  "amount": "100000",
  "payTo": "0x059D091D51a0f011c9872EaA63Df538F5cE15945",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
  "listedTermsMatch": true,
  "input": {
-  "queryParams": {},
+  "queryParams": null,
   "body": null,
-  "bodyType": null
+  "bodyType": null,
+  "headers": null
  },
+ "outputType": "json",
  "outputExample": "{\"action\":\"start\",\"lease_expires_at\":\"2026-04-08T00:00:00Z\",\"tier\":\"prototype\",\"wallet\":\"0x...\"}",
+ "outputSchema": null,
+ "iconUrl": null,
  "docs": "https://api.run402.com/.well-known/x402",
  "docsChecked": 1793596014729,
  "payers30d": 73,
  "calls30d": 73,
+ "lastCalledAt": "2026-10-28T21:00:05.042Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 212,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 701,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 701,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/api-run402-com-tiers-v1-prototype",
  "rating": null,
+ "related": [
+  "keyring-agent-blockchhub-link-api-send-native",
+  "api-arkm-com-x402-intelligence-address",
+  "appstore-use-x402atlas-com-reviews",
+  "api-orcatrace-dev-v1-resolving",
+  "api-oblique-markets-api-v1-paid-time",
+  "api-myceliasignal-com-oracle-price-btc-usd"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.run402.com/tiers/v1/prototype' -H 'content-type: application/json' -d '{}'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-run402-com-tiers-v1-prototype&body=%7B%22slug%22%3A%22api-run402-com-tiers-v1-prototype%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-run402-com-tiers-v1-prototype\",\"body\":\"{\\\"slug\\\":\\\"api-run402-com-tiers-v1-prototype\\\",\\\"stars\\\":1-5}\"}"

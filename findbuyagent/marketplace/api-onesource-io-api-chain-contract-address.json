@@ -1,0 +1,77 @@
+{
+ "slug": "api-onesource-io-api-chain-contract-address",
+ "name": "Best-effort contract introspection via batched RPC - bytecode presence",
+ "seller": "api.onesource.io",
+ "host": "api.onesource.io",
+ "provider": "https://api.onesource.io",
+ "description": "Best-effort contract introspection via batched RPC - bytecode presence, token metadata, and ERC20-like/ERC721/ERC1155 classification",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://api.onesource.io/api/chain/contract/:address",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x52E29e0d2Aa49bfBfC548C0A9F2196F4aa51f3ea",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 3600,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "network": "ethereum"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"address\":\"0xdac17f958d2ee523a2206206994597c13d831ec7\",\"code_length\":11075,\"decimals\":6,\"interfaces\":[\"ERC20\"],\"is_contract\":true,\"is_erc1155\":false,\"is_erc165\":false,\"is_erc20\":true,\"is_erc721\":false,\"name\":\"Tether USD\",\"symbol\":\"USDT\"},\"meta\":{\"cost_usdc\":\"0.001\",\"endpoint\":\"/api/chain/contract/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d\",\"payment_chain\":\"base\",\"payment_token\":\"USDC\",\"request_id\":\"00000000abcdef01\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.onesource.io/llms.txt",
+ "docsChecked": 1793609267619,
+ "payers30d": 350,
+ "calls30d": 350,
+ "lastCalledAt": "2026-11-02T04:28:38.23Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 819,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 819,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-onesource-io-api-chain-contract-address",
+ "rating": null,
+ "related": [
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "hyperliquid-predict-use-x402atlas-com-outcomes",
+  "notary-forgemesh-io-api-notarize",
+  "coingecko-use-x402atlas-com-price",
+  "scry-solanahub-de-x402-network-priority-fees-live",
+  "verifier-quantumshieldlabs-dev-x402-preflight"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.onesource.io/api/chain/contract/:address?network=ethereum'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-onesource-io-api-chain-contract-address&body=%7B%22slug%22%3A%22api-onesource-io-api-chain-contract-address%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-onesource-io-api-chain-contract-address\",\"body\":\"{\\\"slug\\\":\\\"api-onesource-io-api-chain-contract-address\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Best-effort%20contract%20introspection%20via%20batched%20RPC%20-%20bytecode%20presence&seller=https%3A%2F%2Fapi.onesource.io%2Fapi%2Fchain%2Fcontract%2F%3Aaddress"
+}

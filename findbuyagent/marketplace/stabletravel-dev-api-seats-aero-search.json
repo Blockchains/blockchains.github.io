@@ -1,0 +1,85 @@
+{
+ "slug": "stabletravel-dev-api-seats-aero-search",
+ "name": "StableTravel: Search cached Seats.aero award availability by origin, destination, da",
+ "seller": "StableTravel",
+ "host": "stabletravel.dev",
+ "provider": "https://stabletravel.dev",
+ "description": "Search cached Seats.aero award availability by origin, destination, dates, cabin, carriers, and pagination.",
+ "category": "Search & web",
+ "tags": [
+  "Seats Aero"
+ ],
+ "endpoint": "https://stabletravel.dev/api/seats-aero/search",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.02,
+ "amount": "20000",
+ "payTo": "0xDd257723b86B4947483905cdAcBbBC70fACF2ec0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "cabin": "business",
+   "destination_airport": "FRA,LHR",
+   "end_date": "2026-12-15",
+   "only_direct_flights": true,
+   "origin_airport": "SFO",
+   "start_date": "2026-12-01",
+   "take": 25
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":1,\"cursor\":123456,\"data\":[{\"Date\":\"2026-12-10\",\"ID\":\"avail_123\",\"JAirlines\":\"UA\",\"JAvailable\":true,\"JDirect\":true,\"JMileageCost\":\"88000\",\"JRemainingSeats\":2,\"Route\":{\"DestinationAirport\":\"FRA\",\"DestinationRegion\":\"Europe\",\"OriginAirport\":\"SFO\",\"OriginRegion\":\"North America\",\"Source\":\"united\"},\"Source\":\"united\"}],\"hasMore\":true}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://stabletravel.dev/llms.txt",
+ "docsChecked": 1793609274438,
+ "payers30d": 11,
+ "calls30d": 4061,
+ "lastCalledAt": "2026-11-01T15:17:56.812Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 287,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 287,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/stabletravel-dev-api-seats-aero-search",
+ "rating": null,
+ "related": [
+  "api-kadec0-xyz-v1-papers",
+  "x402-botsmith-dev-x-search",
+  "www-trezalabs-com-api-x402-speech",
+  "appstore-use-x402atlas-com-search",
+  "x402-asterpay-io-v2-x402-ai-fact-check",
+  "x402-asterpay-io-v2-x402-agent-readiness"
+ ],
+ "example": {
+  "curl": "curl -i 'https://stabletravel.dev/api/seats-aero/search?cabin=business&destination_airport=FRA%2CLHR&end_date=2026-12-15&only_direct_flights=true&origin_airport=SFO&start_date=2026-12-01&take=25'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20stabletravel-dev-api-seats-aero-search&body=%7B%22slug%22%3A%22stabletravel-dev-api-seats-aero-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: stabletravel-dev-api-seats-aero-search\",\"body\":\"{\\\"slug\\\":\\\"stabletravel-dev-api-seats-aero-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=StableTravel%3A%20Search%20cached%20Seats.aero%20award%20availability%20by%20origin%2C%20destination%2C%20da&seller=https%3A%2F%2Fstabletravel.dev%2Fapi%2Fseats-aero%2Fsearch"
+}

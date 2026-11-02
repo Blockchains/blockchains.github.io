@@ -3,6 +3,7 @@
  "name": "Otto AI: Token price, market cap, volume, supply, and basic metrics",
  "seller": "Otto AI",
  "host": "x402.ottoai.services",
+ "provider": "https://x402.ottoai.services",
  "description": "Token price, market cap, volume, supply, and basic metrics. Works for any listed token.",
  "category": "Crypto & on-chain",
  "tags": [
@@ -14,32 +15,66 @@
  ],
  "endpoint": "https://x402.ottoai.services/token-details",
  "method": "GET",
+ "payment": "x402",
  "priceUsd": 0.001,
  "amount": "1000",
  "payTo": "0x0E84dDEdAaE6A779c462C22a59F301EC31B6b808",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
  "listedTermsMatch": true,
  "input": {
   "queryParams": {
    "symbol": "BTC"
   },
   "body": null,
-  "bodyType": null
+  "bodyType": null,
+  "headers": null
  },
+ "outputType": "json",
  "outputExample": "{\"data\":{\"details\":\"=== TOKEN DATA INTELLIGENCE: BTC ===\\nGenerated: 2026-06-10T12:00:00Z\\n\\nToken Overview\\n• Name: Bitcoin (BTC)\\n• Rank: #1\\n• Price: $104250.00\\n• Market Cap: $2.05T\\n• FDV: $2.19T\\n\\nToday's Price Action (UTC)\\n• Open: $103800.00 | High: $105120.00 | Low: $102940.00 | Current: $104250.00\\n• Today's Trend: Up (+0.43% from open)\\n\\nPrice Performance\\n• 1h: +0.12% | 24h: +1.85% | 7d: -2.40% | 30d: +6.10%\\n\\n📊 Volume Review\\n• Volume (24h): $38420.50M | Volume/MCap Ratio: 1.87% | Market Pairs: 11240\\n• Liquidity Score: High\\n\\nToken Supply\\n• Circulating: 19.92M | Max Supply: 21.00M | Supply Ratio: 94.9%\\n\\nMomentum Signal\\n• Momentum: 📊 Cooling Off (DYOR)\\n\\n📝 PROJECT INFO\\n• Website, X profile, explorer, token address, and listing date included in the full report\"},\"meta\":{\"degraded\":false,\"generatedAt\":\"2026-08-10T12:00:00.000Z\",\"sourceHealth\":{\"market-alpha-internal\":\"unknown\"}},\"status\":\"success\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1781044576/bazaar-icons/84cde0751281b3d0.png",
  "docs": "https://x402.ottoai.services/llms.txt",
  "docsChecked": 1793596020282,
- "payers30d": 37,
- "calls30d": 43,
+ "payers30d": 38,
+ "calls30d": 45,
+ "lastCalledAt": "2026-11-02T05:22:08.265Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 119,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 526,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 526,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-ottoai-services-token-details",
  "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "api-loyalspark-online-x402-gateway-recipient-api-workflow-reward-statu",
+  "api-loyalspark-online-x402-gateway-recipient-api-rewards"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.ottoai.services/token-details?symbol=BTC'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-ottoai-services-token-details&body=%7B%22slug%22%3A%22x402-ottoai-services-token-details%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-ottoai-services-token-details\",\"body\":\"{\\\"slug\\\":\\\"x402-ottoai-services-token-details\\\",\\\"stars\\\":1-5}\"}"

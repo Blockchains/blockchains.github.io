@@ -1,0 +1,77 @@
+{
+ "slug": "agentshield-live-iban",
+ "name": "Call when an agent has an IBAN and needs the checksum, the expected le",
+ "seller": "agentshield.live",
+ "host": "agentshield.live",
+ "provider": "https://agentshield.live",
+ "description": "Call when an agent has an IBAN and needs the checksum, the expected length, and the country format. Does not confirm the account exists.",
+ "category": "AI & LLM",
+ "tags": [],
+ "endpoint": "https://agentshield.live/iban",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xC87e9a5F237eADA767E57eee8fae67aB565225AE",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "iban": "DE89370400440532013000"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"country\":\"DE\",\"expected_length\":22,\"known\":true,\"valid\":true}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://agentshield.live/llms.txt",
+ "docsChecked": 1793609275862,
+ "payers30d": 11,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T10:23:01.71Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 535,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 535,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agentshield-live-iban",
+ "rating": null,
+ "related": [
+  "wiki-use-x402atlas-com-summary",
+  "imagegen-coinopai-com-prompt-styles",
+  "x402-forgemesh-io-the-daily-402",
+  "trust402-vercel-app-api-trust-check-x402",
+  "ads-forgemesh-io-api-network-stats",
+  "rubric-protocol-com-v1-x402-agent-record-rubric-assert"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agentshield.live/iban?iban=DE89370400440532013000'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agentshield-live-iban&body=%7B%22slug%22%3A%22agentshield-live-iban%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agentshield-live-iban\",\"body\":\"{\\\"slug\\\":\\\"agentshield-live-iban\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Call%20when%20an%20agent%20has%20an%20IBAN%20and%20needs%20the%20checksum%2C%20the%20expected%20le&seller=https%3A%2F%2Fagentshield.live%2Fiban"
+}

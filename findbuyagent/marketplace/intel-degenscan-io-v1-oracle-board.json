@@ -1,0 +1,81 @@
+{
+ "slug": "intel-degenscan-io-v1-oracle-board",
+ "name": "Degenscan Intel: Daily board of calibrated probabilities for standing binary questions",
+ "seller": "Degenscan Intel",
+ "host": "intel.degenscan.io",
+ "provider": "https://intel.degenscan.io",
+ "description": "Daily board of calibrated probabilities for standing binary questions (BTC/ETH/SOL vs price targets, next FOMC, top Polymarket markets, CPI/NFP): probability, 80% interval, base rate, market odds, edge, commitment hash. Cached, refreshed daily — poll it in a loop.",
+ "category": "Finance & markets",
+ "tags": [
+  "finance",
+  "markets",
+  "events",
+  "crypto",
+  "stocks"
+ ],
+ "endpoint": "https://intel.degenscan.io/v1/oracle/board",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x21f4A2DA07bccE60878cAb223358D11aD8F11a94",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":8,\"items\":[{\"base_rate\":0.227,\"ci_hi\":0.41,\"ci_lo\":0.24,\"edge\":-0.031,\"market_odds\":0.35,\"probability\":0.319,\"question\":\"Will Bitcoin close above 120,000 USD on 2026-10-31?\",\"slug\":\"btc-120k-oct31\"}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://intel.degenscan.io/llms.txt",
+ "docsChecked": 1793609273319,
+ "payers30d": 12,
+ "calls30d": 34,
+ "lastCalledAt": "2026-11-01T23:24:26.568Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 40,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 40,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/intel-degenscan-io-v1-oracle-board",
+ "rating": null,
+ "related": [
+  "data-tollkit-dev-sec-company",
+  "mcp-blocksize-info-v1-bidask-btc-usd",
+  "toolcall-click-t-fx-rates",
+  "api-sitecheck-api-workers-dev-api-fx",
+  "br-intelligence-brverify-api-workers-dev-v1-ptax",
+  "api-sitecheck-api-workers-dev-api-macro"
+ ],
+ "example": {
+  "curl": "curl -i 'https://intel.degenscan.io/v1/oracle/board'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20intel-degenscan-io-v1-oracle-board&body=%7B%22slug%22%3A%22intel-degenscan-io-v1-oracle-board%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: intel-degenscan-io-v1-oracle-board\",\"body\":\"{\\\"slug\\\":\\\"intel-degenscan-io-v1-oracle-board\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Degenscan%20Intel%3A%20Daily%20board%20of%20calibrated%20probabilities%20for%20standing%20binary%20questions&seller=https%3A%2F%2Fintel.degenscan.io%2Fv1%2Foracle%2Fboard"
+}

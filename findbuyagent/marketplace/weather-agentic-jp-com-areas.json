@@ -1,0 +1,75 @@
+{
+ "slug": "weather-agentic-jp-com-areas",
+ "name": "List every JMA forecast office (府県予報区) in Japan with its code, Japanes",
+ "seller": "weather.agentic-jp.com",
+ "host": "weather.agentic-jp.com",
+ "provider": "https://weather.agentic-jp.com",
+ "description": "List every JMA forecast office (府県予報区) in Japan with its code, Japanese/English name, and class10 sub-regions. Use this to discover valid `:area` values.",
+ "category": "Weather & geo",
+ "tags": [],
+ "endpoint": "https://weather.agentic-jp.com/areas",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x38c9F689274E2fC3AE360744eF88ce212077a584",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"areas\":[{\"children\":[{\"code\":\"130010\",\"name\":\"東京地方\",\"name_en\":\"Tokyo Region\"}],\"code\":\"130000\",\"name\":\"東京都\",\"name_en\":\"Tokyo\",\"office_name\":\"気象庁\"}],\"count\":58}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://weather.agentic-jp.com/llms.txt",
+ "docsChecked": 1793609270464,
+ "payers30d": 14,
+ "calls30d": 30,
+ "lastCalledAt": "2026-11-02T04:36:26.619Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 659,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 659,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/weather-agentic-jp-com-areas",
+ "rating": null,
+ "related": [
+  "hypernatt-com-api-m2m-liq-radar",
+  "api-losbeto-xyz-gas-price",
+  "x402-data-api-sigrunner-workers-dev-defi-yields",
+  "x402-agentutility-ai-ip-asn",
+  "x402-seller-onrender-com-geo-lookup",
+  "x402-tbs-digital-com-weather-current"
+ ],
+ "example": {
+  "curl": "curl -i 'https://weather.agentic-jp.com/areas'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20weather-agentic-jp-com-areas&body=%7B%22slug%22%3A%22weather-agentic-jp-com-areas%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: weather-agentic-jp-com-areas\",\"body\":\"{\\\"slug\\\":\\\"weather-agentic-jp-com-areas\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=List%20every%20JMA%20forecast%20office%20(%E5%BA%9C%E7%9C%8C%E4%BA%88%E5%A0%B1%E5%8C%BA)%20in%20Japan%20with%20its%20code%2C%20Japanes&seller=https%3A%2F%2Fweather.agentic-jp.com%2Fareas"
+}

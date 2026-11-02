@@ -1,0 +1,84 @@
+{
+ "slug": "x402-doctor-fizzl-eu-api-v1-preflight",
+ "name": "x402 Doctor: Is this x402 endpoint safe to pay",
+ "seller": "x402 Doctor",
+ "host": "x402-doctor.fizzl.eu",
+ "provider": "https://x402-doctor.fizzl.eu",
+ "description": "Is this x402 endpoint safe to pay? Check it before your AI agent pays an endpoint it has not used before. Returns a go / caution / no_go verdict, the recommended payment option (network and amount) and the reasons (payment would fail, payout address on the OFAC sanctions list, over your budget, price above advertised, not HTTPS, unknown token). Never pays the endpoint. Cached 10 min. Bulk: 1000 credits for $0.80 via /api/v1/credits.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "x402",
+  "payments",
+  "safety",
+  "pre-payment",
+  "sanctions"
+ ],
+ "endpoint": "https://x402-doctor.fizzl.eu/api/v1/preflight",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x6B0F4651eD42893ab58139938175E4a69f175F25",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "max_usd": "0.05",
+   "url": "https://ichimoku-signal.fizzl.eu/signal/BTC-USDT"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"cached\":false,\"checked_at\":\"2026-09-23T17:00:00.000Z\",\"method\":\"GET\",\"options\":[{\"amount\":\"20000\",\"asset_symbol\":\"USDC\",\"index\":0,\"network\":\"eip155:8453\",\"network_name\":\"Base\",\"pay_to\":\"0x6B0F4651eD42893ab58139938175E4a69f175F25\",\"payable\":true,\"problems\":[],\"usd\":0.02}],\"reasons\":[],\"recommended_option\":0,\"safe_to_pay\":true,\"signals\":{\"advertised_price_usd\":0.02,\"https\":true,\"listed_in_cdp_bazaar\":false},\"summary\":\"OK to pay: $0.02 on Base.\",\"url\":\"https://ichimoku-signal.fizzl.eu/signal/BTC-USDT\",\"verdict\":\"go\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791125195/bazaar-icons/061c165bc4e51e45.png",
+ "docs": "https://x402-doctor.fizzl.eu/llms.txt",
+ "docsChecked": 1793609273678,
+ "payers30d": 12,
+ "calls30d": 24,
+ "lastCalledAt": "2026-10-30T03:54:10.133Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 400,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 400,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-doctor-fizzl-eu-api-v1-preflight",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402-doctor.fizzl.eu/api/v1/preflight?max_usd=0.05&url=https%3A%2F%2Fichimoku-signal.fizzl.eu%2Fsignal%2FBTC-USDT'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-doctor-fizzl-eu-api-v1-preflight&body=%7B%22slug%22%3A%22x402-doctor-fizzl-eu-api-v1-preflight%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-doctor-fizzl-eu-api-v1-preflight\",\"body\":\"{\\\"slug\\\":\\\"x402-doctor-fizzl-eu-api-v1-preflight\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x402%20Doctor%3A%20Is%20this%20x402%20endpoint%20safe%20to%20pay&seller=https%3A%2F%2Fx402-doctor.fizzl.eu%2Fapi%2Fv1%2Fpreflight"
+}

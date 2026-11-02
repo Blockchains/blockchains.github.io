@@ -1,0 +1,83 @@
+{
+ "slug": "twitter-use-x402atlas-com-user-details",
+ "name": "Twitter User Profile Lookup: Twitter/X user profile lookup by username — the full public profile as",
+ "seller": "Twitter User Profile Lookup",
+ "host": "twitter.use.x402atlas.com",
+ "provider": "https://twitter.use.x402atlas.com",
+ "description": "Twitter/X user profile lookup by username — the full public profile as JSON: display name, bio, follower and following counts, verification status, avatar, location, join date and pinned post. For influencer vetting, audience research and account enrichment.",
+ "category": "Search & web",
+ "tags": [
+  "twitter",
+  "x",
+  "user-profile",
+  "social-media",
+  "profile-lookup"
+ ],
+ "endpoint": "https://twitter.use.x402atlas.com/user-details",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x51D577C8CBB8b3fB1BA0CE31c7923cC27a07F78B",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "username": "BillGates"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"core\":{\"name\":\"Bill Gates\",\"screen_name\":\"BillGates\"},\"is_blue_verified\":true,\"legacy\":{\"description\":\"Sharing things I learn.\",\"followers_count\":65000000},\"rest_id\":\"50393960\"},\"queried_at\":\"2026-07-26T12:00:00Z\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://twitter.use.x402atlas.com/llms.txt",
+ "docsChecked": 1793609278419,
+ "payers30d": 9,
+ "calls30d": 68,
+ "lastCalledAt": "2026-11-01T23:15:06.004Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 166,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 166,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/twitter-use-x402atlas-com-user-details",
+ "rating": null,
+ "related": [
+  "agent-pocket-network-v1-meadow",
+  "glim-sh-api-v1-twitter-search",
+  "agent-pocket-network-v1-agentsearch-web-search-v1",
+  "agent-pocket-network-v1-federal-register",
+  "agent-pocket-network-v1-dns-whois-rdap",
+  "api-you-com-v1-search"
+ ],
+ "example": {
+  "curl": "curl -i 'https://twitter.use.x402atlas.com/user-details?username=BillGates'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20twitter-use-x402atlas-com-user-details&body=%7B%22slug%22%3A%22twitter-use-x402atlas-com-user-details%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: twitter-use-x402atlas-com-user-details\",\"body\":\"{\\\"slug\\\":\\\"twitter-use-x402atlas-com-user-details\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Twitter%20User%20Profile%20Lookup%3A%20Twitter%2FX%20user%20profile%20lookup%20by%20username%20%E2%80%94%20the%20full%20public%20profile%20as&seller=https%3A%2F%2Ftwitter.use.x402atlas.com%2Fuser-details"
+}

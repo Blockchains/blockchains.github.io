@@ -1,0 +1,86 @@
+{
+ "slug": "ask-singitai-app-v1-audio-speech",
+ "name": "SingIt Text to Speech: Text to speech (TTS) API: text read aloud by 11 voice models (Kokoro,",
+ "seller": "SingIt Text to Speech",
+ "host": "ask.singitai.app",
+ "provider": "https://ask.singitai.app",
+ "description": "Text to speech (TTS) API: text read aloud by 11 voice models (Kokoro, ElevenLabs, Gemini, xAI, MiniMax and more; list at GET /v1/audio/models), no API key needed. OpenAI speech request format. mp3 (audio/mpeg) by default, other response_format values return their own type. Served by SingIt.",
+ "category": "Images & media",
+ "tags": [
+  "text-to-speech",
+  "tts",
+  "speech",
+  "audio",
+  "openai-compatible"
+ ],
+ "endpoint": "https://ask.singitai.app/v1/audio/speech",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001082,
+ "amount": "1082",
+ "payTo": "0xC23d1Dc0f5fCe1abfFB051e06cB93f0329968B4e",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "input": "Hello from SingIt.",
+   "model": "venice-kokoro-tts",
+   "response_format": "mp3",
+   "voice": "af_heart"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792921332/bazaar-icons/a240c598b3f928d1.png",
+ "docs": "https://ask.singitai.app/llms.txt",
+ "docsChecked": 1793609280477,
+ "payers30d": 9,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T12:52:35.741Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 124,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 124,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/ask-singitai-app-v1-audio-speech",
+ "rating": null,
+ "related": [
+  "mart402-com-v1-pdf-info",
+  "mart402-com-v1-pdf-pages",
+  "api-vextorium-com-v1-wikipedia-summary",
+  "timecode-openverbs-com-v1-parse",
+  "x402-aispace-bot-api-v1-image-generate",
+  "x402engine-app-api-tts-elevenlabs"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://ask.singitai.app/v1/audio/speech' -H 'content-type: application/json' -d '{\"input\":\"Hello from SingIt.\",\"model\":\"venice-kokoro-tts\",\"response_format\":\"mp3\",\"voice\":\"af_heart\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20ask-singitai-app-v1-audio-speech&body=%7B%22slug%22%3A%22ask-singitai-app-v1-audio-speech%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: ask-singitai-app-v1-audio-speech\",\"body\":\"{\\\"slug\\\":\\\"ask-singitai-app-v1-audio-speech\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SingIt%20Text%20to%20Speech%3A%20Text%20to%20speech%20(TTS)%20API%3A%20text%20read%20aloud%20by%2011%20voice%20models%20(Kokoro%2C&seller=https%3A%2F%2Fask.singitai.app%2Fv1%2Faudio%2Fspeech"
+}

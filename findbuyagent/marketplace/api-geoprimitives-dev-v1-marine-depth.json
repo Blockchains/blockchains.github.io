@@ -1,0 +1,84 @@
+{
+ "slug": "api-geoprimitives-dev-v1-marine-depth",
+ "name": "geoprimitives: Give it a latitude and longitude and it answers with what the nautical",
+ "seller": "geoprimitives",
+ "host": "api.geoprimitives.dev",
+ "provider": "https://api.geoprimitives.dev",
+ "description": "Give it a latitude and longitude and it answers with what the nautical chart says about the water there: the depth range of the charted depth area containing the position, the nearest charted sounding and how far away it is, and the chart's own zone of confidence for that area. Parameters go in the query string: this is a GET, there is no body. NOT FOR NAVIGATION, stated first because it is a condition of using the source. This is derived from NOAA Electronic Navigational Charts and redistributed; it is not an official NOAA ENC and does not meet federal chart carriage regulations under 33 CFR 164 or SOLAS chapter V, which only charts from NOAA or a certified NOAA ENC distributor do. Every response repeats this under `disclaimer`. NOAA and NOAA ENC are registered trademarks of NOAA, which d",
+ "category": "Utilities",
+ "tags": [
+  "marine",
+  "depth",
+  "nautical",
+  "noaa-enc",
+  "alaska"
+ ],
+ "endpoint": "https://api.geoprimitives.dev/v1/marine/depth",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x76A51b5Dd3729950B3b60c17f19252d221968FCe",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "lat": 57.0405,
+   "lon": -135.3421
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"chart\":{\"band\":\"harbour\",\"cell\":\"US5AK2NE\",\"cellsConsulted\":[\"US5AK2NE\"],\"edition\":3,\"issued\":\"20260302\",\"scale\":12000,\"update\":0},\"coverage\":{\"areas\":[\"Sitka Sound\",\"Kasaan Bay and Clarence Strait\",\"Metlakatla, Ketchikan and Revillagigedo Channel\",\"Juneau, Gastineau Channel and Lynn Canal\",\"Cordova and eastern Prince William Sound\"],\"bands\":[\"coastal (band 3)\",\"approach (band 4)\",\"harbour (band 5)\"],\"cells\":65,\"classes\":[\"SOUNDG\",\"DEPARE\",\"DRGARE\",\"UWTROC\",\"OBSTRN\",\"WRECKS\",\"M_QUAL\"],\"reason\":\"The charts are the 65 NOAA ENC cells of usage bands 3 to 5 that cover five working areas of southeast and southcentral Alaska. This is not statewide and it is not the whole coast. The coverage check reads the coordinate, so it runs in the handler and after payment, not in front of the 402: a position off the charts is quoted like any other and then refused with outside_coverage. A refusal does not settle, so nothing is charged, but it costs a signature and a round trip. Check the coverage against this list first.\",\"region\":\"Southeast and southcentral Alaska, 65 NOAA ENC cells\"},\"depthAreaMaximum\":36.5,\"depthAreaMinimum\":18.2,\"disclaimer\":{\"notForNavigation\":true,\"origin\":\"https://www.charts.noaa.gov/ENCs/\",\"statement\":\"Derived from NOAA ENC data and redistributed. This is NOT an official NOAA ENC and does NOT meet federal chart carriage regulations under 33 CFR 164 or SOLAS chapter V; only charts from NOAA or a certified NOAA ENC distributor do. Do not navigate on this answer.\",\"surveyAge\":\"NOAA's own warning, repeated because it governs how much any of this is worth: much of the depth information on NOAA charts comes from surveys conducted before 1940 and the shoreline is more than 20 years old. The zone of confidence in every depth answer is the chart's own assessment of that, per area.\",\"trademark\":\"NOAA and NOAA ENC are registered trademarks of the National Oceanic and Atmospheric Administration, which does not endorse this service.\",\"vintage\":\"Chart data as held on 2026-05-02. NOAA reissues ENCs weekly for Notice to Mariners and this snapshot does not track them; the cell edition and issue date that answered are in \\\"source\\\" so you can compare against NOAA's own catalog.\"},\"interpolation\":\"none. depthAreaMinimum is DRVAL1 of the charted depth area containing the position, and nearestSounding is a real charted sounding with the distance to it. Nothing between them is invented.\",\"nearestSounding\":{\"depth\":20.1,\"distanceMetres\":5.88,\"lat\":57.0405259,\"lon\":-135.",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609276187,
+ "payers30d": 10,
+ "calls30d": 313,
+ "lastCalledAt": "2026-11-02T02:37:26.652Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 475,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 475,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-geoprimitives-dev-v1-marine-depth",
+ "rating": null,
+ "related": [
+  "www-api-xpay-com-x402-network",
+  "www-api-xpay-com-x402-ping",
+  "www-api-xpay-com-x402-uuid",
+  "www-api-xpay-com-x402-payment",
+  "api-justaname-id-ens-v2-reverse",
+  "api-justaname-id-ens-v2-resolve"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.geoprimitives.dev/v1/marine/depth?lat=57.0405&lon=-135.3421'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-geoprimitives-dev-v1-marine-depth&body=%7B%22slug%22%3A%22api-geoprimitives-dev-v1-marine-depth%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-geoprimitives-dev-v1-marine-depth\",\"body\":\"{\\\"slug\\\":\\\"api-geoprimitives-dev-v1-marine-depth\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=geoprimitives%3A%20Give%20it%20a%20latitude%20and%20longitude%20and%20it%20answers%20with%20what%20the%20nautical&seller=https%3A%2F%2Fapi.geoprimitives.dev%2Fv1%2Fmarine%2Fdepth"
+}

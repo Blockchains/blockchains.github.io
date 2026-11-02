@@ -1,0 +1,81 @@
+{
+ "slug": "hyperliquid-predict-use-x402atlas-com-outcomes",
+ "name": "Hyperliquid Prediction Markets: The catalog of Hyperliquid prediction-market outcomes and their metada",
+ "seller": "Hyperliquid Prediction Markets",
+ "host": "hyperliquid-predict.use.x402atlas.com",
+ "provider": "https://hyperliquid-predict.use.x402atlas.com",
+ "description": "The catalog of Hyperliquid prediction-market outcomes and their metadata.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "hyperliquid",
+  "crypto",
+  "prediction-market",
+  "outcomes",
+  "markets"
+ ],
+ "endpoint": "https://hyperliquid-predict.use.x402atlas.com/outcomes",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xA55B06462A2e48661bAdF22f5841F95aE654b716",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"outcomes\":{\"outcomes\":[],\"questions\":[]},\"queried_at\":\"2026-07-10T12:00:00Z\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://hyperliquid-predict.use.x402atlas.com/llms.txt",
+ "docsChecked": 1793609268781,
+ "payers30d": 22,
+ "calls30d": 27,
+ "lastCalledAt": "2026-11-02T04:45:04.827Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 505,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 505,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/hyperliquid-predict-use-x402atlas-com-outcomes",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-contract-address",
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "notary-forgemesh-io-api-notarize",
+  "coingecko-use-x402atlas-com-price",
+  "scry-solanahub-de-x402-network-priority-fees-live",
+  "verifier-quantumshieldlabs-dev-x402-preflight"
+ ],
+ "example": {
+  "curl": "curl -i 'https://hyperliquid-predict.use.x402atlas.com/outcomes'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20hyperliquid-predict-use-x402atlas-com-outcomes&body=%7B%22slug%22%3A%22hyperliquid-predict-use-x402atlas-com-outcomes%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: hyperliquid-predict-use-x402atlas-com-outcomes\",\"body\":\"{\\\"slug\\\":\\\"hyperliquid-predict-use-x402atlas-com-outcomes\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Hyperliquid%20Prediction%20Markets%3A%20The%20catalog%20of%20Hyperliquid%20prediction-market%20outcomes%20and%20their%20metada&seller=https%3A%2F%2Fhyperliquid-predict.use.x402atlas.com%2Foutcomes"
+}

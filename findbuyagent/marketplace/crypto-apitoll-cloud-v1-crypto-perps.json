@@ -1,0 +1,83 @@
+{
+ "slug": "crypto-apitoll-cloud-v1-crypto-perps",
+ "name": "ApiToll Perps (Hyperliquid): Perpetual-futures market data from Hyperliquid for any coin (BTC, ETH,",
+ "seller": "ApiToll Perps (Hyperliquid)",
+ "host": "crypto.apitoll.cloud",
+ "provider": "https://crypto.apitoll.cloud",
+ "description": "Perpetual-futures market data from Hyperliquid for any coin (BTC, ETH, SOL, HYPE…): mark price, hourly funding rate and its annualized APR, open interest in coin and USD, 24-hour notional volume, 24h price change, and max leverage, across 200+ perp markets. Sort by volume, open interest, or funding. Track the perp market the way trading agents do. Sourced from Hyperliquid.",
+ "category": "Finance & markets",
+ "tags": [
+  "crypto",
+  "perps",
+  "perpetuals",
+  "futures",
+  "funding-rate"
+ ],
+ "endpoint": "https://crypto.apitoll.cloud/v1/crypto/perps",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x3dA40A9aD36640a2C0F533BAC368490095574664",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "coin": "BTC"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":1,\"filters\":{\"coin\":\"BTC\",\"sort\":\"volume\"},\"markets\":[{\"change24hPct\":1.2,\"coin\":\"BTC\",\"fundingAprPct\":10.95,\"fundingRateHourly\":0.0000125,\"markPrice\":66465,\"maxLeverage\":50,\"openInterest\":32915.94,\"openInterestUsd\":2187000000,\"oraclePrice\":66460,\"priceQuotedPer\":1,\"volume24hUsd\":2440195139}],\"source\":{\"name\":\"Hyperliquid\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609270629,
+ "payers30d": 14,
+ "calls30d": 20,
+ "lastCalledAt": "2026-11-01T23:13:23.761Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 392,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 392,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/crypto-apitoll-cloud-v1-crypto-perps",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "intel-degenscan-io-v1-br-ptax",
+  "joyful-charm-production-bf6d-up-railway-app-stats"
+ ],
+ "example": {
+  "curl": "curl -i 'https://crypto.apitoll.cloud/v1/crypto/perps?coin=BTC'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20crypto-apitoll-cloud-v1-crypto-perps&body=%7B%22slug%22%3A%22crypto-apitoll-cloud-v1-crypto-perps%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: crypto-apitoll-cloud-v1-crypto-perps\",\"body\":\"{\\\"slug\\\":\\\"crypto-apitoll-cloud-v1-crypto-perps\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ApiToll%20Perps%20(Hyperliquid)%3A%20Perpetual-futures%20market%20data%20from%20Hyperliquid%20for%20any%20coin%20(BTC%2C%20ETH%2C&seller=https%3A%2F%2Fcrypto.apitoll.cloud%2Fv1%2Fcrypto%2Fperps"
+}

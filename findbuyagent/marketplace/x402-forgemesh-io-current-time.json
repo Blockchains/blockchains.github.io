@@ -1,0 +1,77 @@
+{
+ "slug": "x402-forgemesh-io-current-time",
+ "name": "Current time API: the time right now in any IANA timezone (America/Chi",
+ "seller": "x402.forgemesh.io",
+ "host": "x402.forgemesh.io",
+ "provider": "https://x402.forgemesh.io",
+ "description": "Current time API: the time right now in any IANA timezone (America/Chicago, Asia/Tokyo...) — local ISO timestamp, UTC ISO, unix epoch, human-readable string, and day of week. The sanity check every scheduling, logging, and coordination agent needs. Deterministic and instant.",
+ "category": "Weather & geo",
+ "tags": [],
+ "endpoint": "https://x402.forgemesh.io/current-time",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x850363a27F0aC6fEb9C7a3eC4C1d295262dF9432",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "timezone": "America/Chicago"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"day_of_week\":\"Wednesday\",\"iso_local\":\"2026-07-15T10:30:00\",\"timezone\":\"America/Chicago\",\"unix_epoch\":1784127000}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402.forgemesh.io/llms.txt",
+ "docsChecked": 1793609276004,
+ "payers30d": 10,
+ "calls30d": 35,
+ "lastCalledAt": "2026-11-01T10:26:40.621Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 37,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 37,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-forgemesh-io-current-time",
+ "rating": null,
+ "related": [
+  "geoip-bip-rep-com-lookup",
+  "api-magentlab-com-api-codes-search",
+  "api-jexxa-org-v1-query",
+  "quantagentshop-com-v1-weather",
+  "x402tap-com-api-weather",
+  "api-x402node-dev-finance-econ-calendar"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://x402.forgemesh.io/current-time' -H 'content-type: application/json' -d '{\"timezone\":\"America/Chicago\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-forgemesh-io-current-time&body=%7B%22slug%22%3A%22x402-forgemesh-io-current-time%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-forgemesh-io-current-time\",\"body\":\"{\\\"slug\\\":\\\"x402-forgemesh-io-current-time\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Current%20time%20API%3A%20the%20time%20right%20now%20in%20any%20IANA%20timezone%20(America%2FChi&seller=https%3A%2F%2Fx402.forgemesh.io%2Fcurrent-time"
+}

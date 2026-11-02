@@ -1,0 +1,80 @@
+{
+ "slug": "x402engine-app-api-tts-elevenlabs",
+ "name": "x402engine — Premium text-to-speech with ElevenLabs — ultra-realistic",
+ "seller": "x402engine.app",
+ "host": "x402engine.app",
+ "provider": "https://x402engine.app",
+ "description": "x402engine — Premium text-to-speech with ElevenLabs — ultra-realistic voices, multilingual support, custom voice IDs",
+ "category": "Images & media",
+ "tags": [],
+ "endpoint": "https://x402engine.app/api/tts/elevenlabs",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.02,
+ "amount": "20000",
+ "payTo": "0x7dd5Be069f2d2eAd75eC7C3423B116fF043c2629",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "format": "mp3_44100_128",
+   "model_id": "eleven_multilingual_v2",
+   "text": "Hello world",
+   "voice_id": "21m00Tcm4TlvDq8ikWAM"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"audio\":\"<base64-encoded audio>\",\"format\":\"mp3_44100_128\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402engine.app/llms.txt",
+ "docsChecked": 1793609269574,
+ "payers30d": 14,
+ "calls30d": 1638,
+ "lastCalledAt": "2026-11-02T02:08:58.851Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 99,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 99,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402engine-app-api-tts-elevenlabs",
+ "rating": null,
+ "related": [
+  "appstore-use-x402atlas-com-product",
+  "x402-aispace-bot-api-v1-image-generate",
+  "mart402-com-v1-pdf-pages",
+  "api-vextorium-com-v1-wikipedia-summary",
+  "timecode-openverbs-com-v1-parse",
+  "ask-singitai-app-v1-audio-speech"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://x402engine.app/api/tts/elevenlabs' -H 'content-type: application/json' -d '{\"format\":\"mp3_44100_128\",\"model_id\":\"eleven_multilingual_v2\",\"text\":\"Hello world\",\"voice_id\":\"21m00Tcm4TlvDq8ikWAM\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402engine-app-api-tts-elevenlabs&body=%7B%22slug%22%3A%22x402engine-app-api-tts-elevenlabs%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402engine-app-api-tts-elevenlabs\",\"body\":\"{\\\"slug\\\":\\\"x402engine-app-api-tts-elevenlabs\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x402engine%20%E2%80%94%20Premium%20text-to-speech%20with%20ElevenLabs%20%E2%80%94%20ultra-realistic&seller=https%3A%2F%2Fx402engine.app%2Fapi%2Ftts%2Felevenlabs"
+}

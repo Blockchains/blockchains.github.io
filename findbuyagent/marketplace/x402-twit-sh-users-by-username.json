@@ -1,0 +1,77 @@
+{
+ "slug": "x402-twit-sh-users-by-username",
+ "name": "Look up a Twitter/X user profile by their screen name",
+ "seller": "x402.twit.sh",
+ "host": "x402.twit.sh",
+ "provider": "https://x402.twit.sh",
+ "description": "Look up a Twitter/X user profile by their screen name. Returns full profile data including id, name, username, bio, follower count, following count, tweet count, verification status, and profile image URL. Query param: username (string, required) - Twitter screen name without @, e.g. GET /users/by/username?username=elonmusk. Returns X v2 API-compatible JSON.",
+ "category": "Search & web",
+ "tags": [],
+ "endpoint": "https://x402.twit.sh/users/by/username",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x9dBA414637c611a16BEa6f0796BFcbcBdc410df8",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "username": "elonmusk"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"description\":\"Running bitcoin.\",\"id\":\"9253672\",\"name\":\"Hal Finney\",\"public_metrics\":{\"followers_count\":134000,\"following_count\":200,\"like_count\":300,\"tweet_count\":600},\"username\":\"halfin\",\"verified\":false}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402.twit.sh/.well-known/x402",
+ "docsChecked": 1793609269801,
+ "payers30d": 14,
+ "calls30d": 259,
+ "lastCalledAt": "2026-11-02T02:55:16.267Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 126,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 126,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-twit-sh-users-by-username",
+ "rating": null,
+ "related": [
+  "agent-pocket-network-v1-meadow",
+  "glim-sh-api-v1-twitter-search",
+  "twitter-use-x402atlas-com-search",
+  "agent-pocket-network-v1-agentsearch-web-search-v1",
+  "agent-pocket-network-v1-federal-register",
+  "agent-pocket-network-v1-dns-whois-rdap"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.twit.sh/users/by/username?username=elonmusk'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-twit-sh-users-by-username&body=%7B%22slug%22%3A%22x402-twit-sh-users-by-username%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-twit-sh-users-by-username\",\"body\":\"{\\\"slug\\\":\\\"x402-twit-sh-users-by-username\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Look%20up%20a%20Twitter%2FX%20user%20profile%20by%20their%20screen%20name&seller=https%3A%2F%2Fx402.twit.sh%2Fusers%2Fby%2Fusername"
+}

@@ -1,0 +1,78 @@
+{
+ "slug": "api-you-com-v1-search",
+ "name": "You.com Search API: real-time web search returning ranked results grou",
+ "seller": "api.you.com",
+ "host": "api.you.com",
+ "provider": "https://api.you.com",
+ "description": "You.com Search API: real-time web search returning ranked results grouped by section (results.web, results.news), each with url, title and description; web results also carry snippets. Use when an agent needs fresh, citable web data (news, markets, company facts) to ground a decision. Query params: query (required), count 1-100 (default 10), livecrawl (web|news|all; fetches live page contents, charged per result), country, freshness. Paid per call in USDC.",
+ "category": "Search & web",
+ "tags": [],
+ "endpoint": "https://api.you.com/v1/search",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xc327D0aEb5f65B514b193b5e5A95cC6F4060815f",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 600,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "count": 10,
+   "query": "NVDA earnings guidance Q2 2026"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"metadata\":{\"latency\":0.42,\"query\":\"NVDA earnings guidance Q2 2026\",\"search_uuid\":\"0a1d1f6e-6a1a-4a6e-9a9a-5f4f2b7d3c11\"},\"results\":{\"news\":[{\"description\":\"Management guided next quarter above consensus.\",\"page_age\":\"2026-08-01T14:02:00\",\"thumbnail_url\":\"https://example.com/thumb/nvda-call.jpg\",\"title\":\"NVIDIA earnings call: guidance above consensus\",\"url\":\"https://example.com/nvda-earnings-call\"}],\"web\":[{\"description\":\"NVIDIA lifted its outlook on data-center demand.\",\"favicon_url\":\"https://example.com/favicon.ico\",\"page_age\":\"2026-08-01T14:02:00\",\"snippets\":[\"NVIDIA expects revenue of ... driven by data-center GPU demand.\"],\"thumbnail_url\":\"https://example.com/thumb/nvda-guidance.jpg\",\"title\":\"NVIDIA raises Q2 revenue guidance\",\"url\":\"https://example.com/nvda-guidance\"}]}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609269264,
+ "payers30d": 18,
+ "calls30d": 419,
+ "lastCalledAt": "2026-11-02T03:32:20.621Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 929,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 929,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-you-com-v1-search",
+ "rating": null,
+ "related": [
+  "agent-pocket-network-v1-meadow",
+  "glim-sh-api-v1-twitter-search",
+  "twitter-use-x402atlas-com-search",
+  "agent-pocket-network-v1-agentsearch-web-search-v1",
+  "agent-pocket-network-v1-federal-register",
+  "agent-pocket-network-v1-dns-whois-rdap"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.you.com/v1/search?count=10&query=NVDA+earnings+guidance+Q2+2026'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-you-com-v1-search&body=%7B%22slug%22%3A%22api-you-com-v1-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-you-com-v1-search\",\"body\":\"{\\\"slug\\\":\\\"api-you-com-v1-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=You.com%20Search%20API%3A%20real-time%20web%20search%20returning%20ranked%20results%20grou&seller=https%3A%2F%2Fapi.you.com%2Fv1%2Fsearch"
+}

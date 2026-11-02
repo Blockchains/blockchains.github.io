@@ -1,0 +1,84 @@
+{
+ "slug": "chain-tollkit-dev-chain-balance",
+ "name": "Wallet Balance: Wallet balance on Base, Ethereum or Solana: give an address, get its E",
+ "seller": "Wallet Balance",
+ "host": "chain.tollkit.dev",
+ "provider": "https://chain.tollkit.dev",
+ "description": "Wallet balance on Base, Ethereum or Solana: give an address, get its ETH or SOL, USDC, USDT and any tokens you list, read live from the chain.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "wallet",
+  "balance",
+  "crypto",
+  "solana",
+  "base"
+ ],
+ "endpoint": "https://chain.tollkit.dev/chain/balance",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x6b11C413f916eCFA846302ff05c171c3B497924e",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "address": "0xBbfCE2D320dE6aB328Ba93A771c531ebFC9cE704",
+   "chain": "base"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"address\":\"0xBbfCE2D320dE6aB328Ba93A771c531ebFC9cE704\",\"block_number\":52155294,\"chain\":\"base\",\"checked_at\":\"2026-10-04T07:45:36.553Z\",\"explorer_url\":\"https://basescan.org/address/0xBbfCE2D320dE6aB328Ba93A771c531ebFC9cE704\",\"is_contract\":false,\"native\":{\"balance\":\"0\",\"balance_wei\":\"0\",\"symbol\":\"ETH\"},\"tokens\":[{\"address\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\"balance\":\"2.222\",\"balance_raw\":\"2222000\",\"decimals\":6,\"name\":\"USD Coin\",\"symbol\":\"USDC\"}]}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791089541/bazaar-icons/6490ef4ad700a0e0.png",
+ "docs": "https://chain.tollkit.dev/llms.txt",
+ "docsChecked": 1793609273965,
+ "payers30d": 12,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-01T22:00:03.847Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 59,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 59,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/chain-tollkit-dev-chain-balance",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://chain.tollkit.dev/chain/balance' -H 'content-type: application/json' -d '{\"address\":\"0xBbfCE2D320dE6aB328Ba93A771c531ebFC9cE704\",\"chain\":\"base\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20chain-tollkit-dev-chain-balance&body=%7B%22slug%22%3A%22chain-tollkit-dev-chain-balance%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: chain-tollkit-dev-chain-balance\",\"body\":\"{\\\"slug\\\":\\\"chain-tollkit-dev-chain-balance\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Wallet%20Balance%3A%20Wallet%20balance%20on%20Base%2C%20Ethereum%20or%20Solana%3A%20give%20an%20address%2C%20get%20its%20E&seller=https%3A%2F%2Fchain.tollkit.dev%2Fchain%2Fbalance"
+}

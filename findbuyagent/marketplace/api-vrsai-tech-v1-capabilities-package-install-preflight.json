@@ -1,0 +1,83 @@
+{
+ "slug": "api-vrsai-tech-v1-capabilities-package-install-preflight",
+ "name": "vrsai: Check an exact npm or PyPI package version immediately before installa",
+ "seller": "vrsai",
+ "host": "api.vrsai.tech",
+ "provider": "https://api.vrsai.tech",
+ "description": "Check an exact npm or PyPI package version immediately before installation using current registry, vulnerability, malicious-package, withdrawal/deprecation, and verified provenance evidence. Returns ALLOW, REVIEW, BLOCK, or UNKNOWN with machine-readable reasons.",
+ "category": "Security & compliance",
+ "tags": [
+  "package-security",
+  "dependency-risk",
+  "package-install",
+  "npm",
+  "pypi"
+ ],
+ "endpoint": "https://api.vrsai.tech/v1/capabilities/package_install_preflight",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x6746dFF7bDB1ED4940DBe50024795AD97CbA09Af",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "purl": "pkg:npm/%40colors/colors@1.5.0"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"decision\":\"ALLOW\",\"evidence\":[{\"attempts\":1,\"latency_ms\":120,\"observed_at\":\"2026-08-26T00:00:00.000Z\",\"source\":\"npm_registry\",\"status\":\"OK\"},{\"attempts\":1,\"latency_ms\":240,\"observed_at\":\"2026-08-26T00:00:00.000Z\",\"source\":\"osv\",\"status\":\"OK\"},{\"attempts\":1,\"latency_ms\":90,\"observed_at\":\"2026-08-26T00:00:00.000Z\",\"source\":\"deps_dev\",\"status\":\"OK\"}],\"input_fingerprint\":\"sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"observations\":{\"deps_dev\":{\"advisory_ids\":[],\"canonical_name\":\"@colors/colors\",\"canonical_version\":\"1.5.0\",\"licenses\":[\"MIT\"]},\"evidence_complete\":true,\"provenance\":{\"attestation_types\":[],\"expected_repository_match\":\"NOT_REQUESTED\",\"source_repositories\":[],\"verified\":false},\"registry\":{\"deprecated\":false,\"distribution_hashes\":[],\"exists\":true,\"install_scripts\":[],\"integrity\":\"sha512-fixture-integrity\",\"repository_metadata\":{\"url\":\"https://github.com/Marak/colors.js\",\"verified\":false},\"yanked\":\"NONE\",\"yanked_reasons\":[]},\"vulnerabilities\":{\"families\":[],\"family_count\":0,\"malicious_package_signal\":false,\"max_severity\":\"NONE\",\"raw_record_count\":0}},\"observed_at\":\"2026-08-26T00:00:00.000Z\",\"package\":{\"ecosystem\":\"npm\",\"name\":\"@colors/colors\",\"purl\":\"pkg:npm/%40colors/colors@1.5.0\",\"version\":\"1.5.0\"},\"policy_version\":\"balanced-2026-08-26\",\"reason_codes\":[\"NO_BLOCKING_SIGNAL_OBSERVED\"],\"unknowns\":[]}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1787448875/bazaar-icons/150e42f9e211f9b6.png",
+ "docs": "https://api.vrsai.tech/llms.txt",
+ "docsChecked": 1793609281496,
+ "payers30d": 9,
+ "calls30d": 12,
+ "lastCalledAt": "2026-10-30T23:18:18.401Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 710,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 710,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-vrsai-tech-v1-capabilities-package-install-preflight",
+ "rating": null,
+ "related": [
+  "api-relaystation-ai-v1-screening-match",
+  "agent-guild-5d5r-onrender-com-flags",
+  "netintel-dev-email-auth",
+  "toolrail-dev-vat-rates",
+  "modelmarket-dev-x402-histor-check",
+  "quartermaster-surewhynot-app-v1-dns"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.vrsai.tech/v1/capabilities/package_install_preflight' -H 'content-type: application/json' -d '{\"purl\":\"pkg:npm/%40colors/colors@1.5.0\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-vrsai-tech-v1-capabilities-package-install-preflight&body=%7B%22slug%22%3A%22api-vrsai-tech-v1-capabilities-package-install-preflight%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-vrsai-tech-v1-capabilities-package-install-preflight\",\"body\":\"{\\\"slug\\\":\\\"api-vrsai-tech-v1-capabilities-package-install-preflight\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=vrsai%3A%20Check%20an%20exact%20npm%20or%20PyPI%20package%20version%20immediately%20before%20installa&seller=https%3A%2F%2Fapi.vrsai.tech%2Fv1%2Fcapabilities%2Fpackage_install_preflight"
+}

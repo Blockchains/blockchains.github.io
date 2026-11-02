@@ -1,0 +1,81 @@
+{
+ "slug": "intel-degenscan-io-v1-br-ptax",
+ "name": "Degenscan Intel: Brazil FX: today's official BCB PTAX (USD/BRL), USDT/BRL on Mercado Bi",
+ "seller": "Degenscan Intel",
+ "host": "intel.degenscan.io",
+ "provider": "https://intel.degenscan.io",
+ "description": "Brazil FX: today's official BCB PTAX (USD/BRL), USDT/BRL on Mercado Bitcoin now and the crypto-dollar premium over PTAX. Market data only — not investment advice.",
+ "category": "Finance & markets",
+ "tags": [
+  "finance",
+  "markets",
+  "events",
+  "crypto",
+  "stocks"
+ ],
+ "endpoint": "https://intel.degenscan.io/v1/br/ptax",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x21f4A2DA07bccE60878cAb223358D11aD8F11a94",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"btc_premium_vs_ptax_pct\":0.695,\"ptax_date\":\"06/10/2026\",\"ptax_usd_brl\":4.9698,\"usdt_brl\":5.0038,\"usdt_premium_vs_ptax_pct\":0.684}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://intel.degenscan.io/llms.txt",
+ "docsChecked": 1793609270957,
+ "payers30d": 13,
+ "calls30d": 62,
+ "lastCalledAt": "2026-10-31T00:36:19.528Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 59,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 59,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/intel-degenscan-io-v1-br-ptax",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps",
+  "joyful-charm-production-bf6d-up-railway-app-stats"
+ ],
+ "example": {
+  "curl": "curl -i 'https://intel.degenscan.io/v1/br/ptax'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20intel-degenscan-io-v1-br-ptax&body=%7B%22slug%22%3A%22intel-degenscan-io-v1-br-ptax%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: intel-degenscan-io-v1-br-ptax\",\"body\":\"{\\\"slug\\\":\\\"intel-degenscan-io-v1-br-ptax\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Degenscan%20Intel%3A%20Brazil%20FX%3A%20today's%20official%20BCB%20PTAX%20(USD%2FBRL)%2C%20USDT%2FBRL%20on%20Mercado%20Bi&seller=https%3A%2F%2Fintel.degenscan.io%2Fv1%2Fbr%2Fptax"
+}

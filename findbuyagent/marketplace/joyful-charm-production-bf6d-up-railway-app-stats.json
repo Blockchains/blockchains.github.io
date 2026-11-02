@@ -1,0 +1,75 @@
+{
+ "slug": "joyful-charm-production-bf6d-up-railway-app-stats",
+ "name": "Aggregate insider-trading market statistics: total Form 4 trades track",
+ "seller": "joyful-charm-production-bf6d.up.railway.app",
+ "host": "joyful-charm-production-bf6d.up.railway.app",
+ "provider": "https://joyful-charm-production-bf6d.up.railway.app",
+ "description": "Aggregate insider-trading market statistics: total Form 4 trades tracked, trades in the last 24h, top 20 most-traded tickers and top 20 most-active insiders by filing count and dollar volume. A one-call overview of where insider activity is concentrated right now. Returns JSON.",
+ "category": "Finance & markets",
+ "tags": [],
+ "endpoint": "https://joyful-charm-production-bf6d.up.railway.app/stats",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x1394A802c94ab096abBd91CcC632843b03f46614",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"top_insiders\":[{\"count\":40,\"insider_name\":\"COOK TIMOTHY D\",\"total_value\":310000000}],\"top_tickers\":[{\"count\":120,\"ticker\":\"AAPL\",\"total_value\":520000000}],\"total_trades\":250000,\"trades_last_24h\":900}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609272711,
+ "payers30d": 13,
+ "calls30d": 17,
+ "lastCalledAt": "2026-10-30T18:35:15.587Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 470,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 470,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/joyful-charm-production-bf6d-up-railway-app-stats",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i 'https://joyful-charm-production-bf6d.up.railway.app/stats'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20joyful-charm-production-bf6d-up-railway-app-stats&body=%7B%22slug%22%3A%22joyful-charm-production-bf6d-up-railway-app-stats%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: joyful-charm-production-bf6d-up-railway-app-stats\",\"body\":\"{\\\"slug\\\":\\\"joyful-charm-production-bf6d-up-railway-app-stats\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Aggregate%20insider-trading%20market%20statistics%3A%20total%20Form%204%20trades%20track&seller=https%3A%2F%2Fjoyful-charm-production-bf6d.up.railway.app%2Fstats"
+}

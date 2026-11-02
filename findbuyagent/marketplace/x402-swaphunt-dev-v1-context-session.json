@@ -1,0 +1,75 @@
+{
+ "slug": "x402-swaphunt-dev-v1-context-session",
+ "name": "Current trading session (Asia / London / NY / Off) plus historical vol",
+ "seller": "x402.swaphunt.dev",
+ "host": "x402.swaphunt.dev",
+ "provider": "https://x402.swaphunt.dev",
+ "description": "Current trading session (Asia / London / NY / Off) plus historical volatility for that session. Use to time entries around the most active hours and set session-aware expectations.",
+ "category": "Finance & markets",
+ "tags": [],
+ "endpoint": "https://x402.swaphunt.dev/v1/context/session",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xD6b585DD2F48263D08FB75EA28c1598d845d23a8",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"current_session\":\"new_york\",\"expected_volatility\":\"high\",\"historical_session_volatility\":{\"asian\":\"low (0.7x)\",\"london\":\"normal (1.0x)\",\"london_ny_overlap\":\"highest (1.4x)\",\"new_york\":\"high (1.2x)\",\"off_hours\":\"lowest (0.5x)\"},\"is_overlap\":false,\"markets_active\":\"New York, Chicago\",\"minutes_remaining\":170,\"next_session\":\"off_hours\",\"session_end_utc\":\"2026-10-29T21:00:00+00:00\",\"session_name\":\"New York\",\"session_start_utc\":\"2026-10-29T13:00:00+00:00\",\"updated_at\":\"2026-10-29T18:09:37.228790+00:00\",\"volatility_multiplier\":1.2}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609281390,
+ "payers30d": 9,
+ "calls30d": 13,
+ "lastCalledAt": "2026-10-31T14:45:28.765Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 145,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 145,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-swaphunt-dev-v1-context-session",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.swaphunt.dev/v1/context/session'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-swaphunt-dev-v1-context-session&body=%7B%22slug%22%3A%22x402-swaphunt-dev-v1-context-session%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-swaphunt-dev-v1-context-session\",\"body\":\"{\\\"slug\\\":\\\"x402-swaphunt-dev-v1-context-session\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Current%20trading%20session%20(Asia%20%2F%20London%20%2F%20NY%20%2F%20Off)%20plus%20historical%20vol&seller=https%3A%2F%2Fx402.swaphunt.dev%2Fv1%2Fcontext%2Fsession"
+}

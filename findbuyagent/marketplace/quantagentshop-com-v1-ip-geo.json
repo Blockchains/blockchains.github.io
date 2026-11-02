@@ -1,0 +1,81 @@
+{
+ "slug": "quantagentshop-com-v1-ip-geo",
+ "name": "Quant Agent Shop: IP address lookup for one public IPv4 or IPv6 address: country, region",
+ "seller": "Quant Agent Shop",
+ "host": "quantagentshop.com",
+ "provider": "https://quantagentshop.com",
+ "description": "IP address lookup for one public IPv4 or IPv6 address: country, region and city (a city-level estimate with coordinates), continent, and network (ASN number and organisation). Use for fraud checks, analytics or routing. Not for finding a street address or a person. Local database, no third-party call per lookup. Typical response under 100 ms. Failed calls are not charged.",
+ "category": "Data & analytics",
+ "tags": [
+  "ip-geo",
+  "geolocation",
+  "data"
+ ],
+ "endpoint": "https://quantagentshop.com/v1/ip-geo",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.0099,
+ "amount": "9900",
+ "payTo": "0x4d8d8D4f04512029172e0176744Eec4AE5238309",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "ip": "1.0.0.1"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"accuracy\":\"city-level estimate\",\"as_org\":\"Cloudflare, Inc.\",\"asn\":13335,\"attribution\":\"IP Geolocation by DB-IP (https://db-ip.com), CC BY 4.0\",\"city\":\"South Brisbane\",\"continent\":\"OC\",\"country\":\"AU\",\"ip\":\"1.0.0.1\",\"lat\":-27.4767,\"lon\":153.017,\"region\":\"Queensland\",\"version\":4}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://quantagentshop.com/llms.txt",
+ "docsChecked": 1793609273363,
+ "payers30d": 12,
+ "calls30d": 34,
+ "lastCalledAt": "2026-10-29T18:09:31.868Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 86,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 86,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/quantagentshop-com-v1-ip-geo",
+ "rating": null,
+ "related": [
+  "ip402-xyz-v1-geo",
+  "api-polyform-org-v1-threat-scanners",
+  "insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard",
+  "fuelscout-scalpstream-com-fuel",
+  "cpi-report-us-underscoredone-com-cpi",
+  "agent402-tools-api-demand-radar"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://quantagentshop.com/v1/ip-geo' -H 'content-type: application/json' -d '{\"ip\":\"1.0.0.1\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20quantagentshop-com-v1-ip-geo&body=%7B%22slug%22%3A%22quantagentshop-com-v1-ip-geo%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: quantagentshop-com-v1-ip-geo\",\"body\":\"{\\\"slug\\\":\\\"quantagentshop-com-v1-ip-geo\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Quant%20Agent%20Shop%3A%20IP%20address%20lookup%20for%20one%20public%20IPv4%20or%20IPv6%20address%3A%20country%2C%20region&seller=https%3A%2F%2Fquantagentshop.com%2Fv1%2Fip-geo"
+}

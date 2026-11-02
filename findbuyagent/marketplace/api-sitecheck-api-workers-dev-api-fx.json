@@ -1,0 +1,85 @@
+{
+ "slug": "api-sitecheck-api-workers-dev-api-fx",
+ "name": "SiteCheck: Currency exchange rates from the European Central Bank (about 30 curre",
+ "seller": "SiteCheck",
+ "host": "api.sitecheck-api.workers.dev",
+ "provider": "https://api.sitecheck-api.workers.dev",
+ "description": "Currency exchange rates from the European Central Bank (about 30 currencies, back to 1999): latest or a given date, amount conversion, or a daily time series between two dates. Source: ECB reference rates via Frankfurter.",
+ "category": "Finance & markets",
+ "tags": [
+  "exchange rates",
+  "currency",
+  "fx",
+  "forex",
+  "ecb"
+ ],
+ "endpoint": "https://api.sitecheck-api.workers.dev/api/fx",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xb8491F953e6860D3b5840b73c60883Ff099ceAfA",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "amount": "250",
+   "from": "USD",
+   "to": "EUR,GBP,TRY"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"amount\":250,\"base\":\"USD\",\"converted\":{\"EUR\":223.4925,\"GBP\":190.3,\"TRY\":12303.75},\"date\":\"2026-10-08\",\"rates\":{\"EUR\":0.89397,\"GBP\":0.7612,\"TRY\":49.215},\"source\":\"European Central Bank reference rates via Frankfurter (https://frankfurter.dev)\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.sitecheck-api.workers.dev/llms.txt",
+ "docsChecked": 1793609277038,
+ "payers30d": 10,
+ "calls30d": 15,
+ "lastCalledAt": "2026-11-02T04:20:51.803Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 748,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 748,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-sitecheck-api-workers-dev-api-fx",
+ "rating": null,
+ "related": [
+  "data-tollkit-dev-sec-company",
+  "mcp-blocksize-info-v1-bidask-btc-usd",
+  "intel-degenscan-io-v1-oracle-board",
+  "toolcall-click-t-fx-rates",
+  "br-intelligence-brverify-api-workers-dev-v1-ptax",
+  "offercheck-offercheck-workers-dev-v1-fx"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.sitecheck-api.workers.dev/api/fx?amount=250&from=USD&to=EUR%2CGBP%2CTRY'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-sitecheck-api-workers-dev-api-fx&body=%7B%22slug%22%3A%22api-sitecheck-api-workers-dev-api-fx%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-sitecheck-api-workers-dev-api-fx\",\"body\":\"{\\\"slug\\\":\\\"api-sitecheck-api-workers-dev-api-fx\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SiteCheck%3A%20Currency%20exchange%20rates%20from%20the%20European%20Central%20Bank%20(about%2030%20curre&seller=https%3A%2F%2Fapi.sitecheck-api.workers.dev%2Fapi%2Ffx"
+}

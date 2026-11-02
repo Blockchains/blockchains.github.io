@@ -1,0 +1,86 @@
+{
+ "slug": "fomo-x4o2-com-v1-feed",
+ "name": "x4o2 FOMO Data: The event feed FOMO shows its users: large buys and sells, several tra",
+ "seller": "x4o2 FOMO Data",
+ "host": "fomo.x4o2.com",
+ "provider": "https://fomo.x4o2.com",
+ "description": "The event feed FOMO shows its users: large buys and sells, several traders buying or selling the same token, new token listings, price since listing, new theses, trader profit milestones and smart-following signals. types= narrows it to some event types (FOMO always adds its pinned manual post); page back with cursor. Newest first, usually minutes old. Use as a stream of social trading signals and large trades by FOMO traders.",
+ "category": "Finance & markets",
+ "tags": [
+  "fomo",
+  "social feed",
+  "alerts",
+  "social trading",
+  "signals"
+ ],
+ "endpoint": "https://fomo.x4o2.com/v1/feed",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x46E18AA644CFF035Aec1cb9ca412900aAe78E928",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": 50,
+   "maxAge": 5,
+   "stale": 0,
+   "types": "large_buy,large_sell"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"feed\":[{\"body\":{\"anchorText\":null,\"description\":\"• As consolidation continues across the broad market and ...\",\"displayName\":\"fomo\",\"link\":null,\"title\":\"Recap: October 25th, 2026\"},\"createdAt\":\"2026-10-26T19:49:00.000Z\",\"id\":\"6119f6e8-ac03-4c69-8934-bc27280bc3d3\",\"likes\":16,\"networkId\":null,\"pinned\":true,\"reacted\":false,\"swapId\":null,\"tokenAddress\":null,\"tradeId\":null,\"transferId\":null,\"twitter\":null,\"type\":\"manual\",\"userId\":null,\"verified\":false,\"views\":0}],\"nextCursor\":\"6ab734bf-510e-5a8f-97db-354721ddff53\"},\"meta\":{\"ageMs\":58,\"observedAt\":1793069283669,\"parts\":{\"feed\":{\"observedAt\":1793069283669,\"source\":\"fresh\"}},\"source\":\"fresh\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://fomo.x4o2.com/llms.txt",
+ "docsChecked": 1793609276910,
+ "payers30d": 10,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-01T06:55:27.894Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 35,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 35,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/fomo-x4o2-com-v1-feed",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i 'https://fomo.x4o2.com/v1/feed?limit=50&maxAge=5&stale=0&types=large_buy%2Clarge_sell'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20fomo-x4o2-com-v1-feed&body=%7B%22slug%22%3A%22fomo-x4o2-com-v1-feed%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: fomo-x4o2-com-v1-feed\",\"body\":\"{\\\"slug\\\":\\\"fomo-x4o2-com-v1-feed\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x4o2%20FOMO%20Data%3A%20The%20event%20feed%20FOMO%20shows%20its%20users%3A%20large%20buys%20and%20sells%2C%20several%20tra&seller=https%3A%2F%2Ffomo.x4o2.com%2Fv1%2Ffeed"
+}

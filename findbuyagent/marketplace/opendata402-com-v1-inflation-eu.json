@@ -1,0 +1,84 @@
+{
+ "slug": "opendata402-com-v1-inflation-eu",
+ "name": "opendata402: Official monthly inflation (HICP, annual rate of change, all items) fo",
+ "seller": "opendata402",
+ "host": "opendata402.com",
+ "provider": "https://opendata402.com",
+ "description": "Official monthly inflation (HICP, annual rate of change, all items) for EU countries, the euro area and the EU from Eurostat. Give a country code (NL, DE, FR, EA20, EU27_2020) and the number of recent months. Use it for price indexation, wage or rent adjustment and economic context. Eurostat data, CC BY 4.0; values unchanged.",
+ "category": "Data & analytics",
+ "tags": [
+  "inflation",
+  "hicp",
+  "eurostat",
+  "europe",
+  "economics"
+ ],
+ "endpoint": "https://opendata402.com/v1/inflation/eu",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x295AA6c5a3460A0f8755823C8eE7bBC7CAf79fb1",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 30,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "geo": "NL",
+   "months": "12"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"geo\":\"NL\",\"series\":[{\"month\":\"2026-08\",\"value\":2.9}],\"unit\":\"annual rate of change (%)\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://opendata402.com/llms.txt",
+ "docsChecked": 1793609281166,
+ "payers30d": 9,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T07:01:25.605Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 188,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 188,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/opendata402-com-v1-inflation-eu",
+ "rating": null,
+ "related": [
+  "api-402rates-com-v1-ping",
+  "rubric-protocol-com-v1-x402-hedera-facts-exchange-rate",
+  "nbu-navistri-com-v1-rates",
+  "api-hyperextend-xyz-v1-liquidations-coverage",
+  "api-govparse-io-v1-stats-opportunities",
+  "http-forest-gas-station-mainnet-lcjl27p8lmjs-code-run-dns-changed"
+ ],
+ "example": {
+  "curl": "curl -i 'https://opendata402.com/v1/inflation/eu?geo=NL&months=12'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20opendata402-com-v1-inflation-eu&body=%7B%22slug%22%3A%22opendata402-com-v1-inflation-eu%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: opendata402-com-v1-inflation-eu\",\"body\":\"{\\\"slug\\\":\\\"opendata402-com-v1-inflation-eu\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=opendata402%3A%20Official%20monthly%20inflation%20(HICP%2C%20annual%20rate%20of%20change%2C%20all%20items)%20fo&seller=https%3A%2F%2Fopendata402.com%2Fv1%2Finflation%2Feu"
+}

@@ -1,0 +1,83 @@
+{
+ "slug": "quantagentshop-com-v1-company-lookup",
+ "name": "Quant Agent Shop: Company legal-entity lookup from the global LEI system (GLEIF)",
+ "seller": "Quant Agent Shop",
+ "host": "quantagentshop.com",
+ "provider": "https://quantagentshop.com",
+ "description": "Company legal-entity lookup from the global LEI system (GLEIF). Send a company name or a 20-character LEI; returns legal name, LEI, status, jurisdiction, legal form, registration number, addresses, the first record's direct and ultimate parents, found or unknown, and provenance (source URLs, retrieval times, SHA-256). Use for know-your-business checks and group-structure questions. Companies only. Typical response 1 to 2 s. Failed calls are not charged.",
+ "category": "Search & web",
+ "tags": [
+  "company-lookup",
+  "lei",
+  "company-data",
+  "compliance"
+ ],
+ "endpoint": "https://quantagentshop.com/v1/company-lookup",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.0099,
+ "amount": "9900",
+ "payTo": "0x4d8d8D4f04512029172e0176744Eec4AE5238309",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "max_results": 1,
+   "name": "Apple Inc."
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"provenance\":{\"freshness\":\"read live from the GLEIF API and cached up to 24 hours\",\"sources\":[{\"retrieved_at\":\"2026-10-22T09:00:00+00:00\",\"sha256\":\"dbfa44832c3e12f5ab23a2519dde3bcbe2873c99898682196d3fd06e529b910a\",\"url\":\"https://api.gleif.org/api/v1/lei-records?filter%5Bentity.legalName%5D=Apple+Inc.&page%5Bsize%5D=1\"}]},\"records\":[{\"created\":\"1977-01-03T00:00:00Z\",\"direct_parent\":null,\"entity_status\":\"ACTIVE\",\"hq_address\":{\"city\":\"Cupertino\",\"country\":\"US\",\"lines\":[\"One Apple Park Way\"],\"postal_code\":\"95014\",\"region\":\"US-CA\"},\"jurisdiction\":\"US-CA\",\"legal_address\":{\"city\":\"Glendale\",\"country\":\"US\",\"lines\":[\"C/O C T Corporation System\",\"330 N Brand Blvd Ste 700\"],\"postal_code\":\"91203\",\"region\":\"US-CA\"},\"legal_form\":\"H1UM\",\"legal_name\":\"Apple Inc.\",\"lei\":\"HWUPKR0MPOU8FGXBT394\",\"next_renewal\":\"2027-03-01T00:00:00Z\",\"other_names\":[],\"registered_as\":\"806592\",\"registration_status\":\"ISSUED\",\"ultimate_parent\":null}],\"source\":\"GLEIF LEI data (CC0). Not endorsed by GLEIF.\",\"status\":\"found\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://quantagentshop.com/llms.txt",
+ "docsChecked": 1793609279070,
+ "payers30d": 9,
+ "calls30d": 25,
+ "lastCalledAt": "2026-10-30T18:44:59.516Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 42,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 42,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/quantagentshop-com-v1-company-lookup",
+ "rating": null,
+ "related": [
+  "stableenrich-dev-api-exa-search",
+  "websearch-use-x402atlas-com-search",
+  "x402-twit-sh-tweets-user",
+  "x402-orthogonal-com-icypeas-api-find-people",
+  "mcp-newstex-com-x402-trending",
+  "agent-data-api-agentdata-workers-dev-v1-contracts-opportunities"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://quantagentshop.com/v1/company-lookup' -H 'content-type: application/json' -d '{\"max_results\":1,\"name\":\"Apple Inc.\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20quantagentshop-com-v1-company-lookup&body=%7B%22slug%22%3A%22quantagentshop-com-v1-company-lookup%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: quantagentshop-com-v1-company-lookup\",\"body\":\"{\\\"slug\\\":\\\"quantagentshop-com-v1-company-lookup\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Quant%20Agent%20Shop%3A%20Company%20legal-entity%20lookup%20from%20the%20global%20LEI%20system%20(GLEIF)&seller=https%3A%2F%2Fquantagentshop.com%2Fv1%2Fcompany-lookup"
+}

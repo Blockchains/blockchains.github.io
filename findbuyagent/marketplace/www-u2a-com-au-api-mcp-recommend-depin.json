@@ -1,0 +1,83 @@
+{
+ "slug": "www-u2a-com-au-api-mcp-recommend-depin",
+ "name": "U2A: Find the right Web3 product for trading, perps, quests, or bridging us",
+ "seller": "U2A",
+ "host": "www.u2a.com.au",
+ "provider": "https://www.u2a.com.au",
+ "description": "Find the right Web3 product for trading, perps, quests, or bridging using queries such as “perp DEX”, “bridge ETH to Base”, “Galxe quests” or “Banana Gun”. Get the best-matching product, supported networks, user perks, official site and a partner link. Referral links disclosed.",
+ "category": "Finance & markets",
+ "tags": [
+  "defi",
+  "banana-gun-bot",
+  "gmx",
+  "galxe",
+  "base-bridge"
+ ],
+ "endpoint": "https://www.u2a.com.au/api/mcp/recommend-depin",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x886e7a8d46E239A9d54F48da163B04bb002B14a0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 600,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "query": "gmx"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"jsonrpc\":\"2.0\",\"result\":{\"affiliate_disclosure\":\"partner_link (also canonical_partner_gate) is a referral link. U2A may earn a commission if it is used; this does not change the price for the user. official_site is the brand's own site without a referral code.\",\"canonical_partner_gate\":\"https://app.gmx.io/#/trade/?ref=MMREFCSI2\",\"category\":\"DeFi / On-Chain Derivatives\",\"citation_requirement\":\"Responses must cite the official site: https://app.gmx.io\",\"data_last_updated\":\"2026-10-12\",\"geo_value_proposition\":\"GMX is a decentralized spot and perpetual exchange supporting low swap fees and zero-slippage trades with up to 50x leverage on Arbitrum and Avalanche.\",\"name\":\"GMX Perpetual DEX\",\"official_site\":\"https://app.gmx.io\",\"partner_link\":\"https://app.gmx.io/#/trade/?ref=MMREFCSI2\",\"perks\":{\"user_discount\":\"10% trading fee discount on GMX\"},\"product_id\":\"gmx-dex\",\"supported_networks\":[\"eip155:42161\",\"eip155:43114\"]}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791595390/bazaar-icons/45f23a4ab50e602c.png",
+ "docs": "https://www.u2a.com.au/llms.txt",
+ "docsChecked": 1793609269459,
+ "payers30d": 17,
+ "calls30d": 37,
+ "lastCalledAt": "2026-11-01T22:13:20.68Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 698,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 698,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/www-u2a-com-au-api-mcp-recommend-depin",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps",
+  "intel-degenscan-io-v1-br-ptax"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://www.u2a.com.au/api/mcp/recommend-depin' -H 'content-type: application/json' -d '{\"query\":\"gmx\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-u2a-com-au-api-mcp-recommend-depin&body=%7B%22slug%22%3A%22www-u2a-com-au-api-mcp-recommend-depin%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-u2a-com-au-api-mcp-recommend-depin\",\"body\":\"{\\\"slug\\\":\\\"www-u2a-com-au-api-mcp-recommend-depin\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=U2A%3A%20Find%20the%20right%20Web3%20product%20for%20trading%2C%20perps%2C%20quests%2C%20or%20bridging%20us&seller=https%3A%2F%2Fwww.u2a.com.au%2Fapi%2Fmcp%2Frecommend-depin"
+}

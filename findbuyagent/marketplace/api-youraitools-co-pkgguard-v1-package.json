@@ -1,0 +1,85 @@
+{
+ "slug": "api-youraitools-co-pkgguard-v1-package",
+ "name": "PkgGuard by AgentGate: Package vulnerability lookup API. Is this package version safe to inst",
+ "seller": "PkgGuard by AgentGate",
+ "host": "api.youraitools.co",
+ "provider": "https://api.youraitools.co",
+ "description": "Package vulnerability lookup API. Is this package version safe to install? Known vulnerabilities (CVE/GHSA ids, severity, CVSS score, fixed-in versions) and malicious-package flags for one npm, PyPI, Go, crates.io, Packagist, RubyGems, Maven or NuGet package version, from OSV.dev. Search intents: package vulnerability check, is this npm package safe, cve lookup api, pypi vulnerability, malicious package check, osv lookup.",
+ "category": "Search & web",
+ "tags": [
+  "security",
+  "dependencies",
+  "vulnerability-scan",
+  "supply-chain",
+  "malware"
+ ],
+ "endpoint": "https://api.youraitools.co/pkgguard/v1/package",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x3c1A1E01e790Cd326495631B3b38Bd7068F08d6F",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "ecosystem": "npm",
+   "name": "lodash",
+   "version": "4.17.15"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"advisory_count\":6,\"disclaimer\":\"Informational: lists published advisories from OSV.dev for the versions given.\",\"highest_severity\":\"HIGH\",\"malicious_count\":0,\"package_count\":1,\"packages\":[{\"ecosystem\":\"npm\",\"highest_severity\":\"HIGH\",\"malicious\":false,\"name\":\"lodash\",\"version\":\"4.17.15\",\"version_source\":\"exact\",\"vuln_count\":6,\"vulns\":[{\"aliases\":[\"CVE-2021-23337\"],\"cvss_score\":7.2,\"fixed_in\":[\"4.17.21\"],\"id\":\"GHSA-35jh-r3h4-6jhm\",\"malicious\":false,\"severity\":\"HIGH\",\"summary\":\"Command Injection in lodash\",\"url\":\"https://osv.dev/vulnerability/GHSA-35jh-r3h4-6jhm\"}]}],\"scanned_count\":1,\"source\":{\"name\":\"OSV.dev\"},\"tier\":\"full\",\"unpinned_count\":0,\"verdict\":\"vulnerable\",\"vulnerable_count\":1}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792634264/bazaar-icons/24b9b478d3f15ec3.png",
+ "docs": "https://api.youraitools.co/llms.txt",
+ "docsChecked": 1793609281045,
+ "payers30d": 9,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T07:04:04.759Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 205,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 205,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-youraitools-co-pkgguard-v1-package",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "minifetch-com-api-v1-x402-preflight-url-check",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "cdp-agent-0-01-onrender-com"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.youraitools.co/pkgguard/v1/package?ecosystem=npm&name=lodash&version=4.17.15'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-youraitools-co-pkgguard-v1-package&body=%7B%22slug%22%3A%22api-youraitools-co-pkgguard-v1-package%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-youraitools-co-pkgguard-v1-package\",\"body\":\"{\\\"slug\\\":\\\"api-youraitools-co-pkgguard-v1-package\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=PkgGuard%20by%20AgentGate%3A%20Package%20vulnerability%20lookup%20API.%20Is%20this%20package%20version%20safe%20to%20inst&seller=https%3A%2F%2Fapi.youraitools.co%2Fpkgguard%2Fv1%2Fpackage"
+}

@@ -1,0 +1,84 @@
+{
+ "slug": "api-bitrefill-com-x402-topups-search",
+ "name": "Bitrefill: Search mobile top-ups & prepaid airtime for carriers in 180+ countries",
+ "seller": "Bitrefill",
+ "host": "api.bitrefill.com",
+ "provider": "https://api.bitrefill.com",
+ "description": "Search mobile top-ups & prepaid airtime for carriers in 180+ countries. Pay in USDC via x402, no account.",
+ "category": "Search & web",
+ "tags": [
+  "mobile-topups",
+  "airtime",
+  "prepaid",
+  "usdc",
+  "base"
+ ],
+ "endpoint": "https://api.bitrefill.com/x402/topups/search",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x480CD46E6faDe651a0437DeaddA53D5c8e7D846A",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "country": "GB",
+   "q": "vodafone"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"next_step\":{\"body\":{\"slug\":\"<product slug from results>\"},\"url\":\"/x402/products/detail\"},\"products\":[{\"country\":\"GB\",\"in_stock\":true,\"name\":\"Vodafone\",\"recipient_type\":\"phone_number\",\"slug\":\"vodafone-gb\"}]}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1780566420/bazaar-icons/33192fb7239597bd.png",
+ "docs": null,
+ "docsChecked": 1793609274753,
+ "payers30d": 11,
+ "calls30d": 46,
+ "lastCalledAt": "2026-11-01T23:13:51.967Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 122,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 122,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-bitrefill-com-x402-topups-search",
+ "rating": null,
+ "related": [
+  "stableenrich-dev-api-exa-contents",
+  "win-oneshotagent-com-v1-tools-web-read",
+  "search-cyberwarex-com-contents",
+  "apexfaucet-xyz-api-x402-page-markdown",
+  "sift-srv1996466-hstgr-cloud-v1-feeds",
+  "x240-jvnclk88-workers-dev-url-check"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.bitrefill.com/x402/topups/search?country=GB&q=vodafone'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-bitrefill-com-x402-topups-search&body=%7B%22slug%22%3A%22api-bitrefill-com-x402-topups-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-bitrefill-com-x402-topups-search\",\"body\":\"{\\\"slug\\\":\\\"api-bitrefill-com-x402-topups-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Bitrefill%3A%20Search%20mobile%20top-ups%20%26%20prepaid%20airtime%20for%20carriers%20in%20180%2B%20countries&seller=https%3A%2F%2Fapi.bitrefill.com%2Fx402%2Ftopups%2Fsearch"
+}

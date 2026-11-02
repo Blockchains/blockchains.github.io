@@ -1,0 +1,83 @@
+{
+ "slug": "netintel-dev-email-auth",
+ "name": "NetIntel: Email deliverability & domain security check — validates SPF, DKIM (mu",
+ "seller": "NetIntel",
+ "host": "netintel.dev",
+ "provider": "https://netintel.dev",
+ "description": "Email deliverability & domain security check — validates SPF, DKIM (multi-selector), and DMARC, detects spoofing and misconfigurations, and returns an A–F email security grade with transparent deductions. Anti-spam / anti-phishing readiness for any sending domain.",
+ "category": "Security & compliance",
+ "tags": [
+  "email deliverability check",
+  "spf dkim dmarc",
+  "domain email security",
+  "dmarc check",
+  "email spoofing check"
+ ],
+ "endpoint": "https://netintel.dev/email-auth",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xdaDc335482AD545296Fd7b28518A251fFCbEb9Df",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "domain": "example.com"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"deductions\":[],\"dkim\":{\"found\":true,\"issues\":[],\"records\":[{\"issues\":[],\"key_length_bits\":2048,\"key_type\":\"rsa\",\"record\":\"v=DKIM1; k=rsa; p=MIIBIjAN...\",\"selector\":\"google\"}],\"selectors_checked\":[\"default\",\"google\"]},\"dmarc\":{\"found\":true,\"issues\":[],\"pct\":100,\"policy\":\"reject\",\"record\":\"v=DMARC1; p=reject; rua=mailto:dmarc@example.com; ruf=mailto:forensic@example.com\",\"rua\":[\"mailto:dmarc@example.com\"],\"ruf\":[\"mailto:forensic@example.com\"],\"subdomain_policy\":null},\"domain\":\"example.com\",\"grade\":\"A\",\"resolves\":true,\"score\":100,\"spf\":{\"all_qualifier\":\"-all\",\"dns_lookup_count\":1,\"found\":true,\"issues\":[],\"mechanisms\":[\"include:_spf.google.com\"],\"record\":\"v=spf1 include:_spf.google.com -all\"}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1784214098/bazaar-icons/7d2bf437631b2e4e.png",
+ "docs": "https://netintel.dev/llms.txt",
+ "docsChecked": 1793609270815,
+ "payers30d": 13,
+ "calls30d": 726,
+ "lastCalledAt": "2026-11-02T02:03:20.236Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 464,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 464,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/netintel-dev-email-auth",
+ "rating": null,
+ "related": [
+  "toolrail-dev-vat-rates",
+  "modelmarket-dev-x402-histor-check",
+  "quartermaster-surewhynot-app-v1-dns",
+  "forensik-halowerk-com-v1-bytecode-clone-provenance",
+  "tienda-textokit-store-api-cuit-ar",
+  "forensik-halowerk-com-v1-address-poisoning-detector"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://netintel.dev/email-auth' -H 'content-type: application/json' -d '{\"domain\":\"example.com\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20netintel-dev-email-auth&body=%7B%22slug%22%3A%22netintel-dev-email-auth%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: netintel-dev-email-auth\",\"body\":\"{\\\"slug\\\":\\\"netintel-dev-email-auth\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=NetIntel%3A%20Email%20deliverability%20%26%20domain%20security%20check%20%E2%80%94%20validates%20SPF%2C%20DKIM%20(mu&seller=https%3A%2F%2Fnetintel.dev%2Femail-auth"
+}

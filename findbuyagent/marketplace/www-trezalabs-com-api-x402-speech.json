@@ -1,0 +1,85 @@
+{
+ "slug": "www-trezalabs-com-api-x402-speech",
+ "name": "Treza: Text to speech (AI voice generation): send text, get a natural ElevenL",
+ "seller": "Treza",
+ "host": "www.trezalabs.com",
+ "provider": "https://www.trezalabs.com",
+ "description": "Text to speech (AI voice generation): send text, get a natural ElevenLabs voiceover MP3 back in the same response. Use it when an agent needs narration, a voiceover for a video, or a spoken version of text. Eleven v3 (expressive, takes [whispers]-style directions) or Multilingual v2 (29 languages), a choice of ElevenLabs narrators, up to 3000 characters, $0.42 per 1,000 characters. GET this URL for the voices. No account or API key: the payment is the only credential.",
+ "category": "Search & web",
+ "tags": [
+  "text-to-speech",
+  "tts",
+  "elevenlabs",
+  "voice",
+  "voiceover"
+ ],
+ "endpoint": "https://www.trezalabs.com/api/x402/speech",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.02,
+ "amount": "20000",
+ "payTo": "0xaE393a9CD728F7397F50f6f8C88096a0F3D2b42C",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": false,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "model": "eleven-v3",
+   "text": "Welcome back. Today we are looking at three small habits that make a big difference.",
+   "voice": "george"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"audio\":\"https://www.trezalabs.com/api/media/generated/x402_speech/1a2b3c4d.mp3?s=...&c=...\",\"characters\":84,\"model\":\"eleven-v3\",\"paidUsd\":0.04,\"runId\":\"2026-09-23T18:04:11.000Z#1a2b3c4d\",\"status\":\"success\",\"statusUrl\":\"https://www.trezalabs.com/api/x402/speech?runId=...&token=...\",\"transaction\":\"0x...\",\"voice\":\"george\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://www.trezalabs.com/llms.txt",
+ "docsChecked": 1793609278276,
+ "payers30d": 9,
+ "calls30d": 166,
+ "lastCalledAt": "2026-10-28T21:21:21.851Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 470,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 470,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/www-trezalabs-com-api-x402-speech",
+ "rating": null,
+ "related": [
+  "stabletravel-dev-api-google-flights-search",
+  "stabletravel-dev-api-seats-aero-search",
+  "api-kadec0-xyz-v1-papers",
+  "x402-botsmith-dev-x-search",
+  "appstore-use-x402atlas-com-search",
+  "x402-asterpay-io-v2-x402-ai-fact-check"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://www.trezalabs.com/api/x402/speech' -H 'content-type: application/json' -d '{\"model\":\"eleven-v3\",\"text\":\"Welcome back. Today we are looking at three small habits that make a big difference.\",\"voice\":\"george\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-trezalabs-com-api-x402-speech&body=%7B%22slug%22%3A%22www-trezalabs-com-api-x402-speech%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-trezalabs-com-api-x402-speech\",\"body\":\"{\\\"slug\\\":\\\"www-trezalabs-com-api-x402-speech\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Treza%3A%20Text%20to%20speech%20(AI%20voice%20generation)%3A%20send%20text%2C%20get%20a%20natural%20ElevenL&seller=https%3A%2F%2Fwww.trezalabs.com%2Fapi%2Fx402%2Fspeech"
+}

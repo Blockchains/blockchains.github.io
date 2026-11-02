@@ -1,0 +1,77 @@
+{
+ "slug": "win-oneshotagent-com-v1-tools-web-read",
+ "name": "Read a web page and extract content as markdown with screenshot",
+ "seller": "win.oneshotagent.com",
+ "host": "win.oneshotagent.com",
+ "provider": "https://win.oneshotagent.com",
+ "description": "Read a web page and extract content as markdown with screenshot",
+ "category": "Search & web",
+ "tags": [],
+ "endpoint": "https://win.oneshotagent.com/v1/tools/web-read",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x9fb365E4E9385E2a39FeBAd70368267e6f571d9A",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "url": "https://example.com"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"markdown\":\"# Example Domain\",\"metadata\":{\"description\":\"\",\"statusCode\":200,\"title\":\"Example Domain\"},\"receipt_id\":\"uuid\",\"request_id\":\"uuid\",\"screenshot_url\":\"https://...\",\"status\":\"completed\",\"tool\":\"web_read\",\"truncated\":false,\"url\":\"https://example.com\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609267214,
+ "payers30d": 30,
+ "calls30d": 6249,
+ "lastCalledAt": "2026-11-02T00:21:13.728Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 47,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 47,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/win-oneshotagent-com-v1-tools-web-read",
+ "rating": null,
+ "related": [
+  "api-bitrefill-com-x402-gift-cards-search",
+  "stableenrich-dev-api-exa-contents",
+  "search-cyberwarex-com-contents",
+  "apexfaucet-xyz-api-x402-page-markdown",
+  "sift-srv1996466-hstgr-cloud-v1-feeds",
+  "x240-jvnclk88-workers-dev-url-check"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://win.oneshotagent.com/v1/tools/web-read' -H 'content-type: application/json' -d '{\"url\":\"https://example.com\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20win-oneshotagent-com-v1-tools-web-read&body=%7B%22slug%22%3A%22win-oneshotagent-com-v1-tools-web-read%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: win-oneshotagent-com-v1-tools-web-read\",\"body\":\"{\\\"slug\\\":\\\"win-oneshotagent-com-v1-tools-web-read\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Read%20a%20web%20page%20and%20extract%20content%20as%20markdown%20with%20screenshot&seller=https%3A%2F%2Fwin.oneshotagent.com%2Fv1%2Ftools%2Fweb-read"
+}

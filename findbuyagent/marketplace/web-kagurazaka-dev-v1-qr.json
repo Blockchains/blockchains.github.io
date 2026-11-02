@@ -1,0 +1,83 @@
+{
+ "slug": "web-kagurazaka-dev-v1-qr",
+ "name": "x402 Web Tools: Encode text or a URL as a QR code: PNG (base64 and a data URL) or SVG,",
+ "seller": "x402 Web Tools",
+ "host": "web.kagurazaka.dev",
+ "provider": "https://web.kagurazaka.dev",
+ "description": "Encode text or a URL as a QR code: PNG (base64 and a data URL) or SVG, with the size and error correction level you choose.",
+ "category": "Search & web",
+ "tags": [
+  "qr",
+  "qrcode",
+  "image",
+  "generator"
+ ],
+ "endpoint": "https://web.kagurazaka.dev/v1/qr",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xF1643BD00D3c071d9a0c12A4E7d3a17e6E19f8a5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "size": 300,
+   "text": "https://www.x402.org/"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"bytes\":1200,\"data_url\":\"data:image/png;base64,iVBORw0KGgo...\",\"format\":\"png\",\"png_base64\":\"iVBORw0KGgo...\",\"size\":300}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://web.kagurazaka.dev/llms.txt",
+ "docsChecked": 1793609280198,
+ "payers30d": 9,
+ "calls30d": 15,
+ "lastCalledAt": "2026-11-01T13:15:28.31Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 84,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 84,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/web-kagurazaka-dev-v1-qr",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "minifetch-com-api-v1-x402-preflight-url-check",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "cdp-agent-0-01-onrender-com"
+ ],
+ "example": {
+  "curl": "curl -i 'https://web.kagurazaka.dev/v1/qr?size=300&text=https%3A%2F%2Fwww.x402.org%2F'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20web-kagurazaka-dev-v1-qr&body=%7B%22slug%22%3A%22web-kagurazaka-dev-v1-qr%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: web-kagurazaka-dev-v1-qr\",\"body\":\"{\\\"slug\\\":\\\"web-kagurazaka-dev-v1-qr\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x402%20Web%20Tools%3A%20Encode%20text%20or%20a%20URL%20as%20a%20QR%20code%3A%20PNG%20(base64%20and%20a%20data%20URL)%20or%20SVG%2C&seller=https%3A%2F%2Fweb.kagurazaka.dev%2Fv1%2Fqr"
+}

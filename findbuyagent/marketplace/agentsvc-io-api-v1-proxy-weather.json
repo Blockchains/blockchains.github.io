@@ -1,0 +1,83 @@
+{
+ "slug": "agentsvc-io-api-v1-proxy-weather",
+ "name": "Weather: Weather forecast and current weather for any city or lat,lon worldwide",
+ "seller": "Weather",
+ "host": "agentsvc.io",
+ "provider": "https://agentsvc.io",
+ "description": "Weather forecast and current weather for any city or lat,lon worldwide, from MET Norway: daily forecast up to 10 days plus optional hourly forecast up to 48 hours. Current: temperature, feels like, humidity, wind and gusts, precipitation, cloud cover, pressure, conditions text. Daily: min/max, conditions, precipitation sum and probability, max wind, UV index, sunrise/sunset.",
+ "category": "Weather & geo",
+ "tags": [
+  "weather",
+  "forecast",
+  "temperature",
+  "rain",
+  "wind"
+ ],
+ "endpoint": "https://agentsvc.io/api/v1/proxy/weather",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x622efA6Ceb83a5b6EdBC931332f4db68B7f74F27",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "location": "Berlin"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"current\":{\"feels_like_c\":10.2,\"humidity_pct\":71,\"temp_c\":12.5,\"weather_code\":3,\"wind_kph\":14.8},\"forecast_3d\":[{\"date\":\"2026-04-07\",\"temp_max_c\":14,\"temp_min_c\":8.2,\"weather_code\":1},{\"date\":\"2026-04-08\",\"temp_max_c\":16.5,\"temp_min_c\":9,\"weather_code\":2},{\"date\":\"2026-04-09\",\"temp_max_c\":13,\"temp_min_c\":7.8,\"weather_code\":61}],\"location\":{\"lat\":52.52,\"lon\":13.41,\"name\":\"Berlin\"}},\"success\":true}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791462963/bazaar-icons/243ff0b79dbee242.png",
+ "docs": "https://agentsvc.io/llms.txt",
+ "docsChecked": 1793609279656,
+ "payers30d": 9,
+ "calls30d": 28,
+ "lastCalledAt": "2026-11-01T10:04:36.667Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 519,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 519,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agentsvc-io-api-v1-proxy-weather",
+ "rating": null,
+ "related": [
+  "netintel-dev-weather-current",
+  "horizonpulse-dev-api-pulse",
+  "horizonpulse-dev-api-gas",
+  "weather-cyberwarex-com-forecast",
+  "apiacre-com-v1-data-timezone-convert",
+  "win-oneshotagent-com-v1-tools-lookup-place-weather-alerts"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://agentsvc.io/api/v1/proxy/weather' -H 'content-type: application/json' -d '{\"location\":\"Berlin\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agentsvc-io-api-v1-proxy-weather&body=%7B%22slug%22%3A%22agentsvc-io-api-v1-proxy-weather%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agentsvc-io-api-v1-proxy-weather\",\"body\":\"{\\\"slug\\\":\\\"agentsvc-io-api-v1-proxy-weather\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Weather%3A%20Weather%20forecast%20and%20current%20weather%20for%20any%20city%20or%20lat%2Clon%20worldwide&seller=https%3A%2F%2Fagentsvc.io%2Fapi%2Fv1%2Fproxy%2Fweather"
+}

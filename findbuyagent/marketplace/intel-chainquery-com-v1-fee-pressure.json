@@ -1,0 +1,81 @@
+{
+ "slug": "intel-chainquery-com-v1-fee-pressure",
+ "name": "ChainQuery Bitcoin Intelligence: ChainQuery Bitcoin Intelligence: independent Bitcoin-native on-chain d",
+ "seller": "ChainQuery Bitcoin Intelligence",
+ "host": "intel.chainquery.com",
+ "provider": "https://intel.chainquery.com",
+ "description": "ChainQuery Bitcoin Intelligence: independent Bitcoin-native on-chain data over x402, no API key. Live mempool fee-pressure signal (state low/moderate/high/severe + score in sat/vB).",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "bitcoin",
+  "intelligence",
+  "signals",
+  "quantum",
+  "analytics"
+ ],
+ "endpoint": "https://intel.chainquery.com/v1/fee-pressure",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x7Cf45cD775Bdf31a5a96fa0A5805DF0b610D87ff",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"as_of\":\"2026-06-19T17:00:05Z\",\"refreshes_at\":\"continuous (~60s poll, stale after 300s)\",\"score\":12.4,\"source_ts_utc\":\"2026-06-19T17:00:00Z\",\"state\":\"moderate\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1781875440/bazaar-icons/f80ac12c7206aba4.png",
+ "docs": "https://intel.chainquery.com/openapi.json",
+ "docsChecked": 1793609281197,
+ "payers30d": 9,
+ "calls30d": 12,
+ "lastCalledAt": "2026-11-01T23:17:30.324Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 93,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 93,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/intel-chainquery-com-v1-fee-pressure",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-contract-address",
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "hyperliquid-predict-use-x402atlas-com-outcomes",
+  "notary-forgemesh-io-api-notarize",
+  "coingecko-use-x402atlas-com-price",
+  "scry-solanahub-de-x402-network-priority-fees-live"
+ ],
+ "example": {
+  "curl": "curl -i 'https://intel.chainquery.com/v1/fee-pressure'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20intel-chainquery-com-v1-fee-pressure&body=%7B%22slug%22%3A%22intel-chainquery-com-v1-fee-pressure%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: intel-chainquery-com-v1-fee-pressure\",\"body\":\"{\\\"slug\\\":\\\"intel-chainquery-com-v1-fee-pressure\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ChainQuery%20Bitcoin%20Intelligence%3A%20ChainQuery%20Bitcoin%20Intelligence%3A%20independent%20Bitcoin-native%20on-chain%20d&seller=https%3A%2F%2Fintel.chainquery.com%2Fv1%2Ffee-pressure"
+}

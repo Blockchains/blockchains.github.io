@@ -1,0 +1,75 @@
+{
+ "slug": "coil-trade-api-crypto-night",
+ "name": "Coil Crypto Night Read: Pre-registered overnight continuation read for the Robinhood-tradable",
+ "seller": "Coil Crypto Night Read",
+ "host": "coil.trade",
+ "provider": "https://coil.trade",
+ "description": "Pre-registered overnight continuation read for the Robinhood-tradable crypto universe: the top-5 session-momentum coins into the 20:00 UTC signal, the BTC 200-day regime gate, and the study receipts. The ranking beat its random null at every fee tier in the cold study; at Robinhood retail fees the studied trade was REFUTED — a state read with its refutation attached, not advice. ~5-min refresh, 24/7.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://coil.trade/api/crypto/night",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x7B53524d5c5D29EfB8C1d128C56F62FE38Cd9476",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 3600,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"computed_at\":\"<ISO-8601 UTC — the 24/7 tick this read was computed on>\",\"counts\":{\"eligible\":34,\"universe\":81},\"night_board\":{\"eligible\":34,\"gate_asof\":\"<UTC close the daily gate was evaluated on>\",\"gate_mode\":\"RISK_ON\",\"gate_open\":true,\"phase\":\"pre-signal\",\"rule\":\"R1 mechanics — the registered top-5 session-momentum selection into the 20:00 UTC signal, BTC>200d gated…\",\"signal_time_utc\":\"20:00\",\"study\":{\"beats_null\":true,\"breakeven_bps_per_side\":19,\"gross_edge_pct_per_night\":0.381,\"name\":\"2026-08-19-crypto-overnight-rule\",\"net_at_rh_retail_taker\":\"negative — REFUTED\",\"riders\":\"…survivorship + venue-fills riders…\"},\"top5\":[{\"rank\":1,\"session_pct\":4.1,\"sym\":\"SOL-USD\"}]},\"product\":\"coil-crypto-night\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://coil.trade/llms.txt",
+ "docsChecked": 1793609270738,
+ "payers30d": 13,
+ "calls30d": 77,
+ "lastCalledAt": "2026-11-02T01:23:35.892Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 63,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 63,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/coil-trade-api-crypto-night",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://coil.trade/api/crypto/night'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20coil-trade-api-crypto-night&body=%7B%22slug%22%3A%22coil-trade-api-crypto-night%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: coil-trade-api-crypto-night\",\"body\":\"{\\\"slug\\\":\\\"coil-trade-api-crypto-night\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Coil%20Crypto%20Night%20Read%3A%20Pre-registered%20overnight%20continuation%20read%20for%20the%20Robinhood-tradable&seller=https%3A%2F%2Fcoil.trade%2Fapi%2Fcrypto%2Fnight"
+}

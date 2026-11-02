@@ -3,6 +3,7 @@
  "name": "X Pay: Base network and USDC payment metadata",
  "seller": "X Pay",
  "host": "www.api-xpay.com",
+ "provider": "https://www.api-xpay.com",
  "description": "Base network and USDC payment metadata",
  "category": "Utilities",
  "tags": [
@@ -14,30 +15,64 @@
  ],
  "endpoint": "https://www.api-xpay.com/x402/network",
  "method": "GET",
+ "payment": "x402",
  "priceUsd": 0.005,
  "amount": "5000",
  "payTo": "0x589a2314a2E05F45e40C4823Da3Ba58D421dB3d8",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
  "listedTermsMatch": true,
  "input": {
   "queryParams": null,
   "body": null,
-  "bodyType": null
+  "bodyType": null,
+  "headers": null
  },
+ "outputType": "json",
  "outputExample": "{\"asset\":\"USDC\",\"chainId\":8453,\"network\":\"eip155:8453\",\"protocol\":\"x402\",\"service\":\"X Pay\",\"success\":true,\"usdc\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1789136282/bazaar-icons/101f79e83d7e2744.png",
  "docs": null,
  "docsChecked": 1793596012852,
  "payers30d": 264,
- "calls30d": 6832,
+ "calls30d": 6761,
+ "lastCalledAt": "2026-11-01T07:21:33.993Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 312,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 442,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 442,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/www-api-xpay-com-x402-network",
  "rating": null,
+ "related": [
+  "api-justaname-id-ens-v2-reverse",
+  "api-justaname-id-ens-v2-resolve",
+  "api-geoprimitives-dev-v1-marine-depth",
+  "bunnvault-xyz-api-vault-apy",
+  "coord-taifoon-dev-v1-market-candles",
+  "fractalai-net-co-api-x402-witness"
+ ],
+ "example": {
+  "curl": "curl -i 'https://www.api-xpay.com/x402/network'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-api-xpay-com-x402-network&body=%7B%22slug%22%3A%22www-api-xpay-com-x402-network%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-api-xpay-com-x402-network\",\"body\":\"{\\\"slug\\\":\\\"www-api-xpay-com-x402-network\\\",\\\"stars\\\":1-5}\"}"

@@ -1,0 +1,84 @@
+{
+ "slug": "toolcall-click-t-fx-rates",
+ "name": "Toolsmith: Foreign exchange reference rates from the European Central Bank",
+ "seller": "Toolsmith",
+ "host": "toolcall.click",
+ "provider": "https://toolcall.click",
+ "description": "Foreign exchange reference rates from the European Central Bank. Base currency plus optional symbols filter. Updated daily on ECB schedule. JSON response. $0.002 USDC per call, pay via x402, no API key.",
+ "category": "Finance & markets",
+ "tags": [
+  "forex",
+  "fx",
+  "exchange rates",
+  "currency",
+  "ecb"
+ ],
+ "endpoint": "https://toolcall.click/t/fx/rates",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x84FA7Ea8303d4f503267e2e998A3F7D980e814a5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "base": "USD",
+   "symbols": "EUR,GBP,JPY"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"base\":\"USD\",\"date\":\"2026-07-14\",\"rates\":{\"EUR\":0.91,\"GBP\":0.78}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1784209498/bazaar-icons/45d84cc06bc45a4f.png",
+ "docs": "https://toolcall.click/llms.txt",
+ "docsChecked": 1793609275218,
+ "payers30d": 11,
+ "calls30d": 17,
+ "lastCalledAt": "2026-11-02T04:40:52.822Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 212,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 212,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/toolcall-click-t-fx-rates",
+ "rating": null,
+ "related": [
+  "data-tollkit-dev-sec-company",
+  "mcp-blocksize-info-v1-bidask-btc-usd",
+  "intel-degenscan-io-v1-oracle-board",
+  "api-sitecheck-api-workers-dev-api-fx",
+  "br-intelligence-brverify-api-workers-dev-v1-ptax",
+  "api-sitecheck-api-workers-dev-api-macro"
+ ],
+ "example": {
+  "curl": "curl -i 'https://toolcall.click/t/fx/rates?base=USD&symbols=EUR%2CGBP%2CJPY'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20toolcall-click-t-fx-rates&body=%7B%22slug%22%3A%22toolcall-click-t-fx-rates%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: toolcall-click-t-fx-rates\",\"body\":\"{\\\"slug\\\":\\\"toolcall-click-t-fx-rates\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Toolsmith%3A%20Foreign%20exchange%20reference%20rates%20from%20the%20European%20Central%20Bank&seller=https%3A%2F%2Ftoolcall.click%2Ft%2Ffx%2Frates"
+}

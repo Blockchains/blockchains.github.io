@@ -1,0 +1,83 @@
+{
+ "slug": "x402-agentutility-ai-hacker-news-search",
+ "name": "AgentUtility.ai: Search Hacker News for startup news, YC news, Show HN launches, and fo",
+ "seller": "AgentUtility.ai",
+ "host": "x402.agentutility.ai",
+ "provider": "https://x402.agentutility.ai",
+ "description": "Search Hacker News for startup news, YC news, Show HN launches, and founder discussion through the Algolia HN index. Send a query, then filter stories, comments, or polls by author, minimum points, and ISO-8601 date range; sort by relevance or newest first. Returns titles, authors, points, comment counts, timestamps, URLs, and matching text. Use it as a startup news search API, YC news search, Show HN tracker, or developer news feed.",
+ "category": "Search & web",
+ "tags": [
+  "web-probe",
+  "hacker",
+  "news",
+  "search"
+ ],
+ "endpoint": "https://x402.agentutility.ai/hacker-news-search",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x6c0752c09e7F6fA6526fCDf40e456a159ebB5621",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "limit": 5,
+   "query": "rust async"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"query\":\"rust async\",\"results\":[{\"author\":\"boats\",\"comments_count\":137,\"created_at\":\"2024-03-15T14:22:01.000Z\",\"id\":\"39800000\",\"points\":412,\"title\":\"Async Rust in three parts\",\"url\":\"https://without.boats/blog/async-rust-3/\"}],\"source\":\"https://hn.algolia.com/api/v1/search\",\"total_hits\":4567}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1783070352/bazaar-icons/54f004eda341546b.png",
+ "docs": "https://x402.agentutility.ai/llms.txt",
+ "docsChecked": 1793609276182,
+ "payers30d": 10,
+ "calls30d": 24,
+ "lastCalledAt": "2026-11-02T03:43:54.08Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 82,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 82,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-agentutility-ai-hacker-news-search",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "minifetch-com-api-v1-x402-preflight-url-check",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "cdp-agent-0-01-onrender-com"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://x402.agentutility.ai/hacker-news-search' -H 'content-type: application/json' -d '{\"limit\":5,\"query\":\"rust async\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-agentutility-ai-hacker-news-search&body=%7B%22slug%22%3A%22x402-agentutility-ai-hacker-news-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-agentutility-ai-hacker-news-search\",\"body\":\"{\\\"slug\\\":\\\"x402-agentutility-ai-hacker-news-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=AgentUtility.ai%3A%20Search%20Hacker%20News%20for%20startup%20news%2C%20YC%20news%2C%20Show%20HN%20launches%2C%20and%20fo&seller=https%3A%2F%2Fx402.agentutility.ai%2Fhacker-news-search"
+}

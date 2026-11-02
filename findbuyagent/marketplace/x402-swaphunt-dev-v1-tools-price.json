@@ -1,0 +1,78 @@
+{
+ "slug": "x402-swaphunt-dev-v1-tools-price",
+ "name": "SwapHunt — a crypto market-context toolkit for trading agents: live pr",
+ "seller": "x402.swaphunt.dev",
+ "host": "x402.swaphunt.dev",
+ "provider": "https://x402.swaphunt.dev",
+ "description": "SwapHunt — a crypto market-context toolkit for trading agents: live prices, market regime, volatility, sentiment, funding, macro events, seasonality and anti-FOMO sanity checks, all pay-per-call. This route returns a single asset's live spot price with 24h context: price, 24h change %, 24h high/low and volume — one clean JSON snapshot (BTC, ETH, SOL, any major). For many assets at once use /price/multi.",
+ "category": "Finance & markets",
+ "tags": [],
+ "endpoint": "https://x402.swaphunt.dev/v1/tools/price",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xD6b585DD2F48263D08FB75EA28c1598d845d23a8",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "asset": "BTC",
+   "currency": "USD"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asset\":\"BTC\",\"change_24h\":0.019,\"currency\":\"USD\",\"high_24h\":81896.898216,\"low_24h\":79637.94216,\"price\":80745.859696,\"updated_at\":\"2026-10-29T18:09:32.852317\",\"volume_24h\":1302464863.094671}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609277234,
+ "payers30d": 10,
+ "calls30d": 22,
+ "lastCalledAt": "2026-10-31T14:51:41.774Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 928,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 928,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-swaphunt-dev-v1-tools-price",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.swaphunt.dev/v1/tools/price?asset=BTC&currency=USD'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-swaphunt-dev-v1-tools-price&body=%7B%22slug%22%3A%22x402-swaphunt-dev-v1-tools-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-swaphunt-dev-v1-tools-price\",\"body\":\"{\\\"slug\\\":\\\"x402-swaphunt-dev-v1-tools-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SwapHunt%20%E2%80%94%20a%20crypto%20market-context%20toolkit%20for%20trading%20agents%3A%20live%20pr&seller=https%3A%2F%2Fx402.swaphunt.dev%2Fv1%2Ftools%2Fprice"
+}

@@ -1,0 +1,77 @@
+{
+ "slug": "mart402-com-v1-pdf-info",
+ "name": "Mart402: PDF facts before you pay for parsing: page count, metadata, per-page t",
+ "seller": "Mart402",
+ "host": "mart402.com",
+ "provider": "https://mart402.com",
+ "description": "PDF facts before you pay for parsing: page count, metadata, per-page text volume, scanned-or-not estimate. $0.001/call.",
+ "category": "Images & media",
+ "tags": [],
+ "endpoint": "https://mart402.com/v1/pdf-info",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xE3244a21D0d68bFa78b7CAd8C3b8777aDFbB3188",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "url": "https://mart402.com/samples/assets/doc.pdf"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"encrypted\":false,\"likely_scanned\":true,\"metadata\":{\"producer\":\"pypdf\"},\"note\":\"SAMPLE RESPONSE (recorded from a real production run). Served free at /samples/{product} so you can see the exact response shape before paying. No payment was taken.\",\"ok\":true,\"pages\":1,\"sample\":true,\"scanned_note\":\"likely_scanned means little embedded text; use /v1/parse (hallucination-guarded OCR) to read it\",\"text_chars_per_page\":[0]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://mart402.com/llms.txt",
+ "docsChecked": 1793609271409,
+ "payers30d": 13,
+ "calls30d": 25,
+ "lastCalledAt": "2026-10-30T12:38:29.422Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 56,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 56,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/mart402-com-v1-pdf-info",
+ "rating": null,
+ "related": [
+  "ask-singitai-app-v1-audio-speech",
+  "api-vextorium-com-v1-wikipedia-summary",
+  "timecode-openverbs-com-v1-parse",
+  "x402-aispace-bot-api-v1-image-generate",
+  "x402engine-app-api-tts-elevenlabs",
+  "appstore-use-x402atlas-com-product"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://mart402.com/v1/pdf-info' -H 'content-type: application/json' -d '{\"url\":\"https://mart402.com/samples/assets/doc.pdf\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20mart402-com-v1-pdf-info&body=%7B%22slug%22%3A%22mart402-com-v1-pdf-info%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: mart402-com-v1-pdf-info\",\"body\":\"{\\\"slug\\\":\\\"mart402-com-v1-pdf-info\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Mart402%3A%20PDF%20facts%20before%20you%20pay%20for%20parsing%3A%20page%20count%2C%20metadata%2C%20per-page%20t&seller=https%3A%2F%2Fmart402.com%2Fv1%2Fpdf-info"
+}

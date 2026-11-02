@@ -1,0 +1,84 @@
+{
+ "slug": "api-vextorium-com-v1-wikipedia-summary",
+ "name": "Wikipedia article summary: Summary of a Wikipedia article in any language: title, short descripti",
+ "seller": "Wikipedia article summary",
+ "host": "api.vextorium.com",
+ "provider": "https://api.vextorium.com",
+ "description": "Summary of a Wikipedia article in any language: title, short description, lead paragraph, image, coordinates, link and Wikidata id. If the title is not exact it returns the closest article, flagged as approximate, with alternatives.",
+ "category": "Images & media",
+ "tags": [
+  "wikipedia",
+  "knowledge",
+  "summary",
+  "encyclopedia",
+  "facts"
+ ],
+ "endpoint": "https://api.vextorium.com/v1/wikipedia-summary",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xb9f06D2734B7E9D7b21B64C4D8b95bd774b71aCf",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "language": "es",
+   "topic": "Madrid"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"approximate_match\":false,\"coordinates\":{\"lat\":40.41694444,\"lon\":-3.70333333},\"description\":\"capital de España\",\"image\":\"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Bandera_de_la_ciudad_de_Madrid.svg/langes-330px-Bandera_de_la_ciudad_de_Madrid.svg.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail\",\"language\":\"es\",\"last_edition\":\"2026-09-30T18:42:37Z\",\"link\":\"https://es.wikipedia.org/wiki/Madrid\",\"notice\":null,\"other_articles\":null,\"source\":\"Wikipedia (CC BY-SA 4.0; cite the linked article)\",\"summary\":\"Madrid es un municipio y una ciudad de España. La localidad, con categoría histórica de villa, es la capital del Estado y de la Comunidad de Madrid. En su término municipal, el más poblado de España, su población es de 3 506 730 habitantes, constituyéndose como la segunda ciudad más poblada de la Un…\",\"title\":\"Madrid\",\"wikidata\":\"Q2807\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.vextorium.com/llms.txt",
+ "docsChecked": 1793609279399,
+ "payers30d": 9,
+ "calls30d": 22,
+ "lastCalledAt": "2026-11-01T07:41:08.886Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 148,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 148,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-vextorium-com-v1-wikipedia-summary",
+ "rating": null,
+ "related": [
+  "mart402-com-v1-pdf-pages",
+  "timecode-openverbs-com-v1-parse",
+  "ask-singitai-app-v1-audio-speech",
+  "mart402-com-v1-pdf-info",
+  "x402-aispace-bot-api-v1-image-generate",
+  "x402engine-app-api-tts-elevenlabs"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.vextorium.com/v1/wikipedia-summary' -H 'content-type: application/json' -d '{\"language\":\"es\",\"topic\":\"Madrid\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-vextorium-com-v1-wikipedia-summary&body=%7B%22slug%22%3A%22api-vextorium-com-v1-wikipedia-summary%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-vextorium-com-v1-wikipedia-summary\",\"body\":\"{\\\"slug\\\":\\\"api-vextorium-com-v1-wikipedia-summary\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Wikipedia%20article%20summary%3A%20Summary%20of%20a%20Wikipedia%20article%20in%20any%20language%3A%20title%2C%20short%20descripti&seller=https%3A%2F%2Fapi.vextorium.com%2Fv1%2Fwikipedia-summary"
+}

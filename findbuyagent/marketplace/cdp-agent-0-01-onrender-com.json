@@ -1,0 +1,84 @@
+{
+ "slug": "cdp-agent-0-01-onrender-com",
+ "name": "AgentWire: AgentWire service card for webhook inbox relay and web fetch infrastru",
+ "seller": "AgentWire",
+ "host": "cdp-agent-0-01.onrender.com",
+ "provider": "https://cdp-agent-0-01.onrender.com",
+ "description": "AgentWire service card for webhook inbox relay and web fetch infrastructure.",
+ "category": "Search & web",
+ "tags": [
+  "webhook",
+  "inbox",
+  "fetch",
+  "agent-infrastructure",
+  "relay"
+ ],
+ "endpoint": "https://cdp-agent-0-01.onrender.com/",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xed7d30e8bc643503f9da261ed8e623bb6ecf6189",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "agent_name": "ledger-bot",
+   "capability": "webhook-inbox"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"endpoint\":\"https://cdp-agent-0-01.onrender.com/mcp\",\"facilitator\":\"https://api.cdp.coinbase.com/platform/v2/x402\",\"payTo\":\"0xed7d30e8bc643503f9da261ed8e623bb6ecf6189\",\"paymentNetwork\":\"eip155:8453\",\"protocol\":\"MCP over Streamable HTTP + x402 v2 payments\",\"service\":\"AgentWire\",\"status\":\"ready\",\"tagline\":\"Webhook inbox + web fetch + outbound relay for autonomous agents\",\"tools\":[{\"name\":\"create_inbox\",\"price\":\"free\"},{\"name\":\"drain_inbox\",\"price\":\"$0.005\"},{\"name\":\"peek_inbox\",\"price\":\"$0.002\"},{\"name\":\"inbox_stats\",\"price\":\"$0.001\"},{\"name\":\"fetch_url\",\"price\":\"$0.012\"},{\"name\":\"extract_links\",\"price\":\"$0.008\"},{\"name\":\"relay_post\",\"price\":\"$0.015\"},{\"name\":\"request_human_captcha_bypass\",\"price\":\"$0.075\"},{\"name\":\"ping\",\"price\":\"free\"}],\"version\":\"1.2.0\",\"webhooks\":\"https://cdp-agent-0-01.onrender.com/hooks/{inboxId}\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609271146,
+ "payers30d": 14,
+ "calls30d": 18,
+ "lastCalledAt": "2026-11-01T23:13:03.884Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 338,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 338,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/cdp-agent-0-01-onrender-com",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "minifetch-com-api-v1-x402-preflight-url-check",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "agent-web-tools-agent-web-tools-workers-dev-v1-check"
+ ],
+ "example": {
+  "curl": "curl -i 'https://cdp-agent-0-01.onrender.com/?agent_name=ledger-bot&capability=webhook-inbox'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20cdp-agent-0-01-onrender-com&body=%7B%22slug%22%3A%22cdp-agent-0-01-onrender-com%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: cdp-agent-0-01-onrender-com\",\"body\":\"{\\\"slug\\\":\\\"cdp-agent-0-01-onrender-com\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=AgentWire%3A%20AgentWire%20service%20card%20for%20webhook%20inbox%20relay%20and%20web%20fetch%20infrastru&seller=https%3A%2F%2Fcdp-agent-0-01.onrender.com%2F"
+}

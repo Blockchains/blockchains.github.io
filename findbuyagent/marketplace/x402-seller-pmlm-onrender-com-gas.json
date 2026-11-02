@@ -1,0 +1,83 @@
+{
+ "slug": "x402-seller-pmlm-onrender-com-gas",
+ "name": "Gas Price: Gas price: live gas fees for Ethereum, Base, Arbitrum, Polygon and Sol",
+ "seller": "Gas Price",
+ "host": "x402-seller-pmlm.onrender.com",
+ "provider": "https://x402-seller-pmlm.onrender.com",
+ "description": "Gas price: live gas fees for Ethereum, Base, Arbitrum, Polygon and Solana in one call. Use before sending a transaction to pick a fee or the cheapest chain. Returns base fee, slow/standard/fast priority fees, max fee, congestion, and the USD cost of a transfer, an ERC-20 transfer and a swap per chain, plus Solana priority fees. Optional chain. 0.001 USDC/call; failed calls are free.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "gas price",
+  "gas fees",
+  "ethereum gas",
+  "estimate gas",
+  "solana priority fee"
+ ],
+ "endpoint": "https://x402-seller-pmlm.onrender.com/gas",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x079471E6F43b6feeF80895E19cBFcBB496904852",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "chain": "all"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"cached\":false,\"chains\":[{\"baseFeeGwei\":0.129579,\"block\":26131718,\"chain\":\"ethereum\",\"costStandard\":{\"erc20Transfer\":{\"native\":0.0000117319,\"usd\":0.03165},\"nativeTransfer\":{\"native\":0.00000379031,\"usd\":0.01023},\"swap\":{\"native\":0.0000324884,\"usd\":0.08764}},\"gasUsedRatio\":0.529,\"maxFeePerGasGwei\":{\"fast\":1.25916,\"slow\":0.260158,\"standard\":0.31007},\"nativeSymbol\":\"ETH\",\"nativeUsd\":2697.7,\"priorityFeeGwei\":{\"fast\":1,\"slow\":0.001,\"standard\":0.050912}},{\"baseFeeGwei\":0.005,\"block\":52240417,\"chain\":\"base\",\"costStandard\":{\"erc20Transfer\":{\"native\":3.965e-7,\"usd\":0.00107},\"nativeTransfer\":{\"native\":1.281e-7,\"usd\":0.00035},\"swap\":{\"native\":0.000001098,\"usd\":0.00296}},\"gasUsedRatio\":0.089,\"maxFeePerGasGwei\":{\"fast\":0.01292,\"slow\":0.01,\"standard\":0.0111},\"nativeSymbol\":\"ETH\",\"nativeUsd\":2697.8,\"note\":\"L2 execution cost only; the rollup adds a small L1 data fee per tx\",\"priorityFeeGwei\":{\"fast\":0.00292,\"slow\":0,\"standard\":0.0011}},{\"baseFeeGwei\":0.020016,\"block\":512172634,\"chain\":\"arbitrum\",\"costStandard\":{\"erc20Transfer\":{\"native\":0.00000130104,\"usd\":0.00351},\"nativeTransfer\":{\"native\":4.20336e-7,\"usd\":0.00113},\"swap\":{\"native\":0.00000360288,\"usd\":0.00972}},\"gasUsedRatio\":0.08,\"maxFeePerGasGwei\":{\"fast\":0.040032,\"slow\":0.040032,\"standard\":0.040032},\"nativeSymbol\":\"ETH\",\"nativeUsd\":2696.88,\"note\":\"L2 execution cost only; the rollup adds a small L1 data fee per tx\",\"priorityFeeGwei\":{\"fast\":0,\"slow\":0,\"standard\":0}},{\"baseFeeGwei\":246.188,\"block\":95043353,\"chain\":\"polygon\",\"costStandard\":{\"erc20Transfer\":{\"native\":0.0215401,\"usd\":0.00235},\"nativeTransfer\":{\"native\":0.00695912,\"usd\":0.00076},\"swap\":{\"native\":0.0596496,\"usd\":0.0065}},\"gasUsedRatio\":0.178,\"maxFeePerGasGwei\":{\"fast\":780.65,\"slow\":522.376,\"standard\":577.574},\"nativeSymbol\":\"POL\",\"nativeUsd\":0.10899,\"priorityFeeGwei\":{\"fast\":288.274,\"slow\":30,\"standard\":85.1987}},{\"baseFeeLamportsPerSignature\":5000,\"chain\":\"solana\",\"costFor200kCu\":{\"fast\":{\"sol\":0.000005,\"usd\":0.0006},\"slow\":{\"sol\":0.000005,\"usd\":0.0006},\"standard\":{\"sol\":0.000005,\"usd\":0.0006}},\"nativeSymbol\":\"SOL\",\"nativeUsd\":119.7404,\"note\":\"Per-slot minimum priority fees paid by txs touching the busiest SOL/USDC pool over the last ~150 slots (a swap-competitive estimate); 1 signature\",\"priorityFeeMicroLamportsPerCu\":{\"fast\":0,\"slow\":0,\"standard\":0},\"sampleSlots\":150,\"slot\":453828503}],\"cheapestEvmForErc20Transfer\":\"base\",\"generatedAt\":\"2026-10-06T07:03:03.088Z\",\"latencyMs\":940}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791275335/bazaar-icons/33b4c93fa74011e6.png",
+ "docs": "https://x402-seller-pmlm.onrender.com/llms.txt",
+ "docsChecked": 1793609276938,
+ "payers30d": 10,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-02T04:37:19.742Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 434,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 434,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-seller-pmlm-onrender-com-gas",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402-seller-pmlm.onrender.com/gas?chain=all'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-seller-pmlm-onrender-com-gas&body=%7B%22slug%22%3A%22x402-seller-pmlm-onrender-com-gas%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-seller-pmlm-onrender-com-gas\",\"body\":\"{\\\"slug\\\":\\\"x402-seller-pmlm-onrender-com-gas\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Gas%20Price%3A%20Gas%20price%3A%20live%20gas%20fees%20for%20Ethereum%2C%20Base%2C%20Arbitrum%2C%20Polygon%20and%20Sol&seller=https%3A%2F%2Fx402-seller-pmlm.onrender.com%2Fgas"
+}

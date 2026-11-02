@@ -1,0 +1,84 @@
+{
+ "slug": "weather-cyberwarex-com-forecast",
+ "name": "Weather: Weather forecast for a location (global, keyless): current conditions,",
+ "seller": "Weather",
+ "host": "weather.cyberwarex.com",
+ "provider": "https://weather.cyberwarex.com",
+ "description": "Weather forecast for a location (global, keyless): current conditions, an hourly series (up to 48h) and a daily summary (up to 10 days: min/max temp + condition), from met.no. Pass lat+lon, or a place name. For travel, logistics, events, energy. No API key.",
+ "category": "Weather & geo",
+ "tags": [
+  "weather",
+  "forecast",
+  "hourly",
+  "daily",
+  "metno"
+ ],
+ "endpoint": "https://weather.cyberwarex.com/forecast",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x058D0Cc5CC97e61e8A9f38D6d6365bce525921B2",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "days": 5,
+   "place": "London"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"daily\":[{\"date\":\"2026-09-12\",\"symbol\":\"partlycloudy_day\",\"temp_max_c\":22.5,\"temp_min_c\":12.6}],\"location\":{\"name\":\"London\"},\"source\":\"met.no\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1788960152/bazaar-icons/f98489fd044477d5.png",
+ "docs": "https://weather.cyberwarex.com/llms.txt",
+ "docsChecked": 1793609276015,
+ "payers30d": 10,
+ "calls30d": 40,
+ "lastCalledAt": "2026-11-02T03:25:53.039Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 423,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 423,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/weather-cyberwarex-com-forecast",
+ "rating": null,
+ "related": [
+  "netintel-dev-weather-current",
+  "horizonpulse-dev-api-pulse",
+  "horizonpulse-dev-api-gas",
+  "apiacre-com-v1-data-timezone-convert",
+  "agentsvc-io-api-v1-proxy-weather",
+  "win-oneshotagent-com-v1-tools-lookup-place-weather-alerts"
+ ],
+ "example": {
+  "curl": "curl -i 'https://weather.cyberwarex.com/forecast?days=5&place=London'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20weather-cyberwarex-com-forecast&body=%7B%22slug%22%3A%22weather-cyberwarex-com-forecast%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: weather-cyberwarex-com-forecast\",\"body\":\"{\\\"slug\\\":\\\"weather-cyberwarex-com-forecast\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Weather%3A%20Weather%20forecast%20for%20a%20location%20(global%2C%20keyless)%3A%20current%20conditions%2C&seller=https%3A%2F%2Fweather.cyberwarex.com%2Fforecast"
+}

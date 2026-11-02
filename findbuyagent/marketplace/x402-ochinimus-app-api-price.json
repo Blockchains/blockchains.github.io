@@ -1,0 +1,83 @@
+{
+ "slug": "x402-ochinimus-app-api-price",
+ "name": "AgentFeed: Spot price: the on-chain DEX price for SOL, BTC or ETH, the median of",
+ "seller": "AgentFeed",
+ "host": "x402.ochinimus.app",
+ "provider": "https://x402.ochinimus.app",
+ "description": "Spot price: the on-chain DEX price for SOL, BTC or ETH, the median of deep USDC pools on Solana, Ethereum and Base read from chain state, and the pools that served it. Use when you need to answer: What is the spot price, without picking a venue? Any other symbol answers 400 with the supported list and is never billed.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "price",
+  "spot",
+  "crypto",
+  "onchain",
+  "dex"
+ ],
+ "endpoint": "https://x402.ochinimus.app/api/price",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x22DB3A9686EE5261e7Bf3ed4f91277232E8076e6",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "symbol": "SOL"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"confidence\":null,\"price\":107.1009,\"publish_time\":1791842017,\"source\":\"on-chain DEX mid, median of orca-whirlpool SOL/USDC on solana; raydium-clmm SOL/USDC on solana\",\"supported\":[\"SOL\",\"BTC\",\"ETH\"],\"symbol\":\"SOL\"},\"paid\":true,\"tool\":\"get_spot\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1790342068/bazaar-icons/e1b26d9582fdb91c.png",
+ "docs": "https://x402.ochinimus.app/llms.txt",
+ "docsChecked": 1793609269647,
+ "payers30d": 15,
+ "calls30d": 65,
+ "lastCalledAt": "2026-11-02T04:22:19.08Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 338,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 338,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-ochinimus-app-api-price",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.ochinimus.app/api/price?symbol=SOL'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-ochinimus-app-api-price&body=%7B%22slug%22%3A%22x402-ochinimus-app-api-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-ochinimus-app-api-price\",\"body\":\"{\\\"slug\\\":\\\"x402-ochinimus-app-api-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=AgentFeed%3A%20Spot%20price%3A%20the%20on-chain%20DEX%20price%20for%20SOL%2C%20BTC%20or%20ETH%2C%20the%20median%20of&seller=https%3A%2F%2Fx402.ochinimus.app%2Fapi%2Fprice"
+}

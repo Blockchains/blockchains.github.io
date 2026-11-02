@@ -1,0 +1,75 @@
+{
+ "slug": "houjin-agentic-jp-com-stats",
+ "name": "Dataset metadata for this Japanese (JP) corporate-number API — how man",
+ "seller": "houjin.agentic-jp.com",
+ "host": "houjin.agentic-jp.com",
+ "provider": "https://houjin.agentic-jp.com",
+ "description": "Dataset metadata for this Japanese (JP) corporate-number API — how many corporations are loaded and which prefectures are covered.",
+ "category": "Data & analytics",
+ "tags": [],
+ "endpoint": "https://houjin.agentic-jp.com/stats",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x38c9F689274E2fC3AE360744eF88ce212077a584",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"corporation_count\":1074321,\"data_source\":\"国税庁 法人番号公表サイト\",\"loaded\":true,\"prefecture_count\":1,\"prefectures\":[\"東京都\"]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://houjin.agentic-jp.com/llms.txt",
+ "docsChecked": 1793609281623,
+ "payers30d": 9,
+ "calls30d": 11,
+ "lastCalledAt": "2026-11-02T04:31:50.693Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 611,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 611,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/houjin-agentic-jp-com-stats",
+ "rating": null,
+ "related": [
+  "api-402rates-com-v1-ping",
+  "rubric-protocol-com-v1-x402-hedera-facts-exchange-rate",
+  "nbu-navistri-com-v1-rates",
+  "api-hyperextend-xyz-v1-liquidations-coverage",
+  "api-govparse-io-v1-stats-opportunities",
+  "http-forest-gas-station-mainnet-lcjl27p8lmjs-code-run-dns-changed"
+ ],
+ "example": {
+  "curl": "curl -i 'https://houjin.agentic-jp.com/stats'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20houjin-agentic-jp-com-stats&body=%7B%22slug%22%3A%22houjin-agentic-jp-com-stats%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: houjin-agentic-jp-com-stats\",\"body\":\"{\\\"slug\\\":\\\"houjin-agentic-jp-com-stats\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Dataset%20metadata%20for%20this%20Japanese%20(JP)%20corporate-number%20API%20%E2%80%94%20how%20man&seller=https%3A%2F%2Fhoujin.agentic-jp.com%2Fstats"
+}

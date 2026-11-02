@@ -1,0 +1,81 @@
+{
+ "slug": "x402-boj-macro-snapshot-vercel-app-api-boj-macro-snapshot",
+ "name": "x402-boj-macro-snapshot: Learning-only BOJ-themed macro snapshot API for x402 v2 Base mainnet v",
+ "seller": "x402-boj-macro-snapshot",
+ "host": "x402-boj-macro-snapshot.vercel.app",
+ "provider": "https://x402-boj-macro-snapshot.vercel.app",
+ "description": "Learning-only BOJ-themed macro snapshot API for x402 v2 Base mainnet verification.",
+ "category": "Finance & markets",
+ "tags": [
+  "x402",
+  "macro-data",
+  "boj",
+  "base-mainnet",
+  "learning"
+ ],
+ "endpoint": "https://x402-boj-macro-snapshot.vercel.app/api/boj/macro-snapshot",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x4F0A582068729204d96827febD5c7D47b7874d5C",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"asOf\":\"2026-05-31\",\"data\":{\"cpiYearOverYearPercent\":3.5,\"currentAccountBalanceTrillionYen\":455.3,\"monetaryBaseTrillionYen\":575.8,\"observations\":[{\"label\":\"Call Rate, Uncollateralized Overnight/End of Month (STRECLUCON)\",\"unit\":\"percent per annum\",\"value\":0.727},{\"label\":\"Monetary Base/Average Amounts Outstanding (MABS1AN11)\",\"unit\":\"trillion JPY\",\"value\":575.8},{\"label\":\"Current Account Balances/Average Amounts Outstanding (MABS1AN113)\",\"unit\":\"trillion JPY\",\"value\":455.3}],\"policyRatePercent\":0.727},\"freshness\":{\"fetchedAt\":\"2026-06-05T00:00:00.000Z\",\"stale\":false},\"service\":\"x402-boj-macro-snapshot\",\"source\":{\"name\":\"Bank of Japan Time-Series Data Search API\",\"note\":\"Fetched from public BOJ time-series data for monetary-base and call-rate fields. The CPI field is retained as a compatibility sample pending a dedicated CPI source. This app is independent and not a BOJ service.\",\"url\":\"https://www.stat-search.boj.or.jp/api/v1/getDataCode\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609282545,
+ "payers30d": 9,
+ "calls30d": 11,
+ "lastCalledAt": "2026-11-01T06:50:56.149Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 421,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 421,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-boj-macro-snapshot-vercel-app-api-boj-macro-snapshot",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402-boj-macro-snapshot.vercel.app/api/boj/macro-snapshot'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-boj-macro-snapshot-vercel-app-api-boj-macro-snapshot&body=%7B%22slug%22%3A%22x402-boj-macro-snapshot-vercel-app-api-boj-macro-snapshot%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-boj-macro-snapshot-vercel-app-api-boj-macro-snapshot\",\"body\":\"{\\\"slug\\\":\\\"x402-boj-macro-snapshot-vercel-app-api-boj-macro-snapshot\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x402-boj-macro-snapshot%3A%20Learning-only%20BOJ-themed%20macro%20snapshot%20API%20for%20x402%20v2%20Base%20mainnet%20v&seller=https%3A%2F%2Fx402-boj-macro-snapshot.vercel.app%2Fapi%2Fboj%2Fmacro-snapshot"
+}

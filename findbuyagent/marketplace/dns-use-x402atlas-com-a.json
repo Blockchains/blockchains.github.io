@@ -1,0 +1,83 @@
+{
+ "slug": "dns-use-x402atlas-com-a",
+ "name": "DNS A Record Lookup: DNS A record lookup — resolve any hostname or domain to its IPv4 addre",
+ "seller": "DNS A Record Lookup",
+ "host": "dns.use.x402atlas.com",
+ "provider": "https://dns.use.x402atlas.com",
+ "description": "DNS A record lookup — resolve any hostname or domain to its IPv4 addresses, returned as a clean JSON list. For host resolution, connectivity and uptime checks, IP-reputation enrichment and infrastructure mapping.",
+ "category": "Data & analytics",
+ "tags": [
+  "dns",
+  "a-record",
+  "ipv4",
+  "resolve",
+  "hostname"
+ ],
+ "endpoint": "https://dns.use.x402atlas.com/a",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x446e51DeAb3aE656C99E65369e8eF1148d23d7f7",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "host": "example.com"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"host\":\"example.com\",\"queried_at\":\"2026-06-05T12:00:00Z\",\"records\":[\"93.184.216.34\"]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://dns.use.x402atlas.com/llms.txt",
+ "docsChecked": 1793609276097,
+ "payers30d": 11,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T23:15:12.267Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 510,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 510,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/dns-use-x402atlas-com-a",
+ "rating": null,
+ "related": [
+  "agent402-tools-api-demand-radar",
+  "agent402-tools-api-bestsellers",
+  "www-robbiegeorgephotography-com-v1-query-atomic-robbie-george-biograph",
+  "api-hyperextend-xyz-v1-asset-ctx-btc-latest",
+  "api-mekler-ai-v1-email-domains-check-mail-configuration",
+  "quantagentshop-com-v1-ip-geo"
+ ],
+ "example": {
+  "curl": "curl -i 'https://dns.use.x402atlas.com/a?host=example.com'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20dns-use-x402atlas-com-a&body=%7B%22slug%22%3A%22dns-use-x402atlas-com-a%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: dns-use-x402atlas-com-a\",\"body\":\"{\\\"slug\\\":\\\"dns-use-x402atlas-com-a\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=DNS%20A%20Record%20Lookup%3A%20DNS%20A%20record%20lookup%20%E2%80%94%20resolve%20any%20hostname%20or%20domain%20to%20its%20IPv4%20addre&seller=https%3A%2F%2Fdns.use.x402atlas.com%2Fa"
+}

@@ -3,6 +3,7 @@
  "name": "Nansen: Get \"Token God Mode\" (TGM) who bought/sold data",
  "seller": "Nansen",
  "host": "api.nansen.ai",
+ "provider": "https://api.nansen.ai",
  "description": "Get \"Token God Mode\" (TGM) who bought/sold data",
  "category": "Crypto & on-chain",
  "tags": [
@@ -13,11 +14,13 @@
  ],
  "endpoint": "https://api.nansen.ai/api/v1/tgm/who-bought-sold",
  "method": "POST",
+ "payment": "x402",
  "priceUsd": 0.01,
  "amount": "10000",
  "payTo": "0x93053f1e7A5eFEDa532Fe69CbbE43cBEc3A0F13f",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
  "listedTermsMatch": true,
  "input": {
   "queryParams": null,
@@ -38,21 +41,53 @@
    },
    "token_address": "2zMMhcVQEXDtdE6vsFS7S7D5oUodfJHE8vd1gnBouauv"
   },
-  "bodyType": "json"
+  "bodyType": "json",
+  "headers": null
  },
+ "outputType": "json",
  "outputExample": "{\"data\":[],\"pagination\":{}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1780076798/bazaar-icons/d6ed3d2e7dd37d8a.png",
  "docs": null,
  "docsChecked": 1793596016630,
  "payers30d": 53,
- "calls30d": 527,
+ "calls30d": 529,
+ "lastCalledAt": "2026-11-02T06:12:52.42Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 76,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 118,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 118,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/api-nansen-ai-api-v1-tgm-who-bought-sold",
  "rating": null,
+ "related": [
+  "api-x402node-dev-chain-honeypot",
+  "api-gondola-ai-com-v1-chat-completions",
+  "api-gondola-ai-com-v1-images-generations",
+  "stablestudio-dev-api-upload",
+  "pro-api-coinmarketcap-com-x402-v3-cryptocurrency-quotes-latest",
+  "pro-api-coinmarketcap-com-x402-v1-dex-search"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.nansen.ai/api/v1/tgm/who-bought-sold' -H 'content-type: application/json' -d '{\"chain\":\"solana\",\"date\":{\"from\":\"2025-05-01T00:00:00Z\",\"to\":\"2025-05-03T23:59:59Z\"},\"filters\":{\"include_smart_money_labels\":[\"Whale\",\"Smart Trader\"],\"trade_volume_usd\":{\"min\":1}},\"token_address\":\"2zMMhcVQEXDtdE6vsFS7S7D5oUodfJHE8vd1gnBouauv\"}'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-nansen-ai-api-v1-tgm-who-bought-sold&body=%7B%22slug%22%3A%22api-nansen-ai-api-v1-tgm-who-bought-sold%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-nansen-ai-api-v1-tgm-who-bought-sold\",\"body\":\"{\\\"slug\\\":\\\"api-nansen-ai-api-v1-tgm-who-bought-sold\\\",\\\"stars\\\":1-5}\"}"

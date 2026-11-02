@@ -1,0 +1,84 @@
+{
+ "slug": "quantagentshop-com-v1-weather",
+ "name": "Quant Agent Shop: Weather forecast for coordinates or a city name: current temperature,",
+ "seller": "Quant Agent Shop",
+ "host": "quantagentshop.com",
+ "provider": "https://quantagentshop.com",
+ "description": "Weather forecast for coordinates or a city name: current temperature, humidity, wind, cloud, pressure and conditions, an hourly forecast up to 48 hours, and daily highs, lows and rain up to 7 days. Data from MET Norway. Use for travel, event or logistics planning. Not for past weather or official warnings. Times in UTC. Typical response under 1 s. Failed calls are not charged.",
+ "category": "Weather & geo",
+ "tags": [
+  "weather",
+  "forecast",
+  "data"
+ ],
+ "endpoint": "https://quantagentshop.com/v1/weather",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.0099,
+ "amount": "9900",
+ "payTo": "0x4d8d8D4f04512029172e0176744Eec4AE5238309",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "city": "Singapore",
+   "country": "SG",
+   "days": 1,
+   "hours": 2
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"attribution\":\"Data from MET Norway (CC BY 4.0); places from GeoNames (CC BY 4.0)\",\"daily\":[{\"date\":\"2026-10-22\",\"precip_mm\":6.3,\"symbol\":\"rainshowers_day\",\"temp_max_c\":31.2,\"temp_min_c\":25.8}],\"hourly\":[{\"precip_mm\":0,\"symbol\":\"partlycloudy_day\",\"temp_c\":30.1,\"time\":\"2026-10-22T09:00:00Z\",\"wind_ms\":2.8},{\"precip_mm\":0.4,\"symbol\":\"rainshowers_day\",\"temp_c\":29.6,\"time\":\"2026-10-22T10:00:00Z\",\"wind_ms\":3.1}],\"location\":{\"country\":\"SG\",\"lat\":1.2897,\"lon\":103.8501,\"name\":\"Singapore\",\"timezone\":\"Asia/Singapore\"},\"now\":{\"cloud_pct\":75,\"humidity_pct\":70.2,\"pressure_hpa\":1008.9,\"symbol\":\"partlycloudy_day\",\"temp_c\":30.1,\"time\":\"2026-10-22T09:00:00Z\",\"wind_dir_deg\":160,\"wind_ms\":2.8},\"units\":\"metric (C, m/s, mm, hPa)\",\"updated_at\":\"2026-10-22T08:22:23Z\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://quantagentshop.com/llms.txt",
+ "docsChecked": 1793609279013,
+ "payers30d": 9,
+ "calls30d": 26,
+ "lastCalledAt": "2026-11-01T05:43:56.457Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 45,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 45,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/quantagentshop-com-v1-weather",
+ "rating": null,
+ "related": [
+  "x402tap-com-api-weather",
+  "api-x402node-dev-finance-econ-calendar",
+  "geoip-bip-rep-com-lookup",
+  "x402-forgemesh-io-current-time",
+  "api-magentlab-com-api-codes-search",
+  "api-jexxa-org-v1-query"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://quantagentshop.com/v1/weather' -H 'content-type: application/json' -d '{\"city\":\"Singapore\",\"country\":\"SG\",\"days\":1,\"hours\":2}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20quantagentshop-com-v1-weather&body=%7B%22slug%22%3A%22quantagentshop-com-v1-weather%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: quantagentshop-com-v1-weather\",\"body\":\"{\\\"slug\\\":\\\"quantagentshop-com-v1-weather\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Quant%20Agent%20Shop%3A%20Weather%20forecast%20for%20coordinates%20or%20a%20city%20name%3A%20current%20temperature%2C&seller=https%3A%2F%2Fquantagentshop.com%2Fv1%2Fweather"
+}

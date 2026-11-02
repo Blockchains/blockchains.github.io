@@ -1,0 +1,80 @@
+{
+ "slug": "coord-taifoon-dev-v1-x402-class-market-price",
+ "name": "Taifoon: Latest USD price of BTC, ETH, SOL, NQ, ES, YM from the Taifoon venue t",
+ "seller": "Taifoon",
+ "host": "coord.taifoon.dev",
+ "provider": "https://coord.taifoon.dev",
+ "description": "Latest USD price of BTC, ETH, SOL, NQ, ES, YM from the Taifoon venue tape: the close of the last closed 1-minute bar, its time, age and sha256 digest, replayable with one GET. Only symbols the tape holds; a price older than 180 s is never served as current (nothing is charged). BTC, ETH, SOL are held to Chainlink on Base within 1 % when its feed is under 1 h old. 0.003 USDC a call.",
+ "category": "Utilities",
+ "tags": [
+  "market",
+  "price"
+ ],
+ "endpoint": "https://coord.taifoon.dev/v1/x402/class/market.price",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.003,
+ "amount": "3000",
+ "payTo": "0x3574999dd4c96eB73Bd6e11D4177010C83E14f5b",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "symbol": "ETH"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"age_s\":41,\"as_of\":\"2026-10-11T18:20:00.000Z\",\"bar\":{\"c\":2538.81,\"h\":2539.1,\"l\":2538.6,\"o\":2538.88,\"t\":1791742740,\"tf\":\"1m\",\"v\":12.4},\"class\":\"market.price\",\"digest\":\"9f2c…\",\"fresh\":true,\"ok\":true,\"price_usd\":2538.81,\"reference\":{\"age_s\":600,\"off_pct\":0.02,\"source\":\"Chainlink ETH / USD on Base\",\"usd\":2539.4},\"replay\":\"https://clob.taifoon.dev/tape/v1/candles/ETH/1m?from=1791742740&to=1791742799\",\"source\":\"the Taifoon venue tape (https://clob.taifoon.dev/tape/v1/candles/ETH/1m): the close of the last closed 1-minute bar\",\"symbol\":\"ETH\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791930045/bazaar-icons/4c3bc9abe8ba2916.png",
+ "docs": "https://coord.taifoon.dev/llms.txt",
+ "docsChecked": 1793609274913,
+ "payers30d": 13,
+ "calls30d": 17,
+ "lastCalledAt": "2026-11-01T10:20:15.654Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 1844,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 1844,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/coord-taifoon-dev-v1-x402-class-market-price",
+ "rating": null,
+ "related": [
+  "cryptofeed402-site-funding-extreme",
+  "br-intelligence-brverify-api-workers-dev-v1-bank",
+  "api-datos-uy-ar-vercel-app-uy-ui",
+  "kaisha-api-hp-vladic-workers-dev-calendar-business-days",
+  "timecode-openverbs-com-v1-convert",
+  "www-api-xpay-com-x402-network"
+ ],
+ "example": {
+  "curl": "curl -i 'https://coord.taifoon.dev/v1/x402/class/market.price?symbol=ETH'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20coord-taifoon-dev-v1-x402-class-market-price&body=%7B%22slug%22%3A%22coord-taifoon-dev-v1-x402-class-market-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: coord-taifoon-dev-v1-x402-class-market-price\",\"body\":\"{\\\"slug\\\":\\\"coord-taifoon-dev-v1-x402-class-market-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Taifoon%3A%20Latest%20USD%20price%20of%20BTC%2C%20ETH%2C%20SOL%2C%20NQ%2C%20ES%2C%20YM%20from%20the%20Taifoon%20venue%20t&seller=https%3A%2F%2Fcoord.taifoon.dev%2Fv1%2Fx402%2Fclass%2Fmarket.price"
+}

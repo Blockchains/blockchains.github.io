@@ -1,0 +1,84 @@
+{
+ "slug": "quartermaster-surewhynot-app-v1-balance",
+ "name": "Quartermaster Balance Check: Check ETH and USDC (or any ERC-20) balance of an address on Base — pre",
+ "seller": "Quartermaster Balance Check",
+ "host": "quartermaster.surewhynot.app",
+ "provider": "https://quartermaster.surewhynot.app",
+ "description": "Check ETH and USDC (or any ERC-20) balance of an address on Base — pre-flight funding checks for payments and settlement.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "balance",
+  "wallet",
+  "usdc",
+  "erc20",
+  "settlement"
+ ],
+ "endpoint": "https://quartermaster.surewhynot.app/v1/balance",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x5253666c40432f009ebd99908b9cd2a7fd1019cb",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "address": "0xc2a36e22ecbf353086cf83e7beea78bc28a64083",
+   "token": "usdc"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"address\":\"0xc2a3...4083\",\"eth\":\"0.0031\",\"network\":\"base\",\"token\":{\"address\":\"0x8335...2913\",\"balance\":\"12.5\",\"decimals\":6,\"symbol\":\"USDC\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://quartermaster.surewhynot.app/llms.txt",
+ "docsChecked": 1793609276902,
+ "payers30d": 10,
+ "calls30d": 16,
+ "lastCalledAt": "2026-10-29T12:20:09.667Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 31,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 31,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/quartermaster-surewhynot-app-v1-balance",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://quartermaster.surewhynot.app/v1/balance?address=0xc2a36e22ecbf353086cf83e7beea78bc28a64083&token=usdc'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20quartermaster-surewhynot-app-v1-balance&body=%7B%22slug%22%3A%22quartermaster-surewhynot-app-v1-balance%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: quartermaster-surewhynot-app-v1-balance\",\"body\":\"{\\\"slug\\\":\\\"quartermaster-surewhynot-app-v1-balance\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Quartermaster%20Balance%20Check%3A%20Check%20ETH%20and%20USDC%20(or%20any%20ERC-20)%20balance%20of%20an%20address%20on%20Base%20%E2%80%94%20pre&seller=https%3A%2F%2Fquartermaster.surewhynot.app%2Fv1%2Fbalance"
+}

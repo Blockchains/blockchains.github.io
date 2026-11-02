@@ -1,0 +1,83 @@
+{
+ "slug": "api-zkrobotics-fr-x402-crypto-price",
+ "name": "AllTheBot Token price (USD): Crypto token price in USD: live price of ETH, BTC (cbBTC), DAI, AERO o",
+ "seller": "AllTheBot Token price (USD)",
+ "host": "api.zkrobotics.fr",
+ "provider": "https://api.zkrobotics.fr",
+ "description": "Crypto token price in USD: live price of ETH, BTC (cbBTC), DAI, AERO or any Base token address, from on-chain DEX pools (Uniswap v3, Aerodrome), best route direct or via WETH. No API key, read-only.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "price",
+  "token-price",
+  "crypto-price",
+  "usd",
+  "base"
+ ],
+ "endpoint": "https://api.zkrobotics.fr/x402/crypto/price",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x60fd97850059dF9600C4E26f09aC58EF51561963",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "token": "ETH"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"alternatives\":[],\"network\":\"base\",\"note\":\"Indicative on-chain price on Base DEX pools (Uniswap v3, Aerodrome): what selling the quoted amount returns in USDC, before gas and slippage. Read-only: no swap is executed.\",\"pools\":[{\"pool_fee_pct\":0.01,\"venue\":\"Uniswap v3\"}],\"price_usd\":\"2533.298715\",\"quoted_amount\":\"1\",\"route\":\"direct\",\"symbol\":\"WETH\",\"token\":\"0x4200000000000000000000000000000000000006\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.zkrobotics.fr/.well-known/x402",
+ "docsChecked": 1793609278616,
+ "payers30d": 10,
+ "calls30d": 10,
+ "lastCalledAt": "2026-11-01T12:41:35.94Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 323,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 323,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-zkrobotics-fr-x402-crypto-price",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.zkrobotics.fr/x402/crypto/price?token=ETH'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-zkrobotics-fr-x402-crypto-price&body=%7B%22slug%22%3A%22api-zkrobotics-fr-x402-crypto-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-zkrobotics-fr-x402-crypto-price\",\"body\":\"{\\\"slug\\\":\\\"api-zkrobotics-fr-x402-crypto-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=AllTheBot%20Token%20price%20(USD)%3A%20Crypto%20token%20price%20in%20USD%3A%20live%20price%20of%20ETH%2C%20BTC%20(cbBTC)%2C%20DAI%2C%20AERO%20o&seller=https%3A%2F%2Fapi.zkrobotics.fr%2Fx402%2Fcrypto%2Fprice"
+}

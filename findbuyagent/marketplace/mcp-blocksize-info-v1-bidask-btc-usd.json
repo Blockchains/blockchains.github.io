@@ -1,0 +1,75 @@
+{
+ "slug": "mcp-blocksize-info-v1-bidask-btc-usd",
+ "name": "Real-time shared bid/ask snapshot data, including crypto pairs and sup",
+ "seller": "mcp.blocksize.info",
+ "host": "mcp.blocksize.info",
+ "provider": "https://mcp.blocksize.info",
+ "description": "Real-time shared bid/ask snapshot data, including crypto pairs and supported equity tickers, from Blocksize Capital.",
+ "category": "Finance & markets",
+ "tags": [],
+ "endpoint": "https://mcp.blocksize.info/v1/bidask/BTC-USD",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x52C76F43aA871B407e242DCc396Ccc54a8C70aDe",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"ask\":101,\"bid\":99,\"pair\":\"BTC-USD\",\"source\":\"blocksize\",\"spread\":2,\"spread_pct\":2,\"timestamp\":\"2020-01-01T00:00:00Z\"},\"meta\":{\"example_only\":true,\"provider\":\"Blocksize Capital\"},\"status\":\"ok\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://mcp.blocksize.info/llms.txt",
+ "docsChecked": 1793609269660,
+ "payers30d": 15,
+ "calls30d": 71,
+ "lastCalledAt": "2026-11-02T03:43:07.695Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 395,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 395,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/mcp-blocksize-info-v1-bidask-btc-usd",
+ "rating": null,
+ "related": [
+  "data-tollkit-dev-sec-company",
+  "intel-degenscan-io-v1-oracle-board",
+  "toolcall-click-t-fx-rates",
+  "api-sitecheck-api-workers-dev-api-fx",
+  "br-intelligence-brverify-api-workers-dev-v1-ptax",
+  "api-sitecheck-api-workers-dev-api-macro"
+ ],
+ "example": {
+  "curl": "curl -i 'https://mcp.blocksize.info/v1/bidask/BTC-USD'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20mcp-blocksize-info-v1-bidask-btc-usd&body=%7B%22slug%22%3A%22mcp-blocksize-info-v1-bidask-btc-usd%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: mcp-blocksize-info-v1-bidask-btc-usd\",\"body\":\"{\\\"slug\\\":\\\"mcp-blocksize-info-v1-bidask-btc-usd\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Real-time%20shared%20bid%2Fask%20snapshot%20data%2C%20including%20crypto%20pairs%20and%20sup&seller=https%3A%2F%2Fmcp.blocksize.info%2Fv1%2Fbidask%2FBTC-USD"
+}

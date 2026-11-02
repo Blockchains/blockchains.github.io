@@ -1,0 +1,80 @@
+{
+ "slug": "coord-taifoon-dev-v1-market-candles",
+ "name": "Taifoon: OHLCV bars of BTC, ETH, SOL or the CME micro futures NQ, ES, YM (15s,",
+ "seller": "Taifoon",
+ "host": "coord.taifoon.dev",
+ "provider": "https://coord.taifoon.dev",
+ "description": "OHLCV bars of BTC, ETH, SOL or the CME micro futures NQ, ES, YM (15s, 1m, 5m, 1h) from the Taifoon venue tape, past windows only (up to 1,000 bars a call), with a sha256 digest of the bars. The tape seals a past window, so the same request gives the same bars. The same source is also served over MCP by Cubicle candles (ERC-8004 8453:96559).",
+ "category": "Utilities",
+ "tags": [],
+ "endpoint": "https://coord.taifoon.dev/v1/market/candles",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x3574999dd4c96eB73Bd6e11D4177010C83E14f5b",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "from": "1791028800",
+   "market": "ETH",
+   "tf": "1h",
+   "to": "1791115200"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"bars\":24,\"candles\":[{\"c\":2698.87,\"h\":2701.44,\"l\":2698.87,\"o\":2699.86,\"t\":1791115200,\"v\":31.325}],\"class\":\"market.candles\",\"digest\":\"0x…\",\"from\":1791028800,\"market\":\"ETH\",\"sealed\":true,\"tf\":\"1h\",\"to\":1791115200}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791930045/bazaar-icons/4c3bc9abe8ba2916.png",
+ "docs": "https://coord.taifoon.dev/llms.txt",
+ "docsChecked": 1793609277489,
+ "payers30d": 10,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T10:25:14.345Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 1689,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 1689,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/coord-taifoon-dev-v1-market-candles",
+ "rating": null,
+ "related": [
+  "www-api-xpay-com-x402-network",
+  "www-api-xpay-com-x402-ping",
+  "www-api-xpay-com-x402-uuid",
+  "www-api-xpay-com-x402-payment",
+  "api-justaname-id-ens-v2-reverse",
+  "api-justaname-id-ens-v2-resolve"
+ ],
+ "example": {
+  "curl": "curl -i 'https://coord.taifoon.dev/v1/market/candles?from=1791028800&market=ETH&tf=1h&to=1791115200'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20coord-taifoon-dev-v1-market-candles&body=%7B%22slug%22%3A%22coord-taifoon-dev-v1-market-candles%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: coord-taifoon-dev-v1-market-candles\",\"body\":\"{\\\"slug\\\":\\\"coord-taifoon-dev-v1-market-candles\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Taifoon%3A%20OHLCV%20bars%20of%20BTC%2C%20ETH%2C%20SOL%20or%20the%20CME%20micro%20futures%20NQ%2C%20ES%2C%20YM%20(15s%2C&seller=https%3A%2F%2Fcoord.taifoon.dev%2Fv1%2Fmarket%2Fcandles"
+}

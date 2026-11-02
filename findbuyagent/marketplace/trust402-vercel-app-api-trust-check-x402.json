@@ -1,0 +1,79 @@
+{
+ "slug": "trust402-vercel-app-api-trust-check-x402",
+ "name": "Run a fast live probe for one x402 endpoint and summarize challenge/pa",
+ "seller": "trust402.vercel.app",
+ "host": "trust402.vercel.app",
+ "provider": "https://trust402.vercel.app",
+ "description": "Run a fast live probe for one x402 endpoint and summarize challenge/payment-flow readiness.",
+ "category": "AI & LLM",
+ "tags": [],
+ "endpoint": "https://trust402.vercel.app/api/trust/check-x402",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x3f4CEE4c6bad04FcCA3138dFFDEE579ddf17049B",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "endpoint": "https://api.example.com/paid",
+   "expectedPriceUsd": 0.01,
+   "method": "GET"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"ok\":true,\"recommendation\":\"test-first\",\"tool\":\"trust.check_x402\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://trust402.vercel.app/llms.txt",
+ "docsChecked": 1793609277048,
+ "payers30d": 10,
+ "calls30d": 17,
+ "lastCalledAt": "2026-11-02T03:24:30.826Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 491,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 491,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/trust402-vercel-app-api-trust-check-x402",
+ "rating": null,
+ "related": [
+  "wiki-use-x402atlas-com-summary",
+  "imagegen-coinopai-com-prompt-styles",
+  "x402-forgemesh-io-the-daily-402",
+  "agentshield-live-iban",
+  "ads-forgemesh-io-api-network-stats",
+  "agentshield-live-holiday"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://trust402.vercel.app/api/trust/check-x402' -H 'content-type: application/json' -d '{\"endpoint\":\"https://api.example.com/paid\",\"expectedPriceUsd\":0.01,\"method\":\"GET\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20trust402-vercel-app-api-trust-check-x402&body=%7B%22slug%22%3A%22trust402-vercel-app-api-trust-check-x402%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: trust402-vercel-app-api-trust-check-x402\",\"body\":\"{\\\"slug\\\":\\\"trust402-vercel-app-api-trust-check-x402\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Run%20a%20fast%20live%20probe%20for%20one%20x402%20endpoint%20and%20summarize%20challenge%2Fpa&seller=https%3A%2F%2Ftrust402.vercel.app%2Fapi%2Ftrust%2Fcheck-x402"
+}

@@ -1,0 +1,82 @@
+{
+ "slug": "modelmarket-dev-x402-histor-check",
+ "name": "AIMarket: HISTOR pre-flight for an MCP server: its signed record in the HISTOR t",
+ "seller": "AIMarket",
+ "host": "modelmarket.dev",
+ "provider": "https://modelmarket.dev",
+ "description": "HISTOR pre-flight for an MCP server: its signed record in the HISTOR transparency log — when the tool set was first seen, whether it changed, what the pattern scan found. Never contacts the server asked about.",
+ "category": "Security & compliance",
+ "tags": [
+  "mcp",
+  "security",
+  "transparency-log",
+  "trust"
+ ],
+ "endpoint": "https://modelmarket.dev/x402/histor-check",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x1218ff36C5d2e3B6A565CdB1A8B1AcCFc606Ad0a",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "endpoint": "https://mcp.redu.cloud/mcp"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"check\":{\"checkedAt\":\"2026-10-25T18:18:52Z\",\"match\":\"no-digest\",\"target\":{\"name\":\"cloud.redu/mcp\"},\"type\":\"histor.check/v1\"},\"service\":\"histor-check\",\"source\":\"https://histor.modelmarket.dev\",\"status\":\"ok\"}",
+ "outputSchema": "{\"properties\":{\"check\":{\"description\":\"HISTOR's signed answer, histor.check/v1 (https://github.com/alexar76/histor/blob/main/docs/api.md)\",\"properties\":{\"checkedAt\":{\"description\":\"ISO 8601 UTC\",\"type\":\"string\"},\"issuer\":{\"description\":\"did:key of the log\",\"type\":\"string\"},\"log\":{\"description\":\"the signed tree head the answer was given under\",\"type\":\"object\"},\"match\":{\"enum\":[\"same\",\"different\",\"previously-observed\",\"not-observed\",\"not-listed\",\"no-digest\"],\"type\":\"string\"},\"note\":{\"type\":\"string\"},\"observed\":{\"description\":\"HISTOR's latest observation of its tool set\",\"type\":[\"object\",\"null\"]},\"patternScan\":{\"properties\":{\"status\":{\"type\":\"string\"}},\"type\":\"object\"},\"query\":{\"type\":\"object\"},\"signature\":{\"type\":\"object\"},\"target\":{\"description\":\"the server HISTOR knows by this endpoint or name\",\"type\":[\"object\",\"null\"]},\"type\":{\"const\":\"histor.check/v1\",\"type\":\"string\"}},\"required\":[\"type\",\"checkedAt\",\"match\"],\"type\":\"object\"},\"service\":{\"const\":\"histor-check\",\"type\":\"string\"},\"source\":{\"description\":\"the HISTOR instance that answered\",\"type\":\"string\"},\"status\":{\"const\":\"ok\",\"type\":\"string\"}},\"required\":[\"status\",\"service\",\"source\",\"check\"],\"type\":\"object\"}",
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1790911097/bazaar-icons/44bcd8ea149ef632.png",
+ "docs": "https://modelmarket.dev/llms.txt",
+ "docsChecked": 1793609270214,
+ "payers30d": 15,
+ "calls30d": 16,
+ "lastCalledAt": "2026-10-30T12:30:23.347Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 968,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 968,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/modelmarket-dev-x402-histor-check",
+ "rating": null,
+ "related": [
+  "quartermaster-surewhynot-app-v1-dns",
+  "forensik-halowerk-com-v1-bytecode-clone-provenance",
+  "tienda-textokit-store-api-cuit-ar",
+  "forensik-halowerk-com-v1-address-poisoning-detector",
+  "forensik-halowerk-com-v1-dusting-attack-monitor",
+  "netintel-dev-email-auth"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://modelmarket.dev/x402/histor-check' -H 'content-type: application/json' -d '{\"endpoint\":\"https://mcp.redu.cloud/mcp\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20modelmarket-dev-x402-histor-check&body=%7B%22slug%22%3A%22modelmarket-dev-x402-histor-check%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: modelmarket-dev-x402-histor-check\",\"body\":\"{\\\"slug\\\":\\\"modelmarket-dev-x402-histor-check\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=AIMarket%3A%20HISTOR%20pre-flight%20for%20an%20MCP%20server%3A%20its%20signed%20record%20in%20the%20HISTOR%20t&seller=https%3A%2F%2Fmodelmarket.dev%2Fx402%2Fhistor-check"
+}

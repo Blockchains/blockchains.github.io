@@ -1,0 +1,82 @@
+{
+ "slug": "tools-halowerk-com-v1-json-repair",
+ "name": "HALOWERK Agent Tools: Repariert die typischen Fehler aus Sprachmodell-Ausgaben und Fremdsyst",
+ "seller": "HALOWERK Agent Tools",
+ "host": "tools.halowerk.com",
+ "provider": "https://tools.halowerk.com",
+ "description": "Repariert die typischen Fehler aus Sprachmodell-Ausgaben und Fremdsystemen: Markdown-Zaun, haengende Kommas, einfache Anfuehrungszeichen, unquotierte Schluessel, Kommentare, typografische Anfuehrungszeichen, unsichtbare Zeichen, fehlende Klammern, NaN und Infinity. Liefert das geparste Objekt und ein Protokoll jeder einzelnen Reparatur.",
+ "category": "Data & analytics",
+ "tags": [
+  "x402",
+  "agent-tools",
+  "data",
+  "json_repair"
+ ],
+ "endpoint": "https://tools.halowerk.com/v1/json/repair",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x2880EdfFF13100677Bf97A3CBdF3Bc34771C4E5E",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "text": "```json\n{name: 'Bau GmbH', jahr: 2026, tags: ['a','b',], /* Notiz */ aktiv: true,}\n```"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"json\":\"{\\\"name\\\":\\\"Bau GmbH\\\",\\\"jahr\\\":2026,\\\"tags\\\":[\\\"a\\\",\\\"b\\\"],\\\"aktiv\\\":true}\",\"parsed\":{\"aktiv\":true,\"jahr\":2026,\"name\":\"Bau GmbH\",\"tags\":[\"a\",\"b\"]},\"repair_count\":5,\"repairs\":[{\"detail\":\"Markdown-Zaun um das JSON entfernt\",\"fix\":\"code_fence_removed\"},{\"count\":1,\"fix\":\"comments_removed\"},{\"count\":2,\"fix\":\"trailing_comma_removed\"},{\"count\":3,\"fix\":\"single_quotes_converted\"},{\"count\":4,\"fix\":\"unquoted_key_or_value_quoted\"}],\"valid_after\":true,\"valid_before\":false}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://tools.halowerk.com/llms.txt",
+ "docsChecked": 1793609280357,
+ "payers30d": 9,
+ "calls30d": 15,
+ "lastCalledAt": "2026-11-02T03:46:24.044Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 391,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 391,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/tools-halowerk-com-v1-json-repair",
+ "rating": null,
+ "related": [
+  "api-402rates-com-v1-ping",
+  "rubric-protocol-com-v1-x402-hedera-facts-exchange-rate",
+  "nbu-navistri-com-v1-rates",
+  "api-hyperextend-xyz-v1-liquidations-coverage",
+  "api-govparse-io-v1-stats-opportunities",
+  "http-forest-gas-station-mainnet-lcjl27p8lmjs-code-run-dns-changed"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://tools.halowerk.com/v1/json/repair' -H 'content-type: application/json' -d '{\"text\":\"```json\\n{name: '\\''Bau GmbH'\\'', jahr: 2026, tags: ['\\''a'\\'','\\''b'\\'',], /* Notiz */ aktiv: true,}\\n```\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20tools-halowerk-com-v1-json-repair&body=%7B%22slug%22%3A%22tools-halowerk-com-v1-json-repair%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: tools-halowerk-com-v1-json-repair\",\"body\":\"{\\\"slug\\\":\\\"tools-halowerk-com-v1-json-repair\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=HALOWERK%20Agent%20Tools%3A%20Repariert%20die%20typischen%20Fehler%20aus%20Sprachmodell-Ausgaben%20und%20Fremdsyst&seller=https%3A%2F%2Ftools.halowerk.com%2Fv1%2Fjson%2Frepair"
+}

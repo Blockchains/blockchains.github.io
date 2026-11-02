@@ -1,0 +1,83 @@
+{
+ "slug": "api-helpmyagent-com-v1-company-fr-search",
+ "name": "HelpMyAgent: Searches French companies by name, SIREN, SIRET or optional location c",
+ "seller": "HelpMyAgent",
+ "host": "api.helpmyagent.com",
+ "provider": "https://api.helpmyagent.com",
+ "description": "Searches French companies by name, SIREN, SIRET or optional location criteria and returns structured matching company records.",
+ "category": "Search & web",
+ "tags": [
+  "helpmyagent",
+  "company",
+  "fr",
+  "search"
+ ],
+ "endpoint": "https://api.helpmyagent.com/v1/company/fr/search",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xEaB9543AcF710a24fe096913A428E7d066c88F59",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "limit": 5,
+   "query": "La Poste"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"results\":[{\"activity_code\":\"53.10Z\",\"address\":\"DIRECTION GENERALE DE LA POSTE 9 RUE DU COLONEL PIERRE AVIA 75015 PARIS\",\"city\":\"PARIS\",\"name\":\"LA POSTE\",\"postal_code\":\"75015\",\"siren\":\"356000000\",\"siret\":\"35600000000048\",\"status\":\"active\"}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.helpmyagent.com/llms.txt",
+ "docsChecked": 1793609281861,
+ "payers30d": 9,
+ "calls30d": 11,
+ "lastCalledAt": "2026-10-30T18:31:43.103Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 346,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 346,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-helpmyagent-com-v1-company-fr-search",
+ "rating": null,
+ "related": [
+  "api-bitrefill-com-x402-gift-cards-search",
+  "stableenrich-dev-api-exa-contents",
+  "win-oneshotagent-com-v1-tools-web-read",
+  "search-cyberwarex-com-contents",
+  "apexfaucet-xyz-api-x402-page-markdown",
+  "sift-srv1996466-hstgr-cloud-v1-feeds"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.helpmyagent.com/v1/company/fr/search' -H 'content-type: application/json' -d '{\"limit\":5,\"query\":\"La Poste\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-helpmyagent-com-v1-company-fr-search&body=%7B%22slug%22%3A%22api-helpmyagent-com-v1-company-fr-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-helpmyagent-com-v1-company-fr-search\",\"body\":\"{\\\"slug\\\":\\\"api-helpmyagent-com-v1-company-fr-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=HelpMyAgent%3A%20Searches%20French%20companies%20by%20name%2C%20SIREN%2C%20SIRET%20or%20optional%20location%20c&seller=https%3A%2F%2Fapi.helpmyagent.com%2Fv1%2Fcompany%2Ffr%2Fsearch"
+}

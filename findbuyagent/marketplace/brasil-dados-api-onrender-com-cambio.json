@@ -1,0 +1,81 @@
+{
+ "slug": "brasil-dados-api-onrender-com-cambio",
+ "name": "Brazil Data API: Official USD/BRL and EUR/BRL exchange rates (PTAX, Central Bank of Bra",
+ "seller": "Brazil Data API",
+ "host": "brasil-dados-api.onrender.com",
+ "provider": "https://brasil-dados-api.onrender.com",
+ "description": "Official USD/BRL and EUR/BRL exchange rates (PTAX, Central Bank of Brazil).",
+ "category": "Data & analytics",
+ "tags": [
+  "brazil",
+  "brasil",
+  "data",
+  "economy",
+  "verify"
+ ],
+ "endpoint": "https://brasil-dados-api.onrender.com/cambio",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x649006bC937E7a60F98e49455D0fE3425321A3b0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"eur_brl\":5.94,\"source\":\"Banco Central do Brasil (PTAX)\",\"usd_brl\":5.19}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://brasil-dados-api.onrender.com/llms.txt",
+ "docsChecked": 1793609274436,
+ "payers30d": 11,
+ "calls30d": 59,
+ "lastCalledAt": "2026-11-02T04:38:27.985Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 287,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 287,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/brasil-dados-api-onrender-com-cambio",
+ "rating": null,
+ "related": [
+  "api-hyperextend-xyz-v1-candles-btc-1m-latest",
+  "api-oblique-markets-api-v1-paid-bazaar-pulse",
+  "rest-coincap-io-v3-agentfriendly-full-assets-by-slug",
+  "kaisha-api-hp-vladic-workers-dev-calendar-holidays",
+  "jmt-x402-proxy-jmthomasofficial-workers-dev-v2-api-whois",
+  "nbu-navistri-com-v1-ovdp-auctions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://brasil-dados-api.onrender.com/cambio'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20brasil-dados-api-onrender-com-cambio&body=%7B%22slug%22%3A%22brasil-dados-api-onrender-com-cambio%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: brasil-dados-api-onrender-com-cambio\",\"body\":\"{\\\"slug\\\":\\\"brasil-dados-api-onrender-com-cambio\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Brazil%20Data%20API%3A%20Official%20USD%2FBRL%20and%20EUR%2FBRL%20exchange%20rates%20(PTAX%2C%20Central%20Bank%20of%20Bra&seller=https%3A%2F%2Fbrasil-dados-api.onrender.com%2Fcambio"
+}

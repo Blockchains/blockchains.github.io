@@ -1,0 +1,86 @@
+{
+ "slug": "api-kadec0-xyz-v1-papers",
+ "name": "Academic Paper Search: Academic and scientific paper search API. Search research papers and s",
+ "seller": "Academic Paper Search",
+ "host": "api.kadec0.xyz",
+ "provider": "https://api.kadec0.xyz",
+ "description": "Academic and scientific paper search API. Search research papers and scholarly literature across arXiv, PubMed, OpenAlex, Crossref, and Semantic Scholar in one call, deduplicated into a ranked result set: title, authors, year, venue, abstract, citation count, DOI, and direct PDF link. Query by keyword or restrict to one source; filter by year range; sort by relevance, recency, or citations. Keyless.",
+ "category": "Search & web",
+ "tags": [
+  "academic-search",
+  "paper-search",
+  "arxiv-api",
+  "pubmed-search",
+  "research-paper-api"
+ ],
+ "endpoint": "https://api.kadec0.xyz/v1/papers",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.02,
+ "amount": "20000",
+ "payTo": "0x4df66B6c140778fe0717880A7c6dDE5Ea53AcDeA",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "maxItems": "10",
+   "q": "transformer attention",
+   "sort": "citations",
+   "source": "all"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"count\":1,\"items\":[{\"abstract\":\"The dominant sequence transduction models...\",\"authors\":[\"Ashish Vaswani\"],\"citationCount\":181057,\"doi\":\"10.48550/arxiv.1706.03762\",\"pdfUrl\":\"https://arxiv.org/pdf/1706.03762\",\"source\":\"openalex\",\"sources\":[\"openalex\",\"semanticscholar\"],\"title\":\"Attention Is All You Need\",\"type\":\"paper\",\"url\":\"https://doi.org/...\",\"venue\":\"NeurIPS\",\"year\":2017}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609274458,
+ "payers30d": 11,
+ "calls30d": 485,
+ "lastCalledAt": "2026-11-01T09:43:19.877Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 177,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 177,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-kadec0-xyz-v1-papers",
+ "rating": null,
+ "related": [
+  "stabletravel-dev-api-google-flights-search",
+  "stabletravel-dev-api-seats-aero-search",
+  "x402-botsmith-dev-x-search",
+  "www-trezalabs-com-api-x402-speech",
+  "appstore-use-x402atlas-com-search",
+  "x402-asterpay-io-v2-x402-ai-fact-check"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.kadec0.xyz/v1/papers?maxItems=10&q=transformer+attention&sort=citations&source=all'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-kadec0-xyz-v1-papers&body=%7B%22slug%22%3A%22api-kadec0-xyz-v1-papers%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-kadec0-xyz-v1-papers\",\"body\":\"{\\\"slug\\\":\\\"api-kadec0-xyz-v1-papers\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Academic%20Paper%20Search%3A%20Academic%20and%20scientific%20paper%20search%20API.%20Search%20research%20papers%20and%20s&seller=https%3A%2F%2Fapi.kadec0.xyz%2Fv1%2Fpapers"
+}

@@ -1,0 +1,84 @@
+{
+ "slug": "scvd-store-api-buy-spot-check",
+ "name": "SCVD General Store: Spot Check",
+ "seller": "SCVD General Store",
+ "host": "scvd.store",
+ "provider": "https://scvd.store",
+ "description": "Spot Check. REQUIRES ?host= on the paid request — a signed request without it is refused before the gate and no money moves. Name a host and get what this observatory already holds on it, signed: corpus rounds and verdicts as recorded, when we last actually knocked, our coverage of the window since we met it, and the gaps with their reasons. Read from the books at the counter — no request is made to the host, so the answer is as fresh as our last round and no fresher, and sa…",
+ "category": "Utilities",
+ "tags": [
+  "x402",
+  "signed-artifacts",
+  "verification",
+  "attestation",
+  "conformance"
+ ],
+ "endpoint": "https://scvd.store/api/buy/spot_check",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xDD350976B8cfFc65938C0464d39A2C78BE079bd0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "agent_name": "friendly-agent",
+   "host": "your-door.example"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"badge_url\":\"https://scvd.store/badges/41.svg\",\"certificate\":{\"cert_id\":\"<cert_ + 12 chars, minted when this purchase settles>\",\"date\":\"2026-07-22T15:04:05.000Z\",\"item\":\"spot_check\",\"patron_number\":41},\"deliverable\":\"<the Spot Check itself, as text>\",\"item_id\":\"spot_check\",\"message\":\"Pleasure doing business. Here's your goods, warm off the shelf.\",\"paid_usdc\":0.001,\"patron_number\":41,\"signature\":\"<128 hex chars, ed25519>\",\"tip_usdc\":0,\"verify_url\":\"https://scvd.store/api/verify/<your cert_id>\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://scvd.store/llms.txt",
+ "docsChecked": 1793609268989,
+ "payers30d": 18,
+ "calls30d": 88,
+ "lastCalledAt": "2026-11-02T01:29:57.573Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 314,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 314,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/scvd-store-api-buy-spot-check",
+ "rating": null,
+ "related": [
+  "api-aurenic-org-treasury-debt",
+  "workspace-x402-paywall-onrender-com-utils-uuid",
+  "api-printmoneylab-com-api-v1-fx-rate",
+  "headlessoracle-com-v5-status-x402",
+  "fanfare-run-nba-teams",
+  "agent-treats-production-up-railway-app-api-fact"
+ ],
+ "example": {
+  "curl": "curl -i 'https://scvd.store/api/buy/spot_check?agent_name=friendly-agent&host=your-door.example'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20scvd-store-api-buy-spot-check&body=%7B%22slug%22%3A%22scvd-store-api-buy-spot-check%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: scvd-store-api-buy-spot-check\",\"body\":\"{\\\"slug\\\":\\\"scvd-store-api-buy-spot-check\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SCVD%20General%20Store%3A%20Spot%20Check&seller=https%3A%2F%2Fscvd.store%2Fapi%2Fbuy%2Fspot_check"
+}

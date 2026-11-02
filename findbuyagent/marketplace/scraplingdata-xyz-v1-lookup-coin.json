@@ -1,0 +1,83 @@
+{
+ "slug": "scraplingdata-xyz-v1-lookup-coin",
+ "name": "Scrapling x402 Data Store: Current price of BTC, ETH and about 155 other major coins, read from C",
+ "seller": "Scrapling x402 Data Store",
+ "host": "scraplingdata.xyz",
+ "provider": "https://scraplingdata.xyz",
+ "description": "Current price of BTC, ETH and about 155 other major coins, read from Chainlink on-chain price feeds: USD price, 1h/24h/7d/30d % change and 24h high/low. Market cap, volume, supply and all-time high are not included. Example: q=btc, q=ethereum, q=solana. Refreshed about every 30 min",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "web-scraping",
+  "crypto",
+  "defi",
+  "ecommerce",
+  "datasets"
+ ],
+ "endpoint": "https://scraplingdata.xyz/v1/lookup/coin",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x72C80C01fD89Bac74f47cf604b61ACd119c9BCdb",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "q": "btc"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"change_1h_pct\":-0.2,\"change_24h_pct\":-0.97,\"change_7d_pct\":-1.5,\"high_24h_usd\":80853.6,\"low_24h_usd\":79244.2,\"name\":\"Bitcoin\",\"price_usd\":80262.8,\"source\":\"chainlink_onchain\",\"symbol\":\"BTC\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://scraplingdata.xyz/llms.txt",
+ "docsChecked": 1793609270027,
+ "payers30d": 14,
+ "calls30d": 27,
+ "lastCalledAt": "2026-11-01T07:09:34.038Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 173,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 173,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/scraplingdata-xyz-v1-lookup-coin",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://scraplingdata.xyz/v1/lookup/coin?q=btc'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20scraplingdata-xyz-v1-lookup-coin&body=%7B%22slug%22%3A%22scraplingdata-xyz-v1-lookup-coin%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: scraplingdata-xyz-v1-lookup-coin\",\"body\":\"{\\\"slug\\\":\\\"scraplingdata-xyz-v1-lookup-coin\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Scrapling%20x402%20Data%20Store%3A%20Current%20price%20of%20BTC%2C%20ETH%20and%20about%20155%20other%20major%20coins%2C%20read%20from%20C&seller=https%3A%2F%2Fscraplingdata.xyz%2Fv1%2Flookup%2Fcoin"
+}

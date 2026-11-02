@@ -1,0 +1,81 @@
+{
+ "slug": "quartermaster-surewhynot-app-v1-gas",
+ "name": "Quartermaster Gas Prices: Current Base gas prices and a simple-transfer cost estimate for transa",
+ "seller": "Quartermaster Gas Prices",
+ "host": "quartermaster.surewhynot.app",
+ "provider": "https://quartermaster.surewhynot.app",
+ "description": "Current Base gas prices and a simple-transfer cost estimate for transaction planning.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "gas",
+  "fees",
+  "base",
+  "transaction",
+  "settlement"
+ ],
+ "endpoint": "https://quartermaster.surewhynot.app/v1/gas",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x5253666c40432f009ebd99908b9cd2a7fd1019cb",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"base_fee_gwei\":\"0.008\",\"block\":32712345,\"gas_price_gwei\":\"0.012\",\"network\":\"base\",\"priority_fee_gwei\":\"0.001\",\"simple_transfer_cost_eth\":\"0.00000025\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://quartermaster.surewhynot.app/llms.txt",
+ "docsChecked": 1793609268033,
+ "payers30d": 26,
+ "calls30d": 36,
+ "lastCalledAt": "2026-11-02T03:24:16.024Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 464,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 464,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/quartermaster-surewhynot-app-v1-gas",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://quartermaster.surewhynot.app/v1/gas'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20quartermaster-surewhynot-app-v1-gas&body=%7B%22slug%22%3A%22quartermaster-surewhynot-app-v1-gas%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: quartermaster-surewhynot-app-v1-gas\",\"body\":\"{\\\"slug\\\":\\\"quartermaster-surewhynot-app-v1-gas\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Quartermaster%20Gas%20Prices%3A%20Current%20Base%20gas%20prices%20and%20a%20simple-transfer%20cost%20estimate%20for%20transa&seller=https%3A%2F%2Fquartermaster.surewhynot.app%2Fv1%2Fgas"
+}

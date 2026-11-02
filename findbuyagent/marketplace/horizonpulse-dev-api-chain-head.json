@@ -1,0 +1,83 @@
+{
+ "slug": "horizonpulse-dev-api-chain-head",
+ "name": "Horizon Pulse: Block height API: current block number, slot or ledger index for Base,",
+ "seller": "Horizon Pulse",
+ "host": "horizonpulse.dev",
+ "provider": "https://horizonpulse.dev",
+ "description": "Block height API: current block number, slot or ledger index for Base, Polygon, Ethereum, Solana and XRPL. Optional network (comma list; default all five). Per network: chainId, height, headTime, headAgeSeconds, finalizedHeight and finalityGap (EVM finalized tag, Solana finalized slot, XRPL validated ledger). Read-only queries to public network servers run by third parties. Billed when at least one network answers; bad input or every RPC down: not charged on Base (other rails may charge).",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "blockchain",
+  "block-height",
+  "chain-head",
+  "finality",
+  "multichain"
+ ],
+ "endpoint": "https://horizonpulse.dev/api/chain/head",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x5b32c973596078a967562ca652761404f19be0e9",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "network": "base,solana,xrpl"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"answered\":3,\"asOf\":\"2026-10-16T15:31:40.721Z\",\"count\":3,\"heads\":[{\"caip2\":\"eip155:8453\",\"chainId\":8453,\"error\":null,\"finalityGap\":596,\"finalizedHeight\":52687080,\"headAgeSeconds\":2,\"headTime\":\"2026-10-16T15:31:39.000Z\",\"height\":52687676,\"network\":\"base\",\"unit\":\"block\"},{\"caip2\":\"solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp\",\"chainId\":null,\"error\":null,\"finalityGap\":32,\"finalizedHeight\":457688379,\"headAgeSeconds\":1,\"headTime\":\"2026-10-16T15:31:40.000Z\",\"height\":457688411,\"network\":\"solana\",\"unit\":\"slot\"},{\"caip2\":\"xrpl:0\",\"chainId\":null,\"error\":null,\"finalityGap\":0,\"finalizedHeight\":107697787,\"headAgeSeconds\":1,\"headTime\":\"2026-10-16T15:31:40.000Z\",\"height\":107697787,\"network\":\"xrpl\",\"unit\":\"ledger\"}],\"ok\":true,\"priced\":{\"amountAtomic\":\"2000\",\"amountUsd\":\"$0.002\",\"asset\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\"network\":\"base\",\"payTo\":\"0x5b32c973596078a967562ca652761404f19be0e9\"},\"source\":\"chain-head\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1790623595/bazaar-icons/2ff6a4fc61cbe047.png",
+ "docs": "https://horizonpulse.dev/llms.txt",
+ "docsChecked": 1793609278178,
+ "payers30d": 10,
+ "calls30d": 10,
+ "lastCalledAt": "2026-11-01T07:36:51.701Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 219,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 219,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/horizonpulse-dev-api-chain-head",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i 'https://horizonpulse.dev/api/chain/head?network=base%2Csolana%2Cxrpl'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20horizonpulse-dev-api-chain-head&body=%7B%22slug%22%3A%22horizonpulse-dev-api-chain-head%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: horizonpulse-dev-api-chain-head\",\"body\":\"{\\\"slug\\\":\\\"horizonpulse-dev-api-chain-head\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Horizon%20Pulse%3A%20Block%20height%20API%3A%20current%20block%20number%2C%20slot%20or%20ledger%20index%20for%20Base%2C&seller=https%3A%2F%2Fhorizonpulse.dev%2Fapi%2Fchain%2Fhead"
+}

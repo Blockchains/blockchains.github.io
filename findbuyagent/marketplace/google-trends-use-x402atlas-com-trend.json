@@ -1,0 +1,84 @@
+{
+ "slug": "google-trends-use-x402atlas-com-trend",
+ "name": "Google Trends SEO Keyword Data: Google Trends interest over time for a keyword — search popularity wor",
+ "seller": "Google Trends SEO Keyword Data",
+ "host": "google-trends.use.x402atlas.com",
+ "provider": "https://google-trends.use.x402atlas.com",
+ "description": "Google Trends interest over time for a keyword — search popularity worldwide or for one country (geo) over a timeframe from the past hour to 2004-present (default: monthly since 2004), with ready-to-call links to the other Google Trends routes. For keyword research, SEO and demand trend analysis.",
+ "category": "Search & web",
+ "tags": [
+  "google-trends",
+  "interest-over-time",
+  "keyword-research",
+  "search-trends",
+  "search-volume"
+ ],
+ "endpoint": "https://google-trends.use.x402atlas.com/trend",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.05,
+ "amount": "50000",
+ "payTo": "0x9AACeabAD8E1858b72fcEA1665381B168841b2fa",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "keyword": "bitcoin",
+   "timeframe": "2004_present"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data_source\":\"primary\",\"geo\":\"worldwide\",\"keyword\":\"bitcoin\",\"queried_at\":\"2026-06-05T12:00:00Z\",\"series\":[{\"date\":\"2026-05-01\",\"timestamp\":\"2026-05-01T00:00:00Z\",\"value\":78}],\"timeframe\":\"2004_present\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://google-trends.use.x402atlas.com/llms.txt",
+ "docsChecked": 1793609276144,
+ "payers30d": 10,
+ "calls30d": 571,
+ "lastCalledAt": "2026-11-01T13:19:07.854Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 598,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 598,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/google-trends-use-x402atlas-com-trend",
+ "rating": null,
+ "related": [
+  "serp402-com-api-v1-search",
+  "x402-asterpay-io-v2-x402-agent-readiness",
+  "agent-connskill-com-v1-keyword-ideas",
+  "reddit-apitoll-cloud-v1-reddit-search",
+  "stabletravel-dev-api-google-flights-search",
+  "stabletravel-dev-api-seats-aero-search"
+ ],
+ "example": {
+  "curl": "curl -i 'https://google-trends.use.x402atlas.com/trend?keyword=bitcoin&timeframe=2004_present'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20google-trends-use-x402atlas-com-trend&body=%7B%22slug%22%3A%22google-trends-use-x402atlas-com-trend%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: google-trends-use-x402atlas-com-trend\",\"body\":\"{\\\"slug\\\":\\\"google-trends-use-x402atlas-com-trend\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Google%20Trends%20SEO%20Keyword%20Data%3A%20Google%20Trends%20interest%20over%20time%20for%20a%20keyword%20%E2%80%94%20search%20popularity%20wor&seller=https%3A%2F%2Fgoogle-trends.use.x402atlas.com%2Ftrend"
+}

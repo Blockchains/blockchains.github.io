@@ -1,0 +1,87 @@
+{
+ "slug": "coord-taifoon-dev-v1-x402-class-inference-metered",
+ "name": "Taifoon: OpenAI-compatible chat completion on 71 models: name one in `model` (l",
+ "seller": "Taifoon",
+ "host": "coord.taifoon.dev",
+ "provider": "https://coord.taifoon.dev",
+ "description": "OpenAI-compatible chat completion on 71 models: name one in `model` (llama-3.1-8b-instruct, l3-8b-lunaris-v1, mistral-small-24b-instruct-2501, gemma-3-4b-it, qwen2.5-7b-instruct, gpt-oss-20b, phi-4, gemma-3-12b-it, qwen3.5-9b, gemma-3-27b-it, gpt-oss-120b and 59 more) and the 402 prices that model per request; served by DeepInfra, Venice AI, NEAR AI Cloud and Taifoon's own GPU (nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 when no model is named). Messages in, the answer and its token usage out; max_…",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "inference",
+  "metered"
+ ],
+ "endpoint": "https://coord.taifoon.dev/v1/x402/class/inference.metered",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x3574999dd4c96eB73Bd6e11D4177010C83E14f5b",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "max_tokens": 128,
+   "messages": [
+    {
+     "content": "What is 17 multiplied by 24? Show the calculation briefly.",
+     "role": "user"
+    }
+   ],
+   "model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"17 × 24 = 408 (17 × 20 = 340; 17 × 4 = 68; 340 + 68 = 408).\",\"role\":\"assistant\"}}],\"created\":1791763200,\"id\":\"chatcmpl-gpu_…\",\"model\":\"nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16\",\"object\":\"chat.completion\",\"usage\":{\"completion_tokens\":14,\"prompt_tokens\":14,\"total_tokens\":28}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791930045/bazaar-icons/4c3bc9abe8ba2916.png",
+ "docs": "https://coord.taifoon.dev/llms.txt",
+ "docsChecked": 1793609272518,
+ "payers30d": 14,
+ "calls30d": 44,
+ "lastCalledAt": "2026-11-01T07:07:51.782Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 1108,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 1108,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/coord-taifoon-dev-v1-x402-class-inference-metered",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://coord.taifoon.dev/v1/x402/class/inference.metered' -H 'content-type: application/json' -d '{\"max_tokens\":128,\"messages\":[{\"content\":\"What is 17 multiplied by 24? Show the calculation briefly.\",\"role\":\"user\"}],\"model\":\"nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20coord-taifoon-dev-v1-x402-class-inference-metered&body=%7B%22slug%22%3A%22coord-taifoon-dev-v1-x402-class-inference-metered%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: coord-taifoon-dev-v1-x402-class-inference-metered\",\"body\":\"{\\\"slug\\\":\\\"coord-taifoon-dev-v1-x402-class-inference-metered\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Taifoon%3A%20OpenAI-compatible%20chat%20completion%20on%2071%20models%3A%20name%20one%20in%20%60model%60%20(l&seller=https%3A%2F%2Fcoord.taifoon.dev%2Fv1%2Fx402%2Fclass%2Finference.metered"
+}

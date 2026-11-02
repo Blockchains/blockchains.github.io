@@ -1,0 +1,75 @@
+{
+ "slug": "bunnvault-xyz-api-vault-apy",
+ "name": "BunnVault: Real-time Aave v3 USDC APY feed on Base Mainnet",
+ "seller": "bunnvault.xyz",
+ "host": "bunnvault.xyz",
+ "provider": "https://bunnvault.xyz",
+ "description": "BunnVault: Real-time Aave v3 USDC APY feed on Base Mainnet",
+ "category": "Utilities",
+ "tags": [],
+ "endpoint": "https://bunnvault.xyz/api/vault/apy",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xcDd5CB6ab2b9c5f3D2Bae896CE516b65010C1f4E",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"apy\":0.0487,\"apyPercent\":\"4.87%\",\"asset\":\"USDC\",\"network\":\"Base Mainnet\",\"protocol\":\"Aave v3\",\"timestamp\":1724000000}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609277619,
+ "payers30d": 10,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-01T18:08:48.989Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 386,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 386,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/bunnvault-xyz-api-vault-apy",
+ "rating": null,
+ "related": [
+  "www-api-xpay-com-x402-network",
+  "www-api-xpay-com-x402-ping",
+  "www-api-xpay-com-x402-uuid",
+  "www-api-xpay-com-x402-payment",
+  "api-justaname-id-ens-v2-reverse",
+  "api-justaname-id-ens-v2-resolve"
+ ],
+ "example": {
+  "curl": "curl -i 'https://bunnvault.xyz/api/vault/apy'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20bunnvault-xyz-api-vault-apy&body=%7B%22slug%22%3A%22bunnvault-xyz-api-vault-apy%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: bunnvault-xyz-api-vault-apy\",\"body\":\"{\\\"slug\\\":\\\"bunnvault-xyz-api-vault-apy\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=BunnVault%3A%20Real-time%20Aave%20v3%20USDC%20APY%20feed%20on%20Base%20Mainnet&seller=https%3A%2F%2Fbunnvault.xyz%2Fapi%2Fvault%2Fapy"
+}

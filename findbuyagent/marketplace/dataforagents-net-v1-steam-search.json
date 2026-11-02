@@ -1,0 +1,85 @@
+{
+ "slug": "dataforagents-net-v1-steam-search",
+ "name": "DataForAgents: DataForAgents — Steam catalog search for agents (name, genre, price fi",
+ "seller": "DataForAgents",
+ "host": "dataforagents.net",
+ "provider": "https://dataforagents.net",
+ "description": "DataForAgents — Steam catalog search for agents (name, genre, price filters)",
+ "category": "Search & web",
+ "tags": [
+  "data",
+  "steam",
+  "games",
+  "search"
+ ],
+ "endpoint": "https://dataforagents.net/v1/steam/search",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x5d4ECba4458C49b6F92Fd5384686f0cAf0C3080B",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "genre": "Indie",
+   "limit": "5",
+   "price_max": "20",
+   "q": "terraria"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":[{\"appid\":105600,\"current_price_usd\":9.99,\"developer\":\"Re-Logic\",\"genres\":[\"Action\",\"Adventure\",\"Indie\",\"RPG\"],\"is_free\":false,\"name\":\"Terraria\",\"review_score_pct\":97,\"total_reviews\":900000}],\"results_count\":1,\"status\":\"success\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://dataforagents.net/llms.txt",
+ "docsChecked": 1793609282277,
+ "payers30d": 9,
+ "calls30d": 10,
+ "lastCalledAt": "2026-11-01T23:18:06.303Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 545,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 545,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/dataforagents-net-v1-steam-search",
+ "rating": null,
+ "related": [
+  "stableenrich-dev-api-exa-search",
+  "websearch-use-x402atlas-com-search",
+  "x402-twit-sh-tweets-user",
+  "x402-orthogonal-com-icypeas-api-find-people",
+  "mcp-newstex-com-x402-trending",
+  "agent-data-api-agentdata-workers-dev-v1-contracts-opportunities"
+ ],
+ "example": {
+  "curl": "curl -i 'https://dataforagents.net/v1/steam/search?genre=Indie&limit=5&price_max=20&q=terraria'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20dataforagents-net-v1-steam-search&body=%7B%22slug%22%3A%22dataforagents-net-v1-steam-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: dataforagents-net-v1-steam-search\",\"body\":\"{\\\"slug\\\":\\\"dataforagents-net-v1-steam-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=DataForAgents%3A%20DataForAgents%20%E2%80%94%20Steam%20catalog%20search%20for%20agents%20(name%2C%20genre%2C%20price%20fi&seller=https%3A%2F%2Fdataforagents.net%2Fv1%2Fsteam%2Fsearch"
+}

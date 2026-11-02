@@ -1,0 +1,83 @@
+{
+ "slug": "api-losbeto-xyz-chain-balance",
+ "name": "Losbeto Market Intelligence: Native ETH balance + ERC-20 balances (batched eth_call, up to 20 token",
+ "seller": "Losbeto Market Intelligence",
+ "host": "api.losbeto.xyz",
+ "provider": "https://api.losbeto.xyz",
+ "description": "Native ETH balance + ERC-20 balances (batched eth_call, up to 20 tokens; defaults to USDC/WETH/cbBTC) for any address on Base, plus tx-count nonce, a heuristic wallet_class (ghost/newcomer/steady/degen/whale) and reve...",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "chaindata",
+  "crypto",
+  "wallet",
+  "market-data"
+ ],
+ "endpoint": "https://api.losbeto.xyz/chain-balance",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xd5Ba9711a3D052846a3695C70e7fcb8b3168FE7d",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "address": "0xd8dA6BF26964aF9E7eEd9e03E53415D37aA96045",
+   "tokens": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913 (CSV, optional, up to 20)"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1790529703/bazaar-icons/b104f2f7df1a4ce6.png",
+ "docs": "https://api.losbeto.xyz/llms.txt",
+ "docsChecked": 1793609278662,
+ "payers30d": 9,
+ "calls30d": 58,
+ "lastCalledAt": "2026-11-02T01:50:45.114Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 272,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 272,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-losbeto-xyz-chain-balance",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.losbeto.xyz/chain-balance?address=0xd8dA6BF26964aF9E7eEd9e03E53415D37aA96045&tokens=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913+%28CSV%2C+optional%2C+up+to+20%29'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-losbeto-xyz-chain-balance&body=%7B%22slug%22%3A%22api-losbeto-xyz-chain-balance%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-losbeto-xyz-chain-balance\",\"body\":\"{\\\"slug\\\":\\\"api-losbeto-xyz-chain-balance\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Losbeto%20Market%20Intelligence%3A%20Native%20ETH%20balance%20%2B%20ERC-20%20balances%20(batched%20eth_call%2C%20up%20to%2020%20token&seller=https%3A%2F%2Fapi.losbeto.xyz%2Fchain-balance"
+}

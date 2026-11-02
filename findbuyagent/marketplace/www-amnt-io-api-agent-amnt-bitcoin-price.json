@@ -1,0 +1,81 @@
+{
+ "slug": "www-amnt-io-api-agent-amnt-bitcoin-price",
+ "name": "AMNT: Bitcoin price - Get the current Bitcoin spot price in any fiat currenc",
+ "seller": "AMNT",
+ "host": "www.amnt.io",
+ "provider": "https://www.amnt.io",
+ "description": "Bitcoin price - Get the current Bitcoin spot price in any fiat currency using CoinGecko’s free public API; returns the raw JSON price object.",
+ "category": "AI & LLM",
+ "tags": [
+  "agent",
+  "amnt",
+  "http-api"
+ ],
+ "endpoint": "https://www.amnt.io/api/agent/amnt/bitcoin-price",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x98fa9c8afb5c56ad27d24843cabebdd55170dbc0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 180,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "prompt": "react"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"result\":\"<result>\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791248093/bazaar-icons/fa56adac86cc92ad.png",
+ "docs": "https://www.amnt.io/llms.txt",
+ "docsChecked": 1793609272581,
+ "payers30d": 12,
+ "calls30d": 77,
+ "lastCalledAt": "2026-10-30T18:51:48.522Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 418,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 418,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/www-amnt-io-api-agent-amnt-bitcoin-price",
+ "rating": null,
+ "related": [
+  "jev-x402-vercel-app-jev",
+  "contextslim-friczero-com-fetch",
+  "gateway-spraay-app-bittensor-v1-models",
+  "767-2676-com-v2-receipt",
+  "golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions",
+  "api-agentweather-io-v1-pulse-storm"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://www.amnt.io/api/agent/amnt/bitcoin-price' -H 'content-type: application/json' -d '{\"prompt\":\"react\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-amnt-io-api-agent-amnt-bitcoin-price&body=%7B%22slug%22%3A%22www-amnt-io-api-agent-amnt-bitcoin-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-amnt-io-api-agent-amnt-bitcoin-price\",\"body\":\"{\\\"slug\\\":\\\"www-amnt-io-api-agent-amnt-bitcoin-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=AMNT%3A%20Bitcoin%20price%20-%20Get%20the%20current%20Bitcoin%20spot%20price%20in%20any%20fiat%20currenc&seller=https%3A%2F%2Fwww.amnt.io%2Fapi%2Fagent%2Famnt%2Fbitcoin-price"
+}

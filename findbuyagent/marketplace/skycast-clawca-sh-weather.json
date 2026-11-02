@@ -1,0 +1,80 @@
+{
+ "slug": "skycast-clawca-sh-weather",
+ "name": "SkyCast: Current weather for a city or lat/lon: temperature, humidity, wind, co",
+ "seller": "SkyCast",
+ "host": "skycast.clawca.sh",
+ "provider": "https://skycast.clawca.sh",
+ "description": "Current weather for a city or lat/lon: temperature, humidity, wind, conditions.",
+ "category": "Weather & geo",
+ "tags": [
+  "weather",
+  "forecast"
+ ],
+ "endpoint": "https://skycast.clawca.sh/weather",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x9acfDC5A3D6Bfbb127615751E0F0e44014E32abF",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "city": "London"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"current\":{\"condition\":\"Partly cloudy\",\"temperature_c\":18.4},\"location\":{\"country\":\"United Kingdom\",\"name\":\"London\"}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1790518498/bazaar-icons/256b47dc283fea01.png",
+ "docs": "https://skycast.clawca.sh/llms.txt",
+ "docsChecked": 1793609277753,
+ "payers30d": 10,
+ "calls30d": 12,
+ "lastCalledAt": "2026-10-28T20:19:55.76Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 302,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 302,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/skycast-clawca-sh-weather",
+ "rating": null,
+ "related": [
+  "hypernatt-com-api-m2m-liq-radar",
+  "weather-agentic-jp-com-areas",
+  "api-losbeto-xyz-gas-price",
+  "x402-data-api-sigrunner-workers-dev-defi-yields",
+  "x402-agentutility-ai-ip-asn",
+  "x402-seller-onrender-com-geo-lookup"
+ ],
+ "example": {
+  "curl": "curl -i 'https://skycast.clawca.sh/weather?city=London'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20skycast-clawca-sh-weather&body=%7B%22slug%22%3A%22skycast-clawca-sh-weather%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: skycast-clawca-sh-weather\",\"body\":\"{\\\"slug\\\":\\\"skycast-clawca-sh-weather\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SkyCast%3A%20Current%20weather%20for%20a%20city%20or%20lat%2Flon%3A%20temperature%2C%20humidity%2C%20wind%2C%20co&seller=https%3A%2F%2Fskycast.clawca.sh%2Fweather"
+}

@@ -3,37 +3,72 @@
  "name": "Get real-time cryptocurrency price data for any token",
  "seller": "x402.asterpay.io",
  "host": "x402.asterpay.io",
+ "provider": "https://x402.asterpay.io",
  "description": "Get real-time cryptocurrency price data for any token",
  "category": "Crypto & on-chain",
  "tags": [],
  "endpoint": "https://x402.asterpay.io/v1/market/price/bitcoin",
  "method": "GET",
+ "payment": "x402",
  "priceUsd": 0.0075,
  "amount": "7500",
  "payTo": "0xd5f8481D8F25d3966d2010DBf9B47fFbdf745A9E",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
  "listedTermsMatch": true,
  "input": {
   "queryParams": {
    "symbol": "bitcoin"
   },
   "body": null,
-  "bodyType": null
+  "bodyType": null,
+  "headers": null
  },
+ "outputType": "json",
  "outputExample": "{\"change_24h\":2.45,\"market_cap\":1940000000000,\"price_eur\":91200.15,\"price_usd\":98450.23,\"symbol\":\"bitcoin\",\"timestamp\":\"2026-02-01T12:00:00Z\",\"volume_24h\":45000000000}",
+ "outputSchema": null,
+ "iconUrl": null,
  "docs": "https://x402.asterpay.io/llms.txt",
  "docsChecked": 1793596022236,
- "payers30d": 35,
- "calls30d": 42,
+ "payers30d": 36,
+ "calls30d": 43,
+ "lastCalledAt": "2026-11-02T03:05:28.245Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 326,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 150,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 150,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-asterpay-io-v1-market-price-bitcoin",
  "rating": null,
+ "related": [
+  "x402-telnyx-com-v1-chat-completions-t-glm-5-3-flash",
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets",
+  "api-nansen-ai-api-v1-tgm-token-information",
+  "api-x402node-dev-chain-honeypot"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.asterpay.io/v1/market/price/bitcoin?symbol=bitcoin'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-asterpay-io-v1-market-price-bitcoin&body=%7B%22slug%22%3A%22x402-asterpay-io-v1-market-price-bitcoin%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-asterpay-io-v1-market-price-bitcoin\",\"body\":\"{\\\"slug\\\":\\\"x402-asterpay-io-v1-market-price-bitcoin\\\",\\\"stars\\\":1-5}\"}"

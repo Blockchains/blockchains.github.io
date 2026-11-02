@@ -1,0 +1,81 @@
+{
+ "slug": "www-x402pulse-dev-v1-oil-prices",
+ "name": "x402Pulse: Crude oil prices: WTI and Brent daily spot prices from the U.S. Energy",
+ "seller": "x402Pulse",
+ "host": "www.x402pulse.dev",
+ "provider": "https://www.x402pulse.dev",
+ "description": "Crude oil prices: WTI and Brent daily spot prices from the U.S. Energy Information Administration (EIA), with 1-day, 1-week, 1-month and 1-year changes, 52-week range and position in it, and the Brent-WTI spread. Official daily figures, not live futures quotes. Data, not trading advice.",
+ "category": "Finance & markets",
+ "tags": [
+  "oil",
+  "energy",
+  "commodities",
+  "eia",
+  "x402pulse"
+ ],
+ "endpoint": "https://www.x402pulse.dev/v1/oil/prices",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.0014,
+ "amount": "1400",
+ "payTo": "0x5e901f973C17E5542b4Da2A64C7fDc736B2A6e74",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"cached\":false,\"data\":{\"brent\":{\"price\":99.8},\"brentWtiSpread\":{\"usdPerBarrel\":3.64},\"wti\":{\"change1w\":{\"change\":10.93,\"changePct\":0.128},\"date\":\"2026-09-29\",\"price\":96.16,\"range52w\":{\"high\":99.37,\"low\":61.2}}}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791450934/bazaar-icons/480471795f7f9f46.png",
+ "docs": "https://www.x402pulse.dev/llms.txt",
+ "docsChecked": 1793609279526,
+ "payers30d": 9,
+ "calls30d": 21,
+ "lastCalledAt": "2026-11-02T04:22:17.672Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 792,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 792,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/www-x402pulse-dev-v1-oil-prices",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i 'https://www.x402pulse.dev/v1/oil/prices'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-x402pulse-dev-v1-oil-prices&body=%7B%22slug%22%3A%22www-x402pulse-dev-v1-oil-prices%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-x402pulse-dev-v1-oil-prices\",\"body\":\"{\\\"slug\\\":\\\"www-x402pulse-dev-v1-oil-prices\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x402Pulse%3A%20Crude%20oil%20prices%3A%20WTI%20and%20Brent%20daily%20spot%20prices%20from%20the%20U.S.%20Energy&seller=https%3A%2F%2Fwww.x402pulse.dev%2Fv1%2Foil%2Fprices"
+}

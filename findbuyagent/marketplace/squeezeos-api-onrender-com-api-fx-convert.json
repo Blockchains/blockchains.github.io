@@ -1,0 +1,85 @@
+{
+ "slug": "squeezeos-api-onrender-com-api-fx-convert",
+ "name": "SCRIPTMASTERLABS: Currency conversion API for AI agents — convert an amount between curr",
+ "seller": "SCRIPTMASTERLABS",
+ "host": "squeezeos-api.onrender.com",
+ "provider": "https://squeezeos-api.onrender.com",
+ "description": "Currency conversion API for AI agents — convert an amount between currencies using official ECB reference-rate data; one-shot x402 call with optional volume credits.",
+ "category": "Data & analytics",
+ "tags": [
+  "scriptmasterlabs",
+  "x402",
+  "mcp",
+  "openapi",
+  "agent-commerce"
+ ],
+ "endpoint": "https://squeezeos-api.onrender.com/api/fx/convert",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x5bbd32e0478e49a7540ef2d760e0b0f9aa6328b2",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "amount": "100",
+   "from": "USD",
+   "to": "EUR"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"amount\":\"100\",\"converted\":\"85.25\",\"from\":\"USD\",\"product\":\"SML FX Convert\",\"status\":\"ready\",\"to\":\"EUR\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://squeezeos-api.onrender.com/llms.txt",
+ "docsChecked": 1793609280110,
+ "payers30d": 9,
+ "calls30d": 15,
+ "lastCalledAt": "2026-11-01T06:50:57.736Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 173,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 173,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/squeezeos-api-onrender-com-api-fx-convert",
+ "rating": null,
+ "related": [
+  "api-402rates-com-v1-ping",
+  "rubric-protocol-com-v1-x402-hedera-facts-exchange-rate",
+  "nbu-navistri-com-v1-rates",
+  "api-hyperextend-xyz-v1-liquidations-coverage",
+  "api-govparse-io-v1-stats-opportunities",
+  "http-forest-gas-station-mainnet-lcjl27p8lmjs-code-run-dns-changed"
+ ],
+ "example": {
+  "curl": "curl -i 'https://squeezeos-api.onrender.com/api/fx/convert?amount=100&from=USD&to=EUR'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20squeezeos-api-onrender-com-api-fx-convert&body=%7B%22slug%22%3A%22squeezeos-api-onrender-com-api-fx-convert%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: squeezeos-api-onrender-com-api-fx-convert\",\"body\":\"{\\\"slug\\\":\\\"squeezeos-api-onrender-com-api-fx-convert\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SCRIPTMASTERLABS%3A%20Currency%20conversion%20API%20for%20AI%20agents%20%E2%80%94%20convert%20an%20amount%20between%20curr&seller=https%3A%2F%2Fsqueezeos-api.onrender.com%2Fapi%2Ffx%2Fconvert"
+}

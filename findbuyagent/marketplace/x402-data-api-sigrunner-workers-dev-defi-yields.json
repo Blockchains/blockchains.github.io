@@ -1,0 +1,87 @@
+{
+ "slug": "x402-data-api-sigrunner-workers-dev-defi-yields",
+ "name": "Top DeFi Yields & APY: Top DeFi lending/LP yields — project, chain, symbol, pool id, APY brea",
+ "seller": "Top DeFi Yields & APY",
+ "host": "x402-data-api.sigrunner.workers.dev",
+ "provider": "https://x402-data-api.sigrunner.workers.dev",
+ "description": "Top DeFi lending/LP yields — project, chain, symbol, pool id, APY breakdown + 1d/7d/30d APY trend, IL risk (incl. il7d), exposure, reward/underlying tokens, outlier flag, mu/sigma, DefiLlama stability forecast, TVL. Filter by project, chain, or stablecoin-only; sort by TVL (default) or risk-adjusted APY (apy/sigma).",
+ "category": "Weather & geo",
+ "tags": [
+  "defi",
+  "yield",
+  "apy",
+  "tvl",
+  "lending"
+ ],
+ "endpoint": "https://x402-data-api.sigrunner.workers.dev/defi/yields",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x5765ae06a52dc7A0BB71c36A11db512c7ea9ed10",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "chain": "Ethereum",
+   "limit": "20",
+   "project": "aave-v3",
+   "sort": "tvl",
+   "stable": "true"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"apy\":4.21,\"apyBase\":3.1,\"apyBase7d\":3.05,\"apyMean30d\":4.1,\"apyPct1D\":0.001,\"apyPct30D\":0.15,\"apyPct7D\":-0.06,\"apyReward\":1.11,\"chain\":\"Ethereum\",\"exposure\":\"single\",\"il7d\":null,\"ilRisk\":\"no\",\"mu\":3.47618,\"outlier\":false,\"pool\":\"747c1d2a-c668-4682-b9f9-296708a3dd90\",\"predicted_probability\":64,\"project\":\"aave-v3\",\"rewardTokens\":null,\"risk_adjusted_apy\":78.75,\"sigma\":0.05347,\"stablecoin\":true,\"symbol\":\"USDC\",\"tvlUsd\":512345678,\"underlyingTokens\":[\"0x0000000000000000000000000000000000000000\"],\"volumeUsd1d\":null}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792792622/bazaar-icons/40e0d8ab097a67ec.png",
+ "docs": "https://x402-data-api.sigrunner.workers.dev/llms.txt",
+ "docsChecked": 1793609273909,
+ "payers30d": 12,
+ "calls30d": 17,
+ "lastCalledAt": "2026-11-02T04:37:01.585Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 67,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 67,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-data-api-sigrunner-workers-dev-defi-yields",
+ "rating": null,
+ "related": [
+  "hypernatt-com-api-m2m-liq-radar",
+  "weather-agentic-jp-com-areas",
+  "api-losbeto-xyz-gas-price",
+  "x402-agentutility-ai-ip-asn",
+  "x402-seller-onrender-com-geo-lookup",
+  "x402-tbs-digital-com-weather-current"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402-data-api.sigrunner.workers.dev/defi/yields?chain=Ethereum&limit=20&project=aave-v3&sort=tvl&stable=true'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-data-api-sigrunner-workers-dev-defi-yields&body=%7B%22slug%22%3A%22x402-data-api-sigrunner-workers-dev-defi-yields%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-data-api-sigrunner-workers-dev-defi-yields\",\"body\":\"{\\\"slug\\\":\\\"x402-data-api-sigrunner-workers-dev-defi-yields\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Top%20DeFi%20Yields%20%26%20APY%3A%20Top%20DeFi%20lending%2FLP%20yields%20%E2%80%94%20project%2C%20chain%2C%20symbol%2C%20pool%20id%2C%20APY%20brea&seller=https%3A%2F%2Fx402-data-api.sigrunner.workers.dev%2Fdefi%2Fyields"
+}

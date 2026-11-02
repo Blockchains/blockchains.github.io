@@ -1,0 +1,77 @@
+{
+ "slug": "x402-twit-sh-tweets-user",
+ "name": "Get the latest tweets (timeline) from a specific Twitter/X user by the",
+ "seller": "x402.twit.sh",
+ "host": "x402.twit.sh",
+ "provider": "https://x402.twit.sh",
+ "description": "Get the latest tweets (timeline) from a specific Twitter/X user by their username. Returns up to 20 tweets per page sorted by most recent first, with pagination support. Query params: username (string, required) - Twitter screen name; next_token (string, optional) - pagination cursor, e.g. GET /tweets/user?username=elonmusk. Returns X v2 API-compatible JSON.",
+ "category": "Search & web",
+ "tags": [],
+ "endpoint": "https://x402.twit.sh/tweets/user",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x9dBA414637c611a16BEa6f0796BFcbcBdc410df8",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "username": "elonmusk"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":[{\"author\":{\"id\":\"9253672\",\"name\":\"Hal Finney\",\"username\":\"halfin\"},\"created_at\":\"2009-01-11T03:39:18.000Z\",\"id\":\"1110302988\",\"public_metrics\":{\"like_count\":134000,\"quote_count\":3500,\"reply_count\":5400,\"retweet_count\":32000},\"text\":\"Running bitcoin\"}],\"meta\":{\"next_token\":\"abc123\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402.twit.sh/.well-known/x402",
+ "docsChecked": 1793609270863,
+ "payers30d": 13,
+ "calls30d": 551,
+ "lastCalledAt": "2026-11-02T02:57:45.97Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 128,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 128,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-twit-sh-tweets-user",
+ "rating": null,
+ "related": [
+  "stableenrich-dev-api-exa-search",
+  "websearch-use-x402atlas-com-search",
+  "x402-orthogonal-com-icypeas-api-find-people",
+  "mcp-newstex-com-x402-trending",
+  "agent-data-api-agentdata-workers-dev-v1-contracts-opportunities",
+  "supplier-risk-api-production-up-railway-app-abandonment-check"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.twit.sh/tweets/user?username=elonmusk'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-twit-sh-tweets-user&body=%7B%22slug%22%3A%22x402-twit-sh-tweets-user%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-twit-sh-tweets-user\",\"body\":\"{\\\"slug\\\":\\\"x402-twit-sh-tweets-user\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Get%20the%20latest%20tweets%20(timeline)%20from%20a%20specific%20Twitter%2FX%20user%20by%20the&seller=https%3A%2F%2Fx402.twit.sh%2Ftweets%2Fuser"
+}

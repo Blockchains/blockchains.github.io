@@ -1,0 +1,79 @@
+{
+ "slug": "rubric-protocol-com-v1-x402-hedera-facts-exchange-rate",
+ "name": "TenPrint: Attested Hedera network facts: HBAR exchange rate, gas fees, supply, n",
+ "seller": "TenPrint",
+ "host": "rubric-protocol.com",
+ "provider": "https://rubric-protocol.com",
+ "description": "Attested Hedera network facts: HBAR exchange rate, gas fees, supply, node roster, throughput, topic state. Each response carries the ML-DSA-65 attestation ID of the served snapshot — tamper-evident reference data for agents that must prove what they knew when they acted.",
+ "category": "Data & analytics",
+ "tags": [
+  "hedera",
+  "oracle",
+  "data"
+ ],
+ "endpoint": "https://rubric-protocol.com/v1/x402/hedera-facts/exchange-rate",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xaB6731A0BcDf511c2842C768a03448075aB654ca",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"attestationId\":\"f734f3ac-0d02-4214-9aca-2961f8fffd58\",\"cacheWindowSeconds\":3600,\"fact\":\"supply\",\"operator\":\"TenPrint\",\"paid\":true,\"settled\":true,\"success\":true,\"value\":{\"released\":\"4379109625135465505\",\"total\":\"5000000000000000000\"},\"verifyUrl\":\"https://rubric-protocol.com/v1/verify/f734f3ac-0d02-4214-9aca-2961f8fffd58\",\"vsr\":{\"hashProfile\":\"vsr/v0.4/sha3-256\",\"spec\":\"https://rubric-protocol.com/specs/vsr-v0.4.md\",\"vsrVersion\":\"0.4-draft\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://rubric-protocol.com/llms.txt",
+ "docsChecked": 1793609267894,
+ "payers30d": 28,
+ "calls30d": 44,
+ "lastCalledAt": "2026-11-02T03:24:23.854Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 570,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 570,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/rubric-protocol-com-v1-x402-hedera-facts-exchange-rate",
+ "rating": null,
+ "related": [
+  "api-402rates-com-v1-ping",
+  "nbu-navistri-com-v1-rates",
+  "api-hyperextend-xyz-v1-liquidations-coverage",
+  "api-govparse-io-v1-stats-opportunities",
+  "http-forest-gas-station-mainnet-lcjl27p8lmjs-code-run-dns-changed",
+  "nordata-hihat-workers-dev-helligdager"
+ ],
+ "example": {
+  "curl": "curl -i 'https://rubric-protocol.com/v1/x402/hedera-facts/exchange-rate'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20rubric-protocol-com-v1-x402-hedera-facts-exchange-rate&body=%7B%22slug%22%3A%22rubric-protocol-com-v1-x402-hedera-facts-exchange-rate%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: rubric-protocol-com-v1-x402-hedera-facts-exchange-rate\",\"body\":\"{\\\"slug\\\":\\\"rubric-protocol-com-v1-x402-hedera-facts-exchange-rate\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=TenPrint%3A%20Attested%20Hedera%20network%20facts%3A%20HBAR%20exchange%20rate%2C%20gas%20fees%2C%20supply%2C%20n&seller=https%3A%2F%2Frubric-protocol.com%2Fv1%2Fx402%2Fhedera-facts%2Fexchange-rate"
+}

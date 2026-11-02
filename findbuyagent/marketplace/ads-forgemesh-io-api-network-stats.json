@@ -1,0 +1,75 @@
+{
+ "slug": "ads-forgemesh-io-api-network-stats",
+ "name": "Returns network-wide totals: total x402 events, service count, and a U",
+ "seller": "ads.forgemesh.io",
+ "host": "ads.forgemesh.io",
+ "provider": "https://ads.forgemesh.io",
+ "description": "Returns network-wide totals: total x402 events, service count, and a UA classification breakdown (agent vs browser vs bot). Use it to benchmark your service's agent-traffic share against the network.",
+ "category": "AI & LLM",
+ "tags": [],
+ "endpoint": "https://ads.forgemesh.io/api/network/stats",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x65E02cB7Fee27630bB7d1a3ADd02Ef7Aa2D21701",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 1800,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"classification\":[{\"n\":69000,\"ua_class\":\"agent\"}],\"totals\":{\"events\":190214,\"services\":3}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://ads.forgemesh.io/llms.txt",
+ "docsChecked": 1793609276718,
+ "payers30d": 10,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-02T04:43:27.861Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 127,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 127,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/ads-forgemesh-io-api-network-stats",
+ "rating": null,
+ "related": [
+  "wiki-use-x402atlas-com-summary",
+  "imagegen-coinopai-com-prompt-styles",
+  "x402-forgemesh-io-the-daily-402",
+  "agentshield-live-iban",
+  "trust402-vercel-app-api-trust-check-x402",
+  "agentshield-live-holiday"
+ ],
+ "example": {
+  "curl": "curl -i 'https://ads.forgemesh.io/api/network/stats'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20ads-forgemesh-io-api-network-stats&body=%7B%22slug%22%3A%22ads-forgemesh-io-api-network-stats%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: ads-forgemesh-io-api-network-stats\",\"body\":\"{\\\"slug\\\":\\\"ads-forgemesh-io-api-network-stats\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Returns%20network-wide%20totals%3A%20total%20x402%20events%2C%20service%20count%2C%20and%20a%20U&seller=https%3A%2F%2Fads.forgemesh.io%2Fapi%2Fnetwork%2Fstats"
+}

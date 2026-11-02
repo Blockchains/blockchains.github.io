@@ -3,16 +3,19 @@
  "name": "Source-bounded fact-check",
  "seller": "x402.asterpay.io",
  "host": "x402.asterpay.io",
+ "provider": "https://x402.asterpay.io",
  "description": "Source-bounded fact-check. Verify a claim against provided source text. Returns verdict: supported, contradicted, or unverifiable. Does NOT search the web.",
  "category": "Search & web",
  "tags": [],
  "endpoint": "https://x402.asterpay.io/v2/x402/ai/fact-check",
  "method": "POST",
+ "payment": "x402",
  "priceUsd": 0.015,
  "amount": "15000",
  "payTo": "0xd5f8481D8F25d3966d2010DBf9B47fFbdf745A9E",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
  "listedTermsMatch": true,
  "input": {
   "queryParams": null,
@@ -20,21 +23,53 @@
    "claim": "Apple reported revenue of $94.9 billion in Q1 2024",
    "source": "Apple Inc. reported fiscal first-quarter revenue of $119.6 billion, a new record."
   },
-  "bodyType": "json"
+  "bodyType": "json",
+  "headers": null
  },
+ "outputType": "json",
  "outputExample": "{\"claims_checked\":1,\"confidence\":0.98,\"evidence\":\"Source states $119.6B, not $94.9B as claimed.\",\"latency_ms\":820,\"model\":\"llama-3.3-70b-versatile\",\"summary\":\"Revenue figure directly contradicted by source.\",\"verdict\":\"contradicted\"}",
+ "outputSchema": null,
+ "iconUrl": null,
  "docs": "https://x402.asterpay.io/llms.txt",
  "docsChecked": 1793596023099,
- "payers30d": 33,
- "calls30d": 51,
+ "payers30d": 34,
+ "calls30d": 52,
+ "lastCalledAt": "2026-11-02T03:05:12.63Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 108,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 126,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 126,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-asterpay-io-v2-x402-ai-fact-check",
  "rating": null,
+ "related": [
+  "stabletravel-dev-api-google-flights-search",
+  "stabletravel-dev-api-seats-aero-search",
+  "api-kadec0-xyz-v1-papers",
+  "x402-botsmith-dev-x-search",
+  "www-trezalabs-com-api-x402-speech",
+  "appstore-use-x402atlas-com-search"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://x402.asterpay.io/v2/x402/ai/fact-check' -H 'content-type: application/json' -d '{\"claim\":\"Apple reported revenue of $94.9 billion in Q1 2024\",\"source\":\"Apple Inc. reported fiscal first-quarter revenue of $119.6 billion, a new record.\"}'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-asterpay-io-v2-x402-ai-fact-check&body=%7B%22slug%22%3A%22x402-asterpay-io-v2-x402-ai-fact-check%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-asterpay-io-v2-x402-ai-fact-check\",\"body\":\"{\\\"slug\\\":\\\"x402-asterpay-io-v2-x402-ai-fact-check\\\",\\\"stars\\\":1-5}\"}"

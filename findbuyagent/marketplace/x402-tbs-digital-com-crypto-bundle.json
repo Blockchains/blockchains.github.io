@@ -1,0 +1,83 @@
+{
+ "slug": "x402-tbs-digital-com-crypto-bundle",
+ "name": "TBS Crypto & DeFi API: Complete crypto and DeFi snapshot in ONE call for AI agents: spot pric",
+ "seller": "TBS Crypto & DeFi API",
+ "host": "x402.tbs-digital.com",
+ "provider": "https://x402.tbs-digital.com",
+ "description": "Complete crypto and DeFi snapshot in ONE call for AI agents: spot prices for your tokens, full market data (market cap, 24h volume, supply, 24h change) for the lead token, top-10 chains by TVL, and the best yield pools by APY. Prices, market, TVL and yields together — the most complete crypto+DeFi call per request.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto",
+  "defi",
+  "bundle",
+  "prices",
+  "tvl"
+ ],
+ "endpoint": "https://x402.tbs-digital.com/crypto/bundle",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xd6fCE15298Fc9D60f867d9455D497177Da9BFB0a",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "symbols": "btc,eth"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"generated_at\":\"2026-08-11T12:00:00.000Z\",\"market\":{\"circulating_supply\":19720000,\"id\":\"btc-bitcoin\",\"market_cap_usd\":1281000000000,\"name\":\"Bitcoin\",\"observed_at\":\"2026-08-11T12:00:00.000Z\",\"percent_change_24h\":1.24,\"price_usd\":64980.12,\"rank\":1,\"symbol\":\"BTC\",\"total_supply\":21000000,\"volume_24h_usd\":25400000000},\"payer\":{\"address\":\"0x0000000000000000000000000000000000000000\",\"network\":\"base\"},\"prices\":[{\"coin\":\"coingecko:ethereum\",\"confidence\":0.99,\"observed_at\":\"2026-08-11T12:00:00.000Z\",\"price_usd\":3542.18,\"symbol\":\"ETH\"}],\"request_id\":\"0b21c0e6-6a3f-4e2a-8b1e-2f9d4c7a1e55\",\"source\":\"defillama+coinpaprika\",\"top_chains\":[{\"name\":\"Ethereum\",\"tvl_usd\":52100000000}],\"top_yields\":[{\"apy\":5.21,\"apy_base\":5.02,\"chain\":\"Ethereum\",\"project\":\"aave-v3\",\"stablecoin\":true,\"symbol\":\"USDC\",\"tvl_usd\":452000000}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402.tbs-digital.com/llms.txt",
+ "docsChecked": 1793609277679,
+ "payers30d": 10,
+ "calls30d": 11,
+ "lastCalledAt": "2026-11-02T04:30:45.999Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 137,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 137,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-tbs-digital-com-crypto-bundle",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402.tbs-digital.com/crypto/bundle?symbols=btc%2Ceth'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-tbs-digital-com-crypto-bundle&body=%7B%22slug%22%3A%22x402-tbs-digital-com-crypto-bundle%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-tbs-digital-com-crypto-bundle\",\"body\":\"{\\\"slug\\\":\\\"x402-tbs-digital-com-crypto-bundle\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=TBS%20Crypto%20%26%20DeFi%20API%3A%20Complete%20crypto%20and%20DeFi%20snapshot%20in%20ONE%20call%20for%20AI%20agents%3A%20spot%20pric&seller=https%3A%2F%2Fx402.tbs-digital.com%2Fcrypto%2Fbundle"
+}

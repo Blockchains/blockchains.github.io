@@ -1,0 +1,90 @@
+{
+ "slug": "api-relaystation-ai-v1-screening-match",
+ "name": "Relaystation Screening: $0.01/screen",
+ "seller": "Relaystation Screening",
+ "host": "api.relaystation.ai",
+ "provider": "https://api.relaystation.ai",
+ "description": "$0.01/screen. Screen any name against OFAC, EU, and UK sanctions (UN included) plus Wikidata-derived PEP watchlists — fuzzy matching, instant JSON verdict. Compliance in one call, one of 155 Relaystation tools on one balance — relaystation.ai",
+ "category": "Security & compliance",
+ "tags": [
+  "sanctions-screening",
+  "aml",
+  "pep",
+  "compliance",
+  "watchlists"
+ ],
+ "endpoint": "https://api.relaystation.ai/v1/screening/match",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x5F7254f252eF9b9f92B6B4F2cF91205eD7A96C7A",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "dob": "string",
+   "lists": [
+    "sanctions"
+   ],
+   "name": "string",
+   "nationality": "string",
+   "threshold": 0,
+   "type": "person"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"ok\":true}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.relaystation.ai/llms.txt",
+ "docsChecked": 1793609279114,
+ "payers30d": 9,
+ "calls30d": 62,
+ "lastCalledAt": "2026-11-01T18:18:20.003Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 569,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 569,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-relaystation-ai-v1-screening-match",
+ "rating": null,
+ "related": [
+  "api-vrsai-tech-v1-capabilities-package-install-preflight",
+  "agent-guild-5d5r-onrender-com-flags",
+  "netintel-dev-email-auth",
+  "toolrail-dev-vat-rates",
+  "modelmarket-dev-x402-histor-check",
+  "quartermaster-surewhynot-app-v1-dns"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.relaystation.ai/v1/screening/match' -H 'content-type: application/json' -d '{}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-relaystation-ai-v1-screening-match&body=%7B%22slug%22%3A%22api-relaystation-ai-v1-screening-match%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-relaystation-ai-v1-screening-match\",\"body\":\"{\\\"slug\\\":\\\"api-relaystation-ai-v1-screening-match\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Relaystation%20Screening%3A%20%240.01%2Fscreen&seller=https%3A%2F%2Fapi.relaystation.ai%2Fv1%2Fscreening%2Fmatch"
+}

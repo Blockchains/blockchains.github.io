@@ -1,0 +1,81 @@
+{
+ "slug": "energy-halowerk-com-carbon-now",
+ "name": "HALOWERK Energy: Aktuelle CO2-Intensität des deutschen Strommix",
+ "seller": "HALOWERK Energy",
+ "host": "energy.halowerk.com",
+ "provider": "https://energy.halowerk.com",
+ "description": "Aktuelle CO2-Intensität des deutschen Strommix.",
+ "category": "Finance & markets",
+ "tags": [
+  "compute-scheduling",
+  "depin-workloads",
+  "carbon-aware-compute",
+  "battery-dispatch",
+  "power-trading"
+ ],
+ "endpoint": "https://energy.halowerk.com/carbon/now",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x2880EdfFF13100677Bf97A3CBdF3Bc34771C4E5E",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"carbon_intensity_g_co2_kwh\":310,\"classification\":\"medium\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://energy.halowerk.com/llms.txt",
+ "docsChecked": 1793609276557,
+ "payers30d": 10,
+ "calls30d": 22,
+ "lastCalledAt": "2026-10-29T12:23:01.244Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 505,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 505,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/energy-halowerk-com-carbon-now",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://energy.halowerk.com/carbon/now' -H 'content-type: application/json' -d '{}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20energy-halowerk-com-carbon-now&body=%7B%22slug%22%3A%22energy-halowerk-com-carbon-now%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: energy-halowerk-com-carbon-now\",\"body\":\"{\\\"slug\\\":\\\"energy-halowerk-com-carbon-now\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=HALOWERK%20Energy%3A%20Aktuelle%20CO2-Intensit%C3%A4t%20des%20deutschen%20Strommix&seller=https%3A%2F%2Fenergy.halowerk.com%2Fcarbon%2Fnow"
+}

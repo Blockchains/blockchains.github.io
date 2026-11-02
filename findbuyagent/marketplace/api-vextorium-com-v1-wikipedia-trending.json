@@ -1,0 +1,84 @@
+{
+ "slug": "api-vextorium-com-v1-wikipedia-trending",
+ "name": "Most read Wikipedia articles: Most read Wikipedia articles in a language on a given day (yesterday b",
+ "seller": "Most read Wikipedia articles",
+ "host": "api.vextorium.com",
+ "provider": "https://api.vextorium.com",
+ "description": "Most read Wikipedia articles in a language on a given day (yesterday by default): what people are looking up, with views and rank, technical pages removed. A signal of current events and trends.",
+ "category": "Search & web",
+ "tags": [
+  "trends",
+  "wikipedia",
+  "news",
+  "attention",
+  "pageviews"
+ ],
+ "endpoint": "https://api.vextorium.com/v1/wikipedia-trending",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xb9f06D2734B7E9D7b21B64C4D8b95bd774b71aCf",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "language": "en",
+   "limit": 3
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"articles\":[{\"article\":\"GBU-43/B MOAB\",\"link\":\"https://en.wikipedia.org/wiki/GBU-43/B_MOAB\",\"rank\":1,\"visits\":453110},{\"article\":\"Katie Zacharia\",\"link\":\"https://en.wikipedia.org/wiki/Katie_Zacharia\",\"rank\":2,\"visits\":428191}],\"day\":\"2026-10-15\",\"language\":\"en\",\"source\":\"Wikimedia pageviews (CC0)\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.vextorium.com/llms.txt",
+ "docsChecked": 1793609279933,
+ "payers30d": 9,
+ "calls30d": 17,
+ "lastCalledAt": "2026-11-01T07:36:36.522Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 145,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 145,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-vextorium-com-v1-wikipedia-trending",
+ "rating": null,
+ "related": [
+  "api-bitrefill-com-x402-gift-cards-search",
+  "stableenrich-dev-api-exa-contents",
+  "win-oneshotagent-com-v1-tools-web-read",
+  "search-cyberwarex-com-contents",
+  "apexfaucet-xyz-api-x402-page-markdown",
+  "sift-srv1996466-hstgr-cloud-v1-feeds"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.vextorium.com/v1/wikipedia-trending' -H 'content-type: application/json' -d '{\"language\":\"en\",\"limit\":3}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-vextorium-com-v1-wikipedia-trending&body=%7B%22slug%22%3A%22api-vextorium-com-v1-wikipedia-trending%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-vextorium-com-v1-wikipedia-trending\",\"body\":\"{\\\"slug\\\":\\\"api-vextorium-com-v1-wikipedia-trending\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Most%20read%20Wikipedia%20articles%3A%20Most%20read%20Wikipedia%20articles%20in%20a%20language%20on%20a%20given%20day%20(yesterday%20b&seller=https%3A%2F%2Fapi.vextorium.com%2Fv1%2Fwikipedia-trending"
+}

@@ -1,0 +1,84 @@
+{
+ "slug": "api-robinx-io-feed-new",
+ "name": "RobinX: Live scored launch feed (realtime) — or add ?tier=free for the 10-min-",
+ "seller": "RobinX",
+ "host": "api.robinx.io",
+ "provider": "https://api.robinx.io",
+ "description": "Live scored launch feed (realtime) — or add ?tier=free for the 10-min-delayed free feed, or ?tier=alpha ($0.02) for caller_signal enrichment",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "robinhood-chain",
+  "caller-accuracy",
+  "social-data",
+  "token-intelligence",
+  "memecoin-forensics"
+ ],
+ "endpoint": "https://api.robinx.io/feed/new",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0xA13d363AeCCCF878Ec64f6eB687Eb4A771FB0599",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": 25,
+   "min_score": 70
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"items\":[{\"deployer_score\":82,\"seen_at\":\"2026-07-20T12:00:00Z\",\"symbol\":\"CASHCAT\",\"tg_led\":true,\"token\":\"0x020bfC650A365f8BB26819deAAbF3E21291018b4\"}]}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1784991200/bazaar-icons/dd52fca39de7dc86.png",
+ "docs": "https://api.robinx.io/llms.txt",
+ "docsChecked": 1793609274212,
+ "payers30d": 12,
+ "calls30d": 15,
+ "lastCalledAt": "2026-11-01T23:14:16.918Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 69,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 69,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-robinx-io-feed-new",
+ "rating": null,
+ "related": [
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets",
+  "api-nansen-ai-api-v1-tgm-token-information",
+  "api-x402node-dev-chain-honeypot",
+  "api-gondola-ai-com-v1-chat-completions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.robinx.io/feed/new?limit=25&min_score=70'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-robinx-io-feed-new&body=%7B%22slug%22%3A%22api-robinx-io-feed-new%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-robinx-io-feed-new\",\"body\":\"{\\\"slug\\\":\\\"api-robinx-io-feed-new\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=RobinX%3A%20Live%20scored%20launch%20feed%20(realtime)%20%E2%80%94%20or%20add%20%3Ftier%3Dfree%20for%20the%2010-min-&seller=https%3A%2F%2Fapi.robinx.io%2Ffeed%2Fnew"
+}

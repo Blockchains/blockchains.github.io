@@ -1,0 +1,83 @@
+{
+ "slug": "gogeta2-u35175-vm-elestio-app-agents-v1-payments-usdc-balance",
+ "name": "USDC Balance on Base: Current USDC balance of an address on Base or Base Sepolia (balanceOf",
+ "seller": "USDC Balance on Base",
+ "host": "gogeta2-u35175.vm.elestio.app",
+ "provider": "https://gogeta2-u35175.vm.elestio.app",
+ "description": "Current USDC balance of an address on Base or Base Sepolia (balanceOf on the official Circle contract).",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "usdc",
+  "balance",
+  "base",
+  "wallet",
+  "agent-payments"
+ ],
+ "endpoint": "https://gogeta2-u35175.vm.elestio.app/agents/v1/payments/usdc-balance",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xe414aD5c7542CE63D890526f0e2133ff8da6F22D",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "address": "0xe414aD5c7542CE63D890526f0e2133ff8da6F22D"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"address\":\"0xe414ad5c7542ce63d890526f0e2133ff8da6f22d\",\"balance_raw\":\"0\",\"billing_unit\":\"address\",\"block_number\":52980236,\"chain\":\"base\",\"chain_id\":8453,\"generated_at\":\"2026-10-23T10:03:40Z\",\"price_usd\":0.001,\"response_time_ms\":227,\"source\":\"eth_call balanceOf on the official USDC contract\",\"sources\":[{}],\"usdc_balance\":0,\"usdc_contract\":\"0x833589fcd6edb6e08f4c7c32d4f71b54bda02913\"},\"service\":\"usdc_balance\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792822083/bazaar-icons/c9484d899d6f5520.png",
+ "docs": null,
+ "docsChecked": 1793609278715,
+ "payers30d": 10,
+ "calls30d": 12,
+ "lastCalledAt": "2026-11-01T06:54:32.094Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 421,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 421,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/gogeta2-u35175-vm-elestio-app-agents-v1-payments-usdc-balance",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://gogeta2-u35175.vm.elestio.app/agents/v1/payments/usdc-balance?address=0xe414aD5c7542CE63D890526f0e2133ff8da6F22D'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20gogeta2-u35175-vm-elestio-app-agents-v1-payments-usdc-balance&body=%7B%22slug%22%3A%22gogeta2-u35175-vm-elestio-app-agents-v1-payments-usdc-balance%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: gogeta2-u35175-vm-elestio-app-agents-v1-payments-usdc-balance\",\"body\":\"{\\\"slug\\\":\\\"gogeta2-u35175-vm-elestio-app-agents-v1-payments-usdc-balance\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=USDC%20Balance%20on%20Base%3A%20Current%20USDC%20balance%20of%20an%20address%20on%20Base%20or%20Base%20Sepolia%20(balanceOf&seller=https%3A%2F%2Fgogeta2-u35175.vm.elestio.app%2Fagents%2Fv1%2Fpayments%2Fusdc-balance"
+}

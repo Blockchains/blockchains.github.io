@@ -1,0 +1,75 @@
+{
+ "slug": "api-govparse-io-v1-stats-sponsors",
+ "name": "How much visa-sponsorship data is on file",
+ "seller": "api.govparse.io",
+ "host": "api.govparse.io",
+ "provider": "https://api.govparse.io",
+ "description": "How much visa-sponsorship data is on file? Headline aggregates over DOL OFLC disclosure data: distinct sponsoring employers, LCA and PERM case totals with certified counts, and the fiscal years covered.",
+ "category": "Data & analytics",
+ "tags": [],
+ "endpoint": "https://api.govparse.io/v1/stats/sponsors",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x3873d15CF3209c32aaA8d9AA542164E658567129",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"fiscal_years\":[2026],\"lca_cases\":210387,\"lca_certified\":190152,\"perm_cases\":60096,\"perm_certified\":55216,\"sponsors\":45210}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609275460,
+ "payers30d": 11,
+ "calls30d": 17,
+ "lastCalledAt": "2026-10-30T12:43:35.506Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 528,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 528,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-govparse-io-v1-stats-sponsors",
+ "rating": null,
+ "related": [
+  "api-402rates-com-v1-ping",
+  "rubric-protocol-com-v1-x402-hedera-facts-exchange-rate",
+  "nbu-navistri-com-v1-rates",
+  "api-hyperextend-xyz-v1-liquidations-coverage",
+  "http-forest-gas-station-mainnet-lcjl27p8lmjs-code-run-dns-changed",
+  "nordata-hihat-workers-dev-helligdager"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.govparse.io/v1/stats/sponsors'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-govparse-io-v1-stats-sponsors&body=%7B%22slug%22%3A%22api-govparse-io-v1-stats-sponsors%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-govparse-io-v1-stats-sponsors\",\"body\":\"{\\\"slug\\\":\\\"api-govparse-io-v1-stats-sponsors\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=How%20much%20visa-sponsorship%20data%20is%20on%20file&seller=https%3A%2F%2Fapi.govparse.io%2Fv1%2Fstats%2Fsponsors"
+}

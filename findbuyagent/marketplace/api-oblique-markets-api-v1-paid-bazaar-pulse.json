@@ -1,0 +1,81 @@
+{
+ "slug": "api-oblique-markets-api-v1-paid-bazaar-pulse",
+ "name": "Oblique Markets: Use when an agent wants one-call situational awareness of the x402 Baz",
+ "seller": "Oblique Markets",
+ "host": "api.oblique.markets",
+ "provider": "https://api.oblique.markets",
+ "description": "Use when an agent wants one-call situational awareness of the x402 Bazaar before choosing what to buy or sell. Returns Live x402 Bazaar market pulse: trending services, call volumes, new listings, and catalog changes from daily full-catalog snapshots. Machine-readable JSON for agent-market research. $0.002.",
+ "category": "Data & analytics",
+ "tags": [
+  "bazaar",
+  "market-data",
+  "x402",
+  "catalogue",
+  "trends"
+ ],
+ "endpoint": "https://api.oblique.markets/api/v1/paid/bazaar-pulse",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x970007590aCC5C938cd51345B17AF51B1B40D3Ab",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"as_of\":\"2026-08-27\",\"generated_at\":\"2026-08-27T12:00:00.000Z\",\"networks\":[\"eip155:8453\",\"solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp\"],\"top_services\":[{\"calls_30d\":250,\"listings\":3,\"name\":\"bazaar-pulse\",\"payers_30d\":18}],\"totals\":{\"calls_30d\":1850,\"resources\":42,\"sellers\":12}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1787816262/bazaar-icons/3e4ab977553c6430.png",
+ "docs": "https://api.oblique.markets/llms.txt",
+ "docsChecked": 1793609267944,
+ "payers30d": 26,
+ "calls30d": 32,
+ "lastCalledAt": "2026-11-01T21:32:33.84Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 30,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 30,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-oblique-markets-api-v1-paid-bazaar-pulse",
+ "rating": null,
+ "related": [
+  "api-hyperextend-xyz-v1-candles-btc-1m-latest",
+  "rest-coincap-io-v3-agentfriendly-full-assets-by-slug",
+  "kaisha-api-hp-vladic-workers-dev-calendar-holidays",
+  "brasil-dados-api-onrender-com-cambio",
+  "jmt-x402-proxy-jmthomasofficial-workers-dev-v2-api-whois",
+  "nbu-navistri-com-v1-ovdp-auctions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.oblique.markets/api/v1/paid/bazaar-pulse'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-oblique-markets-api-v1-paid-bazaar-pulse&body=%7B%22slug%22%3A%22api-oblique-markets-api-v1-paid-bazaar-pulse%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-oblique-markets-api-v1-paid-bazaar-pulse\",\"body\":\"{\\\"slug\\\":\\\"api-oblique-markets-api-v1-paid-bazaar-pulse\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Oblique%20Markets%3A%20Use%20when%20an%20agent%20wants%20one-call%20situational%20awareness%20of%20the%20x402%20Baz&seller=https%3A%2F%2Fapi.oblique.markets%2Fapi%2Fv1%2Fpaid%2Fbazaar-pulse"
+}

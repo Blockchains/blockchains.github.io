@@ -1,0 +1,81 @@
+{
+ "slug": "api-manylives-me-paid-util-time",
+ "name": "ManyLives Tools: Current time from a trusted server: UTC ISO timestamp, Unix seconds an",
+ "seller": "ManyLives Tools",
+ "host": "api.manylives.me",
+ "provider": "https://api.manylives.me",
+ "description": "Current time from a trusted server: UTC ISO timestamp, Unix seconds and milliseconds, and the time in an optional IANA time zone.",
+ "category": "AI & LLM",
+ "tags": [
+  "agents",
+  "util",
+  "time"
+ ],
+ "endpoint": "https://api.manylives.me/paid/util/time",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xD161874249321F8AE3000C19DdD070e46682f1B3",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "tz": "Australia/Sydney"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"local\":\"08/10/2026, 17:00:00\",\"tz\":\"Australia/Sydney\",\"unix\":1791439200,\"unix_ms\":1791439200000,\"utc\":\"2026-10-08T06:00:00.000Z\"}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791574235/bazaar-icons/dee04b199148b5de.png",
+ "docs": "https://api.manylives.me/llms.txt",
+ "docsChecked": 1793609281205,
+ "payers30d": 9,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T12:47:23.575Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 324,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 324,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-manylives-me-paid-util-time",
+ "rating": null,
+ "related": [
+  "gibbr-app-agent-translate",
+  "x402-telnyx-com-v1-chat-completions-t-gemma-2b",
+  "x402-onhub-ai-v1-chat-completions",
+  "agentshield-live-ean",
+  "ask-singitai-app-v1-responses",
+  "x402-telnyx-com-v1-chat-completions-t-llama-3-1-8b"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.manylives.me/paid/util/time?tz=Australia%2FSydney'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-manylives-me-paid-util-time&body=%7B%22slug%22%3A%22api-manylives-me-paid-util-time%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-manylives-me-paid-util-time\",\"body\":\"{\\\"slug\\\":\\\"api-manylives-me-paid-util-time\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ManyLives%20Tools%3A%20Current%20time%20from%20a%20trusted%20server%3A%20UTC%20ISO%20timestamp%2C%20Unix%20seconds%20an&seller=https%3A%2F%2Fapi.manylives.me%2Fpaid%2Futil%2Ftime"
+}

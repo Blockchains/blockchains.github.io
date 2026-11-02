@@ -1,0 +1,89 @@
+{
+ "slug": "humanmirror-fr-api-x402-safe-preflight",
+ "name": "HumanMirror: Independent pre-execution control for consequential autonomous-agent a",
+ "seller": "HumanMirror",
+ "host": "humanmirror.fr",
+ "provider": "https://humanmirror.fr",
+ "description": "Independent pre-execution control for consequential autonomous-agent actions. Evaluate a proposed payment, tool call, send, write, publish operation, API action, or other external side effect before execution; return the required approval or human-review boundary and verify that risk stays within the declared limit. 3 bounded free preview calls are available via extensions.humanmirrorPreview.",
+ "category": "AI & LLM",
+ "tags": [
+  "preflight",
+  "payment",
+  "tool-call",
+  "approval-gate",
+  "human-in-the-loop"
+ ],
+ "endpoint": "https://humanmirror.fr/api/x402/safe-preflight/",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x48096526488f2D51df6bcA1B1f3A3639986cc3dD",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "criteria": {
+    "allow_confirmation": false,
+    "max_risk": "medium"
+   },
+   "input": {
+    "command": "Send a payment or publish data with an external side effect"
+   }
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"ok\":true,\"product\":\"safe_preflight\",\"result\":{\"status\":\"verified_success\"},\"x402\":{\"amount_usdc\":\"0.010\",\"asset\":\"USDC\",\"network\":\"eip155:8453\",\"version\":2}}",
+ "outputSchema": "{\"additionalProperties\":true,\"properties\":{\"continuation\":{\"additionalProperties\":true,\"type\":\"object\"},\"mirror_loop\":{\"additionalProperties\":true,\"type\":\"object\"},\"ok\":{\"const\":true,\"type\":\"boolean\"},\"product\":{\"const\":\"safe_preflight\",\"type\":\"string\"},\"result\":{\"additionalProperties\":true,\"type\":\"object\"},\"x402\":{\"additionalProperties\":true,\"properties\":{\"amount_usdc\":{\"type\":\"string\"},\"asset\":{\"type\":\"string\"},\"network\":{\"type\":\"string\"},\"version\":{\"const\":2,\"type\":\"integer\"}},\"required\":[\"version\",\"network\",\"asset\",\"amount_usdc\"],\"type\":\"object\"}},\"required\":[\"ok\",\"product\",\"x402\",\"result\"],\"type\":\"object\"}",
+ "iconUrl": null,
+ "docs": "https://humanmirror.fr/llms.txt",
+ "docsChecked": 1793609281609,
+ "payers30d": 9,
+ "calls30d": 12,
+ "lastCalledAt": "2026-10-24T19:18:00Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 1301,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 1301,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/humanmirror-fr-api-x402-safe-preflight",
+ "rating": null,
+ "related": [
+  "www-getbags-app-api-v1",
+  "api-signalis-dev-v1-pulse-narratives",
+  "api-vindexapi-dev-v1-decode",
+  "x402-telnyx-com-v1-chat-completions-t-deepseek-v4-1-flash",
+  "wiki-use-x402atlas-com-summary",
+  "imagegen-coinopai-com-prompt-styles"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://humanmirror.fr/api/x402/safe-preflight/' -H 'content-type: application/json' -d '{\"criteria\":{\"allow_confirmation\":false,\"max_risk\":\"medium\"},\"input\":{\"command\":\"Send a payment or publish data with an external side effect\"}}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20humanmirror-fr-api-x402-safe-preflight&body=%7B%22slug%22%3A%22humanmirror-fr-api-x402-safe-preflight%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: humanmirror-fr-api-x402-safe-preflight\",\"body\":\"{\\\"slug\\\":\\\"humanmirror-fr-api-x402-safe-preflight\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=HumanMirror%3A%20Independent%20pre-execution%20control%20for%20consequential%20autonomous-agent%20a&seller=https%3A%2F%2Fhumanmirror.fr%2Fapi%2Fx402%2Fsafe-preflight%2F"
+}

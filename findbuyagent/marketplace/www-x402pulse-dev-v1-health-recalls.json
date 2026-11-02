@@ -1,0 +1,85 @@
+{
+ "slug": "www-x402pulse-dev-v1-health-recalls",
+ "name": "x402Pulse: FDA drug recalls and food recalls: the latest FDA enforcement reports",
+ "seller": "x402Pulse",
+ "host": "www.x402pulse.dev",
+ "provider": "https://www.x402pulse.dev",
+ "description": "FDA drug recalls and food recalls: the latest FDA enforcement reports with recall class (Class I is most serious) explained in plain language, recalling firm, product, reason, status, dates and distribution. Filter by class, company and time window. openFDA data, not medical advice.",
+ "category": "Data & analytics",
+ "tags": [
+  "health",
+  "fda",
+  "pharma",
+  "hospitals",
+  "x402pulse"
+ ],
+ "endpoint": "https://www.x402pulse.dev/v1/health/recalls",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.0014,
+ "amount": "1400",
+ "payTo": "0x5e901f973C17E5542b4Da2A64C7fDc736B2A6e74",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "class": "I",
+   "days": "30",
+   "type": "drug"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"cached\":false,\"data\":{\"byClass\":{\"Class I\":4},\"classification\":\"Class I\",\"days\":30,\"recalls\":[{\"classification\":\"Class I\",\"firm\":\"Example Labs\",\"product\":\"Example 10 mg tablets\",\"reason\":\"Failed impurity specification\",\"recallNumber\":\"D-0001-2026\",\"reportDate\":\"2026-09-21\"}],\"totalMatching\":4,\"type\":\"drug\"}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791450934/bazaar-icons/480471795f7f9f46.png",
+ "docs": "https://www.x402pulse.dev/llms.txt",
+ "docsChecked": 1793609276478,
+ "payers30d": 10,
+ "calls30d": 23,
+ "lastCalledAt": "2026-11-01T12:41:29.559Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 521,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 521,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/www-x402pulse-dev-v1-health-recalls",
+ "rating": null,
+ "related": [
+  "api-402rates-com-v1-ping",
+  "rubric-protocol-com-v1-x402-hedera-facts-exchange-rate",
+  "nbu-navistri-com-v1-rates",
+  "api-hyperextend-xyz-v1-liquidations-coverage",
+  "api-govparse-io-v1-stats-opportunities",
+  "http-forest-gas-station-mainnet-lcjl27p8lmjs-code-run-dns-changed"
+ ],
+ "example": {
+  "curl": "curl -i 'https://www.x402pulse.dev/v1/health/recalls?class=I&days=30&type=drug'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-x402pulse-dev-v1-health-recalls&body=%7B%22slug%22%3A%22www-x402pulse-dev-v1-health-recalls%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-x402pulse-dev-v1-health-recalls\",\"body\":\"{\\\"slug\\\":\\\"www-x402pulse-dev-v1-health-recalls\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x402Pulse%3A%20FDA%20drug%20recalls%20and%20food%20recalls%3A%20the%20latest%20FDA%20enforcement%20reports&seller=https%3A%2F%2Fwww.x402pulse.dev%2Fv1%2Fhealth%2Frecalls"
+}

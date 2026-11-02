@@ -1,0 +1,75 @@
+{
+ "slug": "api-printmoneylab-com-api-v1-fx-rate",
+ "name": "Current USD/KRW foreign exchange rate",
+ "seller": "api.printmoneylab.com",
+ "host": "api.printmoneylab.com",
+ "provider": "https://api.printmoneylab.com",
+ "description": "Current USD/KRW foreign exchange rate",
+ "category": "Utilities",
+ "tags": [],
+ "endpoint": "https://api.printmoneylab.com/api/v1/fx-rate",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xcF9223eCe895258dEa8D288AEBcf846Ab8E342fB",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"base\":\"USD\",\"data_age_seconds\":0,\"quote\":\"KRW\",\"rate\":1475.27,\"source\":\"exchangerate-api.com\",\"timestamp\":1776340000000}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.printmoneylab.com/llms.txt",
+ "docsChecked": 1793609271268,
+ "payers30d": 13,
+ "calls30d": 68,
+ "lastCalledAt": "2026-11-02T04:22:08.162Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 195,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 195,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-printmoneylab-com-api-v1-fx-rate",
+ "rating": null,
+ "related": [
+  "scvd-store-api-buy-spot-check",
+  "api-aurenic-org-treasury-debt",
+  "workspace-x402-paywall-onrender-com-utils-uuid",
+  "headlessoracle-com-v5-status-x402",
+  "fanfare-run-nba-teams",
+  "agent-treats-production-up-railway-app-api-fact"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.printmoneylab.com/api/v1/fx-rate'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-printmoneylab-com-api-v1-fx-rate&body=%7B%22slug%22%3A%22api-printmoneylab-com-api-v1-fx-rate%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-printmoneylab-com-api-v1-fx-rate\",\"body\":\"{\\\"slug\\\":\\\"api-printmoneylab-com-api-v1-fx-rate\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Current%20USD%2FKRW%20foreign%20exchange%20rate&seller=https%3A%2F%2Fapi.printmoneylab.com%2Fapi%2Fv1%2Ffx-rate"
+}

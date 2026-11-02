@@ -1,0 +1,77 @@
+{
+ "slug": "www-robbiegeorgephotography-com-v1-query-atomic-robbie-george-biograph",
+ "name": "Atomic canonical resolution for the registered Robbie George Biography",
+ "seller": "www.robbiegeorgephotography.com",
+ "host": "www.robbiegeorgephotography.com",
+ "provider": "https://www.robbiegeorgephotography.com",
+ "description": "Atomic canonical resolution for the registered Robbie George Biography Plate™ identifier. x402 payment grants one endpoint-level retrieval only. It does not grant training, embedding, bulk ingestion, redistribution, resale, synchronization, private-dataset construction, derivative-dataset creation, or Robbie's Razor framework implementation rights.",
+ "category": "Data & analytics",
+ "tags": [],
+ "endpoint": "https://www.robbiegeorgephotography.com/v1/query/atomic/robbie-george-biography-plate",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xb0d0207bCd46c6a7009cA5c8294177D79aDc0807",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "resource": "https://www.robbiegeorgephotography.com/v1/query/atomic/robbie-george-biography-plate"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"@context\":\"https://schema.org\",\"@type\":\"Dataset\",\"canonicalKeepCount\":758,\"description\":\"Atomic canonical resolution for the registered Robbie George Biography Plate™ identifier.\",\"duplicateRemovedCount\":33,\"name\":\"Robbie George Biography Plate™ Canonical Identifier Resolution\",\"systems\":[]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://www.robbiegeorgephotography.com/llms.txt",
+ "docsChecked": 1793609275296,
+ "payers30d": 11,
+ "calls30d": 15,
+ "lastCalledAt": "2026-10-30T06:18:33.823Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 128,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 128,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/www-robbiegeorgephotography-com-v1-query-atomic-robbie-george-biograph",
+ "rating": null,
+ "related": [
+  "agent402-tools-api-demand-radar",
+  "agent402-tools-api-bestsellers",
+  "dns-use-x402atlas-com-a",
+  "api-hyperextend-xyz-v1-asset-ctx-btc-latest",
+  "api-mekler-ai-v1-email-domains-check-mail-configuration",
+  "quantagentshop-com-v1-ip-geo"
+ ],
+ "example": {
+  "curl": "curl -i 'https://www.robbiegeorgephotography.com/v1/query/atomic/robbie-george-biography-plate?resource=https%3A%2F%2Fwww.robbiegeorgephotography.com%2Fv1%2Fquery%2Fatomic%2Frobbie-george-biography-plate'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-robbiegeorgephotography-com-v1-query-atomic-robbie-george-biograph&body=%7B%22slug%22%3A%22www-robbiegeorgephotography-com-v1-query-atomic-robbie-george-biograph%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-robbiegeorgephotography-com-v1-query-atomic-robbie-george-biograph\",\"body\":\"{\\\"slug\\\":\\\"www-robbiegeorgephotography-com-v1-query-atomic-robbie-george-biograph\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Atomic%20canonical%20resolution%20for%20the%20registered%20Robbie%20George%20Biography&seller=https%3A%2F%2Fwww.robbiegeorgephotography.com%2Fv1%2Fquery%2Fatomic%2Frobbie-george-biography-plate"
+}

@@ -1,0 +1,85 @@
+{
+ "slug": "agent402-tools-api-demand-radar",
+ "name": "agent demand radar: What agents keep asking for that nobody serves yet: aggregated, qualif",
+ "seller": "agent demand radar",
+ "host": "agent402.tools",
+ "provider": "https://agent402.tools",
+ "description": "What agents keep asking for that nobody serves yet: aggregated, qualified demand clusters from a live agent-demand board, with caller counts and how long each need has persisted. Use it when a seller or an agent is choosing what to build next and wants unmet demand with evidence instead of guesses.",
+ "category": "Data & analytics",
+ "tags": [
+  "research",
+  "demand",
+  "market-intelligence",
+  "x402",
+  "agents"
+ ],
+ "endpoint": "https://agent402.tools/api/demand-radar",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xaBF4FAbd7c416fB67202E5f9002389Fc75e2a9D0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": 10,
+   "minCount": 1,
+   "sort": "count"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"buildThreshold\":5,\"distinctClusters\":17,\"generatedAt\":\"2026-07-14T00:00:05.000Z\",\"limit\":10,\"matchedClusters\":17,\"minCount\":1,\"qualifiedClusters\":3,\"qualifiedOnly\":false,\"qualifyMinCallers\":3,\"qualifyMinSpanHours\":24,\"radar\":[{\"callers\":3,\"count\":4,\"firstSeen\":\"2026-07-01T09:00:00.000Z\",\"gapToThreshold\":1,\"lastSeen\":\"2026-07-13T18:30:00.000Z\",\"nearThreshold\":true,\"noise\":false,\"qualified\":true,\"signalType\":\"explicit-request\",\"sources\":{\"api\":3,\"find-miss\":0,\"mcp\":1},\"spanHours\":297.5,\"text\":\"reverse geocode coordinates to street address\"}],\"sort\":\"count\",\"totalWishes\":42}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1784423094/bazaar-icons/478aced8e219894c.png",
+ "docs": "https://agent402.tools/llms.txt",
+ "docsChecked": 1793609267794,
+ "payers30d": 26,
+ "calls30d": 113,
+ "lastCalledAt": "2026-11-02T03:41:47.675Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 130,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 130,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agent402-tools-api-demand-radar",
+ "rating": null,
+ "related": [
+  "www-robbiegeorgephotography-com-v1-query-atomic-robbie-george-biograph",
+  "dns-use-x402atlas-com-a",
+  "api-hyperextend-xyz-v1-asset-ctx-btc-latest",
+  "api-mekler-ai-v1-email-domains-check-mail-configuration",
+  "quantagentshop-com-v1-ip-geo",
+  "quantagentshop-com-v1-domain-lookup"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agent402.tools/api/demand-radar?limit=10&minCount=1&sort=count'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agent402-tools-api-demand-radar&body=%7B%22slug%22%3A%22agent402-tools-api-demand-radar%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agent402-tools-api-demand-radar\",\"body\":\"{\\\"slug\\\":\\\"agent402-tools-api-demand-radar\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=agent%20demand%20radar%3A%20What%20agents%20keep%20asking%20for%20that%20nobody%20serves%20yet%3A%20aggregated%2C%20qualif&seller=https%3A%2F%2Fagent402.tools%2Fapi%2Fdemand-radar"
+}

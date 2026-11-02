@@ -1,0 +1,75 @@
+{
+ "slug": "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+ "name": "PolySignal paper-trading performance summary, including win rate, ROI,",
+ "seller": "polymarket-signal-api.pwnker-polymarket-signals.workers.dev",
+ "host": "polymarket-signal-api.pwnker-polymarket-signals.workers.dev",
+ "provider": "https://polymarket-signal-api.pwnker-polymarket-signals.workers.dev",
+ "description": "PolySignal paper-trading performance summary, including win rate, ROI, PnL, open trades, settled trades, and tag-level breakdowns.",
+ "category": "Finance & markets",
+ "tags": [],
+ "endpoint": "https://polymarket-signal-api.pwnker-polymarket-signals.workers.dev/v1/performance",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x338d8649efa45b940d6656030faa58d9d01e6983",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"mode\":\"paper\",\"service\":\"PolySignal\",\"summary\":{\"open_trades\":6,\"pnl_usd\":42.4,\"roi\":0.6009,\"settled_trades\":13,\"total_trades\":19,\"win_rate\":0.6154}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609269249,
+ "payers30d": 18,
+ "calls30d": 52,
+ "lastCalledAt": "2026-11-01T23:24:46.804Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 143,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 143,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps",
+  "intel-degenscan-io-v1-br-ptax"
+ ],
+ "example": {
+  "curl": "curl -i 'https://polymarket-signal-api.pwnker-polymarket-signals.workers.dev/v1/performance'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform&body=%7B%22slug%22%3A%22polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform\",\"body\":\"{\\\"slug\\\":\\\"polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=PolySignal%20paper-trading%20performance%20summary%2C%20including%20win%20rate%2C%20ROI%2C&seller=https%3A%2F%2Fpolymarket-signal-api.pwnker-polymarket-signals.workers.dev%2Fv1%2Fperformance"
+}

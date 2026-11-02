@@ -1,0 +1,84 @@
+{
+ "slug": "agentreader-dev-dns",
+ "name": "AgentReader: DNS lookup over Cloudflare DoH: query A, AAAA, CNAME, MX, NS, TXT, SOA",
+ "seller": "AgentReader",
+ "host": "agentreader.dev",
+ "provider": "https://agentreader.dev",
+ "description": "DNS lookup over Cloudflare DoH: query A, AAAA, CNAME, MX, NS, TXT, SOA, SRV, CAA or PTR records for any domain and get structured JSON answers with TTLs. Useful for domain research, email validation and infrastructure checks.",
+ "category": "Search & web",
+ "tags": [
+  "web-scraping",
+  "content-extraction",
+  "markdown",
+  "pdf",
+  "llm-tools"
+ ],
+ "endpoint": "https://agentreader.dev/dns",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.003,
+ "amount": "3000",
+ "payTo": "0x88096B3da9F45b8f923458E6CeF69FC0A5bE3CAe",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "name": "anthropic.com",
+   "type": "A"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"answers\":[{\"data\":\"160.79.104.10\",\"name\":\"anthropic.com\",\"ttl\":300,\"type\":1}],\"name\":\"anthropic.com\",\"status\":0,\"type\":\"A\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://agentreader.dev/llms.txt",
+ "docsChecked": 1793609275452,
+ "payers30d": 11,
+ "calls30d": 17,
+ "lastCalledAt": "2026-10-30T18:40:15.719Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 384,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 384,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agentreader-dev-dns",
+ "rating": null,
+ "related": [
+  "blockrun-ai-api-v1-exa-contents",
+  "search-cyberwarex-com-search",
+  "netintel-dev-web-extract",
+  "agent-tools-production-e6aa-up-railway-app-v1-extract",
+  "api-agentstools-dev-search-news",
+  "softbot-reader-mainnet-softbot-workers-dev-v1-read"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agentreader.dev/dns?name=anthropic.com&type=A'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agentreader-dev-dns&body=%7B%22slug%22%3A%22agentreader-dev-dns%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agentreader-dev-dns\",\"body\":\"{\\\"slug\\\":\\\"agentreader-dev-dns\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=AgentReader%3A%20DNS%20lookup%20over%20Cloudflare%20DoH%3A%20query%20A%2C%20AAAA%2C%20CNAME%2C%20MX%2C%20NS%2C%20TXT%2C%20SOA&seller=https%3A%2F%2Fagentreader.dev%2Fdns"
+}

@@ -1,0 +1,86 @@
+{
+ "slug": "a-upgradenet-com-x402-base-balance",
+ "name": "a-un: Base Wallet Balance: ETH and ERC-20 balances (USDC by default, up to 1",
+ "seller": "a-un",
+ "host": "a-upgradenet.com",
+ "provider": "https://a-upgradenet.com",
+ "description": "Base Wallet Balance: ETH and ERC-20 balances (USDC by default, up to 10 tokens) of any address on Base mainnet. $0.001 per call.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "base",
+  "blockchain",
+  "balance",
+  "wallet",
+  "erc20"
+ ],
+ "endpoint": "https://a-upgradenet.com/x402/base-balance",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xBdae34e121dFf6Da6fbB71208322E8BE0A923512",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 900,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "address": "0x4200000000000000000000000000000000000006",
+   "tokens": [
+    "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+   ]
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"address\":\"0x…\",\"block_number\":\"21000000\",\"chain\":\"base\",\"eth\":\"0.0123\",\"eth_wei\":\"12300000000000000\",\"status\":\"completed\",\"tokens\":[{\"address\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\"balance\":\"25.5\",\"decimals\":6,\"raw\":\"25500000\",\"symbol\":\"USDC\"}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://a-upgradenet.com/llms.txt",
+ "docsChecked": 1793609280599,
+ "payers30d": 9,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T07:03:33.924Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 202,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 202,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/a-upgradenet-com-x402-base-balance",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://a-upgradenet.com/x402/base-balance' -H 'content-type: application/json' -d '{\"address\":\"0x4200000000000000000000000000000000000006\",\"tokens\":[\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\"]}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20a-upgradenet-com-x402-base-balance&body=%7B%22slug%22%3A%22a-upgradenet-com-x402-base-balance%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: a-upgradenet-com-x402-base-balance\",\"body\":\"{\\\"slug\\\":\\\"a-upgradenet-com-x402-base-balance\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=a-un%3A%20Base%20Wallet%20Balance%3A%20ETH%20and%20ERC-20%20balances%20(USDC%20by%20default%2C%20up%20to%201&seller=https%3A%2F%2Fa-upgradenet.com%2Fx402%2Fbase-balance"
+}

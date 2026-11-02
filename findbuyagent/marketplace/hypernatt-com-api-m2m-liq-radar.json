@@ -1,0 +1,81 @@
+{
+ "slug": "hypernatt-com-api-m2m-liq-radar",
+ "name": "HyperNatt Terminal: Forced-order map",
+ "seller": "HyperNatt Terminal",
+ "host": "hypernatt.com",
+ "provider": "https://hypernatt.com",
+ "description": "Forced-order map. If cluster_grammar is present, read it before liq_radar. class=noise (<3%) is high-leverage bait - ignore. class=true (~7%+) is the low-leverage stack. Terrain, not a signal. Whitelist BTC ETH SOL BNB XRP HYPE ZEC (omit = BTC).",
+ "category": "Weather & geo",
+ "tags": [
+  "bitcoin",
+  "hyperliquid",
+  "trading",
+  "market maker",
+  "liquidations"
+ ],
+ "endpoint": "https://hypernatt.com/api/m2m/liq-radar",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x5a78ace5dd133316c8aaf7e156fbfc57e1209cf9",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"default_symbol\":\"BTC\",\"liq_radar\":{\"liq_density\":{\"asymmetry\":0.32,\"clusters_above\":[{\"distance_pct\":3.45,\"price\":64100,\"size_btc\":60.8}],\"clusters_below\":[{\"distance_pct\":4.62,\"price\":59100,\"size_btc\":123.5}]},\"ls_ratio\":{\"long_pct\":67,\"short_pct\":33},\"magnet\":{\"bias\":\"BEARISH_MAGNET\",\"score\":-60},\"real_liquidations\":{\"window_1h\":{\"count\":43,\"dominant\":\"short\"}}},\"ok\":true,\"payload_schema\":\"hypernatt_liq_radar_v2\",\"product\":\"hypernatt_liq_radar_v1\",\"supported_symbols\":[\"BTC\",\"ETH\",\"SOL\",\"BNB\",\"XRP\",\"HYPE\",\"ZEC\"],\"symbol\":\"BTC\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://hypernatt.com/llms.txt",
+ "docsChecked": 1793609268469,
+ "payers30d": 23,
+ "calls30d": 33,
+ "lastCalledAt": "2026-11-02T04:31:54.222Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 290,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 290,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/hypernatt-com-api-m2m-liq-radar",
+ "rating": null,
+ "related": [
+  "weather-agentic-jp-com-areas",
+  "api-losbeto-xyz-gas-price",
+  "x402-data-api-sigrunner-workers-dev-defi-yields",
+  "x402-agentutility-ai-ip-asn",
+  "x402-seller-onrender-com-geo-lookup",
+  "x402-tbs-digital-com-weather-current"
+ ],
+ "example": {
+  "curl": "curl -i 'https://hypernatt.com/api/m2m/liq-radar'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20hypernatt-com-api-m2m-liq-radar&body=%7B%22slug%22%3A%22hypernatt-com-api-m2m-liq-radar%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: hypernatt-com-api-m2m-liq-radar\",\"body\":\"{\\\"slug\\\":\\\"hypernatt-com-api-m2m-liq-radar\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=HyperNatt%20Terminal%3A%20Forced-order%20map&seller=https%3A%2F%2Fhypernatt.com%2Fapi%2Fm2m%2Fliq-radar"
+}

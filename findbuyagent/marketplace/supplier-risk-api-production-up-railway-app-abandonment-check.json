@@ -1,0 +1,77 @@
+{
+ "slug": "supplier-risk-api-production-up-railway-app-abandonment-check",
+ "name": "Website abandonment check for a company domain",
+ "seller": "supplier-risk-api-production.up.railway.app",
+ "host": "supplier-risk-api-production.up.railway.app",
+ "provider": "https://supplier-risk-api-production.up.railway.app",
+ "description": "Website abandonment check for a company domain. Fetches the homepage now and says why it is or isn't serving: hosting billing lapsed (Vercel, Squarespace, Wix), site removed from its platform, CDN origin unreachable, parked or for sale, 410 gone, bot challenge, or serving. For domains Tiag Scovik watches nightly, adds the date the current state began and up to 30 nights of history. Use before paying or onboarding a vendor. GET /abandonment-check?domain=acme.com. $0.01 USDC via x402.",
+ "category": "Search & web",
+ "tags": [],
+ "endpoint": "https://supplier-risk-api-production.up.railway.app/abandonment-check",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x32fb20b949bf1606f01d344601571b5c56d07ed0",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "domain": "stripe.com"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"abandonmentSignal\":true,\"domain\":\"example-vendor.com\",\"history\":{\"confirmedDate\":\"2026-10-01\",\"events\":[{\"date\":\"2026-10-01\",\"first_candidate_date\":\"2026-09-29\",\"type\":\"origin_dead\"}],\"firstObserved\":\"2026-09-25\",\"indexNight\":\"2026-10-10\",\"lastNightClass\":\"platform_billing_lapsed\",\"lastObserved\":\"2026-10-10\",\"leftCensored\":false,\"nights\":[{\"class\":\"serving\",\"date\":\"2026-09-28\"},{\"class\":\"platform_billing_lapsed\",\"date\":\"2026-09-29\"}],\"nightsObserved\":16,\"onsetDate\":\"2026-09-29\",\"state\":\"DEAD\",\"watched\":true},\"live\":{\"checked\":true,\"checkedAt\":\"2026-10-10T00:00:00.000Z\",\"class\":\"platform_billing_lapsed\",\"elapsedMs\":412,\"finalUrl\":\"https://example-vendor.com/\",\"httpStatus\":503,\"reason\":\"vercel DEPLOYMENT_PAUSED\",\"robots\":\"none\",\"scheme\":\"https\"},\"meta\":{\"classifier\":\"origin_class_v1\",\"generatedAt\":\"2026-10-10T00:00:00.000Z\",\"network\":\"eip155:8453\",\"version\":\"1.4.0\"},\"note\":\"Describes the website only, as observed by Tiag Scovik; not a statement about the legal or financial status of the business.\",\"onsetDate\":\"2026-09-29\",\"websiteClass\":\"platform_billing_lapsed\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://supplier-risk-api-production.up.railway.app/llms.txt",
+ "docsChecked": 1793609281916,
+ "payers30d": 9,
+ "calls30d": 11,
+ "lastCalledAt": "2026-11-01T08:20:55.479Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 421,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 421,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/supplier-risk-api-production-up-railway-app-abandonment-check",
+ "rating": null,
+ "related": [
+  "stableenrich-dev-api-exa-search",
+  "websearch-use-x402atlas-com-search",
+  "x402-twit-sh-tweets-user",
+  "x402-orthogonal-com-icypeas-api-find-people",
+  "mcp-newstex-com-x402-trending",
+  "agent-data-api-agentdata-workers-dev-v1-contracts-opportunities"
+ ],
+ "example": {
+  "curl": "curl -i 'https://supplier-risk-api-production.up.railway.app/abandonment-check?domain=stripe.com'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20supplier-risk-api-production-up-railway-app-abandonment-check&body=%7B%22slug%22%3A%22supplier-risk-api-production-up-railway-app-abandonment-check%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: supplier-risk-api-production-up-railway-app-abandonment-check\",\"body\":\"{\\\"slug\\\":\\\"supplier-risk-api-production-up-railway-app-abandonment-check\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Website%20abandonment%20check%20for%20a%20company%20domain&seller=https%3A%2F%2Fsupplier-risk-api-production.up.railway.app%2Fabandonment-check"
+}

@@ -1,0 +1,84 @@
+{
+ "slug": "tienda-textokit-store-api-cuit-ar",
+ "name": "Textokit: Validate an Argentine CUIT or CUIL tax id: format and check-digit veri",
+ "seller": "Textokit",
+ "host": "tienda.textokit.store",
+ "provider": "https://tienda.textokit.store",
+ "description": "Validate an Argentine CUIT or CUIL tax id: format and check-digit verification, normalized and formatted forms, declared type (CUIT or CUIL). Use this when an agent collects Argentine customer or supplier ids and must reject typos before invoicing, KYC or onboarding. Mathematical validation only: it does not confirm registration or ownership. JSON, no model inference. Free sample at /api/cuit-ar/sample. Also works as Argentina TIN or taxpayer ID validation.",
+ "category": "Security & compliance",
+ "tags": [
+  "argentina",
+  "cuit",
+  "tax-id",
+  "validation",
+  "kyc"
+ ],
+ "endpoint": "https://tienda.textokit.store/api/cuit-ar",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x6b5aF9924f4CD35643c11a9fd1C983f77261A6E1",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "identifier": "20-12345678-6",
+   "type": "CUIT"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"calculatedCheckDigit\":6,\"checksumValid\":true,\"errors\":[],\"formatValid\":true,\"formatted\":\"20-12345678-6\",\"mathematicallyValid\":true,\"normalized\":\"20123456786\",\"providedCheckDigit\":6,\"publicVerification\":{\"performed\":false,\"sources\":[]},\"requestedType\":\"CUIT\",\"scope\":\"La comprobación de formato y dígito no acredita asignación, titularidad, inscripción ni vigencia. CUIT y CUIL comparten formato y algoritmo; el tipo declarado no está confirmado.\",\"type\":\"CUIT\",\"typeBasis\":\"callerDeclaration\",\"typeConfirmed\":false}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792912421/bazaar-icons/ae1fd91a209ba3fd.png",
+ "docs": "https://tienda.textokit.store/llms.txt",
+ "docsChecked": 1793609279752,
+ "payers30d": 9,
+ "calls30d": 23,
+ "lastCalledAt": "2026-10-25T22:10:03.88Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 523,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 523,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/tienda-textokit-store-api-cuit-ar",
+ "rating": null,
+ "related": [
+  "modelmarket-dev-x402-histor-check",
+  "quartermaster-surewhynot-app-v1-dns",
+  "forensik-halowerk-com-v1-bytecode-clone-provenance",
+  "forensik-halowerk-com-v1-address-poisoning-detector",
+  "forensik-halowerk-com-v1-dusting-attack-monitor",
+  "netintel-dev-email-auth"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://tienda.textokit.store/api/cuit-ar' -H 'content-type: application/json' -d '{}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20tienda-textokit-store-api-cuit-ar&body=%7B%22slug%22%3A%22tienda-textokit-store-api-cuit-ar%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: tienda-textokit-store-api-cuit-ar\",\"body\":\"{\\\"slug\\\":\\\"tienda-textokit-store-api-cuit-ar\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Textokit%3A%20Validate%20an%20Argentine%20CUIT%20or%20CUIL%20tax%20id%3A%20format%20and%20check-digit%20veri&seller=https%3A%2F%2Ftienda.textokit.store%2Fapi%2Fcuit-ar"
+}

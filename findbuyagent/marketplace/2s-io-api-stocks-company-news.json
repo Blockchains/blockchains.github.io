@@ -1,0 +1,83 @@
+{
+ "slug": "2s-io-api-stocks-company-news",
+ "name": "2s: Recent news articles about a specific US-listed company",
+ "seller": "2s",
+ "host": "2s.io",
+ "provider": "https://2s.io",
+ "description": "Recent news articles about a specific US-listed company. Pass ticker and optionally a from/to date window (YYYY-MM-DD; defaults to the last 14 days); returns headlines with source, summary, URL, image, related symbol, category, and publish time (newest first). Use it to catch up on what is being written about a company. News aggregated by Finnhub.",
+ "category": "Search & web",
+ "tags": [
+  "public-records",
+  "identifiers",
+  "ai-agents",
+  "us-gov-data",
+  "x402"
+ ],
+ "endpoint": "https://2s.io/api/stocks/company-news",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.0025,
+ "amount": "2500",
+ "payTo": "0x2b6D4988Db4723E6908Db86Ab2b8dFBc51FC32C5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "ticker": "AAPL"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1782067076/bazaar-icons/58f7ba8f2b3b8047.png",
+ "docs": "https://2s.io/llms.txt",
+ "docsChecked": 1793609275910,
+ "payers30d": 10,
+ "calls30d": 151,
+ "lastCalledAt": "2026-11-01T12:47:19.267Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 199,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 199,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/2s-io-api-stocks-company-news",
+ "rating": null,
+ "related": [
+  "x402-twit-sh-tweets-by-id",
+  "hirescrape-com-api-tools-tiktok",
+  "blockrun-ai-api-v1-exa-contents",
+  "search-cyberwarex-com-search",
+  "netintel-dev-web-extract",
+  "agent-tools-production-e6aa-up-railway-app-v1-extract"
+ ],
+ "example": {
+  "curl": "curl -i 'https://2s.io/api/stocks/company-news?ticker=AAPL'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%202s-io-api-stocks-company-news&body=%7B%22slug%22%3A%222s-io-api-stocks-company-news%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: 2s-io-api-stocks-company-news\",\"body\":\"{\\\"slug\\\":\\\"2s-io-api-stocks-company-news\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=2s%3A%20Recent%20news%20articles%20about%20a%20specific%20US-listed%20company&seller=https%3A%2F%2F2s.io%2Fapi%2Fstocks%2Fcompany-news"
+}

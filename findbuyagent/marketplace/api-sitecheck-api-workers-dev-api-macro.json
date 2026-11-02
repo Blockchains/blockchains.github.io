@@ -1,0 +1,84 @@
+{
+ "slug": "api-sitecheck-api-workers-dev-api-macro",
+ "name": "SiteCheck: Official rate and macro series in one call, by name: fed_funds, us_cpi",
+ "seller": "SiteCheck",
+ "host": "api.sitecheck-api.workers.dev",
+ "provider": "https://api.sitecheck-api.workers.dev",
+ "description": "Official rate and macro series in one call, by name: fed_funds, us_cpi, us_core_cpi, us_unemployment, us_10y, us_2y, us_mortgage_30y, us_gdp, wti_oil, brent_oil, henry_hub_gas, us_house_price_index, ecb_deposit_rate, ecb_main_refi_rate and euro_area_hicp. Latest value, change vs previous and vs a year earlier, and observations. Up to 6 series. FRED (US public domain), the ECB Data Portal and Eurostat.",
+ "category": "Finance & markets",
+ "tags": [
+  "macro",
+  "interest rates",
+  "inflation",
+  "fed",
+  "ecb"
+ ],
+ "endpoint": "https://api.sitecheck-api.workers.dev/api/macro",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xb8491F953e6860D3b5840b73c60883Ff099ceAfA",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": "3",
+   "series": "fed_funds,ecb_deposit_rate"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"checkedAt\":\"2026-10-13T18:40:00.000Z\",\"license\":\"US federal data (public domain; FRED terms, https://fred.stlouisfed.org/legal) and ECB statistics (free reuse with attribution, https://www.ecb.europa.eu/services/disclaimer)\",\"series\":[{\"change\":{\"pctVsYearAgo\":25,\"vsPrevious\":0,\"vsYearAgo\":0.5,\"yearAgoDate\":\"2025-10-13\"},\"frequency\":\"daily\",\"label\":\"ECB deposit facility rate\",\"latest\":{\"date\":\"2026-10-13\",\"value\":2.5},\"name\":\"ecb_deposit_rate\",\"observations\":[{\"date\":\"2026-10-13\",\"value\":2.5},{\"date\":\"2026-10-12\",\"value\":2.5},{\"date\":\"2026-10-11\",\"value\":2.5}],\"previous\":{\"date\":\"2026-10-12\",\"value\":2.5},\"source\":\"ECB FM dataset\",\"unit\":\"percent\",\"window\":{\"newest\":\"2026-10-13\",\"oldest\":\"2025-09-09\"}}],\"source\":\"FRED, Federal Reserve Bank of St. Louis (https://fred.stlouisfed.org) and the ECB Data Portal (https://data.ecb.europa.eu)\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.sitecheck-api.workers.dev/llms.txt",
+ "docsChecked": 1793609279042,
+ "payers30d": 9,
+ "calls30d": 25,
+ "lastCalledAt": "2026-11-01T07:32:27.855Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 47,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 47,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-sitecheck-api-workers-dev-api-macro",
+ "rating": null,
+ "related": [
+  "data-tollkit-dev-sec-company",
+  "mcp-blocksize-info-v1-bidask-btc-usd",
+  "intel-degenscan-io-v1-oracle-board",
+  "toolcall-click-t-fx-rates",
+  "br-intelligence-brverify-api-workers-dev-v1-ptax",
+  "offercheck-offercheck-workers-dev-v1-fx"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.sitecheck-api.workers.dev/api/macro?limit=3&series=fed_funds%2Cecb_deposit_rate'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-sitecheck-api-workers-dev-api-macro&body=%7B%22slug%22%3A%22api-sitecheck-api-workers-dev-api-macro%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-sitecheck-api-workers-dev-api-macro\",\"body\":\"{\\\"slug\\\":\\\"api-sitecheck-api-workers-dev-api-macro\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=SiteCheck%3A%20Official%20rate%20and%20macro%20series%20in%20one%20call%2C%20by%20name%3A%20fed_funds%2C%20us_cpi&seller=https%3A%2F%2Fapi.sitecheck-api.workers.dev%2Fapi%2Fmacro"
+}

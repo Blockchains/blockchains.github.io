@@ -1,0 +1,83 @@
+{
+ "slug": "scraplingdata-xyz-v1-lookup-protocol",
+ "name": "Scrapling x402 Data Store: DeFi protocol TVL: total value locked in USD, per-chain TVL, category,",
+ "seller": "Scrapling x402 Data Store",
+ "host": "scraplingdata.xyz",
+ "provider": "https://scraplingdata.xyz",
+ "description": "DeFi protocol TVL: total value locked in USD, per-chain TVL, category, chains and pools tracked, plus 1d/7d TVL % change once history builds up (our own on-chain reads of the lending markets and DEX pools we track). Example: q=aave, q=uniswap, q=lido. Refreshed about every 30 min",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "web-scraping",
+  "crypto",
+  "defi",
+  "ecommerce",
+  "datasets"
+ ],
+ "endpoint": "https://scraplingdata.xyz/v1/lookup/protocol",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x72C80C01fD89Bac74f47cf604b61ACd119c9BCdb",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "q": "aave"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"change_7d_pct\":3.1,\"name\":\"Aave\",\"slug\":\"aave\",\"tvl_usd\":25000000000}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://scraplingdata.xyz/llms.txt",
+ "docsChecked": 1793609276596,
+ "payers30d": 10,
+ "calls30d": 18,
+ "lastCalledAt": "2026-11-01T07:04:44.345Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 69,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 69,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/scraplingdata-xyz-v1-lookup-protocol",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://scraplingdata.xyz/v1/lookup/protocol?q=aave'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20scraplingdata-xyz-v1-lookup-protocol&body=%7B%22slug%22%3A%22scraplingdata-xyz-v1-lookup-protocol%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: scraplingdata-xyz-v1-lookup-protocol\",\"body\":\"{\\\"slug\\\":\\\"scraplingdata-xyz-v1-lookup-protocol\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Scrapling%20x402%20Data%20Store%3A%20DeFi%20protocol%20TVL%3A%20total%20value%20locked%20in%20USD%2C%20per-chain%20TVL%2C%20category%2C&seller=https%3A%2F%2Fscraplingdata.xyz%2Fv1%2Flookup%2Fprotocol"
+}

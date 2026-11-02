@@ -1,0 +1,80 @@
+{
+ "slug": "x402engine-app-api-crypto-price",
+ "name": "x402engine — Real-time cryptocurrency prices for any coin in any fiat",
+ "seller": "x402engine.app",
+ "host": "x402engine.app",
+ "provider": "https://x402engine.app",
+ "description": "x402engine — Real-time cryptocurrency prices for any coin in any fiat currency",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://x402engine.app/api/crypto/price",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x7dd5Be069f2d2eAd75eC7C3423B116fF043c2629",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "currencies": "usd,eur",
+   "ids": "bitcoin,ethereum",
+   "include_24h_change": true,
+   "include_market_cap": false
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402engine.app/llms.txt",
+ "docsChecked": 1793609269190,
+ "payers30d": 17,
+ "calls30d": 97,
+ "lastCalledAt": "2026-11-02T03:42:07.764Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 127,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 127,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402engine-app-api-crypto-price",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402engine.app/api/crypto/price?currencies=usd%2Ceur&ids=bitcoin%2Cethereum&include_24h_change=true&include_market_cap=false'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402engine-app-api-crypto-price&body=%7B%22slug%22%3A%22x402engine-app-api-crypto-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402engine-app-api-crypto-price\",\"body\":\"{\\\"slug\\\":\\\"x402engine-app-api-crypto-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x402engine%20%E2%80%94%20Real-time%20cryptocurrency%20prices%20for%20any%20coin%20in%20any%20fiat&seller=https%3A%2F%2Fx402engine.app%2Fapi%2Fcrypto%2Fprice"
+}

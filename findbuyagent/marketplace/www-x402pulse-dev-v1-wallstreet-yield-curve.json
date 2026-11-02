@@ -1,0 +1,81 @@
+{
+ "slug": "www-x402pulse-dev-v1-wallstreet-yield-curve",
+ "name": "x402Pulse: U.S. Treasury yield curve: the latest daily yields from 1 month to 30",
+ "seller": "x402Pulse",
+ "host": "www.x402pulse.dev",
+ "provider": "https://www.x402pulse.dev",
+ "description": "U.S. Treasury yield curve: the latest daily yields from 1 month to 30 years, the 10Y-2Y and 10Y-3M spreads, inversion flags (a closely watched recession signal) and changes vs. the previous day, a month and a year ago. Data, not investment advice.",
+ "category": "Finance & markets",
+ "tags": [
+  "finance",
+  "sec-filings",
+  "stocks",
+  "insider-trading",
+  "x402pulse"
+ ],
+ "endpoint": "https://www.x402pulse.dev/v1/wallstreet/yield-curve",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.0014,
+ "amount": "1400",
+ "payTo": "0x5e901f973C17E5542b4Da2A64C7fDc736B2A6e74",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"cached\":false,\"data\":{\"date\":\"2026-10-06\",\"inverted\":{\"10Y-2Y\":false,\"10Y-3M\":false},\"spreadsBp\":{\"10Y-2Y\":48,\"10Y-3M\":106},\"yieldsPct\":{\"10 Yr\":5.27,\"2 Yr\":4.79,\"3 Mo\":4.21}}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791450934/bazaar-icons/480471795f7f9f46.png",
+ "docs": "https://www.x402pulse.dev/llms.txt",
+ "docsChecked": 1793609279258,
+ "payers30d": 9,
+ "calls30d": 22,
+ "lastCalledAt": "2026-11-01T22:00:11.888Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 230,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 230,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/www-x402pulse-dev-v1-wallstreet-yield-curve",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i 'https://www.x402pulse.dev/v1/wallstreet/yield-curve'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-x402pulse-dev-v1-wallstreet-yield-curve&body=%7B%22slug%22%3A%22www-x402pulse-dev-v1-wallstreet-yield-curve%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-x402pulse-dev-v1-wallstreet-yield-curve\",\"body\":\"{\\\"slug\\\":\\\"www-x402pulse-dev-v1-wallstreet-yield-curve\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=x402Pulse%3A%20U.S.%20Treasury%20yield%20curve%3A%20the%20latest%20daily%20yields%20from%201%20month%20to%2030&seller=https%3A%2F%2Fwww.x402pulse.dev%2Fv1%2Fwallstreet%2Fyield-curve"
+}

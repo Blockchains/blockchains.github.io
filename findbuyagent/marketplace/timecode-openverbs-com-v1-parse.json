@@ -1,0 +1,85 @@
+{
+ "slug": "timecode-openverbs-com-v1-parse",
+ "name": "Parse timecode: Parse an SMPTE timecode (HH:MM:SS:FF, or HH:MM:SS;FF for drop-frame) a",
+ "seller": "Parse timecode",
+ "host": "timecode.openverbs.com",
+ "provider": "https://timecode.openverbs.com",
+ "description": "Parse an SMPTE timecode (HH:MM:SS:FF, or HH:MM:SS;FF for drop-frame) at a given frame rate into its components, total frame count and real-time seconds. Drop-frame is auto-detected from a ';' separator unless dropFrame is set. Out-of-range or non-existent drop-frame values are a clean 400.",
+ "category": "Images & media",
+ "tags": [
+  "parse timecode",
+  "smpte timecode parser",
+  "timecode to frames",
+  "drop frame detection",
+  "video frame count"
+ ],
+ "endpoint": "https://timecode.openverbs.com/v1/parse",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xb3f4de103F34b99f0Da19B4F16D6B53a14C2194A",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "dropFrame": false,
+   "frameRate": 24,
+   "timecode": "01:00:00:00"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://timecode.openverbs.com/.well-known/x402",
+ "docsChecked": 1793609282340,
+ "payers30d": 9,
+ "calls30d": 12,
+ "lastCalledAt": "2026-11-01T12:41:07.645Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 804,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 804,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/timecode-openverbs-com-v1-parse",
+ "rating": null,
+ "related": [
+  "mart402-com-v1-pdf-pages",
+  "api-vextorium-com-v1-wikipedia-summary",
+  "ask-singitai-app-v1-audio-speech",
+  "mart402-com-v1-pdf-info",
+  "x402-aispace-bot-api-v1-image-generate",
+  "x402engine-app-api-tts-elevenlabs"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://timecode.openverbs.com/v1/parse' -H 'content-type: application/json' -d '{\"dropFrame\":false,\"frameRate\":24,\"timecode\":\"01:00:00:00\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20timecode-openverbs-com-v1-parse&body=%7B%22slug%22%3A%22timecode-openverbs-com-v1-parse%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: timecode-openverbs-com-v1-parse\",\"body\":\"{\\\"slug\\\":\\\"timecode-openverbs-com-v1-parse\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Parse%20timecode%3A%20Parse%20an%20SMPTE%20timecode%20(HH%3AMM%3ASS%3AFF%2C%20or%20HH%3AMM%3ASS%3BFF%20for%20drop-frame)%20a&seller=https%3A%2F%2Ftimecode.openverbs.com%2Fv1%2Fparse"
+}

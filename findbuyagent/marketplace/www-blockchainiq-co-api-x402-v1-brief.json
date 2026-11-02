@@ -1,0 +1,81 @@
+{
+ "slug": "www-blockchainiq-co-api-x402-v1-brief",
+ "name": "Crypto Market Brief for Agents: Market brief in one parameter-free call: BTC, ETH, SOL and XRP prices",
+ "seller": "Crypto Market Brief for Agents",
+ "host": "www.blockchainiq.co",
+ "provider": "https://www.blockchainiq.co",
+ "description": "Market brief in one parameter-free call: BTC, ETH, SOL and XRP prices with 24h, 7d and 30d moves and rank, scheduled macro and crypto events in the next 48 hours, and short risk flags. Use as the opening call of a trading, portfolio or research agent loop. Refreshed every minute. JSON, no API key. $0.01 per call. Blockchain IQ.",
+ "category": "Finance & markets",
+ "tags": [
+  "crypto",
+  "market-brief",
+  "event-risk",
+  "macro",
+  "trading"
+ ],
+ "endpoint": "https://www.blockchainiq.co/api/x402/v1/brief",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x617dA9383fbA67e86137BC4924b8b7E400fB7C9e",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"asOf\":\"2026-10-10T07:10:24.000Z\",\"coins\":[{\"change24h\":0.21,\"change30d\":-8.7,\"change7d\":-4.1,\"coinId\":\"bitcoin\",\"marketCapRank\":1,\"price\":82655,\"symbol\":\"btc\"}],\"events\":[{\"category\":\"Macro\",\"date\":\"2026-10-10\",\"importance\":3,\"time\":\"08:30\",\"title\":\"Producer Price Index (PPI)\"}],\"flags\":[\"1 high-importance event in the next 48h: Producer Price Index (PPI) (2026-10-10 08:30 ET)\"]},\"disclaimer\":\"Market data and analysis, not investment advice.\",\"eventCount\":1,\"flagCount\":1,\"source\":\"Blockchain IQ\",\"terms\":\"https://www.blockchainiq.co/terms\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://www.blockchainiq.co/llms.txt",
+ "docsChecked": 1793609269023,
+ "payers30d": 19,
+ "calls30d": 49,
+ "lastCalledAt": "2026-10-30T06:18:29.879Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 418,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 418,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/www-blockchainiq-co-api-x402-v1-brief",
+ "rating": null,
+ "related": [
+  "cloud-trycorpus-ai-v1-tokens-quotes",
+  "cloud-trycorpus-ai-v1-reserved",
+  "cloud-trycorpus-ai-v1-term-instance",
+  "api-orcatrace-dev-v1-latest",
+  "headers-use-x402atlas-com",
+  "omniterminal-app-api-x402-v1-news"
+ ],
+ "example": {
+  "curl": "curl -i 'https://www.blockchainiq.co/api/x402/v1/brief'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-blockchainiq-co-api-x402-v1-brief&body=%7B%22slug%22%3A%22www-blockchainiq-co-api-x402-v1-brief%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-blockchainiq-co-api-x402-v1-brief\",\"body\":\"{\\\"slug\\\":\\\"www-blockchainiq-co-api-x402-v1-brief\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Crypto%20Market%20Brief%20for%20Agents%3A%20Market%20brief%20in%20one%20parameter-free%20call%3A%20BTC%2C%20ETH%2C%20SOL%20and%20XRP%20prices&seller=https%3A%2F%2Fwww.blockchainiq.co%2Fapi%2Fx402%2Fv1%2Fbrief"
+}

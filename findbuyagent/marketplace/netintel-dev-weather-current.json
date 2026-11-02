@@ -1,0 +1,83 @@
+{
+ "slug": "netintel-dev-weather-current",
+ "name": "NetIntel: Current weather for any city or lat/lon worldwide, plus a 3-day foreca",
+ "seller": "NetIntel",
+ "host": "netintel.dev",
+ "provider": "https://netintel.dev",
+ "description": "Current weather for any city or lat/lon worldwide, plus a 3-day forecast — temperature, feels-like, humidity, wind, precipitation, cloud cover, and a plain-language condition. Give a city name (geocoded for you) or coordinates. No API key, metric or imperial units. Pass params as query (GET) or a JSON body (POST).",
+ "category": "Weather & geo",
+ "tags": [
+  "weather",
+  "forecast",
+  "current weather",
+  "temperature",
+  "climate"
+ ],
+ "endpoint": "https://netintel.dev/weather/current",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xdaDc335482AD545296Fd7b28518A251fFCbEb9Df",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "city": "London"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"cache_age_seconds\":0,\"current\":{\"cloud_cover_pct\":75,\"condition\":\"Overcast\",\"feels_like\":13.1,\"humidity_pct\":77,\"is_day\":true,\"precipitation\":0,\"temperature\":14.2,\"weather_code\":3,\"wind_direction_deg\":210,\"wind_speed\":11.5},\"findings\":[],\"forecast\":[{\"condition\":\"Rain\",\"date\":\"2026-08-31\",\"precipitation\":1.3,\"temp_max\":18.4,\"temp_min\":11.2,\"weather_code\":61},{\"condition\":\"Partly cloudy\",\"date\":\"2026-09-01\",\"precipitation\":0,\"temp_max\":19.1,\"temp_min\":12,\"weather_code\":2},{\"condition\":\"Rain showers\",\"date\":\"2026-09-02\",\"precipitation\":0.4,\"temp_max\":17.8,\"temp_min\":11.6,\"weather_code\":80}],\"location\":{\"country\":\"United Kingdom\",\"latitude\":51.51,\"longitude\":-0.13,\"name\":\"London\",\"region\":\"England\",\"timezone\":\"Europe/London\"},\"source\":\"open-meteo\",\"units\":{\"precipitation\":\"mm\",\"temperature\":\"°C\",\"wind_speed\":\"km/h\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://netintel.dev/llms.txt",
+ "docsChecked": 1793609270333,
+ "payers30d": 14,
+ "calls30d": 24,
+ "lastCalledAt": "2026-11-01T05:43:59.405Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 516,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 516,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/netintel-dev-weather-current",
+ "rating": null,
+ "related": [
+  "horizonpulse-dev-api-pulse",
+  "horizonpulse-dev-api-gas",
+  "weather-cyberwarex-com-forecast",
+  "apiacre-com-v1-data-timezone-convert",
+  "agentsvc-io-api-v1-proxy-weather",
+  "win-oneshotagent-com-v1-tools-lookup-place-weather-alerts"
+ ],
+ "example": {
+  "curl": "curl -i 'https://netintel.dev/weather/current?city=London'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20netintel-dev-weather-current&body=%7B%22slug%22%3A%22netintel-dev-weather-current%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: netintel-dev-weather-current\",\"body\":\"{\\\"slug\\\":\\\"netintel-dev-weather-current\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=NetIntel%3A%20Current%20weather%20for%20any%20city%20or%20lat%2Flon%20worldwide%2C%20plus%20a%203-day%20foreca&seller=https%3A%2F%2Fnetintel.dev%2Fweather%2Fcurrent"
+}

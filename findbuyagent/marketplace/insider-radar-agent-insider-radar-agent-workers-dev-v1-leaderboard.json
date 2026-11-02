@@ -1,0 +1,77 @@
+{
+ "slug": "insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard",
+ "name": "insider-radar-agent: Ranked bot leaderboard with eff_n and the luck-ceiling honesty note",
+ "seller": "insider-radar-agent",
+ "host": "insider-radar-agent.insider-radar-agent.workers.dev",
+ "provider": "https://insider-radar-agent.insider-radar-agent.workers.dev",
+ "description": "Ranked bot leaderboard with eff_n and the luck-ceiling honesty note",
+ "category": "Data & analytics",
+ "tags": [],
+ "endpoint": "https://insider-radar-agent.insider-radar-agent.workers.dev/v1/leaderboard",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x3a4F2eA5E1a32a1af8716eDF089b74a28a68EbdA",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "limit": 20
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"age_seconds\":120,\"data\":{},\"disclaimer\":\"All figures are simulated paper dollars from a research lab — not investment advice, not live trading, no real positions. Ranked returns are dominated by luck until effective bet counts (eff_n), calibration and crowding say otherwise.\",\"generated_at\":\"2026-08-12T00:00:00+00:00\",\"product\":\"leaderboard\",\"sample\":false,\"stale\":false}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://insider-radar-agent.insider-radar-agent.workers.dev/llms.txt",
+ "docsChecked": 1793609275968,
+ "payers30d": 10,
+ "calls30d": 64,
+ "lastCalledAt": "2026-11-02T01:25:02.9Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 490,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 490,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard",
+ "rating": null,
+ "related": [
+  "ip402-xyz-v1-geo",
+  "api-polyform-org-v1-threat-scanners",
+  "fuelscout-scalpstream-com-fuel",
+  "cpi-report-us-underscoredone-com-cpi",
+  "quantagentshop-com-v1-ip-geo",
+  "quantagentshop-com-v1-domain-lookup"
+ ],
+ "example": {
+  "curl": "curl -i 'https://insider-radar-agent.insider-radar-agent.workers.dev/v1/leaderboard?limit=20'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard&body=%7B%22slug%22%3A%22insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard\",\"body\":\"{\\\"slug\\\":\\\"insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=insider-radar-agent%3A%20Ranked%20bot%20leaderboard%20with%20eff_n%20and%20the%20luck-ceiling%20honesty%20note&seller=https%3A%2F%2Finsider-radar-agent.insider-radar-agent.workers.dev%2Fv1%2Fleaderboard"
+}

@@ -1,0 +1,75 @@
+{
+ "slug": "finance-api-kdlcfa-workers-dev-us30y-yield",
+ "name": "US 30-Year Treasury Bond yield (%), delayed, via Yahoo Finance",
+ "seller": "finance-api.kdlcfa.workers.dev",
+ "host": "finance-api.kdlcfa.workers.dev",
+ "provider": "https://finance-api.kdlcfa.workers.dev",
+ "description": "US 30-Year Treasury Bond yield (%), delayed, via Yahoo Finance",
+ "category": "Utilities",
+ "tags": [],
+ "endpoint": "https://finance-api.kdlcfa.workers.dev/us30y-yield",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0xe3738580eDe5384Bb8b8d1c8786b391C59D2668D",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"change_percent_points\":0.03,\"date\":\"2026-08-03\",\"index\":\"TYX\",\"name\":\"US 30-Year Treasury Yield\",\"previous_close_percent\":4.52,\"value_percent\":4.55}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609276344,
+ "payers30d": 11,
+ "calls30d": 11,
+ "lastCalledAt": "2026-11-01T10:34:38.829Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 570,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 570,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/finance-api-kdlcfa-workers-dev-us30y-yield",
+ "rating": null,
+ "related": [
+  "api-oblique-markets-api-v1-paid-time",
+  "api-myceliasignal-com-oracle-price-btc-usd",
+  "randomfactsx402-vercel-app-api-random-fact",
+  "api-gitbeacon-dev-v1-repos",
+  "fractalai-net-co-api-x402-midas-attest",
+  "fronterasignal-com-api-v1-materials"
+ ],
+ "example": {
+  "curl": "curl -i 'https://finance-api.kdlcfa.workers.dev/us30y-yield'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20finance-api-kdlcfa-workers-dev-us30y-yield&body=%7B%22slug%22%3A%22finance-api-kdlcfa-workers-dev-us30y-yield%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: finance-api-kdlcfa-workers-dev-us30y-yield\",\"body\":\"{\\\"slug\\\":\\\"finance-api-kdlcfa-workers-dev-us30y-yield\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=US%2030-Year%20Treasury%20Bond%20yield%20(%25)%2C%20delayed%2C%20via%20Yahoo%20Finance&seller=https%3A%2F%2Ffinance-api.kdlcfa.workers.dev%2Fus30y-yield"
+}

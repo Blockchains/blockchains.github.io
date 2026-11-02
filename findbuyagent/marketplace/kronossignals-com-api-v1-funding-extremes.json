@@ -1,0 +1,81 @@
+{
+ "slug": "kronossignals-com-api-v1-funding-extremes",
+ "name": "Kronos Crypto Data & Forecasts: Which perpetual markets have extreme funding right now: screens all 17",
+ "seller": "Kronos Crypto Data & Forecasts",
+ "host": "kronossignals.com",
+ "provider": "https://kronossignals.com",
+ "description": "Which perpetual markets have extreme funding right now: screens all 17 perpetual markets (BTC/ETH/SOL/BNB/XRP/DOGE/ADA/AVAX/LINK/DOT/LTC/TRX/BCH/ATOM/NEAR/APT/HYPE) by z-score against a 30-day baseline (|z|≥2 extreme, |z|≥3 critical) and returns only those past the threshold, with funding rate, annualized rate, mark price and open interest. OKX data in 5-minute snapshots. $0.02 USDC via x402.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "funding-rate",
+  "screener",
+  "derivatives",
+  "crypto",
+  "multi-asset"
+ ],
+ "endpoint": "https://kronossignals.com/api/v1/funding-extremes",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.02,
+ "amount": "20000",
+ "payTo": "0x36038e1d712c5e39f35952164ec58ec2b96caee7",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"all_ranked\":[],\"as_of\":\"2026-01-01T00:00:00.000Z\",\"cache_ttl_sec\":null,\"disclaimer\":\"Funding rates from OKX perpetual swaps via Kronos market_signals. z-score vs 30-day baseline. Not financial advice.\",\"extremes\":[{\"asset\":\"BTC-USD\",\"captured_at\":\"2026-01-01T00:00:00.000Z\",\"classification\":\"extreme\",\"data_age_seconds\":120,\"data_source\":\"okx\",\"funding_interval_hours\":8,\"funding_rate\":0.003,\"funding_rate_annualized\":3.285,\"mark_price\":107500,\"mean_30d\":0.0002,\"n\":1200,\"next_funding_time\":\"2026-01-01T06:00:00.000Z\",\"open_interest\":85000,\"rank\":1,\"short\":\"BTC\",\"stale\":false,\"std_30d\":0.001,\"z_score\":2.8}],\"extremes_count\":1,\"inputs\":{\"assets_scanned\":16,\"critical_z_threshold\":3,\"extreme_z_threshold\":2,\"window_days\":30},\"no_extremes_message\":null}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://kronossignals.com/llms.txt",
+ "docsChecked": 1793609274770,
+ "payers30d": 11,
+ "calls30d": 43,
+ "lastCalledAt": "2026-11-01T12:02:29.66Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 446,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 446,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/kronossignals-com-api-v1-funding-extremes",
+ "rating": null,
+ "related": [
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets",
+  "api-nansen-ai-api-v1-tgm-token-information",
+  "api-x402node-dev-chain-honeypot",
+  "api-gondola-ai-com-v1-chat-completions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://kronossignals.com/api/v1/funding-extremes'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20kronossignals-com-api-v1-funding-extremes&body=%7B%22slug%22%3A%22kronossignals-com-api-v1-funding-extremes%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: kronossignals-com-api-v1-funding-extremes\",\"body\":\"{\\\"slug\\\":\\\"kronossignals-com-api-v1-funding-extremes\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Kronos%20Crypto%20Data%20%26%20Forecasts%3A%20Which%20perpetual%20markets%20have%20extreme%20funding%20right%20now%3A%20screens%20all%2017&seller=https%3A%2F%2Fkronossignals.com%2Fapi%2Fv1%2Ffunding-extremes"
+}

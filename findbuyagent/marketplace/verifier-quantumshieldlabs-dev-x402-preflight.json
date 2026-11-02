@@ -1,0 +1,109 @@
+{
+ "slug": "verifier-quantumshieldlabs-dev-x402-preflight",
+ "name": "Return an advisory ALLOW, DENY, or ESCALATE decision by comparing a bo",
+ "seller": "verifier.quantumshieldlabs.dev",
+ "host": "verifier.quantumshieldlabs.dev",
+ "provider": "https://verifier.quantumshieldlabs.dev",
+ "description": "Return an advisory ALLOW, DENY, or ESCALATE decision by comparing a bounded action request with authority, constraints, and evidence supplied by the caller. The service does not execute or legally authorize the action, access a wallet, validate identity, or independently observe facts.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://verifier.quantumshieldlabs.dev/x402/preflight",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x550205ECa42aAE871CFED6BC943fB2cF59F1d057",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "action_type": "purchase",
+   "authority_scope": {
+    "allowed_action_types": [
+     "purchase"
+    ],
+    "denied_action_types": [
+     "withdraw"
+    ],
+    "human_approval_action_types": [
+     "transfer"
+    ]
+   },
+   "constraints": {
+    "max_spend_usd": "5.00",
+    "prohibited_destinations": [
+     "blocked-market.example"
+    ],
+    "required_evidence": [
+     "inventory_check"
+    ]
+   },
+   "evidence_items": [
+    {
+     "name": "inventory_check",
+     "result": true
+    }
+   ],
+   "operation_id": "purchase-42",
+   "requested_action": {
+    "description": "Buy an approved test asset",
+    "destination": "approved-market.example",
+    "spend_usd": "4.50"
+   }
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"authority_boundary\":\"advisory_only: does not execute, authorize, or independently observe an action\",\"decision\":\"ALLOW\",\"evidence_boundary\":\"caller_supplied\",\"matched_constraints\":[\"authority_scope.allowed_action_types\",\"constraints.max_spend_usd\",\"constraints.required_evidence\"],\"missing_evidence\":[],\"operation_id\":\"purchase-42\",\"reason_code\":\"P001\",\"reasons\":[\"submitted request satisfies submitted policy\"],\"receipt_hash\":\"0000000000000000000000000000000000000000000000000000000000000000\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://verifier.quantumshieldlabs.dev/.well-known/x402",
+ "docsChecked": 1793609271122,
+ "payers30d": 13,
+ "calls30d": 46,
+ "lastCalledAt": "2026-11-01T08:03:01.501Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 83,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 83,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/verifier-quantumshieldlabs-dev-x402-preflight",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-contract-address",
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "hyperliquid-predict-use-x402atlas-com-outcomes",
+  "notary-forgemesh-io-api-notarize",
+  "coingecko-use-x402atlas-com-price",
+  "scry-solanahub-de-x402-network-priority-fees-live"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://verifier.quantumshieldlabs.dev/x402/preflight' -H 'content-type: application/json' -d '{\"action_type\":\"purchase\",\"authority_scope\":{\"allowed_action_types\":[\"purchase\"],\"denied_action_types\":[\"withdraw\"],\"human_approval_action_types\":[\"transfer\"]},\"constraints\":{\"max_spend_usd\":\"5.00\",\"prohibited_destinations\":[\"blocked-market.example\"],\"required_evidence\":[\"inventory_check\"]},\"evidence_items\":[{\"name\":\"inventory_check\",\"result\":true}],\"operation_id\":\"purchase-42\",\"requested_action\":\"\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20verifier-quantumshieldlabs-dev-x402-preflight&body=%7B%22slug%22%3A%22verifier-quantumshieldlabs-dev-x402-preflight%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: verifier-quantumshieldlabs-dev-x402-preflight\",\"body\":\"{\\\"slug\\\":\\\"verifier-quantumshieldlabs-dev-x402-preflight\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Return%20an%20advisory%20ALLOW%2C%20DENY%2C%20or%20ESCALATE%20decision%20by%20comparing%20a%20bo&seller=https%3A%2F%2Fverifier.quantumshieldlabs.dev%2Fx402%2Fpreflight"
+}

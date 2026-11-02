@@ -1,0 +1,84 @@
+{
+ "slug": "apexfaucet-xyz-api-x402-evm-token-info",
+ "name": "Token info and total supply: Token info and total supply for any ERC20 on Ethereum, Base, Arc or BN",
+ "seller": "Token info and total supply",
+ "host": "apexfaucet.xyz",
+ "provider": "https://apexfaucet.xyz",
+ "description": "Token info and total supply for any ERC20 on Ethereum, Base, Arc or BNB Chain: name, symbol, decimals and total supply (raw and in token units), read at a named block. A contract that is not an ERC20 is refused before any charge.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "token info",
+  "total supply",
+  "erc20",
+  "ethereum",
+  "base"
+ ],
+ "endpoint": "https://apexfaucet.xyz/api/x402/evm-token-info",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xd334ab5151c624cada654854e2879903dc4217ed",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "chain": "base",
+   "token": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"block\":53254052,\"blockTime\":\"2026-10-29T18:10:51.000Z\",\"chain\":\"base\",\"decimals\":6,\"name\":\"USD Coin\",\"ok\":true,\"symbol\":\"USDC\",\"token\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\"totalSupply\":\"4309924325.247997\",\"totalSupplyRaw\":\"4309924325247997\"},\"ok\":true,\"paid\":0.001}",
+ "outputSchema": "{\"properties\":{\"data\":{\"type\":\"object\"},\"ok\":{\"type\":\"boolean\"},\"paid\":{\"type\":\"number\"}},\"type\":\"object\"}",
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1791909159/bazaar-icons/f4adc3a60c4cd07b.png",
+ "docs": "https://apexfaucet.xyz/llms.txt",
+ "docsChecked": 1793609275502,
+ "payers30d": 11,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T06:51:08.397Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 3809,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 3809,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/apexfaucet-xyz-api-x402-evm-token-info",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://apexfaucet.xyz/api/x402/evm-token-info?chain=base&token=0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20apexfaucet-xyz-api-x402-evm-token-info&body=%7B%22slug%22%3A%22apexfaucet-xyz-api-x402-evm-token-info%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: apexfaucet-xyz-api-x402-evm-token-info\",\"body\":\"{\\\"slug\\\":\\\"apexfaucet-xyz-api-x402-evm-token-info\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Token%20info%20and%20total%20supply%3A%20Token%20info%20and%20total%20supply%20for%20any%20ERC20%20on%20Ethereum%2C%20Base%2C%20Arc%20or%20BN&seller=https%3A%2F%2Fapexfaucet.xyz%2Fapi%2Fx402%2Fevm-token-info"
+}

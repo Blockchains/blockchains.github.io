@@ -1,0 +1,78 @@
+{
+ "slug": "mart402-com-v1-pdf-pages",
+ "name": "Mart402: Extract pages from a PDF by range (e.g",
+ "seller": "Mart402",
+ "host": "mart402.com",
+ "provider": "https://mart402.com",
+ "description": "Extract pages from a PDF by range (e.g. 1-3,7) into a new PDF. Deterministic, $0.002/call.",
+ "category": "Images & media",
+ "tags": [],
+ "endpoint": "https://mart402.com/v1/pdf-pages",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0xE3244a21D0d68bFa78b7CAd8C3b8777aDFbB3188",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "pages": "1",
+   "url": "https://mart402.com/samples/assets/doc.pdf"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"bytes\":1012,\"note\":\"SAMPLE RESPONSE recorded from a real run of the production engine on the self-hosted sample asset (deterministic product: same input gives this output). Served free at /samples/{product}. No payment was taken.\",\"ok\":true,\"pages\":1,\"pdf_base64\":\"JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PAovUHJvZHVjZXIgKHB5cGRmKQo+PgplbmRvYmoKMiAwIG9iago8PAovVHlwZSAvUGFnZXMKL0NvdW50IDEKL0tpZHMgWyA0IDAgUiBdCj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAyIDAgUgo+PgplbmRvYmoKNCAwIG9iago8PAovVHlwZSAvUGFnZQovTWVkaWFCb3ggWyAwIDAgNjEyIDc5MiBdCi9SZXNvdXJjZXMgPDwKL0ZvbnQgPDwKL0YxIDUgMCBSCj4+Cj4+Ci9Db250ZW50cyA2IDAgUgovUGFyZW50IDIgMCBSCj4+CmVuZG9iago1IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9TdWJ0eXBlIC9UeXBlMQovQmFzZUZvbnQgL0hlbHZldGljYQo+PgplbmRvYmoKNiAwIG9iago8PAovTGVuZ3RoIDM4Ngo+PgpzdHJlYW0KcQpCVCAvRjEgMTIgVGYgNzIgNzIwIFRkIChTQU1QTEUgSU5WT0lDRSAtIE1hcnQ0MDIgc2FtcGxlIGRvY3VtZW50KSBUaiBFVApCVCAvRjEgMTIgVGYgNzIgNjk2IFRkIChJbnZvaWNlIE5vOiBTQU1QTEUtMDAxICAgRGF0ZTogMjAyNi0wOS0wNSkgVGogRVQKQlQgL0YxIDEyIFRmIDcyIDY3MiBUZCAoSXRlbTogRG9jdW1lbnQgcHJvY2Vzc2luZyBzYW1wbGUgICBRdHk6IDEpIFRqIEVUCkJUIC9GMSAxMiBUZiA3MiA2NDggVGQgKFN1YnRvdGFsOiAxMDAwICAgVGF4OiAxMDAgICBUb3RhbDogMTEwMCkgVGogRVQKQlQgL0YxIDEyIFRmIDcyIDYyNCBUZCAoVGhpcyBpcyBhIGZyZWUgc2FtcGxlIGFzc2V0IHNlcnZlZCBhdCAvc2FtcGxlcy9hc3NldHMvZG9jLnBkZikgVGogRVQKUQoKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDA1NCAwMDAwMCBuIAowMDAwMDAwMTEzIDAwMDAwIG4gCjAwMDAwMDAxNjIgMDAwMDAgbiAKMDAwMDAwMDI5MCAwMDAwMCBuIAowMDAwMDAwMzYwIDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgNwovUm9vdCAzIDAgUgovSW5mbyAxIDAgUgo+PgpzdGFydHhyZWYKNzk3CiUlRU9GCg==\",\"sample\":true,\"sample_input\":{\"pages\":\"1\",\"url\":\"https://mart402.com/samples/assets/doc.pdf\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://mart402.com/llms.txt",
+ "docsChecked": 1793609277407,
+ "payers30d": 10,
+ "calls30d": 13,
+ "lastCalledAt": "2026-10-30T12:43:30.092Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 26,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 26,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/mart402-com-v1-pdf-pages",
+ "rating": null,
+ "related": [
+  "api-vextorium-com-v1-wikipedia-summary",
+  "timecode-openverbs-com-v1-parse",
+  "ask-singitai-app-v1-audio-speech",
+  "x402-aispace-bot-api-v1-image-generate",
+  "x402engine-app-api-tts-elevenlabs",
+  "appstore-use-x402atlas-com-product"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://mart402.com/v1/pdf-pages' -H 'content-type: application/json' -d '{\"pages\":\"1\",\"url\":\"https://mart402.com/samples/assets/doc.pdf\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20mart402-com-v1-pdf-pages&body=%7B%22slug%22%3A%22mart402-com-v1-pdf-pages%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: mart402-com-v1-pdf-pages\",\"body\":\"{\\\"slug\\\":\\\"mart402-com-v1-pdf-pages\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Mart402%3A%20Extract%20pages%20from%20a%20PDF%20by%20range%20(e.g&seller=https%3A%2F%2Fmart402.com%2Fv1%2Fpdf-pages"
+}

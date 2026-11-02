@@ -1,0 +1,80 @@
+{
+ "slug": "notary-forgemesh-io-api-notarize",
+ "name": "Notarize AI output: a signed Ed25519 attestation of the model response",
+ "seller": "notary.forgemesh.io",
+ "host": "notary.forgemesh.io",
+ "provider": "https://notary.forgemesh.io",
+ "description": "Notarize AI output: a signed Ed25519 attestation of the model response plus sha256 content hash, receipt token, and Merkle anchor status for one AI inference — a cryptographic receipt for inference that lets you prove an AI said X and verify model output authenticity, checkable free by anyone, anytime.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://notary.forgemesh.io/api/notarize",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x814EfE784709f5bF8dF47735D87602B01030e5D2",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "client_timestamp": "2026-07-03T12:00:00Z",
+   "model_id": "openai/gpt-5",
+   "prompt": "What is 2+2?",
+   "response": "4"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"algorithm\":\"ed25519\",\"anchor\":{\"status\":\"pending\"},\"attestation_id\":\"att_0123456789abcdef01234567\",\"client_timestamp\":\"2026-07-03T12:00:00Z\",\"content_hash\":\"9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08\",\"model_id\":\"openai/gpt-5\",\"notarized_at\":\"2026-07-03T12:00:01.000Z\",\"payload_stored\":false,\"receipt_token\":\"private-receipt-token\",\"receipt_url\":\"https://notary.forgemesh.io/api/receipt/att_0123456789abcdef01234567\",\"signature\":\"base64-ed25519-signature\",\"signer_pubkey\":\"base64-ed25519-public-key\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://notary.forgemesh.io/llms.txt",
+ "docsChecked": 1793609269449,
+ "payers30d": 15,
+ "calls30d": 47,
+ "lastCalledAt": "2026-11-02T03:31:09.056Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 67,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 67,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/notary-forgemesh-io-api-notarize",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-contract-address",
+  "pro-api-coingecko-com-api-v3-x402-onchain-search-pools",
+  "hyperliquid-predict-use-x402atlas-com-outcomes",
+  "coingecko-use-x402atlas-com-price",
+  "scry-solanahub-de-x402-network-priority-fees-live",
+  "verifier-quantumshieldlabs-dev-x402-preflight"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://notary.forgemesh.io/api/notarize' -H 'content-type: application/json' -d '{\"client_timestamp\":\"2026-07-03T12:00:00Z\",\"model_id\":\"openai/gpt-5\",\"prompt\":\"What is 2+2?\",\"response\":\"4\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20notary-forgemesh-io-api-notarize&body=%7B%22slug%22%3A%22notary-forgemesh-io-api-notarize%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: notary-forgemesh-io-api-notarize\",\"body\":\"{\\\"slug\\\":\\\"notary-forgemesh-io-api-notarize\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Notarize%20AI%20output%3A%20a%20signed%20Ed25519%20attestation%20of%20the%20model%20response&seller=https%3A%2F%2Fnotary.forgemesh.io%2Fapi%2Fnotarize"
+}

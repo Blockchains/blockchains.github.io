@@ -1,0 +1,81 @@
+{
+ "slug": "stableupload-dev-api-upload",
+ "name": "StableUpload: Buy an upload slot",
+ "seller": "StableUpload",
+ "host": "stableupload.dev",
+ "provider": "https://stableupload.dev",
+ "description": "Buy an upload slot. Agent uploads file via returned URL.",
+ "category": "Search & web",
+ "tags": [
+  "Upload"
+ ],
+ "endpoint": "https://stableupload.dev/api/upload",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 2,
+ "amount": "2000000",
+ "payTo": "0x06dFF3c8380b5D1799874adA903fc3422882FD6f",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": false,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "contentType": "text/plain",
+   "filename": "quick-note.txt",
+   "tier": "short-10mb"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"curlExample\":\"curl -X POST \\\"https://stableupload-prod.s3.us-east-1.amazonaws.com/\\\" -F \\\"key=uploads/2s42wjsk3a/quick-note.txt\\\" -F \\\"Content-Type=text/plain\\\" -F \\\"x-amz-algorithm=AWS4-HMAC-SHA256\\\" -F \\\"x-amz-credential=AKIAEXAMPLE/20260425/us-east-1/s3/aws4_request\\\" -F \\\"x-amz-date=20260425T160000Z\\\" -F \\\"policy=base64-policy\\\" -F \\\"x-amz-signature=hex-signature\\\" -F \\\"file=@quick-note.txt;type=text/plain\\\"\",\"expiresAt\":\"2026-05-02T16:00:00.000Z\",\"maxSize\":10485760,\"postFields\":{\"Content-Type\":\"text/plain\",\"key\":\"uploads/2s42wjsk3a/quick-note.txt\",\"policy\":\"base64-policy\",\"x-amz-algorithm\":\"AWS4-HMAC-SHA256\",\"x-amz-credential\":\"AKIAEXAMPLE/20260425/us-east-1/s3/aws4_request\",\"x-amz-date\":\"20260425T160000Z\",\"x-amz-signature\":\"hex-signature\"},\"postUrl\":\"https://stableupload-prod.s3.us-east-1.amazonaws.com/\",\"publicUrl\":\"https://f.stableupload.dev/2s42wjsk3a/quick-note.txt\",\"uploadId\":\"2s42wjsk3a\",\"uploadMethod\":\"post\",\"uploadUrl\":\"https://stableupload-prod.s3.us-east-1.amazonaws.com/\",\"uploadUrlExpiresAt\":\"2026-04-25T16:15:00.000Z\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://stableupload.dev/llms.txt",
+ "docsChecked": 1793609266999,
+ "payers30d": 41,
+ "calls30d": 458,
+ "lastCalledAt": "2026-11-02T03:52:37.939Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 164,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 164,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/stableupload-dev-api-upload",
+ "rating": null,
+ "related": [
+  "www-trezalabs-com-api-x402-video",
+  "stableenrich-dev-api-pdl-people-enrich",
+  "google-trends-use-x402atlas-com-trend",
+  "serp402-com-api-v1-search",
+  "x402-asterpay-io-v2-x402-agent-readiness",
+  "google-trends-use-x402atlas-com-related-queries"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://stableupload.dev/api/upload' -H 'content-type: application/json' -d '{\"contentType\":\"text/plain\",\"filename\":\"quick-note.txt\",\"tier\":\"short-10mb\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20stableupload-dev-api-upload&body=%7B%22slug%22%3A%22stableupload-dev-api-upload%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: stableupload-dev-api-upload\",\"body\":\"{\\\"slug\\\":\\\"stableupload-dev-api-upload\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=StableUpload%3A%20Buy%20an%20upload%20slot&seller=https%3A%2F%2Fstableupload.dev%2Fapi%2Fupload"
+}

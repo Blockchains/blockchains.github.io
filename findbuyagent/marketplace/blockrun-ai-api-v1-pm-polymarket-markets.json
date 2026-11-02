@@ -3,6 +3,7 @@
  "name": "BlockRun.AI: Query Polymarket markets with filtering, sorting, and pagination",
  "seller": "BlockRun.AI",
  "host": "blockrun.ai",
+ "provider": "https://blockrun.ai",
  "description": "Query Polymarket markets with filtering, sorting, and pagination",
  "category": "Finance & markets",
  "tags": [
@@ -13,30 +14,64 @@
  ],
  "endpoint": "https://blockrun.ai/api/v1/pm/polymarket/markets",
  "method": "GET",
+ "payment": "x402",
  "priceUsd": 0.0085,
  "amount": "8500",
  "payTo": "0x6E007731870EDe419CfB31889Cd5C4493CEcb04c",
  "asset": "USDC",
  "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
  "listedTermsMatch": true,
  "input": {
-  "queryParams": {},
+  "queryParams": null,
   "body": null,
-  "bodyType": null
+  "bodyType": null,
+  "headers": null
  },
+ "outputType": "json",
  "outputExample": "{\"data\":{}}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1780076804/bazaar-icons/394f04c02d533c33.png",
  "docs": "https://blockrun.ai/llms.txt",
  "docsChecked": 1793596014517,
  "payers30d": 94,
- "calls30d": 271,
+ "calls30d": 272,
+ "lastCalledAt": "2026-11-02T06:11:26.215Z",
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 168,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 157,
  "lastStatus": 402,
  "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 157,
+   "s": 402
+  }
+ ],
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/blockrun-ai-api-v1-pm-polymarket-markets",
  "rating": null,
+ "related": [
+  "cloud-trycorpus-ai-v1-tokens-quotes",
+  "cloud-trycorpus-ai-v1-reserved",
+  "cloud-trycorpus-ai-v1-term-instance",
+  "www-blockchainiq-co-api-x402-v1-brief",
+  "api-orcatrace-dev-v1-latest",
+  "headers-use-x402atlas-com"
+ ],
+ "example": {
+  "curl": "curl -i 'https://blockrun.ai/api/v1/pm/polymarket/markets'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20blockrun-ai-api-v1-pm-polymarket-markets&body=%7B%22slug%22%3A%22blockrun-ai-api-v1-pm-polymarket-markets%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: blockrun-ai-api-v1-pm-polymarket-markets\",\"body\":\"{\\\"slug\\\":\\\"blockrun-ai-api-v1-pm-polymarket-markets\\\",\\\"stars\\\":1-5}\"}"

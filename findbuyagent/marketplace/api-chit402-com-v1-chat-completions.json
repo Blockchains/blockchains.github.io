@@ -1,0 +1,90 @@
+{
+ "slug": "api-chit402-com-v1-chat-completions",
+ "name": "Chit402: Signed spend receipts for agent x402 payments — who paid which call, v",
+ "seller": "Chit402",
+ "host": "api.chit402.com",
+ "provider": "https://api.chit402.com",
+ "description": "Signed spend receipts for agent x402 payments — who paid which call, verifiable by a third party. Treasury desk and possession book for agent spend — export, policy, evidence. POST /v1/chat/completions is the x402 USDC door on Base and Solana. Returns signed receipt + public verify_url. Paying this host is real mainnet USDC.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "treasury",
+  "possession-book",
+  "spend-receipt",
+  "x402",
+  "usdc"
+ ],
+ "endpoint": "https://api.chit402.com/v1/chat/completions",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x23f713411c30BBd9A989c9cbC22EB0b55F7f7334",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "max_tokens": 500,
+   "messages": [
+    {
+     "content": "Hello",
+     "role": "user"
+    }
+   ],
+   "model": "xfuel/auto"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"choices\":[{\"finish_reason\":\"stop\",\"index\":0,\"message\":{\"content\":\"Hello!\",\"role\":\"assistant\"}}],\"created\":1700000000,\"id\":\"chatcmpl-abc123\",\"model\":\"xfuel/auto\",\"object\":\"chat.completion\",\"usage\":{\"completion_tokens\":5,\"prompt_tokens\":10,\"total_tokens\":15},\"xfuel\":{\"verify_url\":\"https://api.chit402.com/receipt/chit-abc123\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.chit402.com/llms.txt",
+ "docsChecked": 1793609268595,
+ "payers30d": 20,
+ "calls30d": 42,
+ "lastCalledAt": "2026-11-02T03:25:42.584Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 646,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 646,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-chit402-com-v1-chat-completions",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "vibesprings-net-api-price-btc-usd",
+  "base-gas-x402-production-up-railway-app-gas",
+  "agent402-tools-api-perp-funding"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://api.chit402.com/v1/chat/completions' -H 'content-type: application/json' -d '{\"max_tokens\":500,\"messages\":[{\"content\":\"Hello\",\"role\":\"user\"}],\"model\":\"xfuel/auto\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-chit402-com-v1-chat-completions&body=%7B%22slug%22%3A%22api-chit402-com-v1-chat-completions%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-chit402-com-v1-chat-completions\",\"body\":\"{\\\"slug\\\":\\\"api-chit402-com-v1-chat-completions\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Chit402%3A%20Signed%20spend%20receipts%20for%20agent%20x402%20payments%20%E2%80%94%20who%20paid%20which%20call%2C%20v&seller=https%3A%2F%2Fapi.chit402.com%2Fv1%2Fchat%2Fcompletions"
+}

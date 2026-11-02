@@ -1,0 +1,81 @@
+{
+ "slug": "x402-data-api-sigrunner-workers-dev-crypto-prices",
+ "name": "Live Crypto Spot Prices: Spot token prices from DefiLlama — pass comma-separated ticker symbols",
+ "seller": "Live Crypto Spot Prices",
+ "host": "x402-data-api.sigrunner.workers.dev",
+ "provider": "https://x402-data-api.sigrunner.workers.dev",
+ "description": "Spot token prices from DefiLlama — pass comma-separated ticker symbols or CoinGecko ids, get price/change_24h/symbol/confidence/timestamp.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto",
+  "prices",
+  "data"
+ ],
+ "endpoint": "https://x402-data-api.sigrunner.workers.dev/crypto/prices",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x5765ae06a52dc7A0BB71c36A11db512c7ea9ed10",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "coins": "bitcoin,ethereum,solana"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"change_24h\":-1.78,\"confidence\":0.99,\"id\":\"bitcoin\",\"price\":63731.496785708485,\"symbol\":\"BTC\",\"timestamp\":1784244902}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1792792622/bazaar-icons/40e0d8ab097a67ec.png",
+ "docs": "https://x402-data-api.sigrunner.workers.dev/llms.txt",
+ "docsChecked": 1793609280634,
+ "payers30d": 9,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T23:17:23.706Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 34,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 34,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-data-api-sigrunner-workers-dev-crypto-prices",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402-data-api.sigrunner.workers.dev/crypto/prices?coins=bitcoin%2Cethereum%2Csolana'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-data-api-sigrunner-workers-dev-crypto-prices&body=%7B%22slug%22%3A%22x402-data-api-sigrunner-workers-dev-crypto-prices%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-data-api-sigrunner-workers-dev-crypto-prices\",\"body\":\"{\\\"slug\\\":\\\"x402-data-api-sigrunner-workers-dev-crypto-prices\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Live%20Crypto%20Spot%20Prices%3A%20Spot%20token%20prices%20from%20DefiLlama%20%E2%80%94%20pass%20comma-separated%20ticker%20symbols&seller=https%3A%2F%2Fx402-data-api.sigrunner.workers.dev%2Fcrypto%2Fprices"
+}

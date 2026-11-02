@@ -31,13 +31,41 @@
  "payers30d": 33,
  "calls30d": 40,
  "firstSeen": "2026-11-02T04:43:25.479Z",
- "verifiedAt": "2026-11-02T05:06:51.281Z",
- "latencyMs": 398,
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 460,
  "lastStatus": 402,
  "fails": 0,
  "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 460,
+   "s": 402
+  }
+ ],
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "payment": "x402",
+ "autoBuy": true,
  "url": "https://blockchains.github.io/findbuyagent/marketplace/api-402rates-com-v1-ping",
  "rating": null,
+ "related": [
+  "rubric-protocol-com-v1-x402-hedera-facts-exchange-rate",
+  "nbu-navistri-com-v1-rates",
+  "api-hyperextend-xyz-v1-liquidations-coverage",
+  "api-govparse-io-v1-stats-opportunities",
+  "http-forest-gas-station-mainnet-lcjl27p8lmjs-code-run-dns-changed",
+  "nordata-hihat-workers-dev-helligdager"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.402rates.com/v1/ping'"
+ },
  "rate": {
   "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-402rates-com-v1-ping&body=%7B%22slug%22%3A%22api-402rates-com-v1-ping%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
   "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-402rates-com-v1-ping\",\"body\":\"{\\\"slug\\\":\\\"api-402rates-com-v1-ping\\\",\\\"stars\\\":1-5}\"}"

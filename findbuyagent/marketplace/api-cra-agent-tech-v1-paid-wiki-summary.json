@@ -1,0 +1,83 @@
+{
+ "slug": "api-cra-agent-tech-v1-paid-wiki-summary",
+ "name": "CRA AGENT data: A short plain-text summary of one Wikipedia article, with its image an",
+ "seller": "CRA AGENT data",
+ "host": "api.cra-agent.tech",
+ "provider": "https://api.cra-agent.tech",
+ "description": "A short plain-text summary of one Wikipedia article, with its image and last update. Content is CC BY-SA 4.0.",
+ "category": "Finance & markets",
+ "tags": [
+  "arc",
+  "chain-data",
+  "fx",
+  "gas"
+ ],
+ "endpoint": "https://api.cra-agent.tech/v1/paid/wiki/summary",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x33b37c6d7a98b58da3Ccb3F36A4b578053d0Ea74",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "lang": "en",
+   "title": "Stablecoin"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": null,
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1790868402/bazaar-icons/b54cadcdf7b27fb9.png",
+ "docs": "https://api.cra-agent.tech/.well-known/x402",
+ "docsChecked": 1793609280859,
+ "payers30d": 9,
+ "calls30d": 15,
+ "lastCalledAt": "2026-10-30T18:32:32.121Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 341,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 341,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-cra-agent-tech-v1-paid-wiki-summary",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.cra-agent.tech/v1/paid/wiki/summary?lang=en&title=Stablecoin'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-cra-agent-tech-v1-paid-wiki-summary&body=%7B%22slug%22%3A%22api-cra-agent-tech-v1-paid-wiki-summary%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-cra-agent-tech-v1-paid-wiki-summary\",\"body\":\"{\\\"slug\\\":\\\"api-cra-agent-tech-v1-paid-wiki-summary\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=CRA%20AGENT%20data%3A%20A%20short%20plain-text%20summary%20of%20one%20Wikipedia%20article%2C%20with%20its%20image%20an&seller=https%3A%2F%2Fapi.cra-agent.tech%2Fv1%2Fpaid%2Fwiki%2Fsummary"
+}

@@ -1,0 +1,78 @@
+{
+ "slug": "mtbandy-sec-ratio-engine-serve-app-modal-run-ratios",
+ "name": "Calculates 9 TTM financial ratios (P/E, P/OCF, P/FCF, P/B, EV/EBITDA,",
+ "seller": "mtbandy--sec-ratio-engine-serve-app.modal.run",
+ "host": "mtbandy--sec-ratio-engine-serve-app.modal.run",
+ "provider": "https://mtbandy--sec-ratio-engine-serve-app.modal.run",
+ "description": "Calculates 9 TTM financial ratios (P/E, P/OCF, P/FCF, P/B, EV/EBITDA, ROIC %, Debt/Equity, Current Ratio, Interest Coverage) directly from official SEC EDGAR XBRL filings with accession audit trails. Disclosures: Financial institutions and IFRS ADRs return null for unclassified balance sheet or missing US-GAAP taxonomy tags.",
+ "category": "Finance & markets",
+ "tags": [],
+ "endpoint": "https://mtbandy--sec-ratio-engine-serve-app.modal.run/ratios",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.003,
+ "amount": "3000",
+ "payTo": "0xb32E6b14B706bC64ec7A67285973c4556e97A8e6",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "price": 225.5,
+   "ticker": "AAPL"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": null,
+ "outputExample": "{\"cache_hit\":true,\"ratios\":{\"current_ratio_mrq\":0.98,\"debt_to_equity_mrq\":1.42,\"ev_to_ebitda_ttm\":24.3,\"interest_coverage_ttm\":29.1,\"price_to_book_mrq\":48.4,\"price_to_earnings_ttm\":31.2,\"price_to_free_cash_flow_ttm\":28.1,\"price_to_operating_cash_flow_ttm\":26.4,\"roic_ttm_pct\":58.2},\"ticker\":\"AAPL\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://mtbandy--sec-ratio-engine-serve-app.modal.run/llms.txt",
+ "docsChecked": 1793609275490,
+ "payers30d": 11,
+ "calls30d": 22,
+ "lastCalledAt": "2026-10-31T11:05:30.679Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 668,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 668,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/mtbandy-sec-ratio-engine-serve-app-modal-run-ratios",
+ "rating": null,
+ "related": [
+  "edgar-apitoll-cloud-v1-edgar-filings",
+  "x402-ottoai-services-tradfi-data",
+  "api-vextorium-com-v1-ecb-rates-history",
+  "data-tollkit-dev-sec-company",
+  "mcp-blocksize-info-v1-bidask-btc-usd",
+  "intel-degenscan-io-v1-oracle-board"
+ ],
+ "example": {
+  "curl": "curl -i 'https://mtbandy--sec-ratio-engine-serve-app.modal.run/ratios?price=225.5&ticker=AAPL'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20mtbandy-sec-ratio-engine-serve-app-modal-run-ratios&body=%7B%22slug%22%3A%22mtbandy-sec-ratio-engine-serve-app-modal-run-ratios%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: mtbandy-sec-ratio-engine-serve-app-modal-run-ratios\",\"body\":\"{\\\"slug\\\":\\\"mtbandy-sec-ratio-engine-serve-app-modal-run-ratios\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Calculates%209%20TTM%20financial%20ratios%20(P%2FE%2C%20P%2FOCF%2C%20P%2FFCF%2C%20P%2FB%2C%20EV%2FEBITDA%2C&seller=https%3A%2F%2Fmtbandy--sec-ratio-engine-serve-app.modal.run%2Fratios"
+}

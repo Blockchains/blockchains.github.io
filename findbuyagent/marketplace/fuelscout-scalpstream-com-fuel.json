@@ -1,0 +1,81 @@
+{
+ "slug": "fuelscout-scalpstream-com-fuel",
+ "name": "FuelScout cheapest-fuel query (station-level where open data exists, r",
+ "seller": "fuelscout.scalpstream.com",
+ "host": "fuelscout.scalpstream.com",
+ "provider": "https://fuelscout.scalpstream.com",
+ "description": "FuelScout cheapest-fuel query (station-level where open data exists, regional averages otherwise)",
+ "category": "Data & analytics",
+ "tags": [],
+ "endpoint": "https://fuelscout.scalpstream.com/fuel",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0xD0f5d2E48e67A265174593aCe2cd540337C1564a",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "country": "ES",
+   "grade": "diesel",
+   "lat": "40.4168",
+   "lon": "-3.7038",
+   "smart": "1"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"country\":\"ES\",\"currency\":\"EUR\",\"disclaimer\":\"Fuel prices are sourced from official government open data and may be delayed; confirm the price at the pump before purchasing. This is factual reference data, not advice.\",\"grade\":\"diesel\",\"price_usd\":\"0.01\",\"resolution\":\"station-level\",\"service\":\"FuelScout\",\"stations\":[{\"address\":\"Calle de Alcalá 120, Madrid\",\"all_in_cost\":1.421,\"distance_km\":2.4,\"name\":\"Repsol Alcalá 120\",\"price\":1.409}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://fuelscout.scalpstream.com/llms.txt",
+ "docsChecked": 1793609278161,
+ "payers30d": 10,
+ "calls30d": 13,
+ "lastCalledAt": "2026-11-01T08:26:28.237Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 816,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 816,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/fuelscout-scalpstream-com-fuel",
+ "rating": null,
+ "related": [
+  "ip402-xyz-v1-geo",
+  "api-polyform-org-v1-threat-scanners",
+  "insider-radar-agent-insider-radar-agent-workers-dev-v1-leaderboard",
+  "cpi-report-us-underscoredone-com-cpi",
+  "quantagentshop-com-v1-ip-geo",
+  "quantagentshop-com-v1-domain-lookup"
+ ],
+ "example": {
+  "curl": "curl -i 'https://fuelscout.scalpstream.com/fuel?country=ES&grade=diesel&lat=40.4168&lon=-3.7038&smart=1'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20fuelscout-scalpstream-com-fuel&body=%7B%22slug%22%3A%22fuelscout-scalpstream-com-fuel%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: fuelscout-scalpstream-com-fuel\",\"body\":\"{\\\"slug\\\":\\\"fuelscout-scalpstream-com-fuel\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=FuelScout%20cheapest-fuel%20query%20(station-level%20where%20open%20data%20exists%2C%20r&seller=https%3A%2F%2Ffuelscout.scalpstream.com%2Ffuel"
+}

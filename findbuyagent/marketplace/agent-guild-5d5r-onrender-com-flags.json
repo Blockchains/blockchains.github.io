@@ -1,0 +1,81 @@
+{
+ "slug": "agent-guild-5d5r-onrender-com-flags",
+ "name": "Agent Guild: Agent Guild paid read (fraud_check): collusion suspicion scores, reaso",
+ "seller": "Agent Guild",
+ "host": "agent-guild-5d5r.onrender.com",
+ "provider": "https://agent-guild-5d5r.onrender.com",
+ "description": "Agent Guild paid read (fraud_check): collusion suspicion scores, reasons and cluster identifiers Use when an autonomous agent needs to: list agents at or above a minimum collusion suspicion score; review flagged agents and their collusion suspicion reasons.",
+ "category": "Security & compliance",
+ "tags": [
+  "agent-trust",
+  "agent-security",
+  "x402"
+ ],
+ "endpoint": "https://agent-guild-5d5r.onrender.com/flags",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xaa4E3ba0Eb5f564cAb54dDC08f5BaAfb3D4cA8E5",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "min_suspicion": "0.4"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"flags\":[],\"suspicion\":0.02}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://agent-guild-5d5r.onrender.com/llms.txt",
+ "docsChecked": 1793609270322,
+ "payers30d": 14,
+ "calls30d": 22,
+ "lastCalledAt": "2026-11-02T04:43:43.821Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 514,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 514,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agent-guild-5d5r-onrender-com-flags",
+ "rating": null,
+ "related": [
+  "api-relaystation-ai-v1-screening-match",
+  "api-vrsai-tech-v1-capabilities-package-install-preflight",
+  "netintel-dev-email-auth",
+  "toolrail-dev-vat-rates",
+  "modelmarket-dev-x402-histor-check",
+  "quartermaster-surewhynot-app-v1-dns"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agent-guild-5d5r.onrender.com/flags?min_suspicion=0.4'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agent-guild-5d5r-onrender-com-flags&body=%7B%22slug%22%3A%22agent-guild-5d5r-onrender-com-flags%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agent-guild-5d5r-onrender-com-flags\",\"body\":\"{\\\"slug\\\":\\\"agent-guild-5d5r-onrender-com-flags\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent%20Guild%3A%20Agent%20Guild%20paid%20read%20(fraud_check)%3A%20collusion%20suspicion%20scores%2C%20reaso&seller=https%3A%2F%2Fagent-guild-5d5r.onrender.com%2Fflags"
+}

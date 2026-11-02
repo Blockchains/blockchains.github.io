@@ -1,0 +1,83 @@
+{
+ "slug": "minifetch-com-api-v1-x402-preflight-url-check",
+ "name": "Minifetch Technical SEO API: Cheap robots.txt preflight check before you call the Minifetch /extrac",
+ "seller": "Minifetch Technical SEO API",
+ "host": "minifetch.com",
+ "provider": "https://minifetch.com",
+ "description": "Cheap robots.txt preflight check before you call the Minifetch /extract and /run/seo-page-audit endpoints: returns whether Minifetch may fetch a target URL (allow/deny) plus its crawl-delay. If blocked and the site is not yours try our external proxy routes. If blocked and the site is yours or to set a custom crawl-delay read https://minifetch.com/tutorials/unblock-minifetch Checks the URL as given — does not follow redirects. Supports GET & POST",
+ "category": "Search & web",
+ "tags": [
+  "seo",
+  "robots-txt",
+  "preflight",
+  "crawlability",
+  "indexability"
+ ],
+ "endpoint": "https://minifetch.com/api/v1/x402/preflight/url-check",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xffA9155A0e4B3d8d42351Da226cC1feEe449686f",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "url": "https://github.com"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"results\":[{\"data\":{\"allowed\":true,\"crawlDelay\":1,\"message\":\"Access allowed by robots.txt\",\"minifetchCache\":{\"cachedAt\":\"2026-08-16T18:22:10.000Z\",\"expiresAt\":\"2026-08-17T18:22:10.000Z\",\"hit\":false},\"proxy\":{\"proxyType\":\"minifetch\",\"userAgent\":\"minifetch/1.0 (+https://minifetch.com/site-owner-faq)\"},\"url\":\"https://github.com\"}}],\"success\":true}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1781035850/bazaar-icons/d02845f9304a54ee.png",
+ "docs": "https://minifetch.com/llms.txt",
+ "docsChecked": 1793609268529,
+ "payers30d": 27,
+ "calls30d": 109,
+ "lastCalledAt": "2026-11-02T03:24:37.666Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 716,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 716,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/minifetch-com-api-v1-x402-preflight-url-check",
+ "rating": null,
+ "related": [
+  "win-oneshotagent-com-v1-tools-search",
+  "api-clawfetch-ai-fetch",
+  "web-cyberwarex-com-fetch",
+  "api-clawfetch-ai-extractors",
+  "cdp-agent-0-01-onrender-com",
+  "agent-web-tools-agent-web-tools-workers-dev-v1-check"
+ ],
+ "example": {
+  "curl": "curl -i 'https://minifetch.com/api/v1/x402/preflight/url-check?url=https%3A%2F%2Fgithub.com'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20minifetch-com-api-v1-x402-preflight-url-check&body=%7B%22slug%22%3A%22minifetch-com-api-v1-x402-preflight-url-check%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: minifetch-com-api-v1-x402-preflight-url-check\",\"body\":\"{\\\"slug\\\":\\\"minifetch-com-api-v1-x402-preflight-url-check\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Minifetch%20Technical%20SEO%20API%3A%20Cheap%20robots.txt%20preflight%20check%20before%20you%20call%20the%20Minifetch%20%2Fextrac&seller=https%3A%2F%2Fminifetch.com%2Fapi%2Fv1%2Fx402%2Fpreflight%2Furl-check"
+}

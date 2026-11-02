@@ -1,0 +1,79 @@
+{
+ "slug": "pyfile-agent-taile3ff35-ts-net-data-chain-block-number",
+ "name": "Pyfile x402 API: Latest EVM block number for base|polygon|arbitrum|optimism",
+ "seller": "Pyfile x402 API",
+ "host": "pyfile-agent.taile3ff35.ts.net",
+ "provider": "https://pyfile-agent.taile3ff35.ts.net",
+ "description": "Latest EVM block number for base|polygon|arbitrum|optimism. ?chain=base",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "data",
+  "api",
+  "x402"
+ ],
+ "endpoint": "https://pyfile-agent.taile3ff35.ts.net/data/chain/block-number",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.003,
+ "amount": "3000",
+ "payTo": "0xA43774fD2e867FC45b782456d78F135a215D5561",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 900,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"ok\":true}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://pyfile-agent.taile3ff35.ts.net/llms.txt",
+ "docsChecked": 1793609280789,
+ "payers30d": 9,
+ "calls30d": 15,
+ "lastCalledAt": "2026-10-30T12:38:49.374Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 146,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 146,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/pyfile-agent-taile3ff35-ts-net-data-chain-block-number",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-erc20-balance",
+  "api-onesource-io-api-chain-live-balance",
+  "api-x402node-dev-forex-convert-cny-usd-cny-usd",
+  "api-x402node-dev-forex-convert-usd-cny-usd-cny",
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number"
+ ],
+ "example": {
+  "curl": "curl -i 'https://pyfile-agent.taile3ff35.ts.net/data/chain/block-number'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20pyfile-agent-taile3ff35-ts-net-data-chain-block-number&body=%7B%22slug%22%3A%22pyfile-agent-taile3ff35-ts-net-data-chain-block-number%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: pyfile-agent-taile3ff35-ts-net-data-chain-block-number\",\"body\":\"{\\\"slug\\\":\\\"pyfile-agent-taile3ff35-ts-net-data-chain-block-number\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Pyfile%20x402%20API%3A%20Latest%20EVM%20block%20number%20for%20base%7Cpolygon%7Carbitrum%7Coptimism&seller=https%3A%2F%2Fpyfile-agent.taile3ff35.ts.net%2Fdata%2Fchain%2Fblock-number"
+}

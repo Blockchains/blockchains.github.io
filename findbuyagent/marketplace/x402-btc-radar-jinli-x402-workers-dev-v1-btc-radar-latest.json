@@ -1,0 +1,81 @@
+{
+ "slug": "x402-btc-radar-jinli-x402-workers-dev-v1-btc-radar-latest",
+ "name": "BTC Ecosystem Radar: Bitcoin L1 radar v3: BRC-20/Runes/Alkanes/Stamps + ordinals-nft early",
+ "seller": "BTC Ecosystem Radar",
+ "host": "x402-btc-radar.jinli-x402.workers.dev",
+ "provider": "https://x402-btc-radar.jinli-x402.workers.dev",
+ "description": "Bitcoin L1 radar v3: BRC-20/Runes/Alkanes/Stamps + ordinals-nft early mint radar; candidate_protocols summary hook only. Full unverified new-protocol evidence is on /v1/btc/radar/candidates ($0.50). $0.01. Not investment advice.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "bitcoin",
+  "brc-20",
+  "runes",
+  "ordinals-nft",
+  "research"
+ ],
+ "endpoint": "https://x402-btc-radar.jinli-x402.workers.dev/v1/btc/radar/latest",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0xabe2CccDAFED6ceC19E47A3794EEb487e646Bc0f",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 45,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"candidate_protocols\":{\"candidates_count\":1,\"latest\":{\"first_detected_at\":\"2026-09-30T15:12:00Z\",\"name\":\"example-new-protocol\"}},\"disclaimer\":\"Not investment advice. 不构成投资建议。Information only; do your own research.\",\"items\":[{\"actionable\":false,\"category\":\"brc20-4byte\",\"chain\":\"bitcoin\",\"first_seen\":\"2026-09-28\",\"first_seen_at\":\"2026-09-28T00:00:00Z\",\"max_supply\":\"21000000\",\"mint_status\":\"unknown\",\"name\":\"GPDA\",\"official_url\":\"\",\"risk_flags\":[\"lim-equals-max\",\"no-official-site-or-x\",\"creator-serial-deployer\",\"very-few-holders\",\"indexer-field-anomaly\"],\"slug\":\"gpda\",\"sources\":[\"https://ordinals.com/inscription/a03ee4ec2eb5de63f1e03b14ec8233283210ef689c3f7ee2212c3aab1d9e1c7di0\",\"https://mempool.space/tx/a03ee4ec2eb5de63f1e03b14ec8233283210ef689c3f7ee2212c3aab1d9e1c7d\",\"https://unisat.io/brc20/GPDA\"],\"stage\":\"minting (new deploy, height 968987, 2026-09-28)\",\"verdict\":\"watch\",\"x_handle\":\"\"}],\"meta\":{\"built_at\":\"2026-09-30T15:12:00Z\",\"schema_version\":\"v3\",\"snapshot_age_seconds\":0,\"stale\":false},\"scope\":\"Bitcoin L1 inscription/token/NFT radar: BRC-20 4-byte, Runes, Alkanes, Stamp/SRC-20, ordinals-nft. Bitcoin L1 mainnet only.\",\"updated_at\":\"2026-09-30T15:12:00Z\",\"window\":\"2026-09-25 .. 2026-10-01 (Asia/Shanghai)\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://x402-btc-radar.jinli-x402.workers.dev/llms.txt",
+ "docsChecked": 1793609280300,
+ "payers30d": 9,
+ "calls30d": 14,
+ "lastCalledAt": "2026-11-01T23:17:15.804Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 287,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 287,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-btc-radar-jinli-x402-workers-dev-v1-btc-radar-latest",
+ "rating": null,
+ "related": [
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets",
+  "api-nansen-ai-api-v1-tgm-token-information",
+  "api-x402node-dev-chain-honeypot",
+  "api-gondola-ai-com-v1-chat-completions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://x402-btc-radar.jinli-x402.workers.dev/v1/btc/radar/latest'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-btc-radar-jinli-x402-workers-dev-v1-btc-radar-latest&body=%7B%22slug%22%3A%22x402-btc-radar-jinli-x402-workers-dev-v1-btc-radar-latest%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-btc-radar-jinli-x402-workers-dev-v1-btc-radar-latest\",\"body\":\"{\\\"slug\\\":\\\"x402-btc-radar-jinli-x402-workers-dev-v1-btc-radar-latest\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=BTC%20Ecosystem%20Radar%3A%20Bitcoin%20L1%20radar%20v3%3A%20BRC-20%2FRunes%2FAlkanes%2FStamps%20%2B%20ordinals-nft%20early&seller=https%3A%2F%2Fx402-btc-radar.jinli-x402.workers.dev%2Fv1%2Fbtc%2Fradar%2Flatest"
+}

@@ -1,0 +1,84 @@
+{
+ "slug": "token-risk-com-v1-scan",
+ "name": "token-risk: Deterministic on-chain structural risk report for an ERC-20 token on B",
+ "seller": "token-risk",
+ "host": "token-risk.com",
+ "provider": "https://token-risk.com",
+ "description": "Deterministic on-chain structural risk report for an ERC-20 token on Base. Keyless x402-native payment — no signup, no API key. Reports STRUCTURAL risk, not reputation: centralized-control powers (mint/pause/blacklist) are flagged regardless of issuer. Score 0-100, higher = structurally safer. See free real samples before paying: GET /samples/index.json",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "token-risk",
+  "security",
+  "erc20",
+  "base",
+  "onchain"
+ ],
+ "endpoint": "https://token-risk.com/v1/scan",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x332DbF15a8Bcca8eEB4390b380202360F4f45401",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+   "chainId": 8453
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"address\":\"0x833589fcd6edb6e08f4c7c32d4f71b54bda02913\",\"cache\":{\"ageSeconds\":0,\"hit\":false},\"chainId\":8453,\"checks\":[{\"id\":\"contract_exists\",\"status\":\"pass\",\"summary\":\"contract code present\"}],\"context\":{\"knownAsset\":true},\"engine\":{\"version\":\"0.3.0\"},\"generatedAt\":\"2026-01-01T00:00:00.000Z\",\"requestId\":\"018f2c6e-example\",\"schemaVersion\":3,\"score\":100,\"scoring\":{\"configVersion\":\"1.0.0\",\"penalties\":[]},\"verdict\":\"low_risk\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://token-risk.com/llms.txt",
+ "docsChecked": 1793609281065,
+ "payers30d": 9,
+ "calls30d": 12,
+ "lastCalledAt": "2026-11-02T05:18:49.865Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 49,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 49,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/token-risk-com-v1-scan",
+ "rating": null,
+ "related": [
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets",
+  "api-nansen-ai-api-v1-tgm-token-information",
+  "api-x402node-dev-chain-honeypot",
+  "api-gondola-ai-com-v1-chat-completions"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://token-risk.com/v1/scan' -H 'content-type: application/json' -d '{\"address\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\",\"chainId\":8453}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20token-risk-com-v1-scan&body=%7B%22slug%22%3A%22token-risk-com-v1-scan%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: token-risk-com-v1-scan\",\"body\":\"{\\\"slug\\\":\\\"token-risk-com-v1-scan\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=token-risk%3A%20Deterministic%20on-chain%20structural%20risk%20report%20for%20an%20ERC-20%20token%20on%20B&seller=https%3A%2F%2Ftoken-risk.com%2Fv1%2Fscan"
+}

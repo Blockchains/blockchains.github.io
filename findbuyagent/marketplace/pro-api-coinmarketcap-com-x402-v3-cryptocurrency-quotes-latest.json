@@ -1,0 +1,78 @@
+{
+ "slug": "pro-api-coinmarketcap-com-x402-v3-cryptocurrency-quotes-latest",
+ "name": "Get the latest market quotes for one or more cryptocurrencies",
+ "seller": "pro-api.coinmarketcap.com",
+ "host": "pro-api.coinmarketcap.com",
+ "provider": "https://pro-api.coinmarketcap.com",
+ "description": "Get the latest market quotes for one or more cryptocurrencies.",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://pro-api.coinmarketcap.com/x402/v3/cryptocurrency/quotes/latest",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x3C5f3a6cE224BB89D72f5EB4232ecC27F67B3eeA",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 30,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "convert": "USD",
+   "id": "1,1027"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"data\":{\"1\":{\"circulating_supply\":19830000,\"cmc_rank\":1,\"date_added\":\"2010-07-13T00:00:00.000Z\",\"id\":1,\"is_active\":1,\"last_updated\":\"2026-02-26T10:20:00.000Z\",\"max_supply\":21000000,\"name\":\"Bitcoin\",\"quote\":{\"USD\":{\"fully_diluted_market_cap\":\"1437993600000\",\"last_updated\":\"2026-02-26T10:20:00.000Z\",\"market_cap\":\"1357800000000\",\"market_cap_dominance\":61.5,\"percent_change_1h\":0.12,\"percent_change_24h\":2.45,\"percent_change_30d\":5.6,\"percent_change_7d\":-1.8,\"price\":68475.88,\"volume_24h\":\"28500000000\",\"volume_change_24h\":-3.25}},\"slug\":\"bitcoin\",\"symbol\":\"BTC\",\"total_supply\":19830000},\"1027\":{\"circulating_supply\":120500000,\"cmc_rank\":2,\"date_added\":\"2015-08-07T00:00:00.000Z\",\"id\":1027,\"is_active\":1,\"last_updated\":\"2026-02-26T10:20:00.000Z\",\"name\":\"Ethereum\",\"quote\":{\"USD\":{\"fully_diluted_market_cap\":\"249709000000\",\"last_updated\":\"2026-02-26T10:20:00.000Z\",\"market_cap\":\"249709000000\",\"market_cap_dominance\":11.3,\"percent_change_1h\":0.08,\"percent_change_24h\":1.9,\"percent_change_30d\":-8.5,\"percent_change_7d\":-3.2,\"price\":2072.28,\"volume_24h\":\"12000000000\",\"volume_change_24h\":-1.15}},\"slug\":\"ethereum\",\"symbol\":\"ETH\",\"total_supply\":120500000}},\"status\":{\"credit_count\":1,\"elapsed\":12,\"error_code\":0,\"error_message\":\"\",\"timestamp\":\"2026-02-26T10:20:05.000Z\"}}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609270965,
+ "payers30d": 14,
+ "calls30d": 64,
+ "lastCalledAt": "2026-11-02T03:29:11.161Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 526,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 526,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/pro-api-coinmarketcap-com-x402-v3-cryptocurrency-quotes-latest",
+ "rating": null,
+ "related": [
+  "api-nansen-ai-api-v1-profiler-address-current-balance",
+  "api-nansen-ai-api-v1-tgm-who-bought-sold",
+  "api-nansen-ai-api-v1-profiler-address-related-wallets",
+  "api-nansen-ai-api-v1-tgm-token-information",
+  "api-x402node-dev-chain-honeypot",
+  "api-gondola-ai-com-v1-chat-completions"
+ ],
+ "example": {
+  "curl": "curl -i 'https://pro-api.coinmarketcap.com/x402/v3/cryptocurrency/quotes/latest?convert=USD&id=1%2C1027'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20pro-api-coinmarketcap-com-x402-v3-cryptocurrency-quotes-latest&body=%7B%22slug%22%3A%22pro-api-coinmarketcap-com-x402-v3-cryptocurrency-quotes-latest%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: pro-api-coinmarketcap-com-x402-v3-cryptocurrency-quotes-latest\",\"body\":\"{\\\"slug\\\":\\\"pro-api-coinmarketcap-com-x402-v3-cryptocurrency-quotes-latest\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Get%20the%20latest%20market%20quotes%20for%20one%20or%20more%20cryptocurrencies&seller=https%3A%2F%2Fpro-api.coinmarketcap.com%2Fx402%2Fv3%2Fcryptocurrency%2Fquotes%2Flatest"
+}

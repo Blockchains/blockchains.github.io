@@ -1,0 +1,83 @@
+{
+ "slug": "agent-tools-production-e6aa-up-railway-app-v1-site-check",
+ "name": "Agent Tools UK: Check whether a website is up right now: HTTP status, response time in",
+ "seller": "Agent Tools UK",
+ "host": "agent-tools-production-e6aa.up.railway.app",
+ "provider": "https://agent-tools-production-e6aa.up.railway.app",
+ "description": "Check whether a website is up right now: HTTP status, response time in ms, full redirect chain, and the SSL certificate's validity, issuer and days until expiry. Use when monitoring a site, diagnosing a broken link, or warning that a certificate is about to expire. A site that is down still returns 200 with up:false and the error. Errors: 400 bad or private URL.",
+ "category": "Search & web",
+ "tags": [
+  "uptime",
+  "monitoring",
+  "ssl certificate",
+  "website status",
+  "devops"
+ ],
+ "endpoint": "https://agent-tools-production-e6aa.up.railway.app/v1/site-check",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x1254f70ceed55d2e2d087e28f1ee2368d19e0399",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "url": "https://www.gov.uk"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"ms\":182,\"redirects\":[],\"ssl\":{\"daysLeft\":54,\"issuer\":\"Let's Encrypt\",\"valid\":true},\"status\":200,\"up\":true}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://agent-tools-production-e6aa.up.railway.app/llms.txt",
+ "docsChecked": 1793609274461,
+ "payers30d": 11,
+ "calls30d": 61,
+ "lastCalledAt": "2026-11-01T07:24:45.017Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 184,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 184,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agent-tools-production-e6aa-up-railway-app-v1-site-check",
+ "rating": null,
+ "related": [
+  "api-bitrefill-com-x402-gift-cards-search",
+  "stableenrich-dev-api-exa-contents",
+  "win-oneshotagent-com-v1-tools-web-read",
+  "search-cyberwarex-com-contents",
+  "apexfaucet-xyz-api-x402-page-markdown",
+  "sift-srv1996466-hstgr-cloud-v1-feeds"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agent-tools-production-e6aa.up.railway.app/v1/site-check?url=https%3A%2F%2Fwww.gov.uk'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agent-tools-production-e6aa-up-railway-app-v1-site-check&body=%7B%22slug%22%3A%22agent-tools-production-e6aa-up-railway-app-v1-site-check%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agent-tools-production-e6aa-up-railway-app-v1-site-check\",\"body\":\"{\\\"slug\\\":\\\"agent-tools-production-e6aa-up-railway-app-v1-site-check\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent%20Tools%20UK%3A%20Check%20whether%20a%20website%20is%20up%20right%20now%3A%20HTTP%20status%2C%20response%20time%20in&seller=https%3A%2F%2Fagent-tools-production-e6aa.up.railway.app%2Fv1%2Fsite-check"
+}

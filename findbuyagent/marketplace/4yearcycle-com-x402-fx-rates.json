@@ -1,0 +1,84 @@
+{
+ "slug": "4yearcycle-com-x402-fx-rates",
+ "name": "ECB FX Rates: Official daily foreign exchange reference rates from the European Cent",
+ "seller": "ECB FX Rates",
+ "host": "4yearcycle.com",
+ "provider": "https://4yearcycle.com",
+ "description": "Official daily foreign exchange reference rates from the European Central Bank (~30 currencies vs EUR, published each business day around 16:00 CET), rebased on request to any listed currency via EUR cross-rates and filtered to a requested symbol list; returns the reference date, the rate table and the ECB source attribution.",
+ "category": "Finance & markets",
+ "tags": [
+  "fx",
+  "forex",
+  "exchange-rates",
+  "currencies",
+  "ecb"
+ ],
+ "endpoint": "https://4yearcycle.com/x402/fx-rates",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x9862ca83b72aB95521F457aFf6e6EFb03d8164C3",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "base": "USD",
+   "symbols": "EUR,GBP,JPY,CHF"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"base\":\"USD\",\"date\":\"2026-08-17\",\"notice\":\"ECB euro foreign exchange reference rates, available free of charge at ecb.europa.eu; non-EUR bases are cross-rates computed via EUR.\",\"rates\":{\"CHF\":0.809885,\"EUR\":0.862589,\"GBP\":0.737514,\"JPY\":159.225395},\"source\":\"ECB\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://4yearcycle.com/.well-known/x402",
+ "docsChecked": 1793609282913,
+ "payers30d": 9,
+ "calls30d": 10,
+ "lastCalledAt": "2026-11-02T04:43:20.144Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 617,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 617,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/4yearcycle-com-x402-fx-rates",
+ "rating": null,
+ "related": [
+  "tick-hugen-tokyo-tick-latest",
+  "tick-hugen-tokyo-tick-symbols",
+  "tick-hugen-tokyo-tick-all",
+  "deskfeed-dev-v1-events",
+  "www-x402financialdata-com-crypto-prices",
+  "agentshield-live-fx"
+ ],
+ "example": {
+  "curl": "curl -i 'https://4yearcycle.com/x402/fx-rates?base=USD&symbols=EUR%2CGBP%2CJPY%2CCHF'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%204yearcycle-com-x402-fx-rates&body=%7B%22slug%22%3A%224yearcycle-com-x402-fx-rates%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: 4yearcycle-com-x402-fx-rates\",\"body\":\"{\\\"slug\\\":\\\"4yearcycle-com-x402-fx-rates\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ECB%20FX%20Rates%3A%20Official%20daily%20foreign%20exchange%20reference%20rates%20from%20the%20European%20Cent&seller=https%3A%2F%2F4yearcycle.com%2Fx402%2Ffx-rates"
+}

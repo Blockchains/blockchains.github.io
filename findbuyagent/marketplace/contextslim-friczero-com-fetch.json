@@ -1,0 +1,83 @@
+{
+ "slug": "contextslim-friczero-com-fetch",
+ "name": "ContextSlim: [MCP: fetch_result] Targeted JSONPath extraction (query param mode) fr",
+ "seller": "ContextSlim",
+ "host": "contextslim.friczero.com",
+ "provider": "https://contextslim.friczero.com",
+ "description": "[MCP: fetch_result] Targeted JSONPath extraction (query param mode) from cached context reference.",
+ "category": "AI & LLM",
+ "tags": [
+  "mcp",
+  "ai-tools",
+  "context-pruning",
+  "json",
+  "base"
+ ],
+ "endpoint": "https://contextslim.friczero.com/fetch",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0xA18E34607479b706123cA5e1831f24d2ECECe4c6",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 604800,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "referenceId": "ref_12345678"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"referenceId\":\"ref_12345678\",\"result\":{},\"retrievedTokens\":9,\"status\":\"success\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": null,
+ "docsChecked": 1793609270817,
+ "payers30d": 14,
+ "calls30d": 17,
+ "lastCalledAt": "2026-11-02T04:29:47.777Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 217,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 217,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/contextslim-friczero-com-fetch",
+ "rating": null,
+ "related": [
+  "jev-x402-vercel-app-jev",
+  "gateway-spraay-app-bittensor-v1-models",
+  "767-2676-com-v2-receipt",
+  "golf-evm-math-x402-evm-math-workers-dev-v1-chat-completions",
+  "www-amnt-io-api-agent-amnt-bitcoin-price",
+  "api-agentweather-io-v1-pulse-storm"
+ ],
+ "example": {
+  "curl": "curl -i 'https://contextslim.friczero.com/fetch?referenceId=ref_12345678'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20contextslim-friczero-com-fetch&body=%7B%22slug%22%3A%22contextslim-friczero-com-fetch%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: contextslim-friczero-com-fetch\",\"body\":\"{\\\"slug\\\":\\\"contextslim-friczero-com-fetch\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ContextSlim%3A%20%5BMCP%3A%20fetch_result%5D%20Targeted%20JSONPath%20extraction%20(query%20param%20mode)%20fr&seller=https%3A%2F%2Fcontextslim.friczero.com%2Ffetch"
+}

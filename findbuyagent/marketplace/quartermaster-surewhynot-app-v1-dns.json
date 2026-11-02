@@ -1,0 +1,84 @@
+{
+ "slug": "quartermaster-surewhynot-app-v1-dns",
+ "name": "Quartermaster DNS Lookup: Resolve DNS records using DNS-over-HTTPS and return structured JSON fo",
+ "seller": "Quartermaster DNS Lookup",
+ "host": "quartermaster.surewhynot.app",
+ "provider": "https://quartermaster.surewhynot.app",
+ "description": "Resolve DNS records using DNS-over-HTTPS and return structured JSON for infrastructure, security, and agent workflows.",
+ "category": "Security & compliance",
+ "tags": [
+  "dns",
+  "doh",
+  "networking",
+  "records",
+  "infrastructure"
+ ],
+ "endpoint": "https://quartermaster.surewhynot.app/v1/dns",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x5253666c40432f009ebd99908b9cd2a7fd1019cb",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "name": "example.com",
+   "type": "A"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"answers\":[{\"data\":\"93.184.215.14\",\"name\":\"example.com\",\"ttl\":300,\"type\":1}],\"name\":\"example.com\",\"status\":0,\"type\":\"A\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://quartermaster.surewhynot.app/llms.txt",
+ "docsChecked": 1793609272574,
+ "payers30d": 12,
+ "calls30d": 69,
+ "lastCalledAt": "2026-11-02T01:32:19.769Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 34,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 34,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/quartermaster-surewhynot-app-v1-dns",
+ "rating": null,
+ "related": [
+  "modelmarket-dev-x402-histor-check",
+  "forensik-halowerk-com-v1-bytecode-clone-provenance",
+  "tienda-textokit-store-api-cuit-ar",
+  "forensik-halowerk-com-v1-address-poisoning-detector",
+  "forensik-halowerk-com-v1-dusting-attack-monitor",
+  "netintel-dev-email-auth"
+ ],
+ "example": {
+  "curl": "curl -i 'https://quartermaster.surewhynot.app/v1/dns?name=example.com&type=A'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20quartermaster-surewhynot-app-v1-dns&body=%7B%22slug%22%3A%22quartermaster-surewhynot-app-v1-dns%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: quartermaster-surewhynot-app-v1-dns\",\"body\":\"{\\\"slug\\\":\\\"quartermaster-surewhynot-app-v1-dns\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Quartermaster%20DNS%20Lookup%3A%20Resolve%20DNS%20records%20using%20DNS-over-HTTPS%20and%20return%20structured%20JSON%20fo&seller=https%3A%2F%2Fquartermaster.surewhynot.app%2Fv1%2Fdns"
+}

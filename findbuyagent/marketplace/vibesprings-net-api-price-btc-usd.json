@@ -1,0 +1,81 @@
+{
+ "slug": "vibesprings-net-api-price-btc-usd",
+ "name": "Vibe Springs: Real-time BTC/USD price feed oracle",
+ "seller": "Vibe Springs",
+ "host": "vibesprings.net",
+ "provider": "https://vibesprings.net",
+ "description": "Real-time BTC/USD price feed oracle. Retrieves live spot rate, 24h high/low, and volume directly from Coinbase Exchange.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "price",
+  "oracle",
+  "crypto",
+  "market-data",
+  "btc-usd"
+ ],
+ "endpoint": "https://vibesprings.net/api/price/btc-usd",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x38C063312719220c676E988f0DEE14B4ec0e44C8",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"change24h\":-2.68,\"currency\":\"USD\",\"exchange\":\"Coinbase\",\"high24h\":66774.05,\"low24h\":64491.88,\"name\":\"BTC / USD\",\"price\":64661.88,\"processingTime\":\"120ms\",\"symbol\":\"BTC\",\"type\":\"crypto_spot\",\"volume24h\":6332.98}",
+ "outputSchema": null,
+ "iconUrl": "https://res.cloudinary.com/bdb-prod/image/upload/c_fill,ar_1:1,w_256,h_256,f_auto,q_auto/v1783820462/bazaar-icons/87251f674c6daed8.jpg",
+ "docs": "https://vibesprings.net/llms.txt",
+ "docsChecked": 1793609267904,
+ "payers30d": 28,
+ "calls30d": 74,
+ "lastCalledAt": "2026-11-02T03:29:03.973Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 570,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 570,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/vibesprings-net-api-price-btc-usd",
+ "rating": null,
+ "related": [
+  "api-printmoneylab-com-api-v1-kr-prices",
+  "api-oblique-markets-api-v1-paid-base-block-number",
+  "api-oblique-markets-api-v1-paid-base-gas-price",
+  "api-chit402-com-v1-chat-completions",
+  "base-gas-x402-production-up-railway-app-gas",
+  "agent402-tools-api-perp-funding"
+ ],
+ "example": {
+  "curl": "curl -i 'https://vibesprings.net/api/price/btc-usd'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20vibesprings-net-api-price-btc-usd&body=%7B%22slug%22%3A%22vibesprings-net-api-price-btc-usd%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: vibesprings-net-api-price-btc-usd\",\"body\":\"{\\\"slug\\\":\\\"vibesprings-net-api-price-btc-usd\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Vibe%20Springs%3A%20Real-time%20BTC%2FUSD%20price%20feed%20oracle&seller=https%3A%2F%2Fvibesprings.net%2Fapi%2Fprice%2Fbtc-usd"
+}

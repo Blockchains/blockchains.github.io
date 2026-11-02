@@ -1,0 +1,78 @@
+{
+ "slug": "md-fastdb-in-pulse-odds",
+ "name": "Polymarket prediction market odds — live prices for any market by free",
+ "seller": "md.fastdb.in",
+ "host": "md.fastdb.in",
+ "provider": "https://md.fastdb.in",
+ "description": "Polymarket prediction market odds — live prices for any market by free-text search or slug: outcomes, prices, spread, 24h volume, liquidity, resolution date.",
+ "category": "Finance & markets",
+ "tags": [],
+ "endpoint": "https://md.fastdb.in/pulse/odds",
+ "method": "POST",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x072F3a2bD93bB75b1Eb84a9E45D17a4F90a6D801",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 300,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "limit": 5,
+   "query": "argentina world cup"
+  },
+  "bodyType": "json",
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"markets\":[{\"active\":true,\"bestAsk\":0.407,\"bestBid\":0.404,\"endDate\":\"2026-07-20T00:00:00Z\",\"liquidity\":812000,\"oneDayPriceChange\":0.021,\"outcomes\":[\"Yes\",\"No\"],\"prices\":[0.4055,0.5945],\"question\":\"Will Argentina win the 2026 FIFA World Cup?\",\"slug\":\"will-argentina-win-the-2026-fifa-world-cup\",\"spread\":0.003,\"url\":\"https://polymarket.com/market/will-argentina-win-the-2026-fifa-world-cup\",\"volume24h\":3276661}],\"query\":\"argentina world cup\",\"source\":\"polymarket\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://md.fastdb.in/.well-known/x402",
+ "docsChecked": 1793609275807,
+ "payers30d": 11,
+ "calls30d": 20,
+ "lastCalledAt": "2026-10-31T00:32:06.772Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 436,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 436,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/md-fastdb-in-pulse-odds",
+ "rating": null,
+ "related": [
+  "coil-trade-api-crypto-gate",
+  "polymarket-signal-api-pwnker-polymarket-signals-workers-dev-v1-perform",
+  "www-u2a-com-au-api-mcp-recommend-depin",
+  "intel-degenscan-io-v1-hl-markets",
+  "crypto-apitoll-cloud-v1-crypto-global",
+  "crypto-apitoll-cloud-v1-crypto-perps"
+ ],
+ "example": {
+  "curl": "curl -i -X POST 'https://md.fastdb.in/pulse/odds' -H 'content-type: application/json' -d '{\"limit\":5,\"query\":\"argentina world cup\"}'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20md-fastdb-in-pulse-odds&body=%7B%22slug%22%3A%22md-fastdb-in-pulse-odds%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: md-fastdb-in-pulse-odds\",\"body\":\"{\\\"slug\\\":\\\"md-fastdb-in-pulse-odds\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Polymarket%20prediction%20market%20odds%20%E2%80%94%20live%20prices%20for%20any%20market%20by%20free&seller=https%3A%2F%2Fmd.fastdb.in%2Fpulse%2Fodds"
+}

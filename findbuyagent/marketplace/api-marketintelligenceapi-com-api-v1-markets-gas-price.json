@@ -1,0 +1,81 @@
+{
+ "slug": "api-marketintelligenceapi-com-api-v1-markets-gas-price",
+ "name": "Gas price now on every EVM chain: Gas price now on every EVM chain ($0.001): base fee, priority fee perc",
+ "seller": "Gas price now on every EVM chain",
+ "host": "api.marketintelligenceapi.com",
+ "provider": "https://api.marketintelligenceapi.com",
+ "description": "Gas price now on every EVM chain ($0.001): base fee, priority fee percentiles and the USD cost of a transfer and a DEX swap on Ethereum, Base, Arbitrum, Optimism, Polygon and other chains, cheapest first. Use to budget or time a transaction.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "gas price",
+  "gas fees",
+  "transaction cost",
+  "ethereum",
+  "base"
+ ],
+ "endpoint": "https://api.marketintelligenceapi.com/api/v1/markets/gas-price",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x48d5A78d480B4C32dE319C2aEF69e682Dc304615",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 60,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"chains\":[{\"baseFeeGwei\":0.0071,\"chain\":\"base\",\"gasPriceGwei\":0.0092,\"nativeToken\":\"ETH\",\"swapCostUsd\":0.00368,\"transferCostUsd\":0.000515}]}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://api.marketintelligenceapi.com/llms.txt",
+ "docsChecked": 1793609274258,
+ "payers30d": 12,
+ "calls30d": 16,
+ "lastCalledAt": "2026-11-02T04:22:06.522Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 326,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 326,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-marketintelligenceapi-com-api-v1-markets-gas-price",
+ "rating": null,
+ "related": [
+  "api-onesource-io-api-chain-block-number",
+  "crypto-apitoll-cloud-v1-crypto-price",
+  "x402-ottoai-services-crypto-news",
+  "api-loyalspark-online-x402-gateway-recipient-api-offers",
+  "laso-finance-auth",
+  "x402-ottoai-services-token-details"
+ ],
+ "example": {
+  "curl": "curl -i 'https://api.marketintelligenceapi.com/api/v1/markets/gas-price'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-marketintelligenceapi-com-api-v1-markets-gas-price&body=%7B%22slug%22%3A%22api-marketintelligenceapi-com-api-v1-markets-gas-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-marketintelligenceapi-com-api-v1-markets-gas-price\",\"body\":\"{\\\"slug\\\":\\\"api-marketintelligenceapi-com-api-v1-markets-gas-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Gas%20price%20now%20on%20every%20EVM%20chain%3A%20Gas%20price%20now%20on%20every%20EVM%20chain%20(%240.001)%3A%20base%20fee%2C%20priority%20fee%20perc&seller=https%3A%2F%2Fapi.marketintelligenceapi.com%2Fapi%2Fv1%2Fmarkets%2Fgas-price"
+}

@@ -1,0 +1,83 @@
+{
+ "slug": "agent-tools-production-e6aa-up-railway-app-v1-extract",
+ "name": "Agent Tools UK: Fetch a public web page and return just the main article as clean Mark",
+ "seller": "Agent Tools UK",
+ "host": "agent-tools-production-e6aa.up.railway.app",
+ "provider": "https://agent-tools-production-e6aa.up.railway.app",
+ "description": "Fetch a public web page and return just the main article as clean Markdown, with title, byline and excerpt. Menus, ads and footers are removed. Use when you need to read, summarise or quote a web page cheaply without parsing HTML yourself. Returns JSON {title, byline, siteName, excerpt, markdown}. Errors: 400 bad or private URL, 422 no readable article, 502 site returned an error.",
+ "category": "Search & web",
+ "tags": [
+  "web scraping",
+  "markdown",
+  "article extraction",
+  "readability",
+  "text"
+ ],
+ "endpoint": "https://agent-tools-production-e6aa.up.railway.app/v1/extract",
+ "method": "GET",
+ "payment": "x402",
+ "priceUsd": 0.003,
+ "amount": "3000",
+ "payTo": "0x1254f70ceed55d2e2d087e28f1ee2368d19e0399",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "maxTimeoutSeconds": 120,
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "url": "https://en.wikipedia.org/wiki/Tomato"
+  },
+  "body": null,
+  "bodyType": null,
+  "headers": null
+ },
+ "outputType": "json",
+ "outputExample": "{\"byline\":\"Contributors to Wikimedia projects\",\"markdown\":\"The **tomato** is the berry of the plant...\",\"title\":\"Tomato\"}",
+ "outputSchema": null,
+ "iconUrl": null,
+ "docs": "https://agent-tools-production-e6aa.up.railway.app/llms.txt",
+ "docsChecked": 1793609273079,
+ "payers30d": 12,
+ "calls30d": 54,
+ "lastCalledAt": "2026-11-01T07:51:48.004Z",
+ "firstSeen": "2026-11-02T08:47:23.740Z",
+ "verifiedAt": "2026-11-02T08:47:23.740Z",
+ "lastCheck": "2026-11-02T08:47:23.740Z",
+ "latencyMs": 475,
+ "lastStatus": 402,
+ "fails": 0,
+ "history": [
+  {
+   "t": "2026-11-02T08:47:23.740Z",
+   "ok": true,
+   "ms": 475,
+   "s": 402
+  }
+ ],
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "uptime": {
+  "checks": 1,
+  "ok": 1,
+  "pct": 100,
+  "since": "2026-11-02T08:47:23.740Z"
+ },
+ "autoBuy": true,
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agent-tools-production-e6aa-up-railway-app-v1-extract",
+ "rating": null,
+ "related": [
+  "blockrun-ai-api-v1-exa-contents",
+  "search-cyberwarex-com-search",
+  "netintel-dev-web-extract",
+  "api-agentstools-dev-search-news",
+  "agentreader-dev-dns",
+  "softbot-reader-mainnet-softbot-workers-dev-v1-read"
+ ],
+ "example": {
+  "curl": "curl -i 'https://agent-tools-production-e6aa.up.railway.app/v1/extract?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTomato'"
+ },
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agent-tools-production-e6aa-up-railway-app-v1-extract&body=%7B%22slug%22%3A%22agent-tools-production-e6aa-up-railway-app-v1-extract%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agent-tools-production-e6aa-up-railway-app-v1-extract\",\"body\":\"{\\\"slug\\\":\\\"agent-tools-production-e6aa-up-railway-app-v1-extract\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent%20Tools%20UK%3A%20Fetch%20a%20public%20web%20page%20and%20return%20just%20the%20main%20article%20as%20clean%20Mark&seller=https%3A%2F%2Fagent-tools-production-e6aa.up.railway.app%2Fv1%2Fextract"
+}
