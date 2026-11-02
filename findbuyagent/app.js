@@ -66,15 +66,31 @@ const usdcBalance = async (a) => BigInt(await rpc('eth_call', [{ to: USDC, data:
 
 /* ---------- wallets (EIP-6963 + injected fallback) ---------- */
 const found = new Map();
-window.addEventListener('eip6963:announceProvider', (e) => { const d = e.detail; if (d?.info?.uuid) { found.set(d.info.rdns || d.info.uuid, d); emit('wallets'); } });
-window.dispatchEvent(new Event('eip6963:requestProvider'));
+// EIP-6963 discovery (as on monaf.ai): every wallet extension announces itself; ask twice because some answer only the second request.
+window.addEventListener('eip6963:announceProvider', (e) => { const d = e.detail; if (!d?.info?.uuid || !d.provider) return; if ([...found.values()].some((x) => x.provider === d.provider)) return; found.set(d.info.rdns || d.info.uuid, d); emit('wallets'); });
+window.dispatchEvent(new Event('eip6963:requestProvider')); setTimeout(() => window.dispatchEvent(new Event('eip6963:requestProvider')), 60);
 const W = { p: null, info: null, addr: null, chain: null, bal: null };
+function legacyInjected() {
+  const e = window.ethereum; if (!e?.request) return null;
+  const name = e.isRabby ? 'Rabby' : e.isPhantom ? 'Phantom' : e.isCoinbaseWallet ? 'Coinbase Wallet' : e.isOkxWallet ? 'OKX Wallet' : e.isMetaMask ? 'MetaMask' : 'Browser wallet';
+  return { info: { name, rdns: 'injected', icon: '' }, provider: e };
+}
 function walletList() {
   const l = [...found.values()];
-  if (!l.length && window.ethereum) l.push({ info: { name: window.ethereum.isMetaMask ? 'MetaMask' : window.ethereum.isCoinbaseWallet ? 'Coinbase Wallet' : 'Browser wallet', rdns: 'injected', icon: '' }, provider: window.ethereum });
+  if (!l.length) { const g = legacyInjected(); if (g) l.push(g); }
   const recent = store.get('recentWallets', []);
   return l.sort((a, b) => { const ia = recent.indexOf(a.info.rdns), ib = recent.indexOf(b.info.rdns); return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib); });
 }
+const isMobile = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+// Official in-app-browser links (tap only, never an automatic redirect). Same list as monaf.ai, EVM wallets that support Base.
+function deepLinks(href) {
+  const u = new URL(href); const enc = encodeURIComponent(href); const bare = u.host + u.pathname + u.search + u.hash;
+  return [
+    ['MetaMask', `https://link.metamask.io/dapp/${bare}`], ['Coinbase Wallet', `https://go.cb-w.com/dapp?cb_url=${enc}`], ['Phantom', `https://phantom.com/ul/browse/${enc}?ref=${encodeURIComponent(u.origin)}`],
+    ['OKX Wallet', `https://web3.okx.com/download?deeplink=${encodeURIComponent('okx://wallet/dapp/url?dappUrl=' + enc)}`], ['Trust Wallet', `https://link.trustwallet.com/open_url?coin_id=8453&url=${enc}`], ['Bitget Wallet', `https://bkcode.vip?action=DApp&url=${enc}`],
+  ];
+}
+const INSTALL = [['MetaMask', 'https://metamask.io/download/'], ['Rabby', 'https://rabby.io/'], ['Coinbase Wallet', 'https://www.coinbase.com/wallet/downloads'], ['Phantom', 'https://phantom.com/download'], ['OKX Wallet', 'https://web3.okx.com/download']];
 async function useWallet(w, silent) {
   const accts = await w.provider.request({ method: silent ? 'eth_accounts' : 'eth_requestAccounts' });
   if (!accts?.length) return false;
@@ -91,19 +107,22 @@ async function switchBase() {
   catch (e) { if (e?.code === 4902) await W.p.request({ method: 'wallet_addEthereumChain', params: [{ chainId: CHAIN_HEX, chainName: 'Base', nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 }, rpcUrls: [RPC], blockExplorerUrls: [SCAN] }] }); else throw e; }
   W.chain = parseInt(await W.p.request({ method: 'eth_chainId' }), 16); emit('wallet');
 }
-// Resolves when connected. One wallet: connect straight away (the wallet's own prompt is the confirmation).
-function connect() {
+// Wallet picker. connect(): resolves when connected; with one wallet it connects straight away.
+// pickWallet(): always shows the list (used by "Use another wallet"), and lets the wallet offer its account chooser.
+function connect() { return W.addr ? Promise.resolve(true) : pickWallet({ auto: true }); }
+function pickWallet(opt = {}) {
   return new Promise((resolve) => {
-    if (W.addr) return resolve(true);
     const l = walletList();
-    if (l.length === 1) return useWallet(l[0]).then(resolve, (e) => { if (e?.code !== 4001) toast(...ERR.merchant_error.slice(0, 1)); resolve(false); });
-    const here = encodeURIComponent(location.href.replace(/^https:\/\//, ''));
-    const tiles = l.length ? l.map((w, i) => `<button class="wtile" type="button" data-i="${i}" ${i === 0 ? 'data-autofocus' : ''}>${w.info.icon ? `<img src="${esc(w.info.icon)}" alt="" width="32" height="32">` : '<span class="fav" style="width:32px;height:32px">W</span>'}<span>${esc(w.info.name)}</span>${i === 0 && store.get('recentWallets', []).includes(w.info.rdns) ? '<span class="badge b-n" style="margin-left:auto">Recently used</span>' : ''}</button>`).join('')
-      : `<p><strong>No wallet detected</strong></p><p class="muted">Install one, then come back. On mobile, open FindBuyAgent in your wallet's browser.</p>
-        <div class="stack"><a class="wtile" href="https://link.metamask.io/dapp/${here}">MetaMask</a><a class="wtile" href="https://go.cb-w.com/dapp?cb_url=${encodeURIComponent(location.href)}">Coinbase Wallet</a><a class="wtile" href="https://rabby.io/">Rabby</a><a class="wtile" href="https://link.trustwallet.com/open_url?coin_id=8453&url=${encodeURIComponent(location.href)}">Trust Wallet</a><a class="wtile" href="https://phantom.com/ul/browse/${encodeURIComponent(location.href)}">Phantom</a></div>`;
+    const go = async (w) => { if (opt.fresh) { try { await w.provider.request({ method: 'wallet_requestPermissions', params: [{ eth_accounts: {} }] }); } catch (e) { if (e?.code === 4001) throw e; } } return useWallet(w); };
+    if (opt.auto && l.length === 1) return go(l[0]).then(resolve, (e) => { if (e?.code !== 4001) toast(...ERR.merchant_error.slice(0, 1)); resolve(false); });
+    const tile = (w, i) => `<button class="wtile" type="button" data-i="${i}" ${i === 0 ? 'data-autofocus' : ''}>${w.info.icon ? `<img src="${esc(w.info.icon)}" alt="" width="32" height="32">` : '<span class="fav" style="width:32px;height:32px">W</span>'}<span>${esc(w.info.name)}</span>${W.p === w.provider ? '<span class="badge b-n" style="margin-left:auto">Connected</span>' : i === 0 && store.get('recentWallets', []).includes(w.info.rdns) ? '<span class="badge b-n" style="margin-left:auto">Recently used</span>' : ''}</button>`;
+    const links = (arr) => `<div class="stack">${arr.map(([n, u]) => `<a class="wtile" href="${esc(u)}" rel="noopener">${esc(n)}</a>`).join('')}</div>`;
+    const body = (l.length ? `<p class="muted small">Wallets found in this browser</p><div class="stack">${l.map(tile).join('')}</div>` : '<p><strong>No wallet detected in this browser</strong></p>')
+      + (isMobile() ? `<p class="muted small" style="margin-top:16px">Open this page in a wallet app</p>${links(deepLinks(location.href))}` : `<details style="margin-top:16px"${l.length ? '' : ' open'}><summary class="small">Install a wallet</summary>${links(INSTALL)}<p class="small muted">On a phone, open this page and pick your wallet app.</p></details>`)
+      + (opt.fresh ? '<p class="small muted" style="margin-top:12px">Same extension, different account? Pick it again and choose the account in the wallet window.</p>' : '');
     let done = false;
-    const s = sheet(`<h2>Connect a wallet</h2><p class="muted small">Wallets found in this browser</p><div class="stack">${tiles}</div><p class="small muted" style="margin-top:16px">FindBuyAgent never asks for your seed phrase or private key.</p>`, { label: 'Connect a wallet', onClose: () => { if (!done) resolve(false); } });
-    $$('[data-i]', s).forEach((b) => b.onclick = async () => { b.disabled = true; try { if (await useWallet(l[+b.dataset.i])) { done = true; closeSheet(); resolve(true); } } catch (e) { b.disabled = false; toast(e?.code === 4001 ? 'Connection cancelled.' : 'That wallet didn\'t connect.'); } });
+    const s = sheet(`<h2>${opt.fresh ? 'Use another wallet' : 'Connect a wallet'}</h2>${body}<p class="small muted" style="margin-top:16px">FindBuyAgent never asks for your seed phrase or private key.</p>`, { label: 'Connect a wallet', onClose: () => { if (!done) resolve(false); } });
+    $$('[data-i]', s).forEach((b) => b.onclick = async () => { b.disabled = true; try { if (await go(l[+b.dataset.i])) { done = true; closeSheet(); resolve(true); } else b.disabled = false; } catch (e) { b.disabled = false; toast(e?.code === 4001 ? 'Connection cancelled.' : 'That wallet didn\'t connect.'); } });
   });
 }
 (async () => { const last = store.get('wallet'); if (!last) return; await new Promise((r) => setTimeout(r, 300)); const w = walletList().find((x) => x.info.rdns === last.rdns); if (w) useWallet(w, true).catch(() => {}); })();
@@ -389,7 +408,7 @@ P.protocols = () => {
 P.compare = () => { const b = $('#nc'); b?.addEventListener('click', () => { const on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', on); $$('tr[data-nc]').forEach((r) => r.classList.toggle('hidden', on && r.dataset.nc !== '1')); }); };
 P.shop = () => window.FBAShop?.(api);
 P.budget = () => window.FBABudget?.(api);
-const api = { $, $$, esc, h, store, toast, sheet, closeSheet, usd, ago, B, W, connect, switchBase, fmtU, short, on, emit };
+const api = { $, $$, esc, h, store, toast, sheet, closeSheet, usd, ago, B, W, connect, pickWallet, disconnect, walletList, refreshBal, switchBase, fmtU, short, on, emit, usdcBalance };
 window.FBA = api;
 (P[page] || (() => {}))();
 })();

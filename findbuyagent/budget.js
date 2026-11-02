@@ -1,7 +1,8 @@
 /* /budget: a one-time burner wallet run by GitHub Actions (Blockchains/findbuyagent-runner). No FindBuyAgent server.
    This page only builds GitHub issues for the runner, reads Base directly, and sends your one deposit from your own wallet. */
 window.FBABudget = (F) => {
-  const { $, $$, esc, store, toast, usd, W, connect, on, switchBase } = F;
+  const { $, $$, esc, store, toast, usd, W, connect, pickWallet, disconnect, refreshBal, on, switchBase } = F;
+  const CAP = 100; // hard cap on what the burner may hold, in USDC
   const RUNNER = 'Blockchains/findbuyagent-runner', GH = `https://github.com/${RUNNER}`;
   const USDC = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', LOGRPC = 'https://base-rpc.publicnode.com', RPC = 'https://mainnet.base.org';
   const TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
@@ -84,25 +85,98 @@ window.FBABudget = (F) => {
     const qr = window.qrcode ? (() => { const q = window.qrcode(0, 'M'); q.addData(`ethereum:${USDC}@8453/transfer?address=${b.address}`); q.make(); return q.createSvgTag({ cellSize: 4, margin: 2, scalable: true }); })() : '';
     el.innerHTML = `<div class="row wrapf" style="gap:16px;align-items:flex-start"><div style="width:168px;background:#fff;border-radius:12px;padding:4px" aria-label="QR code: send USDC on Base to the burner">${qr}</div>
       <div class="stack" style="flex:1;min-width:220px"><p class="micro" style="margin:0">Burner ${esc(b.id)} · USDC on Base only</p><p class="mono" style="word-break:break-all;margin:0">${esc(b.address)}</p>
-      <div class="row"><button class="btn sec sm" type="button" id="b-copy">Copy address</button><a class="btn ghost sm" href="https://basescan.org/address/${esc(b.address)}" target="_blank" rel="noopener">Basescan</a><a class="btn ghost sm" href="${GH}/issues/${esc(b.id)}" target="_blank" rel="noopener">GitHub thread</a></div>
-      <p class="small" id="b-bal">Reading balance…</p></div></div>
-      <div class="notice" role="note" style="margin-top:12px"><strong>Funds here are exposed.</strong> Send only USDC on Base, at most ${usd(b.total)}. The runner spends it without asking you, within ${px(b.per)} per purchase and ${usd(b.daily)} a day${b.ends ? `, until ${esc(new Date(b.ends).toLocaleString())}` : ''}. Leftovers return to <span class="mono">${esc(b.sweepTo.slice(0, 8))}…${esc(b.sweepTo.slice(-4))}</span> when you close it or it ends.</div>
-      <div class="row" style="margin-top:12px"><label class="hidden" for="b-amt">Deposit amount</label><input id="b-amt" type="number" inputmode="decimal" min="0.01" max="${b.total}" step="0.01" value="${Math.min(b.total, 1)}" style="width:120px"><button class="btn pri" type="button" id="b-dep">Deposit from my wallet</button></div>
-      <p class="small muted">This is your only signature: a normal USDC transfer from your wallet to the burner.</p>`;
+      <div class="row"><button class="btn sec sm" type="button" id="b-copy">Copy address</button><a class="btn ghost sm" href="https://basescan.org/address/${esc(b.address)}" target="_blank" rel="noopener">Basescan</a><a class="btn ghost sm" href="${GH}/issues/${esc(b.id)}" target="_blank" rel="noopener">GitHub thread</a></div></div></div>
+      <div class="notice" role="note" style="margin-top:12px"><strong>Funds here are exposed.</strong> Send only USDC on Base. The burner may hold at most ${usd(CAP)} in total, from all your wallets together. The runner spends it without asking you, within ${px(b.per)} per purchase, ${usd(b.daily)} a day and ${usd(b.total)} in total${b.ends ? `, until ${esc(new Date(b.ends).toLocaleString())}` : ''}. Deposit only what you can afford to lose.</div>
+      <h3 style="font-size:18px;margin:16px 0 8px">Add funds</h3><div id="bfund" aria-live="polite"></div>`;
     $('#b-copy').onclick = async () => { await navigator.clipboard.writeText(b.address); toast('Address copied'); };
-    $('#b-dep').onclick = () => deposit(b);
-    try { $('#b-bal').innerHTML = `Balance <strong class="num">${px(await bal(b.address))}</strong> USDC`; } catch { $('#b-bal').textContent = 'Balance unavailable right now. Check Basescan.'; }
+    drawFund(b); pollFund(b);
+  }
+
+  /* ---------- 2b. add funds from any number of wallets (EIP-6963 picker as on monaf.ai) ---------- */
+  const FS = { bal: null, funders: null, amt: null, tx: null, txState: '', txAmt: 0, err: '' };
+  const short = (a) => `${a.slice(0, 6)}…${a.slice(-4)}`;
+  const room = () => FS.bal == null ? null : Math.max(0, Math.floor((CAP - FS.bal - (FS.txState === 'pending' ? FS.txAmt : 0)) * 100) / 100);
+  async function readFund(b) {
+    try { FS.bal = await bal(b.address); FS.err = ''; } catch { FS.err = 'Balance unavailable right now. Check Basescan.'; }
+    try { const m = new Map(); for (const t of await transfers(b)) if (t.to === b.address.toLowerCase() && t.from !== t.to && !/^0x0{40}$/.test(t.from)) m.set(t.from, (m.get(t.from) || 0) + t.usd); FS.funders = [...m].map(([addr, usd]) => ({ addr, usd })).sort((x, y) => y.usd - x.usd); } catch { /* keep last list */ }
+  }
+  let polling = 0;
+  async function pollFund(b) {
+    const me = ++polling; await readFund(b); if (me !== polling) return; drawFund(b);
+    const loop = async () => { if (me !== polling || B()?.address !== b.address) return; if (!document.hidden && FS.txState !== 'pending') { await readFund(b); if (me === polling) drawFund(b); } setTimeout(loop, 15000); };
+    setTimeout(loop, 15000);
+  }
+  function drawFund(b) {
+    const el = $('#bfund'); if (!el) return;
+    const r = room(), wb = W.bal == null ? null : Number(W.bal) / 1e6, wrong = W.addr && W.chain !== 8453;
+    const max = r == null ? 0 : Math.max(0, wb == null ? r : Math.min(r, Math.floor(wb * 100) / 100));
+    if (FS.amt != null && FS.amt > max) FS.amt = null;
+    const pct = FS.bal == null ? 0 : Math.min(100, FS.bal / CAP * 100);
+    const chip = (v, label) => { const off = !(v > 0) || r == null || v > r || (wb != null && v > wb + 1e-9); return `<button class="btn ${FS.amt === v ? 'pri' : 'sec'} sm" type="button" data-amt="${v}" aria-pressed="${FS.amt === v}" ${off ? 'disabled' : ''}>${label}</button>`; };
+    const me = W.addr?.toLowerCase();
+    el.innerHTML = `<div class="stack">
+      <div><div class="row between"><span class="small">Burner balance <strong class="num" id="b-bal">${FS.bal == null ? (FS.err ? '—' : 'reading…') : px(FS.bal)}</strong> of ${usd(CAP)} cap</span><span class="small num">${r == null ? '' : `Room left ${usd(r)}`}</span></div>
+        <div role="progressbar" aria-label="Burner balance against the ${usd(CAP)} cap" aria-valuemin="0" aria-valuemax="${CAP}" aria-valuenow="${FS.bal ?? 0}" style="height:8px;border-radius:4px;background:rgba(127,127,127,.25);margin-top:6px;overflow:hidden"><div style="height:100%;width:${pct}%;background:${pct >= 100 ? '#d33' : 'currentColor'};opacity:.7"></div></div>${FS.err ? `<p class="small">${esc(FS.err)}</p>` : ''}</div>
+      ${W.addr ? `<div class="row wrapf between" style="gap:8px"><div class="row" style="gap:8px">${W.info?.icon ? `<img src="${esc(W.info.icon)}" alt="" width="24" height="24">` : ''}<div><div class="small"><strong>${esc(W.info?.name || 'Wallet')}</strong> <span class="mono">${esc(short(W.addr))}</span></div><div class="small muted" id="b-wbal">${wb == null ? 'Reading USDC…' : `${px(wb)} USDC on Base`}${wrong ? ' · your wallet will be asked to switch to Base' : ''}</div></div></div>
+        <div class="row"><button class="btn sec sm" type="button" id="b-other">Use another wallet</button><button class="btn ghost sm" type="button" id="b-disc">Disconnect</button></div></div>`
+        : `<button class="btn sec block" type="button" id="b-conn">Connect a wallet to add funds</button>`}
+      ${W.addr ? `<div class="row wrapf" role="group" aria-label="Amount">${chip(5, '$5')}${chip(10, '$10')}${chip(25, '$25')}${chip(max, max > 0 ? `Max ${usd(max)}` : 'Max')}</div>
+        <div class="row"><label class="hidden" for="b-amt">Other amount (USDC)</label><input id="b-amt" type="number" inputmode="decimal" min="0.01" max="${max}" step="0.01" placeholder="Other amount" value="${FS.amt != null && ![5, 10, 25, max].includes(FS.amt) ? FS.amt : ''}" style="width:150px">
+        <button class="btn pri" type="button" id="b-dep" ${FS.amt > 0 && FS.txState !== 'pending' ? '' : 'disabled'}>${FS.amt > 0 ? `Deposit ${px(FS.amt)}` : 'Pick an amount'}</button></div>
+        ${r === 0 ? `<p class="small"><strong>The burner is at the ${usd(CAP)} cap.</strong> Deposits are blocked until it spends or you close it.</p>` : wb === 0 ? '<p class="small">This wallet has no USDC on Base. Use another wallet, or send USDC on Base to it first.</p>' : ''}
+        <p class="small muted" style="margin:0">One signature in your wallet: a plain USDC transfer to the burner. No approval, nothing else can be taken from your wallet.</p>` : ''}
+      <div id="b-txs">${FS.tx ? `<p class="small">${FS.txState === 'pending' ? '<span aria-hidden="true">⏳</span> Deposit sent, waiting for Base to confirm…' : FS.txState === 'ok' ? `<span aria-hidden="true">✅</span> Confirmed: ${px(FS.txAmt)} is in the burner.` : '<span aria-hidden="true">⚠️</span> That transaction failed on Base. No USDC moved.'} <a href="https://basescan.org/tx/${esc(FS.tx)}" target="_blank" rel="noopener">Basescan</a></p>` : ''}</div>
+      ${FS.funders?.length ? `<div><p class="f" style="margin:0 0 4px">Funded by</p><ul class="small" style="margin:0;padding-left:18px">${FS.funders.map((f) => `<li><span class="mono">${esc(short(f.addr))}</span> · ${px(f.usd)}${f.addr === me ? ' · this wallet' : ''}</li>`).join('')}</ul>
+        <p class="small muted" style="margin:4px 0 0">On close, what is left goes back pro rata to what each wallet deposited (the creator's share goes to the return address).</p></div>` : ''}
+      ${W.addr ? `<details><summary class="small">Read receipts with this wallet too</summary><p class="small">The wallet that created the burner can already read them. For another wallet that deposited: sign two messages (no funds move), then submit the prefilled GitHub issue as the owner. Access is granted once its deposit is seen.</p><button class="btn ghost sm" type="button" id="b-reg">Get receipts with this wallet</button></details>` : ''}
+    </div>`;
+    $('#b-conn') && ($('#b-conn').onclick = async () => { if (await pickWallet()) drawFund(b); });
+    $('#b-other') && ($('#b-other').onclick = async () => { if (await pickWallet({ fresh: true })) { FS.amt = null; drawFund(b); } });
+    $('#b-disc') && ($('#b-disc').onclick = () => { disconnect(); FS.amt = null; drawFund(b); });
+    $$('[data-amt]', el).forEach((x) => x.onclick = () => { FS.amt = +x.dataset.amt; drawFund(b); });
+    const inp = $('#b-amt');
+    if (inp) {
+      const check = () => { const v = Math.round(+inp.value * 100) / 100; if (!(v > 0)) return [null, '']; if (r != null && v > r) return [null, `That would take the burner over ${usd(CAP)}. Room left: ${usd(r)}.`]; if (wb != null && v > wb) return [null, `This wallet holds ${px(wb)} USDC.`]; return [v, '']; };
+      inp.oninput = () => { const [v] = check(); FS.amt = v; $$('[data-amt]', el).forEach((x) => { x.className = 'btn sec sm'; x.setAttribute('aria-pressed', 'false'); }); const d = $('#b-dep'); d.disabled = !(v > 0) || FS.txState === 'pending'; d.textContent = v > 0 ? `Deposit ${px(v)}` : 'Pick an amount'; };
+      inp.onchange = () => { const [, why] = check(); if (why) toast(why); };
+    }
+    $('#b-dep') && ($('#b-dep').onclick = () => deposit(b));
+    $('#b-reg') && ($('#b-reg').onclick = () => registerFunder(b));
   }
   async function deposit(b) {
-    const amt = +$('#b-amt').value; if (!(amt > 0 && amt <= b.total)) return toast(`Enter an amount up to ${usd(b.total)}.`);
+    const amt = FS.amt; if (!(amt > 0)) return;
     if (!W.addr && !(await connect())) return;
+    const btn = $('#b-dep'); if (btn) { btn.disabled = true; btn.textContent = 'Check your wallet…'; }
     try {
+      FS.bal = await bal(b.address); // fresh read: the cap is checked against the live balance, not a cached one
+      const r = room(); if (amt > r) { toast(`Blocked: that would take the burner over ${usd(CAP)}. Room left: ${usd(r)}.`); FS.amt = null; return drawFund(b); }
       if (W.chain !== 8453) await switchBase();
-      const data = '0xa9059cbb' + pad(b.address).slice(2) + BigInt(Math.round(amt * 1e6)).toString(16).padStart(64, '0');
+      const atomic = BigInt(Math.round(amt * 1e6)); const have = BigInt(await rpc(RPC, 'eth_call', [{ to: USDC, data: '0x70a08231' + pad(W.addr).slice(2) }, 'latest']));
+      if (have < atomic) { toast(`This wallet holds ${px(Number(have) / 1e6)} USDC on Base.`); return drawFund(b); }
+      const data = '0xa9059cbb' + pad(b.address).slice(2) + atomic.toString(16).padStart(64, '0');
       const tx = await W.p.request({ method: 'eth_sendTransaction', params: [{ from: W.addr, to: USDC, data, value: '0x0' }] });
-      toast('Deposit sent'); $('#b-bal').innerHTML = `Deposit sent · <a href="https://basescan.org/tx/${esc(tx)}" target="_blank" rel="noopener">Basescan</a>`;
-    } catch (e) { toast(e?.code === 4001 ? 'Deposit cancelled. Nothing was sent.' : 'The deposit did not go through. Nothing was sent.'); }
+      Object.assign(FS, { tx, txState: 'pending', txAmt: amt, amt: null }); toast('Deposit sent'); drawFund(b);
+      for (let i = 0; i < 90; i++) {
+        await new Promise((ok) => setTimeout(ok, 2000));
+        const rc = await rpc(RPC, 'eth_getTransactionReceipt', [tx]).catch(() => null);
+        if (rc?.status) { FS.txState = rc.status === '0x1' ? 'ok' : 'fail'; break; }
+      }
+      if (FS.txState === 'pending') FS.txState = 'ok'; // still unconfirmed after 3 minutes: stop holding the cap; balance polling takes over
+      await readFund(b); refreshBal?.(); drawFund(b); if (FS.txState === 'ok') toast('Deposit confirmed');
+    } catch (e) { toast(e?.code === 4001 ? 'Deposit cancelled. Nothing was sent.' : 'The deposit did not go through. Nothing was sent.'); drawFund(b); }
   }
+  const FMSG = (id, burner, wallet, pub) => `FindBuyAgent funder v1\n\nBudget: ${id}\nBurner: ${burner.toLowerCase()}\nWallet: ${wallet.toLowerCase()}\nVault key: ${pub}\n\nThis links your receipt key to this budget so you can read its receipts. It does not move funds or approve anything.`;
+  async function registerFunder(b) {
+    const w = window.open('', '_blank');
+    try {
+      const v = await vaultKey(); if (!v) { w?.close(); return; } v.secret.fill(0);
+      const msg = FMSG(String(b.id), b.address, v.owner, v.pub);
+      const proof = await W.p.request({ method: 'personal_sign', params: ['0x' + hex(new TextEncoder().encode(msg)), W.addr] });
+      const url = issueURL(`Funder for budget ${b.id}`, 'fba-fund', { budget: +b.id, vault: { owner: v.owner, pub: v.pub }, proof }, 'Let this wallet read this budget\'s receipts. Press Submit new issue.');
+      if (w) w.location = url; else location.href = url;
+    } catch (e) { w?.close(); toast(e?.code === 4001 ? 'Signature cancelled.' : 'Your wallet could not sign.'); }
+  }
+  on('wallet', () => { const b = B(); if (b) drawFund(b); });
 
   /* ---------- 3. requests: free text; the runner searches every live x402 seller ---------- */
   const IDEAS = ['AI image generation API keys', 'A product photo of a ceramic mug on oak', 'Leads: new businesses in Chicago', 'Weather forecast for London'];
@@ -141,6 +215,13 @@ window.FBABudget = (F) => {
   const VAULT = 'https://raw.githubusercontent.com/Blockchains/findbuyagent-vault/main/v/';
   const KEYRX = /(?:api[_-]?key|secret|token|access[_-]?key|password|bearer|private[_-]?key|x-api-key)["'\s:=]+([A-Za-z0-9_\-.]{12,})|\b(sk-[A-Za-z0-9_\-]{16,}|gh[pousr]_[A-Za-z0-9]{20,}|xox[abp]-[A-Za-z0-9-]{10,}|AKIA[0-9A-Z]{16})\b/gi;
   const b64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+  // v1: one recipient. v2: content key wrapped to each funder's key (every wallet that registered can open the same receipt).
+  function openEnv(e, sk) {
+    const N = window.nacl; if (e.v !== 2) return N.box.open(b64(e.ct), b64(e.nonce), b64(e.epk), sk);
+    const pub = hex(N.box.keyPair.fromSecretKey(sk).publicKey);
+    for (const k of e.keys || []) { if (k.pub && k.pub !== pub) continue; const ck = N.box.open(b64(k.k), b64(k.nonce), b64(k.epk || e.epk), sk); if (ck) return N.secretbox.open(b64(e.ct), b64(e.nonce), ck); }
+    return null;
+  }
   function drawDeliv() {
     $('#bdeliv').innerHTML = `<p class="small">Every purchase's full raw data, any keys it delivered, and how to use what you bought. Stored only encrypted; your wallet unlocks it here. ${'Email copies arrive too when email is set up.'}</p>
       <button class="btn pri block" type="button" id="b-vault">Sign in with wallet</button><div id="b-rcpt" class="stack" style="margin-top:12px" aria-live="polite"></div>
@@ -158,7 +239,7 @@ window.FBABudget = (F) => {
     out.innerHTML = `<p class="small muted">${idx.items.length} receipt${idx.items.length > 1 ? 's' : ''}. Unlocking…</p>`; let bad = 0; const got = [];
     for (const it of [...idx.items].reverse()) {
       try { const e = await (await fetch(VAULT + me + '/' + encodeURIComponent(it.file), { cache: 'no-store' })).json();
-        const pt = window.nacl.box.open(b64(e.ct), b64(e.nonce), b64(e.epk), k.secret); if (!pt) { bad++; continue; } got.push(JSON.parse(new TextDecoder().decode(pt))); } catch { bad++; }
+        const pt = openEnv(e, k.secret); if (!pt) { bad++; continue; } got.push(JSON.parse(new TextDecoder().decode(pt))); } catch { bad++; }
     }
     k.secret.fill(0); out.innerHTML = '';
     if (!got.length) { out.innerHTML = '<p class="small">These receipts would not unlock with this wallet\'s signature. That happens if the wallet signs differently each time (smart wallets) or a different wallet created the burner.</p>'; return; }
@@ -191,22 +272,28 @@ window.FBABudget = (F) => {
   function drawClose() {
     const b = B(), el = $('#bclose'); if (!b) { el.innerHTML = ''; return; }
     const sw = store.get('burner.sweep', null);
-    el.innerHTML = `<p class="small">Closing stops all purchases, returns every remaining USDC to <span class="mono">${esc(b.sweepTo)}</span> and deletes the burner's sealed key. It also happens automatically when the budget ends.</p>
-      <div class="row wrapf"><a class="btn sec" id="b-close" href="${esc(issueURL(`Close budget ${b.id}`, 'fba-close', { budget: +b.id }, 'Close this burner and sweep its USDC back to me.'))}" target="_blank" rel="noopener">Close and sweep on GitHub</a>
-      ${sw ? '<button class="btn pri" type="button" id="b-sweep">Return my USDC</button>' : ''}<button class="btn ghost" type="button" id="b-forget">Forget this burner here</button></div>
-      ${sw ? '<p class="small muted">The runner signed a transfer of the whole balance to your address. Any wallet can submit it; you only pay Base gas.</p>' : ''}`;
+    el.innerHTML = `<p class="small">Closing stops all purchases and deletes the burner's sealed key. What is left goes back <strong>pro rata to what each wallet deposited</strong>; the creator's share goes to <span class="mono">${esc(b.sweepTo)}</span>. If the runner can't read any deposits, everything goes to that address. It also happens automatically when the budget ends.</p>
+      <div class="row wrapf"><a class="btn sec" id="b-close" href="${esc(issueURL(`Close budget ${b.id}`, 'fba-close', { budget: +b.id }, 'Close this burner and return its USDC to the funders.'))}" target="_blank" rel="noopener">Close and return on GitHub</a>
+      ${sw ? '<button class="btn pri" type="button" id="b-sweep">Return USDC to funders</button>' : ''}<button class="btn ghost" type="button" id="b-forget">Forget this burner here</button></div>
+      ${sw ? '<p class="small muted">The runner signed one transfer per funder. Any wallet can submit them; you only pay Base gas, once per transfer.</p>' : ''}<div id="b-sweepout" class="small"></div>`;
     $('#b-forget').onclick = () => { store.set('burner', null); store.set('burner.sweep', null); drawAll(); };
     if (sw) $('#b-sweep').onclick = async () => {
-      let a; try { a = JSON.parse(atob(sw.replace(/-/g, '+').replace(/_/g, '/'))); } catch { return toast('The sweep link is damaged. Ask the runner again by closing on GitHub.'); }
-      if (a.to.toLowerCase() !== b.sweepTo.toLowerCase()) return toast('This sweep does not go to your address. Not sent.');
+      let list; try { const a = JSON.parse(atob(sw.replace(/-/g, '+').replace(/_/g, '/'))); list = Array.isArray(a) ? a : [a]; } catch { return toast('The return link is damaged. Ask the runner again by closing on GitHub.'); }
+      await readFund(b).catch(() => {});
+      const ok = new Set([b.sweepTo.toLowerCase(), ...(FS.funders || []).map((f) => f.addr)]);
+      if (!list.length || list.some((a) => a.from?.toLowerCase() !== b.address.toLowerCase() || !ok.has(String(a.to).toLowerCase()))) return toast('A transfer in this link does not go to a wallet that funded the burner. Nothing was sent.');
       if (!W.addr && !(await connect())) return;
+      const out = $('#b-sweepout'); let sent = 0;
       try {
         if (W.chain !== 8453) await switchBase();
         const h = (x) => BigInt(x).toString(16).padStart(64, '0'), w = (x) => x.toLowerCase().replace(/^0x/, '').padStart(64, '0');
-        const data = '0xe3ee160e' + w(a.from) + w(a.to) + h(a.value) + h(a.validAfter) + h(a.validBefore) + w(a.nonce) + h(a.v) + w(a.r) + w(a.s);
-        const tx = await W.p.request({ method: 'eth_sendTransaction', params: [{ from: W.addr, to: USDC, data, value: '0x0' }] });
-        store.set('burner.sweep', null); toast('Sweep sent'); el.insertAdjacentHTML('beforeend', `<p class="small">Sent · <a href="https://basescan.org/tx/${esc(tx)}" target="_blank" rel="noopener">Basescan</a>. The runner retires the burner on its next check.</p>`);
-      } catch (e) { toast(e?.code === 4001 ? 'Cancelled. The USDC is still in the burner.' : 'That didn\'t go through. The authorization may have been used or expired; close again on GitHub for a fresh one.'); }
+        for (const a of list) {
+          const data = '0xe3ee160e' + w(a.from) + w(a.to) + h(a.value) + h(a.validAfter) + h(a.validBefore) + w(a.nonce) + h(a.v) + w(a.r) + w(a.s);
+          const tx = await W.p.request({ method: 'eth_sendTransaction', params: [{ from: W.addr, to: USDC, data, value: '0x0' }] }); sent++;
+          out.insertAdjacentHTML('beforeend', `<p>${px(Number(BigInt(a.value)) / 1e6)} to <span class="mono">${esc(short(a.to))}</span> sent · <a href="https://basescan.org/tx/${esc(tx)}" target="_blank" rel="noopener">Basescan</a></p>`);
+        }
+        store.set('burner.sweep', null); toast('Returns sent'); out.insertAdjacentHTML('beforeend', '<p>The runner retires the burner on its next check.</p>');
+      } catch (e) { toast(e?.code === 4001 ? `Cancelled after ${sent} of ${list.length}. The rest is still in the burner.` : 'That didn\'t go through. The authorization may have been used or expired; close again on GitHub for a fresh one.'); }
     };
   }
   function drawAll() { drawSetup(); drawBurner(); drawBuy(); drawLedger(); drawDeliv(); drawClose(); }
