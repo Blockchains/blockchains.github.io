@@ -1,14 +1,29 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-01T11:24:45Z",
+ "generated_at": "2026-11-02T12:43:38Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27558026967.12813,
- "ytd_usd": 8610065118.128132,
+ "total_all_time_usd": 27558463967.12813,
+ "ytd_usd": 8610112118.128132,
  "incidents": [
+  {
+   "date": "2026-11-01",
+   "name": "Premia V3",
+   "amount_usd": 437000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
   {
    "date": "2026-10-31",
    "name": "b14g",
@@ -4561,21 +4576,6 @@
    ],
    "classification": "Access Control",
    "technique": "Improper Access Control",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-02-26",
-   "name": "Ploutos Money",
-   "amount_usd": 390000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Oracle Manipulation",
-   "technique": "Oracle Misconfiguration",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

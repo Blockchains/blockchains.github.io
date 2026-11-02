@@ -1,0 +1,55 @@
+{
+ "headline": "Crypto TVL, DEX volumes and stablecoin metrics: 2 November 2026",
+ "summary": "Ethereum leads chains by TVL at 44.4 billion USD, followed by Bitcoin and Base. Uniswap V4 recorded the highest 24-hour DEX volume at 738 million USD while Tether generated the largest fees. USDT and USDC dominate stablecoin circulation with minor daily declines. Multiple incidents occurred in the prior fortnight including a 6.36 billion USD Binance event.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum holds top position at 44.41 billion USD TVL.",
+    "Bitcoin ranks second at 6.15 billion USD TVL.",
+    "Base, Solana and Tron follow with 5.99 billion, 5.48 billion and 5.29 billion USD respectively."
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V4 leads 24-hour DEX volume at 738 million USD.",
+    "Curve DEX reports 730 million USD in the same period.",
+    "Tether records highest fees at 16.8 million USD followed by Circle USDC at 6.8 million USD."
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulation stands at 179.2 billion USD with 1-day change of -0.213%.",
+    "USDC follows at 71.4 billion USD with 1-day change of -0.599%.",
+    "AP USDA shows depeg at 0.9275 USD; Falcon USD, apxUSD and Frax listed on watch status."
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base records 14.68 billion USD TVS with -1.43% 7-day change.",
+    "Arbitrum One holds 9.48 billion USD TVS with -5.12% 7-day change.",
+    "Hyperliquid reports 6.42 billion USD TVS; OP Mainnet at 1.58 billion USD TVS."
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Binance CEX incident on 29 October involved 6.36 billion USD via key leak.",
+    "Polymarket International suffered 2.7 million USD supply chain attack on 29 October.",
+    "zkLink Nova bridge lost 783 thousand USD to cross-chain message spoofing on 28 October."
+   ]
+  }
+ ],
+ "watchlist": [
+  "AP USDA depeg at 0.9275 USD",
+  "Binance CEX 6.36 billion USD incident",
+  "Falcon USD, apxUSD and Frax peg watch status",
+  "Recent incidents on Arbitrum, CORE and Polygon"
+ ],
+ "date": "2026-11-02",
+ "model": "grok-4.3",
+ "tokens": 13352
+}
