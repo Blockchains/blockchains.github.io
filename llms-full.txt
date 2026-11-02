@@ -1,6 +1,6 @@
 # Blockchains building blocks: full text
 
-Generated 2026-10-26T10:20:27Z from 35 repositories. Sections: Build with Blocks guide, blocks.json schema, then AGENTS.md of every repo.
+Generated 2026-11-02T12:42:26Z from 35 repositories. Sections: Build with Blocks guide, blocks.json schema, then AGENTS.md of every repo.
 
 
 
@@ -2766,7 +2766,7 @@ Memecoin safety + desk toolkit behind memecoin.markets / memecoin.grok.me: token
 ## Rules
 
 - Real data only. No mocks in live/e2e tests; unit tests use payloads recorded from the real APIs (`test/fixtures/`).
-- Read-only. Nothing here signs, sends or trades. No sniping/bundling/MEV code, no private keys, no API keys.
+- Read-only. Nothing here signs, sends or trades. Exception: `/wallet/` (source `wallet/`, the monaf.ai wallet port) is non-custodial — it only builds transactions that the user signs in their own browser wallet; no server, key or session key ever signs. No sniping/bundling/MEV code, no private keys, no API keys.
 - Every check carries `source`. A verdict is evidence, never advice — keep "not a buy" wording.
 - `src/` must stay dependency-free and browser-safe (it is served as-is at `/lib/`). Escape every upstream string before putting it in HTML.
 - Policy numbers live in `POLICY` (`src/scan.js`) and must match the live desk (`policy-v1.1`).
@@ -2793,6 +2793,8 @@ E2E_URL=https://blockchains.github.io/memecoin-markets/ npm run test:e2e   # aga
 | `src/checklist.js` | launch checklist |
 | `src/portfolio.js` | Jupiter prices, GBP via onetouchswitch-bridge, wallet import |
 | `bin/memecoin-mcp.js` | MCP stdio server |
+| `src/sources/monad-rpc.js` | Monad 143 new pools + swaps: batched `eth_getLogs`, WSS `eth_subscribe`, QuickNode Streams parser/signature check (`v1/monad-*.json`, `/monad/`) |
+| `wallet/` | `/wallet/` bundle (React, esbuild) ported from monaf.ai; `npm --prefix wallet run build` |
 | `web/` | Pages app (copied to `_site/`, SDK to `_site/lib/`) |
 | `scripts/build-site.mjs` | builds `_site` + `/v1` JSON snapshots |
 | `examples/telegram-bot/` | grammY bot using the SDK |
