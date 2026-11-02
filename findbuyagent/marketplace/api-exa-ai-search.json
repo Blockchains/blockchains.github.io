@@ -1,0 +1,49 @@
+{
+ "slug": "api-exa-ai-search",
+ "name": "Exa: Exa /search endpoint",
+ "seller": "Exa",
+ "host": "api.exa.ai",
+ "description": "Exa /search endpoint",
+ "category": "Search & web",
+ "tags": [
+  "search",
+  "ai",
+  "web",
+  "research"
+ ],
+ "endpoint": "https://api.exa.ai/search",
+ "method": "POST",
+ "priceUsd": 0.007,
+ "amount": "7000",
+ "payTo": "0x6d6E695b09861467c7d462f5AAF31cF3540B9192",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "numResults": 10,
+   "query": "example search query",
+   "type": "auto"
+  },
+  "bodyType": "json"
+ },
+ "outputExample": "{\"results\":[{\"score\":0.99,\"title\":\"Example\",\"url\":\"https://example.com\"}]}",
+ "docs": null,
+ "docsChecked": 1793596014349,
+ "payers30d": 97,
+ "calls30d": 8723,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 364,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-exa-ai-search",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-exa-ai-search&body=%7B%22slug%22%3A%22api-exa-ai-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-exa-ai-search\",\"body\":\"{\\\"slug\\\":\\\"api-exa-ai-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Exa%3A%20Exa%20%2Fsearch%20endpoint&seller=https%3A%2F%2Fapi.exa.ai%2Fsearch"
+}

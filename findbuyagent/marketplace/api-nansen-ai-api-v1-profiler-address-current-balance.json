@@ -1,0 +1,53 @@
+{
+ "slug": "api-nansen-ai-api-v1-profiler-address-current-balance",
+ "name": "Nansen: Get Address Current Balance Data",
+ "seller": "Nansen",
+ "host": "api.nansen.ai",
+ "description": "Get Address Current Balance Data",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto",
+  "analytics",
+  "smart-money",
+  "on-chain"
+ ],
+ "endpoint": "https://api.nansen.ai/api/v1/profiler/address/current-balance",
+ "method": "POST",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x93053f1e7A5eFEDa532Fe69CbbE43cBEc3A0F13f",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "address": "0x28c6c06298d514db089934071355e5743bf21d60",
+   "chain": "ethereum",
+   "hide_spam_token": true,
+   "pagination": {
+    "page": 1,
+    "per_page": 10
+   }
+  },
+  "bodyType": "json"
+ },
+ "outputExample": "{\"data\":[],\"pagination\":{}}",
+ "docs": null,
+ "docsChecked": 1793596015937,
+ "payers30d": 55,
+ "calls30d": 1279,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 123,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-nansen-ai-api-v1-profiler-address-current-balance",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-nansen-ai-api-v1-profiler-address-current-balance&body=%7B%22slug%22%3A%22api-nansen-ai-api-v1-profiler-address-current-balance%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-nansen-ai-api-v1-profiler-address-current-balance\",\"body\":\"{\\\"slug\\\":\\\"api-nansen-ai-api-v1-profiler-address-current-balance\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Nansen%3A%20Get%20Address%20Current%20Balance%20Data&seller=https%3A%2F%2Fapi.nansen.ai%2Fapi%2Fv1%2Fprofiler%2Faddress%2Fcurrent-balance"
+}

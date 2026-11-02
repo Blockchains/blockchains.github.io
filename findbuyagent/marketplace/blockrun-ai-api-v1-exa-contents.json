@@ -1,0 +1,50 @@
+{
+ "slug": "blockrun-ai-api-v1-exa-contents",
+ "name": "BlockRun.AI: Extract full text content from specific URLs",
+ "seller": "BlockRun.AI",
+ "host": "blockrun.ai",
+ "description": "Extract full text content from specific URLs. Priced at $0.002/URL plus a $0.001 transaction fee per call — total = urls.length × $0.002 + $0.001.",
+ "category": "Search & web",
+ "tags": [
+  "ai",
+  "inference",
+  "llm",
+  "gateway"
+ ],
+ "endpoint": "https://blockrun.ai/api/v1/exa/contents",
+ "method": "POST",
+ "priceUsd": 0.003,
+ "amount": "3000",
+ "payTo": "0xe9030014F5DAe217d0A152f02A043567b16c1aBf",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "urls": {
+    "description": "URLs to fetch content from (1–100). Total cost = urls.length × $0.002 + $0.001 transaction fee.",
+    "type": "array"
+   }
+  },
+  "bodyType": null
+ },
+ "outputExample": "{\"results\":[]}",
+ "docs": "https://blockrun.ai/llms.txt",
+ "docsChecked": 1793596016713,
+ "payers30d": 51,
+ "calls30d": 2717,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 83,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/blockrun-ai-api-v1-exa-contents",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20blockrun-ai-api-v1-exa-contents&body=%7B%22slug%22%3A%22blockrun-ai-api-v1-exa-contents%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: blockrun-ai-api-v1-exa-contents\",\"body\":\"{\\\"slug\\\":\\\"blockrun-ai-api-v1-exa-contents\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=BlockRun.AI%3A%20Extract%20full%20text%20content%20from%20specific%20URLs&seller=https%3A%2F%2Fblockrun.ai%2Fapi%2Fv1%2Fexa%2Fcontents"
+}

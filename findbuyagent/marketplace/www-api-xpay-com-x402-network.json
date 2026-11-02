@@ -1,0 +1,46 @@
+{
+ "slug": "www-api-xpay-com-x402-network",
+ "name": "X Pay: Base network and USDC payment metadata",
+ "seller": "X Pay",
+ "host": "www.api-xpay.com",
+ "description": "Base network and USDC payment metadata",
+ "category": "Utilities",
+ "tags": [
+  "base",
+  "usdc",
+  "chain",
+  "eip155",
+  "x402"
+ ],
+ "endpoint": "https://www.api-xpay.com/x402/network",
+ "method": "GET",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x589a2314a2E05F45e40C4823Da3Ba58D421dB3d8",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": null,
+  "bodyType": null
+ },
+ "outputExample": "{\"asset\":\"USDC\",\"chainId\":8453,\"network\":\"eip155:8453\",\"protocol\":\"x402\",\"service\":\"X Pay\",\"success\":true,\"usdc\":\"0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913\"}",
+ "docs": null,
+ "docsChecked": 1793596012852,
+ "payers30d": 264,
+ "calls30d": 6832,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 312,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/www-api-xpay-com-x402-network",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20www-api-xpay-com-x402-network&body=%7B%22slug%22%3A%22www-api-xpay-com-x402-network%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: www-api-xpay-com-x402-network\",\"body\":\"{\\\"slug\\\":\\\"www-api-xpay-com-x402-network\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=X%20Pay%3A%20Base%20network%20and%20USDC%20payment%20metadata&seller=https%3A%2F%2Fwww.api-xpay.com%2Fx402%2Fnetwork"
+}

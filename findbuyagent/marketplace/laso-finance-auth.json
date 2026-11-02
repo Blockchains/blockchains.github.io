@@ -1,0 +1,44 @@
+{
+ "slug": "laso-finance-auth",
+ "name": "Laso Finance: Get a Firebase ID token for authenticating with the callable APIs",
+ "seller": "Laso Finance",
+ "host": "laso.finance",
+ "description": "Get a Firebase ID token for authenticating with the callable APIs",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "auth",
+  "sign-in",
+  "wallet"
+ ],
+ "endpoint": "https://laso.finance/auth",
+ "method": "GET",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x3291e96b3bff7ed56e3ca8364273c5b4654b2b37",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {},
+  "body": null,
+  "bodyType": null
+ },
+ "outputExample": "{\"auth\":{\"expires_in\":\"3600\",\"id_token\":\"eyJ...\",\"refresh_token\":\"AMf...\"},\"callable_base_url\":\"https://laso.finance\",\"user_id\":\"0xabc...\"}",
+ "docs": "https://laso.finance/llms.txt",
+ "docsChecked": 1793596020163,
+ "payers30d": 39,
+ "calls30d": 278,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 828,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/laso-finance-auth",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20laso-finance-auth&body=%7B%22slug%22%3A%22laso-finance-auth%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: laso-finance-auth\",\"body\":\"{\\\"slug\\\":\\\"laso-finance-auth\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Laso%20Finance%3A%20Get%20a%20Firebase%20ID%20token%20for%20authenticating%20with%20the%20callable%20APIs&seller=https%3A%2F%2Flaso.finance%2Fauth"
+}

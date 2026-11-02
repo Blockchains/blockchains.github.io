@@ -12,6 +12,8 @@ window.FBABudget = (F) => {
   const issueURL = (title, label, json, note = '') => `${GH}/issues/new?${new URLSearchParams({ title, labels: label, body: `${note}\n\n\`\`\`json\n${JSON.stringify(json, null, 1)}\n\`\`\`\n` })}`;
 
   /* ---------- burner from link (#b=..&a=..) or saved ---------- */
+  const PEND = () => { const q = new URLSearchParams(location.search); if (q.get('want')) { const v = { want: q.get('want'), seller: q.get('seller') || '' }; try { localStorage.setItem('fba.pendingBuy', JSON.stringify(v)); } catch {} return v; } try { return JSON.parse(localStorage.getItem('fba.pendingBuy') || '{}'); } catch { return {}; } };
+  { const q = PEND(); const h = document.querySelector('.hero .wrap'); if (q.want && new URLSearchParams(location.search).get('want') && h) { const n = document.createElement('p'); n.className = 'note'; n.textContent = `Ready to buy: ${q.want.slice(0, 120)}. It is filled in under "Buy something" once your budget is open.`; h.appendChild(n); } }
   const hp = new URLSearchParams(location.hash.slice(1));
   if (hp.get('b') && isAddr(hp.get('a'))) {
     store.set('burner', { id: hp.get('b'), address: hp.get('a'), blk: +hp.get('blk') || 0, sweepTo: hp.get('to') || '', total: +hp.get('total'), per: +hp.get('per'), daily: +hp.get('daily'), ends: hp.get('ends') || '' });
@@ -112,8 +114,9 @@ window.FBABudget = (F) => {
       <div><label class="f" for="b-in">Input JSON (optional)</label><textarea id="b-in" class="mono small" rows="4" spellcheck="false" placeholder='{"prompt": "…"}'></textarea></div></div></details>
       <button class="btn pri block" type="button" id="b-req">Ask the agent to buy it</button>
       <p class="small muted" style="margin:0">The runner searches the Coinbase x402 Bazaar, re-checks the best few live, and buys the best fit at or under ${px(b.per)}. It only signs the exact price the seller quotes, in USDC on Base, to the address in that quote, and records why it chose it. Requests wait until the burner holds USDC.</p></div>`;
+    { const q = PEND(); if (q.want) $('#b-want').value = q.want.slice(0, 300); if (q.seller) { $('#b-url').value = q.seller; $('#b-url').closest('details').open = true; } }
     $$('[data-idea]').forEach((c) => c.onclick = () => { $('#b-want').value = c.dataset.idea; $('#b-want').focus(); });
-    $('#b-req').onclick = () => {
+    $('#b-req').onclick = () => { try { localStorage.removeItem('fba.pendingBuy'); } catch {}
       const want = $('#b-want').value.trim(), url = $('#b-url').value.trim(); let input;
       if (!want && !url) return toast('Say what to buy.');
       if (url && !/^https:\/\//.test(url)) return toast('The seller URL must start with https://');

@@ -1,0 +1,42 @@
+{
+ "slug": "x402-asterpay-io-v2-x402-agent-readiness",
+ "name": "Agent-readiness scan of any public website: scores 0-100 on MCP server",
+ "seller": "x402.asterpay.io",
+ "host": "x402.asterpay.io",
+ "description": "Agent-readiness scan of any public website: scores 0-100 on MCP server, /.well-known/agent.json, llms.txt, OpenAPI validity, JSON-LD catalog and x402/MPP payability. Same published methodology as the asterpay.io checker. Paid via x402.",
+ "category": "Search & web",
+ "tags": [],
+ "endpoint": "https://x402.asterpay.io/v2/x402/agent-readiness",
+ "method": "GET",
+ "priceUsd": 0.03,
+ "amount": "30000",
+ "payTo": "0xd5f8481D8F25d3966d2010DBf9B47fFbdf745A9E",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "url": "example.com"
+  },
+  "body": null,
+  "bodyType": null
+ },
+ "outputExample": "{\"bucket\":\"partial\",\"mcp\":{\"detected\":false,\"verified\":false,\"via\":[]},\"openapi\":{\"security_schemes\":false,\"valid\":true},\"score\":60,\"signals\":{\"discoverable\":{\"earned\":25,\"weight\":25},\"llms\":{\"earned\":15,\"weight\":15}},\"top_gaps\":[{\"label\":\"Agents can't pay you yet\"}],\"url\":\"https://example.com/\"}",
+ "docs": "https://x402.asterpay.io/llms.txt",
+ "docsChecked": 1793596022379,
+ "payers30d": 34,
+ "calls30d": 34,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 143,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/x402-asterpay-io-v2-x402-agent-readiness",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20x402-asterpay-io-v2-x402-agent-readiness&body=%7B%22slug%22%3A%22x402-asterpay-io-v2-x402-agent-readiness%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: x402-asterpay-io-v2-x402-agent-readiness\",\"body\":\"{\\\"slug\\\":\\\"x402-asterpay-io-v2-x402-agent-readiness\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Agent-readiness%20scan%20of%20any%20public%20website%3A%20scores%200-100%20on%20MCP%20server&seller=https%3A%2F%2Fx402.asterpay.io%2Fv2%2Fx402%2Fagent-readiness"
+}

@@ -1,0 +1,42 @@
+{
+ "slug": "cloud-trycorpus-ai-v1-tokens-quotes",
+ "name": "corpusAI Cloud Pricing: Every listed price for one model on one day: e",
+ "seller": "cloud.trycorpus.ai",
+ "host": "cloud.trycorpus.ai",
+ "description": "corpusAI Cloud Pricing: Every listed price for one model on one day: each source and hosting provider, USD per million tokens.",
+ "category": "Finance & markets",
+ "tags": [],
+ "endpoint": "https://cloud.trycorpus.ai/v1/tokens/quotes",
+ "method": "GET",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x4DfBc274fD84b67DfcB4B01A188c37aD28177a95",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "model": "deepseek-v3"
+  },
+  "body": null,
+  "bodyType": null
+ },
+ "outputExample": "{}",
+ "docs": "https://cloud.trycorpus.ai/llms.txt",
+ "docsChecked": 1793596019335,
+ "payers30d": 41,
+ "calls30d": 41,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 339,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/cloud-trycorpus-ai-v1-tokens-quotes",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20cloud-trycorpus-ai-v1-tokens-quotes&body=%7B%22slug%22%3A%22cloud-trycorpus-ai-v1-tokens-quotes%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: cloud-trycorpus-ai-v1-tokens-quotes\",\"body\":\"{\\\"slug\\\":\\\"cloud-trycorpus-ai-v1-tokens-quotes\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=corpusAI%20Cloud%20Pricing%3A%20Every%20listed%20price%20for%20one%20model%20on%20one%20day%3A%20e&seller=https%3A%2F%2Fcloud.trycorpus.ai%2Fv1%2Ftokens%2Fquotes"
+}

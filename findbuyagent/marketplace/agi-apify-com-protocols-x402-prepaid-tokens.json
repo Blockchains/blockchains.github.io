@@ -1,0 +1,49 @@
+{
+ "slug": "agi-apify-com-protocols-x402-prepaid-tokens",
+ "name": "Apify: Apify is the largest and most trusted marketplace of tools for web scr",
+ "seller": "Apify",
+ "host": "agi.apify.com",
+ "description": "Apify is the largest and most trusted marketplace of tools for web scraping, crawling, data extraction, and automation. Use these tools, called Actors, to extract structured data from social media, e-commerce sites, search engines, maps, travel sites, or any other website. Turn the open web into a real-time data source for your research, lead generation, and monitoring.",
+ "category": "Search & web",
+ "tags": [
+  "automation",
+  "web-data",
+  "crawling",
+  "context",
+  "scraping"
+ ],
+ "endpoint": "https://agi.apify.com/protocols/x402/prepaid-tokens",
+ "method": "GET",
+ "priceUsd": 1,
+ "amount": "1000000",
+ "payTo": "0x4aAbE17C239eF71c3A26bA7C2b3e0AeBbfC1DF26",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "amount": "2",
+   "currency": "usd"
+  },
+  "body": null,
+  "bodyType": null
+ },
+ "outputExample": "{\"expiresAt\":\"2027-01-01T00:00:00.000Z\",\"remainingBalanceUsd\":2,\"token\":\"apify_api_xxxxxxxxxxxxxxxxxxxxxxxx\"}",
+ "docs": "https://agi.apify.com/llms.txt",
+ "docsChecked": 1793596018565,
+ "payers30d": 42,
+ "calls30d": 162,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 136,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/agi-apify-com-protocols-x402-prepaid-tokens",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20agi-apify-com-protocols-x402-prepaid-tokens&body=%7B%22slug%22%3A%22agi-apify-com-protocols-x402-prepaid-tokens%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: agi-apify-com-protocols-x402-prepaid-tokens\",\"body\":\"{\\\"slug\\\":\\\"agi-apify-com-protocols-x402-prepaid-tokens\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Apify%3A%20Apify%20is%20the%20largest%20and%20most%20trusted%20marketplace%20of%20tools%20for%20web%20scr&seller=https%3A%2F%2Fagi.apify.com%2Fprotocols%2Fx402%2Fprepaid-tokens"
+}

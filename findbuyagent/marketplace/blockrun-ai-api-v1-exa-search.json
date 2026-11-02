@@ -1,0 +1,66 @@
+{
+ "slug": "blockrun-ai-api-v1-exa-search",
+ "name": "BlockRun.AI: Neural and keyword web search",
+ "seller": "BlockRun.AI",
+ "host": "blockrun.ai",
+ "description": "Neural and keyword web search. Optional category filter: company, research paper, news, pdf, github, tweet, personal site, linkedin profile, financial report.",
+ "category": "Search & web",
+ "tags": [
+  "ai",
+  "inference",
+  "llm",
+  "gateway"
+ ],
+ "endpoint": "https://blockrun.ai/api/v1/exa/search",
+ "method": "POST",
+ "priceUsd": 0.011,
+ "amount": "11000",
+ "payTo": "0xe9030014F5DAe217d0A152f02A043567b16c1aBf",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "category": {
+    "description": "Optional category filter: company, research paper, news, pdf, github, tweet, personal site, linkedin profile, financial report.",
+    "type": "string"
+   },
+   "excludeDomains": {
+    "description": "Exclude these domains from results.",
+    "type": "array"
+   },
+   "includeDomains": {
+    "description": "Restrict results to these domains.",
+    "type": "array"
+   },
+   "numResults": {
+    "description": "Number of results to return (default 10, max 100).",
+    "type": "number"
+   },
+   "query": {
+    "description": "Natural-language search query.",
+    "type": "string"
+   }
+  },
+  "bodyType": null
+ },
+ "outputExample": "{\"results\":[]}",
+ "docs": "https://blockrun.ai/llms.txt",
+ "docsChecked": 1793596015814,
+ "payers30d": 59,
+ "calls30d": 3368,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 78,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/blockrun-ai-api-v1-exa-search",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20blockrun-ai-api-v1-exa-search&body=%7B%22slug%22%3A%22blockrun-ai-api-v1-exa-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: blockrun-ai-api-v1-exa-search\",\"body\":\"{\\\"slug\\\":\\\"blockrun-ai-api-v1-exa-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=BlockRun.AI%3A%20Neural%20and%20keyword%20web%20search&seller=https%3A%2F%2Fblockrun.ai%2Fapi%2Fv1%2Fexa%2Fsearch"
+}

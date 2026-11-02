@@ -1,0 +1,44 @@
+{
+ "slug": "stableenrich-dev-api-pdl-people-enrich",
+ "name": "StableEnrich: PDL Person Enrich — career history, emails, phone",
+ "seller": "StableEnrich",
+ "host": "stableenrich.dev",
+ "description": "PDL Person Enrich — career history, emails, phone. Requires one of: `email`, `profile` (LinkedIn URL), or `first_name` + `last_name` + (`company_name` OR `company_domain`). `{ first_name, last_name }` alone returns 400. Prefer `email` when known, then `profile`. No match: HTTP 200, status 404, data null — not billed. Match: $0.28.",
+ "category": "Search & web",
+ "tags": [
+  "Pdl"
+ ],
+ "endpoint": "https://stableenrich.dev/api/pdl/people-enrich",
+ "method": "POST",
+ "priceUsd": 0.28,
+ "amount": "280000",
+ "payTo": "0x325bdF6F7efAB24a2210c48c1b64cAb2eAe1d430",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "profile": "https://www.linkedin.com/in/patrickcollison"
+  },
+  "bodyType": "json"
+ },
+ "outputExample": null,
+ "docs": "https://stableenrich.dev/llms.txt",
+ "docsChecked": 1793596018429,
+ "payers30d": 45,
+ "calls30d": 944,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 49,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/stableenrich-dev-api-pdl-people-enrich",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20stableenrich-dev-api-pdl-people-enrich&body=%7B%22slug%22%3A%22stableenrich-dev-api-pdl-people-enrich%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: stableenrich-dev-api-pdl-people-enrich\",\"body\":\"{\\\"slug\\\":\\\"stableenrich-dev-api-pdl-people-enrich\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=StableEnrich%3A%20PDL%20Person%20Enrich%20%E2%80%94%20career%20history%2C%20emails%2C%20phone&seller=https%3A%2F%2Fstableenrich.dev%2Fapi%2Fpdl%2Fpeople-enrich"
+}

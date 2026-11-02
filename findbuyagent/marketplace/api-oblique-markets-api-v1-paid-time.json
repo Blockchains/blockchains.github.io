@@ -1,0 +1,46 @@
+{
+ "slug": "api-oblique-markets-api-v1-paid-time",
+ "name": "Oblique Markets: Use when an agent needs a trusted UTC timestamp or the smallest end-to",
+ "seller": "Oblique Markets",
+ "host": "api.oblique.markets",
+ "description": "Use when an agent needs a trusted UTC timestamp or the smallest end-to-end test of its x402 payment client. Returns Current server time as ISO 8601 and Unix epoch milliseconds, returned only after a real settlement. $0.01.",
+ "category": "Utilities",
+ "tags": [
+  "time",
+  "clock",
+  "timestamp",
+  "x402-test",
+  "utility"
+ ],
+ "endpoint": "https://api.oblique.markets/api/v1/paid/time",
+ "method": "GET",
+ "priceUsd": 0.01,
+ "amount": "10000",
+ "payTo": "0x970007590aCC5C938cd51345B17AF51B1B40D3Ab",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {},
+  "body": null,
+  "bodyType": null
+ },
+ "outputExample": "{\"epoch\":1767225600000,\"message\":\"This response was paid for via x402 protocol\",\"timestamp\":\"2026-01-01T00:00:00.000Z\",\"timezone\":\"UTC\"}",
+ "docs": "https://api.oblique.markets/llms.txt",
+ "docsChecked": 1793596018380,
+ "payers30d": 45,
+ "calls30d": 79,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 34,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-oblique-markets-api-v1-paid-time",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-oblique-markets-api-v1-paid-time&body=%7B%22slug%22%3A%22api-oblique-markets-api-v1-paid-time%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-oblique-markets-api-v1-paid-time\",\"body\":\"{\\\"slug\\\":\\\"api-oblique-markets-api-v1-paid-time\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Oblique%20Markets%3A%20Use%20when%20an%20agent%20needs%20a%20trusted%20UTC%20timestamp%20or%20the%20smallest%20end-to&seller=https%3A%2F%2Fapi.oblique.markets%2Fapi%2Fv1%2Fpaid%2Ftime"
+}

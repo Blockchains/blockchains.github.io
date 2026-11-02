@@ -1,0 +1,42 @@
+{
+ "slug": "tick-hugen-tokyo-tick-latest",
+ "name": "Get real-time Best Bid/Ask for any FX pair, aggregated from multiple i",
+ "seller": "tick.hugen.tokyo",
+ "host": "tick.hugen.tokyo",
+ "description": "Get real-time Best Bid/Ask for any FX pair, aggregated from multiple institutional liquidity providers. Includes quality metadata (fresh_sources, quality_state, spread_vs_single_source). Supports 29 FX pairs including EURUSD, USDJPY, GBPUSD, AUDUSD, AUDNZD, and XAUUSD. AI agent API for forex trading signals, portfolio valuation, price comparison, and arbitrage detection. Accepts USDC payments on Base and Solana",
+ "category": "Finance & markets",
+ "tags": [],
+ "endpoint": "https://tick.hugen.tokyo/tick/latest",
+ "method": "GET",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0x29322Ea7EcB34aA6164cb2ddeB9CE650902E4f60",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "symbol": "EURUSD"
+  },
+  "body": null,
+  "bodyType": null
+ },
+ "outputExample": "{\"best_ask\":\"1.15919\",\"best_bid\":\"1.15918\",\"best_spread\":\"0.00001\",\"fresh_sources\":2,\"is_crossed\":false,\"quality_state\":\"good\",\"seq\":42857,\"spread_vs_single_source\":\"-73.8%\",\"symbol\":\"EURUSD\"}",
+ "docs": "https://tick.hugen.tokyo/llms.txt",
+ "docsChecked": 1793596013737,
+ "payers30d": 125,
+ "calls30d": 165,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 353,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/tick-hugen-tokyo-tick-latest",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20tick-hugen-tokyo-tick-latest&body=%7B%22slug%22%3A%22tick-hugen-tokyo-tick-latest%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: tick-hugen-tokyo-tick-latest\",\"body\":\"{\\\"slug\\\":\\\"tick-hugen-tokyo-tick-latest\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Get%20real-time%20Best%20Bid%2FAsk%20for%20any%20FX%20pair%2C%20aggregated%20from%20multiple%20i&seller=https%3A%2F%2Ftick.hugen.tokyo%2Ftick%2Flatest"
+}

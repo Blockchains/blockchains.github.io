@@ -1,0 +1,42 @@
+{
+ "slug": "stableenrich-dev-api-exa-contents",
+ "name": "StableEnrich: Exa Contents - Retrieve content from URLs",
+ "seller": "StableEnrich",
+ "host": "stableenrich.dev",
+ "description": "Exa Contents - Retrieve content from URLs",
+ "category": "Search & web",
+ "tags": [
+  "Exa"
+ ],
+ "endpoint": "https://stableenrich.dev/api/exa/contents",
+ "method": "POST",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x325bdF6F7efAB24a2210c48c1b64cAb2eAe1d430",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {},
+  "bodyType": "json"
+ },
+ "outputExample": null,
+ "docs": "https://stableenrich.dev/llms.txt",
+ "docsChecked": 1793596016766,
+ "payers30d": 49,
+ "calls30d": 6747,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 53,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/stableenrich-dev-api-exa-contents",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20stableenrich-dev-api-exa-contents&body=%7B%22slug%22%3A%22stableenrich-dev-api-exa-contents%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: stableenrich-dev-api-exa-contents\",\"body\":\"{\\\"slug\\\":\\\"stableenrich-dev-api-exa-contents\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=StableEnrich%3A%20Exa%20Contents%20-%20Retrieve%20content%20from%20URLs&seller=https%3A%2F%2Fstableenrich.dev%2Fapi%2Fexa%2Fcontents"
+}

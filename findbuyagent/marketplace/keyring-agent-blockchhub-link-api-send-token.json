@@ -1,0 +1,40 @@
+{
+ "slug": "keyring-agent-blockchhub-link-api-send-token",
+ "name": "Pay the send-token execution fee (ERC-20 transfer)",
+ "seller": "keyring-agent.blockchhub.link",
+ "host": "keyring-agent.blockchhub.link",
+ "description": "Pay the send-token execution fee (ERC-20 transfer)",
+ "category": "Crypto & on-chain",
+ "tags": [],
+ "endpoint": "https://keyring-agent.blockchhub.link/api/send-token",
+ "method": "GET",
+ "priceUsd": 0.05,
+ "amount": "50000",
+ "payTo": "0x17cd53C04D707eF0Dd615EF56c633f02915a7905",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {},
+  "body": null,
+  "bodyType": null
+ },
+ "outputExample": "{\"status\":\"ok\"}",
+ "docs": null,
+ "docsChecked": 1793596015539,
+ "payers30d": 67,
+ "calls30d": 14739,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 419,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/keyring-agent-blockchhub-link-api-send-token",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20keyring-agent-blockchhub-link-api-send-token&body=%7B%22slug%22%3A%22keyring-agent-blockchhub-link-api-send-token%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: keyring-agent-blockchhub-link-api-send-token\",\"body\":\"{\\\"slug\\\":\\\"keyring-agent-blockchhub-link-api-send-token\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Pay%20the%20send-token%20execution%20fee%20(ERC-20%20transfer)&seller=https%3A%2F%2Fkeyring-agent.blockchhub.link%2Fapi%2Fsend-token"
+}

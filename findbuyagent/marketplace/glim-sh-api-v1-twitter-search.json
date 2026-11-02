@@ -1,0 +1,48 @@
+{
+ "slug": "glim-sh-api-v1-twitter-search",
+ "name": "glim.sh: Search tweets with advanced operators (recommended)",
+ "seller": "glim.sh",
+ "host": "glim.sh",
+ "description": "Search tweets with advanced operators (recommended). Body param is `query` (not q), e.g. {\"query\":\"from:elonmusk AI min_faves:100\"}",
+ "category": "Search & web",
+ "tags": [
+  "twitter",
+  "reddit",
+  "web",
+  "github",
+  "search"
+ ],
+ "endpoint": "https://glim.sh/api/v1/twitter/search",
+ "method": "POST",
+ "priceUsd": 0.005,
+ "amount": "5000",
+ "payTo": "0xC751344Ee09B5159160173F77D4a1169bCd386A1",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": null,
+  "body": {
+   "query": "from:elonmusk AI min_faves:100"
+  },
+  "bodyType": "json"
+ },
+ "outputExample": "{\"count\":1,\"has_more\":true,\"next_cursor\":\"abc123\",\"tweets\":[{\"author\":{\"username\":\"elonmusk\"},\"id\":\"123\",\"text\":\"Hello\"}]}",
+ "docs": "https://glim.sh/llms.txt",
+ "docsChecked": 1793596020782,
+ "payers30d": 36,
+ "calls30d": 681,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 461,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/glim-sh-api-v1-twitter-search",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20glim-sh-api-v1-twitter-search&body=%7B%22slug%22%3A%22glim-sh-api-v1-twitter-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: glim-sh-api-v1-twitter-search\",\"body\":\"{\\\"slug\\\":\\\"glim-sh-api-v1-twitter-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=glim.sh%3A%20Search%20tweets%20with%20advanced%20operators%20(recommended)&seller=https%3A%2F%2Fglim.sh%2Fapi%2Fv1%2Ftwitter%2Fsearch"
+}

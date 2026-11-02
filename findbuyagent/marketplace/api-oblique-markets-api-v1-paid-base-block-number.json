@@ -1,0 +1,45 @@
+{
+ "slug": "api-oblique-markets-api-v1-paid-base-block-number",
+ "name": "Oblique Markets: Use when an agent needs base block number",
+ "seller": "Oblique Markets",
+ "host": "api.oblique.markets",
+ "description": "Use when an agent needs base block number. Returns Fetch the current Base mainnet block number from redundant public RPCs and return structured JSON with source and freshness metadata. $0.002.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "base",
+  "block",
+  "number",
+  "chain-data"
+ ],
+ "endpoint": "https://api.oblique.markets/api/v1/paid/base-block-number",
+ "method": "GET",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x970007590aCC5C938cd51345B17AF51B1B40D3Ab",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {},
+  "body": null,
+  "bodyType": null
+ },
+ "outputExample": "{\"as_of\":\"2026-08-10T12:00:00.000Z\",\"block_number\":33712840,\"network\":\"eip155:8453\"}",
+ "docs": "https://api.oblique.markets/llms.txt",
+ "docsChecked": 1793596017495,
+ "payers30d": 46,
+ "calls30d": 53,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 729,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-oblique-markets-api-v1-paid-base-block-number",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-oblique-markets-api-v1-paid-base-block-number&body=%7B%22slug%22%3A%22api-oblique-markets-api-v1-paid-base-block-number%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-oblique-markets-api-v1-paid-base-block-number\",\"body\":\"{\\\"slug\\\":\\\"api-oblique-markets-api-v1-paid-base-block-number\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Oblique%20Markets%3A%20Use%20when%20an%20agent%20needs%20base%20block%20number&seller=https%3A%2F%2Fapi.oblique.markets%2Fapi%2Fv1%2Fpaid%2Fbase-block-number"
+}

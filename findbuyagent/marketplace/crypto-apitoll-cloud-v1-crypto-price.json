@@ -1,0 +1,48 @@
+{
+ "slug": "crypto-apitoll-cloud-v1-crypto-price",
+ "name": "ApiToll Crypto Prices: Latest crypto token prices by ticker symbol, CoinGecko id, or chain:ad",
+ "seller": "ApiToll Crypto Prices",
+ "host": "crypto.apitoll.cloud",
+ "description": "Latest crypto token prices by ticker symbol, CoinGecko id, or chain:address (BTC, ETH, SOL, or base:0x…): current spot price, token symbol, decimals, and a confidence score, for up to 50 coins in one call. Pass ?at=<unix> for the historical price at a point in time. Sourced from DefiLlama across every major chain.",
+ "category": "Crypto & on-chain",
+ "tags": [
+  "crypto",
+  "prices",
+  "token-price",
+  "defi",
+  "market-data"
+ ],
+ "endpoint": "https://crypto.apitoll.cloud/v1/crypto/price",
+ "method": "GET",
+ "priceUsd": 0.001,
+ "amount": "1000",
+ "payTo": "0x3dA40A9aD36640a2C0F533BAC368490095574664",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "coins": "BTC,ETH,SOL"
+  },
+  "body": null,
+  "bodyType": null
+ },
+ "outputExample": "{\"asOf\":\"2026-06-15T08:00:00Z\",\"count\":3,\"historical\":false,\"prices\":[{\"confidence\":0.99,\"decimals\":null,\"key\":\"coingecko:bitcoin\",\"price\":65517.56,\"query\":\"BTC\",\"resolved\":true,\"symbol\":\"BTC\",\"timestamp\":1781516766}],\"requested\":3,\"source\":{\"name\":\"DefiLlama\"},\"unresolved\":[]}",
+ "docs": null,
+ "docsChecked": 1793596015120,
+ "payers30d": 71,
+ "calls30d": 289,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 391,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/crypto-apitoll-cloud-v1-crypto-price",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20crypto-apitoll-cloud-v1-crypto-price&body=%7B%22slug%22%3A%22crypto-apitoll-cloud-v1-crypto-price%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: crypto-apitoll-cloud-v1-crypto-price\",\"body\":\"{\\\"slug\\\":\\\"crypto-apitoll-cloud-v1-crypto-price\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=ApiToll%20Crypto%20Prices%3A%20Latest%20crypto%20token%20prices%20by%20ticker%20symbol%2C%20CoinGecko%20id%2C%20or%20chain%3Aad&seller=https%3A%2F%2Fcrypto.apitoll.cloud%2Fv1%2Fcrypto%2Fprice"
+}

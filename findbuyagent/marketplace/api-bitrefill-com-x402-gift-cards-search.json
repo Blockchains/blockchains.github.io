@@ -1,0 +1,49 @@
+{
+ "slug": "api-bitrefill-com-x402-gift-cards-search",
+ "name": "Bitrefill: Search 10,000+ gift card & voucher brands across 180+ countries by nam",
+ "seller": "Bitrefill",
+ "host": "api.bitrefill.com",
+ "description": "Search 10,000+ gift card & voucher brands across 180+ countries by name and country. Pay in USDC via x402, no account.",
+ "category": "Search & web",
+ "tags": [
+  "gift-cards",
+  "vouchers",
+  "search",
+  "usdc",
+  "base"
+ ],
+ "endpoint": "https://api.bitrefill.com/x402/gift-cards/search",
+ "method": "GET",
+ "priceUsd": 0.002,
+ "amount": "2000",
+ "payTo": "0x480CD46E6faDe651a0437DeaddA53D5c8e7D846A",
+ "asset": "USDC",
+ "network": "eip155:8453",
+ "listedTermsMatch": true,
+ "input": {
+  "queryParams": {
+   "country": "US",
+   "q": "amazon"
+  },
+  "body": null,
+  "bodyType": null
+ },
+ "outputExample": "{\"next_step\":{\"body\":{\"slug\":\"<product slug from results>\"},\"url\":\"/x402/products/detail\"},\"products\":[{\"country\":\"US\",\"in_stock\":true,\"name\":\"Amazon\",\"recipient_type\":\"none\",\"slug\":\"amazon-us\"},{\"country\":\"US\",\"in_stock\":true,\"name\":\"Steam\",\"recipient_type\":\"none\",\"slug\":\"steam\"}]}",
+ "docs": null,
+ "docsChecked": 1793596018996,
+ "payers30d": 42,
+ "calls30d": 111,
+ "firstSeen": "2026-11-02T04:43:25.479Z",
+ "verifiedAt": "2026-11-02T05:06:51.281Z",
+ "latencyMs": 431,
+ "lastStatus": 402,
+ "fails": 0,
+ "source": "Coinbase x402 Bazaar listing + live 402 probe",
+ "url": "https://blockchains.github.io/findbuyagent/marketplace/api-bitrefill-com-x402-gift-cards-search",
+ "rating": null,
+ "rate": {
+  "issue": "https://github.com/Blockchains/findbuyagent-vault/issues/new?title=Rating%3A%20api-bitrefill-com-x402-gift-cards-search&body=%7B%22slug%22%3A%22api-bitrefill-com-x402-gift-cards-search%22%2C%22stars%22%3A5%7D%0A%0AOptional%3A%20what%20you%20bought%20and%20how%20it%20went.",
+  "api": "POST https://api.github.com/repos/Blockchains/findbuyagent-vault/issues {\"title\":\"Rating: api-bitrefill-com-x402-gift-cards-search\",\"body\":\"{\\\"slug\\\":\\\"api-bitrefill-com-x402-gift-cards-search\\\",\\\"stars\\\":1-5}\"}"
+ },
+ "buyWithAgentBudget": "https://blockchains.github.io/findbuyagent/budget?want=Bitrefill%3A%20Search%2010%2C000%2B%20gift%20card%20%26%20voucher%20brands%20across%20180%2B%20countries%20by%20nam&seller=https%3A%2F%2Fapi.bitrefill.com%2Fx402%2Fgift-cards%2Fsearch"
+}
