@@ -1,7 +1,7 @@
 <!doctype html><html lang="en" data-base="/findbuyagent"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Agent budget: let your agent buy on its own | FindBuyAgent</title><meta name="description" content="Give your agent up to $100 to spend on its own, with caps, an end date and one-click revoke. Deliveries arrive here and by email."><link rel="canonical" href="https://findbuyagent.com/budget">
+<title>Agent budget: a one-time burner wallet | FindBuyAgent</title><meta name="description" content="Fund a one-time burner wallet with up to $100 USDC. A GitHub Actions runner buys from allowlisted x402 sellers within your caps, emails receipts with full usage instructions, then sweeps leftovers back. High risk."><link rel="canonical" href="https://findbuyagent.com/budget">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-bzGBb11D5ZSY7p0xbIWEwElQ4c/Td1BtJ0iB6Wj0Ezw='; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src https:; frame-src https://js.stripe.com; base-uri 'self'; form-action 'self'; object-src 'none'"><meta name="referrer" content="strict-origin-when-cross-origin">
-<meta property="og:type" content="website"><meta property="og:site_name" content="FindBuyAgent"><meta property="og:title" content="Agent budget: let your agent buy on its own | FindBuyAgent"><meta property="og:description" content="Give your agent up to $100 to spend on its own, with caps, an end date and one-click revoke. Deliveries arrive here and by email."><meta property="og:url" content="https://findbuyagent.com/budget"><meta property="og:image" content="https://findbuyagent.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website"><meta property="og:site_name" content="FindBuyAgent"><meta property="og:title" content="Agent budget: a one-time burner wallet | FindBuyAgent"><meta property="og:description" content="Fund a one-time burner wallet with up to $100 USDC. A GitHub Actions runner buys from allowlisted x402 sellers within your caps, emails receipts with full usage instructions, then sweeps leftovers back. High risk."><meta property="og:url" content="https://findbuyagent.com/budget"><meta property="og:image" content="https://findbuyagent.com/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#07080c" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/findbuyagent/favicon.svg" type="image/svg+xml"><link rel="icon" href="/findbuyagent/favicon.ico" sizes="32x32"><link rel="apple-touch-icon" href="/findbuyagent/apple-touch-icon.png"><link rel="manifest" href="/findbuyagent/site.webmanifest">
 <link rel="preload" href="/findbuyagent/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -11,12 +11,11 @@
 <header class="top"><div class="wrap"><a class="logo" href="/findbuyagent/" aria-label="FindBuyAgent home"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#3B5BFF"/><path d="M9 11h14l-1.6 9.2a2 2 0 0 1-2 1.8h-6.8a2 2 0 0 1-2-1.8z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/><path d="M13 11V9.5a3 3 0 0 1 6 0V11" fill="none" stroke="#fff" stroke-width="2.2"/></svg><span>FindBuyAgent</span></a>
 <nav class="main" aria-label="Main"><a href="/findbuyagent/find">Find</a><a href="/findbuyagent/shop">Shop</a><a href="/findbuyagent/budget" aria-current="page">Budget</a><a href="/findbuyagent/receipts">Receipts</a><a href="/findbuyagent/mandates">Rules</a><a href="/findbuyagent/merchants">Merchants</a><a href="/findbuyagent/protocols">Protocols</a><a href="/findbuyagent/blog">Blog</a></nav><span class="sp"></span>
 <a class="icon-btn hide-m" href="/findbuyagent/settings" aria-label="Settings"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-2.7-1.1l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.6 1.6 0 0 0 3.6 15H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.1-2.7l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.6 1.6 0 0 0 9 4.6V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 2.7 1.1l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A1.6 1.6 0 0 0 19.4 9H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 2z"/></svg></a><button id="wallet" class="btn pri sm wallet-chip" type="button">Connect wallet</button></div></header>
-<main id="content" tabindex="-1"><section class="hero"><div class="wrap "><span class="badge b-ind">High risk · spends without asking</span><h1 style="margin-top:12px">Give your agent a budget.</h1><p class="sub">Set up to $100 once. Your agent finds live sellers, pays within your caps and delivers what it bought, with no more prompts.</p>
-  <form id="bform" class="intent"><label class="hidden" for="breq">What should your agent buy?</label><input id="breq" placeholder="Buy me AI image generation" autocomplete="off"><button class="btn pri" type="submit">Plan it</button></form>
-  <div class="chips"><button class="chip" type="button" data-breq="Generate 5 product images for my shop">Generate 5 product images for my shop</button><button class="chip" type="button" data-breq="Buy me AI image generation API keys">Buy me AI image generation API keys</button><button class="chip" type="button" data-breq="Find leads: new businesses in Chicago">Find leads: new businesses in Chicago</button><button class="chip" type="button" data-breq="Enrich these company websites">Enrich these company websites</button></div><div id="bplan" aria-live="polite" style="margin-top:16px"></div><div id="bwatch"></div></div></section>
-  <div class="wrap "><div class="layout2"><div class="stack"><section><h2>Budget</h2><div class="card" id="bsetup"></div></section></div>
-  <aside class="stack"><section><h2>Ledger</h2><div id="bledger"></div></section><section><h2>Deliveries</h2><p class="small muted" id="bemailstate"></p><div id="bdeliv" class="stack"></div></section>
-  <p class="small muted">Sellers come from the Coinbase x402 Bazaar, checked live by our build. FindBuyAgent never holds your funds or keys: the budget is a Base Spend Permission on your own Base Account, and the agent's signing key stays on the FindBuyAgent server.</p></aside></div></div></main>
+<main id="content" tabindex="-1"><section class="hero"><div class="wrap "><span class="badge b-ind">High risk · spends without asking</span><h1 style="margin-top:12px">Give your agent a burner wallet.</h1><p class="sub">A fresh one-time wallet, run by GitHub Actions in your own private repo. You deposit once. It buys from allowlisted sellers within your caps, sends receipts with full instructions for using what it bought, then returns what's left.</p>
+  <ol class="small muted" style="margin:12px 0 0;padding-left:20px"><li>Set rules</li><li>Get the burner address</li><li>Deposit once from your wallet</li><li>Submit requests</li><li>Watch the ledger and deliveries</li><li>Close and sweep</li></ol></div></section>
+  <div class="wrap "><div class="layout2"><div class="stack"><section><h2>1. Rules</h2><div class="card" id="bsetup"></div></section><section><h2>3. Buy something</h2><div class="card" id="bbuy"></div></section></div>
+  <aside class="stack"><section><h2>2. Burner wallet</h2><div class="card" id="bburner"></div></section><section><h2>4. Ledger</h2><div class="card" id="bledger"></div></section><section><h2>5. Deliveries</h2><div class="card" id="bdeliv"></div></section><section><h2>6. Close and sweep</h2><div class="card" id="bclose"></div></section>
+  <p class="small muted">Whatever is in the burner is exposed: its key lives in GitHub Actions runs (sealed with a repository secret, never printed or committed), and it signs and pays without asking you. Only sellers on the allowlist, and only their published pay-to address, can be paid. No returns are promised; payments are final.</p></aside></div></div></main>
 <footer class="foot"><div class="wrap"><p><strong>FindBuyAgent</strong>: non-custodial agent payments on Base.</p>
 <nav aria-label="Footer"><a href="/findbuyagent/find">Find</a><a href="/findbuyagent/shop">Shop</a><a href="/findbuyagent/merchants">Merchants</a><a href="/findbuyagent/protocols">Protocols</a><a href="/findbuyagent/compare">Compare</a><a href="/findbuyagent/security">Security</a><a href="/findbuyagent/faq">FAQ</a><a href="/findbuyagent/pricing">Pricing</a><a href="/findbuyagent/blog">Blog</a><a href="/findbuyagent/privacy">Privacy</a><a href="/findbuyagent/terms">Terms</a><a href="https://github.com/Blockchains/findbuyagent" rel="noopener">GitHub</a></nav>
 <p class="small">FindBuyAgent never holds your keys or funds. Every payment is signed in your wallet. © 2026 FindBuyAgent.</p></div></footer>
@@ -33,7 +32,13 @@
    "usd": 0.005,
    "payTo": "0x9f8bd9875b3E0b632a24A3A7C73f7787175e73A2",
    "desc": "Delx Commerce budget image generation API for $0.005 USDC (FLUX Schnell entry tier). Call when you need a chea",
-   "cors": true
+   "cors": true,
+   "example": {
+    "aspect_ratio": "1:1",
+    "prompt": "Quick concept sketch of a red fox icon, flat vector, no text",
+    "quality_profile": "balanced"
+   },
+   "status402": true
   },
   {
    "cat": "image",
@@ -43,7 +48,15 @@
    "usd": 0.008,
    "payTo": "0x98fa9c8afb5c56ad27d24843cabebdd55170dbc0",
    "desc": "GPT Image 2 Low - GPT Image 2, low quality: text to picture. Sharp detail, faces and readable text. The all-ro",
-   "cors": false
+   "cors": false,
+   "example": {
+    "prompt": "a red fox mascot waving, flat colours",
+    "shape": "1:1",
+    "background": "auto",
+    "format": "png",
+    "compression": 100
+   },
+   "status402": true
   },
   {
    "cat": "image",
@@ -53,7 +66,14 @@
    "usd": 0.01,
    "payTo": "0xA7f3Ad0E69F61864092FAbBa6Cee00AF6e584689",
    "desc": "OpenAI /v1/images/generations-compatible image generation on Venice image models, paid per request in USDC on",
-   "cors": false
+   "cors": false,
+   "example": {
+    "model": "flux-2-pro",
+    "prompt": "A watercolor fox in a misty forest",
+    "size": "1024x1024",
+    "n": 1
+   },
+   "status402": true
   },
   {
    "cat": "image",
@@ -63,7 +83,15 @@
    "usd": 0.015,
    "payTo": "0x98fa9c8afb5c56ad27d24843cabebdd55170dbc0",
    "desc": "GPT Image 2.5 Sunburst Medium - GPT Image 2.5 Sunburst, medium quality: text to picture. Precise: every detail",
-   "cors": false
+   "cors": false,
+   "example": {
+    "prompt": "a red fox mascot waving, flat colours",
+    "shape": "1:1",
+    "background": "auto",
+    "format": "png",
+    "compression": 100
+   },
+   "status402": true
   },
   {
    "cat": "image",
@@ -73,7 +101,14 @@
    "usd": 0.01,
    "payTo": "0x98886846918c7deBe86E1D74E249DCDd64a9D367",
    "desc": "OpenAI-compatible image generation across the Venice AI model catalog. Pay per request in USDC on Base via x40",
-   "cors": false
+   "cors": false,
+   "example": {
+    "model": "flux-2-pro",
+    "prompt": "A gondola on a foggy canal at dawn.",
+    "n": 1,
+    "size": "1024x1024"
+   },
+   "status402": true
   },
   {
    "cat": "image",
@@ -83,7 +118,9 @@
    "usd": 0.041,
    "payTo": "0xe9030014F5DAe217d0A152f02A043567b16c1aBf",
    "desc": "AI image generation API - pay per image with USDC on Base (hybrid sync/async)",
-   "cors": false
+   "cors": false,
+   "example": null,
+   "status402": false
   },
   {
    "cat": "image",
@@ -93,7 +130,15 @@
    "usd": 0.054,
    "payTo": "0x98fa9c8afb5c56ad27d24843cabebdd55170dbc0",
    "desc": "GPT Image 2.5 Flare High - GPT Image 2.5 Flare, high quality: text to picture. Fast, bold and vivid. Great cha",
-   "cors": false
+   "cors": false,
+   "example": {
+    "prompt": "a red fox mascot waving, flat colours",
+    "shape": "1:1",
+    "background": "auto",
+    "format": "png",
+    "compression": 100
+   },
+   "status402": true
   },
   {
    "cat": "image",
@@ -103,7 +148,14 @@
    "usd": 0.066,
    "payTo": "0xC23d1Dc0f5fCe1abfFB051e06cB93f0329968B4e",
    "desc": "Image generation API, text to image: images from 36 models (Nano Banana, GPT Image, Flux, Seedream, Recraft, Q",
-   "cors": false
+   "cors": false,
+   "example": {
+    "model": "venice-seedream-v5-lite",
+    "prompt": "a small green robot holding a coin, flat illustration",
+    "n": 1,
+    "size": "1024x1024"
+   },
+   "status402": true
   },
   {
    "cat": "image",
@@ -113,7 +165,13 @@
    "usd": 0.15,
    "payTo": "0x10FF767043A1723E0BB5B9207bC37D3442cC9E4F",
    "desc": "AI image generation from a text prompt. Generate album and single cover art, podcast and video thumbnails, soc",
-   "cors": true
+   "cors": true,
+   "example": {
+    "prompt": "\u003cprompt>",
+    "aspectRatio": "1:1",
+    "outputFormat": "png"
+   },
+   "status402": true
   },
   {
    "cat": "leads",
@@ -123,7 +181,11 @@
    "usd": 0.005,
    "payTo": "0x487b28A4FbbA8Cf46eb6E1d72e6959202Bb75e90",
    "desc": "What does this business's website run on? Give a website (or a US phone number) and get its site platform (Wor",
-   "cors": true
+   "cors": true,
+   "example": {
+    "phone": "4043552001"
+   },
+   "status402": true
   },
   {
    "cat": "leads",
@@ -132,8 +194,12 @@
    "method": "POST",
    "usd": 0.005,
    "payTo": "0xdaDc335482AD545296Fd7b28518A251fFCbEb9Df",
-   "desc": "Check a sales lead before outreach \u2014 one call verifies the email address (syntax, MX, disposable/role/free-pro",
-   "cors": true
+   "desc": "Check a sales lead before outreach — one call verifies the email address (syntax, MX, disposable/role/free-pro",
+   "cors": true,
+   "example": {
+    "email": "jane.doe@stripe.com"
+   },
+   "status402": true
   },
   {
    "cat": "leads",
@@ -143,7 +209,11 @@
    "usd": 0.009,
    "payTo": "0x2880EdfFF13100677Bf97A3CBdF3Bc34771C4E5E",
    "desc": "Call before qualifying a company website for web or marketing services. Returns its stack, builder, footer age",
-   "cors": true
+   "cors": true,
+   "example": {
+    "url": "https://example.com/"
+   },
+   "status402": true
   },
   {
    "cat": "leads",
@@ -153,7 +223,13 @@
    "usd": 0.01,
    "payTo": "0x8647F7D7a1368a467Ad1FF757fBc2e7167973558",
    "desc": "Find current official business-registration leads from Chicago and San Francisco open-data APIs. Results inclu",
-   "cors": true
+   "cors": true,
+   "example": {
+    "city": "Chicago",
+    "query": "auto",
+    "limit": 20
+   },
+   "status402": true
   },
   {
    "cat": "leads",
@@ -163,7 +239,11 @@
    "usd": 0.01,
    "payTo": "0x487b28A4FbbA8Cf46eb6E1d72e6959202Bb75e90",
    "desc": "Who is this phone number or website? Give a US phone number or a website and get the local business behind it:",
-   "cors": true
+   "cors": true,
+   "example": {
+    "phone": "4043552001"
+   },
+   "status402": true
   },
   {
    "cat": "leads",
@@ -173,7 +253,18 @@
    "usd": 0.01,
    "payTo": "0x487b28A4FbbA8Cf46eb6E1d72e6959202Bb75e90",
    "desc": "Bulk business enrichment: send 1-100 websites or US phone numbers. Each input returns the business, graded ema",
-   "cors": true
+   "cors": true,
+   "example": {
+    "records": [
+     {
+      "domain": "midtownfamilydental.com"
+     },
+     {
+      "phone": "4043552001"
+     }
+    ]
+   },
+   "status402": true
   },
   {
    "cat": "leads",
@@ -183,7 +274,13 @@
    "usd": 0.02,
    "payTo": "0x76A672EEe56D29D475b0715cc03B8C99D70EC8A2",
    "desc": "French B2B prospecting and lead generation over the full official French company registry: build targeted comp",
-   "cors": true
+   "cors": true,
+   "example": {
+    "naf": "62.01Z",
+    "departement": "75",
+    "page": "1"
+   },
+   "status402": true
   },
   {
    "cat": "leads",
@@ -193,7 +290,12 @@
    "usd": 0.02,
    "payTo": "0x76A672EEe56D29D475b0715cc03B8C99D70EC8A2",
    "desc": "Find French companies that look like your best customers: give 2 to 5 customer SIRENs (?exemples=), optionally",
-   "cors": true
+   "cors": true,
+   "example": {
+    "exemples": "817393812,799083373,838455525,805161726,798221859",
+    "region": "84"
+   },
+   "status402": true
   },
   {
    "cat": "leads",
@@ -203,7 +305,16 @@
    "usd": 0.035,
    "payTo": "0x2880EdfFF13100677Bf97A3CBdF3Bc34771C4E5E",
    "desc": "Call when qualifying a short company website list. Processes 2-5 URL slots for one fixed payment and returns e",
-   "cors": true
+   "cors": true,
+   "example": {
+    "urls": [
+     "https://example.com/",
+     "https://example.org/"
+    ]
+   },
+   "status402": true
   }
- ]
-}</script><script src="/findbuyagent/budget.js" defer></script><script src="/findbuyagent/app.js" defer></script></body></html>
+ ],
+ "examplesAt": "2026-11-02T04:16:01.877Z"
+}
+</script><script src="/findbuyagent/qr.js" defer></script><script src="/findbuyagent/budget.js" defer></script><script src="/findbuyagent/app.js" defer></script></body></html>

@@ -389,7 +389,7 @@ P.protocols = () => {
 P.compare = () => { const b = $('#nc'); b?.addEventListener('click', () => { const on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', on); $$('tr[data-nc]').forEach((r) => r.classList.toggle('hidden', on && r.dataset.nc !== '1')); }); };
 P.shop = () => window.FBAShop?.(api);
 P.budget = () => window.FBABudget?.(api);
-const api = { $, $$, esc, h, store, toast, sheet, closeSheet, usd, ago, B, W, connect, fmtU, short, on, emit };
+const api = { $, $$, esc, h, store, toast, sheet, closeSheet, usd, ago, B, W, connect, switchBase, fmtU, short, on, emit };
 window.FBA = api;
 (P[page] || (() => {}))();
 })();
