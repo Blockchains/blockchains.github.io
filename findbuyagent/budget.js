@@ -5,9 +5,7 @@ window.FBABudget = (F) => {
   const RUNNER = 'Blockchains/findbuyagent-runner', GH = `https://github.com/${RUNNER}`;
   const USDC = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', LOGRPC = 'https://base-rpc.publicnode.com', RPC = 'https://mainnet.base.org';
   const TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
-  const SELL = JSON.parse($('#sellers')?.textContent || '{"sellers":[]}').sellers;
-  const CATS = { image: 'Image generation', leads: 'Leads and business data' };
-  const D = { total: 5, per: 0.05, daily: 1, days: 7, cats: ['image', 'leads'], sweepTo: '' };
+  const D = { total: 5, per: 0.05, daily: 1, days: 7, sweepTo: '' };
   const cfg = () => ({ ...D, ...store.get('burner.cfg', {}) }), setCfg = (c) => store.set('burner.cfg', c);
   const isAddr = (a) => /^0x[0-9a-fA-F]{40}$/.test(a || '');
   const px = (n) => (n > 0 && n < 0.1) ? '$' + (+n).toFixed(3).replace(/0$/, '') : usd(n);
@@ -22,30 +20,44 @@ window.FBABudget = (F) => {
   }
   const B = () => store.get('burner', null);
 
+  /* ---------- vault key: X25519 secret = sha256(wallet signature of a fixed message). Never stored; derived again on each sign-in. ---------- */
+  const VMSG = (a) => `FindBuyAgent vault v1\n\nWallet: ${a.toLowerCase()}\n\nSigning creates the key that unlocks your purchase receipts. It does not move funds or approve anything.`;
+  const hex = (u8) => [...u8].map((x) => x.toString(16).padStart(2, '0')).join('');
+  async function vaultKey() {
+    if (!W.addr && !(await connect())) return null;
+    const code = await rpc(RPC, 'eth_getCode', [W.addr, 'latest']).catch(() => '0x');
+    if (code && code !== '0x') { toast('This is a smart-contract wallet. Its signatures change each time, so it cannot hold a vault key. Use MetaMask, Rabby or Coinbase Wallet (extension or app), or rely on email receipts.'); return null; }
+    const msg = VMSG(W.addr), data = '0x' + hex(new TextEncoder().encode(msg));
+    const sig = await W.p.request({ method: 'personal_sign', params: [data, W.addr] });
+    const seed = new Uint8Array(await crypto.subtle.digest('SHA-256', Uint8Array.from(sig.slice(2).match(/../g).map((x) => parseInt(x, 16)))));
+    const kp = window.nacl.box.keyPair.fromSecretKey(seed);
+    store.set('vault.pub.' + W.addr.toLowerCase(), hex(kp.publicKey));
+    return { owner: W.addr.toLowerCase(), pub: hex(kp.publicKey), secret: kp.secretKey };
+  }
+
   /* ---------- 1. rules ---------- */
   function drawSetup() {
-    const c = cfg(), n = SELL.filter((s) => c.cats.includes(s.cat) && s.usd <= c.per).length;
+    const c = cfg();
     $('#bsetup').innerHTML = `<div class="stack">
       ${num('total', 'Total budget', 1, 100, 1, c.total, 'Hard cap $100. Deposit no more than this.')}
-      ${num('per', 'Per purchase', 0.005, Math.min(25, c.total), 0.005, Math.min(c.per, c.total))}
+      ${num('per', 'Per purchase', 0.001, Math.min(25, c.total), 0.001, Math.min(c.per, c.total))}
       ${num('daily', 'Per day', 0.01, c.total, 0.01, Math.min(c.daily, c.total))}
       <div><label class="f" for="b-days">Ends after</label><select id="b-days">${[1, 7, 30].map((d) => `<option value="${d}"${d === c.days ? ' selected' : ''}>${d} day${d > 1 ? 's' : ''}</option>`).join('')}</select></div>
-      <fieldset style="border:0;padding:0;margin:0"><legend class="f">What it may buy</legend><div class="chips">${Object.entries(CATS).map(([k, l]) => `<label class="chip"><input type="checkbox" data-cat="${k}"${c.cats.includes(k) ? ' checked' : ''}> ${l}</label>`).join('')}</div>
-      <p class="small muted">${n} allowlisted seller${n === 1 ? '' : 's'} fit these rules. No other address can be paid.</p></fieldset>
-      <div><label class="f" for="b-to">Return leftovers to (your own Base address)</label><div class="row"><input id="b-to" class="mono" autocomplete="off" spellcheck="false" value="${esc(c.sweepTo)}" placeholder="0x…" style="flex:1"><button class="btn sec sm" type="button" id="b-me">Use my wallet</button></div></div>
-      <div class="notice" role="note"><strong>High risk: the burner's money is exposed.</strong> The burner is a hot wallet whose key lives inside GitHub Actions runs. It signs and pays sellers without asking you, up to ${px(c.per)} each, ${usd(c.daily)} a day and ${usd(c.total)} in total, until it ends after ${c.days} day${c.days > 1 ? 's' : ''}. On-chain payments are final. Deposit only what you can afford to lose.</div>
-      <button class="btn pri lg block" type="button" id="b-open">Create burner wallet on GitHub</button>
-      <p class="small muted" style="margin:0">Opens a prefilled issue in the private <a href="${GH}" rel="noopener">${RUNNER}</a> repo. You must be signed in to GitHub as its owner. The runner replies within a few minutes with the burner address and a link back here.</p></div>`;
-    $$('#bsetup input[type=number]').forEach((r) => r.onchange = () => { const k = r.dataset.k, v = Math.max(+r.min, Math.min(+r.max, +r.value || 0)); const x = { ...cfg(), [k]: v }; if (k === 'total') { x.per = Math.min(x.per, v); x.daily = Math.min(x.daily, v); } setCfg(x); drawSetup(); drawBuy(); });
+      <div><label class="f" for="b-to">Return leftovers to</label><input id="b-to" class="mono" autocomplete="off" spellcheck="false" value="${esc(c.sweepTo)}" placeholder="Your connected wallet"><p class="small muted" style="margin:4px 0 0">Leave empty to use the wallet you connect.</p></div>
+      <div class="notice" role="note"><strong>High risk: the burner's money is exposed.</strong> The burner is a hot wallet whose key lives inside GitHub Actions runs. It finds and pays any live x402 seller on Base without asking you, up to ${px(c.per)} each, ${usd(c.daily)} a day and ${usd(c.total)} in total, until it ends after ${c.days} day${c.days > 1 ? 's' : ''}. Sellers are not vetted by anyone. On-chain payments are final. Deposit only what you can afford to lose.</div>
+      <button class="btn pri lg block" type="button" id="b-open">Connect wallet and create burner</button>
+      <p class="small muted" style="margin:0">Your wallet signs one message (no funds move) to make the key that locks your receipts, then a prefilled issue opens in the private <a href="${GH}" rel="noopener">${RUNNER}</a> repo. Submit it while signed in to GitHub as the owner. The runner replies within a few minutes with your burner and a link back here.</p></div>`;
+    $$('#bsetup input[type=number]').forEach((r) => r.onchange = () => { const k = r.dataset.k, v = Math.max(+r.min, Math.min(+r.max, +r.value || 0)); const x = { ...cfg(), [k]: v }; if (k === 'total') { x.per = Math.min(x.per, v); x.daily = Math.min(x.daily, v); } setCfg(x); drawSetup(); });
     $('#b-days').onchange = (e) => { setCfg({ ...cfg(), days: +e.target.value }); drawSetup(); };
-    $$('[data-cat]').forEach((x) => x.onchange = () => { setCfg({ ...cfg(), cats: $$('[data-cat]').filter((y) => y.checked).map((y) => y.dataset.cat) }); drawSetup(); drawBuy(); });
     $('#b-to').onchange = (e) => setCfg({ ...cfg(), sweepTo: e.target.value.trim() });
-    $('#b-me').onclick = async () => { if (!W.addr && !(await connect())) return; setCfg({ ...cfg(), sweepTo: W.addr }); drawSetup(); };
-    $('#b-open').onclick = () => {
-      const c = cfg();
-      if (!isAddr(c.sweepTo)) return toast('Enter your own Base address for leftovers first.');
-      if (!c.cats.length) return toast('Pick at least one thing it may buy.');
-      window.open(issueURL(`Budget: ${usd(c.total)} for ${c.days} day${c.days > 1 ? 's' : ''}`, 'fba-open', { total: c.total, per: c.per, daily: c.daily, days: c.days, cats: c.cats, sweepTo: c.sweepTo }, 'Burner budget rules. Press Submit new issue; the runner replies with the burner address.'), '_blank', 'noopener');
+    $('#b-open').onclick = async () => {
+      const c = cfg(); if (c.sweepTo && !isAddr(c.sweepTo)) return toast('The return address must be a Base address (0x…).');
+      const w = window.open('', '_blank'); // opened on the tap so pop-up blockers allow it
+      let v; try { v = await vaultKey(); } catch (e) { v = null; toast(e?.code === 4001 ? 'Signature cancelled.' : 'Your wallet could not sign.'); }
+      if (!v) { w?.close(); return; }
+      const sweepTo = c.sweepTo || W.addr; setCfg({ ...c, sweepTo });
+      const url = issueURL(`Budget: ${usd(c.total)} for ${c.days} day${c.days > 1 ? 's' : ''}`, 'fba-open', { total: c.total, per: c.per, daily: c.daily, days: c.days, sweepTo, vault: { owner: v.owner, pub: v.pub } }, 'Burner budget rules. Press Submit new issue; the runner replies with the burner address.');
+      if (w) w.location = url; else location.href = url;
     };
   }
   const num = (k, l, mn, mx, st, v, hint = '') => `<div><label class="f" for="b-${k}">${l} (USDC)</label><input id="b-${k}" data-k="${k}" type="number" inputmode="decimal" min="${mn}" max="${mx}" step="${st}" value="${v}">${hint ? `<p class="small muted" style="margin:4px 0 0">${hint}</p>` : ''}</div>`;
@@ -90,23 +102,23 @@ window.FBABudget = (F) => {
     } catch (e) { toast(e?.code === 4001 ? 'Deposit cancelled. Nothing was sent.' : 'The deposit did not go through. Nothing was sent.'); }
   }
 
-  /* ---------- 3. requests ---------- */
+  /* ---------- 3. requests: free text; the runner searches every live x402 seller ---------- */
+  const IDEAS = ['AI image generation API keys', 'A product photo of a ceramic mug on oak', 'Leads: new businesses in Chicago', 'Weather forecast for London'];
   function drawBuy() {
     const b = B(), el = $('#bbuy'); if (!b) { el.innerHTML = '<p class="muted small">Available once you have a burner.</p>'; return; }
-    const list = SELL.filter((s) => s.usd <= b.per).sort((x, y) => x.usd - y.usd);
-    el.innerHTML = list.length ? `<div class="stack"><div><label class="f" for="b-sel">Seller (allowlisted, within your per-purchase cap)</label><select id="b-sel">${list.map((s, i) => `<option value="${i}">${esc(CATS[s.cat])} · ${esc(s.host)} · ${px(s.usd)}</option>`).join('')}</select><p class="small muted" id="b-desc"></p></div>
-      <div><label class="f" for="b-item">What it's for</label><input id="b-item" placeholder="Product photo for my shop"></div>
-      <div><label class="f" for="b-in">Input sent to the seller (JSON)</label><textarea id="b-in" class="mono small" rows="6" spellcheck="false"></textarea><p class="small muted" id="b-inh"></p></div>
-      <button class="btn pri block" type="button" id="b-req">Submit request on GitHub</button>
-      <p class="small muted" style="margin:0">The runner checks the seller, its pay-to address and your caps before signing anything. Requests wait until the burner holds USDC.</p></div>`
-      : `<p class="muted small">No allowlisted seller costs ${px(b.per)} or less.</p>`;
-    if (!list.length) return;
-    const pick = () => { const s = list[+$('#b-sel').value]; $('#b-desc').textContent = s.desc; $('#b-in').value = JSON.stringify(s.example || {}, null, 1); $('#b-inh').textContent = s.example ? `Prefilled with ${s.host}'s own example. Edit it to what you want.` : `${s.host} publishes no example input. Check its docs before sending.`; };
-    $('#b-sel').onchange = pick; pick();
+    el.innerHTML = `<div class="stack"><div><label class="f" for="b-want">What should it buy?</label><textarea id="b-want" rows="3" placeholder="Buy me AI image generation API keys"></textarea>
+      <div class="chips" style="margin-top:8px">${IDEAS.map((x) => `<button class="chip" type="button" data-idea="${esc(x)}">${esc(x)}</button>`).join('')}</div></div>
+      <details><summary class="small">I have a specific seller</summary><div class="stack" style="margin-top:8px"><div><label class="f" for="b-url">Seller URL (x402)</label><input id="b-url" class="mono" placeholder="https://…" inputmode="url"></div>
+      <div><label class="f" for="b-in">Input JSON (optional)</label><textarea id="b-in" class="mono small" rows="4" spellcheck="false" placeholder='{"prompt": "…"}'></textarea></div></div></details>
+      <button class="btn pri block" type="button" id="b-req">Ask the agent to buy it</button>
+      <p class="small muted" style="margin:0">The runner searches the Coinbase x402 Bazaar, re-checks the best few live, and buys the best fit at or under ${px(b.per)}. It only signs the exact price the seller quotes, in USDC on Base, to the address in that quote, and records why it chose it. Requests wait until the burner holds USDC.</p></div>`;
+    $$('[data-idea]').forEach((c) => c.onclick = () => { $('#b-want').value = c.dataset.idea; $('#b-want').focus(); });
     $('#b-req').onclick = () => {
-      const s = list[+$('#b-sel').value]; let input; try { input = JSON.parse($('#b-in').value || '{}'); } catch { return toast('The input is not valid JSON.'); }
-      const item = $('#b-item').value.trim() || s.desc.slice(0, 60);
-      window.open(issueURL(`Buy: ${item.slice(0, 60)}`, 'fba-request', { budget: +b.id, item, seller: s.url, input }, `Purchase request for burner ${b.id}, up to ${px(b.per)}.`), '_blank', 'noopener');
+      const want = $('#b-want').value.trim(), url = $('#b-url').value.trim(); let input;
+      if (!want && !url) return toast('Say what to buy.');
+      if (url && !/^https:\/\//.test(url)) return toast('The seller URL must start with https://');
+      if ($('#b-in').value.trim()) { try { input = JSON.parse($('#b-in').value); } catch { return toast('The input is not valid JSON.'); } }
+      window.open(issueURL(`Buy: ${(want || url).slice(0, 60)}`, 'fba-request', { budget: +b.id, want: want || undefined, url: url || undefined, input }, `Purchase request for burner ${b.id}, up to ${px(b.per)}.`), '_blank', 'noopener');
     };
   }
 
@@ -115,32 +127,61 @@ window.FBABudget = (F) => {
     const b = B(), el = $('#bledger'); if (!b) { el.innerHTML = '<p class="muted small">No burner yet.</p>'; return; }
     el.innerHTML = '<p class="small muted">Reading Base…</p>';
     try {
-      const t = await transfers(b), me = b.address.toLowerCase(), who = (a) => SELL.find((s) => s.payTo.toLowerCase() === a)?.host || (a === b.sweepTo.toLowerCase() ? 'Returned to you' : a.slice(0, 8) + '…');
+      const t = await transfers(b), me = b.address.toLowerCase(), who = (a) => a === b.sweepTo.toLowerCase() ? 'Returned to you' : 'Paid ' + a.slice(0, 8) + '…';
       const inn = t.filter((x) => x.to === me).reduce((s, x) => s + x.usd, 0), out = t.filter((x) => x.from === me && x.to !== b.sweepTo.toLowerCase()).reduce((s, x) => s + x.usd, 0);
       el.innerHTML = `<div class="row wrapf"><span>Deposited <strong class="num">${px(inn)}</strong></span><span>Spent <strong class="num">${px(out)}</strong> of ${usd(b.total)}</span></div>
         <div class="list" style="margin-top:12px">${t.map((x) => `<div><span style="flex:1"><strong>${x.to === me ? 'Deposit' : esc(who(x.to))}</strong><br><span class="small muted">block ${x.block}</span></span><span class="num">${x.to === me ? '+' : '−'}${px(x.usd)}</span><a class="small" href="https://basescan.org/tx/${esc(x.tx)}" target="_blank" rel="noopener">Basescan</a></div>`).join('') || '<div class="small muted">No USDC has moved yet.</div>'}</div>`;
     } catch { el.innerHTML = `<p class="small muted">Couldn't read Base right now. <a href="https://basescan.org/address/${esc(b.address)}#tokentxns" target="_blank" rel="noopener">See it on Basescan</a>.</p>`; }
   }
 
-  /* ---------- 5. deliveries: receipts stay private; a receipt file opens here, raw output hidden until you tap Reveal ---------- */
+  /* ---------- 5. My purchases: encrypted receipts, unlocked by the wallet that funded and owns the burner ---------- */
+  const VAULT = 'https://raw.githubusercontent.com/Blockchains/findbuyagent-vault/main/v/';
+  const KEYRX = /(?:api[_-]?key|secret|token|access[_-]?key|password|bearer|private[_-]?key|x-api-key)["'\s:=]+([A-Za-z0-9_\-.]{12,})|\b(sk-[A-Za-z0-9_\-]{16,}|gh[pousr]_[A-Za-z0-9]{20,}|xox[abp]-[A-Za-z0-9-]{10,}|AKIA[0-9A-Z]{16})\b/gi;
+  const b64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
   function drawDeliv() {
-    const b = B();
-    $('#bdeliv').innerHTML = `<p class="small">Each purchase writes a receipt with the full raw output and how to use the service, emailed to you and kept in <a href="${GH}/tree/main/receipts${b ? '/' + esc(b.id) : ''}" rel="noopener">the private repo</a>. Download a receipt <span class="mono">.json</span> and open it here.</p>
-      <label class="btn sec sm" style="display:inline-flex"><input type="file" id="b-file" accept="application/json,.json" style="display:none">Open a receipt</label><div id="b-rcpt" class="stack" style="margin-top:12px"></div>`;
-    $('#b-file').onchange = async (e) => { const f = e.target.files[0]; if (!f) return; try { showReceipt(JSON.parse(await f.text())); } catch { toast('That file is not a receipt.'); } };
+    $('#bdeliv').innerHTML = `<p class="small">Every purchase's full raw data, any keys it delivered, and how to use what you bought. Stored only encrypted; your wallet unlocks it here. ${'Email copies arrive too when email is set up.'}</p>
+      <button class="btn pri block" type="button" id="b-vault">Sign in with wallet</button><div id="b-rcpt" class="stack" style="margin-top:12px" aria-live="polite"></div>
+      <details style="margin-top:8px"><summary class="small">Open a receipt file instead</summary><label class="btn ghost sm" style="display:inline-flex;margin-top:8px"><input type="file" id="b-file" accept="application/json,.json" style="display:none">Choose .json</label></details>`;
+    $('#b-vault').onclick = signIn;
+    $('#b-file').onchange = async (e) => { const f = e.target.files[0]; if (!f) return; try { $('#b-rcpt').innerHTML = ''; showReceipt(JSON.parse(await f.text())); } catch { toast('That file is not a receipt.'); } };
+  }
+  async function signIn() {
+    const out = $('#b-rcpt'); if (!W.addr && !(await connect())) return;
+    const me = W.addr.toLowerCase(); out.innerHTML = '<p class="small muted">Looking for your receipts…</p>';
+    let idx; try { const r = await fetch(`${VAULT}${me}/index.json?t=${Date.now()}`, { cache: 'no-store' }); idx = r.ok ? await r.json() : null; } catch { idx = null; }
+    if (!idx?.items?.length) { const b = B(); out.innerHTML = `<p class="small">No receipts are locked to <span class="mono">${esc(me.slice(0, 8))}…${esc(me.slice(-4))}</span> yet.${b ? ' Purchases appear here a minute or two after the runner buys.' : ''} If you created the burner with another wallet, connect that one.</p>`; return; }
+    let k; try { k = await vaultKey(); } catch (e) { out.innerHTML = `<p class="small">${e?.code === 4001 ? 'Signature cancelled. Nothing was unlocked.' : 'Your wallet could not sign.'}</p>`; return; }
+    if (!k) { out.innerHTML = ''; return; }
+    out.innerHTML = `<p class="small muted">${idx.items.length} receipt${idx.items.length > 1 ? 's' : ''}. Unlocking…</p>`; let bad = 0; const got = [];
+    for (const it of [...idx.items].reverse()) {
+      try { const e = await (await fetch(VAULT + me + '/' + encodeURIComponent(it.file), { cache: 'no-store' })).json();
+        const pt = window.nacl.box.open(b64(e.ct), b64(e.nonce), b64(e.epk), k.secret); if (!pt) { bad++; continue; } got.push(JSON.parse(new TextDecoder().decode(pt))); } catch { bad++; }
+    }
+    k.secret.fill(0); out.innerHTML = '';
+    if (!got.length) { out.innerHTML = '<p class="small">These receipts would not unlock with this wallet\'s signature. That happens if the wallet signs differently each time (smart wallets) or a different wallet created the burner.</p>'; return; }
+    got.forEach(showReceipt); if (bad) out.insertAdjacentHTML('beforeend', `<p class="small muted">${bad} receipt${bad > 1 ? 's' : ''} could not be unlocked.</p>`);
+    out.insertAdjacentHTML('afterbegin', `<div class="row between"><span class="small">Unlocked ${got.length} for this visit only.</span><button class="btn ghost sm" type="button" id="b-lock">Lock</button></div>`); $('#b-lock').onclick = drawDeliv;
   }
   function showReceipt(r) {
     const raw = r.raw?.response?.body || r.raw?.quote?.body || {}, u = r.usage || {};
-    const rawText = raw.text ?? (raw.base64 ? `(binary ${raw.contentType}, ${raw.bytes} bytes; see the attached file)` : '');
-    $('#b-rcpt').innerHTML = `<article class="card"><div class="row between wrapf"><strong>${esc(r.item)}</strong><span class="num">${r.spent ? px(r.usd) : 'not paid'}</span></div>
-      <p class="small muted">${esc(r.host)} · ${esc(r.at)}${r.tx ? ` · <a href="https://basescan.org/tx/${esc(r.tx)}" target="_blank" rel="noopener">Basescan</a>` : ''}</p>${r.error ? `<p class="small">${esc(r.error)}</p>` : ''}
-      <p class="f">Delivered output</p><pre class="code small" id="b-raw" data-hidden="1">•••• hidden. It can contain keys or private data.</pre>
-      <div class="row"><button class="btn sec sm" type="button" id="b-rv">Reveal</button><button class="btn ghost sm" type="button" id="b-cp">Copy</button></div>
+    const rawText = raw.text ?? '', img = raw.base64 && /^image\//.test(raw.contentType || '') ? `data:${raw.contentType.split(';')[0]};base64,${raw.base64}` : null;
+    const keys = [...new Set([...rawText.matchAll(KEYRX)].map((m) => m[1] || m[2]))].slice(0, 10);
+    const card = document.createElement('article'); card.className = 'card';
+    card.innerHTML = `<div class="row between wrapf"><strong>${esc(r.want || r.item)}</strong><span class="num">${r.spent ? px(r.usd) : 'not paid'}</span></div>
+      <p class="small muted">${esc(r.host)} · ${esc(new Date(r.at).toLocaleString())}${r.tx ? ` · <a href="https://basescan.org/tx/${esc(r.tx)}" target="_blank" rel="noopener">Basescan</a>` : ''}</p>${r.error ? `<p class="small">${esc(r.error)}</p>` : ''}${r.why ? `<p class="small muted">Why this seller: ${esc(r.why)}</p>` : ''}
+      ${keys.length ? `<p class="f">Keys and tokens found</p>${keys.map((x, i) => `<div class="row"><code class="mono small" data-key="${i}" style="flex:1;word-break:break-all">••••••••${esc(x.slice(-4))}</code><button class="btn sec sm" type="button" data-kr="${i}">Reveal</button><button class="btn ghost sm" type="button" data-kc="${i}">Copy</button></div>`).join('')}` : ''}
+      <p class="f">Delivered data</p>${img ? '<div data-img hidden></div>' : ''}<pre class="code small" data-raw style="max-height:320px;overflow:auto">•••• hidden. It can contain keys or private data.</pre>
+      <div class="row"><button class="btn sec sm" type="button" data-rv>Reveal</button><button class="btn ghost sm" type="button" data-cp>Copy</button><button class="btn ghost sm" type="button" data-dl>Download</button></div>
       <details style="margin-top:12px"><summary>How to use this service</summary><dl class="kv"><dt>Endpoint</dt><dd class="mono small">${esc(u.endpoint?.method)} ${esc(u.endpoint?.url)}</dd><dt>Payment</dt><dd class="small">${esc(u.payment?.protocol)} · ${esc(u.payment?.network)} · ${u.payment?.priceUsd != null ? px(u.payment.priceUsd) : ''} · pay to <span class="mono">${esc(u.payment?.payTo)}</span></dd></dl>
-      <p class="small">${esc(u.payment?.howTo || '')}</p>${u.exampleInput ? `<p class="f">Seller's example input</p><pre class="code small">${esc(JSON.stringify(u.exampleInput, null, 1))}</pre>` : ''}
-      <p class="f">curl</p><pre class="code small">${esc(u.examples?.curlUnpaid || '')}</pre><p class="small muted">Sources: ${(u.sources || []).map(esc).join(', ')}</p></details></article>`;
-    $('#b-rv').onclick = () => { const p = $('#b-raw'); const h = p.dataset.hidden === '1'; p.textContent = h ? rawText.slice(0, 50000) : '•••• hidden. It can contain keys or private data.'; p.dataset.hidden = h ? '0' : '1'; $('#b-rv').textContent = h ? 'Hide' : 'Reveal'; };
-    $('#b-cp').onclick = async () => { await navigator.clipboard.writeText(rawText); toast('Copied'); };
+      <p class="small">${esc(u.description || '')}</p><p class="small">${esc(u.payment?.howTo || '')}</p>${u.exampleInput ? `<p class="f">Seller's example input</p><pre class="code small">${esc(JSON.stringify(u.exampleInput, null, 1))}</pre>` : ''}
+      <p class="f">curl</p><pre class="code small">${esc(u.examples?.curlUnpaid || '')}</pre>${(u.docs || []).map((d) => `<details><summary class="small">${esc(d.source)}</summary><pre class="code small" style="max-height:240px;overflow:auto">${esc(d.text)}</pre></details>`).join('')}<p class="small muted">Sources: ${(u.sources || []).map(esc).join(', ')}</p></details>`;
+    $('#b-rcpt').appendChild(card);
+    $$('[data-kr]', card).forEach((bt) => bt.onclick = () => { const c = $(`[data-key="${bt.dataset.kr}"]`, card), x = keys[+bt.dataset.kr], h = bt.textContent === 'Reveal'; c.textContent = h ? x : '••••••••' + x.slice(-4); bt.textContent = h ? 'Hide' : 'Reveal'; });
+    $$('[data-kc]', card).forEach((bt) => bt.onclick = async () => { await navigator.clipboard.writeText(keys[+bt.dataset.kc]); toast('Copied'); });
+    $('[data-rv]', card).onclick = (e) => { const p = $('[data-raw]', card), h = e.target.textContent === 'Reveal'; p.textContent = h ? (rawText || (raw.base64 ? `${raw.contentType}, ${raw.bytes} bytes` : '(empty)')).slice(0, 100000) : '•••• hidden. It can contain keys or private data.'; e.target.textContent = h ? 'Hide' : 'Reveal';
+      const im = $('[data-img]', card); if (im) { im.hidden = !h; im.innerHTML = h ? `<img src="${img}" alt="Delivered image" style="max-width:100%;border-radius:8px">` : ''; } };
+    $('[data-cp]', card).onclick = async () => { await navigator.clipboard.writeText(rawText || JSON.stringify(r.raw)); toast('Copied'); };
+    $('[data-dl]', card).onclick = () => { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(r, null, 1)], { type: 'application/json' })); a.download = `receipt-${r.budget}-${r.request}.json`; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000); };
   }
 
   /* ---------- 6. close + sweep ---------- */
