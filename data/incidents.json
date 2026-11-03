@@ -1,14 +1,54 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-02T12:43:38Z",
+ "generated_at": "2026-11-03T12:09:53Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27558463967.12813,
- "ytd_usd": 8610112118.128132,
+ "total_all_time_usd": 27598463967.12813,
+ "ytd_usd": 8647786118.128132,
  "incidents": [
+  {
+   "date": "2026-11-02",
+   "name": "Mercado Bitcoin",
+   "amount_usd": 40000000,
+   "chains": [
+    "Bitcoin",
+    "Ethereum",
+    "Solana",
+    "TRON",
+    "Polygon",
+    "Arbitrum",
+    "Avalanche",
+    "BSC",
+    "Stellar",
+    "XDC"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "CEX",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-11-01",
+   "name": "BTCPay Server",
+   "amount_usd": null,
+   "chains": [
+    "Bitcoin",
+    "Litecoin"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Key Leaked via Infrastructure",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
   {
    "date": "2026-11-01",
    "name": "Premia V3",
@@ -4544,38 +4584,6 @@
    ],
    "classification": "Token & Share Accounting",
    "technique": "Donation Attack",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-02",
-   "name": "FOOM Cash",
-   "amount_usd": 2260000,
-   "chains": [
-    "Ethereum",
-    "Base"
-   ],
-   "classification": "Bridge & Cross-Chain",
-   "technique": "Forged Proof",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-02-28",
-   "name": "Wise Lending V2",
-   "amount_usd": 66000,
-   "chains": [
-    "Arbitrum",
-    "Ethereum"
-   ],
-   "classification": "Access Control",
-   "technique": "Improper Access Control",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

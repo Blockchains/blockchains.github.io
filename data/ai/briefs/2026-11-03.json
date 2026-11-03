@@ -1,0 +1,60 @@
+{
+ "headline": "Crypto TVL, DEX volumes and stablecoin data: 3 November 2026",
+ "summary": "Ethereum leads TVL at $43.6bn followed by Base at $5.89bn and Solana at $5.39bn. Uniswap V4 recorded the highest 24h DEX volume at $982m while Tether generated the top fees at $16.8m. USDT and USDC dominate stablecoin supply with several smaller pegged assets showing deviations. Multiple security incidents occurred in the prior fortnight including a $6.36bn Binance event.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum: $43.64bn TVL (rank 1)",
+    "Base: $5.89bn TVL (rank 2)",
+    "Solana: $5.39bn TVL (rank 3)",
+    "BSC: $5.16bn TVL (rank 4)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V4: $982m 24h volume (rank 1)",
+    "Uniswap V3: $859m 24h volume (rank 2)",
+    "Tether: $16.8m 24h fees (rank 1)",
+    "Circle USDC: $6.73m 24h fees (rank 2)"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT: $178.8bn circulating",
+    "USDC: $71.1bn circulating",
+    "USDS: $6.5bn circulating",
+    "Multiple assets on watch for peg deviation including USDf and apxUSD"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base: $14.41bn TVS (Stage 1)",
+    "Arbitrum One: $9.37bn TVS (Stage 1)",
+    "Hyperliquid: $6.32bn TVS (layer 3)",
+    "Polygon PoS: $3.80bn TVS"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "14 incidents recorded in last 14 days",
+    "Binance CEX: $6.36bn loss (29 Oct)",
+    "Mercado Bitcoin: $40m loss (2 Nov)",
+    "Several depeg alerts active for stablecoins"
+   ]
+  }
+ ],
+ "watchlist": [
+  "Stablecoin peg deviations (USDf, apxUSD, AP USDA)",
+  "Recent CEX and DeFi incidents",
+  "L2 TVS changes on Base and Arbitrum",
+  "DEX volume shifts on Uniswap and PumpSwap"
+ ],
+ "date": "2026-11-03",
+ "model": "grok-4.3",
+ "tokens": 13432
+}

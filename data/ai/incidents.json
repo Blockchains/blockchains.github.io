@@ -1,16 +1,50 @@
 {
  "service": "ai/incidents",
  "description": "AI incident explainer",
- "generated_at": "2026-11-02T12:44:26Z",
+ "generated_at": "2026-11-03T12:10:41Z",
  "source": "Grok (xAI) over public data: DefiLlama hacks",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "items": [
   {
+   "name": "Mercado Bitcoin",
+   "date": "2026-11-02",
+   "plain_english": "This Protocol Logic incident used Unknown technique. It resulted in a 40000000 USD loss.",
+   "lesson_for_builders": "Audit all protocol logic paths even when technique is unknown.",
+   "related_lab": null,
+   "amount_usd": 40000000,
+   "source": "",
+   "chains": [
+    "Bitcoin",
+    "Ethereum",
+    "Solana",
+    "TRON",
+    "Polygon",
+    "Arbitrum",
+    "Avalanche",
+    "BSC",
+    "Stellar",
+    "XDC"
+   ]
+  },
+  {
+   "name": "BTCPay Server",
+   "date": "2026-11-01",
+   "plain_english": "This Frontend & Infrastructure incident used Key Leaked via Infrastructure technique. No amount was reported.",
+   "lesson_for_builders": "Secure infrastructure to avoid key leaks in frontend components.",
+   "related_lab": null,
+   "amount_usd": null,
+   "source": "",
+   "chains": [
+    "Bitcoin",
+    "Litecoin"
+   ]
+  },
+  {
    "name": "Premia V3",
    "date": "2026-11-01",
-   "plain_english": "The incident was classified as Protocol Logic using Withdrawal Logic Flaw. It resulted in an amount of 437000 USD.",
-   "lesson_for_builders": "Builders must address Protocol Logic issues like Withdrawal Logic Flaw to avoid losses of 437000 USD.",
+   "plain_english": "This Protocol Logic incident used Withdrawal Logic Flaw technique. It resulted in a 437000 USD loss.",
+   "lesson_for_builders": "Verify withdrawal logic in protocol implementations.",
    "related_lab": null,
    "amount_usd": 437000,
    "source": "",
@@ -21,8 +55,8 @@
   {
    "name": "b14g",
    "date": "2026-10-31",
-   "plain_english": "The incident was classified as Protocol Logic using Unknown. No amount was reported.",
-   "lesson_for_builders": "Builders must address Protocol Logic issues like Unknown to avoid unreported losses.",
+   "plain_english": "This Protocol Logic incident used Unknown technique. No amount was reported.",
+   "lesson_for_builders": "Audit protocol logic paths when details are unknown.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -33,8 +67,8 @@
   {
    "name": "Troves",
    "date": "2026-10-31",
-   "plain_english": "The incident was classified as Access Control using Improper Access Control. It resulted in an amount of 666935 USD.",
-   "lesson_for_builders": "Builders must address Access Control issues like Improper Access Control to avoid losses of 666935 USD.",
+   "plain_english": "This Access Control incident used Improper Access Control technique. It resulted in a 666935 USD loss.",
+   "lesson_for_builders": "Enforce strict access control checks on all privileged functions.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": 666935,
    "source": "",
@@ -43,8 +77,8 @@
   {
    "name": "Polymarket International",
    "date": "2026-10-29",
-   "plain_english": "The incident was classified as Frontend & Infrastructure using Supply Chain Attack. It resulted in an amount of 2700000 USD.",
-   "lesson_for_builders": "Builders must address Frontend & Infrastructure issues like Supply Chain Attack to avoid losses of 2700000 USD.",
+   "plain_english": "This Frontend & Infrastructure incident used Supply Chain Attack technique. It resulted in a 2700000 USD loss.",
+   "lesson_for_builders": "Harden supply chain dependencies in frontend infrastructure.",
    "related_lab": null,
    "amount_usd": 2700000,
    "source": "",
@@ -55,8 +89,8 @@
   {
    "name": "Binance CEX",
    "date": "2026-10-29",
-   "plain_english": "The incident was classified as Frontend & Infrastructure using Key Leaked via Infrastructure. It resulted in an amount of 6360000000 USD.",
-   "lesson_for_builders": "Builders must address Frontend & Infrastructure issues like Key Leaked via Infrastructure to avoid losses of 6360000000 USD.",
+   "plain_english": "This Frontend & Infrastructure incident used Key Leaked via Infrastructure technique. It resulted in a 6360000000 USD loss.",
+   "lesson_for_builders": "Protect infrastructure keys to prevent large-scale leaks.",
    "related_lab": null,
    "amount_usd": 6360000000,
    "source": "",
@@ -73,8 +107,8 @@
   {
    "name": "zkLink Nova",
    "date": "2026-10-28",
-   "plain_english": "The incident was classified as Bridge & Cross-Chain using Cross-Chain Message Spoofing. It resulted in an amount of 783100 USD.",
-   "lesson_for_builders": "Builders must address Bridge & Cross-Chain issues like Cross-Chain Message Spoofing to avoid losses of 783100 USD.",
+   "plain_english": "This Bridge & Cross-Chain incident used Cross-Chain Message Spoofing technique. It resulted in a 783100 USD loss.",
+   "lesson_for_builders": "Validate cross-chain messages to block spoofing attacks.",
    "related_lab": "L43 CrossChainReplay",
    "amount_usd": 783100,
    "source": "",
@@ -85,8 +119,8 @@
   {
    "name": "Hifi Finance",
    "date": "2026-10-28",
-   "plain_english": "The incident was classified as Governance using Malicious Proposal. No amount was reported.",
-   "lesson_for_builders": "Builders must address Governance issues like Malicious Proposal to avoid unreported losses.",
+   "plain_english": "This Governance incident used Malicious Proposal technique. No amount was reported.",
+   "lesson_for_builders": "Implement safeguards against malicious governance proposals.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -97,9 +131,9 @@
   {
    "name": "Fence Finance",
    "date": "2026-10-27",
-   "plain_english": "The incident was classified as Token & Share Accounting using Incorrect Share Accounting. It resulted in an amount of 1010000 USD.",
-   "lesson_for_builders": "Builders must address Token & Share Accounting issues like Incorrect Share Accounting to avoid losses of 1010000 USD.",
-   "related_lab": "L28 InvariantVault",
+   "plain_english": "This Token & Share Accounting incident used Incorrect Share Accounting technique. It resulted in a 1010000 USD loss.",
+   "lesson_for_builders": "Test share accounting logic for correctness under all conditions.",
+   "related_lab": null,
    "amount_usd": 1010000,
    "source": "",
    "chains": [
@@ -109,8 +143,8 @@
   {
    "name": "Zilliqa X-Bridge",
    "date": "2026-10-27",
-   "plain_english": "The incident was classified as Key Compromise using Private Key Compromised. No amount was reported.",
-   "lesson_for_builders": "Builders must address Key Compromise issues like Private Key Compromised to avoid unreported losses.",
+   "plain_english": "This Key Compromise incident used Private Key Compromised technique. No amount was reported.",
+   "lesson_for_builders": "Secure private keys especially on bridge deployments.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -121,34 +155,10 @@
   {
    "name": "Predict Fun",
    "date": "2026-10-27",
-   "plain_english": "The incident was classified as Frontend & Infrastructure using Frontend Compromise. It resulted in an amount of 400000 USD.",
-   "lesson_for_builders": "Builders must address Frontend & Infrastructure issues like Frontend Compromise to avoid losses of 400000 USD.",
+   "plain_english": "This Frontend & Infrastructure incident used Frontend Compromise technique. It resulted in a 400000 USD loss.",
+   "lesson_for_builders": "Harden frontend components against compromise vectors.",
    "related_lab": null,
    "amount_usd": 400000,
-   "source": "",
-   "chains": [
-    "BSC"
-   ]
-  },
-  {
-   "name": "Bloom Trading Bot",
-   "date": "2026-10-26",
-   "plain_english": "The incident was classified as Frontend & Infrastructure using Supply Chain Attack. It resulted in an amount of 953000 USD.",
-   "lesson_for_builders": "Builders must address Frontend & Infrastructure issues like Supply Chain Attack to avoid losses of 953000 USD.",
-   "related_lab": null,
-   "amount_usd": 953000,
-   "source": "",
-   "chains": [
-    "Solana"
-   ]
-  },
-  {
-   "name": "Myriad Markets",
-   "date": "2026-10-26",
-   "plain_english": "The incident was classified as Frontend & Infrastructure using Key Leaked via Infrastructure. It resulted in an amount of 0 USD.",
-   "lesson_for_builders": "Builders must address Frontend & Infrastructure issues like Key Leaked via Infrastructure to avoid losses of 0 USD.",
-   "related_lab": null,
-   "amount_usd": 0,
    "source": "",
    "chains": [
     "BSC"
