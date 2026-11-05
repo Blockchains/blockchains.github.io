@@ -1,7 +1,7 @@
 {
  "service": "ai/incidents",
  "description": "AI incident explainer",
- "generated_at": "2026-11-04T12:23:21Z",
+ "generated_at": "2026-11-05T12:38:13Z",
  "source": "Grok (xAI) over public data: DefiLlama hacks",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
@@ -9,8 +9,8 @@
   {
    "name": "Mercado Bitcoin",
    "date": "2026-11-02",
-   "plain_english": "The classification was Protocol Logic and the technique was Unknown. The amount was 40000000 USD.",
-   "lesson_for_builders": "Review protocol logic even when technique is unknown to prevent large losses.",
+   "plain_english": "Protocol Logic classification with Unknown technique resulted in 40000000 USD loss. Target type was CEX.",
+   "lesson_for_builders": "Audit all protocol logic paths before deployment.",
    "related_lab": null,
    "amount_usd": 40000000,
    "source": "",
@@ -28,10 +28,24 @@
    ]
   },
   {
+   "name": "BitMart",
+   "date": "2026-11-02",
+   "plain_english": "Protocol Logic classification with Unknown technique resulted in 391000 USD loss. Target type was CEX.",
+   "lesson_for_builders": "Audit all protocol logic paths before deployment.",
+   "related_lab": null,
+   "amount_usd": 391000,
+   "source": "",
+   "chains": [
+    "Base",
+    "Arbitrum",
+    "Optimism"
+   ]
+  },
+  {
    "name": "BTCPay Server",
    "date": "2026-11-01",
-   "plain_english": "The classification was Frontend & Infrastructure and the technique was Key Leaked via Infrastructure. No amount was reported.",
-   "lesson_for_builders": "Secure infrastructure to avoid key leaks in wallet targets.",
+   "plain_english": "Frontend & Infrastructure classification with Key Leaked via Infrastructure technique resulted in null USD loss. Target type was Wallet.",
+   "lesson_for_builders": "Harden infrastructure key management practices.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -43,8 +57,8 @@
   {
    "name": "Premia V3",
    "date": "2026-11-01",
-   "plain_english": "The classification was Protocol Logic and the technique was Withdrawal Logic Flaw. The amount was 437000 USD.",
-   "lesson_for_builders": "Audit withdrawal logic in Solidity DeFi protocols.",
+   "plain_english": "Protocol Logic classification with Withdrawal Logic Flaw technique resulted in 437000 USD loss. Target type was DeFi Protocol.",
+   "lesson_for_builders": "Audit all protocol logic paths before deployment.",
    "related_lab": null,
    "amount_usd": 437000,
    "source": "",
@@ -55,8 +69,8 @@
   {
    "name": "b14g",
    "date": "2026-10-31",
-   "plain_english": "The classification was Protocol Logic and the technique was Unknown. No amount was reported.",
-   "lesson_for_builders": "Strengthen protocol logic checks on CORE chains.",
+   "plain_english": "Protocol Logic classification with Unknown technique resulted in null USD loss. Target type was DeFi Protocol.",
+   "lesson_for_builders": "Audit all protocol logic paths before deployment.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -67,8 +81,8 @@
   {
    "name": "Troves",
    "date": "2026-10-31",
-   "plain_english": "The classification was Access Control and the technique was Improper Access Control. The amount was 666935 USD.",
-   "lesson_for_builders": "Implement proper access control to avoid losses in DeFi protocols.",
+   "plain_english": "Access Control classification with Improper Access Control technique resulted in 666935 USD loss. Target type was DeFi Protocol.",
+   "lesson_for_builders": "Enforce strict access control checks on all privileged functions.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": 666935,
    "source": "",
@@ -77,8 +91,8 @@
   {
    "name": "Polymarket International",
    "date": "2026-10-29",
-   "plain_english": "The classification was Frontend & Infrastructure and the technique was Supply Chain Attack. The amount was 2700000 USD.",
-   "lesson_for_builders": "Harden frontend and supply chain in JavaScript prediction markets.",
+   "plain_english": "Frontend & Infrastructure classification with Supply Chain Attack technique resulted in 2700000 USD loss. Target type was Prediction Market.",
+   "lesson_for_builders": "Harden infrastructure key management practices.",
    "related_lab": null,
    "amount_usd": 2700000,
    "source": "",
@@ -89,8 +103,8 @@
   {
    "name": "Binance CEX",
    "date": "2026-10-29",
-   "plain_english": "The classification was Frontend & Infrastructure and the technique was Key Leaked via Infrastructure. The amount was 6360000000 USD.",
-   "lesson_for_builders": "Protect infrastructure keys on multiple chains to prevent massive CEX losses.",
+   "plain_english": "Frontend & Infrastructure classification with Key Leaked via Infrastructure technique resulted in 6360000000 USD loss. Target type was CEX.",
+   "lesson_for_builders": "Harden infrastructure key management practices.",
    "related_lab": null,
    "amount_usd": 6360000000,
    "source": "",
@@ -107,8 +121,8 @@
   {
    "name": "zkLink Nova",
    "date": "2026-10-28",
-   "plain_english": "The classification was Bridge & Cross-Chain and the technique was Cross-Chain Message Spoofing. The amount was 783100 USD.",
-   "lesson_for_builders": "Validate cross-chain messages in bridge Solidity code.",
+   "plain_english": "Bridge & Cross-Chain classification with Cross-Chain Message Spoofing technique resulted in 783100 USD loss. Target type was DeFi Protocol.",
+   "lesson_for_builders": "Validate all cross-chain messages against replay vectors.",
    "related_lab": "L43 CrossChainReplay",
    "amount_usd": 783100,
    "source": "",
@@ -119,8 +133,8 @@
   {
    "name": "Hifi Finance",
    "date": "2026-10-28",
-   "plain_english": "The classification was Governance and the technique was Malicious Proposal. No amount was reported.",
-   "lesson_for_builders": "Secure governance proposals in Solidity DeFi protocols.",
+   "plain_english": "Governance classification with Malicious Proposal technique resulted in null USD loss. Target type was DeFi Protocol.",
+   "lesson_for_builders": "Enforce strict access control checks on all privileged functions.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": null,
    "source": "",
@@ -131,9 +145,9 @@
   {
    "name": "Fence Finance",
    "date": "2026-10-27",
-   "plain_english": "The classification was Token & Share Accounting and the technique was Incorrect Share Accounting. The amount was 1010000 USD.",
-   "lesson_for_builders": "Verify share accounting logic in Avalanche Solidity contracts.",
-   "related_lab": null,
+   "plain_english": "Token & Share Accounting classification with Incorrect Share Accounting technique resulted in 1010000 USD loss. Target type was DeFi Protocol.",
+   "lesson_for_builders": "Verify share accounting invariants in all accounting modules.",
+   "related_lab": "L28 InvariantVault",
    "amount_usd": 1010000,
    "source": "",
    "chains": [
@@ -143,25 +157,13 @@
   {
    "name": "Zilliqa X-Bridge",
    "date": "2026-10-27",
-   "plain_english": "The classification was Key Compromise and the technique was Private Key Compromised. No amount was reported.",
-   "lesson_for_builders": "Protect private keys in bridge deployments.",
+   "plain_english": "Key Compromise classification with Private Key Compromised technique resulted in null USD loss. Target type was DeFi Protocol.",
+   "lesson_for_builders": "Harden infrastructure key management practices.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
    "chains": [
     "Zilliqa"
-   ]
-  },
-  {
-   "name": "Predict Fun",
-   "date": "2026-10-27",
-   "plain_english": "The classification was Frontend & Infrastructure and the technique was Frontend Compromise. The amount was 400000 USD.",
-   "lesson_for_builders": "Secure frontends on BSC prediction markets.",
-   "related_lab": null,
-   "amount_usd": 400000,
-   "source": "",
-   "chains": [
-    "BSC"
    ]
   }
  ],

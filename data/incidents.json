@@ -1,13 +1,13 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-04T12:22:40Z",
+ "generated_at": "2026-11-05T12:37:03Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27598463967.12813,
- "ytd_usd": 8647786118.128132,
+ "total_all_time_usd": 27598854967.12813,
+ "ytd_usd": 8647937118.128132,
  "incidents": [
   {
    "date": "2026-11-02",
@@ -24,6 +24,23 @@
     "BSC",
     "Stellar",
     "XDC"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "CEX",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-11-02",
+   "name": "BitMart",
+   "amount_usd": 391000,
+   "chains": [
+    "Base",
+    "Arbitrum",
+    "Optimism"
    ],
    "classification": "Protocol Logic",
    "technique": "Unknown",
@@ -4569,21 +4586,6 @@
    ],
    "classification": "Token & Share Accounting",
    "technique": "Infinite Mint",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-02",
-   "name": "Curve LlamaLend",
-   "amount_usd": 240000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Donation Attack",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
