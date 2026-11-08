@@ -1,14 +1,27 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-06T12:19:27Z",
+ "generated_at": "2026-11-08T11:25:13Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
  "total_all_time_usd": 27599404967.12813,
- "ytd_usd": 8645660118.128132,
+ "ytd_usd": 8645188118.128132,
  "incidents": [
+  {
+   "date": "2026-11-06",
+   "name": "Keplr Wallet (Web3Auth)",
+   "amount_usd": null,
+   "chains": [],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Supply Chain Attack",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
   {
    "date": "2026-11-05",
    "name": "TENDRIL",
@@ -374,6 +387,21 @@
    "returned_usd": null,
    "source": "",
    "language": null
+  },
+  {
+   "date": "2026-10-20",
+   "name": "GarudaDefi",
+   "amount_usd": null,
+   "chains": [
+    "Terra Classic"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Rust"
   },
   {
    "date": "2026-10-19",
@@ -4561,36 +4589,6 @@
    "returned_usd": null,
    "source": "",
    "language": null
-  },
-  {
-   "date": "2026-03-10",
-   "name": "Movie Token",
-   "amount_usd": 242000,
-   "chains": [
-    "BSC"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Incorrect Share Accounting",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-09",
-   "name": "Gondi V3",
-   "amount_usd": 230000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Access Control",
-   "technique": "Token Approval Abuse",
-   "target_type": "NFTfi",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
   }
  ]
 }

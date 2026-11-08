@@ -1,31 +1,41 @@
 {
  "service": "events",
  "description": "Web3 events & hackathons calendar",
- "generated_at": "2026-11-06T12:19:29Z",
+ "generated_at": "2026-11-08T11:25:15Z",
  "source": "ETHGlobal public events page",
  "source_url": "https://ethglobal.com/events",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
- "count": 3,
+ "count": 8,
  "events": [
   {
-   "name": "ETHGlobal Mumbai",
+   "name": "ETHGlobal Cannes 2027",
    "type": "hackathon",
    "medium": "physical",
-   "start": "2026-11-05T00:00:00.000Z",
-   "end": "2026-11-07T00:00:00.000Z",
-   "url": "https://ethglobal.com/events/mumbai",
+   "start": "2027-04-14T10:36:00.000Z",
+   "end": "2027-04-16T10:36:00.000Z",
+   "url": "https://ethglobal.com/events/cannes2027",
    "organiser": "ETHGlobal",
-   "uid": "ethglobal-527"
+   "uid": "ethglobal-772"
   },
   {
-   "name": "Pragma Mumbai",
+   "name": "Pragma Cannes 2027",
    "type": "summit",
    "medium": "physical",
-   "start": "2026-11-06T00:00:00.000Z",
-   "end": "2026-11-06T00:00:00.000Z",
-   "url": "https://ethglobal.com/events/pragma-mumbai",
+   "start": "2027-04-15T09:36:00.000Z",
+   "end": "2027-04-15T09:36:00.000Z",
+   "url": "https://ethglobal.com/events/pragma-cannes2027",
    "organiser": "ETHGlobal",
-   "uid": "ethglobal-530"
+   "uid": "ethglobal-774"
+  },
+  {
+   "name": "ETHGlobal New York 2027",
+   "type": "hackathon",
+   "medium": "physical",
+   "start": "2027-06-14T11:07:00.000Z",
+   "end": "2027-06-16T11:07:00.000Z",
+   "url": "https://ethglobal.com/events/newyork2027",
+   "organiser": "ETHGlobal",
+   "uid": "ethglobal-773"
   },
   {
    "name": "ETHConf 2027",
@@ -36,6 +46,46 @@
    "url": "https://ethglobal.com/events/ethconf2027",
    "organiser": "ETHGlobal",
    "uid": "ethglobal-712"
+  },
+  {
+   "name": "ETHGlobal Tokyo 2027",
+   "type": "hackathon",
+   "medium": "physical",
+   "start": "2027-08-23T10:19:00.000Z",
+   "end": "2027-08-25T10:19:00.000Z",
+   "url": "https://ethglobal.com/events/tokyo2027",
+   "organiser": "ETHGlobal",
+   "uid": "ethglobal-769"
+  },
+  {
+   "name": "Pragma Tokyo 2027",
+   "type": "summit",
+   "medium": "physical",
+   "start": "2027-08-24T09:40:00.000Z",
+   "end": "2027-08-24T09:40:00.000Z",
+   "url": "https://ethglobal.com/events/pragma-tokyo2027",
+   "organiser": "ETHGlobal",
+   "uid": "ethglobal-775"
+  },
+  {
+   "name": "ETHGlobal Lisbon 2027",
+   "type": "hackathon",
+   "medium": "physical",
+   "start": "2027-10-13T10:24:00.000Z",
+   "end": "2027-10-15T10:24:00.000Z",
+   "url": "https://ethglobal.com/events/lisbon2027",
+   "organiser": "ETHGlobal",
+   "uid": "ethglobal-770"
+  },
+  {
+   "name": "Pragma Lisbon 2027",
+   "type": "summit",
+   "medium": "physical",
+   "start": "2027-10-14T10:50:00.000Z",
+   "end": "2027-10-14T10:50:00.000Z",
+   "url": "https://ethglobal.com/events/pragma-lisbon2027",
+   "organiser": "ETHGlobal",
+   "uid": "ethglobal-776"
   }
  ],
  "ics": "https://blockchains.github.io/events/events.ics"

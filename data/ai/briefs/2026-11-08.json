@@ -1,0 +1,60 @@
+{
+ "headline": "Crypto Market Structure Brief: 8 Nov 2026",
+ "summary": "Ethereum holds the largest chain TVL at $43.39 billion. USDT leads stablecoins with $176.76 billion circulating. Base records the highest L2 TVS at $14.16 billion. Multiple stablecoin peg deviations and recent incidents require monitoring.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum leads with $43.39 billion TVL.",
+    "Base ranks second at $5.87 billion TVL.",
+    "Solana follows at $5.21 billion TVL.",
+    "BSC and Tron hold $5.11 billion and $5.05 billion respectively."
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Kalshi records $585.84 million 24h volume.",
+    "Uniswap V4 and PancakeSwap AMM V3 follow with $481.60 million and $442.04 million.",
+    "Tether generates $16.57 million in 24h fees.",
+    "Circle USDC reports $6.65 million in fees."
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulates $176.76 billion with -0.003% 1d change.",
+    "USDC follows at $70.65 billion with +0.085% 1d change.",
+    "USDS, USDe and DAI hold $5.63 billion, $4.92 billion and $4.68 billion.",
+    "Six stablecoins show peg deviations, including AP USDA at -8.163%."
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base reports $14.16 billion TVS with -3.794% 7d change.",
+    "Arbitrum One holds $9.33 billion TVS.",
+    "Hyperliquid records $6.40 billion TVS.",
+    "Polygon PoS and Robinhood Chain follow at $3.88 billion and $2.14 billion."
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Binance CEX incident on 29 Oct involved $6.36 billion.",
+    "Mercado Bitcoin reported $40 million loss on 2 Nov.",
+    "Keplr Wallet and Polymarket International faced supply chain attacks.",
+    "Multiple protocol logic flaws recorded in last 14 days."
+   ]
+  }
+ ],
+ "watchlist": [
+  "Stablecoin peg deviations for AP USDA and pmUSD",
+  "Recent CEX incidents at Binance and Mercado Bitcoin",
+  "Base and Arbitrum TVS 7d changes",
+  "Ethereum base fee at 0.047 gwei"
+ ],
+ "date": "2026-11-08",
+ "model": "grok-4.3",
+ "tokens": 13496
+}
