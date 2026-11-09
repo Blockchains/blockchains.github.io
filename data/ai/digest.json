@@ -1,29 +1,29 @@
 {
  "service": "ai/digest",
  "description": "AI chain-health & L2 digest",
- "generated_at": "2026-11-08T11:27:04Z",
+ "generated_at": "2026-11-09T13:14:29Z",
  "source": "Grok (xAI) over public data: hub monitors, L2BEAT, DefiLlama",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "headline": "Chain Health & L2 Digest",
- "summary": "All tracked chains report ok status except Blast (unreachable). L2 TVS led by Base at 14163119104 USD, followed by Arbitrum One at 9334756352 USD. RPC performance shows median response times under 40 ms for top endpoints.",
+ "summary": "All chains report ok status except Blast which is unreachable. L2 TVS led by Base at $13.8B and Arbitrum One at $9.2B, both Stage 1.",
  "chains": [
-  "Ethereum: height 26369097, head_age_s 3.0, status ok",
-  "Base: height 54689112, head_age_s 0.1, status ok",
-  "Arbitrum One: height 522325708, head_age_s 1.1, status ok",
-  "Blast: status unreachable",
-  "Bitcoin: height 975044, head_age_s 327.2, status ok"
+  "Ethereum: height 26375969, head age 5.6s, ok",
+  "Base: height 55102582, head age 0.3s, ok",
+  "Arbitrum One: height 522613477, head age 0.5s, ok",
+  "OP Mainnet: height 159306057, head age 1.6s, ok",
+  "Blast: unreachable"
  ],
  "l2s": [
-  "Base: TVS 14163119104 USD, Stage 1, Optimistic Rollup",
-  "Arbitrum One: TVS 9334756352 USD, Stage 1, Optimistic Rollup",
-  "Hyperliquid: TVS 6397801984 USD, layer3 on Arbitrum One",
-  "Polygon PoS: TVS 3882364672 USD, layer2"
+  "Base: Stage 1, TVS $13.8B, Optimistic Rollup",
+  "Arbitrum One: Stage 1, TVS $9.2B, Optimistic Rollup",
+  "Hyperliquid: TVS $6.3B, layer3",
+  "Polygon PoS: TVS $3.8B"
  ],
  "infrastructure": [
-  "Top RPC: Base mainnet.base.org (median 31.3 ms, 100% success)",
-  "Top bridge: LayerZero V2 TVL 17357373713 USD",
-  "WBTC bridge TVL 8833210776 USD"
+  "RPC top: Celo 42.9ms median, Avalanche 81.2ms",
+  "Top bridge: LayerZero V2 $16.4B TVL",
+  "WBTC bridge: $8.6B TVL"
  ],
  "builder_tips": [],
  "model": "grok-4.3",
