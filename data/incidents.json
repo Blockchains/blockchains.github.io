@@ -1,14 +1,48 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-09T13:13:08Z",
+ "generated_at": "2026-11-10T12:51:22Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27599404967.12813,
- "ytd_usd": 8645188118.128132,
+ "total_all_time_usd": 27601827645.12813,
+ "ytd_usd": 8646437224.128132,
  "incidents": [
+  {
+   "date": "2026-11-09",
+   "name": "Ankr Bridge",
+   "amount_usd": 304500,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Cross-Chain Message Spoofing",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-11-08",
+   "name": "ACryptoS",
+   "amount_usd": 665429,
+   "chains": [
+    "Arbitrum",
+    "BSC",
+    "Polygon",
+    "Base",
+    "Optimism"
+   ],
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
   {
    "date": "2026-11-06",
    "name": "Keplr Wallet (Web3Auth)",
@@ -111,6 +145,21 @@
   },
   {
    "date": "2026-11-01",
+   "name": "Sovryn Dex",
+   "amount_usd": 538749,
+   "chains": [
+    "Rootstock"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-11-01",
    "name": "Premia V3",
    "amount_usd": 437000,
    "chains": [
@@ -123,6 +172,21 @@
    "returned_usd": null,
    "source": "",
    "language": "Solidity"
+  },
+  {
+   "date": "2026-10-31",
+   "name": "Sovryn Lend",
+   "amount_usd": 914000,
+   "chains": [
+    "Rootstock"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
   },
   {
    "date": "2026-10-31",
@@ -4529,66 +4593,6 @@
    "returned_usd": null,
    "source": "",
    "language": "Solidity"
-  },
-  {
-   "date": "2026-03-12",
-   "name": "AM",
-   "amount_usd": 131572,
-   "chains": [
-    "BSC"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Incorrect Share Accounting",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-12",
-   "name": "Aave V3",
-   "amount_usd": 862000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Oracle Manipulation",
-   "technique": "Oracle Misconfiguration",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": 862000,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-11",
-   "name": "DBXen",
-   "amount_usd": 150000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Input Validation",
-   "technique": "Missing Input Validation",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-11",
-   "name": "BONK Fun",
-   "amount_usd": 30000,
-   "chains": [
-    "Solana"
-   ],
-   "classification": "Frontend & Infrastructure",
-   "technique": "DNS Hijack",
-   "target_type": "ICO",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": null
   }
  ]
 }

@@ -1,16 +1,44 @@
 {
  "service": "ai/incidents",
  "description": "AI incident explainer",
- "generated_at": "2026-11-09T13:13:46Z",
+ "generated_at": "2026-11-10T12:52:05Z",
  "source": "Grok (xAI) over public data: DefiLlama hacks",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "items": [
   {
+   "name": "Ankr Bridge",
+   "date": "2026-11-09",
+   "plain_english": "Classification was Bridge & Cross-Chain with technique Cross-Chain Message Spoofing. Amount was 304500 USD.",
+   "lesson_for_builders": "Validate inputs for Bridge & Cross-Chain using Cross-Chain Message Spoofing prevention.",
+   "related_lab": "L43 CrossChainReplay",
+   "amount_usd": 304500,
+   "source": "",
+   "chains": [
+    "Ethereum"
+   ]
+  },
+  {
+   "name": "ACryptoS",
+   "date": "2026-11-08",
+   "plain_english": "Classification was Input Validation with technique Missing Input Validation. Amount was 665429 USD.",
+   "lesson_for_builders": "Address Missing Input Validation in Input Validation.",
+   "related_lab": null,
+   "amount_usd": 665429,
+   "source": "",
+   "chains": [
+    "Arbitrum",
+    "BSC",
+    "Polygon",
+    "Base",
+    "Optimism"
+   ]
+  },
+  {
    "name": "Keplr Wallet (Web3Auth)",
    "date": "2026-11-06",
-   "plain_english": "The incident was classified as Frontend & Infrastructure using Supply Chain Attack technique. It targeted a Wallet.",
-   "lesson_for_builders": "Review frontend and infrastructure dependencies to mitigate supply chain risks.",
+   "plain_english": "Classification was Frontend & Infrastructure with technique Supply Chain Attack. Amount was null.",
+   "lesson_for_builders": "Address Supply Chain Attack in Frontend & Infrastructure.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -19,8 +47,8 @@
   {
    "name": "TENDRIL",
    "date": "2026-11-05",
-   "plain_english": "The incident was classified as Protocol Logic using Swap Logic Flaw technique with 550000 USD amount on BSC. It targeted a DeFi Protocol.",
-   "lesson_for_builders": "Audit protocol logic implementations to avoid swap logic flaws.",
+   "plain_english": "Classification was Protocol Logic with technique Swap Logic Flaw. Amount was 550000 USD.",
+   "lesson_for_builders": "Address Swap Logic Flaw in Protocol Logic.",
    "related_lab": null,
    "amount_usd": 550000,
    "source": "",
@@ -31,8 +59,8 @@
   {
    "name": "Loopscale Lending",
    "date": "2026-11-05",
-   "plain_english": "The incident was classified as Protocol Logic using Unknown technique. It targeted a DeFi Protocol on Solana.",
-   "lesson_for_builders": "Strengthen protocol logic validation processes.",
+   "plain_english": "Classification was Protocol Logic with technique Unknown. Amount was null.",
+   "lesson_for_builders": "Address Unknown in Protocol Logic.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -43,8 +71,8 @@
   {
    "name": "Mercado Bitcoin",
    "date": "2026-11-02",
-   "plain_english": "The incident was classified as Protocol Logic using Unknown technique with 40000000 USD amount. It targeted a CEX across multiple chains.",
-   "lesson_for_builders": "Enhance protocol logic checks in centralized exchange systems.",
+   "plain_english": "Classification was Protocol Logic with technique Unknown. Amount was 40000000 USD.",
+   "lesson_for_builders": "Address Unknown in Protocol Logic.",
    "related_lab": null,
    "amount_usd": 40000000,
    "source": "",
@@ -64,8 +92,8 @@
   {
    "name": "BitMart",
    "date": "2026-11-02",
-   "plain_english": "The incident was classified as Protocol Logic using Unknown technique with 391000 USD amount. It targeted a CEX on Base, Arbitrum and Optimism.",
-   "lesson_for_builders": "Improve protocol logic auditing for exchange platforms.",
+   "plain_english": "Classification was Protocol Logic with technique Unknown. Amount was 391000 USD.",
+   "lesson_for_builders": "Address Unknown in Protocol Logic.",
    "related_lab": null,
    "amount_usd": 391000,
    "source": "",
@@ -78,8 +106,8 @@
   {
    "name": "BTCPay Server",
    "date": "2026-11-01",
-   "plain_english": "The incident was classified as Frontend & Infrastructure using Key Leaked via Infrastructure technique. It targeted a Wallet on Bitcoin and Litecoin.",
-   "lesson_for_builders": "Secure infrastructure to prevent key leakage incidents.",
+   "plain_english": "Classification was Frontend & Infrastructure with technique Key Leaked via Infrastructure. Amount was null.",
+   "lesson_for_builders": "Address Key Leaked via Infrastructure in Frontend & Infrastructure.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -89,10 +117,22 @@
    ]
   },
   {
+   "name": "Sovryn Dex",
+   "date": "2026-11-01",
+   "plain_english": "Classification was Protocol Logic with technique Unknown. Amount was 538749 USD.",
+   "lesson_for_builders": "Address Unknown in Protocol Logic.",
+   "related_lab": null,
+   "amount_usd": 538749,
+   "source": "",
+   "chains": [
+    "Rootstock"
+   ]
+  },
+  {
    "name": "Premia V3",
    "date": "2026-11-01",
-   "plain_english": "The incident was classified as Protocol Logic using Withdrawal Logic Flaw technique with 437000 USD amount on Arbitrum. It targeted a DeFi Protocol.",
-   "lesson_for_builders": "Verify withdrawal logic in protocol implementations.",
+   "plain_english": "Classification was Protocol Logic with technique Withdrawal Logic Flaw. Amount was 437000 USD.",
+   "lesson_for_builders": "Address Withdrawal Logic Flaw in Protocol Logic.",
    "related_lab": null,
    "amount_usd": 437000,
    "source": "",
@@ -101,67 +141,27 @@
    ]
   },
   {
+   "name": "Sovryn Lend",
+   "date": "2026-10-31",
+   "plain_english": "Classification was Protocol Logic with technique Unknown. Amount was 914000 USD.",
+   "lesson_for_builders": "Address Unknown in Protocol Logic.",
+   "related_lab": null,
+   "amount_usd": 914000,
+   "source": "",
+   "chains": [
+    "Rootstock"
+   ]
+  },
+  {
    "name": "b14g",
    "date": "2026-10-31",
-   "plain_english": "The incident was classified as Protocol Logic using Unknown technique. It targeted a DeFi Protocol on CORE.",
-   "lesson_for_builders": "Conduct thorough reviews of protocol logic.",
+   "plain_english": "Classification was Protocol Logic with technique Unknown. Amount was null.",
+   "lesson_for_builders": "Address Unknown in Protocol Logic.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
    "chains": [
     "CORE"
-   ]
-  },
-  {
-   "name": "Troves",
-   "date": "2026-10-31",
-   "plain_english": "The incident was classified as Access Control using Improper Access Control technique with 666935 USD amount. It targeted a DeFi Protocol.",
-   "lesson_for_builders": "Implement strict access control mechanisms.",
-   "related_lab": "L03 Ownable/access control",
-   "amount_usd": 666935,
-   "source": "",
-   "chains": []
-  },
-  {
-   "name": "Polymarket International",
-   "date": "2026-10-29",
-   "plain_english": "The incident was classified as Frontend & Infrastructure using Supply Chain Attack technique with 2700000 USD amount on Polygon. It targeted a Prediction Market.",
-   "lesson_for_builders": "Harden frontend supply chain security.",
-   "related_lab": null,
-   "amount_usd": 2700000,
-   "source": "",
-   "chains": [
-    "Polygon"
-   ]
-  },
-  {
-   "name": "Binance CEX",
-   "date": "2026-10-29",
-   "plain_english": "The incident was classified as Frontend & Infrastructure using Key Leaked via Infrastructure technique with 6360000000 USD amount. It targeted a CEX across multiple chains.",
-   "lesson_for_builders": "Protect infrastructure keys from leakage.",
-   "related_lab": null,
-   "amount_usd": 6360000000,
-   "source": "",
-   "chains": [
-    "Ethereum",
-    "Bitcoin",
-    "TRON",
-    "Avalanche",
-    "Optimism",
-    "Arbitrum",
-    "Base"
-   ]
-  },
-  {
-   "name": "zkLink Nova",
-   "date": "2026-10-28",
-   "plain_english": "The incident was classified as Bridge & Cross-Chain using Cross-Chain Message Spoofing technique with 783100 USD amount on Ethereum. It targeted a DeFi Protocol as a bridge.",
-   "lesson_for_builders": "Validate cross-chain messages rigorously.",
-   "related_lab": "L43 CrossChainReplay",
-   "amount_usd": 783100,
-   "source": "",
-   "chains": [
-    "Ethereum"
    ]
   }
  ],
