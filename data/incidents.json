@@ -1,14 +1,59 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-10T12:51:22Z",
+ "generated_at": "2026-11-11T11:59:44Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27601827645.12813,
- "ytd_usd": 8646437224.128132,
+ "total_all_time_usd": 27604677036.12813,
+ "ytd_usd": 8645316480.128132,
  "incidents": [
+  {
+   "date": "2026-11-10",
+   "name": "Arcus Perps",
+   "amount_usd": 2234391,
+   "chains": [
+    "Robinhood Chain"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Withdrawal Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": 2234391,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-11-10",
+   "name": "Across",
+   "amount_usd": null,
+   "chains": [
+    "Plasma"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "DNS Hijack",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-11-10",
+   "name": "Initia",
+   "amount_usd": 615000,
+   "chains": [
+    "Initia"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Private Key Compromised",
+   "target_type": "Chain",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
   {
    "date": "2026-11-09",
    "name": "Ankr Bridge",
@@ -23,6 +68,22 @@
    "returned_usd": null,
    "source": "",
    "language": null
+  },
+  {
+   "date": "2026-11-08",
+   "name": "LNbits",
+   "amount_usd": null,
+   "chains": [
+    "Bitcoin",
+    "Lightning Network"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Python"
   },
   {
    "date": "2026-11-08",
@@ -4527,67 +4588,6 @@
    ],
    "classification": "Token & Share Accounting",
    "technique": "First Depositor Attack",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-16",
-   "name": "CheckoutPool",
-   "amount_usd": 85700,
-   "chains": [
-    "Polygon"
-   ],
-   "classification": "Access Control",
-   "technique": "Improper Access Control",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-15",
-   "name": "Venus Core Pool",
-   "amount_usd": 3700000,
-   "chains": [
-    "BSC"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Donation Attack",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-14",
-   "name": "Goose Finance",
-   "amount_usd": 8435,
-   "chains": [
-    "BSC"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Incorrect Share Accounting",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-12",
-   "name": "Stake DAO Yield",
-   "amount_usd": 176000,
-   "chains": [
-    "Arbitrum",
-    "Base"
-   ],
-   "classification": "Access Control",
-   "technique": "Caller Impersonation",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

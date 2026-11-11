@@ -1,0 +1,66 @@
+{
+ "headline": "Crypto Market Structure Brief - 11 November 2026",
+ "summary": "Ethereum leads chains by TVL at $40.95bn, followed by Base at $5.76bn and Solana at $5.06bn. Uniswap V3 recorded the highest DEX volume at $1.19bn over 24h while Tether generated the top fees at $16.77m. USDT circulation stands at $175.72bn and USDC at $70.11bn, with several stablecoins showing peg deviations. Base holds the largest L2 TVS at $13.78bn amid multiple recent security incidents.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum TVL $40.95bn (rank 1)",
+    "Base TVL $5.76bn (rank 2)",
+    "Solana TVL $5.06bn (rank 3)",
+    "BSC TVL $5.05bn (rank 4)",
+    "Tron TVL $4.88bn (rank 5)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V3 24h volume $1.19bn (rank 1)",
+    "Uniswap V4 24h volume $979m (rank 2)",
+    "Tether 24h fees $16.77m (rank 1)",
+    "Circle USDC 24h fees $6.73m (rank 2)",
+    "Hyperliquid Perps 24h fees $3.19m (rank 3)"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulating $175.72bn, 24h change -0.293%",
+    "USDC circulating $70.11bn, 24h change -0.375%",
+    "USDS circulating $5.36bn, 7d change -17.896%",
+    "USD1 circulating $3.26bn, 30d change -23.555%",
+    "Seven stablecoins on watch or depeg status"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base TVS $13.78bn (Stage 1, OP Stack)",
+    "Arbitrum One TVS $9.03bn (Stage 1)",
+    "Hyperliquid TVS $6.14bn (layer 3)",
+    "Polygon PoS TVS $3.73bn (under review)",
+    "Robinhood Chain TVS $2.06bn (Stage 0)"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "14 incidents reported in last 14 days",
+    "Arcus Perps loss $2.23m on 10 Nov (Robinhood Chain)",
+    "Mercado Bitcoin loss $40m on 2 Nov",
+    "Multiple protocol logic and key compromise events",
+    "DNS hijack on Across (Plasma) on 10 Nov"
+   ]
+  }
+ ],
+ "watchlist": [
+  "Falcon USD at $0.9947 (watch)",
+  "AP USDA at $0.8812 (depeg)",
+  "pmUSD at $0.5930 (depeg)",
+  "Initia key compromise 10 Nov",
+  "Arcus Perps withdrawal flaw 10 Nov"
+ ],
+ "date": "2026-11-11",
+ "model": "grok-4.3",
+ "tokens": 13799
+}
