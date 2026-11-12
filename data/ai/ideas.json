@@ -1,286 +1,275 @@
 {
  "service": "ai/ideas",
  "description": "AI hackathon idea generator",
- "generated_at": "2026-11-11T12:00:54Z",
+ "generated_at": "2026-11-12T13:03:29Z",
  "source": "Grok (xAI) over public data: ETHGlobal events, DefiLlama, grants list",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "ideas": [
   {
-   "title": "YieldGuard Dashboard",
-   "pitch": "A real-time yield aggregator monitor that alerts users to TVL drops and optimizes across protocols using onchain data. Built for 36 hours with existing APIs to deliver actionable DeFi insights.",
+   "title": "YieldPulse Dashboard",
+   "pitch": "Real-time yield aggregator that scans 10+ protocols and surfaces optimal routes using onchain data. Users get alerts and one-click rebalancing via Safe integration.",
    "track": "DeFi",
    "difficulty": "intermediate",
    "stack": [
-    "Next.js",
     "Solidity",
     "Blockchain Lab API",
-    "Ethers.js"
+    "TypeScript SDK",
+    "EIP-712"
    ],
    "build_steps": [
-    "Fetch yield data via API",
-    "Build alert system with webhooks",
-    "Integrate wallet connection",
-    "Add TVL change visualization",
-    "Deploy on testnet",
-    "Test with sample user flows"
+    "Fetch yield data via Blockchain Lab API",
+    "Build smart contract for position tracking",
+    "Integrate Safe for tx signing",
+    "Add MEV checker for route safety",
+    "Create frontend with live alerts",
+    "Test on testnet with sample positions"
    ],
    "fits_event": "ETHGlobal Cannes 2027",
    "fits_grant": "Ethereum Foundation Ecosystem Support Program (Ethereum)",
-   "why_now": "Yield category TVL surged 52% recently signaling demand for monitoring tools amid volatility."
+   "why_now": "Yield category TVL up 51% in 7 days signals demand for better tools"
   },
   {
-   "title": "BridgeWatch Alert",
-   "pitch": "Lightweight bridge health checker that detects anomalies in TVL and cross-chain flows using MEV and calldata tools. Prevents user losses by surfacing risks instantly.",
+   "title": "BridgeGuard Auditor",
+   "pitch": "Tool that diffs calldata and checks approvals across canonical bridges to flag risky transfers. Built for quick audits during high TVL bridge activity.",
    "track": "Infrastructure",
    "difficulty": "beginner",
    "stack": [
-    "React",
     "Blockchain Lab Tools",
-    "MCP server",
-    "TypeScript"
+    "Solidity",
+    "Python SDK"
    ],
    "build_steps": [
-    "Connect bridge TVL endpoints",
-    "Implement anomaly detection logic",
-    "Create simple dashboard UI",
-    "Add push notifications",
-    "Integrate calldata diff viewer",
-    "Host on Vercel"
+    "Extend calldata diff tool",
+    "Add approval scanner",
+    "Integrate bridge TVL data",
+    "Build simple UI",
+    "Add export to JSON reports",
+    "Test with sample bridge txs"
    ],
    "fits_event": "ETHGlobal New York 2027",
-   "fits_grant": "Gitcoin Grants (Multi-chain (public goods))",
-   "why_now": "Bridge TVL leads all categories at $59B but shows consistent 3-6% weekly declines needing oversight."
+   "fits_grant": "Arbitrum Foundation Grants (Arbitrum)",
+   "why_now": "Bridge TVL at $58B but declining 8% shows need for security focus"
   },
   {
-   "title": "RWA Flow Simulator",
-   "pitch": "Tool that simulates real-world asset inflows into lending pools with historical data visuals. Helps users model risk before committing capital.",
+   "title": "RWA Collateral Tracker",
+   "pitch": "Dashboard that tracks RWA collateral health and liquidation risks across lending protocols. Uses onchain capital allocator data for real-time views.",
    "track": "RWA",
    "difficulty": "intermediate",
    "stack": [
-    "Python",
-    "Solidity",
     "Blockchain Lab API",
-    "Streamlit"
-   ],
-   "build_steps": [
-    "Parse RWA category datasets",
-    "Build simulation engine",
-    "Add lending pool integration",
-    "Create chart visualizations",
-    "Add wallet sign-off flow",
-    "Deploy demo site"
-   ],
-   "fits_event": "ETHGlobal Tokyo 2027",
-   "fits_grant": "Arbitrum Foundation Grants (Arbitrum)",
-   "why_now": "RWA TVL holds steady near $3.4B while DeFi seeks real yield sources beyond pure crypto assets."
-  },
-  {
-   "title": "Restake Risk Scanner",
-   "pitch": "Quick scanner for restaking positions that flags slashing risks and TVL shifts across protocols. Uses existing SDKs for fast 36-hour build.",
-   "track": "Restaking",
-   "difficulty": "advanced",
-   "stack": [
     "Solidity",
-    "Next.js",
-    "Blockchain Lab SDK",
-    "Noir ZK"
+    "MCP server"
    ],
    "build_steps": [
-    "Query restaking TVL data",
-    "Implement risk scoring model",
-    "Add ZK proof for position privacy",
-    "Build mobile-friendly UI",
-    "Integrate with Safe for approvals",
-    "Run hackathon demo tests"
+    "Pull RWA TVL datasets",
+    "Build risk scoring contract",
+    "Integrate lending protocol events",
+    "Create alert system",
+    "Add visual charts",
+    "Deploy on Base testnet"
    ],
    "fits_event": "ETHGlobal Lisbon 2027",
-   "fits_grant": "Optimism Grants (Optimism / Superchain)",
-   "why_now": "Restaking and liquid restaking categories lost over 9-13% TVL in a week highlighting need for risk tools."
+   "fits_grant": "Base Builder Grants (Base)",
+   "why_now": "RWA TVL stable while lending drops, highlighting collateral transparency needs"
   },
   {
-   "title": "Privacy Pool Mixer Lite",
-   "pitch": "Simple ZK-based privacy mixer for small transfers that leverages Noir circuits and existing labs. Focuses on usability over full protocol launch.",
+   "title": "Prediction Market Oracle",
+   "pitch": "Lightweight oracle feed for prediction markets pulling from multiple sources with dispute resolution. Focuses on low-latency updates.",
+   "track": "Derivatives",
+   "difficulty": "advanced",
+   "stack": [
+    "Noir ZK",
+    "Solidity",
+    "Blockchain Lab SDK"
+   ],
+   "build_steps": [
+    "Design ZK proof for data verification",
+    "Implement market contract",
+    "Add multi-source aggregation",
+    "Build dispute UI",
+    "Integrate with MCP tools",
+    "Test with sample markets"
+   ],
+   "fits_event": "ETHGlobal Tokyo 2027",
+   "fits_grant": "Optimism Grants (Optimism / Superchain)",
+   "why_now": "Prediction Market TVL rising 3% amid overall DeFi decline"
+  },
+  {
+   "title": "Privacy Pool Simulator",
+   "pitch": "Browser-based simulator for testing private staking pools with ZK proofs using existing lab datasets. Helps devs explore privacy without mainnet risk.",
    "track": "Privacy",
    "difficulty": "advanced",
    "stack": [
     "Noir ZK",
     "Cairo",
-    "Blockchain Lab SDK",
-    "React"
+    "Blockchain Lab Tools"
    ],
    "build_steps": [
-    "Set up Noir circuit for mixing",
-    "Build frontend deposit flow",
-    "Add withdrawal proof verification",
-    "Test on local testnet",
-    "Integrate with 54 labs examples",
-    "Optimize gas costs"
+    "Load privacy TVL data",
+    "Build ZK circuit for deposits",
+    "Simulate pool interactions",
+    "Add visualization",
+    "Integrate lab approvals checker",
+    "Run local tests"
    ],
-   "fits_event": "Pragma Cannes 2027",
-   "fits_grant": "Starknet Seed Grants (Starknet)",
-   "why_now": "Privacy category TVL dropped 10% recently as users seek compliant onchain anonymity solutions."
+   "fits_event": null,
+   "fits_grant": "Web3 Foundation Grants Program (Polkadot / Kusama)",
+   "why_now": "Privacy TVL down 14% but growing regulatory interest"
   },
   {
-   "title": "Lending Health Bot",
-   "pitch": "Automated bot that monitors lending positions for liquidation risks using TVL-weighted metrics. Sends alerts via simple Telegram integration.",
-   "track": "Lending",
-   "difficulty": "beginner",
-   "stack": [
-    "Python",
-    "Blockchain Lab API",
-    "MCP server",
-    "Telegram API"
-   ],
-   "build_steps": [
-    "Pull lending TVL data",
-    "Calculate health factor thresholds",
-    "Implement alert triggers",
-    "Connect wallet read-only mode",
-    "Add basic UI dashboard",
-    "Deploy to cloud function"
-   ],
-   "fits_event": "ETHGlobal Cannes 2027",
-   "fits_grant": "Aave Grants DAO (Aave)",
-   "why_now": "Lending TVL at $48B with -5% weekly change creates urgent need for position monitoring."
-  },
-  {
-   "title": "Dex Arbitrage Notifier",
-   "pitch": "Lightweight notifier that scans DEX prices across chains and alerts on profitable opportunities using existing MEV checker tools.",
-   "track": "Dexs",
+   "title": "Basis Trade Monitor",
+   "pitch": "Tool to track basis trading opportunities across chains with automated alerts and historical analysis. Uses live onchain capital allocator feeds.",
+   "track": "DeFi",
    "difficulty": "intermediate",
    "stack": [
-    "TypeScript",
-    "Blockchain Lab Tools",
-    "Next.js",
-    "Ethers.js"
+    "Blockchain Lab API",
+    "TypeScript SDK",
+    "MEV checker"
    ],
    "build_steps": [
-    "Integrate DEX price feeds",
-    "Build arbitrage detection logic",
-    "Add notification system",
-    "Create clean results table",
-    "Add wallet approval preview",
-    "Test with sample pairs"
+    "Aggregate basis data",
+    "Build monitoring contract",
+    "Add alert logic",
+    "Create dashboard",
+    "Integrate MEV safety",
+    "Backtest with datasets"
    ],
-   "fits_event": "ETHGlobal Tokyo 2027",
+   "fits_event": "Pragma Cannes 2027",
    "fits_grant": "Uniswap Foundation Grants (Uniswap)",
-   "why_now": "Dexs category holds $10.9B TVL amid ongoing need for efficient cross-venue price discovery."
+   "why_now": "Basis Trading TVL up 3.83% while most categories decline"
   },
   {
-   "title": "CDP Position Optimizer",
-   "pitch": "Tool that suggests optimal CDP parameters based on current TVL trends to minimize liquidation risk for users.",
+   "title": "Restake Position Manager",
+   "pitch": "Simple interface to manage restaked positions with health checks and easy exits. Built on top of lab restaking datasets.",
+   "track": "Restaking",
+   "difficulty": "beginner",
+   "stack": [
+    "Solidity",
+    "Blockchain Lab API",
+    "Safe tx decoder"
+   ],
+   "build_steps": [
+    "Import restaking data",
+    "Build position tracker contract",
+    "Add health check functions",
+    "Integrate decoder for txs",
+    "Build frontend",
+    "Test exits on testnet"
+   ],
+   "fits_event": "ETHGlobal Tokyo 2027",
+   "fits_grant": "EigenLayer ecosystem grants via Ethereum programs",
+   "why_now": "Restaking TVL down 13% creates need for better management tools"
+  },
+  {
+   "title": "DEX Route Optimizer",
+   "pitch": "Finds best DEX routes across chains with slippage protection and gas estimates. Leverages dexs category data and lab tools.",
+   "track": "DeFi",
+   "difficulty": "intermediate",
+   "stack": [
+    "Blockchain Lab Tools",
+    "Solidity",
+    "Python SDK"
+   ],
+   "build_steps": [
+    "Pull DEX TVL data",
+    "Implement route finder",
+    "Add slippage checks",
+    "Integrate gas estimator",
+    "Build UI",
+    "Test multiple chains"
+   ],
+   "fits_event": "ETHGlobal Lisbon 2027",
+   "fits_grant": "Polygon Community Grants (Polygon)",
+   "why_now": "Dexs TVL at $11B with -7.47% change needs better routing"
+  },
+  {
+   "title": "Liquid Staking Health Bot",
+   "pitch": "Telegram bot that monitors liquid staking derivatives for depeg risks using live datasets. Quick alerts for users.",
+   "track": "Liquid Staking",
+   "difficulty": "beginner",
+   "stack": [
+    "Blockchain Lab API",
+    "TypeScript SDK",
+    "MCP server"
+   ],
+   "build_steps": [
+    "Load staking data",
+    "Build monitoring script",
+    "Add depeg alerts",
+    "Create bot interface",
+    "Test with historical events",
+    "Deploy bot"
+   ],
+   "fits_event": "ETHGlobal New York 2027",
+   "fits_grant": "NEAR Foundation Grants (NEAR)",
+   "why_now": "Liquid Staking TVL down 14% highlights risk monitoring demand"
+  },
+  {
+   "title": "CDP Liquidation Simulator",
+   "pitch": "Simulates CDP positions and liquidation thresholds with what-if scenarios. Uses lab tools for quick prototyping.",
    "track": "CDP",
    "difficulty": "intermediate",
    "stack": [
     "Solidity",
-    "React",
-    "Blockchain Lab API",
-    "Python"
-   ],
-   "build_steps": [
-    "Analyze CDP category data",
-    "Build optimization calculator",
-    "Integrate onchain position reader",
-    "Add simulation mode",
-    "Deploy smart contract stubs",
-    "Create tutorial steps"
-   ],
-   "fits_event": "ETHGlobal Lisbon 2027",
-   "fits_grant": "Base Builder Grants (Base)",
-   "why_now": "CDP TVL fell 13% recently as users need better tools to manage debt positions safely."
-  },
-  {
-   "title": "Canonical Bridge UI Kit",
-   "pitch": "Reusable UI components for canonical bridges that highlight TVL flows and security status using lab tools.",
-   "track": "Canonical Bridge",
-   "difficulty": "beginner",
-   "stack": [
-    "React",
     "Blockchain Lab Tools",
-    "TypeScript",
-    "Tailwind"
+    "Noir ZK"
    ],
    "build_steps": [
-    "Extract bridge data patterns",
-    "Build reusable components",
-    "Add TVL trend charts",
-    "Implement status badges",
-    "Package as npm module",
-    "Demo with sample bridges"
+    "Model CDP contracts",
+    "Build simulation engine",
+    "Add ZK privacy for positions",
+    "Create UI scenarios",
+    "Integrate risk data",
+    "Run test cases"
    ],
-   "fits_event": "ETHGlobal New York 2027",
-   "fits_grant": "Polygon Community Grants (Polygon)",
-   "why_now": "Canonical bridges represent $11.5B TVL needing better developer tooling for adoption."
+   "fits_event": null,
+   "fits_grant": "Aave Grants DAO (Aave)",
+   "why_now": "CDP TVL down 14% signals need for better risk tools"
   },
   {
-   "title": "Staking Pool Comparator",
-   "pitch": "Side-by-side comparator for staking pools that factors in recent TVL changes and reward rates.",
-   "track": "Staking Pool",
+   "title": "Canonical Bridge Explorer",
+   "pitch": "Explorer that visualizes flows across canonical bridges with TVL breakdowns and anomaly detection.",
+   "track": "Infrastructure",
    "difficulty": "beginner",
    "stack": [
-    "Next.js",
     "Blockchain Lab API",
     "Solidity",
-    "Chart.js"
+    "MCP server"
    ],
    "build_steps": [
-    "Aggregate staking pool data",
-    "Build comparison table",
-    "Add historical change graphs",
-    "Integrate wallet staking preview",
-    "Add export to CSV",
-    "Host live demo"
+    "Ingest bridge datasets",
+    "Build flow visualizer",
+    "Add anomaly detection",
+    "Create simple frontend",
+    "Test queries",
+    "Deploy static site"
    ],
-   "fits_event": "ETHGlobal Tokyo 2027",
-   "fits_grant": "NEAR Foundation Grants (NEAR)",
-   "why_now": "Staking pools lost 6.4% TVL weekly creating demand for easy comparison interfaces."
+   "fits_event": "ETHGlobal Cannes 2027",
+   "fits_grant": "Optimism Grants (Optimism / Superchain)",
+   "why_now": "Canonical Bridge TVL at $11.5B with ongoing 8% decline"
   },
   {
-   "title": "Basis Trading Monitor",
-   "pitch": "Dashboard that tracks basis trading opportunities with onchain data and alerts for funding rate shifts.",
-   "track": "Derivatives",
+   "title": "Yield Aggregator Bot",
+   "pitch": "Automated bot that reallocates across yield protocols based on lab yield data and user risk prefs.",
+   "track": "Yield",
    "difficulty": "advanced",
    "stack": [
-    "Python",
-    "Blockchain Lab API",
-    "React",
-    "FastAPI"
-   ],
-   "build_steps": [
-    "Ingest basis trading datasets",
-    "Calculate opportunity scores",
-    "Build real-time alert engine",
-    "Create interactive charts",
-    "Add onchain verification",
-    "Deploy full stack demo"
-   ],
-   "fits_event": "Pragma Tokyo 2027",
-   "fits_grant": "Solana Foundation Grants & Funding (Solana)",
-   "why_now": "Basis trading shows positive 4.22% TVL change indicating growing interest in structured yield."
-  },
-  {
-   "title": "Liquid Staking Yield Tracker",
-   "pitch": "Tracker that compares liquid staking yields across providers while factoring recent TVL declines for smart allocation.",
-   "track": "Liquid Staking",
-   "difficulty": "intermediate",
-   "stack": [
     "Solidity",
-    "Next.js",
     "Blockchain Lab API",
-    "Ethers.js"
+    "EIP-712"
    ],
    "build_steps": [
-    "Pull liquid staking metrics",
-    "Build yield comparison engine",
-    "Add allocation simulator",
-    "Integrate wallet connect",
-    "Visualize TVL trends",
-    "Launch testnet version"
+    "Fetch yield data",
+    "Build rebalance contract",
+    "Add preference engine",
+    "Integrate approvals checker",
+    "Test on testnet",
+    "Add logging"
    ],
    "fits_event": "ETHGlobal Lisbon 2027",
-   "fits_grant": "Web3 Foundation Grants Program (Polkadot / Kusama)",
-   "why_now": "Liquid staking TVL dropped over 10% highlighting need for yield visibility tools."
+   "fits_grant": "Gitcoin Grants (Multi-chain (public goods))",
+   "why_now": "Yield TVL surging 51% creates opportunity for automation"
   }
  ],
  "model": "grok-4.3",
