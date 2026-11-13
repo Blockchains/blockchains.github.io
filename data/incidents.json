@@ -1,14 +1,29 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-12T13:01:52Z",
+ "generated_at": "2026-11-13T12:27:41Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27604877036.12813,
- "ytd_usd": 8645259480.128132,
+ "total_all_time_usd": 27605177036.12813,
+ "ytd_usd": 8645559480.128132,
  "incidents": [
+  {
+   "date": "2026-11-12",
+   "name": "Edel",
+   "amount_usd": 300000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
   {
    "date": "2026-11-11",
    "name": "Rujira AMM Strategies",
@@ -4573,21 +4588,6 @@
    ],
    "classification": "Frontend & Infrastructure",
    "technique": "Key Leaked via Infrastructure",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-18",
-   "name": "Neutrl",
-   "amount_usd": null,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Frontend & Infrastructure",
-   "technique": "DNS Hijack",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
