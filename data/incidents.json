@@ -1,14 +1,29 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-13T12:27:41Z",
+ "generated_at": "2026-11-14T11:39:16Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27605177036.12813,
- "ytd_usd": 8645559480.128132,
+ "total_all_time_usd": 27605182167.12813,
+ "ytd_usd": 8621064611.128132,
  "incidents": [
+  {
+   "date": "2026-11-13",
+   "name": "Pennysia",
+   "amount_usd": 5131,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Access Control",
+   "technique": "Arbitrary External Call",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
   {
    "date": "2026-11-12",
    "name": "Edel",
@@ -4573,21 +4588,6 @@
    ],
    "classification": "Oracle Manipulation",
    "technique": "Spot Price Manipulation",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-21",
-   "name": "Resolv USR",
-   "amount_usd": 24500000,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Frontend & Infrastructure",
-   "technique": "Key Leaked via Infrastructure",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

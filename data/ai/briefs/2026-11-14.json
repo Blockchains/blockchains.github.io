@@ -1,0 +1,55 @@
+{
+ "headline": "Market Structure Brief: Ethereum Tops TVL; Stablecoin Circulation Falls",
+ "summary": "Ethereum holds the largest chain TVL at $38.7bn, followed by Base at $5.4bn and Solana at $4.8bn. Uniswap V3 leads 24h DEX volume at $1.23bn while Tether generates the highest fees at $17.0m. USDT and USDC dominate stablecoin supply but both show 30-day declines exceeding 4%. Multiple L2s report TVS drops above 6% over seven days alongside recent protocol incidents.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum leads with $38.75bn TVL; Base second at $5.37bn and Solana third at $4.84bn.",
+    "Tron and BSC follow closely at $4.77bn and $4.68bn respectively.",
+    "Hyperliquid L1 records $2.30bn TVL, ahead of Arbitrum at $1.34bn."
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V3 posts $1.23bn 24h volume; PancakeSwap AMM V3 follows at $1.04bn.",
+    "Uniswap V4 and Aero Slipstream each exceed $900m daily volume.",
+    "Tether earns $17.0m in 24h fees; Circle USDC records $6.8m."
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulation stands at $175.2bn and USDC at $69.2bn, both down over 4% in 30 days.",
+    "USDS, USDe and DAI rank next with circulations between $4.6bn and $5.4bn.",
+    "Four stablecoins flagged for peg deviation; AP USDA shows 11.24% depeg."
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base records $13.17bn TVS; Arbitrum One follows at $8.64bn.",
+    "Hyperliquid (L3) holds $5.96bn TVS, all in stablecoins.",
+    "Polygon PoS and Robinhood Chain report $3.64bn and $1.95bn TVS respectively."
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Fourteen incidents recorded in the last 14 days, including $40m at Mercado Bitcoin.",
+    "Protocol logic flaws account for most losses; several remain unrecovered.",
+    "Five stablecoins under watch or depeg status per DefiLlama alerts."
+   ]
+  }
+ ],
+ "watchlist": [
+  "USDT and USDC 30-day circulation trends",
+  "Base and Arbitrum TVS weekly changes",
+  "AP USDA peg deviation status",
+  "Recent incidents on Robinhood Chain and Plasma"
+ ],
+ "date": "2026-11-14",
+ "model": "grok-4.3",
+ "tokens": 13566
+}

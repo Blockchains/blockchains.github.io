@@ -1,17 +1,29 @@
 {
  "service": "ai/incidents",
  "description": "AI incident explainer",
- "generated_at": "2026-11-13T12:28:19Z",
+ "generated_at": "2026-11-14T11:39:52Z",
  "source": "Grok (xAI) over public data: DefiLlama hacks",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "items": [
   {
+   "name": "Pennysia",
+   "date": "2026-11-13",
+   "plain_english": "Access Control was the classification with Arbitrary External Call as the technique. The amount lost was 5131 USD.",
+   "lesson_for_builders": "Enforce strict access controls on external calls to avoid unauthorized actions.",
+   "related_lab": "L03 Ownable/access control",
+   "amount_usd": 5131,
+   "source": "",
+   "chains": [
+    "Ethereum"
+   ]
+  },
+  {
    "name": "Edel",
    "date": "2026-11-12",
-   "plain_english": "The incident was classified as Protocol Logic with Unknown technique and resulted in a 300000 USD loss. The amount lost was 300000 USD.",
-   "lesson_for_builders": "Review all protocol logic paths before deployment.",
-   "related_lab": null,
+   "plain_english": "Protocol Logic was the classification with Unknown as the technique. The amount lost was 300000 USD.",
+   "lesson_for_builders": "Validate all protocol logic paths with invariants to catch flaws early.",
+   "related_lab": "L28 InvariantVault",
    "amount_usd": 300000,
    "source": "",
    "chains": [
@@ -21,9 +33,9 @@
   {
    "name": "Rujira AMM Strategies",
    "date": "2026-11-11",
-   "plain_english": "The incident was classified as Protocol Logic with Swap Logic Flaw technique and resulted in a 200000 USD loss. The amount lost was 200000 USD.",
-   "lesson_for_builders": "Audit swap logic for edge cases.",
-   "related_lab": null,
+   "plain_english": "Protocol Logic was the classification with Swap Logic Flaw as the technique. The amount lost was 200000 USD.",
+   "lesson_for_builders": "Test swap logic thoroughly against edge cases before deployment.",
+   "related_lab": "L41 Sandwich",
    "amount_usd": 200000,
    "source": "",
    "chains": [
@@ -33,9 +45,9 @@
   {
    "name": "Arcus Perps",
    "date": "2026-11-10",
-   "plain_english": "The incident was classified as Protocol Logic with Withdrawal Logic Flaw technique and resulted in a 2234391 USD loss. The amount lost was 2234391 USD and was fully returned.",
-   "lesson_for_builders": "Test withdrawal conditions thoroughly.",
-   "related_lab": null,
+   "plain_english": "Protocol Logic was the classification with Withdrawal Logic Flaw as the technique. The amount lost was 2234391 USD.",
+   "lesson_for_builders": "Add circuit breakers around withdrawal functions to limit exposure.",
+   "related_lab": "L45 CircuitBreaker",
    "amount_usd": 2234391,
    "source": "",
    "chains": [
@@ -45,8 +57,8 @@
   {
    "name": "Across",
    "date": "2026-11-10",
-   "plain_english": "The incident was classified as Frontend & Infrastructure with DNS Hijack technique. No amount was reported.",
-   "lesson_for_builders": "Harden infrastructure endpoints.",
+   "plain_english": "Frontend & Infrastructure was the classification with DNS Hijack as the technique. No amount was reported.",
+   "lesson_for_builders": "Secure all infrastructure endpoints and avoid single points of failure.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -57,9 +69,9 @@
   {
    "name": "Initia",
    "date": "2026-11-10",
-   "plain_english": "The incident was classified as Key Compromise with Private Key Compromised technique and resulted in a 615000 USD loss. The amount lost was 615000 USD.",
-   "lesson_for_builders": "Protect all private key material.",
-   "related_lab": null,
+   "plain_english": "Key Compromise was the classification with Private Key Compromised as the technique. The amount lost was 615000 USD.",
+   "lesson_for_builders": "Use multisig for key operations to reduce single-key risks.",
+   "related_lab": "L14 MultiSig",
    "amount_usd": 615000,
    "source": "",
    "chains": [
@@ -68,9 +80,9 @@
   },
   {
    "name": "Ankr Bridge",
-   "date": "2026-11-09",
-   "plain_english": "The incident was classified as Bridge & Cross-Chain with Cross-Chain Message Spoofing technique and resulted in a 304500 USD loss. The amount lost was 304500 USD.",
-   "lesson_for_builders": "Validate all cross-chain messages.",
+   "date": "2026-11-08",
+   "plain_english": "Bridge & Cross-Chain was the classification with Cross-Chain Message Spoofing as the technique. The amount lost was 304500 USD.",
+   "lesson_for_builders": "Validate cross-chain messages with replay protection mechanisms.",
    "related_lab": "L43 CrossChainReplay",
    "amount_usd": 304500,
    "source": "",
@@ -81,8 +93,8 @@
   {
    "name": "LNbits",
    "date": "2026-11-08",
-   "plain_english": "The incident was classified as Protocol Logic with Unknown technique. No amount was reported.",
-   "lesson_for_builders": "Verify protocol logic in wallet code.",
+   "plain_english": "Protocol Logic was the classification with Unknown as the technique. No amount was reported.",
+   "lesson_for_builders": "Audit all logic branches for unexpected state changes.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -94,9 +106,9 @@
   {
    "name": "ACryptoS",
    "date": "2026-11-08",
-   "plain_english": "The incident was classified as Input Validation with Missing Input Validation technique and resulted in a 665429 USD loss. The amount lost was 665429 USD.",
-   "lesson_for_builders": "Add strict input validation checks.",
-   "related_lab": null,
+   "plain_english": "Input Validation was the classification with Missing Input Validation as the technique. The amount lost was 665429 USD.",
+   "lesson_for_builders": "Add explicit input checks on all external parameters.",
+   "related_lab": "L03 Ownable/access control",
    "amount_usd": 665429,
    "source": "",
    "chains": [
@@ -109,9 +121,9 @@
   },
   {
    "name": "Keplr Wallet (Web3Auth)",
-   "date": "2026-11-05",
-   "plain_english": "The incident was classified as Frontend & Infrastructure with Key Leaked via Infrastructure technique. No amount was reported.",
-   "lesson_for_builders": "Secure all infrastructure keys.",
+   "date": "2026-11-06",
+   "plain_english": "Frontend & Infrastructure was the classification with Key Leaked via Infrastructure as the technique. No amount was reported.",
+   "lesson_for_builders": "Harden infrastructure to prevent key exposure in frontends.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -120,9 +132,9 @@
   {
    "name": "TENDRIL",
    "date": "2026-11-05",
-   "plain_english": "The incident was classified as Protocol Logic with Swap Logic Flaw technique and resulted in a 550000 USD loss. The amount lost was 550000 USD.",
-   "lesson_for_builders": "Audit swap logic for edge cases.",
-   "related_lab": null,
+   "plain_english": "Protocol Logic was the classification with Swap Logic Flaw as the technique. The amount lost was 550000 USD.",
+   "lesson_for_builders": "Verify swap invariants hold under all market conditions.",
+   "related_lab": "L41 Sandwich",
    "amount_usd": 550000,
    "source": "",
    "chains": [
@@ -131,35 +143,14 @@
   },
   {
    "name": "Loopscale Lending",
-   "date": "2026-11-02",
-   "plain_english": "The incident was classified as Protocol Logic with Unknown technique. No amount was reported.",
-   "lesson_for_builders": "Review all protocol logic paths before deployment.",
-   "related_lab": null,
+   "date": "2026-11-05",
+   "plain_english": "Protocol Logic was the classification with Unknown as the technique. No amount was reported.",
+   "lesson_for_builders": "Implement oracle consumer checks to ensure data integrity.",
+   "related_lab": "L37 OracleConsumer",
    "amount_usd": null,
    "source": "",
    "chains": [
     "Solana"
-   ]
-  },
-  {
-   "name": "Mercado Bitcoin",
-   "date": "2026-11-02",
-   "plain_english": "The incident was classified as Protocol Logic with Unknown technique and resulted in a 40000000 USD loss. The amount lost was 40000000 USD.",
-   "lesson_for_builders": "Review all protocol logic paths before deployment.",
-   "related_lab": null,
-   "amount_usd": 40000000,
-   "source": "",
-   "chains": [
-    "Bitcoin",
-    "Ethereum",
-    "Solana",
-    "TRON",
-    "Polygon",
-    "Arbitrum",
-    "Avalanche",
-    "BSC",
-    "Stellar",
-    "XDC"
    ]
   }
  ],
