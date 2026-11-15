@@ -1,14 +1,44 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-14T11:39:16Z",
+ "generated_at": "2026-11-15T12:07:39Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27605182167.12813,
- "ytd_usd": 8621064611.128132,
+ "total_all_time_usd": 27609018831.12813,
+ "ytd_usd": 8619222275.128132,
  "incidents": [
+  {
+   "date": "2026-11-14",
+   "name": "Hyprearn Perps",
+   "amount_usd": null,
+   "chains": [
+    "Hyperliquid L1"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-11-14",
+   "name": "Kava Lend",
+   "amount_usd": 3700000,
+   "chains": [
+    "Kava"
+   ],
+   "classification": "Token & Share Accounting",
+   "technique": "Arithmetic Error",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Go"
+  },
   {
    "date": "2026-11-13",
    "name": "Pennysia",
@@ -143,6 +173,21 @@
    ],
    "classification": "Input Validation",
    "technique": "Missing Input Validation",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-11-07",
+   "name": "LiquidCore",
+   "amount_usd": 136664,
+   "chains": [
+    "Hyperliquid L1"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Deployer Key Compromised",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
@@ -4538,51 +4583,6 @@
    "date": "2026-03-26",
    "name": "TUR Staking",
    "amount_usd": 133000,
-   "chains": [
-    "BSC"
-   ],
-   "classification": "Oracle Manipulation",
-   "technique": "Spot Price Manipulation",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-24",
-   "name": "UdonFi Lending",
-   "amount_usd": null,
-   "chains": [
-    "Chromia"
-   ],
-   "classification": "Protocol Logic",
-   "technique": "Withdrawal Logic Flaw",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": null
-  },
-  {
-   "date": "2026-03-23",
-   "name": "BCE",
-   "amount_usd": 679000,
-   "chains": [
-    "BSC"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Incorrect Share Accounting",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-22",
-   "name": "Cyrus Finance",
-   "amount_usd": 5000000,
    "chains": [
     "BSC"
    ],
