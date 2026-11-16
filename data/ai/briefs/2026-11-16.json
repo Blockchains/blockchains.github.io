@@ -1,0 +1,55 @@
+{
+ "headline": "Crypto Market Structure Brief - 16 November 2026",
+ "summary": "Ethereum holds the largest chain TVL at 37.66 billion USD, followed by Base and Solana. USDT leads stablecoin circulation at 175.33 billion USD while USDC stands at 69.30 billion USD. Uniswap V3 recorded the highest DEX volume at 956.76 million USD in the last 24 hours. Multiple protocol incidents occurred in the prior fortnight, with several stablecoins showing peg deviations.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum leads with 37.66 billion USD TVL.",
+    "Base ranks second at 5.14 billion USD TVL.",
+    "Solana and BSC follow at 4.69 billion USD and 4.53 billion USD respectively."
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V3 recorded 956.76 million USD 24-hour volume.",
+    "PancakeSwap AMM V3 and Kalshi follow with 783.52 million USD and 780.26 million USD.",
+    "Tether generated 17.01 million USD in fees, ahead of Circle USDC at 6.76 million USD."
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulation totals 175.33 billion USD; USDC totals 69.30 billion USD.",
+    "USDS, USDe and DAI hold 5.23 billion USD, 4.85 billion USD and 4.63 billion USD respectively.",
+    "AP USDA shows an 11.69 percent depeg; apxUSD, FRAX and others remain under watch."
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base reports 13.10 billion USD TVS with Stage 1 status.",
+    "Arbitrum One holds 8.87 billion USD TVS; Hyperliquid records 5.80 billion USD TVS.",
+    "Polygon PoS and Robinhood Chain follow at 3.60 billion USD and 1.91 billion USD TVS."
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Fourteen incidents reported in the last 14 days, including protocol logic flaws on Hyperliquid L1 and Kava.",
+    "Key compromises affected Initia and LiquidCore; bridge exploits hit Across and Ankr.",
+    "Peg alerts active for apxUSD, FRAX, satUSD, USDA and cgUSD."
+   ]
+  }
+ ],
+ "watchlist": [
+  "AP USDA depeg at 11.69 percent deviation",
+  "Hyprearn Perps and Kava Lend incidents on 14 November",
+  "USDS and USDe 7-day circulation declines",
+  "Base and Arbitrum TVS changes"
+ ],
+ "date": "2026-11-16",
+ "model": "grok-4.3",
+ "tokens": 13214
+}
