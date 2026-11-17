@@ -1,14 +1,74 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-16T13:05:43Z",
+ "generated_at": "2026-11-17T13:43:05Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27609018831.12813,
- "ytd_usd": 8619222275.128132,
+ "total_all_time_usd": 27619739888.12813,
+ "ytd_usd": 8628606332.128132,
  "incidents": [
+  {
+   "date": "2026-11-16",
+   "name": "Lighter Perps",
+   "amount_usd": 10393057,
+   "chains": [
+    "zkLighter"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "API Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-11-16",
+   "name": "MORE Markets",
+   "amount_usd": 308000,
+   "chains": [
+    "Flow"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
+  {
+   "date": "2026-11-15",
+   "name": "Chain Games",
+   "amount_usd": 20000,
+   "chains": [
+    "Polygon"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Reward Logic Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-11-15",
+   "name": "Luxor Commander",
+   "amount_usd": null,
+   "chains": [
+    "Bitcoin"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "Mining Infrastructure",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
   {
    "date": "2026-11-14",
    "name": "Hyprearn Perps",
@@ -4525,66 +4585,6 @@
    "amount_usd": 10500,
    "chains": [
     "Polygon"
-   ],
-   "classification": "Oracle Manipulation",
-   "technique": "Spot Price Manipulation",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-31",
-   "name": "LML/USDT staking protocol",
-   "amount_usd": 950000,
-   "chains": [
-    "BSC"
-   ],
-   "classification": "Oracle Manipulation",
-   "technique": "Spot Price Manipulation",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-28",
-   "name": "VTSwapHook",
-   "amount_usd": null,
-   "chains": [
-    "Arbitrum"
-   ],
-   "classification": "Protocol Logic",
-   "technique": "Swap Logic Flaw",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-03-28",
-   "name": "GoonFi",
-   "amount_usd": 254000,
-   "chains": [
-    "Solana"
-   ],
-   "classification": "Protocol Logic",
-   "technique": "Swap Logic Flaw",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Rust"
-  },
-  {
-   "date": "2026-03-26",
-   "name": "TUR Staking",
-   "amount_usd": 133000,
-   "chains": [
-    "BSC"
    ],
    "classification": "Oracle Manipulation",
    "technique": "Spot Price Manipulation",
