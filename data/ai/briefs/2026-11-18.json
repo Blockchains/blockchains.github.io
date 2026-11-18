@@ -1,0 +1,56 @@
+{
+ "headline": "Ethereum tops TVL at $37bn; Base and Solana follow",
+ "summary": "Ethereum holds the largest chain TVL at $37.0bn, followed by Base at $5.2bn and Solana at $4.8bn. Uniswap V3 recorded the highest 24h DEX volume at $860m while Tether generated the top protocol fees at $17.1m. USDT leads stablecoin circulation at $175.2bn and USDC at $69.1bn, with five stablecoins showing peg deviations. Multiple incidents occurred in the past 14 days, including losses on Base, zkLighter and Kava.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum leads with $37.04bn TVL",
+    "Base second at $5.20bn, Solana third at $4.80bn",
+    "BSC fourth at $4.52bn, Tron fifth at $4.45bn"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V3 recorded $860m 24h volume, down 12.9% daily",
+    "Aero Slipstream and Uniswap V4 each exceeded $688m",
+    "Tether generated $17.1m fees, Circle USDC $6.8m"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulation $175.2bn, USDC $69.1bn",
+    "USDS, USDe and DAI each above $4.5bn",
+    "Five stablecoins flagged for peg deviation, including AP USDA at -10.8%"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base TVS $14.08bn, Arbitrum One $9.13bn",
+    "Hyperliquid TVS $5.67bn, Polygon PoS $3.66bn",
+    "Ink TVS rose 99.5% over seven days to $786m"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "14 incidents reported in last 14 days across multiple chains",
+    "Largest single loss $10.4m on Lighter Perps via API compromise",
+    "Kava Lend lost $3.7m from arithmetic error"
+   ]
+  }
+ ],
+ "watchlist": [
+  "AP USDA depeg at 0.8916",
+  "B18 TimeBank loss on Base",
+  "Lighter Perps $10.4m incident",
+  "Ink TVS 99.5% weekly increase",
+  "THORChain DEX 112% daily volume rise"
+ ],
+ "date": "2026-11-18",
+ "model": "grok-4.3",
+ "tokens": 13232
+}

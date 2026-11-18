@@ -1,14 +1,29 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-17T13:43:05Z",
+ "generated_at": "2026-11-18T13:17:23Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27619739888.12813,
- "ytd_usd": 8628606332.128132,
+ "total_all_time_usd": 27620184894.12813,
+ "ytd_usd": 8333681838.128132,
  "incidents": [
+  {
+   "date": "2026-11-17",
+   "name": "B18 TimeBank",
+   "amount_usd": 404540,
+   "chains": [
+    "Base"
+   ],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
   {
    "date": "2026-11-16",
    "name": "Lighter Perps",
@@ -38,6 +53,25 @@
    "returned_usd": null,
    "source": "",
    "language": "Solidity"
+  },
+  {
+   "date": "2026-11-16",
+   "name": "Optimizely (OPTIMJACK)",
+   "amount_usd": 2260,
+   "chains": [
+    "Bitcoin",
+    "Litecoin",
+    "TRON",
+    "Ethereum",
+    "BSC"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Supply Chain Attack",
+   "target_type": "Web Infrastructure",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "JavaScript"
   },
   {
    "date": "2026-11-15",
@@ -143,6 +177,21 @@
    "returned_usd": null,
    "source": "",
    "language": null
+  },
+  {
+   "date": "2026-11-10",
+   "name": "Curve Finance (CowSwapBurner)",
+   "amount_usd": 38206,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Input Validation",
+   "technique": "Signature Verification Flaw",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Vyper"
   },
   {
    "date": "2026-11-10",
@@ -4543,51 +4592,6 @@
    ],
    "classification": "Access Control",
    "technique": "Improper Access Control",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-04-03",
-   "name": "Silo V2",
-   "amount_usd": 359000,
-   "chains": [
-    "Arbitrum"
-   ],
-   "classification": "Oracle Manipulation",
-   "technique": "Oracle Misconfiguration",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-04-01",
-   "name": "Drift Trade",
-   "amount_usd": 295000000,
-   "chains": [
-    "Solana"
-   ],
-   "classification": "Access Control",
-   "technique": "Proxy Upgrade Hijack",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Rust"
-  },
-  {
-   "date": "2026-03-31",
-   "name": "WhaleBit",
-   "amount_usd": 10500,
-   "chains": [
-    "Polygon"
-   ],
-   "classification": "Oracle Manipulation",
-   "technique": "Spot Price Manipulation",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

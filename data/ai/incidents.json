@@ -1,16 +1,28 @@
 {
  "service": "ai/incidents",
  "description": "AI incident explainer",
- "generated_at": "2026-11-17T13:43:47Z",
+ "generated_at": "2026-11-18T13:18:05Z",
  "source": "Grok (xAI) over public data: DefiLlama hacks",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "items": [
   {
+   "name": "B18 TimeBank",
+   "date": "2026-11-17",
+   "plain_english": "The incident was classified as Protocol Logic with technique Unknown resulting in 404540 USD loss. This was a DeFi Protocol target.",
+   "lesson_for_builders": "Audit protocol logic thoroughly even when technique is unknown to avoid losses of this scale.",
+   "related_lab": null,
+   "amount_usd": 404540,
+   "source": "",
+   "chains": [
+    "Base"
+   ]
+  },
+  {
    "name": "Lighter Perps",
    "date": "2026-11-16",
-   "plain_english": "The incident was classified as Frontend & Infrastructure. It used the API Key Compromised technique for an amount of 10393057 USD.",
-   "lesson_for_builders": "Secure API keys and infrastructure components against compromise.",
+   "plain_english": "The incident was classified as Frontend & Infrastructure with technique API Key Compromised resulting in 10393057 USD loss. This was a DeFi Protocol target.",
+   "lesson_for_builders": "Secure frontend infrastructure and API keys to prevent compromised access leading to large losses.",
    "related_lab": null,
    "amount_usd": 10393057,
    "source": "",
@@ -21,8 +33,8 @@
   {
    "name": "MORE Markets",
    "date": "2026-11-16",
-   "plain_english": "The incident was classified as Protocol Logic. It used the Unknown technique for an amount of 308000 USD.",
-   "lesson_for_builders": "Review protocol logic for potential flaws.",
+   "plain_english": "The incident was classified as Protocol Logic with technique Unknown resulting in 308000 USD loss. This was a DeFi Protocol target in Solidity.",
+   "lesson_for_builders": "Review protocol logic in Solidity to mitigate unknown flaws causing 308000 USD losses.",
    "related_lab": null,
    "amount_usd": 308000,
    "source": "",
@@ -31,10 +43,26 @@
    ]
   },
   {
+   "name": "Optimizely (OPTIMJACK)",
+   "date": "2026-11-16",
+   "plain_english": "The incident was classified as Frontend & Infrastructure with technique Supply Chain Attack resulting in 2260 USD loss. This was a Web Infrastructure target in JavaScript.",
+   "lesson_for_builders": "Harden supply chain in JavaScript deployments to avoid even small losses from attacks.",
+   "related_lab": null,
+   "amount_usd": 2260,
+   "source": "",
+   "chains": [
+    "Bitcoin",
+    "Litecoin",
+    "TRON",
+    "Ethereum",
+    "BSC"
+   ]
+  },
+  {
    "name": "Chain Games",
    "date": "2026-11-15",
-   "plain_english": "The incident was classified as Protocol Logic. It used the Reward Logic Flaw technique for an amount of 20000 USD.",
-   "lesson_for_builders": "Audit reward distribution logic thoroughly.",
+   "plain_english": "The incident was classified as Protocol Logic with technique Reward Logic Flaw resulting in 20000 USD loss. This was a DeFi Protocol target on Polygon.",
+   "lesson_for_builders": "Validate reward logic in protocol design to prevent flaws resulting in 20000 USD losses.",
    "related_lab": null,
    "amount_usd": 20000,
    "source": "",
@@ -44,9 +72,9 @@
   },
   {
    "name": "Luxor Commander",
-   "date": "2026-11-15",
-   "plain_english": "The incident was classified as Protocol Logic. It used the Unknown technique for an amount of null USD.",
-   "lesson_for_builders": "Validate all protocol logic paths.",
+   "date": "2026-11-14",
+   "plain_english": "The incident was classified as Protocol Logic with technique Unknown resulting in null USD loss. This was a Mining Infrastructure target on Bitcoin.",
+   "lesson_for_builders": "Strengthen protocol logic checks for mining infrastructure even without reported loss amounts.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -57,8 +85,8 @@
   {
    "name": "Hyprearn Perps",
    "date": "2026-11-14",
-   "plain_english": "The incident was classified as Protocol Logic. It used the Unknown technique for an amount of null USD.",
-   "lesson_for_builders": "Test protocol logic under various conditions.",
+   "plain_english": "The incident was classified as Protocol Logic with technique Unknown resulting in null USD loss. This was a DeFi Protocol target on Hyperliquid L1.",
+   "lesson_for_builders": "Audit all protocol logic paths to handle unknown techniques in DeFi protocols.",
    "related_lab": null,
    "amount_usd": null,
    "source": "",
@@ -69,9 +97,9 @@
   {
    "name": "Kava Lend",
    "date": "2026-11-14",
-   "plain_english": "The incident was classified as Token & Share Accounting. It used the Arithmetic Error technique for an amount of 3700000 USD.",
-   "lesson_for_builders": "Implement invariant checks for token accounting.",
-   "related_lab": "L28 InvariantVault",
+   "plain_english": "The incident was classified as Token & Share Accounting with technique Arithmetic Error resulting in 3700000 USD loss. This was a DeFi Protocol target in Go.",
+   "lesson_for_builders": "Implement strict arithmetic checks in token accounting code written in Go.",
+   "related_lab": null,
    "amount_usd": 3700000,
    "source": "",
    "chains": [
@@ -81,8 +109,8 @@
   {
    "name": "Pennysia",
    "date": "2026-11-13",
-   "plain_english": "The incident was classified as Access Control. It used the Arbitrary External Call technique for an amount of 5131 USD.",
-   "lesson_for_builders": "Enforce strict ownable access control to block unauthorized calls.",
+   "plain_english": "The incident was classified as Access Control with technique Arbitrary External Call resulting in 5131 USD loss. This was a DeFi Protocol target in Solidity.",
+   "lesson_for_builders": "Enforce proper access control to block arbitrary external calls in Solidity contracts.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": 5131,
    "source": "",
@@ -93,8 +121,8 @@
   {
    "name": "Edel",
    "date": "2026-11-11",
-   "plain_english": "The incident was classified as Protocol Logic. It used the Unknown technique for an amount of 300000 USD.",
-   "lesson_for_builders": "Audit all protocol logic implementations.",
+   "plain_english": "The incident was classified as Protocol Logic with technique Unknown resulting in 300000 USD loss. This was a DeFi Protocol target on Ethereum.",
+   "lesson_for_builders": "Test protocol logic invariants to prevent unknown issues causing 300000 USD losses.",
    "related_lab": null,
    "amount_usd": 300000,
    "source": "",
@@ -105,8 +133,8 @@
   {
    "name": "Rujira AMM Strategies",
    "date": "2026-11-10",
-   "plain_english": "The incident was classified as Protocol Logic. It used the Swap Logic Flaw technique for an amount of 200000 USD.",
-   "lesson_for_builders": "Verify swap logic for correctness.",
+   "plain_english": "The incident was classified as Protocol Logic with technique Swap Logic Flaw resulting in 200000 USD loss. This was a DeFi Protocol target on THORChain.",
+   "lesson_for_builders": "Verify swap logic thoroughly in AMM protocols to avoid logic flaws.",
    "related_lab": null,
    "amount_usd": 200000,
    "source": "",
@@ -115,39 +143,15 @@
    ]
   },
   {
-   "name": "Arcus Perps",
+   "name": "Curve Finance (CowSwapBurner)",
    "date": "2026-11-10",
-   "plain_english": "The incident was classified as Protocol Logic. It used the Withdrawal Logic Flaw technique for an amount of 2234391 USD.",
-   "lesson_for_builders": "Secure withdrawal logic paths.",
-   "related_lab": null,
-   "amount_usd": 2234391,
+   "plain_english": "The incident was classified as Input Validation with technique Signature Verification Flaw resulting in 38206 USD loss. This was a DeFi Protocol target in Vyper.",
+   "lesson_for_builders": "Strengthen input validation for signatures in Vyper contracts to prevent verification flaws.",
+   "related_lab": "L13 Signatures",
+   "amount_usd": 38206,
    "source": "",
    "chains": [
-    "Robinhood Chain"
-   ]
-  },
-  {
-   "name": "Across",
-   "date": "2026-11-10",
-   "plain_english": "The incident was classified as Frontend & Infrastructure. It used the DNS Hijack technique for an amount of null USD.",
-   "lesson_for_builders": "Protect frontend and DNS configurations.",
-   "related_lab": null,
-   "amount_usd": null,
-   "source": "",
-   "chains": [
-    "Plasma"
-   ]
-  },
-  {
-   "name": "Initia",
-   "date": "2026-11-10",
-   "plain_english": "The incident was classified as Key Compromise. It used the Private Key Compromised technique for an amount of 615000 USD.",
-   "lesson_for_builders": "Use multisig for key management.",
-   "related_lab": "L14 MultiSig",
-   "amount_usd": 615000,
-   "source": "",
-   "chains": [
-    "Initia"
+    "Ethereum"
    ]
   }
  ],
