@@ -1,14 +1,43 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-19T13:40:54Z",
+ "generated_at": "2026-11-20T13:23:16Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27626105597.12813,
- "ytd_usd": 8334220923.128132,
+ "total_all_time_usd": 27626132497.12813,
+ "ytd_usd": 8332286873.128132,
  "incidents": [
+  {
+   "date": "2026-11-19",
+   "name": "Fluidkey",
+   "amount_usd": null,
+   "chains": [],
+   "classification": "Protocol Logic",
+   "technique": "Unknown",
+   "target_type": "Wallet",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-11-19",
+   "name": "CALC",
+   "amount_usd": 26900,
+   "chains": [
+    "Ethereum",
+    "Hyperliquid L1"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Key Leaked via Infrastructure",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
   {
    "date": "2026-11-18",
    "name": "Gonka AI",
@@ -4558,36 +4587,6 @@
    "returned_usd": null,
    "source": "",
    "language": null
-  },
-  {
-   "date": "2026-04-13",
-   "name": "MONA",
-   "amount_usd": 60950,
-   "chains": [
-    "BSC"
-   ],
-   "classification": "Token & Share Accounting",
-   "technique": "Incorrect Share Accounting",
-   "target_type": "Token",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-04-13",
-   "name": "Dango",
-   "amount_usd": 1900000,
-   "chains": [
-    "Dango"
-   ],
-   "classification": "Input Validation",
-   "technique": "Missing Input Validation",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": 410000,
-   "source": "",
-   "language": "Solidity"
   }
  ]
 }

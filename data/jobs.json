@@ -1,11 +1,11 @@
 {
  "service": "jobs",
  "description": "Crypto & web3 job board (aggregated from public sources)",
- "generated_at": "2026-11-19T13:40:57Z",
+ "generated_at": "2026-11-20T13:23:18Z",
  "source": "Greenhouse public job-board APIs + CryptoJobsList RSS",
  "source_url": "https://developers.greenhouse.io/job-board.html",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
- "count": 583,
+ "count": 579,
  "companies": [
   "Aptos Labs",
   "Blockchain.com",
@@ -18,10 +18,970 @@
  ],
  "jobs": [
   {
+   "title": "Frontline Support Team Lead",
+   "company": "Fireblocks",
+   "location": "Singapore",
+   "url": "https://www.fireblocks.com/careers/position?gh_jid=4730800006",
+   "posted": "2026-11-20",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Accounting Intern",
+   "company": "Coinbase",
+   "location": "Hybrid - New York, NY",
+   "url": "https://www.coinbase.com/careers/positions/8173991?gh_jid=8173991",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Business Controller Intern",
+   "company": "Coinbase",
+   "location": "Hybrid - New York, NY",
+   "url": "https://www.coinbase.com/careers/positions/8175366?gh_jid=8175366",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Credit Risk Manager",
+   "company": "Coinbase",
+   "location": "Remote - USA",
+   "url": "https://www.coinbase.com/careers/positions/8385963?gh_jid=8385963",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Director, Credit Risk",
+   "company": "Coinbase",
+   "location": "Remote - USA",
+   "url": "https://www.coinbase.com/careers/positions/8360760?gh_jid=8360760",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "International Expansion Operations Associate",
+   "company": "Coinbase",
+   "location": "Remote - UK",
+   "url": "https://www.coinbase.com/careers/positions/8402367?gh_jid=8402367",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Prime Sales Trader",
+   "company": "Coinbase",
+   "location": "Remote - UK",
+   "url": "https://www.coinbase.com/careers/positions/8013951?gh_jid=8013951",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Product Creative Designer",
+   "company": "Coinbase",
+   "location": "Remote - USA",
+   "url": "https://www.coinbase.com/careers/positions/8402798?gh_jid=8402798",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Software Engineer, Backend (Retail Spot)",
+   "company": "Coinbase",
+   "location": "Remote - Canada",
+   "url": "https://www.coinbase.com/careers/positions/8243517?gh_jid=8243517",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
    "title": "Senior Software Engineer, Native Mobile - International",
    "company": "Coinbase",
    "location": "Remote - Singapore",
    "url": "https://www.coinbase.com/careers/positions/8349028?gh_jid=8349028",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Staff Design Researcher",
+   "company": "Coinbase",
+   "location": "Remote - USA",
+   "url": "https://www.coinbase.com/careers/positions/8318555?gh_jid=8318555",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Strategic Sourcing Intern",
+   "company": "Coinbase",
+   "location": "Hybrid - New York, NY",
+   "url": "https://www.coinbase.com/careers/positions/8376084?gh_jid=8376084",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Tax Operations Intern",
+   "company": "Coinbase",
+   "location": "Hybrid - New York, NY",
+   "url": "https://www.coinbase.com/careers/positions/8175453?gh_jid=8175453",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Account Executive",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8304345?gh_jid=8304345",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Account Executive, Ripple Treasury",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8358370?gh_jid=8358370",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Account Executive, Ripple Treasury (German Speaking)",
+   "company": "Ripple",
+   "location": "Geneva, Switzerland",
+   "url": "https://ripple.com/careers/all-jobs/job/8358426?gh_jid=8358426",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Accounting Manager",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8366302?gh_jid=8366302",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Accounting Manager",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8366323?gh_jid=8366323",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Business Development Manager",
+   "company": "Ripple",
+   "location": "Singapore",
+   "url": "https://ripple.com/careers/all-jobs/job/8225681?gh_jid=8225681",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Business Development Senior Director - Capital Markets",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7572250?gh_jid=7572250",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Client Support Analyst",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8142069?gh_jid=8142069",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Client Support Analyst",
+   "company": "Ripple",
+   "location": "Toronto, Canada",
+   "url": "https://ripple.com/careers/all-jobs/job/8142058?gh_jid=8142058",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Customer Success Senior Manager",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8241644?gh_jid=8241644",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Customer Success Senior Manager",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8241656?gh_jid=8241656",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Director, Credit Risk",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8310994?gh_jid=8310994",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Director, Customer Partner Success",
+   "company": "Ripple",
+   "location": "Singapore",
+   "url": "https://ripple.com/careers/all-jobs/job/8345370?gh_jid=8345370",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Director, Global SDR Operations",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8108602?gh_jid=8108602",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Director, Head of Client Solutions, Europe",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8358440?gh_jid=8358440",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Director, Product Management, On-chain Payments",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8206128?gh_jid=8206128",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Finance Manager",
+   "company": "Ripple",
+   "location": "Singapore",
+   "url": "https://ripple.com/careers/all-jobs/job/8327701?gh_jid=8327701",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Global KYC & Due Diligence Specialist",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8311620?gh_jid=8311620",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Head of Managed Services",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8079221?gh_jid=8079221",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Head of Managed Services",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8079242?gh_jid=8079242",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Head of Managed Services",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8079209?gh_jid=8079209",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Internal Audit -  Manager",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8311695?gh_jid=8311695",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Internal Audit -  Manager",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8311707?gh_jid=8311707",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Lead Business Recruiter",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8381695?gh_jid=8381695",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Manager, Technical Recruiting",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8381507?gh_jid=8381507",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Physical Security Manager, APAC/MENA",
+   "company": "Ripple",
+   "location": "Singapore",
+   "url": "https://ripple.com/careers/all-jobs/job/8245075?gh_jid=8245075",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Physical Security Manager, APAC/MENA",
+   "company": "Ripple",
+   "location": "Sydney, New South Wales, Australia",
+   "url": "https://ripple.com/careers/all-jobs/job/8245077?gh_jid=8245077",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Principal Technical Program Manager",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/7904769?gh_jid=7904769",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Principal Technical Program Manager",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7904761?gh_jid=7904761",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Principal Technical Program Manager",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7904773?gh_jid=7904773",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Product Marketing Manager",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8372970?gh_jid=8372970",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Product Marketing Manager",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8372949?gh_jid=8372949",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Product Operations Analyst (Customer Activations)",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8328050?gh_jid=8328050",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Product Operations Analyst (Customer Activations)",
+   "company": "Ripple",
+   "location": "Singapore",
+   "url": "https://ripple.com/careers/all-jobs/job/8328060?gh_jid=8328060",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Professional Services Consultant",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8328916?gh_jid=8328916",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Professional Services Consultant",
+   "company": "Ripple",
+   "location": "Miami, FL, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8328926?gh_jid=8328926",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Professional Services Consultant",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8328949?gh_jid=8328949",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Professional Services Consultant",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8328928?gh_jid=8328928",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Professional Services Consultant, Payments",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7980840?gh_jid=7980840",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Professional Services Consultant (TMS Implementation)",
+   "company": "Ripple",
+   "location": "Singapore",
+   "url": "https://ripple.com/careers/all-jobs/job/8286436?gh_jid=8286436",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Professional Services Consultant (TMS Implementation)",
+   "company": "Ripple",
+   "location": "Sydney, New South Wales, Australia",
+   "url": "https://ripple.com/careers/all-jobs/job/8286438?gh_jid=8286438",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Program Manager",
+   "company": "Ripple",
+   "location": "Dubai, United Arab Emirates",
+   "url": "https://ripple.com/careers/all-jobs/job/8224772?gh_jid=8224772",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Project Manager",
+   "company": "Ripple",
+   "location": "Miami, FL, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8329000?gh_jid=8329000",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Quantitative DeFi Specialist",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8345667?gh_jid=8345667",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Renewals Manager, EMEA",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8179167?gh_jid=8179167",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "RFP Specialist (Americas)",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8349630?gh_jid=8349630",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Sales Director, Large Enterprise/FIs - LatAm",
+   "company": "Ripple",
+   "location": "São Paulo, Brazil",
+   "url": "https://ripple.com/careers/all-jobs/job/8196325?gh_jid=8196325",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Brand Designer",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7462072?gh_jid=7462072",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Business Recruiter (12-Month Contract)",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8122926?gh_jid=8122926",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Cloud Architect",
+   "company": "Ripple",
+   "location": "Singapore",
+   "url": "https://ripple.com/careers/all-jobs/job/8346319?gh_jid=8346319",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Cloud Architect",
+   "company": "Ripple",
+   "location": "Sydney, New South Wales, Australia",
+   "url": "https://ripple.com/careers/all-jobs/job/8346318?gh_jid=8346318",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Derivative Accountant",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8311680?gh_jid=8311680",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Derivative Accountant",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8311659?gh_jid=8311659",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior DevOps Engineer",
+   "company": "Ripple",
+   "location": "Dublin, Ireland",
+   "url": "https://ripple.com/careers/all-jobs/job/8330752?gh_jid=8330752",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior DevOps Engineer",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8330754?gh_jid=8330754",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Ecosystem Growth Manager",
+   "company": "Ripple",
+   "location": "Miami, FL, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7646347?gh_jid=7646347",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Ecosystem Growth Manager",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7646349?gh_jid=7646349",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Field Marketing Specialist",
+   "company": "Ripple",
+   "location": "São Paulo, Brazil",
+   "url": "https://ripple.com/careers/all-jobs/job/8226863?gh_jid=8226863",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Manager, HR Business Partner, G&A",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8393265?gh_jid=8393265",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Manager, HR Business Partner, Sales & Prime Brokerage",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8396624?gh_jid=8396624",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Manager, Marketing Analytics",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8257700?gh_jid=8257700",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Manager, Marketing Analytics",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8257667?gh_jid=8257667",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Manager, Marketing Analytics",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8257675?gh_jid=8257675",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Manager, Marketing Analytics",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8257679?gh_jid=8257679",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Professional Services Consultant",
+   "company": "Ripple",
+   "location": "São Paulo, Brazil",
+   "url": "https://ripple.com/careers/all-jobs/job/8247091?gh_jid=8247091",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Recruiting Coordinator",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8370740?gh_jid=8370740",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Ripple Trading and Markets Analyst",
+   "company": "Ripple",
+   "location": "Miami, FL, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8180173?gh_jid=8180173",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Sales Development Representative",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8345460?gh_jid=8345460",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Sales Manager",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8257711?gh_jid=8257711",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Sales Manager",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8257746?gh_jid=8257746",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Security Engineer, Incident Response ",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8240446?gh_jid=8240446",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Software Engineer",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8106886?gh_jid=8106886",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Software Engineer (Full-Stack)",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8180206?gh_jid=8180206",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Software Engineer (Full-Stack) ",
+   "company": "Ripple",
+   "location": "Dublin, Ireland",
+   "url": "https://ripple.com/careers/all-jobs/job/8180204?gh_jid=8180204",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Software Engineer (.NET/C#)",
+   "company": "Ripple",
+   "location": "Dublin, Ireland",
+   "url": "https://ripple.com/careers/all-jobs/job/8325879?gh_jid=8325879",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Software Engineer (.NET/C#)",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8325881?gh_jid=8325881",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Software Engineer, RippleX (Platform)",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8110122?gh_jid=8110122",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Software Engineer, Risk",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8051961?gh_jid=8051961",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Staff, Developer Relations",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8244768?gh_jid=8244768",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Staff Product Manager, Global Payouts",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8129029?gh_jid=8129029",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Staff Product Manager, Trust Platform ",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8260314?gh_jid=8260314",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Staff Security Engineer, AI Security",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7961902?gh_jid=7961902",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Staff Security Engineer, AI Security ",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/7961910?gh_jid=7961910",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Staff Security Engineer, AI Security ",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7961914?gh_jid=7961914",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Staff Security Engineer, Product Security",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7997234?gh_jid=7997234",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Staff Security Engineer, Product Security",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7997246?gh_jid=7997246",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Staff Security Engineer, Product Security",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7997267?gh_jid=7997267",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Staff Software Engineer",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8397720?gh_jid=8397720",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Staff Technical Program Manager",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8366328?gh_jid=8366328",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Staff Technical Program Manager, Information Security",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8126861?gh_jid=8126861",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Treasury Manager - Liquidity Management",
+   "company": "Ripple",
+   "location": "São Paulo, Brazil",
+   "url": "https://ripple.com/careers/all-jobs/job/8372917?gh_jid=8372917",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Software Engineer II",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8241603?gh_jid=8241603",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Specialist, Global KYC & Due Diligence",
+   "company": "Ripple",
+   "location": "London, UK",
+   "url": "https://ripple.com/careers/all-jobs/job/8220967?gh_jid=8220967",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Staff Cloud Architect",
+   "company": "Ripple",
+   "location": "Singapore",
+   "url": "https://ripple.com/careers/all-jobs/job/7685310?gh_jid=7685310",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Staff Cloud Architect",
+   "company": "Ripple",
+   "location": "Sydney, New South Wales, Australia",
+   "url": "https://ripple.com/careers/all-jobs/job/7685312?gh_jid=7685312",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Staff GRC Program Manager",
+   "company": "Ripple",
+   "location": "São Paulo, Brazil",
+   "url": "https://ripple.com/careers/all-jobs/job/8223889?gh_jid=8223889",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Staff Product Manager, Tokenization",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8353248?gh_jid=8353248",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Staff Software Engineer, AI Platform",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8129139?gh_jid=8129139",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Staff Software Engineer, Liquidity Management (C#/.NET)",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7944348?gh_jid=7944348",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Treasury Manager",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8233618?gh_jid=8233618",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Treasury Manager, Global Treasury Operations",
+   "company": "Ripple",
+   "location": "Chicago, Illinois, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8267621?gh_jid=8267621",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Treasury Manager, Global Treasury Operations",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8267600?gh_jid=8267600",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Treasury Manager, Global Treasury Operations",
+   "company": "Ripple",
+   "location": "Toronto, Canada",
+   "url": "https://ripple.com/careers/all-jobs/job/8267610?gh_jid=8267610",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Treasury Manager, Global Treasury Operations",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8267588?gh_jid=8267588",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "VP, Corporate Development",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7622908?gh_jid=7622908",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "VP, Corporate Development",
+   "company": "Ripple",
+   "location": "San Francisco, CA, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7622896?gh_jid=7622896",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "VP, Corporate Development",
+   "company": "Ripple",
+   "location": "Miami, FL, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/7622906?gh_jid=7622906",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Workplace Project Manager",
+   "company": "Ripple",
+   "location": "New York, NY, United States",
+   "url": "https://ripple.com/careers/all-jobs/job/8241693?gh_jid=8241693",
    "posted": "2026-11-19",
    "source": "Greenhouse"
   },
@@ -62,6 +1022,22 @@
    "company": "Fireblocks",
    "location": "Singapore",
    "url": "https://www.fireblocks.com/careers/position?gh_jid=4727541006",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Solutions Architect, AMER",
+   "company": "Fireblocks",
+   "location": "New York; United States",
+   "url": "https://www.fireblocks.com/careers/position?gh_jid=4699994006",
+   "posted": "2026-11-19",
+   "source": "Greenhouse"
+  },
+  {
+   "title": "Senior Director, Compensation & Benefits",
+   "company": "Consensys",
+   "location": "UNITED STATES - Remote, EMEA - Remote",
+   "url": "https://job-boards.greenhouse.io/consensys/jobs/8395496",
    "posted": "2026-11-19",
    "source": "Greenhouse"
   },
@@ -122,30 +1098,6 @@
    "source": "Greenhouse"
   },
   {
-   "title": "Quantitative DeFi Specialist",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8345667?gh_jid=8345667",
-   "posted": "2026-11-18",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Manager, HR Business Partner, G&A",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8393265?gh_jid=8393265",
-   "posted": "2026-11-18",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Manager, HR Business Partner, Sales & Prime Brokerage",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8396624?gh_jid=8396624",
-   "posted": "2026-11-18",
-   "source": "Greenhouse"
-  },
-  {
    "title": "Senior Marketing Manager, APAC",
    "company": "Fireblocks",
    "location": "Singapore",
@@ -166,14 +1118,6 @@
    "company": "Coinbase",
    "location": "Remote - USA",
    "url": "https://www.coinbase.com/careers/positions/7746572?gh_jid=7746572",
-   "posted": "2026-11-17",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Credit Risk Manager",
-   "company": "Coinbase",
-   "location": "Remote - USA",
-   "url": "https://www.coinbase.com/careers/positions/8385963?gh_jid=8385963",
    "posted": "2026-11-17",
    "source": "Greenhouse"
   },
@@ -210,46 +1154,6 @@
    "source": "Greenhouse"
   },
   {
-   "title": "Account Executive, Ripple Treasury",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8358370?gh_jid=8358370",
-   "posted": "2026-11-17",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Account Executive, Ripple Treasury (German Speaking)",
-   "company": "Ripple",
-   "location": "Geneva, Switzerland",
-   "url": "https://ripple.com/careers/all-jobs/job/8358426?gh_jid=8358426",
-   "posted": "2026-11-17",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Lead Business Recruiter",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8381695?gh_jid=8381695",
-   "posted": "2026-11-17",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Renewals Manager, EMEA",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8179167?gh_jid=8179167",
-   "posted": "2026-11-17",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Staff Software Engineer",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8397720?gh_jid=8397720",
-   "posted": "2026-11-17",
-   "source": "Greenhouse"
-  },
-  {
    "title": "DevOps Team Leader",
    "company": "Fireblocks",
    "location": "Tel Aviv-Yafo, Tel Aviv District, Israel",
@@ -260,16 +1164,16 @@
   {
    "title": "Sales Engineer",
    "company": "Fireblocks",
-   "location": "New York",
-   "url": "https://www.fireblocks.com/careers/position?gh_jid=4698009006",
+   "location": "United States",
+   "url": "https://www.fireblocks.com/careers/position?gh_jid=4730326006",
    "posted": "2026-11-17",
    "source": "Greenhouse"
   },
   {
    "title": "Sales Engineer",
    "company": "Fireblocks",
-   "location": "United States",
-   "url": "https://www.fireblocks.com/careers/position?gh_jid=4730326006",
+   "location": "New York",
+   "url": "https://www.fireblocks.com/careers/position?gh_jid=4698009006",
    "posted": "2026-11-17",
    "source": "Greenhouse"
   },
@@ -286,14 +1190,6 @@
    "company": "Blockchain.com",
    "location": "Buenos Aires",
    "url": "https://job-boards.greenhouse.io/blockchain/jobs/8392680",
-   "posted": "2026-11-17",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior People Operations Associate",
-   "company": "Consensys",
-   "location": "EMEA - Remote",
-   "url": "https://job-boards.greenhouse.io/consensys/jobs/8329366",
    "posted": "2026-11-17",
    "source": "Greenhouse"
   },
@@ -349,7 +1245,7 @@
    "title": "Senior Software Engineer, Core Reliability",
    "company": "Coinbase",
    "location": "Remote - USA",
-   "url": "https://www.coinbase.com/careers/positions/8237493?gh_jid=8237493",
+   "url": "https://www.coinbase.com/careers/positions/8097944?gh_jid=8097944",
    "posted": "2026-11-16",
    "source": "Greenhouse"
   },
@@ -357,7 +1253,7 @@
    "title": "Senior Software Engineer, Core Reliability",
    "company": "Coinbase",
    "location": "Remote - USA",
-   "url": "https://www.coinbase.com/careers/positions/8097944?gh_jid=8097944",
+   "url": "https://www.coinbase.com/careers/positions/8237493?gh_jid=8237493",
    "posted": "2026-11-16",
    "source": "Greenhouse"
   },
@@ -378,30 +1274,6 @@
    "source": "Greenhouse"
   },
   {
-   "title": "Account Executive",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8304345?gh_jid=8304345",
-   "posted": "2026-11-16",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Professional Services Consultant, Payments",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7980840?gh_jid=7980840",
-   "posted": "2026-11-16",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "RFP Specialist (Americas)",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8349630?gh_jid=8349630",
-   "posted": "2026-11-16",
-   "source": "Greenhouse"
-  },
-  {
    "title": "Sales Director, DACH",
    "company": "Fireblocks",
    "location": "Berlin, Berlin, Germany",
@@ -415,62 +1287,6 @@
    "location": "Paris",
    "url": "https://job-boards.greenhouse.io/blockchain/jobs/7386870",
    "posted": "2026-11-16",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Manager, Customer Partner Success",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8248663?gh_jid=8248663",
-   "posted": "2026-11-14",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Software Engineer (Full-Stack)",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8180206?gh_jid=8180206",
-   "posted": "2026-11-14",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Software Engineer (Full-Stack) ",
-   "company": "Ripple",
-   "location": "Dublin, Ireland",
-   "url": "https://ripple.com/careers/all-jobs/job/8180204?gh_jid=8180204",
-   "posted": "2026-11-14",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Software Engineer (.NET/C#)",
-   "company": "Ripple",
-   "location": "Dublin, Ireland",
-   "url": "https://ripple.com/careers/all-jobs/job/8325879?gh_jid=8325879",
-   "posted": "2026-11-14",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Software Engineer (.NET/C#)",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8325881?gh_jid=8325881",
-   "posted": "2026-11-14",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Group Product Manager, Developer Infrastructure",
-   "company": "Coinbase",
-   "location": "Remote - USA",
-   "url": "https://www.coinbase.com/careers/positions/8017607?gh_jid=8017607",
-   "posted": "2026-11-13",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Program Lead, Performance & Enablement",
-   "company": "Coinbase",
-   "location": "Bangalore, India",
-   "url": "https://www.coinbase.com/careers/positions/8357227?gh_jid=8357227",
-   "posted": "2026-11-13",
    "source": "Greenhouse"
   },
   {
@@ -494,14 +1310,6 @@
    "company": "Coinbase",
    "location": "Remote - USA",
    "url": "https://www.coinbase.com/careers/positions/8368472?gh_jid=8368472",
-   "posted": "2026-11-13",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Director, Product Management, On-chain Payments",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8206128?gh_jid=8206128",
    "posted": "2026-11-13",
    "source": "Greenhouse"
   },
@@ -586,14 +1394,6 @@
    "source": "Greenhouse"
   },
   {
-   "title": "Staff Software Engineer, AI Platform",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8129139?gh_jid=8129139",
-   "posted": "2026-11-12",
-   "source": "Greenhouse"
-  },
-  {
    "title": "Senior Software Engineer, Trading",
    "company": "Blockchain.com",
    "location": "Singapore",
@@ -615,142 +1415,6 @@
    "location": "United States - Remote",
    "url": "https://job-boards.greenhouse.io/consensys/jobs/8374566",
    "posted": "2026-11-12",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Manager, Technical Recruiting",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8381507?gh_jid=8381507",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Product Marketing Manager",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8372970?gh_jid=8372970",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Product Marketing Manager",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8372949?gh_jid=8372949",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Professional Services Consultant",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8328916?gh_jid=8328916",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Professional Services Consultant",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8328928?gh_jid=8328928",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Professional Services Consultant",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8328949?gh_jid=8328949",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Brand Designer",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7462072?gh_jid=7462072",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Recruiting Coordinator",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8370740?gh_jid=8370740",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Security Engineer, Incident Response ",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8240446?gh_jid=8240446",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Software Engineer",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8106886?gh_jid=8106886",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Staff Security Engineer, AI Security",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7961902?gh_jid=7961902",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Staff Security Engineer, AI Security ",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/7961910?gh_jid=7961910",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Staff Security Engineer, AI Security ",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7961914?gh_jid=7961914",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Staff Security Engineer, Product Security",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7997267?gh_jid=7997267",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Staff Security Engineer, Product Security",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7997246?gh_jid=7997246",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Staff Security Engineer, Product Security",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7997234?gh_jid=7997234",
-   "posted": "2026-11-11",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Social Media Manager",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8186969?gh_jid=8186969",
-   "posted": "2026-11-11",
    "source": "Greenhouse"
   },
   {
@@ -822,590 +1486,6 @@
    "company": "Coinbase",
    "location": "Remote - USA",
    "url": "https://www.coinbase.com/careers/positions/8278991?gh_jid=8278991",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Strategic Sourcing Intern",
-   "company": "Coinbase",
-   "location": "Hybrid - New York, NY",
-   "url": "https://www.coinbase.com/careers/positions/8376084?gh_jid=8376084",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Accounting Manager",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8366323?gh_jid=8366323",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Accounting Manager",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8366302?gh_jid=8366302",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Business Development Manager",
-   "company": "Ripple",
-   "location": "Singapore",
-   "url": "https://ripple.com/careers/all-jobs/job/8225681?gh_jid=8225681",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Business Development Senior Director - Capital Markets",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7572250?gh_jid=7572250",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Customer Success Senior Manager",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8241644?gh_jid=8241644",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Customer Success Senior Manager",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8241656?gh_jid=8241656",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Director, Credit Risk",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8310994?gh_jid=8310994",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Director, Global SDR Operations",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8108602?gh_jid=8108602",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Director, Head of Client Solutions, Europe",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8358440?gh_jid=8358440",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Director, Product Management, Global Payouts",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8129029?gh_jid=8129029",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Finance Manager",
-   "company": "Ripple",
-   "location": "Singapore",
-   "url": "https://ripple.com/careers/all-jobs/job/8327701?gh_jid=8327701",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Global KYC & Due Diligence Specialist",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8311620?gh_jid=8311620",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Head of Managed Services",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8079209?gh_jid=8079209",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Head of Managed Services",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8079242?gh_jid=8079242",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Head of Managed Services",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8079221?gh_jid=8079221",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Internal Audit -  Manager",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8311695?gh_jid=8311695",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Internal Audit -  Manager",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8311707?gh_jid=8311707",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Physical Security Manager, APAC/MENA",
-   "company": "Ripple",
-   "location": "Singapore",
-   "url": "https://ripple.com/careers/all-jobs/job/8245075?gh_jid=8245075",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Physical Security Manager, APAC/MENA",
-   "company": "Ripple",
-   "location": "Sydney, New South Wales, Australia",
-   "url": "https://ripple.com/careers/all-jobs/job/8245077?gh_jid=8245077",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Principal Technical Program Manager",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7904773?gh_jid=7904773",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Principal Technical Program Manager",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7904761?gh_jid=7904761",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Principal Technical Program Manager",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/7904769?gh_jid=7904769",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Product Operations Analyst (Customer Activations)",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8328050?gh_jid=8328050",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Product Operations Analyst (Customer Activations)",
-   "company": "Ripple",
-   "location": "Singapore",
-   "url": "https://ripple.com/careers/all-jobs/job/8328060?gh_jid=8328060",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Professional Services Consultant",
-   "company": "Ripple",
-   "location": "Miami, FL, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8328926?gh_jid=8328926",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Professional Services Consultant (TMS Implementation)",
-   "company": "Ripple",
-   "location": "Singapore",
-   "url": "https://ripple.com/careers/all-jobs/job/8286436?gh_jid=8286436",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Professional Services Consultant (TMS Implementation)",
-   "company": "Ripple",
-   "location": "Sydney, New South Wales, Australia",
-   "url": "https://ripple.com/careers/all-jobs/job/8286438?gh_jid=8286438",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Program Manager",
-   "company": "Ripple",
-   "location": "Dubai, United Arab Emirates",
-   "url": "https://ripple.com/careers/all-jobs/job/8224772?gh_jid=8224772",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Project Manager",
-   "company": "Ripple",
-   "location": "Miami, FL, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8329000?gh_jid=8329000",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Sales Director, Large Enterprise/FIs - LatAm",
-   "company": "Ripple",
-   "location": "São Paulo, Brazil",
-   "url": "https://ripple.com/careers/all-jobs/job/8196325?gh_jid=8196325",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Business Recruiter (12-Month Contract)",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8122926?gh_jid=8122926",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Cloud Architect",
-   "company": "Ripple",
-   "location": "Singapore",
-   "url": "https://ripple.com/careers/all-jobs/job/8346319?gh_jid=8346319",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Cloud Architect",
-   "company": "Ripple",
-   "location": "Sydney, New South Wales, Australia",
-   "url": "https://ripple.com/careers/all-jobs/job/8346318?gh_jid=8346318",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Derivative Accountant",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8311680?gh_jid=8311680",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Derivative Accountant",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8311659?gh_jid=8311659",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior DevOps Engineer",
-   "company": "Ripple",
-   "location": "Dublin, Ireland",
-   "url": "https://ripple.com/careers/all-jobs/job/8330752?gh_jid=8330752",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior DevOps Engineer",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8330754?gh_jid=8330754",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Ecosystem Growth Manager",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7646349?gh_jid=7646349",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Ecosystem Growth Manager",
-   "company": "Ripple",
-   "location": "Miami, FL, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7646347?gh_jid=7646347",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Field Marketing Specialist",
-   "company": "Ripple",
-   "location": "São Paulo, Brazil",
-   "url": "https://ripple.com/careers/all-jobs/job/8226863?gh_jid=8226863",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Manager, Marketing Analytics",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8257679?gh_jid=8257679",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Manager, Marketing Analytics",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8257675?gh_jid=8257675",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Manager, Marketing Analytics",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8257667?gh_jid=8257667",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Manager, Marketing Analytics",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8257700?gh_jid=8257700",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Professional Services Consultant",
-   "company": "Ripple",
-   "location": "São Paulo, Brazil",
-   "url": "https://ripple.com/careers/all-jobs/job/8247091?gh_jid=8247091",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Ripple Trading and Markets Analyst",
-   "company": "Ripple",
-   "location": "Miami, FL, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8180173?gh_jid=8180173",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Sales Development Representative",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8345460?gh_jid=8345460",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Software Engineer, RippleX (Platform)",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8110122?gh_jid=8110122",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Software Engineer, Risk",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8051961?gh_jid=8051961",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Staff, Developer Relations",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8244768?gh_jid=8244768",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Staff Product Manager, Trust Platform ",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8260314?gh_jid=8260314",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Staff Technical Program Manager",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8366328?gh_jid=8366328",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Staff Technical Program Manager, Information Security",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8126861?gh_jid=8126861",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Treasury Manager - Liquidity Management",
-   "company": "Ripple",
-   "location": "São Paulo, Brazil",
-   "url": "https://ripple.com/careers/all-jobs/job/8372917?gh_jid=8372917",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Software Engineer II",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8241603?gh_jid=8241603",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Specialist, Global KYC & Due Diligence",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8220967?gh_jid=8220967",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Staff Cloud Architect",
-   "company": "Ripple",
-   "location": "Sydney, New South Wales, Australia",
-   "url": "https://ripple.com/careers/all-jobs/job/7685312?gh_jid=7685312",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Staff Cloud Architect",
-   "company": "Ripple",
-   "location": "Singapore",
-   "url": "https://ripple.com/careers/all-jobs/job/7685310?gh_jid=7685310",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Staff Data Scientist",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8260181?gh_jid=8260181",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Staff GRC Program Manager",
-   "company": "Ripple",
-   "location": "São Paulo, Brazil",
-   "url": "https://ripple.com/careers/all-jobs/job/8223889?gh_jid=8223889",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Staff Product Manager, Tokenization",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8353248?gh_jid=8353248",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Staff Software Engineer, Liquidity Management (C#/.NET)",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7944348?gh_jid=7944348",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Treasury Manager",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8233618?gh_jid=8233618",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Treasury Manager, Global Treasury Operations",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8267588?gh_jid=8267588",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Treasury Manager, Global Treasury Operations",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8267600?gh_jid=8267600",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Treasury Manager, Global Treasury Operations",
-   "company": "Ripple",
-   "location": "Toronto, Canada",
-   "url": "https://ripple.com/careers/all-jobs/job/8267610?gh_jid=8267610",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Treasury Manager, Global Treasury Operations",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8267621?gh_jid=8267621",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "VP, Corporate Development",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7622908?gh_jid=7622908",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "VP, Corporate Development",
-   "company": "Ripple",
-   "location": "San Francisco, CA, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7622896?gh_jid=7622896",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "VP, Corporate Development",
-   "company": "Ripple",
-   "location": "Miami, FL, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/7622906?gh_jid=7622906",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Workplace Project Manager",
-   "company": "Ripple",
-   "location": "New York, NY, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8241693?gh_jid=8241693",
-   "posted": "2026-11-10",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Solutions Architect, AMER",
-   "company": "Fireblocks",
-   "location": "New York; United States",
-   "url": "https://www.fireblocks.com/careers/position?gh_jid=4699994006",
    "posted": "2026-11-10",
    "source": "Greenhouse"
   },
@@ -1540,16 +1620,16 @@
   {
    "title": "Staff Software Engineer - Backend (Consumer - Agentic Trading)",
    "company": "Coinbase",
-   "location": "Remote - Canada",
-   "url": "https://www.coinbase.com/careers/positions/8359515?gh_jid=8359515",
+   "location": "Remote - USA",
+   "url": "https://www.coinbase.com/careers/positions/8356846?gh_jid=8356846",
    "posted": "2026-11-06",
    "source": "Greenhouse"
   },
   {
    "title": "Staff Software Engineer - Backend (Consumer - Agentic Trading)",
    "company": "Coinbase",
-   "location": "Remote - USA",
-   "url": "https://www.coinbase.com/careers/positions/8356846?gh_jid=8356846",
+   "location": "Remote - Canada",
+   "url": "https://www.coinbase.com/careers/positions/8359515?gh_jid=8359515",
    "posted": "2026-11-06",
    "source": "Greenhouse"
   },
@@ -1564,16 +1644,16 @@
   {
    "title": "Staff Software Engineer, Frontend/Mobile (Consumer - Agentic Trading)",
    "company": "Coinbase",
-   "location": "Remote - Canada",
-   "url": "https://www.coinbase.com/careers/positions/8359446?gh_jid=8359446",
+   "location": "Remote - USA",
+   "url": "https://www.coinbase.com/careers/positions/8356850?gh_jid=8356850",
    "posted": "2026-11-06",
    "source": "Greenhouse"
   },
   {
    "title": "Staff Software Engineer, Frontend/Mobile (Consumer - Agentic Trading)",
    "company": "Coinbase",
-   "location": "Remote - USA",
-   "url": "https://www.coinbase.com/careers/positions/8356850?gh_jid=8356850",
+   "location": "Remote - Canada",
+   "url": "https://www.coinbase.com/careers/positions/8359446?gh_jid=8359446",
    "posted": "2026-11-06",
    "source": "Greenhouse"
   },
@@ -1690,14 +1770,6 @@
    "source": "Greenhouse"
   },
   {
-   "title": "Director, Customer Partner Success",
-   "company": "Ripple",
-   "location": "Singapore",
-   "url": "https://ripple.com/careers/all-jobs/job/8345370?gh_jid=8345370",
-   "posted": "2026-11-04",
-   "source": "Greenhouse"
-  },
-  {
    "title": "Sales Engineer, London ",
    "company": "Fireblocks",
    "location": "London",
@@ -1722,14 +1794,6 @@
    "source": "Greenhouse"
   },
   {
-   "title": "Senior Associate, Compliance Model Governance",
-   "company": "Coinbase",
-   "location": "Remote - USA",
-   "url": "https://www.coinbase.com/careers/positions/8350050?gh_jid=8350050",
-   "posted": "2026-11-03",
-   "source": "Greenhouse"
-  },
-  {
    "title": "Senior Identity Risk & Scam Analyst ",
    "company": "Coinbase",
    "location": "Remote - USA",
@@ -1749,7 +1813,7 @@
    "title": "Social Support Specialist I",
    "company": "Coinbase",
    "location": "Remote - USA",
-   "url": "https://www.coinbase.com/careers/positions/8335621?gh_jid=8335621",
+   "url": "https://www.coinbase.com/careers/positions/8335618?gh_jid=8335618",
    "posted": "2026-11-03",
    "source": "Greenhouse"
   },
@@ -1757,7 +1821,7 @@
    "title": "Social Support Specialist I",
    "company": "Coinbase",
    "location": "Remote - USA",
-   "url": "https://www.coinbase.com/careers/positions/8335618?gh_jid=8335618",
+   "url": "https://www.coinbase.com/careers/positions/8335621?gh_jid=8335621",
    "posted": "2026-11-03",
    "source": "Greenhouse"
   },
@@ -1781,7 +1845,7 @@
    "title": "Customer Support Specialist ll",
    "company": "Coinbase",
    "location": "Manila, Philippines",
-   "url": "https://www.coinbase.com/careers/positions/8334387?gh_jid=8334387",
+   "url": "https://www.coinbase.com/careers/positions/8346064?gh_jid=8346064",
    "posted": "2026-11-02",
    "source": "Greenhouse"
   },
@@ -1797,7 +1861,7 @@
    "title": "Customer Support Specialist ll",
    "company": "Coinbase",
    "location": "Manila, Philippines",
-   "url": "https://www.coinbase.com/careers/positions/8346064?gh_jid=8346064",
+   "url": "https://www.coinbase.com/careers/positions/8334387?gh_jid=8334387",
    "posted": "2026-11-02",
    "source": "Greenhouse"
   },
@@ -1838,14 +1902,6 @@
    "company": "Coinbase",
    "location": "Hybrid - New York, NY",
    "url": "https://www.coinbase.com/careers/positions/8175363?gh_jid=8175363",
-   "posted": "2026-10-30",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Accounting Intern",
-   "company": "Coinbase",
-   "location": "Hybrid - New York, NY",
-   "url": "https://www.coinbase.com/careers/positions/8173991?gh_jid=8173991",
    "posted": "2026-10-30",
    "source": "Greenhouse"
   },
@@ -1914,14 +1970,6 @@
    "source": "Greenhouse"
   },
   {
-   "title": "Business Controller Intern",
-   "company": "Coinbase",
-   "location": "Hybrid - New York, NY",
-   "url": "https://www.coinbase.com/careers/positions/8175366?gh_jid=8175366",
-   "posted": "2026-10-30",
-   "source": "Greenhouse"
-  },
-  {
    "title": "Capacity Planning Lead",
    "company": "Coinbase",
    "location": "Remote - USA",
@@ -1940,16 +1988,16 @@
   {
    "title": "Complaints Analyst III",
    "company": "Coinbase",
-   "location": "Hybrid - Luxembourg",
-   "url": "https://www.coinbase.com/careers/positions/7182060?gh_jid=7182060",
+   "location": "London, UK",
+   "url": "https://www.coinbase.com/careers/positions/8289787?gh_jid=8289787",
    "posted": "2026-10-30",
    "source": "Greenhouse"
   },
   {
    "title": "Complaints Analyst III",
    "company": "Coinbase",
-   "location": "London, UK",
-   "url": "https://www.coinbase.com/careers/positions/8289787?gh_jid=8289787",
+   "location": "Hybrid - Luxembourg",
+   "url": "https://www.coinbase.com/careers/positions/7182060?gh_jid=7182060",
    "posted": "2026-10-30",
    "source": "Greenhouse"
   },
@@ -2030,14 +2078,6 @@
    "company": "Coinbase",
    "location": "Manila, Philippines",
    "url": "https://www.coinbase.com/careers/positions/8337209?gh_jid=8337209",
-   "posted": "2026-10-30",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Customer Support Specialist ll",
-   "company": "Coinbase",
-   "location": "Manila, Philippines",
-   "url": "https://www.coinbase.com/careers/positions/8337782?gh_jid=8337782",
    "posted": "2026-10-30",
    "source": "Greenhouse"
   },
@@ -2282,10 +2322,10 @@
    "source": "Greenhouse"
   },
   {
-   "title": "Prime Sales Trader",
+   "title": "Principal Recruiter",
    "company": "Coinbase",
-   "location": "Remote - UK",
-   "url": "https://www.coinbase.com/careers/positions/8013951?gh_jid=8013951",
+   "location": "Remote - Singapore",
+   "url": "https://www.coinbase.com/careers/positions/8106071?gh_jid=8106071",
    "posted": "2026-10-30",
    "source": "Greenhouse"
   },
@@ -2294,14 +2334,6 @@
    "company": "Coinbase",
    "location": "Remote - USA",
    "url": "https://www.coinbase.com/careers/positions/8260302?gh_jid=8260302",
-   "posted": "2026-10-30",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Principal Recruiter",
-   "company": "Coinbase",
-   "location": "Remote - Singapore",
-   "url": "https://www.coinbase.com/careers/positions/8106071?gh_jid=8106071",
    "posted": "2026-10-30",
    "source": "Greenhouse"
   },
@@ -2602,22 +2634,6 @@
    "source": "Greenhouse"
   },
   {
-   "title": "Senior Software Engineer, Backend (Retail DEX)",
-   "company": "Coinbase",
-   "location": "Remote - Canada",
-   "url": "https://www.coinbase.com/careers/positions/8243517?gh_jid=8243517",
-   "posted": "2026-10-30",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Software Engineer, Backend (Retail DEX)",
-   "company": "Coinbase",
-   "location": "Remote - USA",
-   "url": "https://www.coinbase.com/careers/positions/8243520?gh_jid=8243520",
-   "posted": "2026-10-30",
-   "source": "Greenhouse"
-  },
-  {
    "title": "Senior Software Engineer- Blockchain Network",
    "company": "Coinbase",
    "location": "Remote - USA",
@@ -2828,16 +2844,16 @@
   {
    "title": "Specialist, Market Operations",
    "company": "Coinbase",
-   "location": "Remote - Singapore",
-   "url": "https://www.coinbase.com/careers/positions/8222264?gh_jid=8222264",
+   "location": "Remote - UK",
+   "url": "https://www.coinbase.com/careers/positions/8222267?gh_jid=8222267",
    "posted": "2026-10-30",
    "source": "Greenhouse"
   },
   {
    "title": "Specialist, Market Operations",
    "company": "Coinbase",
-   "location": "Remote - UK",
-   "url": "https://www.coinbase.com/careers/positions/8222267?gh_jid=8222267",
+   "location": "Remote - Singapore",
+   "url": "https://www.coinbase.com/careers/positions/8222264?gh_jid=8222264",
    "posted": "2026-10-30",
    "source": "Greenhouse"
   },
@@ -2916,16 +2932,16 @@
   {
    "title": "Staff Software Engineer",
    "company": "Coinbase",
-   "location": "Remote - Israel",
-   "url": "https://www.coinbase.com/careers/positions/8021650?gh_jid=8021650",
+   "location": "Remote - USA",
+   "url": "https://www.coinbase.com/careers/positions/6784618?gh_jid=6784618",
    "posted": "2026-10-30",
    "source": "Greenhouse"
   },
   {
    "title": "Staff Software Engineer",
    "company": "Coinbase",
-   "location": "Remote - USA",
-   "url": "https://www.coinbase.com/careers/positions/6784618?gh_jid=6784618",
+   "location": "Remote - Israel",
+   "url": "https://www.coinbase.com/careers/positions/8021650?gh_jid=8021650",
    "posted": "2026-10-30",
    "source": "Greenhouse"
   },
@@ -3034,14 +3050,6 @@
    "source": "Greenhouse"
   },
   {
-   "title": "Staff User Researcher",
-   "company": "Coinbase",
-   "location": "Remote - USA",
-   "url": "https://www.coinbase.com/careers/positions/8318555?gh_jid=8318555",
-   "posted": "2026-10-30",
-   "source": "Greenhouse"
-  },
-  {
    "title": "Strategic Finance Manager, Platform",
    "company": "Coinbase",
    "location": "Remote - USA",
@@ -3066,14 +3074,6 @@
    "source": "Greenhouse"
   },
   {
-   "title": "Tax Operations Intern",
-   "company": "Coinbase",
-   "location": "Hybrid - New York, NY",
-   "url": "https://www.coinbase.com/careers/positions/8175453?gh_jid=8175453",
-   "posted": "2026-10-30",
-   "source": "Greenhouse"
-  },
-  {
    "title": "Technical Accounting Policy Manager",
    "company": "Coinbase",
    "location": "Remote - USA",
@@ -3086,38 +3086,6 @@
    "company": "Coinbase",
    "location": "Remote - USA",
    "url": "https://www.coinbase.com/careers/positions/8177619?gh_jid=8177619",
-   "posted": "2026-10-30",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Client Support Analyst",
-   "company": "Ripple",
-   "location": "Toronto, Canada",
-   "url": "https://ripple.com/careers/all-jobs/job/8142058?gh_jid=8142058",
-   "posted": "2026-10-30",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Client Support Analyst",
-   "company": "Ripple",
-   "location": "Chicago, Illinois, United States",
-   "url": "https://ripple.com/careers/all-jobs/job/8142069?gh_jid=8142069",
-   "posted": "2026-10-30",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Sales Manager",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8257746?gh_jid=8257746",
-   "posted": "2026-10-30",
-   "source": "Greenhouse"
-  },
-  {
-   "title": "Senior Sales Manager",
-   "company": "Ripple",
-   "location": "London, UK",
-   "url": "https://ripple.com/careers/all-jobs/job/8257711?gh_jid=8257711",
    "posted": "2026-10-30",
    "source": "Greenhouse"
   },
@@ -3188,16 +3156,16 @@
   {
    "title": "VIP Relationship Manager",
    "company": "Consensys",
-   "location": "United States - Remote",
-   "url": "https://job-boards.greenhouse.io/consensys/jobs/8300320",
+   "location": "APAC - Remote",
+   "url": "https://job-boards.greenhouse.io/consensys/jobs/8300399",
    "posted": "2026-10-27",
    "source": "Greenhouse"
   },
   {
    "title": "VIP Relationship Manager",
    "company": "Consensys",
-   "location": "APAC - Remote",
-   "url": "https://job-boards.greenhouse.io/consensys/jobs/8300399",
+   "location": "United States - Remote",
+   "url": "https://job-boards.greenhouse.io/consensys/jobs/8300320",
    "posted": "2026-10-27",
    "source": "Greenhouse"
   },
@@ -3880,6 +3848,62 @@
    "url": "https://job-boards.greenhouse.io/aptoslabs/jobs/4650606005",
    "posted": "2026-05-07",
    "source": "Greenhouse"
+  },
+  {
+   "title": "EEA Head of Compliance & MLRO",
+   "company": "",
+   "location": null,
+   "url": "https://cryptojobslist.com/jobs/eea-head-of-compliance-mlro-amsterdam-at-moonpay",
+   "posted": "",
+   "source": "CryptoJobsList"
+  },
+  {
+   "title": "Senior Consultant",
+   "company": "",
+   "location": null,
+   "url": "https://cryptojobslist.com/jobs/senior-consultant-zurich-switzerland-at-blockstream",
+   "posted": "",
+   "source": "CryptoJobsList"
+  },
+  {
+   "title": "Senior Analyst, Investigation Operations",
+   "company": "",
+   "location": null,
+   "url": "https://cryptojobslist.com/jobs/senior-analyst-investigation-operations-bangalore-remote-first-in-india-at-circle",
+   "posted": "",
+   "source": "CryptoJobsList"
+  },
+  {
+   "title": "VP, Implementation Services",
+   "company": "",
+   "location": null,
+   "url": "https://cryptojobslist.com/jobs/vp-implementation-services-united-states-remote-within-location-at-zerohash",
+   "posted": "",
+   "source": "CryptoJobsList"
+  },
+  {
+   "title": "Senior Product Manager, Cyber Intelligence",
+   "company": "",
+   "location": null,
+   "url": "https://cryptojobslist.com/jobs/senior-product-manager-cyber-tel-aviv-israel-at-chainalysis",
+   "posted": "",
+   "source": "CryptoJobsList"
+  },
+  {
+   "title": "2027 Ventures Intern - NYC",
+   "company": "",
+   "location": null,
+   "url": "https://cryptojobslist.com/jobs/2027-ventures-intern-nyc-new-york-at-galaxy",
+   "posted": "",
+   "source": "CryptoJobsList"
+  },
+  {
+   "title": "Senior Data Analyst",
+   "company": "",
+   "location": null,
+   "url": "https://cryptojobslist.com/jobs/senior-data-analyst-remote-at-figure-lending",
+   "posted": "",
+   "source": "CryptoJobsList"
   },
   {
    "title": "Crypto KOL / Affiliate Partner / Content Creator",
@@ -4622,62 +4646,6 @@
    "company": "",
    "location": null,
    "url": "https://cryptojobslist.com/jobs/legal-intern-at-amber-group-1",
-   "posted": "",
-   "source": "CryptoJobsList"
-  },
-  {
-   "title": "Business Analyst",
-   "company": "",
-   "location": null,
-   "url": "https://cryptojobslist.com/jobs/business-analyst-zurich-geneva-at-blockstream",
-   "posted": "",
-   "source": "CryptoJobsList"
-  },
-  {
-   "title": "Senior Project Manager, Delivery",
-   "company": "",
-   "location": null,
-   "url": "https://cryptojobslist.com/jobs/senior-project-manager-delivery-zurich-switzerland-at-blockstream",
-   "posted": "",
-   "source": "CryptoJobsList"
-  },
-  {
-   "title": "Solutions Architect",
-   "company": "",
-   "location": null,
-   "url": "https://cryptojobslist.com/jobs/solutions-architect-zurich-switzerland-at-blockstream",
-   "posted": "",
-   "source": "CryptoJobsList"
-  },
-  {
-   "title": "Senior Technical Recruiter, EMEA",
-   "company": "",
-   "location": null,
-   "url": "https://cryptojobslist.com/jobs/senior-technical-recruiter-emea-lugano-switzerland-at-blockstream",
-   "posted": "",
-   "source": "CryptoJobsList"
-  },
-  {
-   "title": "Director, Platform and Integration Lead",
-   "company": "",
-   "location": null,
-   "url": "https://cryptojobslist.com/jobs/director-platform-and-integration-lead-zurich-switzerland-at-blockstream",
-   "posted": "",
-   "source": "CryptoJobsList"
-  },
-  {
-   "title": "C++  Trading Developer, Quant Trading Team",
-   "company": "",
-   "location": null,
-   "url": "https://cryptojobslist.com/jobs/c-trading-developer-quant-trading-hong-kong-at-crypto-com",
-   "posted": "",
-   "source": "CryptoJobsList"
-  },
-  {
-   "title": "Digital Marketing & Growth Manager (hands-on)",
-   "company": "",
-   "location": null,
-   "url": "https://cryptojobslist.com/jobs/digital-marketing-growth-manager-remote-at-monetaz-fundscrow",
    "posted": "",
    "source": "CryptoJobsList"
   }

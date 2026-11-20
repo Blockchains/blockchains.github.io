@@ -1,16 +1,39 @@
 {
  "service": "ai/incidents",
  "description": "AI incident explainer",
- "generated_at": "2026-11-19T13:41:44Z",
+ "generated_at": "2026-11-20T13:23:57Z",
  "source": "Grok (xAI) over public data: DefiLlama hacks",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "items": [
   {
+   "name": "Fluidkey",
+   "date": "2026-11-19",
+   "plain_english": "The incident was classified as Protocol Logic with technique Unknown on a Wallet target. No amount was reported.",
+   "lesson_for_builders": "Review protocol logic assumptions even when details are unknown.",
+   "related_lab": null,
+   "amount_usd": null,
+   "source": "",
+   "chains": []
+  },
+  {
+   "name": "CALC",
+   "date": "2026-11-19",
+   "plain_english": "The incident was classified as Frontend & Infrastructure with technique Key Leaked via Infrastructure on a DeFi Protocol target across Ethereum and Hyperliquid L1. The amount lost was 26900 USD.",
+   "lesson_for_builders": "Protect infrastructure keys to avoid leaks in DeFi deployments.",
+   "related_lab": "L03 Ownable/access control",
+   "amount_usd": 26900,
+   "source": "",
+   "chains": [
+    "Ethereum",
+    "Hyperliquid L1"
+   ]
+  },
+  {
    "name": "Gonka AI",
    "date": "2026-11-18",
-   "plain_english": "The classification was Bridge & Cross-Chain with technique Bridge Logic Flaw. The amount was 1050000.",
-   "lesson_for_builders": "Validate cross-chain logic thoroughly.",
+   "plain_english": "The incident was classified as Bridge & Cross-Chain with technique Bridge Logic Flaw on a DeFi Protocol target on Ethereum. The amount lost was 1050000 USD.",
+   "lesson_for_builders": "Validate bridge logic to prevent cross-chain flaws.",
    "related_lab": "L43 CrossChainReplay",
    "amount_usd": 1050000,
    "source": "",
@@ -21,8 +44,8 @@
   {
    "name": "RNT Lend",
    "date": "2026-11-18",
-   "plain_english": "The classification was Key Compromise with technique Private Key Compromised. The amount was 954703.",
-   "lesson_for_builders": "Secure private keys with access controls.",
+   "plain_english": "The incident was classified as Key Compromise with technique Private Key Compromised on a DeFi Protocol target on Polygon. The amount lost was 954703 USD.",
+   "lesson_for_builders": "Secure private keys to prevent direct compromise of DeFi contracts.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": 954703,
    "source": "",
@@ -33,8 +56,8 @@
   {
    "name": "K3 Capital",
    "date": "2026-11-18",
-   "plain_english": "The classification was Token & Share Accounting with technique Incorrect Share Accounting. The amount was 3420000.",
-   "lesson_for_builders": "Enforce invariant checks on accounting.",
+   "plain_english": "The incident was classified as Token & Share Accounting with technique Incorrect Share Accounting on a DeFi Protocol target on Ethereum. The amount lost was 3420000 USD.",
+   "lesson_for_builders": "Verify share accounting invariants in token contracts.",
    "related_lab": "L28 InvariantVault",
    "amount_usd": 3420000,
    "source": "",
@@ -45,8 +68,8 @@
   {
    "name": "Peapods Finance",
    "date": "2026-11-18",
-   "plain_english": "The classification was Key Compromise with technique Deployer Key Compromised. The amount was null.",
-   "lesson_for_builders": "Protect deployer keys with access controls.",
+   "plain_english": "The incident was classified as Key Compromise with technique Deployer Key Compromised on a DeFi Protocol target. No amount was reported.",
+   "lesson_for_builders": "Restrict deployer key privileges after contract deployment.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": null,
    "source": "",
@@ -55,8 +78,8 @@
   {
    "name": "LUKSO",
    "date": "2026-11-18",
-   "plain_english": "The classification was Access Control with technique Improper Access Control. The amount was 496000.",
-   "lesson_for_builders": "Implement proper access control checks.",
+   "plain_english": "The incident was classified as Access Control with technique Improper Access Control on a Wallet target on LUKSO. The amount lost was 496000 USD.",
+   "lesson_for_builders": "Implement strict access control checks on all privileged functions.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": 496000,
    "source": "",
@@ -67,8 +90,8 @@
   {
    "name": "B18 TimeBank",
    "date": "2026-11-17",
-   "plain_english": "The classification was Protocol Logic with technique Unknown. The amount was 404540.",
-   "lesson_for_builders": "Audit all protocol logic paths.",
+   "plain_english": "The incident was classified as Protocol Logic with technique Unknown on a DeFi Protocol target on Base. The amount lost was 404540 USD.",
+   "lesson_for_builders": "Audit all protocol logic paths for hidden flaws.",
    "related_lab": null,
    "amount_usd": 404540,
    "source": "",
@@ -79,9 +102,9 @@
   {
    "name": "Lighter Perps",
    "date": "2026-11-16",
-   "plain_english": "The classification was Frontend & Infrastructure with technique API Key Compromised. The amount was 10393057.",
-   "lesson_for_builders": "Secure API keys against compromise.",
-   "related_lab": null,
+   "plain_english": "The incident was classified as Frontend & Infrastructure with technique API Key Compromised on a DeFi Protocol target on zkLighter. The amount lost was 10393057 USD.",
+   "lesson_for_builders": "Harden API key management in infrastructure components.",
+   "related_lab": "L03 Ownable/access control",
    "amount_usd": 10393057,
    "source": "",
    "chains": [
@@ -91,8 +114,8 @@
   {
    "name": "MORE Markets",
    "date": "2026-11-16",
-   "plain_english": "The classification was Protocol Logic with technique Unknown. The amount was 308000.",
-   "lesson_for_builders": "Audit all protocol logic paths.",
+   "plain_english": "The incident was classified as Protocol Logic with technique Unknown on a DeFi Protocol target on Flow. The amount lost was 308000 USD.",
+   "lesson_for_builders": "Test protocol logic thoroughly before mainnet deployment.",
    "related_lab": null,
    "amount_usd": 308000,
    "source": "",
@@ -103,8 +126,8 @@
   {
    "name": "Optimizely (OPTIMJACK)",
    "date": "2026-11-16",
-   "plain_english": "The classification was Frontend & Infrastructure with technique Supply Chain Attack. The amount was 2260.",
-   "lesson_for_builders": "Harden supply chain dependencies.",
+   "plain_english": "The incident was classified as Frontend & Infrastructure with technique Supply Chain Attack on a Web Infrastructure target across multiple chains. The amount lost was 2260 USD.",
+   "lesson_for_builders": "Audit supply chain dependencies in frontend code.",
    "related_lab": null,
    "amount_usd": 2260,
    "source": "",
@@ -119,37 +142,13 @@
   {
    "name": "Chain Games",
    "date": "2026-11-15",
-   "plain_english": "The classification was Protocol Logic with technique Reward Logic Flaw. The amount was 20000.",
-   "lesson_for_builders": "Audit all protocol logic paths.",
-   "related_lab": null,
+   "plain_english": "The incident was classified as Protocol Logic with technique Reward Logic Flaw on a DeFi Protocol target on Polygon. The amount lost was 20000 USD.",
+   "lesson_for_builders": "Validate reward distribution logic against expected invariants.",
+   "related_lab": "L28 InvariantVault",
    "amount_usd": 20000,
    "source": "",
    "chains": [
     "Polygon"
-   ]
-  },
-  {
-   "name": "Luxor Commander",
-   "date": "2026-11-15",
-   "plain_english": "The classification was Protocol Logic with technique Unknown. The amount was null.",
-   "lesson_for_builders": "Audit all protocol logic paths.",
-   "related_lab": null,
-   "amount_usd": null,
-   "source": "",
-   "chains": [
-    "Bitcoin"
-   ]
-  },
-  {
-   "name": "Hyprearn Perps",
-   "date": "2026-11-14",
-   "plain_english": "The classification was Protocol Logic with technique Unknown. The amount was null.",
-   "lesson_for_builders": "Audit all protocol logic paths.",
-   "related_lab": null,
-   "amount_usd": null,
-   "source": "",
-   "chains": [
-    "Hyperliquid L1"
    ]
   }
  ],

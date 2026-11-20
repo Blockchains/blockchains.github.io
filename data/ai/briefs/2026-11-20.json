@@ -1,0 +1,64 @@
+{
+ "headline": "20 Nov 2026: Ethereum leads TVL; Uniswap V3 tops DEX volume",
+ "summary": "Ethereum holds the largest chain TVL at $36.3bn, followed by Base and Solana. Uniswap V3 recorded $1.30bn in 24h DEX volume while Tether generated the highest fees. USDT and USDC remain the dominant stablecoins with circulating supplies of $174.8bn and $68.7bn respectively. Multiple L2s show TVS above $1bn and several protocol incidents occurred in the prior fortnight.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum: $36.29bn TVL (rank 1)",
+    "Base: $4.85bn TVL (rank 2)",
+    "Solana: $4.71bn TVL (rank 3)",
+    "Tron: $4.45bn TVL (rank 4)",
+    "BSC: $4.41bn TVL (rank 5)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V3: $1.30bn 24h volume, +57.58% 1d change",
+    "Uniswap V4: $1.11bn 24h volume",
+    "Aero Slipstream: $840m 24h volume",
+    "Tether: $17.06m 24h fees (rank 1)",
+    "Circle USDC: $6.72m 24h fees (rank 2)"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT: $174.82bn circulating, -0.13% 1d change",
+    "USDC: $68.69bn circulating, +0.17% 1d change",
+    "USDe: $4.88bn circulating, +4.55% 30d change",
+    "USDS: $3.15bn circulating, -39.92% 1d change",
+    "USD1: $2.89bn circulating"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base: $13.59bn TVS, -5.10% 7d change",
+    "Arbitrum One: $8.87bn TVS, -1.11% 7d change",
+    "Hyperliquid: $5.68bn TVS (L3)",
+    "Polygon PoS: $3.66bn TVS",
+    "Robinhood Chain: $2.03bn TVS"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "14 incidents reported in last 14 days, largest loss $10.39m (Lighter Perps)",
+    "apxUSD at $0.948 (-5.21% deviation, depeg status)",
+    "USDA at $0.883 (-11.67% deviation, depeg status)",
+    "BUSD and FRAX under watch for minor deviations"
+   ]
+  }
+ ],
+ "watchlist": [
+  "USDS 1d circulation change (-39.92%)",
+  "Ink L2 TVS 7d change (+98.18%)",
+  "Fluidkey and CALC incidents (19 Nov)",
+  "apxUSD and USDA depeg alerts"
+ ],
+ "date": "2026-11-20",
+ "model": "grok-4.3",
+ "tokens": 13705
+}
