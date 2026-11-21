@@ -1,31 +1,27 @@
 {
  "service": "ai/digest",
  "description": "AI chain-health & L2 digest",
- "generated_at": "2026-11-20T13:24:41Z",
+ "generated_at": "2026-11-21T12:53:55Z",
  "source": "Grok (xAI) over public data: hub monitors, L2BEAT, DefiLlama",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
- "headline": "Chain Health & L2 Digest",
- "summary": "All tracked chains report ok status except Blast which is unreachable. L2 TVS and bridge data available.",
+ "headline": "Chain Health and L2 Digest",
+ "summary": "22 chains report ok status; Blast is unreachable. Base leads L2 TVS at 13151991808 USD followed by Arbitrum One at 8774515712 USD.",
  "chains": [
-  "- Ethereum: height 26456012, head_age_s 12.6s, status ok",
-  "- Base: height 59918819, head_age_s 0.6s, status ok",
-  "- Arbitrum One: height 525913606, head_age_s 0.6s, status ok",
-  "- Blast: status unreachable",
-  "- Bitcoin: height 976724, head_age_s 2521.7s, status ok",
-  "- Solana: height 471720727, head_age_s 0.8s, status ok"
+  "Ethereum height 26462656 head age 6.7s status ok",
+  "Base height 60319109 head age 0.6s status ok",
+  "Blast status unreachable",
+  "Bitcoin height 976880 head age 1621.8s status ok"
  ],
  "l2s": [
-  "Base: TVS $13591336960, Stage 1, Optimistic Rollup",
-  "Arbitrum One: TVS $8870349824, Stage 1, Optimistic Rollup",
-  "Hyperliquid: TVS $5679353344, layer3",
-  "Polygon PoS: TVS $3661203456"
+  "Base Stage 1 Optimistic Rollup TVS 13151991808 USD risks include Exit Window None",
+  "Arbitrum One Stage 1 Optimistic Rollup TVS 8774515712 USD",
+  "Hyperliquid layer3 TVS 5634051584 USD risks multiple bad sentiment"
  ],
  "infrastructure": [
-  "Top RPC Gnosis: median_ms 44.8, success_rate 1.0",
-  "Top RPC Scroll: median_ms 45.1, success_rate 1.0",
-  "Top bridge LayerZero V2: TVL $18003193389",
-  "Top bridge WBTC: TVL $7221160338"
+  "LayerZero V2 bridge TVL 17858225348 USD",
+  "WBTC bridge TVL 6740326001 USD",
+  "Top RPC Cronos median 33.4ms success rate 1.0"
  ],
  "builder_tips": [],
  "model": "grok-4.3",

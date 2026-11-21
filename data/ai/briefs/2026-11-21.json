@@ -1,0 +1,66 @@
+{
+ "headline": "Crypto Market Structure Brief – 21 November 2026",
+ "summary": "Ethereum leads TVL at $34.78bn, followed by Base at $4.54bn and Solana at $4.51bn. Uniswap V3 recorded $1.65bn in 24h DEX volume while Tether generated $17.07m in fees. USDT circulation stands at $174.47bn and USDC at $68.75bn, with several stablecoins showing depeg alerts. Multiple security incidents occurred in the prior fortnight, including a $13.51m loss on Hyperliquid L1.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum: $34.78bn TVL (rank 1)",
+    "Base: $4.54bn TVL (rank 2)",
+    "Solana: $4.51bn TVL (rank 3)",
+    "Tron: $4.33bn TVL (rank 4)",
+    "BSC: $4.17bn TVL (rank 5)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V3: $1.65bn 24h volume, +42.55% 1d change",
+    "Uniswap V4: $1.28bn 24h volume, +41.54% 1d change",
+    "Aero Slipstream: $1.01bn 24h volume",
+    "Tether: $17.07m 24h fees (rank 1)",
+    "Circle USDC: $6.74m 24h fees (rank 2)"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT: $174.47bn circulating, -0.28% 1d change",
+    "USDC: $68.75bn circulating, -0.08% 1d change",
+    "USDe: $4.87bn circulating, +4.59% 30d change",
+    "Sky Dollar (USDS): -42.21% 7d change",
+    "RLUSD: +21.98% 30d change"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base: $13.15bn TVS, Stage 1, OP Stack",
+    "Arbitrum One: $8.77bn TVS, Stage 1",
+    "Hyperliquid: $5.63bn TVS, layer 3",
+    "Polygon PoS: $3.64bn TVS",
+    "Robinhood Chain: $1.92bn TVS, Stage 0"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Wagyu (XMR1): $13.51m loss on Hyperliquid L1, 20 Nov",
+    "Gonka AI: $1.05m loss on Ethereum, bridge logic flaw",
+    "K3 Capital: $3.42m loss on Ethereum, incorrect share accounting",
+    "apxUSD: -7.17% deviation, depeg status",
+    "USDA: -12.08% deviation, depeg status"
+   ]
+  }
+ ],
+ "watchlist": [
+  "USDS 7d circulation change -42.21%",
+  "Hyperliquid L1 incident 20 Nov",
+  "apxUSD and USDA depeg alerts",
+  "Ink L2 TVS +71.70% 7d change",
+  "Morpho Blue fees +384.58% 1d change"
+ ],
+ "date": "2026-11-21",
+ "model": "grok-4.3",
+ "tokens": 13916
+}
