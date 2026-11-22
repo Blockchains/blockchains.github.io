@@ -1,14 +1,45 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-21T12:52:35Z",
+ "generated_at": "2026-11-22T12:45:10Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27639642497.12813,
- "ytd_usd": 8344596873.128132,
+ "total_all_time_usd": 27645470497.12813,
+ "ytd_usd": 8336584873.128132,
  "incidents": [
+  {
+   "date": "2026-11-21",
+   "name": "CyberConnect",
+   "amount_usd": 968000,
+   "chains": [
+    "Solana",
+    "Ethereum"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Cross-Chain Message Spoofing",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-11-21",
+   "name": "Chainflip AMM",
+   "amount_usd": 4860000,
+   "chains": [
+    "Ethereum"
+   ],
+   "classification": "Key Compromise",
+   "technique": "Validator Key Compromised",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
   {
    "date": "2026-11-20",
    "name": "Wagyu (XMR1)",
@@ -4558,35 +4589,6 @@
    "returned_usd": null,
    "source": "",
    "language": "Solidity"
-  },
-  {
-   "date": "2026-04-16",
-   "name": "Grinex",
-   "amount_usd": 13740000,
-   "chains": [
-    "Tron",
-    "Ethereum"
-   ],
-   "classification": "Key Compromise",
-   "technique": "Hot Wallet Key Compromised",
-   "target_type": "CEX",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": null
-  },
-  {
-   "date": "2026-04-14",
-   "name": "Zerion Wallet",
-   "amount_usd": 100000,
-   "chains": [],
-   "classification": "Social Engineering",
-   "technique": "Phishing",
-   "target_type": "Wallet",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": null
   }
  ]
 }

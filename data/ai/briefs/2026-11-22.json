@@ -1,0 +1,55 @@
+{
+ "headline": "Market structure: Ethereum tops TVL; Base leads L2s on 22 Nov 2026",
+ "summary": "Ethereum holds the largest chain TVL at 36.16 billion USD. Base records the highest L2 TVS at 13.68 billion USD. USDT leads stablecoins with 174.52 billion USD circulating. Multiple depegs and security incidents occurred in the prior fortnight.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum leads with 36.16 billion USD TVL.",
+    "Base follows at 5.11 billion USD; Solana at 4.61 billion USD.",
+    "Tron and BSC rank fourth and fifth at 4.42 billion USD and 4.29 billion USD respectively."
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Aero Slipstream records highest 24h DEX volume at 733 million USD.",
+    "PancakeSwap AMM V3 and Uniswap V3 follow at 697 million USD and 682 million USD.",
+    "Tether generates top fees at 17.0 million USD; Circle USDC at 6.7 million USD."
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulates 174.52 billion USD; USDC at 68.68 billion USD.",
+    "USDe, DAI and USDS rank next with 4.87 billion USD, 4.55 billion USD and 3.13 billion USD.",
+    "apxUSD and USDA show depegs of 5.04 percent and 12.29 percent."
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base leads L2 TVS at 13.68 billion USD; Arbitrum One at 8.90 billion USD.",
+    "Hyperliquid records 5.65 billion USD TVS as a layer 3.",
+    "Polygon PoS and Robinhood Chain follow at 3.68 billion USD and 1.97 billion USD."
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Chainflip AMM loses 4.86 million USD via validator key compromise.",
+    "Wagyu incident on Hyperliquid L1 totals 13.51 million USD from infrastructure key leak.",
+    "Fourteen incidents reported in the last 14 days across multiple chains."
+   ]
+  }
+ ],
+ "watchlist": [
+  "apxUSD and USDA depeg status",
+  "CyberConnect and Chainflip incidents",
+  "Base and Arbitrum TVS changes",
+  "Tether and Circle fee trends"
+ ],
+ "date": "2026-11-22",
+ "model": "grok-4.3",
+ "tokens": 13308
+}
