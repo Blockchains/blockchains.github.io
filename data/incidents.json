@@ -1,14 +1,29 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-22T12:45:10Z",
+ "generated_at": "2026-11-23T15:08:32Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27645470497.12813,
- "ytd_usd": 8336584873.128132,
+ "total_all_time_usd": 27655810497.12813,
+ "ytd_usd": 8035524873.128132,
  "incidents": [
+  {
+   "date": "2026-11-22",
+   "name": "Endurance Bridge",
+   "amount_usd": 1040000,
+   "chains": [
+    "BSC"
+   ],
+   "classification": "Bridge & Cross-Chain",
+   "technique": "Unbacked Cross-Chain Mint",
+   "target_type": "DeFi Protocol",
+   "bridge": true,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
+  },
   {
    "date": "2026-11-21",
    "name": "CyberConnect",
@@ -28,14 +43,15 @@
   {
    "date": "2026-11-21",
    "name": "Chainflip AMM",
-   "amount_usd": 4860000,
+   "amount_usd": 11960000,
    "chains": [
-    "Ethereum"
+    "Ethereum",
+    "Bitcoin"
    ],
    "classification": "Key Compromise",
    "technique": "Validator Key Compromised",
    "target_type": "DeFi Protocol",
-   "bridge": false,
+   "bridge": true,
    "returned_usd": null,
    "source": "",
    "language": "Solidity"
@@ -58,10 +74,17 @@
   {
    "date": "2026-11-19",
    "name": "Fluidkey",
-   "amount_usd": null,
-   "chains": [],
-   "classification": "Protocol Logic",
-   "technique": "Unknown",
+   "amount_usd": 1600000,
+   "chains": [
+    "Ethereum",
+    "Base",
+    "Binance",
+    "Polygon",
+    "Optimism",
+    "Arbitrum"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Database Breach",
    "target_type": "Wallet",
    "bridge": false,
    "returned_usd": null,
@@ -75,6 +98,22 @@
    "chains": [
     "Ethereum",
     "Hyperliquid L1"
+   ],
+   "classification": "Frontend & Infrastructure",
+   "technique": "Key Leaked via Infrastructure",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": null
+  },
+  {
+   "date": "2026-11-19",
+   "name": "The Moats",
+   "amount_usd": 600000,
+   "chains": [
+    "Avalanche",
+    "Robinhood Chain"
    ],
    "classification": "Frontend & Infrastructure",
    "technique": "Key Leaked via Infrastructure",
@@ -4553,37 +4592,6 @@
    ],
    "classification": "Access Control",
    "technique": "Arbitrary External Call",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-04-18",
-   "name": "Kelp",
-   "amount_usd": 293000000,
-   "chains": [
-    "Ethereum",
-    "Arbitrum"
-   ],
-   "classification": "Bridge & Cross-Chain",
-   "technique": "Cross-Chain Message Spoofing",
-   "target_type": "DeFi Protocol",
-   "bridge": true,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-04-16",
-   "name": "Rhea Lend",
-   "amount_usd": 18400000,
-   "chains": [
-    "Near"
-   ],
-   "classification": "Oracle Manipulation",
-   "technique": "Spot Price Manipulation",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

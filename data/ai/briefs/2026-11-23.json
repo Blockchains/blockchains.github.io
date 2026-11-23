@@ -1,0 +1,62 @@
+{
+ "headline": "Crypto Market Structure Brief: 23 Nov 2026",
+ "summary": "Ethereum holds the top TVL position at $36.4 billion, followed by Base at $5.1 billion and Solana at $4.7 billion. USDT leads stablecoins with $174.6 billion circulating while several peg alerts remain active. DEX volumes are led by Aero Slipstream and Uniswap variants, with Tether generating the highest fees. Multiple security incidents occurred in the prior 14 days, primarily involving bridges and infrastructure.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum: $36.4B TVL (rank 1)",
+    "Base: $5.1B TVL (rank 2)",
+    "Solana: $4.7B TVL (rank 3)",
+    "Tron: $4.4B TVL (rank 4)",
+    "BSC: $4.3B TVL (rank 5)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Aero Slipstream: $808M 24h volume (rank 1)",
+    "Kalshi: $762M 24h volume (rank 2)",
+    "Uniswap V3: $633M 24h volume (rank 3)",
+    "Tether: $17.0M 24h fees (rank 1)",
+    "Circle USDC: $6.7M 24h fees (rank 2)"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT: $174.6B circulating, -4.26% 30d change",
+    "USDC: $68.8B circulating, -4.32% 30d change",
+    "USDe: $4.9B circulating, +5.86% 30d change",
+    "Five peg alerts active including apxUSD (-4.94%) and USDA (-12.19%)"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base: $13.75B TVS, Stage 1, OP Stack",
+    "Arbitrum One: $8.82B TVS, Stage 1",
+    "Hyperliquid: $5.67B TVS, layer 3",
+    "Polygon PoS: $3.79B TVS"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "14 incidents reported in last 14 days",
+    "Largest: Chainflip AMM $11.96M (key compromise)",
+    "Wagyu (XMR1) $13.51M (infrastructure)",
+    "Lighter Perps $10.39M (API key)"
+   ]
+  }
+ ],
+ "watchlist": [
+  "Stablecoin peg deviations (apxUSD, USDA)",
+  "Recent bridge and key compromise incidents",
+  "L2 TVS changes (Ink +82% 7d)",
+  "Gas fees on Ethereum (0.10 gwei) and Polygon (277 gwei)"
+ ],
+ "date": "2026-11-23",
+ "model": "grok-4.3",
+ "tokens": 13490
+}

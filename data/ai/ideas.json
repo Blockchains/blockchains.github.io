@@ -1,283 +1,277 @@
 {
  "service": "ai/ideas",
  "description": "AI hackathon idea generator",
- "generated_at": "2026-11-22T12:46:20Z",
+ "generated_at": "2026-11-23T15:09:41Z",
  "source": "Grok (xAI) over public data: ETHGlobal events, DefiLlama, grants list",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "ideas": [
   {
-   "title": "AgentBridge Optimizer",
-   "pitch": "An AI agent that monitors bridge TVL and routes cross-chain transfers to minimize fees and slippage using live data. Users delegate via Safe and the agent executes optimal paths automatically.",
-   "track": "Bridge",
+   "title": "Agentic Bridge Monitor",
+   "pitch": "Build a dashboard that uses AI agents to monitor and alert on bridge TVL changes in real-time. It integrates Blockchain Lab API for cross-chain data and runs on 36-hour timelines.",
+   "track": "Agents",
    "difficulty": "intermediate",
    "stack": [
-    "Solidity",
-    "TypeScript SDK",
+    "TypeScript",
+    "Blockchain Lab API",
     "MCP server",
-    "EIP-712"
+    "React"
    ],
    "build_steps": [
-    "Deploy bridge monitoring contract",
-    "Integrate agent logic with MCP tools",
-    "Build Safe module for delegation",
-    "Add calldata diff checker for tx validation",
-    "Test on testnet bridges",
-    "Create simple frontend for agent config"
+    "Set up agent framework with MCP tools",
+    "Fetch bridge TVL data via API",
+    "Implement alert logic for 8%+ changes",
+    "Build React dashboard for visualization",
+    "Add EIP-712 signing for agent actions",
+    "Test with live data from trends"
    ],
    "fits_event": "Agentic Markets",
    "fits_grant": "Ethereum Foundation Ecosystem Support Program (Ethereum)",
-   "why_now": "Bridge TVL at $54B with recent Canonical Bridge growth of 15.87% signals demand for smarter routing."
+   "why_now": "Bridge TVL grew 8.56% in 7 days signaling urgent monitoring needs"
   },
   {
-   "title": "RiskCurator Agent",
-   "pitch": "AI agent that curates lending positions by analyzing on-chain risk metrics and rebalancing across protocols. It alerts or auto-adjusts when TVL-weighted changes indicate volatility.",
-   "track": "Lending",
-   "difficulty": "advanced",
+   "title": "Lending Risk Curator Tool",
+   "pitch": "Create a simple tool that curates lending positions by analyzing risk from onchain data. Uses Blockchain Lab SDK for quick queries and fits 2-4 devs in 36 hours.",
+   "track": "DeFi",
+   "difficulty": "beginner",
    "stack": [
-    "Python SDK",
-    "MCP server",
+    "Python",
+    "Blockchain Lab SDK",
     "Solidity",
-    "MEV checker"
+    "Next.js"
    ],
    "build_steps": [
-    "Fetch lending protocol data via API",
-    "Train simple risk model in agent",
-    "Implement rebalance logic in smart contract",
-    "Add approvals checker for safe tx",
-    "Integrate alert system",
-    "Demo with 3 lending pools"
-   ],
-   "fits_event": "Agentic Markets",
-   "fits_grant": "Aave Grants DAO (Aave)",
-   "why_now": "Lending TVL at $44B with 2.89% weekly growth needs automated risk tools amid market shifts."
-  },
-  {
-   "title": "LiquidStake Auto-Manager",
-   "pitch": "Agent that dynamically allocates liquid staking positions based on yield and restaking opportunities. It uses on-chain data to switch between pools minimizing 6% TVL drop impact.",
-   "track": "Liquid Staking",
-   "difficulty": "intermediate",
-   "stack": [
-    "Solidity",
-    "Blockchain Lab API",
-    "TS SDK",
-    "Safe tx decoder"
-   ],
-   "build_steps": [
-    "Query staking pool APIs",
-    "Build allocation smart contract",
-    "Agent decision engine with MCP",
-    "Integrate restaking hooks",
-    "Frontend dashboard",
-    "Testnet deployment and simulation"
+    "Query lending TVL via SDK",
+    "Parse risk metrics from datasets",
+    "Build basic UI for position overview",
+    "Integrate approval checker tool",
+    "Add 4-step simulation flow",
+    "Deploy to testnet"
    ],
    "fits_event": null,
-   "fits_grant": "Optimism Grants (Optimism / Superchain)",
-   "why_now": "Liquid Staking TVL $39B declining 6% shows need for yield-optimizing agents."
+   "fits_grant": "Aave Grants DAO (Aave)",
+   "why_now": "Lending TVL at $44B with steady 3.33% growth needs better curation"
   },
   {
-   "title": "Privacy Yield Shield",
-   "pitch": "ZK-based agent that shields yield farming positions from MEV while auto-compounding rewards. Users deposit privately and agent manages without revealing strategy.",
+   "title": "MEV Checker Extension",
+   "pitch": "Extend the existing MEV checker tool to cover liquid staking pools. Provides actionable insights for devs using Blockchain Lab's 26 browser tools.",
+   "track": "Infrastructure",
+   "difficulty": "intermediate",
+   "stack": [
+    "JavaScript",
+    "Blockchain Lab Tools",
+    "Solidity"
+   ],
+   "build_steps": [
+    "Fork MEV checker repo",
+    "Add liquid staking filters",
+    "Integrate calldata diff analysis",
+    "Build 5-step user flow",
+    "Test on recent TVL drops",
+    "Package as browser extension"
+   ],
+   "fits_event": "ETHGlobal Cannes 2027",
+   "fits_grant": "Gitcoin Grants (Multi-chain (public goods))",
+   "why_now": "Liquid staking TVL dipped 3.21% highlighting MEV risks"
+  },
+  {
+   "title": "Canonical Bridge Visualizer",
+   "pitch": "Develop a visualizer for canonical bridges showing TVL flows with 17% recent growth. Leverages Blockchain Lab datasets for fast prototyping.",
+   "track": "Bridges",
+   "difficulty": "beginner",
+   "stack": [
+    "React",
+    "Blockchain Lab API",
+    "D3.js"
+   ],
+   "build_steps": [
+    "Load canonical bridge data",
+    "Create interactive charts",
+    "Add 4-step navigation",
+    "Integrate Safe tx decoder",
+    "Test with 7d change metrics",
+    "Polish UI for hackathon demo"
+   ],
+   "fits_event": null,
+   "fits_grant": "Arbitrum Foundation Grants (Arbitrum)",
+   "why_now": "Canonical bridges surged 17.22% making visualization timely"
+  },
+  {
+   "title": "Privacy Yield Aggregator",
+   "pitch": "Build a privacy-focused yield aggregator using ZK labs for private position tracking. Ideal for 3-person team with Noir ZK stack.",
    "track": "Privacy",
    "difficulty": "advanced",
    "stack": [
     "Noir ZK",
     "Solidity",
-    "MCP server",
-    "Calldata diff"
+    "Blockchain Lab Labs",
+    "TypeScript"
    ],
    "build_steps": [
-    "Design ZK circuit for position proof",
-    "Deploy shielded yield contract",
-    "Agent logic for compounding",
-    "Integrate MEV protection",
-    "Build user wallet interface",
-    "Test with sample yields"
+    "Set up Noir circuit for yields",
+    "Query yield TVL data",
+    "Implement private aggregation",
+    "Build frontend with SDK",
+    "Add 6-step proof flow",
+    "Demo on test data"
    ],
    "fits_event": "ETHGlobal Tokyo 2027",
-   "fits_grant": "zkSync Grants (ZKsync)",
-   "why_now": "Privacy TVL $761M and Yield category need protection tools as TVL drops 9%."
+   "fits_grant": "Starknet Seed Grants (Starknet)",
+   "why_now": "Privacy TVL at $765M needs ZK yield tools amid -5.16% dip"
   },
   {
-   "title": "RWA Agent Allocator",
-   "pitch": "Agent that tokenizes and allocates real-world assets into DeFi yields based on current TVL trends. It matches RWAs to stable lending pools automatically.",
+   "title": "RWA CDP Simulator",
+   "pitch": "Simulate RWA-backed CDPs with onchain capital allocation logic. Uses 54 labs for quick Solidity experiments in 36 hours.",
    "track": "RWA",
    "difficulty": "intermediate",
    "stack": [
     "Solidity",
-    "Blockchain Lab Tools",
-    "Python SDK",
-    "EIP-712"
+    "Blockchain Lab Labs",
+    "React"
    ],
    "build_steps": [
-    "Create RWA minting contract",
-    "Agent scans TVL data",
-    "Build allocation rules engine",
-    "Add oracle integration",
-    "Safe delegation module",
-    "Demo allocation flow"
+    "Define CDP contracts",
+    "Simulate allocation flows",
+    "Add risk curator integration",
+    "Build 5-step UI simulator",
+    "Test with $4.3B CDP trends",
+    "Deploy local instance"
    ],
    "fits_event": null,
-   "fits_grant": "Filecoin Open Grants (Filecoin)",
-   "why_now": "RWA TVL $2.7B stable but needs agents to connect to growing lending sector."
+   "fits_grant": "Optimism Grants (Optimism / Superchain)",
+   "why_now": "RWA TVL stable but CDP down 13.48% calls for simulation tools"
   },
   {
-   "title": "Derivatives Hedge Agent",
-   "pitch": "On-chain agent that opens and manages derivatives hedges for user portfolios using real-time price and TVL signals. It closes positions on volatility spikes.",
-   "track": "Derivatives",
+   "title": "Derivatives Prediction Agent",
+   "pitch": "Agent that predicts derivatives trends using onchain data feeds. Built with MCP server for agentic execution.",
+   "track": "Agents",
    "difficulty": "advanced",
    "stack": [
-    "Solidity",
+    "Python",
     "MCP server",
-    "TS SDK",
-    "MEV checker"
+    "Blockchain Lab API"
    ],
    "build_steps": [
-    "Integrate derivatives protocol APIs",
-    "Agent position manager contract",
-    "Volatility detection logic",
-    "Auto-hedge execution",
-    "User dashboard",
-    "Backtest on historical data"
+    "Connect to derivatives datasets",
+    "Train simple prediction model",
+    "Implement agent actions",
+    "Add 4-step execution pipeline",
+    "Integrate with markets event",
+    "Demo live predictions"
    ],
    "fits_event": "Agentic Markets",
-   "fits_grant": "Uniswap Foundation Grants (Uniswap)",
-   "why_now": "Derivatives TVL $1.47B with slight decline needs smart hedging amid 2.43% change."
+   "fits_grant": "Ethereum Foundation Ecosystem Support Program (Ethereum)",
+   "why_now": "Derivatives TVL declining 1.94% needs predictive agents"
   },
   {
-   "title": "Prediction Market Oracle Agent",
-   "pitch": "Agent that resolves prediction markets faster using on-chain signals and external data feeds. It stakes on accurate outcomes to boost market liquidity.",
-   "track": "Prediction Market",
+   "title": "Restaking Pool Dashboard",
+   "pitch": "Dashboard for restaking pools tracking -5.18% TVL shifts with alerts. Uses free Blockchain Lab tools for rapid build.",
+   "track": "Restaking",
    "difficulty": "beginner",
    "stack": [
-    "Solidity",
-    "Blockchain Lab API",
-    "MCP server"
-   ],
-   "build_steps": [
-    "Deploy market resolver contract",
-    "Agent data fetcher",
-    "Resolution voting logic",
-    "Simple UI for markets",
-    "Test with sample events",
-    "Integrate grant reporting"
-   ],
-   "fits_event": null,
-   "fits_grant": "Gitcoin Grants (Multi-chain (public goods))",
-   "why_now": "Prediction Market TVL $312M benefits from agent automation for faster resolutions."
-  },
-  {
-   "title": "Restake BTC Optimizer",
-   "pitch": "Agent for restaked BTC that shifts positions across restaking protocols to maximize yields during 8.88% TVL drops. Users approve once and agent handles moves.",
-   "track": "Restaked BTC",
-   "difficulty": "intermediate",
-   "stack": [
-    "Solidity",
-    "Python SDK",
-    "Safe tx decoder",
-    "Approvals checker"
-   ],
-   "build_steps": [
-    "Connect to BTC restaking contracts",
-    "Yield comparison agent",
-    "Auto-shift execution module",
-    "Risk threshold alerts",
-    "Wallet integration",
-    "Testnet validation"
-   ],
-   "fits_event": "ETHGlobal Lisbon 2027",
-   "fits_grant": "HRF Bitcoin Development Fund (Bitcoin)",
-   "why_now": "Restaked BTC TVL declining needs optimization agents for $647M sector."
-  },
-  {
-   "title": "Yield Aggregator Bot",
-   "pitch": "Lightweight agent that aggregates yields across protocols and migrates user funds on threshold triggers. Built for 36-hour demo with minimal gas.",
-   "track": "Yield Aggregator",
-   "difficulty": "beginner",
-   "stack": [
-    "Solidity",
+    "Next.js",
     "Blockchain Lab Tools",
-    "TS SDK"
+    "TypeScript"
    ],
    "build_steps": [
-    "Scan yield APIs",
-    "Migration contract",
-    "Agent trigger logic",
-    "Gas optimized tx",
-    "Basic frontend",
-    "Deploy and demo"
-   ],
-   "fits_event": "Agentic Markets",
-   "fits_grant": "Base Builder Grants (Base)",
-   "why_now": "Yield Aggregator TVL $837M declining 3.27% creates opportunity for simple agent tools."
-  },
-  {
-   "title": "CDP Liquidation Guardian",
-   "pitch": "Agent that monitors CDP health factors and adds collateral or repays debt before liquidation using delegated funds.",
-   "track": "CDP",
-   "difficulty": "intermediate",
-   "stack": [
-    "Solidity",
-    "MCP server",
-    "EIP-712",
-    "MEV checker"
-   ],
-   "build_steps": [
-    "CDP position tracker",
-    "Health factor alerts",
-    "Auto-repay module",
-    "Safe integration",
-    "UI for thresholds",
-    "Test with mock CDPs"
-   ],
-   "fits_event": null,
-   "fits_grant": "MakerDAO ecosystem grants via Ethereum Foundation",
-   "why_now": "CDP TVL $4.19B dropping 16.65% highlights need for protective agents."
-  },
-  {
-   "title": "Onchain Allocator Simulator",
-   "pitch": "Agent that simulates capital allocation across categories using historical TVL data to suggest optimal portfolios for users.",
-   "track": "Onchain Capital Allocator",
-   "difficulty": "beginner",
-   "stack": [
-    "Python SDK",
-    "Blockchain Lab API",
-    "MCP server"
-   ],
-   "build_steps": [
-    "Load TVL datasets",
-    "Allocation simulation engine",
-    "Agent recommendation output",
-    "Simple web demo",
-    "Export to contract",
-    "Validate with 4 categories"
+    "Fetch restaking data",
+    "Build TVL trend charts",
+    "Add alert system",
+    "Integrate MEV checker",
+    "Create 4-step onboarding",
+    "Test with live metrics"
    ],
    "fits_event": "ETHGlobal New York 2027",
-   "fits_grant": "Polygon Community Grants (Polygon)",
-   "why_now": "Onchain Capital Allocator TVL $6.17B down 17% needs simulation tools for better decisions."
+   "fits_grant": "EigenLayer ecosystem grants if available",
+   "why_now": "Restaking TVL drop signals need for transparent dashboards"
   },
   {
-   "title": "Basis Trading Agent",
-   "pitch": "Agent that executes basis trades between spot and perpetuals based on live funding rates and TVL signals for small teams.",
-   "track": "Basis Trading",
-   "difficulty": "advanced",
+   "title": "Basis Trading Analyzer",
+   "pitch": "Analyzer tool for basis trading opportunities leveraging TVL growth data. Fits 2 devs using SDK and APIs.",
+   "track": "DeFi",
+   "difficulty": "intermediate",
    "stack": [
-    "Solidity",
-    "TS SDK",
-    "MCP server",
-    "Calldata diff"
+    "Python",
+    "Blockchain Lab SDK",
+    "Streamlit"
    ],
    "build_steps": [
-    "Funding rate fetcher",
-    "Trade execution contract",
-    "Agent entry/exit rules",
-    "Position monitor",
-    "Risk limits",
-    "Demo trade flow"
+    "Parse basis trading datasets",
+    "Build opportunity scanner",
+    "Add 5-step analysis flow",
+    "Integrate approvals tool",
+    "Demo with 1.15% growth data",
+    "Export reports"
    ],
-   "fits_event": "Pragma Cannes 2027",
-   "fits_grant": "Arbitrum Foundation Grants (Arbitrum)",
-   "why_now": "Basis Trading TVL $7.57B with positive 0.96% change indicates growing demand for agent execution."
+   "fits_event": null,
+   "fits_grant": "Base Builder Grants (Base)",
+   "why_now": "Basis trading up 1.15% creates immediate analysis demand"
+  },
+  {
+   "title": "Liquid Staking Optimizer",
+   "pitch": "Optimizer for liquid staking using yield aggregator logic. Quick build with 36-hour constraints and lab tools.",
+   "track": "Staking",
+   "difficulty": "beginner",
+   "stack": [
+    "Solidity",
+    "Blockchain Lab Tools",
+    "React"
+   ],
+   "build_steps": [
+    "Query staking pool data",
+    "Implement optimization rules",
+    "Build simple UI",
+    "Add 4-step workflow",
+    "Test TVL metrics",
+    "Integrate SDK"
+   ],
+   "fits_event": "ETHGlobal Lisbon 2027",
+   "fits_grant": "Lido ecosystem grants if available",
+   "why_now": "Liquid staking remains top category despite minor dip"
+  },
+  {
+   "title": "Onchain Capital Allocator",
+   "pitch": "Allocator prototype for onchain capital with TVL tracking. Uses MCP and datasets for fast agentic features.",
+   "track": "Agents",
+   "difficulty": "intermediate",
+   "stack": [
+    "TypeScript",
+    "MCP server",
+    "Blockchain Lab API"
+   ],
+   "build_steps": [
+    "Load allocator datasets",
+    "Build allocation agent",
+    "Add risk checks",
+    "Create 6-step interface",
+    "Demo with -12.65% trend",
+    "Deploy prototype"
+   ],
+   "fits_event": "Agentic Markets",
+   "fits_grant": "Web3 Foundation Grants Program (Polkadot / Kusama)",
+   "why_now": "Onchain allocators need tools amid sharp TVL decline"
+  },
+  {
+   "title": "Dexs Yield Tracker",
+   "pitch": "Tracker for Dexs yields integrating recent 2.52% TVL growth. Built with browser tools for beginner-friendly 36h project.",
+   "track": "Dex",
+   "difficulty": "beginner",
+   "stack": [
+    "JavaScript",
+    "Blockchain Lab Tools",
+    "Vue.js"
+   ],
+   "build_steps": [
+    "Fetch Dexs TVL data",
+    "Build yield tracker UI",
+    "Add comparison charts",
+    "Integrate 4-step flow",
+    "Test with trends",
+    "Package demo"
+   ],
+   "fits_event": null,
+   "fits_grant": "Uniswap Foundation Grants (Uniswap)",
+   "why_now": "Dexs growing steadily at 2.52% needs accessible trackers"
   }
  ],
  "model": "grok-4.3",
