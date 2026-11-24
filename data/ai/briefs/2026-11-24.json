@@ -1,0 +1,65 @@
+{
+ "headline": "Crypto Market Structure Brief - 24 November 2026",
+ "summary": "Ethereum leads chains by TVL at $36.0 billion, followed by Base at $5.1 billion and Solana at $4.6 billion. Uniswap V3 recorded the highest DEX volume at $1.20 billion over 24 hours, while Tether generated the top fees at $16.9 million. USDT holds $174.6 billion in circulation and USDC $69.1 billion, with several stablecoins showing peg deviations. Multiple security incidents occurred in the prior 14 days, primarily involving bridges and key compromises.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum: $36.01 billion TVL (rank 1)",
+    "Base: $5.05 billion TVL (rank 2)",
+    "Solana: $4.60 billion TVL (rank 3)",
+    "Tron: $4.45 billion TVL (rank 4)",
+    "BSC: $4.27 billion TVL (rank 5)"
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V3: $1.20 billion 24h volume (rank 1)",
+    "PancakeSwap AMM V3: $1.03 billion 24h volume (rank 2)",
+    "Aero Slipstream: $894 million 24h volume (rank 3)",
+    "Tether: $16.9 million 24h fees (rank 1)",
+    "Circle USDC: $6.68 million 24h fees (rank 2)"
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT: $174.63 billion circulating",
+    "USDC: $69.08 billion circulating",
+    "Ethena USDe: $4.88 billion circulating",
+    "Dai: $4.53 billion circulating",
+    "Six stablecoins on watch or depeg status"
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base Chain: $13.57 billion TVS (Stage 1)",
+    "Arbitrum One: $8.76 billion TVS (Stage 1)",
+    "Hyperliquid: $5.68 billion TVS (layer 3)",
+    "Polygon PoS: $3.79 billion TVS",
+    "Robinhood Chain: $1.99 billion TVS (Stage 0)"
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "14 incidents reported in last 14 days",
+    "Largest: Chainflip AMM $11.96 million (key compromise)",
+    "Wagyu (XMR1): $13.51 million (frontend)",
+    "Lighter Perps: $10.39 million (API key)",
+    "Multiple bridge and infrastructure events"
+   ]
+  }
+ ],
+ "watchlist": [
+  "Stablecoin peg deviations (apxUSD, USDA, others)",
+  "Recent bridge and key compromise incidents",
+  "L2 TVS changes (Base, Arbitrum, Ink)",
+  "DEX volume shifts (Uniswap V3, PancakeSwap)"
+ ],
+ "date": "2026-11-24",
+ "model": "grok-4.3",
+ "tokens": 13440
+}
