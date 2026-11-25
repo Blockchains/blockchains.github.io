@@ -1,16 +1,40 @@
 {
  "service": "ai/incidents",
  "description": "AI incident explainer",
- "generated_at": "2026-11-24T15:04:44Z",
+ "generated_at": "2026-11-25T14:46:23Z",
  "source": "Grok (xAI) over public data: DefiLlama hacks",
  "source_url": "https://blockchains.github.io/ai/",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "items": [
   {
+   "name": "Bullpen",
+   "date": "2026-11-24",
+   "plain_english": "Bullpen lost 2570000 USD from Protocol Logic with Unknown technique. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Review protocol logic handling to avoid losses of 2570000 USD from unknown techniques.",
+   "related_lab": null,
+   "amount_usd": 2570000,
+   "source": "",
+   "chains": [
+    "Solana"
+   ]
+  },
+  {
+   "name": "Biswap V3",
+   "date": "2026-11-24",
+   "plain_english": "Biswap V3 lost 51000 USD from Token & Share Accounting with Incorrect Share Accounting technique. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Review token and share accounting to avoid losses of 51000 USD from incorrect share accounting.",
+   "related_lab": null,
+   "amount_usd": 51000,
+   "source": "",
+   "chains": [
+    "BSC"
+   ]
+  },
+  {
    "name": "Endurance Bridge",
    "date": "2026-11-22",
-   "plain_english": "The Endurance Bridge incident was classified as Bridge & Cross-Chain using Unbacked Cross-Chain Mint technique. It resulted in a loss of 1040000 USD.",
-   "lesson_for_builders": "Builders must validate cross-chain mints to prevent unbacked issuance.",
+   "plain_english": "Endurance Bridge lost 1040000 USD from Bridge & Cross-Chain with Unbacked Cross-Chain Mint technique. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Review bridge and cross-chain logic to avoid losses of 1040000 USD from unbacked cross-chain mint.",
    "related_lab": "L43 CrossChainReplay",
    "amount_usd": 1040000,
    "source": "",
@@ -21,21 +45,20 @@
   {
    "name": "CyberConnect",
    "date": "2026-11-21",
-   "plain_english": "The CyberConnect incident was classified as Bridge & Cross-Chain using Cross-Chain Message Spoofing technique. It resulted in a loss of 968000 USD.",
-   "lesson_for_builders": "Builders must secure cross-chain messaging against spoofing.",
-   "related_lab": "L43 CrossChainReplay",
+   "plain_english": "CyberConnect lost 968000 USD from Key Compromise with Private Key Compromised technique. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Review key management and access controls to avoid losses of 968000 USD from private key compromise.",
+   "related_lab": "L03 Ownable/access control",
    "amount_usd": 968000,
    "source": "",
    "chains": [
-    "Solana",
-    "Ethereum"
+    "Solana"
    ]
   },
   {
    "name": "Chainflip AMM",
    "date": "2026-11-21",
-   "plain_english": "The Chainflip AMM incident was classified as Key Compromise using Validator Key Compromised technique. It resulted in a loss of 11960000 USD.",
-   "lesson_for_builders": "Builders must protect validator keys from compromise.",
+   "plain_english": "Chainflip AMM lost 11960000 USD from Key Compromise with Validator Key Compromised technique. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Review key management and access controls to avoid losses of 11960000 USD from validator key compromise.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": 11960000,
    "source": "",
@@ -47,8 +70,8 @@
   {
    "name": "Wagyu (XMR1)",
    "date": "2026-11-20",
-   "plain_english": "The Wagyu (XMR1) incident was classified as Frontend & Infrastructure using Key Leaked via Infrastructure technique. It resulted in a loss of 13510000 USD.",
-   "lesson_for_builders": "Builders must harden infrastructure to prevent key leaks.",
+   "plain_english": "Wagyu (XMR1) lost 13510000 USD from Frontend & Infrastructure with Key Leaked via Infrastructure technique. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Review frontend and infrastructure security to avoid losses of 13510000 USD from key leaks via infrastructure.",
    "related_lab": null,
    "amount_usd": 13510000,
    "source": "",
@@ -59,8 +82,8 @@
   {
    "name": "Fluidkey",
    "date": "2026-11-19",
-   "plain_english": "The Fluidkey incident was classified as Frontend & Infrastructure using Database Breach technique. It resulted in a loss of 1600000 USD.",
-   "lesson_for_builders": "Builders must secure databases against breaches.",
+   "plain_english": "Fluidkey lost 1600000 USD from Frontend & Infrastructure with Database Breach technique. The target was a Wallet.",
+   "lesson_for_builders": "Review frontend and infrastructure security to avoid losses of 1600000 USD from database breaches.",
    "related_lab": null,
    "amount_usd": 1600000,
    "source": "",
@@ -76,8 +99,8 @@
   {
    "name": "CALC",
    "date": "2026-11-19",
-   "plain_english": "The CALC incident was classified as Frontend & Infrastructure using Key Leaked via Infrastructure technique. It resulted in a loss of 26900 USD.",
-   "lesson_for_builders": "Builders must harden infrastructure to prevent key leaks.",
+   "plain_english": "CALC lost 26900 USD from Frontend & Infrastructure with Key Leaked via Infrastructure technique. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Review frontend and infrastructure security to avoid losses of 26900 USD from key leaks via infrastructure.",
    "related_lab": null,
    "amount_usd": 26900,
    "source": "",
@@ -89,8 +112,8 @@
   {
    "name": "The Moats",
    "date": "2026-11-19",
-   "plain_english": "The The Moats incident was classified as Frontend & Infrastructure using Key Leaked via Infrastructure technique. It resulted in a loss of 600000 USD.",
-   "lesson_for_builders": "Builders must harden infrastructure to prevent key leaks.",
+   "plain_english": "The Moats lost 600000 USD from Frontend & Infrastructure with Key Leaked via Infrastructure technique. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Review frontend and infrastructure security to avoid losses of 600000 USD from key leaks via infrastructure.",
    "related_lab": null,
    "amount_usd": 600000,
    "source": "",
@@ -102,8 +125,8 @@
   {
    "name": "Gonka AI",
    "date": "2026-11-18",
-   "plain_english": "The Gonka AI incident was classified as Bridge & Cross-Chain using Bridge Logic Flaw technique. It resulted in a loss of 1050000 USD.",
-   "lesson_for_builders": "Builders must audit bridge logic for flaws.",
+   "plain_english": "Gonka AI lost 1050000 USD from Bridge & Cross-Chain with Bridge Logic Flaw technique. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Review bridge and cross-chain logic to avoid losses of 1050000 USD from bridge logic flaws.",
    "related_lab": "L43 CrossChainReplay",
    "amount_usd": 1050000,
    "source": "",
@@ -114,8 +137,8 @@
   {
    "name": "RNT Lend",
    "date": "2026-11-18",
-   "plain_english": "The RNT Lend incident was classified as Key Compromise using Private Key Compromised technique. It resulted in a loss of 954703 USD.",
-   "lesson_for_builders": "Builders must protect private keys from compromise.",
+   "plain_english": "RNT Lend lost 954703 USD from Key Compromise with Private Key Compromised technique. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Review key management and access controls to avoid losses of 954703 USD from private key compromise.",
    "related_lab": "L03 Ownable/access control",
    "amount_usd": 954703,
    "source": "",
@@ -126,35 +149,13 @@
   {
    "name": "K3 Capital",
    "date": "2026-11-18",
-   "plain_english": "The K3 Capital incident was classified as Token & Share Accounting using Incorrect Share Accounting technique. It resulted in a loss of 3420000 USD.",
-   "lesson_for_builders": "Builders must verify share accounting logic.",
-   "related_lab": "L28 InvariantVault",
+   "plain_english": "K3 Capital lost 3420000 USD from Token & Share Accounting with Incorrect Share Accounting technique. The target was a DeFi Protocol.",
+   "lesson_for_builders": "Review token and share accounting to avoid losses of 3420000 USD from incorrect share accounting.",
+   "related_lab": null,
    "amount_usd": 3420000,
    "source": "",
    "chains": [
     "Ethereum"
-   ]
-  },
-  {
-   "name": "Peapods Finance",
-   "date": "2026-11-18",
-   "plain_english": "The Peapods Finance incident was classified as Key Compromise using Deployer Key Compromised technique. It resulted in null USD loss.",
-   "lesson_for_builders": "Builders must protect deployer keys from compromise.",
-   "related_lab": "L03 Ownable/access control",
-   "amount_usd": null,
-   "source": "",
-   "chains": []
-  },
-  {
-   "name": "LUKSO",
-   "date": "2026-11-18",
-   "plain_english": "The LUKSO incident was classified as Access Control using Improper Access Control technique. It resulted in a loss of 496000 USD.",
-   "lesson_for_builders": "Builders must implement proper access control checks.",
-   "related_lab": "L03 Ownable/access control",
-   "amount_usd": 496000,
-   "source": "",
-   "chains": [
-    "LUKSO"
    ]
   }
  ],
