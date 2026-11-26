@@ -1,0 +1,55 @@
+{
+ "headline": "Ethereum leads TVL at $36.7B; USDT at $173.5B on 26 Nov 2026",
+ "summary": "Ethereum holds the top position in chains TVL at $36.68B, followed by Base at $5.11B and Solana at $4.60B. Uniswap V3 recorded the highest DEX volume at $1.06B over 24 hours while Tether generated $17.1M in fees. USDT and USDC dominate stablecoin circulation with minor 1-day changes, though several peg alerts remain active. Multiple incidents occurred in the past 14 days, primarily on Solana and BSC.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum leads at $36.68B TVL, followed by Base ($5.11B) and Solana ($4.60B).",
+    "Tron ($4.39B) and BSC ($4.30B) rank fourth and fifth respectively.",
+    "Bitcoin TVL stands at $2.25B; Hyperliquid L1 at $2.21B."
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Uniswap V3 recorded $1.06B 24h volume; Aero Slipstream $886M; Uniswap V4 $782M.",
+    "Tether generated $17.07M in 24h fees; Circle USDC $6.80M; Hyperliquid Perps $4.13M.",
+    "PancakeSwap AMM V3 fees reached $5.41M over 24 hours."
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulation $173.54B with -0.37% 1d change; USDC $69.28B with +0.35% 1d change.",
+    "USDe at $4.91B (+0.40% 1d); DAI at $4.52B (-0.65% 1d).",
+    "Peg alerts active for apxUSD (-2.91%), USDA (-11.81%) and others."
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base TVS $13.84B; Arbitrum One $8.71B; Hyperliquid $5.64B.",
+    "Polygon PoS TVS $3.79B (+3.34% 7d); Robinhood Chain $2.01B.",
+    "OP Mainnet TVS $1.29B; most L2s show negative 7-day TVS changes."
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "14 incidents reported in last 14 days, including $11.96M on Chainflip AMM and $13.51M on Wagyu.",
+    "Classifications include key compromise, frontend breaches and bridge logic flaws.",
+    "Ethereum gas price at 0.120 gwei; Base at 0.006 gwei."
+   ]
+  }
+ ],
+ "watchlist": [
+  "Stablecoin peg deviations (apxUSD, USDA)",
+  "Top chain TVL shifts (Ethereum, Base)",
+  "DEX volume leaders (Uniswap V3, Aero Slipstream)",
+  "Recent incidents on Solana and BSC"
+ ],
+ "date": "2026-11-26",
+ "model": "grok-4.3",
+ "tokens": 13703
+}

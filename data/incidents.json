@@ -1,13 +1,13 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-25T14:45:32Z",
+ "generated_at": "2026-11-26T14:09:02Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27658431497.12813,
- "ytd_usd": 8038029873.128132,
+ "total_all_time_usd": 27658440297.12813,
+ "ytd_usd": 8038038673.128132,
  "incidents": [
   {
    "date": "2026-11-24",
@@ -185,12 +185,12 @@
   {
    "date": "2026-11-18",
    "name": "K3 Capital",
-   "amount_usd": 3420000,
+   "amount_usd": 3428800,
    "chains": [
     "Ethereum"
    ],
-   "classification": "Token & Share Accounting",
-   "technique": "Incorrect Share Accounting",
+   "classification": "Input Validation",
+   "technique": "Missing Input Validation",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,
