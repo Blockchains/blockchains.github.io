@@ -1,13 +1,13 @@
 {
  "service": "incidents",
  "description": "Chain incident feed (hacks & exploits)",
- "generated_at": "2026-11-26T14:09:02Z",
+ "generated_at": "2026-11-27T14:07:07Z",
  "source": "DefiLlama hacks database",
  "source_url": "https://defillama.com/hacks",
  "built_by": "Blockchain Lab — https://blockchainlab.com",
  "count": 300,
- "total_all_time_usd": 27658440297.12813,
- "ytd_usd": 8038038673.128132,
+ "total_all_time_usd": 27659440297.12813,
+ "ytd_usd": 8038780873.128132,
  "incidents": [
   {
    "date": "2026-11-24",
@@ -239,6 +239,21 @@
    "returned_usd": null,
    "source": "",
    "language": null
+  },
+  {
+   "date": "2026-11-17",
+   "name": "Hegic",
+   "amount_usd": 1000000,
+   "chains": [
+    "Arbitrum"
+   ],
+   "classification": "Oracle Manipulation",
+   "technique": "Oracle Misconfiguration",
+   "target_type": "DeFi Protocol",
+   "bridge": false,
+   "returned_usd": null,
+   "source": "",
+   "language": "Solidity"
   },
   {
    "date": "2026-11-16",
@@ -4576,21 +4591,6 @@
    ],
    "classification": "Token & Share Accounting",
    "technique": "First Depositor Attack",
-   "target_type": "DeFi Protocol",
-   "bridge": false,
-   "returned_usd": null,
-   "source": "",
-   "language": "Solidity"
-  },
-  {
-   "date": "2026-04-20",
-   "name": "Transit Finance",
-   "amount_usd": 257800,
-   "chains": [
-    "Ethereum"
-   ],
-   "classification": "Protocol Logic",
-   "technique": "Unknown",
    "target_type": "DeFi Protocol",
    "bridge": false,
    "returned_usd": null,

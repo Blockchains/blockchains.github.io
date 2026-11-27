@@ -1,0 +1,55 @@
+{
+ "headline": "Crypto Structure Brief: Ethereum Tops TVL; Stablecoin Circulation Falls",
+ "summary": "Ethereum holds the largest chain TVL at $37.3 billion. Base and Solana follow with $4.7 billion each. USDT and USDC dominate stablecoin supply with $173.5 billion and $69.1 billion respectively. Multiple stablecoins show depegs and recent incidents affected several protocols.",
+ "sections": [
+  {
+   "title": "Chains & TVL",
+   "bullets": [
+    "Ethereum leads with $37.3 billion TVL.",
+    "Base ranks second at $4.7 billion, followed by Solana at $4.7 billion and Tron at $4.4 billion.",
+    "BSC and Hyperliquid L1 complete the top six."
+   ]
+  },
+  {
+   "title": "DEX & fees",
+   "bullets": [
+    "Aero Slipstream recorded the highest 24-hour DEX volume at $787 million.",
+    "Uniswap V4 and V3 each exceeded $630 million in daily volume.",
+    "Tether generated the largest fees at $17.0 million, followed by Circle USDC at $6.8 million."
+   ]
+  },
+  {
+   "title": "Stablecoins",
+   "bullets": [
+    "USDT circulating supply stands at $173.5 billion and USDC at $69.1 billion.",
+    "USDe supply rose 8.6 percent over 30 days to $4.9 billion.",
+    "apxUSD and AP USDA trade below peg; Dola and Frax remain under watch."
+   ]
+  },
+  {
+   "title": "L2s",
+   "bullets": [
+    "Base reports $14.0 billion TVS with 1.7 percent weekly growth.",
+    "Arbitrum One holds $8.7 billion TVS; Hyperliquid L3 reaches $5.7 billion.",
+    "OP Mainnet and Mantle exceed $1.3 billion and $975 million respectively."
+   ]
+  },
+  {
+   "title": "Security",
+   "bullets": [
+    "Fourteen incidents reported in the last 14 days, including key compromises on Solana and BSC.",
+    "Largest losses exceeded $13 million on Hyperliquid L1 and $11.9 million on Ethereum-Bitcoin bridge.",
+    "Gas fees remain low across Ethereum, Base and Arbitrum."
+   ]
+  }
+ ],
+ "watchlist": [
+  "apxUSD and AP USDA depeg status",
+  "Recent key compromise incidents on Solana and BSC",
+  "USDS 30-day circulation decline of 53 percent",
+  "Base and Arbitrum TVS weekly changes"
+ ],
+ "date": "2026-11-27",
+ "model": "grok-4.3",
+ "tokens": 13108
+}
