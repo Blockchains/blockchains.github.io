@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPUGIT</title>
+  <meta name="description" content="GPUGIT routes one NVIDIA GPU to one open-weight stack. Four steps, one decision.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; background: #141311; color: #f3eee6; font: 15px/1.5 "IBM Plex Mono", ui-monospace, monospace; }
+    main { max-width: 42rem; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+    h1, h2 { font-family: Fraunces, Georgia, serif; font-weight: 560; letter-spacing: -0.03em; line-height: 1.05; }
+    h1 { font-size: 3.2rem; margin: 0.2rem 0 0.6rem; }
+    h2 { font-size: 1.7rem; margin: 0 0 0.6rem; }
+    a { color: #e07a3d; }
+    p, li { color: #f3eee6; }
+    .muted, td, th { color: #a39b90; }
+    .kicker { color: #e07a3d; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.75rem; }
+    section { border: 1px solid #3a342c; border-radius: 1.25rem; padding: 1.1rem; margin-top: 1rem; background: #1e1c18; }
+    code, pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+    pre { background: #141311; padding: 0.8rem; border-radius: 0.8rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    td, th { text-align: left; border-top: 1px solid #3a342c; padding: 0.45rem 0.4rem 0.45rem 0; vertical-align: top; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="kicker">GPUrouters · Blockchain Lab</p>
+  <h1>GPUGIT</h1>
+  <p class="muted">One NVIDIA card. One job. A first reply inside ten minutes, or a plain reason why not. This page does not run a model. Checked 28 Nov 2026. No measured tokens per second.</p>
+
+  <section>
+    <p class="kicker">01 · Install</p>
+    <h2>Put the check on the machine.</h2>
+    <p>The script looks for nvidia-smi and prints the pinned download. It does not install a driver. UNTESTED on hardware.</p>
+    <pre>curl -fsSL https://raw.githubusercontent.com/Blockchains/gpugit/main/install.sh | sh</pre>
+  </section>
+
+  <section>
+    <p class="kicker">02 · The only decision</p>
+    <h2>Chat, code, or a small API.</h2>
+    <p>Images, video, and voice stay refused until a checkpoint has a sourced file size. ComfyUI and whisper.cpp are forked as engines. Their weights are not pinned.</p>
+  </section>
+
+  <section>
+    <p class="kicker">03 · The only pinned weight</p>
+    <h2>Qwen2.5 1.5B, Q4_K_M.</h2>
+    <p>Labeled 986 MB on <a href="https://huggingface.co/bartowski/Qwen2.5-1.5B-Instruct-GGUF">the Hugging Face card</a>. Licence on that card: apache-2.0. Engine: <a href="https://github.com/ggml-org/llama.cpp">llama.cpp</a>, MIT. Working-set floor 4 GB is an estimate. SHA-256 was not copied, so it is not pinned.</p>
+    <pre>huggingface-cli download bartowski/Qwen2.5-1.5B-Instruct-GGUF --include "Qwen2.5-1.5B-Instruct-Q4_K_M.gguf" --local-dir ./models</pre>
+    <p class="muted">Start flags are not invented here. Use the upstream llama.cpp quick start. UNTESTED.</p>
+  </section>
+
+  <section>
+    <p class="kicker">04 · Clock at 100 Mbps</p>
+    <h2>About 174 seconds. Design target.</h2>
+    <table>
+      <thead><tr><th>Step</th><th>Seconds</th><th>Tag</th></tr></thead>
+      <tbody>
+        <tr><td>Install</td><td>45</td><td>Estimate. UNTESTED.</td></tr>
+        <tr><td>Detect</td><td>5</td><td>Estimate.</td></tr>
+        <tr><td>Resolve</td><td>2</td><td>Local catalogue.</td></tr>
+        <tr><td>Download</td><td>79</td><td>986 MB label at 100 Mbps. Estimate.</td></tr>
+        <tr><td>Verify</td><td>8</td><td>Hash not pinned yet.</td></tr>
+        <tr><td>Start</td><td>20</td><td>UNTESTED.</td></tr>
+        <tr><td>Smoke</td><td>15</td><td>One sentence. Not a benchmark.</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">North star is 600 seconds. At 10 Mbps the download alone is about 789 seconds, and the desk refuses.</p>
+  </section>
+
+  <section>
+    <p class="kicker">Cards</p>
+    <ul>
+      <li>GeForce RTX 4060, 8 GB GDDR6. <a href="https://nvidianews.nvidia.com/news/geforce-rtx-4060-family-is-here-nvidias-revolutionary-ada-lovelace-architecture-comes-to-core-gamers-everywhere-starting-at-299">NVIDIA newsroom, 18 May 2023</a>.</li>
+      <li>GeForce RTX 4090, 24 GB GDDR6X, capability 8.9. <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/">NVIDIA product page</a>.</li>
+      <li>H100 SXM, 80 GB. <a href="https://www.nvidia.com/en-eu/data-center/h100/">NVIDIA H100 page</a>. The NVL card is 94 GB and is not this row.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="kicker">Forks landed</p>
+    <ul>
+      <li><a href="https://github.com/Blockchains/vllm">Blockchains/vllm</a></li>
+      <li><a href="https://github.com/Blockchains/ollama">Blockchains/ollama</a></li>
+      <li><a href="https://github.com/Blockchains/sglang">Blockchains/sglang</a></li>
+      <li><a href="https://github.com/Blockchains/gpustack">Blockchains/gpustack</a></li>
+      <li><a href="https://github.com/Blockchains/litellm">Blockchains/litellm</a></li>
+      <li><a href="https://github.com/Blockchains/open-webui">Blockchains/open-webui</a></li>
+      <li><a href="https://github.com/Blockchains/ComfyUI">Blockchains/ComfyUI</a></li>
+    </ul>
+    <p class="muted">llama.cpp, whisper.cpp, TensorRT-LLM, flash-attention, and LocalAI were requested again. Confirm those URLs before citing them. text-generation-inference was skipped because it is archived. Catalogue and rules: <a href="https://github.com/Blockchains/gpugit">Blockchains/gpugit</a>.</p>
+  </section>
+</main>
+</body>
+</html>
